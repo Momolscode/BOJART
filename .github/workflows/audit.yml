@@ -34,6 +34,9 @@ jobs:
         if: always()
         with:
           name: bojart-audit-${{ github.sha }}-${{ github.run_attempt }}
-          path: .bojart-audit/
+          path: |
+            .bojart-audit/audit.json
+            .bojart-audit/audit.md
+          include-hidden-files: true
           retention-days: 14
           if-no-files-found: error
