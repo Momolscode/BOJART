@@ -7,7 +7,8 @@
   {
     "path": "context/SESSION_HANDOFF.md",
     "project": "bojart.jarvis",
-    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+    "provenance": "Dated session journal; historical statements remain searchable but do not supersede current reference documents or the sourced claim ledger.",
+    "collection": "session_log"
   },
   {
     "path": "docs/INSTALLATION.md",
@@ -143,6 +144,24 @@
     "path": "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
     "project": "bojart.creative",
     "provenance": "Recovery from identified sources, SHA-256 deduplication and remote Git restoration; see recovery-deep-20261101"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.jarvis",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.creative",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.sites",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
   },
   {
     "path": "docs/memory/CONVERSATIONS.md",

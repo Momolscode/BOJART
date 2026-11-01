@@ -66,6 +66,20 @@ Lire le [contexte courant](../context/CURRENT.md), choisir le domaine, puis cons
 
 Point de départ observé le 1 novembre 2026 : `main` à `5268e7e7b70fa25efee7d186f27cd3716a49c4c1`, 776 fichiers, contrôles techniques réussis. Le [reçu contextuel figé](https://github.com/Momolscode/BOJART/blob/cfdca9fc47d71dd8b2bce6ff324994f089d88d34/ops/context-monitor/receipts/pr-1/5268e7e7b70fa25efee7d186f27cd3716a49c4c1.md) indiquait 633 chemins encore en attente. Ce nombre décrit cette observation, pas les prochaines révisions.
 
+## Relier les propositions aux essais de lancement
+
+Les fichiers `TOOLCHAIN.json`, `DATA_REQUIREMENTS.json` et `ACCEPTANCE.json` du [dossier de recherche](research/launch-toolchain-2026-11-01/README.md) sont reliés au plan courant. Les 26 fiches d'outils utilisent 14 catégories de données ; les 12 critères sont comparés à la déclaration du runtime, lue sans importer ni exécuter l'application.
+
+Chaque critère possède une tâche de rattachement. Le rapport montre les champs à recueillir et compte les critères, outils P0 actifs et autres outils actifs dépendant de chaque catégorie. L'ordre de collecte suit ces comptes décroissants ; les prérequis des tâches restent prioritaires. Ce calcul décrit les dépendances déclarées, pas un rendement, une probabilité de réussite ou l'exhaustivité des informations manquantes. Les outils différés et exclus restent visibles sans augmenter la priorité.
+
+Les quatre fichiers source sont comparés aux tailles et empreintes de l'audit. Une référence inconnue, un identifiant répété, un critère du runtime oublié, un rattachement de tâche absent ou un fichier modifié depuis l'audit fait échouer le calcul. Les valeurs opérationnelles éventuellement présentes ne sont pas copiées dans le rapport. Les essais du dossier de recherche restent `not_run_on_target` : le plan ne peut transformer leur statut en qualification acquise. Un reçu réel doit suivre un processus distinct de revue.
+
+La catégorie **Recherches et propositions** classe ce dossier séparément. L'index documentaire utilise la collection `research` dans la mémoire existante et étiquette ces extraits comme propositions ; les références courantes gardent leur priorité. Les sources de la récupération approfondie restent rattachées au contexte courant sans fusion de leur branche d'archive.
+
+Le journal `context/SESSION_HANDOFF.md` appartient à la collection `session_log`. Il reste recherchable, cité et sauvegardé, avec la mention **historique, pas état courant** dans les exports de contexte. Sa migration retire uniquement l'ancienne sélection courante ; les versions antérieures restent accessibles. Les guides de référence passent avant ce journal. Les résultats des essais figurent dans la preuve datée ci-dessous.
+
+Vérifications de l'intégration : [preuve datée](evidence/orchestration-integration-2026-11-01.json). La passation a aussi été dédoublonnée après rapprochement des contributions ; les originaux restent dans l'historique Git.
+
 ## Sources techniques
 
 - [Événements GitHub Actions et commit de fusion des PR](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).

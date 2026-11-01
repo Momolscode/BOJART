@@ -32,6 +32,8 @@ Le catalogue couvre 1 060 emplacements de trois archives, deux sources de sites 
 
 ## Prochaines preuves
 
+Sélection d'outils et de skills du 1 novembre : voir `docs/research/launch-toolchain-2026-11-01/README.md`. Elle référence 18 dépôts à des commits examinés, 26 fiches, 14 besoins de données et les 12 portes de recette existantes. Les propositions sont indexées dans la mémoire ; aucun outil tiers n'est installé ou qualifié sur la tour par cette recherche. Metricool n'est pas retenu pour cette demande ; la collecte proposée utilise les données natives disponibles.
+
 1. Installer sur la tour, importer les exports utiles, vérifier recherche et restauration.
 2. Qualifier voix française, bruit, trois écrans, charge CAO et reprise après coupure.
 3. Inventorier le parc, qualifier une FDM et une résine avec opérateur, puis étendre.

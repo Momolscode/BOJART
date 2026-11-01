@@ -1,5 +1,14 @@
 # Passation — consolidation du 1 novembre 2026
 
+## Recherche des outils et qualification — 1 novembre 2026
+
+Demande : enrichir BOJ.ART/Jarvis pour la 3D, la voix, le studio VFX, l'identité et le marketing. Revue de 18 dépôts à références épinglées et de documentations officielles ; 26 fiches, 14 besoins de données et 12 portes de recette dans `docs/research/launch-toolchain-2026-11-01/`. Aucun outil tiers installé ni génération payante ou publication lancée. La tour n'est pas accessible pour une qualification. Metricool n'est pas retenu dans cette demande ; repli proposé par données natives/exportées, sans prétendre les avoir collectées.
+
+L'indexation de recherche a révélé une régression : l'état courant disparaissait des cinq premiers résultats d'un cas existant. Ajout d'une collection `research` dans la même mémoire, classification partagée entre CLI et agent, priorité aux sources de référence dans le lexical et la fusion sémantique, libellé explicite des propositions et retrait non destructif. Sept tests dédiés et quatre cas de recherche métier ajoutés. La destination historique du contexte marketing est corrigée vers `Momolscode/BOJART`. Les dépendances et portes physiques du runtime ne sont pas activées. Résultats exécutés : voir `docs/research/launch-toolchain-2026-11-01/VALIDATION.json`.
+
+Base examinée `5268e7e7b70fa25efee7d186f27cd3716a49c4c1`, puis évolution distante `461d46ff39caaf142ce37a3e0b78f22dfcc2e842` rapprochée avant modification ; les corrections concurrentes de diversité de sources sont conservées. La nouvelle orchestration à `9f58fa29f0051cc8a7098855359a8a6dd0eef7e6` est également rapprochée, y compris ses entrées de mémoire. Prochaine preuve : qualification sur la tour et une machine, puis un plan sur la vraie œuvre et des statistiques de compte sourcées.
+
+
 Demande : orchestrer les poussées vers `Momolscode/BOJART`, classer la direction artistique et Jarvis, améliorer la continuité et préparer la gestion future des données sur la tour.
 
 Sources examinées : M07, archive créative préparée pour GitHub, sources R01–R03, notes actuelles, sources Sites V11/V3 et BOJART à `6bc5645c23eeec5e2b7f707b46fde8a0c64a1b5f` avant consolidation. Provenance : `data/catalog/` et `data/knowledge/sources.json`.
@@ -76,6 +85,14 @@ Demande : retrouver tous les éléments BOJ.ART/Jarvis encore accessibles. Inven
 
 Validation : 62 fichiers, 390 425 092 octets restaurés depuis GitHub, comparaison octet par octet et SHA-256, aucun recouvrement avec les 3 340 objets initiaux ; contrôles de format et 11 gardes du restaurateur réussis. L’environnement initial est tombé en panne pendant la collecte ; tous les médias du complément ont été récupérés à nouveau avant la vérification distante. Les synthèses de recherche restent explicitement distinctes des transcriptions originales. État et limites : `docs/RECUPERATION_APPROFONDIE_2026-11-01.md` ; preuve : `docs/evidence/deep-recovery-2026-11-01.json`.
 
+## Raccordement des recherches au pilotage
+
+Réconciliation de la récupération approfondie (`7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2`) avec la contribution outils/mémoire (`5e8a14415b816ac7aa840cb3409a1752943929da`). Les deux index documentaires sont réunis par projet et chemin ; les sources de récupération, la résilience et la collection research sont conservées. Le double paragraphe de mission est retiré de cette passation, sans suppression d'original historique.
+
+Le plan relie les fiches d'outils, les besoins de données et les critères réels déclarés dans le runtime. Les calculs de dépendances restent descriptifs, sans installation ni qualification automatique. Seize scénarios dédiés couvrent les références, empreintes, exclusions, ordres stables et refus des validations fabriquées. Résultats exécutés : `docs/evidence/orchestration-integration-2026-11-01.json`. Aucun modèle, périphérique ou service payant lancé par cette intégration.
+
+La première évaluation du corpus réuni réussissait 13 cas lexicaux sur 14 : ce journal repoussait le guide de gouvernance hors des cinq premiers résultats pour « restauration sauvegarde ». Classement dans `session_log`, étiquette historique et conservation des anciennes versions ajoutés ; cinq nouveaux scénarios vérifient migration, recherche et restauration. Les 14 cas passent après correction. La recette locale du vrai lanceur réussit également après arrêt forcé, redémarrage et restauration dans un nouveau dossier ; elle ne qualifie pas une coupure électrique, les modèles ou le matériel.
+
 ## Continuité des réponses et fraîcheur de l’historique
 
 Demande : poursuivre la préparation de la mémoire Jarvis avant l’installation. Base examinée : `7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2`, contrôles GitHub réussis. Les 62 originaux de récupération récemment ajoutés et leurs preuves sont conservés.
@@ -84,6 +101,8 @@ Constat : le client Ollama transmettait les 6 000 derniers caractères du JSON d
 
 Vérifications locales : 17 scénarios ciblés réussis avec client Ollama simulé, plus les tests sélectionnés de mémoire, contexte, transactions, diversité et MCP. Le workflow mémoire exécute les suites complètes et la reprise du lanceur sous Windows et Linux sur la révision publiée. La qualité d’un modèle réel et la tour BOJ.ART restent à qualifier.
 
+Réconciliation supplémentaire avant publication : `0a7a08dd0a0bed445ef0dc5734be7c841b30467a` est conservé. Le contexte conversationnel borné, ses contrôles de fraîcheur et ses dix-sept scénarios restent intégrés à la mémoire commune. Les résultats consolidés figurent dans la preuve d’orchestration.
+
 ## Suite de l’audit : propositions après restauration
 
 Base initialement examinée : `7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2`, rapprochée de `0a7a08dd0a0bed445ef0dc5734be7c841b30467a` avant publication. Les modifications concurrentes de continuité des conversations sont conservées.
@@ -91,3 +110,5 @@ Base initialement examinée : `7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2`, rappro
 Deux défauts reproduits : une proposition visuelle préparée mais non distribuée restait courante après restauration ; une proposition CAO non exécutée pouvait encore atteindre le constructeur avec son ancienne confirmation. La restauration révoque désormais ces propositions. Les octets des propositions visuelles et des reçus restent conservés ; les résultats CAO déjà enregistrés se rejouent sans recalcul. Aucune réexécution automatique n’est ajoutée.
 
 Six nouveaux tests couvrent le refus des anciennes demandes, les nouvelles demandes, les reçus terminés, la compatibilité des anciennes sauvegardes, le redémarrage et une seconde sauvegarde/restauration. Ils sont intégrés à la suite `tests` exécutée par le workflow mémoire sous Windows et Linux. Vérifications locales complémentaires : 64 tests d’orchestration M06/M07, 44 tests de régie M04, 31 tests M05 sans médias privés et 7 tests de fermeture SQLite réussis. Trois cas M05 restent non validés ici faute des médias d’exemple ; aucune qualification CAO réelle, voix, écran ou imprimante n’est revendiquée. Les résultats CI et les empreintes du commit sont consignés dans le reçu de continuation de `audit/context-results`.
+
+Rapprochement du pilotage : le correctif de restauration `9c2a0fb47baf1b610e31d2deb800a5323bb9495e` est conservé avec ses six scénarios. La preuve d’orchestration est actualisée sur le corpus et le code réunis.
