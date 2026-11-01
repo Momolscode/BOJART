@@ -39,3 +39,7 @@ Réconciliation avant envoi : les évolutions distantes jusqu’à `9a78aab69879
 ## Document de reprise Jarvis 5 — 1 novembre 2026
 
 Demande explicite : pousser le fichier joint `JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt` dans `Momolscode/BOJART`. Base distante examinée : `4873567fad40d2033005ec0fd7af05a11b0bc2fe`. Le registre connaissait déjà son empreinte, mais aucun blob identique ne figurait dans l'arbre de `main`. Le document complet est ajouté sous `docs/historical/recovery-2026-11-01/`, sans modifier ses 117 992 octets. L'entrée `jarvis-recovery` existante pointe désormais vers cette copie ; aucune nouvelle source ni décision n'est créée. Les affirmations anciennes restent historiques et ne remplacent pas `context/CURRENT.md`. Contrôles : empreinte SHA-256 de la pièce jointe, absence de copie identique dans l'arbre de départ, manifeste du dépôt et provenance. Les médias et archives cités ne sont pas transférés par cet ajout documentaire.
+
+## Suite : démarrage et reprise
+
+Base rapprochée : `e5cd9f3f18f744b800aa8bb655a70fa643c634a1` (PR #4). La reprise commune des archives et les contrôles du manifeste binaire sont réutilisés. Diagnostic de lancement, chemin mémoire partagé, export sourcé, invalidation des réponses périmées et diversification des sources sont ajoutés. Voir `docs/DEMARRAGE_ET_REPRISE.md` et les preuves de démarrage/restauration dans `docs/evidence/startup-2026-11-01.json`. Les modèles et périphériques réels restent à qualifier.

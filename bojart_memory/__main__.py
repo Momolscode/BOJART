@@ -2,13 +2,13 @@
 import argparse
 import json
 from pathlib import Path
-import os
 from .core import Memory, MemoryError, MAX_FILES, TEXT_EXT, IGNORED_PARTS, PROJECTS
+from .paths import default_state
 
 
 def main():
     p=argparse.ArgumentParser(description='Mémoire BOJ.ART sourcée, locale, sans appel de modèle.')
-    p.add_argument('--state',type=Path,default=Path(os.environ.get('BOJART_MEMORY_STATE', str(Path.home()/'BOJART/memory'))))
+    p.add_argument('--state',type=Path,default=default_state())
     sub=p.add_subparsers(dest='cmd',required=True)
     i=sub.add_parser('ingest');i.add_argument('root',type=Path);i.add_argument('--project',required=True);i.add_argument('--collection',required=True);i.add_argument('--provenance',required=True)
     r=sub.add_parser('index-repo');r.add_argument('--repo',type=Path,default=Path(__file__).resolve().parents[1])

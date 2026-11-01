@@ -17,6 +17,8 @@ bash Lancer_BOJART.sh
 
 L’installeur prépare `.venv`, indexe les documents et vérifie Python/FTS5. Le lanceur ouvre Jarvis ; choisir **Mémoire du projet**. Si le navigateur ne s’ouvre pas : `Lancer_BOJART.cmd --no-browser` ou `bash Lancer_BOJART.sh --no-browser`, puis ouvrir l’URL privée affichée. Garder la fenêtre du lanceur ouverte.
 
+Le lanceur annonce les moteurs manquants. `Lancer_BOJART.cmd --check-only` ou `bash Lancer_BOJART.sh --check-only` effectue le contrôle avant ouverture. Voir [démarrage et reprise](docs/DEMARRAGE_ET_REPRISE.md) pour interpréter le rapport et télécharger un contexte sourcé.
+
 L’index est actualisé à chaque lancement. Aucune configuration du GPU n’est présumée. L’installateur peut être relancé sans effacer la mémoire.
 
 ## 2. Ce qui est disponible immédiatement

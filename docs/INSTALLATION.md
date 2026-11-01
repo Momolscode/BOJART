@@ -4,6 +4,8 @@ Pour le démarrage mémoire sans dépendances externes, suivre d’abord [INSTAL
 
 Procédure logicielle ; pas encore exécutée sur le PC réel. GPU, pilotes, microphone, moniteurs et imprimantes sont à inventorier.
 
+Le [contrôle de lancement et l’export de reprise](DEMARRAGE_ET_REPRISE.md) vérifient les imports natifs et la continuité entre sessions.
+
 ## Préparer
 
 Installer Git, Python 3.12 et FFmpeg/FFprobe via le gestionnaire adapté au système.

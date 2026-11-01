@@ -37,6 +37,8 @@ archives/private/
 *.jpeg
 *.webp
 *.pdf
+!docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf
+!docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf
 *.ttf
 jarvis/apps/jarvis/studio_media/
 jarvis/apps/jarvis/studio_assets/

@@ -38,3 +38,7 @@ Copie SQLite cohérente, objets vérifiés, destination de restauration neuve. S
 Politique proposée : copie après travail, autre support chaque jour travaillé, copie hors site chiffrée et essai mensuel de restauration. Ces cadences ne sont pas activées. Mesurer volume, durée et perte acceptable avant automatisation.
 
 Le journal `bojart_ops` reçu d’une autre session conserve budgets et reçus de génération dans une base distincte. Voir [OPERATIONS.md](OPERATIONS.md) pour sa sauvegarde. L’import documentaire ne remplace ni ce journal ni les cinq bases opérationnelles M07.
+
+## Archive publique déjà fusionnée
+
+La PR #3 a ajouté une sélection de deux PDF directs et trois fichiers fragmentés (deux PDF et une prévisualisation). Elle est conservée ; ses 22 charges binaires sont contrôlées par taille et SHA-256 contre un manifeste figé. Elles ne sont ni des sources textuelles automatiquement indexées, ni une validation du film. Les autres fichiers binaires restent refusés par la politique du runtime. Une extension de cette sélection exige une modification explicite du contrôle et du manifeste. Les sauvegardes privées de travail restent distinctes.

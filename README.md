@@ -42,3 +42,5 @@ Les archives et médias simplement référencés ne sont pas tous hébergés ici
 Les ajouts simultanés sont intégrés : [audit et journal des générations](docs/OPERATIONS.md), `bojart_ops/`, `tests_ops/` et leur workflow GitHub. Ils complètent la mémoire documentaire ; les sauvegardes restent distinctes.
 
 La [récupération étendue](docs/RECUPERATION_VERIFIEE_2026-11-01.md) décrit 3 340 contenus distincts et 6 445 emplacements. Leur présence sur les trois branches GitHub est désormais confirmée par une [restauration vérifiée](docs/evidence/recovery-resumption-2026-11-01.json). Ce périmètre ne certifie pas la récupération de toutes les conversations ni des fichiers du PC de l'atelier.
+
+Le [démarrage et la reprise de session](docs/DEMARRAGE_ET_REPRISE.md) ajoutent le contrôle des moteurs natifs, l’export de contexte avec provenance et une recette de redémarrage/restauration.

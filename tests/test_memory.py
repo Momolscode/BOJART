@@ -30,6 +30,14 @@ class MemoryTests(unittest.TestCase):
         self.put('a.md');self.put('b.md')
         self.assertEqual(self.memory.stats()['assets'],1);self.assertEqual(self.memory.stats()['sources'],2)
 
+    def test_result_window_diversifies_sources_before_repeating_long_document(self):
+        self.put('dense.md', ('rare ' * 100 + '\n') * 30)
+        self.put('other.md', 'rare ' + 'contexte ' * 200)
+        found=self.memory.search('rare',project='bojart.jarvis',limit=2)['results']
+        self.assertEqual({r['source_path'] for r in found},{'dense.md','other.md'})
+        complete=self.memory.search('rare',project='bojart.jarvis',limit=30)['results']
+        self.assertGreater(len([r for r in complete if r['source_path']=='dense.md']),1)
+
     def test_update_preserves_history_and_hides_old_version_by_default(self):
         old=self.put(text='obsoletealpha');self.put(text='courantbeta')
         self.assertFalse(self.memory.search('obsoletealpha',project='bojart.jarvis')['results'])

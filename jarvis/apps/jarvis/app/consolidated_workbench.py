@@ -105,9 +105,10 @@ class ConsolidatedHandler(StudioHandler):
                 # This route can only retrieve. Import and reconciliation are local CLI operations.
                 sys.path.insert(0,str(MONOREPO.parent)) if str(MONOREPO.parent) not in sys.path else None
                 from bojart_memory import Memory, MemoryError
+                from bojart_memory.paths import default_state
                 q=parse_qs(parsed.query,keep_blank_values=True)
                 if set(q)-{'q','project','limit'} or any(len(v)!=1 for v in q.values()):raise Rejected('Paramètres invalides.')
-                state=Path(os.environ.get('BOJART_MEMORY_STATE',str(Path.home()/'BOJART/memory')))
+                state=default_state()
                 if not (state/'memory.sqlite').is_file():return self.j({'available':False,'results':[],'message':'La mémoire locale doit être initialisée avec le lanceur BOJART.'})
                 try:
                     with Memory(state,readonly=True) as memory:

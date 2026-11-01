@@ -217,7 +217,9 @@ class Memory:
             raise MemoryError('Recherche hors limites.')
         terms = re.findall(r'[^\W_]+', query, re.UNICODE)[:32]
         if not terms:
-            return {'project':project, 'results':[], 'trusted_instructions':False}
+            return {'project':project, 'query':query, 'retrieval':'sqlite_fts5_bm25',
+                    'results':[], 'warnings':[], 'trusted_instructions':False,
+                    'facts_automatically_validated':False}
         match = ' OR '.join('"'+word+'"' for word in terms)
         current = '' if history else 'AND s.current_version=v.version_id'
         rows = self.db.execute(f'''
@@ -230,16 +232,30 @@ class Memory:
             WHERE search MATCH ? AND s.project=? {current}
             ORDER BY CASE WHEN s.collection='canonical' THEN 0 ELSE 1 END,
                      rank,v.observed_at DESC,c.start_line LIMIT ?
-        ''', (match, project, limit)).fetchall()
-        verified, results, warnings = {}, [], []
+        ''', (match, project, max(30, limit * 5))).fetchall()
+        # First expose distinct sources; repeated chunks from one long document
+        # can otherwise occupy the entire result window. Keep their relative
+        # BM25 order, then complete the window with the remaining passages.
+        first, repeated, sources_seen = [], [], set()
         for row in rows:
+            source = (row['project'], row['collection'], row['source_path'])
+            if source in sources_seen:
+                repeated.append(row)
+            else:
+                first.append(row)
+                sources_seen.add(source)
+        verified, results, warnings = {}, [], []
+        for row in first + repeated:
             sha = row['sha256']
             if sha not in verified:
                 obj = self._object(sha)
                 verified[sha] = obj.is_file() and not obj.is_symlink() and file_sha(obj) == sha
                 if not verified[sha]:warnings.append({'sha256':sha,'reason':'source_missing_or_changed'})
             if verified[sha]:results.append({**dict(row),'source_bytes_verified':True})
+            if len(results) >= limit:
+                break
         return {'project':project, 'query':query, 'retrieval':'sqlite_fts5_bm25', 'trusted_instructions':False,
+                'selection':'distinct_sources_before_repeated_chunks',
                 'facts_automatically_validated':False, 'results':results, 'warnings':warnings}
 
     def stats(self):

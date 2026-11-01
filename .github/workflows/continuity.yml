@@ -19,6 +19,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Cited retrieval regression cases
         run: python tools/evaluate_memory.py
+      - name: Real launcher, restart and restore in temporary state
+        run: python tools/check_startup.py --output .bojart-audit/startup.json
       - name: Signal and memory context tests
         run: node --test jarvis/tests/voice_endpoint.test.cjs jarvis/tests/memory_context.test.cjs
       - name: JavaScript syntax

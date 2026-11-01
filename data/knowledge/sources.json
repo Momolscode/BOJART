@@ -96,6 +96,12 @@
     "scope": "recovery_archive_integrity_only"
   },
   {
+    "source_id": "startup-acceptance-2026-11-01",
+    "evidence": "executed_this_session",
+    "path": "docs/evidence/startup-2026-11-01.json",
+    "scope": "Local Linux software checks on temporary fixtures; no target hardware qualification"
+  },
+  {
     "source_id": "recovery-github-resumption-20261101",
     "path": "docs/evidence/recovery-resumption-2026-11-01.json",
     "sha256": "eab2d2cc6e7dde3335a570e94fb40c1e95451feb6a7cb09ffc45599f61d37237",

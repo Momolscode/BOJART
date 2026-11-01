@@ -110,6 +110,11 @@
     "provenance": "Original recovery inventory checked on 2026-11-01; current GitHub byte restoration is documented in docs/ETAT_ARCHIVES_2026-11-01.md."
   },
   {
+    "path": "docs/DEMARRAGE_ET_REPRISE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Current launcher and context-export implementation; see docs/evidence/startup-2026-11-01.json for executed software checks"
+  },
+  {
     "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
     "project": "bojart.jarvis",
     "provenance": "3340 unique objects restored from three pinned GitHub commits and compared byte-for-byte to source ZIPs; see docs/evidence/recovery-resumption-2026-11-01.json."
