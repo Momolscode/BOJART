@@ -1769,8 +1769,8 @@
     },
     {
       "path": "ops/context-monitor/checkpoint.json",
-      "bytes": 37454,
-      "sha256": "9ecdc3e475c65725c2180b1e134a333dcc7d9c26919ae2a670dc041d38753755"
+      "bytes": 37695,
+      "sha256": "ca2b1170e4f9131220e1f6c6dd1dd85bbdc94383dc142240759cd02753b6a022"
     },
     {
       "path": "ops/context-monitor/probes/activation-2026-11-01.json",
@@ -2091,6 +2091,16 @@
       "path": "ops/context-monitor/receipts/pr-10/16226bdfc7e36a662a488398a8a00f4d3cc9d7c3.md",
       "bytes": 3842,
       "sha256": "744eedaf047e6417959ff7a65a7768ef37600173694fac05d3f174f2672fab73"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-11/2767b2ffb6466cff126b6605bce1a5268f93bc8b.json",
+      "bytes": 11676,
+      "sha256": "7f95ed9c0cf10f7f6c9b4f9a221525b0e3449e6b8845d523687136cdd7af180f"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-11/2767b2ffb6466cff126b6605bce1a5268f93bc8b.md",
+      "bytes": 3130,
+      "sha256": "97e6a7d124badf709f2f790f958ef553838bb6cda604cfa5f6ec3c13712f9e72"
     },
     {
       "path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.json",

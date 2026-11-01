@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": {
+    "number": 11,
+    "url": "https://github.com/Momolscode/BOJART/pull/11",
+    "state": "open",
+    "draft": false,
+    "merged": false,
+    "base": {
+      "ref": "main",
+      "sha": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4"
+    },
+    "head": {
+      "ref": "feat/launch-environment-diagnostics",
+      "sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "repository": "Momolscode/BOJART"
+    }
+  },
+  "trigger_kind": "synchronize",
+  "head_sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+  "compared_from_sha": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+  "started_at": "2026-11-01T23:51:35Z",
+  "finished_at": "2026-11-01T23:52:48Z",
+  "status": "complete",
+  "changed_paths": [
+    "Diagnostic_BOJART.cmd",
+    "Diagnostic_BOJART.sh",
+    "INSTALLER_DEMAIN.md",
+    "bojart_ops/environment.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "docs/DEMARRAGE_ET_REPRISE.md",
+    "docs/DIAGNOSTIC_OUTILS.md",
+    "docs/evidence/environment-diagnostic-2026-11-02.json",
+    "ops/orchestration.json",
+    "tests/test_environment_diagnostic.py",
+    "tools/diagnose_environment.py",
+    "tools/doctor.py",
+    "tools/start_jarvis.py"
+  ],
+  "reviewed_paths": [
+    "Diagnostic_BOJART.cmd",
+    "Diagnostic_BOJART.sh",
+    "INSTALLER_DEMAIN.md",
+    "bojart_ops/environment.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "docs/DEMARRAGE_ET_REPRISE.md",
+    "docs/DIAGNOSTIC_OUTILS.md",
+    "docs/evidence/environment-diagnostic-2026-11-02.json",
+    "ops/orchestration.json",
+    "tests/test_environment_diagnostic.py",
+    "tools/diagnose_environment.py",
+    "tools/doctor.py",
+    "tools/start_jarvis.py",
+    "AGENTS.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "Diagnostic_BOJART.cmd",
+      "sha": "b6dfebdd81cd41fe7451ece9188c0469611f7296",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/Diagnostic_BOJART.cmd"
+    },
+    {
+      "path": "Diagnostic_BOJART.sh",
+      "sha": "dbf01fe184d2e828382803957b99338c2c67904a",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/Diagnostic_BOJART.sh"
+    },
+    {
+      "path": "INSTALLER_DEMAIN.md",
+      "sha": "852ab90eb1d25b56ee43cd9f728c621ea5882b13",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/INSTALLER_DEMAIN.md"
+    },
+    {
+      "path": "bojart_ops/environment.py",
+      "sha": "74f379f8d9a305276ae2cf32e48591f15914c44c",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/bojart_ops/environment.py"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "ff57879bcb1d7a32c99d6bcfa979ad45c6c22570",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "3a8a3e49bf0966fdd0f15dd2c93e29f0ac929012",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/catalog/repository_manifest.json",
+      "sha": "f96454d9b74221fb9decb20f0196f8d9b2a55642",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/data/catalog/repository_manifest.json"
+    },
+    {
+      "path": "docs/DEMARRAGE_ET_REPRISE.md",
+      "sha": "bd19b738e01cb32dd32fa8ce4a7ed800f57c39c1",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/docs/DEMARRAGE_ET_REPRISE.md"
+    },
+    {
+      "path": "docs/DIAGNOSTIC_OUTILS.md",
+      "sha": "e790cff1915bbf55c179594cd38c335f26875f2f",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/docs/DIAGNOSTIC_OUTILS.md"
+    },
+    {
+      "path": "docs/evidence/environment-diagnostic-2026-11-02.json",
+      "sha": "dc5fe040a987f8db987bda44e1891dc073ea3d94",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/docs/evidence/environment-diagnostic-2026-11-02.json"
+    },
+    {
+      "path": "ops/orchestration.json",
+      "sha": "d7d7fc0ad95ee6bc78a72a3ff58c07128c159352",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/ops/orchestration.json"
+    },
+    {
+      "path": "tests/test_environment_diagnostic.py",
+      "sha": "4c51c5447dc1d5ef409e86f074834cb51bd44495",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/tests/test_environment_diagnostic.py"
+    },
+    {
+      "path": "tools/diagnose_environment.py",
+      "sha": "ba3193ce154b722a5478e6fbef6964641d7452fd",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/tools/diagnose_environment.py"
+    },
+    {
+      "path": "tools/doctor.py",
+      "sha": "2e5a774962b800afdba40dd464027df20fb5fbb1",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/tools/doctor.py"
+    },
+    {
+      "path": "tools/start_jarvis.py",
+      "sha": "1cc868e0047c227290a72f092f68cf9d5f257a38",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/tools/start_jarvis.py"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha": "4ec392db6c45655bdb0c5a2d0bc0fb19df054202",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/AGENTS.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "20c4b51ea2e25b2105f57c372b0c1e292e45666e",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "3ddd7fa10040698af5088f768fa975e9d6fdcf6e",
+      "revision": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "url": "https://github.com/Momolscode/BOJART/blob/2767b2ffb6466cff126b6605bce1a5268f93bc8b/docs/OPERATIONS.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363489547",
+      "conclusion": "success",
+      "head_sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "scope": "Inventaire, syntaxe et invariants techniques du dépôt à la tête exacte; aucune validation sémantique exhaustive, matérielle ou artistique."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363489553",
+      "conclusion": "success",
+      "head_sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "scope": "Provenance, mémoire/HTTP, récupération, lanceur, signaux et syntaxe JavaScript sur logiciels et fixtures; aucun matériel cible qualifié."
+    },
+    {
+      "name": "BOJART quality schema",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363489584",
+      "conclusion": "success",
+      "head_sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "scope": "Validation du schéma qualité et du rejet attendu de l'exemple en attente; aucune approbation artistique."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363489614",
+      "conclusion": "success",
+      "head_sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+      "scope": "Tests Windows et Ubuntu de mémoire, MCP/HTTP, compatibilité et redémarrage forcé; aucune qualification de la tour, de Jev réel, des modèles ou des machines."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Les 15 chemins modifiés ont été lus sémantiquement. Le diagnostic reste borné, local et observationnel: commandes fixes, délais, sortie limitée, aucun réseau, aucune installation, aucun fournisseur, aucun modèle, aucun rendu et aucune commande physique.",
+      "action": "Aucun correctif source établi."
+    },
+    {
+      "severity": "info",
+      "evidence": "docs/evidence/environment-diagnostic-2026-11-02.json rapporte 295 tests réussis, 14/14 cas de recherche, provider_calls=0, physical_commands=0, target_hardware_qualified=false et GPU fixtures synthétiques.",
+      "action": "Conserver cette distinction; exécuter séparément le diagnostic sur la tour réelle avant toute qualification."
+    },
+    {
+      "severity": "warning",
+      "evidence": "ops/orchestration.json maintient target-inventory bloqué; les caractéristiques RTX/Windows restent source_reported et non issues d'un diagnostic vivant de la tour.",
+      "action": "Collecter le rapport privé de la tour et qualifier outils, GPU, espace libre, microphone, écrans et imprimantes sans déduire une validation matérielle."
+    },
+    {
+      "severity": "info",
+      "evidence": "Le manifeste de la tête contient 839 entrées, correspond aux 839 blobs de l'arbre hors manifeste; les tailles UTF-8 et SHA-256 des 14 autres fichiers modifiés correspondent, sans doublon d'empreinte impliquant ces chemins.",
+      "action": "Aucune suppression ni déduplication."
+    },
+    {
+      "severity": "info",
+      "evidence": "Les quatre exécutions GitHub Actions ci-dessus ciblent exactement 2767b2ffb6466cff126b6605bce1a5268f93bc8b et réussissent; leur portée reste technique et logicielle.",
+      "action": "Ne pas interpréter ces succès comme une validation du matériel cible, des modèles, de Jev réel ou de l'approbation artistique."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "Aucun accès ni diagnostic exécuté sur la tour cible; les faits matériels déclarés ne sont pas requalifiés.",
+    "Aucun modèle, rendu, microphone, Jev réel, logiciel CAO/tranchage, imprimante ou autre machine n'a été lancé ou commandé.",
+    "Le diagnostic GPU réel couvre NVIDIA via nvidia-smi; AMD, Intel et Apple restent explicitement non sondés.",
+    "Les succès CI et les tests de fixtures ne constituent ni une approbation artistique ni une validation sur matériel."
+  ],
+  "next_actions": [
+    "Exécuter Diagnostic_BOJART.cmd ou Diagnostic_BOJART.sh sur la tour cible et conserver le rapport brut hors dépôt.",
+    "Qualifier séparément chaque intégration détectée avant de la déclarer connectée ou validée.",
+    "Maintenir target-inventory bloqué tant que les preuves réelles demandées ne sont pas acquises."
+  ]
+}
