@@ -42,6 +42,8 @@ Sélection d'outils et de skills du 1 novembre : voir `docs/research/launch-tool
 
 GPU, OS, modèles d’imprimantes et nombre exact de machines sont inconnus. Les mentions 7–8 puis « une dizaine » ne remplacent pas un inventaire.
 
+Le relevé du poste est désormais exécutable avec `Diagnostic_BOJART.cmd` ou `bash Diagnostic_BOJART.sh` : système, RAM, GPU NVIDIA/VRAM par carte, présence des outils et certaines versions. Voir `docs/DIAGNOSTIC_OUTILS.md`. Le rapport reste local ; une exécution dans l'environnement de développement ne confirme pas le matériel de la tour. Présence, version et qualification de la fonction restent distinctes.
+
 ## Complément de récupération vérifié
 
 La collecte étendue de 219 sources est conservée sur les trois branches de récupération GitHub : 3 340 contenus uniques et leurs 6 445 emplacements vérifiés. Tous les contenus ont été restaurés depuis les commits distants puis comparés octet par octet aux trois ZIP d'origine. Les 87 fichiers du paquet créatif préparé et les 22 textes du transfert interrompu sont inclus. Voir `docs/ETAT_ARCHIVES_2026-11-01.md` pour la preuve et la commande de restauration commune. Ce périmètre dépasse le catalogue initial et ne doit pas lui être additionné. Il ne certifie pas la récupération intégrale des conversations ou du PC.

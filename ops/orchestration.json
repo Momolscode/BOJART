@@ -251,7 +251,8 @@
       ],
       "evidence": [
         "context/CURRENT.md",
-        "INSTALLER_DEMAIN.md"
+        "INSTALLER_DEMAIN.md",
+        "docs/DIAGNOSTIC_OUTILS.md"
       ],
       "acceptance": "Inventaire observé sur le poste ; choix de modèles fondé sur ses ressources.",
       "required_datasets": [

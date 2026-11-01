@@ -23,6 +23,8 @@ Les raccourcis `Lancer_Jarvis` présents dans `jarvis/` et `jarvis/apps/jarvis/`
 
 L’index est actualisé à chaque lancement. Aucune configuration du GPU n’est présumée. L’installateur peut être relancé sans effacer la mémoire.
 
+Avant de choisir les modèles ou les outils créatifs, ouvrir **Diagnostic_BOJART.cmd** (Linux : `bash Diagnostic_BOJART.sh`). Le relevé daté du système, de la RAM, du GPU NVIDIA et des outils reste dans le dossier privé `BOJART/diagnostics`. Les exécutables hors du PATH peuvent être indiqués explicitement. Voir le [diagnostic des outils](docs/DIAGNOSTIC_OUTILS.md) pour distinguer présence, version et recette fonctionnelle.
+
 ## 2. Ce qui est disponible immédiatement
 
 - Recherche des sources avec chemins, lignes et empreintes.

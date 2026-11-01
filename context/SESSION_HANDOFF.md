@@ -1,5 +1,15 @@
 # Passation — consolidation du 1 novembre 2026
 
+## Reprise : diagnostic des outils et du poste — 2 novembre 2026
+
+Demande : poursuivre la préparation des outils et du lancement BOJ.ART. La PR #7 est fusionnée ; base actuelle examinée `a0500b39ddf5a6154c701c225c5b2ad80767cc70`, puis rapprochement des lanceurs publiés à `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`. Leurs corrections sont préservées. La tour signalée par le connecteur est hors ligne ; aucun matériel cible n'est déduit de cet environnement de travail.
+
+Ajouts : diagnostic local exécutable, raccourcis Windows/Linux, observation NVIDIA par carte et métadonnées de dix paquets Python, présence de neuf binaires dont quatre sondés pour leur version. Les sondes restent fixes et bornées ; les slicers, Ollama et le moteur Adobe ne sont pas démarrés. Les rapports datés restent hors du dépôt et distinguent présence, version et qualification. Le lanceur expose ce contrôle avec `--check-only --check-tools` ; son ouverture habituelle reste inchangée.
+
+Le guide `docs/DIAGNOSTIC_OUTILS.md` est relié aux documents d'installation déjà indexés et à la tâche `target-inventory`, toujours bloquée sur l'accès au poste. Le corpus de référence sélectionné n'est pas élargi par une seconde copie détaillée des mêmes prérequis. Les 14 cas lexicaux existants sont conservés. Aucun modèle, outil tiers, connexion de compte ou imprimante activé.
+
+Tests et portée exécutée : `docs/evidence/environment-diagnostic-2026-11-02.json`. Les cas GPU sont synthétiques ; seul le diagnostic des outils présents dans cet environnement a été exécuté. Prochaine preuve : ouvrir `Diagnostic_BOJART` sur la tour, relever les champs restants, puis essayer un profil IA et les parcours créatifs sur ce matériel.
+
 ## Recherche des outils et qualification — 1 novembre 2026
 
 Demande : enrichir BOJ.ART/Jarvis pour la 3D, la voix, le studio VFX, l'identité et le marketing. Revue de 18 dépôts à références épinglées et de documentations officielles ; 26 fiches, 14 besoins de données et 12 portes de recette dans `docs/research/launch-toolchain-2026-11-01/`. Aucun outil tiers installé ni génération payante ou publication lancée. La tour n'est pas accessible pour une qualification. Metricool n'est pas retenu dans cette demande ; repli proposé par données natives/exportées, sans prétendre les avoir collectées.

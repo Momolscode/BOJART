@@ -43,9 +43,19 @@
       "sha256": "fd8e85189b4eccfde8b654fed82d23586f2860b15fab9551fc8c5745aebe8591"
     },
     {
+      "path": "Diagnostic_BOJART.cmd",
+      "bytes": 320,
+      "sha256": "8bb709f75beebd6e806ede7325d8cca345fdc6c52c3fc87b996f3262c4c727a5"
+    },
+    {
+      "path": "Diagnostic_BOJART.sh",
+      "bytes": 299,
+      "sha256": "af6ebdb22bf94f11a668fc15d397cb32e368cfaff609dc4322ffd2cf5acb155a"
+    },
+    {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 6703,
-      "sha256": "d2691dd54fbc83a23608e192d6db7c2853ab97fe7a8c6e1e31dafedd8dfc7b5d"
+      "bytes": 7140,
+      "sha256": "49e6f8840ea4b9b48c92fd41113f639c2261c711ec9c1e549a7283ca2a1c4248"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -283,6 +293,11 @@
       "sha256": "22a376039be51e51d959a0239b85348d4a31b5d005f543427790a1bdeb00628f"
     },
     {
+      "path": "bojart_ops/environment.py",
+      "bytes": 11468,
+      "sha256": "6ec3b4c8341b8de1e74a8cee0349d7d2483d708b0d389101c37fd926cf66b087"
+    },
+    {
       "path": "bojart_ops/ledger.py",
       "bytes": 10884,
       "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31"
@@ -304,13 +319,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 7403,
-      "sha256": "b7e0293add7f47e93ee9bf5b0a9d6a28bdc163233d59e7e6e7235a931d29dd43"
+      "bytes": 7824,
+      "sha256": "928378e49a72676df162ff878dafc1c0e7d9bcbed36954b0ac046b7f3b7c8035"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 26598,
-      "sha256": "599ee467a97357513ffa136c788a111b20e0e69ee482f88c97753cb71927ca6b"
+      "bytes": 28353,
+      "sha256": "c85cc3877bcde89f1ba003d6e27b64d455b0f5d4c59b958896d94346c64904f9"
     },
     {
       "path": "creative/CURRENT.md",
@@ -454,8 +469,13 @@
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
-      "bytes": 5793,
-      "sha256": "c7ef0dc947213311a354a5e00c6162c0f8f6434ff49f7f27ae48a4b4dcbea7ac"
+      "bytes": 6112,
+      "sha256": "0adae3c30d71b6e5c363a3ea7c15238820f53ad255e0c544f99382da3e069f62"
+    },
+    {
+      "path": "docs/DIAGNOSTIC_OUTILS.md",
+      "bytes": 5815,
+      "sha256": "eff44742ae4df505d671c84436c5cdd786d7a6fd10740edcd78e6bda340539bb"
     },
     {
       "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
@@ -636,6 +656,11 @@
       "path": "docs/evidence/deep-recovery-2026-11-01.json",
       "bytes": 1502,
       "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee"
+    },
+    {
+      "path": "docs/evidence/environment-diagnostic-2026-11-02.json",
+      "bytes": 3720,
+      "sha256": "9b5da445754b2f567d29b668d20741b82c49e39ec1048f0200482a3c6ee9cf95"
     },
     {
       "path": "docs/evidence/m07-baseline-tests.log",
@@ -2344,8 +2369,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 11994,
-      "sha256": "2980e9ff3c15bd56fa3d85cb8b3efb860b026aa636e2cc93b9bbbd47688c9965"
+      "bytes": 12031,
+      "sha256": "a51dbfc84260a3f827673dcc6c3d65c6a550499437faeb50d81525bfd9982bbd"
     },
     {
       "path": "ops/request-example.json",
@@ -3963,6 +3988,11 @@
       "sha256": "659388f705ed8987b90e8eb14cbb04b546a8437123712056376e1da6d781b437"
     },
     {
+      "path": "tests/test_environment_diagnostic.py",
+      "bytes": 11685,
+      "sha256": "ad0ad89bb7e189b60bf5b64a3dc946783440160aea7099e9650797d706b9eccb"
+    },
+    {
       "path": "tests/test_installation.py",
       "bytes": 4785,
       "sha256": "e4e1b7ac04c44b0c7123bc5b0ae3c847b6fc36e73ea2d005671f1497b1b94f67"
@@ -4073,9 +4103,14 @@
       "sha256": "d94d64ed1d71455d694ec06f75f688e6f57b3cb5f49d151324bea6fc504bb6a6"
     },
     {
+      "path": "tools/diagnose_environment.py",
+      "bytes": 4149,
+      "sha256": "40ebe602040bbc6f125202ef28efd1fec19ae45e0064df56be4150cc2758695d"
+    },
+    {
       "path": "tools/doctor.py",
-      "bytes": 8262,
-      "sha256": "f7d0ef37cd00d5a141fee14af4a766d8f073a7ff507291188501c03588037353"
+      "bytes": 8591,
+      "sha256": "a2a36c679f543d14ed0ebf05f29854396d9594e85d96d39e095d3de7104648bc"
     },
     {
       "path": "tools/download_remote_media.py",
@@ -4134,8 +4169,8 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 5335,
-      "sha256": "abd80dab005b96defe67ad81d5357d2cf1584db216c4016060a5ed558befc194"
+      "bytes": 5624,
+      "sha256": "721761e15ab2f18f96fe85923e07781579ca0c67323fc1a00a8a32fe611b0c44"
     },
     {
       "path": "tools/validate_repository.py",
