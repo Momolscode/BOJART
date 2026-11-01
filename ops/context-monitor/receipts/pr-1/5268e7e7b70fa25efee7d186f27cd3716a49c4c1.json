@@ -7,57 +7,19 @@
   "base_ref": "audit/context-baseline",
   "base_sha": "cd71c6ba640f304248702d8a3e64c60f900f9d0b",
   "trigger_kind": "synchronize",
-  "trigger_delivery_ids": [
-    "ee6c6c10-d640-11f1-9c89-d214b4120ae2",
-    "3f601af0-d640-11f1-9a6f-6962e82932f8"
-  ],
   "head_sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
-  "compared_from_sha": "3c288214539adf97381f6053b43225485a873b6a",
-  "started_at": "2026-11-01T22:12:32.790Z",
-  "finished_at": "2026-11-01T22:14:52.560Z",
+  "compared_from_sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+  "started_at": "2026-11-01T22:17:23.048Z",
+  "finished_at": "2026-11-01T22:18:44.233Z",
   "status": "partial",
-  "changed_paths": [
-    ".github/workflows/continuity.yml",
-    ".gitignore",
-    "INSTALLER_DEMAIN.md",
-    "README.md",
-    "bojart_memory/__main__.py",
-    "bojart_memory/agent.py",
-    "bojart_memory/core.py",
-    "bojart_memory/paths.py",
-    "context/CURRENT.md",
-    "context/SESSION_HANDOFF.md",
-    "data/catalog/derivatives.json",
-    "data/catalog/repository_manifest.json",
-    "data/knowledge/claims.jsonl",
-    "data/knowledge/index.json",
-    "data/knowledge/sources.json",
-    "docs/DATA_GOVERNANCE.md",
-    "docs/DEMARRAGE_ET_REPRISE.md",
-    "docs/INSTALLATION.md",
-    "docs/evidence/startup-2026-11-01.json",
-    "docs/evidence/startup-final-agent-tests.log",
-    "docs/evidence/startup-final-m07-scenes-tests.log",
-    "docs/evidence/startup-final-m07-workbench-tests.log",
-    "docs/evidence/startup-final-ops-tests.log",
-    "docs/evidence/startup-final-root-tests.log",
-    "docs/evidence/startup-retrieval-2026-11-01.json",
-    "jarvis/apps/jarvis/app/consolidated_workbench.py",
-    "jarvis/apps/jarvis/app/memory.html",
-    "jarvis/apps/jarvis/app/memory.js",
-    "tests/test_installation.py",
-    "tests/test_memory.py",
-    "tests_agent/test_context_export.py",
-    "tools/check_startup.py",
-    "tools/doctor.py",
-    "tools/memory_browser.cjs",
-    "tools/start_jarvis.py"
-  ],
+  "changed_paths": [],
   "reviewed_paths": [
     ".github/workflows/continuity.yml",
     "AGENTS.md",
     "archive/2026-11-01/MANIFEST.json",
     "archive/2026-11-01/README.md",
+    "bojart_memory/agent.py",
+    "bojart_memory/core.py",
     "bojart_memory/paths.py",
     "context/CURRENT.md",
     "context/SESSION_HANDOFF.md",
@@ -93,6 +55,7 @@
     "jarvis/docs/m07/REPRISE_M07.txt",
     "tests/test_archive_recovery.py",
     "tests/test_installation.py",
+    "tests_agent/test_context_export.py",
     "tests_ops/test_archive_restore.py",
     "tools/check_startup.py",
     "tools/doctor.py",
@@ -128,8 +91,6 @@
     "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
     "bojart_memory/__init__.py",
     "bojart_memory/__main__.py",
-    "bojart_memory/agent.py",
-    "bojart_memory/core.py",
     "bojart_ops/audit.py",
     "data/catalog/derivatives.json",
     "data/catalog/library_inventory.json",
@@ -738,7 +699,6 @@
     "sites/studio/vite.config.ts",
     "tests/test_memory.py",
     "tests/test_memory_http.py",
-    "tests_agent/test_context_export.py",
     "tests_ops/test_ops.py",
     "tools/evaluate_memory.py",
     "tools/memory_browser.cjs"
@@ -845,6 +805,24 @@
       "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
       "blob_sha": "50e8df37a095372668ae0fc7efdd3feac7dcc064",
       "review_mode": "inventory_sizes_and_selected_text_sha256"
+    },
+    {
+      "path": "bojart_memory/core.py",
+      "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+      "blob_sha": "c9ee84bdb65c936243ff6334a517beed49e962d1",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "bojart_memory/agent.py",
+      "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+      "blob_sha": "4d8312c3a151add9c57dcbda617ccea0b5fc1011",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "tests_agent/test_context_export.py",
+      "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+      "blob_sha": "64519cac827c693a093bd79d2f3db3b0224e435e",
+      "review_mode": "full_text_semantic_review"
     }
   ],
   "checks": [
@@ -888,28 +866,58 @@
       "severity": "medium",
       "evidence": "35 chemins changent ; 11 changements textuels sont intégralement lus dans ce lot et le manifeste est contrôlé structurellement. Les changements de recherche, export, interface, provenance et leurs tests restent en attente de lecture complète.",
       "action": "Reprendre les chemins conservés ; aucun défaut non établi corrigé, aucun ancien correctif réappliqué."
+    },
+    {
+      "severity": "info",
+      "status": "reviewed",
+      "evidence": "Lecture intégrale de core.py, agent.py et test_context_export.py : objets conservés par SHA-256, filtrage par projet, versions et provenance dans l'export, budget explicite sur les caractères du texte, notes au statut proposal. La diversification lexicale est bornée aux meilleurs candidats ; l'hybride est facultatif.",
+      "action": "Réutiliser la mémoire existante. Une empreinte vérifie des octets, pas la vérité d'un fait ; operational_authority reste false. L'export et ses cinq tests sont examinés, sans nouvelle exécution locale."
+    },
+    {
+      "severity": "info",
+      "status": "already_processed",
+      "evidence": "PR 4 fermée/fusionnée, tête 10e4c4a500e376f362c75b5826492f5a3f841739 inchangée et reçu complet sans attente. PR relais ouverte, tête 5268e7e7b70fa25efee7d186f27cd3716a49c4c1 inchangée depuis le checkpoint ; comparaison paginée identical, 0 chemin.",
+      "action": "Aucune réapplication des correctifs ni modification du reçu complet PR 4. Reprendre uniquement le reliquat PR 1."
     }
   ],
   "corrections": [],
-  "previous_receipt_path": "ops/context-monitor/receipts/pr-1/3c288214539adf97381f6053b43225485a873b6a.json",
+  "previous_receipt_path": "ops/context-monitor/receipts/pr-1/5268e7e7b70fa25efee7d186f27cd3716a49c4c1.v1.json",
   "limitations": [
-    "Inventaire paginé : 1 commit et 35 chemins en page 1, 0 commit en page 2 ; concordance avec les arbres Git complets non tronqués.",
-    "16 textes lus dans ce lot, dont 11 changements ; un manifeste examiné comme structure et empreintes, pas comme lecture du contenu de tous les fichiers.",
-    "Les chemins pending_paths conservent le reliquat et les nouvelles révisions non examinées. Les fichiers multimédias et archives n'ont pas été décodés.",
-    "Aucune nouvelle exécution locale de tests : conclusions CI associées au SHA exact et preuve importée distinguées. Voix, Jev réel, matériel et avis artistiques non qualifiés.",
-    "Aucun changement de jobs Higgsfield dans ce delta ; aucune génération, crédit, machine, fusion, message externe ou modification d'archive."
+    "Reprise à SHA identique : aucun nouveau chemin modifié ; trois chemins précédemment en attente lus intégralement.",
+    "Aucune nouvelle exécution de tests ; résultats CI du SHA exact relus/réutilisés avec leur portée précédente. Aucun modèle local, Jev, média, microphone ou matériel testé ici.",
+    "Les 637 chemins restants sont conservés. La lecture des sources ne certifie pas toutes les références externes ni une installation opérationnelle sur la tour.",
+    "Aucune machine, génération Higgsfield, crédit, fusion, archive, visibilité, protection ou message externe modifié."
   ],
   "next_actions": [
-    "Lire intégralement agent.py/core.py, l'export de contexte, l'interface memory.js et les tests associés à cette révision.",
-    "Rapprocher sources.json, index.json, derivatives.json et les journaux importés ; poursuivre le reste des chemins en attente.",
-    "Recette sur la tour autorisée : restauration, voix française et trois moniteurs, puis machines avec opérateur."
+    "Lire l'interface memory.js et les tests HTTP/FTS associés ; rapprocher sources.json/index.json/derivatives.json et les journaux du même SHA.",
+    "Poursuivre les 637 chemins en attente sans confondre inventaire et lecture sémantique.",
+    "Sur un poste autorisé, qualifier modèle français, voix, écrans, restauration et interruption ; conserver les limites artistiques des médias."
   ],
   "coverage": {
-    "inventory_complete": true,
-    "changed_paths": 35,
-    "changed_texts_semantically_read": 11,
-    "full_texts_read_this_run": 16,
-    "structured_manifests": 1,
-    "pending_paths": 640
-  }
+    "comparison": "identical; pages 1 et 2 : 0 commit, 0 chemin ; arbre Git non tronqué",
+    "changed_paths_inventory_complete": true,
+    "new_semantic_paths": [
+      "bojart_memory/core.py",
+      "bojart_memory/agent.py",
+      "tests_agent/test_context_export.py"
+    ],
+    "pending_before": 640,
+    "pending_after": 637,
+    "complete_pr4_receipt_preserved": true
+  },
+  "observed_events": [
+    {
+      "pull_request": 4,
+      "action": "closed",
+      "delivery_id": "8f220090-d63f-11f1-94bf-d447dd0ebd4e",
+      "handling": "same frozen head already has complete receipt; immutable receipt preserved"
+    },
+    {
+      "pull_request": 1,
+      "action": "synchronize",
+      "delivery_id": "904cc4f0-d63f-11f1-92ee-1bff888920e3",
+      "handling": "resume partial receipt on actual frozen head"
+    }
+  ],
+  "receipt_revision": 2
 }
