@@ -1793,6 +1793,11 @@
       "sha256": "a5303f33db0d8f2bb6d3233eb892dbbe0d3cf0b1cabf4d05b3012f8f9fe6771b"
     },
     {
+      "path": "ops/context-monitor/probes/activation-2026-11-01.json",
+      "bytes": 3291,
+      "sha256": "acd4130b7e19a679e881c02134f4db862367928224ccf75da0473982f72a8bee"
+    },
+    {
       "path": "ops/context-monitor/receipts/pr-1/1d76c6876de54c7bc37b777ae66bf031207a140d.json",
       "bytes": 39966,
       "sha256": "a26b8ce674ef4a0066772fad0b71e2f584007839a796c81201d2eaa35b2db22f"

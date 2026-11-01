@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "verified_at": "2026-11-01T21:03:36Z",
+  "pull_request": {
+    "number": 1,
+    "url": "https://github.com/Momolscode/BOJART/pull/1",
+    "state": "open",
+    "draft": true,
+    "head": "main",
+    "base": "audit/context-baseline",
+    "base_sha": "cd71c6ba640f304248702d8a3e64c60f900f9d0b"
+  },
+  "activation_verified": true,
+  "verification_scope": "Two real GitHub events were delivered and evaluated; both contextual receipts were published and downloaded for exact-content verification. This is not a promise of instant execution or complete semantic coverage.",
+  "events": [
+    {
+      "action": "opened",
+      "head_sha": "30b3fb9858d81e5499d0a51ed8df6c317b771d7c",
+      "received": true,
+      "contextual_receipt": "ops/context-monitor/receipts/pr-1/30b3fb9858d81e5499d0a51ed8df6c317b771d7c.json",
+      "contextual_status": "partial"
+    },
+    {
+      "action": "synchronize",
+      "head_sha": "1d76c6876de54c7bc37b777ae66bf031207a140d",
+      "received": true,
+      "contextual_receipt": "ops/context-monitor/receipts/pr-1/1d76c6876de54c7bc37b777ae66bf031207a140d.json",
+      "contextual_status": "partial",
+      "new_delta_files": 6,
+      "new_delta_review_complete": true
+    }
+  ],
+  "receipt_publication": {
+    "commit": "afdf6c8d0112b1ca8a35899164795578214691fb",
+    "files_downloaded_and_matched": 7,
+    "manifest_included": true
+  },
+  "checks": [
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41349671345",
+      "name": "BOJART data audit",
+      "head_sha": "1d76c6876de54c7bc37b777ae66bf031207a140d",
+      "conclusion": "success"
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41349671390",
+      "name": "BOJART continuity",
+      "head_sha": "1d76c6876de54c7bc37b777ae66bf031207a140d",
+      "conclusion": "success"
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41349970724",
+      "name": "BOJART data audit",
+      "head_sha": "afdf6c8d0112b1ca8a35899164795578214691fb",
+      "conclusion": "success"
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41349970842",
+      "name": "BOJART continuity",
+      "head_sha": "afdf6c8d0112b1ca8a35899164795578214691fb",
+      "conclusion": "success"
+    }
+  ],
+  "coverage": {
+    "main_direct_pushes": "via synchronize of the permanent PR",
+    "ordinary_pull_requests": true,
+    "branches_without_pr": "technical CI only",
+    "cumulative_paths_reviewed_with_explicit_modes": 42,
+    "pending_semantic_paths": 609,
+    "full_semantic_validation": false
+  },
+  "continuity": {
+    "keep_pr_open": true,
+    "do_not_merge_pr": true,
+    "keep_base_fixed": true,
+    "receipt_branch": "audit/context-results",
+    "automation_remains_enabled": true
+  },
+  "limitations": [
+    "Future notification delivery is not independently verified.",
+    "No physical machine, ASR model, live Jev or artistic master was qualified.",
+    "The successful technical reports do not clear the remaining semantic backlog."
+  ],
+  "next_actions": [
+    "Continue the explicit pending_paths from checkpoint.json on subsequent matching events.",
+    "For a fresh main push, compare its SHA to the next receipt and inspect partial/blocked states."
+  ]
+}
