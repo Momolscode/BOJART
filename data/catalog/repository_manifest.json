@@ -19,8 +19,8 @@
     },
     {
       "path": ".github/workflows/continuity.yml",
-      "bytes": 1014,
-      "sha256": "cd260b872218a457e395450e22c30315e9101f401cbb3a91acaf5af6ccabaf4b"
+      "bytes": 1060,
+      "sha256": "58e74d7b474bae6f03d570814ef99b091c987e4c8e309b686c808d01e056cffa"
     },
     {
       "path": ".github/workflows/jarvis-audit-dossier.yml",
@@ -294,13 +294,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 6259,
-      "sha256": "5b2da779a3cc19ca27e9f27ade57e25f36b54c45ad1f44ca3c365b5afa273574"
+      "bytes": 6732,
+      "sha256": "3b32d680b35ba39cab27e385d98138cdbeb8b27a265affb9112427d26b13968a"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 20860,
-      "sha256": "99d9ce803aa5a4b34f490c69499a646f3bd59880ced9fcd93dbc1244c25247e2"
+      "bytes": 22663,
+      "sha256": "8e6f7a4475f73f2fe47e4b1c99a521cce09e3709e667c430e7b02f6fec117d13"
     },
     {
       "path": "creative/CURRENT.md",
@@ -1054,8 +1054,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/growth.js",
-      "bytes": 5471,
-      "sha256": "64a5da600fcd41cc87bbfd1bda89042b66aabd74475dd10ff6b091e3c14d2d21"
+      "bytes": 5982,
+      "sha256": "49c690c77f8112dc7bf7c12e47d0220269bd78232f84721624db0be31a688312"
     },
     {
       "path": "jarvis/apps/jarvis/app/growth.py",
@@ -1129,18 +1129,18 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
-      "bytes": 7267,
-      "sha256": "9231f73b13a4f7a441d3eda16465c1535815526fc0275b252ffba8653888c4a2"
+      "bytes": 8072,
+      "sha256": "fe4d2175623f6c9363561e6fca4fbc695a06901b684a5666917b2d4a0d1bdea3"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.html",
-      "bytes": 5358,
-      "sha256": "135f2b06601330e21c364319a89b9e5d7ce3f122fd44aa6a5babc34f17b7b07d"
+      "bytes": 5524,
+      "sha256": "f577920b179069ba755a3cfac6d5cb6a41f9f6214fae7a99c53adcec7e992cbc"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.js",
-      "bytes": 6624,
-      "sha256": "96ab99ca55eefd688effc52dc1fff99f4afc0bc9d452c0d38bdc21be2c1c66c2"
+      "bytes": 12737,
+      "sha256": "4a25347d8675166d49c653df8ef5bd8dac730863408cfb5e488c2e382e1b3f9c"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio_seed.py",
@@ -2146,6 +2146,11 @@
       "path": "jarvis/tests/memory_context.test.cjs",
       "bytes": 6235,
       "sha256": "5f25d6b470133b62ede23d3f9f831f9ec0bbbe88afc6f2394ce15fc9a4ffd794"
+    },
+    {
+      "path": "jarvis/tests/studio_growth.test.cjs",
+      "bytes": 11887,
+      "sha256": "fbc3ac1dec071897f09f46818a567f2ad2ec1259e00ab14f9c31ce4116d0e601"
     },
     {
       "path": "jarvis/tests/test_connection_lifetime.py",

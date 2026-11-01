@@ -1,4 +1,4 @@
-# État courant — 1 novembre 2026
+# État courant — 2 novembre 2026
 
 BOJ.ART vise un atelier artistique augmenté : conception, FDM/résine, finition, contenus, devis et suivi, coordonnés par Jarvis sur trois écrans. Ce projet reste indépendant d’UNUM et de M-Tek.
 
@@ -13,6 +13,8 @@ La consolidation ajoute une mémoire documentaire locale : originaux préservés
 Le lanceur vérifie le schéma, la configuration explicite et les imports natifs ; `--check-only` ajoute le contrôle des objets. La reprise JSON conserve versions et empreintes des sources. Voir `docs/DEMARRAGE_ET_REPRISE.md` pour la recette logicielle ; la tour réelle reste à qualifier.
 
 Après restauration des cinq bases opérationnelles, une proposition antérieure d'affichage ou de création CAO ne peut plus déclencher de nouveau travail. Il faut préparer une nouvelle demande dans l'espace restauré. Les résultats déjà enregistrés et leurs reçus restent disponibles sans recalcul. Cette révocation persiste après redémarrage et nouvelle sauvegarde.
+
+Le Studio gère un catalogue vide et permet de choisir une référence authentique et les passages du brief sans dépendre des identifiants des médias d'exemple. Les images statiques de démonstration ne servent plus de miniatures pour des sources locales non reliées à leur empreinte. Dans Studio et Growth, un changement de sélection écarte les réponses tardives et désactive l'export du résultat précédent. Ces contrôles ne rendent ni vidéo ni publication.
 
 ## Voix et Jev
 
