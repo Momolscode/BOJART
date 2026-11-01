@@ -1,5 +1,7 @@
 # BOJ.ART — atelier, Jarvis et direction artistique
 
+Installation de la mémoire pour le poste BOJ.ART : **[INSTALLER_DEMAIN.md](INSTALLER_DEMAIN.md)**. Installer avec `Installer_BOJART.cmd` ou `bash Installer_BOJART.sh`, puis lancer Jarvis. [Architecture mémoire](docs/memory/OUTILS_ET_ARCHITECTURE.md) · [Connexion MCP](docs/memory/MCP.md).
+
 Point d’entrée consolidé : [contexte courant](context/CURRENT.md), [installation](docs/INSTALLATION.md), [passation](context/SESSION_HANDOFF.md).
 
 | Dossier | Contenu | État |

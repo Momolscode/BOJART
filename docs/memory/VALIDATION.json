@@ -1,0 +1,71 @@
+{
+  "recorded_on": "2026-11-01",
+  "base_commit": "30b3fb9858d81e5499d0a51ed8df6c317b771d7c",
+  "environment": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "target_bojart_pc": false
+  },
+  "python_suites": [
+    {
+      "command": "python -m unittest discover -s tests_agent -v",
+      "passed": 25
+    },
+    {
+      "command": "python -m unittest discover -s tests -q",
+      "passed": 30
+    },
+    {
+      "command": "python -m unittest discover -s jarvis/tests -p test_consolidated.py -q",
+      "passed": 38
+    },
+    {
+      "command": "python -m unittest discover -s jarvis/tests -p test_jarvis_m07.py -q",
+      "passed": 22
+    },
+    {
+      "command": "python -m unittest discover -s tests_ops -q",
+      "passed": 36
+    }
+  ],
+  "python_tests_passed": 151,
+  "signal_tests": {
+    "command": "node --test jarvis/tests/voice_endpoint.test.cjs",
+    "passed": 7
+  },
+  "retrieval_evaluation": {
+    "command": "python tools/evaluate_memory.py",
+    "cases": 10,
+    "hits_at_5": 10,
+    "scope": "Hand-authored lexical cases, not generative model quality"
+  },
+  "syntax": {
+    "command": "node --check jarvis/apps/jarvis/app/memory.js",
+    "passed": true
+  },
+  "installation_smoke": {
+    "clean_state": true,
+    "venv_creation": true,
+    "stdlib_only_launcher": true,
+    "authenticated_context": true,
+    "citations_returned": 15,
+    "external_model_downloads": false
+  },
+  "source_snapshot": {
+    "base_blobs_materialized": 692,
+    "unmodified_blobs_compared_by_git_sha1": true
+  },
+  "scope_limits": [
+    "Windows workflow added; Windows not executed in this local session.",
+    "Ollama adapter tested with doubles; no actual embedding/chat model benchmark.",
+    "HTTP assets and JavaScript syntax checked; browser visual rendering not executed.",
+    "Selected M07 regression suites rerun; complete historic 578-test suite not rerun by this change.",
+    "No live microphone, GPU, display arrangement or physical printer qualification.",
+    "No automatic import of all past ChatGPT conversations."
+  ],
+  "reconciled_parent": "ccb79a118e04c282bcd8cd1dc0fd514a9810ebeb",
+  "concurrent_changes_preserved": [
+    "Contextual monitoring documentation and index entry",
+    "Original historical recovery guide"
+  ]
+}

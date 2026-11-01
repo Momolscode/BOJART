@@ -17,6 +17,9 @@ from workspace_state import WorkspaceLease, WorkspaceState, verify_snapshot
 from jarvis_runtime import JarvisRuntime
 from tower_events import TowerEvents
 import jarvis_http
+# Root memory package shares one database with the canonical document index.
+sys.path.insert(0,str(Path(__file__).resolve().parents[4]))
+from bojart_memory import http_api as memory_http
 ROOT=Path(__file__).resolve().parents[1]
 MONOREPO=Path(__file__).resolve().parents[3]
 CORPUS=MONOREPO/'knowledge/metier'
@@ -70,6 +73,7 @@ class ConsolidatedWorkbench(StudioWorkbench):
 class ConsolidatedHandler(StudioHandler):
     def do_GET(self):
         parsed=urlsplit(self.path);route=parsed.path
+        if route in memory_http.GETS:return memory_http.get(self,parsed,ROOT/'app')
         if route in jarvis_http.GETS:return jarvis_http.get(self,parsed,ROOT)
         if route=='/health':
             if not self.check_host():return
@@ -154,6 +158,7 @@ class ConsolidatedHandler(StudioHandler):
         except (ValueError,Rejected,IntegrityError,UnicodeDecodeError) as e:return self.j({'error':str(e)},400)
         except OSError:return self.j({'error':'Source locale indisponible.'},500)
     def do_POST(self):
+        if self.path in memory_http.POSTS:return memory_http.post(self)
         if self.path in jarvis_http.POSTS:return jarvis_http.post(self)
         if self.path in {'/api/tower/poll','/api/tower/ack','/api/tower/pair'}:
             # These short SQLite-only writes take the tower lock and participate

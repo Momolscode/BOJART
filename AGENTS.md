@@ -12,3 +12,7 @@ Lire `context/CURRENT.md`, `context/SESSION_HANDOFF.md`, `data/knowledge/claims.
 - Mémoire documentaire et cinq bases opérationnelles ont des sauvegardes distinctes. Restaurer chacune dans un nouveau dossier pour vérifier.
 - Pousser après comparaison avec la tête distante ; aucun force-push. Réconcilier les modifications concurrentes.
 - Ne pas annoncer une synchronisation des conversations ou une activité permanente sans preuve.
+
+## Contexte pour une tâche
+
+Utiliser `python -m bojart_memory.agent_cli context "QUESTION" --project bojart.jarvis` ou les outils MCP décrits dans `docs/memory/MCP.md`. Choisir `bojart.creative` ou `bojart.sites` selon la tâche. La mémoire ne remplace pas la lecture du code réellement modifié. Une note MCP reste une proposition ; mettre à jour le registre sourcé après revue pour une décision de référence. Tester l’extension avec `python -m unittest discover -s tests_agent -v` en plus des tests existants. Ne pas introduire un second magasin de documents ou envoyer automatiquement les conversations dans Git.

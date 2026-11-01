@@ -1,5 +1,7 @@
 # Installer BOJ.ART sur la tour
 
+Pour le démarrage mémoire sans dépendances externes, suivre d’abord [INSTALLER_DEMAIN.md](../INSTALLER_DEMAIN.md). Les étapes ci-dessous décrivent la recette complète M07.
+
 Procédure logicielle ; pas encore exécutée sur le PC réel. GPU, pilotes, microphone, moniteurs et imprimantes sont à inventorier.
 
 ## Préparer

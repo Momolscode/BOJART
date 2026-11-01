@@ -73,5 +73,35 @@
     "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
     "project": "bojart.jarvis",
     "provenance": "BOJART PR #1 webhook relay installed and opening event observed, 2026-11-01; acceptance and per-SHA receipts on audit/context-results"
+  },
+  {
+    "path": "data/knowledge/claims.jsonl",
+    "project": "bojart.jarvis",
+    "provenance": "Curated claim ledger with source IDs and supersession, 2026-11-01"
+  },
+  {
+    "path": "data/knowledge/claims.jsonl",
+    "project": "bojart.creative",
+    "provenance": "Curated claim ledger with source IDs and supersession, 2026-11-01"
+  },
+  {
+    "path": "data/knowledge/claims.jsonl",
+    "project": "bojart.sites",
+    "provenance": "Curated claim ledger with source IDs and supersession, 2026-11-01"
+  },
+  {
+    "path": "INSTALLER_DEMAIN.md",
+    "project": "bojart.jarvis",
+    "provenance": "Agent memory preparation, 2026-11-01; proposals distinguished from validated integrations"
+  },
+  {
+    "path": "docs/memory/OUTILS_ET_ARCHITECTURE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Agent memory preparation, 2026-11-01; proposals distinguished from validated integrations"
+  },
+  {
+    "path": "docs/memory/MCP.md",
+    "project": "bojart.jarvis",
+    "provenance": "Agent memory preparation, 2026-11-01; proposals distinguished from validated integrations"
   }
 ]
