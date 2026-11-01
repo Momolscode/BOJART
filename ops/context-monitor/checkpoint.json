@@ -114,8 +114,6 @@
         "jarvis/apps/jarvis/app/knowledge.js",
         "jarvis/apps/jarvis/app/launch_readiness.py",
         "jarvis/apps/jarvis/app/media_library.py",
-        "jarvis/apps/jarvis/app/memory.html",
-        "jarvis/apps/jarvis/app/memory.js",
         "jarvis/apps/jarvis/app/proposals.py",
         "jarvis/apps/jarvis/app/server.py",
         "jarvis/apps/jarvis/app/studio.css",
@@ -639,11 +637,9 @@
         "sites/studio/vendor/shadcn-tailwind-4.13.0.LICENSE.md",
         "sites/studio/vendor/shadcn-tailwind-4.13.0.css",
         "sites/studio/vite.config.ts",
-        "tests/test_memory.py",
         "tests/test_memory_http.py",
         "tests_ops/test_ops.py",
-        "tools/evaluate_memory.py",
-        "tools/memory_browser.cjs"
+        "tools/evaluate_memory.py"
       ],
       "processed_correction_shas": [
         "1d76c6876de54c7bc37b777ae66bf031207a140d",
@@ -651,7 +647,7 @@
         "a820f7a5d9bc21b9619746502f2adb9d578f7c3b",
         "3c288214539adf97381f6053b43225485a873b6a"
       ],
-      "updated_at": "2026-11-01T22:18:44.233Z"
+      "updated_at": "2026-11-01T22:20:19.307Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",

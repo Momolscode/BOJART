@@ -9,8 +9,8 @@
   "trigger_kind": "synchronize",
   "head_sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
   "compared_from_sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
-  "started_at": "2026-11-01T22:17:23.048Z",
-  "finished_at": "2026-11-01T22:18:44.233Z",
+  "started_at": "2026-11-01T22:19:21.607Z",
+  "finished_at": "2026-11-01T22:20:19.307Z",
   "status": "partial",
   "changed_paths": [],
   "reviewed_paths": [
@@ -42,6 +42,8 @@
     "jarvis/apps/jarvis/app/display_contracts.py",
     "jarvis/apps/jarvis/app/jarvis_runtime.py",
     "jarvis/apps/jarvis/app/jev_decider.py",
+    "jarvis/apps/jarvis/app/memory.html",
+    "jarvis/apps/jarvis/app/memory.js",
     "jarvis/apps/jarvis/app/tower_voice.js",
     "jarvis/apps/jarvis/app/voice.py",
     "jarvis/apps/jarvis/docs/PROGRES_ET_LIMITES_M03.md",
@@ -55,10 +57,12 @@
     "jarvis/docs/m07/REPRISE_M07.txt",
     "tests/test_archive_recovery.py",
     "tests/test_installation.py",
+    "tests/test_memory.py",
     "tests_agent/test_context_export.py",
     "tests_ops/test_archive_restore.py",
     "tools/check_startup.py",
     "tools/doctor.py",
+    "tools/memory_browser.cjs",
     "tools/restore_archive_2026_11_01.py",
     "tools/restore_recovery_2026_11_01.py",
     "tools/start_jarvis.py",
@@ -172,8 +176,6 @@
     "jarvis/apps/jarvis/app/knowledge.js",
     "jarvis/apps/jarvis/app/launch_readiness.py",
     "jarvis/apps/jarvis/app/media_library.py",
-    "jarvis/apps/jarvis/app/memory.html",
-    "jarvis/apps/jarvis/app/memory.js",
     "jarvis/apps/jarvis/app/proposals.py",
     "jarvis/apps/jarvis/app/server.py",
     "jarvis/apps/jarvis/app/studio.css",
@@ -697,11 +699,9 @@
     "sites/studio/vendor/shadcn-tailwind-4.13.0.LICENSE.md",
     "sites/studio/vendor/shadcn-tailwind-4.13.0.css",
     "sites/studio/vite.config.ts",
-    "tests/test_memory.py",
     "tests/test_memory_http.py",
     "tests_ops/test_ops.py",
-    "tools/evaluate_memory.py",
-    "tools/memory_browser.cjs"
+    "tools/evaluate_memory.py"
   ],
   "sources": [
     {
@@ -823,6 +823,30 @@
       "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
       "blob_sha": "64519cac827c693a093bd79d2f3db3b0224e435e",
       "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/memory.js",
+      "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+      "blob_sha": "ece1c100a3bb54c4e87414c81e07f802004d70b4",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/memory.html",
+      "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+      "blob_sha": "643b5c9d51f26b2a986e7a958c164ed8c66e5b03",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "tools/memory_browser.cjs",
+      "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+      "blob_sha": "74c22d4885da7b4f822ade847df46272b4a703ef",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "tests/test_memory.py",
+      "sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+      "blob_sha": "858ccbf953d70272b1f5db0ff03835bdd82fa889",
+      "review_mode": "full_text_semantic_review"
     }
   ],
   "checks": [
@@ -855,54 +879,68 @@
     {
       "severity": "info",
       "evidence": "doctor.py et start_jarvis.py distinguent mémoire et poste complet, contrôlent configuration explicite, schéma, dossiers non imbriqués et imports natifs. paths.py unifie l'emplacement mémoire. Tests d'installation lus et exécution CI confirmée.",
-      "action": "Conserver les blocages explicites et les statuts physical_hardware_qualified=false / production_ready=false ; aucune installation sur la tour inférée."
+      "action": "Conserver les blocages explicites et les statuts physical_hardware_qualified=false / production_ready=false ; aucune installation sur la tour inférée.",
+      "review_origin": "previous_receipt"
     },
     {
       "severity": "info",
       "evidence": "Le workflow exécute le vrai lanceur, redémarrage et restauration avec données temporaires, clé Jev désactivée et provider_calls=0. La CI exacte rapporte browser_checks=0. Le document de preuve importé rapporte séparément cinq contrôles Chromium ; ses neuf empreintes de fichiers testés concordent avec le manifeste courant.",
-      "action": "Garder séparées la recette CI actuelle sans navigateur, la preuve Chromium importée et la qualification matérielle. Ne pas présenter les 182 tests du document comme une nouvelle suite exécutée par cet audit."
+      "action": "Garder séparées la recette CI actuelle sans navigateur, la preuve Chromium importée et la qualification matérielle. Ne pas présenter les 182 tests du document comme une nouvelle suite exécutée par cet audit.",
+      "review_origin": "previous_receipt"
     },
     {
       "severity": "medium",
       "evidence": "35 chemins changent ; 11 changements textuels sont intégralement lus dans ce lot et le manifeste est contrôlé structurellement. Les changements de recherche, export, interface, provenance et leurs tests restent en attente de lecture complète.",
-      "action": "Reprendre les chemins conservés ; aucun défaut non établi corrigé, aucun ancien correctif réappliqué."
+      "action": "Reprendre les chemins conservés ; aucun défaut non établi corrigé, aucun ancien correctif réappliqué.",
+      "review_origin": "previous_receipt"
     },
     {
       "severity": "info",
       "status": "reviewed",
       "evidence": "Lecture intégrale de core.py, agent.py et test_context_export.py : objets conservés par SHA-256, filtrage par projet, versions et provenance dans l'export, budget explicite sur les caractères du texte, notes au statut proposal. La diversification lexicale est bornée aux meilleurs candidats ; l'hybride est facultatif.",
-      "action": "Réutiliser la mémoire existante. Une empreinte vérifie des octets, pas la vérité d'un fait ; operational_authority reste false. L'export et ses cinq tests sont examinés, sans nouvelle exécution locale."
+      "action": "Réutiliser la mémoire existante. Une empreinte vérifie des octets, pas la vérité d'un fait ; operational_authority reste false. L'export et ses cinq tests sont examinés, sans nouvelle exécution locale.",
+      "review_origin": "previous_receipt"
     },
     {
       "severity": "info",
       "status": "already_processed",
       "evidence": "PR 4 fermée/fusionnée, tête 10e4c4a500e376f362c75b5826492f5a3f841739 inchangée et reçu complet sans attente. PR relais ouverte, tête 5268e7e7b70fa25efee7d186f27cd3716a49c4c1 inchangée depuis le checkpoint ; comparaison paginée identical, 0 chemin.",
-      "action": "Aucune réapplication des correctifs ni modification du reçu complet PR 4. Reprendre uniquement le reliquat PR 1."
+      "action": "Aucune réapplication des correctifs ni modification du reçu complet PR 4. Reprendre uniquement le reliquat PR 1.",
+      "review_origin": "previous_receipt"
+    },
+    {
+      "severity": "info",
+      "status": "reviewed",
+      "evidence": "Lecture intégrale de memory.js, memory.html, memory_browser.cjs et test_memory.py : texte importé affiché via textContent, invalidation par génération/domaine/sujet, téléchargement JSON local du contexte, notes au statut proposition. Les tests couvrent import idempotent, versions, projets isolés, source corrompue et restauration.",
+      "action": "Conserver ces contrats. Les cinq parcours navigateur sont des tests sources examinés, sans exécution nouvelle ; la CI de cette tête reste explicitement sans navigateur."
     }
   ],
   "corrections": [],
-  "previous_receipt_path": "ops/context-monitor/receipts/pr-1/5268e7e7b70fa25efee7d186f27cd3716a49c4c1.v1.json",
+  "previous_receipt_path": "ops/context-monitor/receipts/pr-1/5268e7e7b70fa25efee7d186f27cd3716a49c4c1.v2.json",
   "limitations": [
-    "Reprise à SHA identique : aucun nouveau chemin modifié ; trois chemins précédemment en attente lus intégralement.",
-    "Aucune nouvelle exécution de tests ; résultats CI du SHA exact relus/réutilisés avec leur portée précédente. Aucun modèle local, Jev, média, microphone ou matériel testé ici.",
-    "Les 637 chemins restants sont conservés. La lecture des sources ne certifie pas toutes les références externes ni une installation opérationnelle sur la tour.",
-    "Aucune machine, génération Higgsfield, crédit, fusion, archive, visibilité, protection ou message externe modifié."
+    "Tête effective inchangée : zéro nouveau chemin modifié. Sept chemins de l'attente initiale examinés dans les deux étapes de cette reprise combinée.",
+    "Aucun nouveau test exécuté localement ni Chromium relancé. Les contrôles CI et preuves importées gardent les portées et URLs du précédent reçu.",
+    "Les 633 chemins en attente restent explicites ; médias et matériel ne sont pas qualifiés.",
+    "Aucune génération Higgsfield, dépense, machine, fusion, archive, visibilité, protection ou message externe modifié."
   ],
   "next_actions": [
-    "Lire l'interface memory.js et les tests HTTP/FTS associés ; rapprocher sources.json/index.json/derivatives.json et les journaux du même SHA.",
-    "Poursuivre les 637 chemins en attente sans confondre inventaire et lecture sémantique.",
-    "Sur un poste autorisé, qualifier modèle français, voix, écrans, restauration et interruption ; conserver les limites artistiques des médias."
+    "Examiner les endpoints mémoire/http, les registres sources/index/derivatives et les journaux de validation à la même révision.",
+    "Poursuivre les 633 chemins restants et les sources métiers ; qualifier séparément tour, voix, moniteurs et médias."
   ],
   "coverage": {
-    "comparison": "identical; pages 1 et 2 : 0 commit, 0 chemin ; arbre Git non tronqué",
+    "comparison": "same frozen SHA as checkpoint; zero changed paths; preceding identical comparison pages 1 and 2 retained",
     "changed_paths_inventory_complete": true,
     "new_semantic_paths": [
       "bojart_memory/core.py",
       "bojart_memory/agent.py",
-      "tests_agent/test_context_export.py"
+      "tests_agent/test_context_export.py",
+      "jarvis/apps/jarvis/app/memory.js",
+      "jarvis/apps/jarvis/app/memory.html",
+      "tools/memory_browser.cjs",
+      "tests/test_memory.py"
     ],
     "pending_before": 640,
-    "pending_after": 637,
+    "pending_after": 633,
     "complete_pr4_receipt_preserved": true
   },
   "observed_events": [
@@ -917,7 +955,14 @@
       "action": "synchronize",
       "delivery_id": "904cc4f0-d63f-11f1-92ee-1bff888920e3",
       "handling": "resume partial receipt on actual frozen head"
+    },
+    {
+      "pull_request": 1,
+      "action": "synchronize",
+      "delivery_id": "006c3ae0-d640-11f1-9d4e-78bbf64b9370",
+      "handling": "same actual frozen head; continue pending semantic review"
     }
   ],
-  "receipt_revision": 2
+  "receipt_revision": 3,
+  "trigger_delivery_id": "006c3ae0-d640-11f1-9d4e-78bbf64b9370"
 }
