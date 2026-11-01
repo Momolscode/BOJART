@@ -1,9 +1,0 @@
-{
-  "project": "bojart.creative",
-  "shot_id": "DEMO_G1",
-  "model": "fixture-no-provider",
-  "prompt": "Exemple local de journal, aucune génération demandée.",
-  "variation": "demo-01",
-  "parameters": {"duration": 4, "aspect_ratio": "9:16", "generate_audio": false},
-  "inputs": []
-}
