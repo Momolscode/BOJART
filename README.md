@@ -48,3 +48,5 @@ La [récupération étendue](docs/RECUPERATION_VERIFIEE_2026-11-01.md) décrit 3
 Le [démarrage et la reprise de session](docs/DEMARRAGE_ET_REPRISE.md) ajoutent le contrôle des moteurs natifs, l’export de contexte avec provenance et une recette de redémarrage/restauration.
 
 Le [dossier d’audit Jarvis du 1 novembre 2026](docs/audits/jarvis-installation-2026-11-01/README.md) réunit le schéma d’orchestration, les résultats datés, leurs limites, une recette de reproduction et une mission à transmettre à un auditeur. Le [workflow du dossier](https://github.com/Momolscode/BOJART/actions/workflows/jarvis-audit-dossier.yml) produit son ZIP vérifié.
+
+Le [complément de récupération approfondie](docs/RECUPERATION_APPROFONDIE_2026-11-01.md) ajoute 62 originaux distincts, dont 57 médias et quatre captures de conversations. Le périmètre indexé atteint 3 402 originaux ; la restauration depuis GitHub est vérifiée, sans certifier l’intégralité des anciens chats.

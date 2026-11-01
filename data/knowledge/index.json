@@ -138,5 +138,10 @@
     "path": "docs/memory/RESILIENCE.md",
     "project": "bojart.jarvis",
     "provenance": "Atomic import and consistent context snapshot implementation; forced launcher restart checked on Windows and Linux at d57330052b32cb5f638e841bdc086804cd65ede1 (GitHub Actions run 41357380816); no hardware power-loss qualification."
+  },
+  {
+    "path": "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+    "project": "bojart.creative",
+    "provenance": "Recovery from identified sources, SHA-256 deduplication and remote Git restoration; see recovery-deep-20261101"
   }
 ]
