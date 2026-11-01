@@ -3,12 +3,10 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/d5855c1e8c10f6ab57d7b362eb1d954c722b340b.continuation-launchers.json",
+      "head_sha": "6cda578030b619c7b459515e77a34b80b2b5f396",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/6cda578030b619c7b459515e77a34b80b2b5f396.continuation-simulations.json",
       "status": "partial",
       "pending_paths": [
-        ".gitattributes",
-        ".gitignore",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
@@ -29,8 +27,6 @@
         "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
         "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
         "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
-        "bojart_ops/audit.py",
-        "data/catalog/library_inventory.json",
         "data/catalog/recovery-2026-11-01/contents-part-01.jsonl",
         "data/catalog/recovery-2026-11-01/contents-part-02.jsonl",
         "data/catalog/recovery-2026-11-01/contents-part-03.jsonl",
@@ -41,10 +37,6 @@
         "data/catalog/recovery-2026-11-01/locations-05.jsonl",
         "data/catalog/recovery-2026-11-01/locations-06.jsonl",
         "data/catalog/recovery-2026-11-01/sources.json",
-        "docs/CREATIVE_PIPELINE_HISTORIQUE.md",
-        "docs/ETAT_SAUVEGARDE.md",
-        "docs/INSTALLATION.md",
-        "docs/RESEARCH_2026-11-01.md",
         "docs/evidence/m07-baseline-tests.log",
         "docs/evidence/m07-consolidated-tests.log",
         "docs/evidence/memory-tests-final.log",
@@ -603,7 +595,7 @@
         "1f46b0780f9bae831425924588a5926971e23f7a",
         "d5855c1e8c10f6ab57d7b362eb1d954c722b340b"
       ],
-      "updated_at": "2026-11-01T23:37:08.840Z"
+      "updated_at": "2026-11-01T23:58:31Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
