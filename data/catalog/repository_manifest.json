@@ -324,8 +324,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 28353,
-      "sha256": "c85cc3877bcde89f1ba003d6e27b64d455b0f5d4c59b958896d94346c64904f9"
+      "bytes": 28536,
+      "sha256": "20006a71f499c7b5b7fee020c9d37b6c1946b9f0f2a2d8d8849f3bdb5305aa0c"
     },
     {
       "path": "creative/CURRENT.md",
@@ -659,8 +659,8 @@
     },
     {
       "path": "docs/evidence/environment-diagnostic-2026-11-02.json",
-      "bytes": 3720,
-      "sha256": "9b5da445754b2f567d29b668d20741b82c49e39ec1048f0200482a3c6ee9cf95"
+      "bytes": 4126,
+      "sha256": "ffd8078718b4eaf8b41f10d79e82e614c1ae073493557293afc026416dcb18e6"
     },
     {
       "path": "docs/evidence/m07-baseline-tests.log",
@@ -2369,8 +2369,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 12031,
-      "sha256": "a51dbfc84260a3f827673dcc6c3d65c6a550499437faeb50d81525bfd9982bbd"
+      "bytes": 12062,
+      "sha256": "24d7b3949fdb604d1f34e0ad913efdc479771e473a085bc66c74b94832ead3a2"
     },
     {
       "path": "ops/request-example.json",

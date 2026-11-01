@@ -8,7 +8,7 @@ Ajouts : diagnostic local exécutable, raccourcis Windows/Linux, observation NVI
 
 Le guide `docs/DIAGNOSTIC_OUTILS.md` est relié aux documents d'installation déjà indexés et à la tâche `target-inventory`, toujours bloquée sur l'accès au poste. Le corpus de référence sélectionné n'est pas élargi par une seconde copie détaillée des mêmes prérequis. Les 14 cas lexicaux existants sont conservés. Aucun modèle, outil tiers, connexion de compte ou imprimante activé.
 
-Tests et portée exécutée : `docs/evidence/environment-diagnostic-2026-11-02.json`. Les cas GPU sont synthétiques ; seul le diagnostic des outils présents dans cet environnement a été exécuté. Prochaine preuve : ouvrir `Diagnostic_BOJART` sur la tour, relever les champs restants, puis essayer un profil IA et les parcours créatifs sur ce matériel.
+Le contrôle GitHub a relevé les deux nouveaux raccourcis non classés après régénération du manifeste ; leur règle de classement est ajoutée, sans assouplir le test existant. Tests et portée exécutée : `docs/evidence/environment-diagnostic-2026-11-02.json`. Les cas GPU sont synthétiques ; seul le diagnostic des outils présents dans cet environnement a été exécuté. Prochaine preuve : ouvrir `Diagnostic_BOJART` sur la tour, relever les champs restants, puis essayer un profil IA et les parcours créatifs sur ce matériel.
 
 ## Recherche des outils et qualification — 1 novembre 2026
 

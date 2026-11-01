@@ -86,5 +86,12 @@
   "gpu_fixtures_synthetic": true,
   "provider_calls": 0,
   "physical_commands": 0,
-  "third_party_installs": 0
+  "third_party_installs": 0,
+  "publication_correction": {
+    "initial_commit": "acf6699880db226d00c68244880280c998a1c14e",
+    "workflow_run": 41363090720,
+    "failure": "Two new root diagnostic launchers were unclassified after manifest regeneration.",
+    "fix": "Add Diagnostic_BOJART.* to the existing memory routing rule; retain the zero-unclassified assertion.",
+    "operations_suite_rerun_after_manifest_refresh": true
+  }
 }
