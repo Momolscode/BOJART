@@ -1,0 +1,63 @@
+{
+  "file": "BOJ-ART-BREAK-THE-FRAME-TEST-15-Animate.mp4",
+  "sha256": "daa2dc8cd339e61455933d796157020f70fb50dc8fb5172165d0ba6ed74733c0",
+  "size_bytes": 1731809,
+  "duration_s": 4.033,
+  "video": {
+    "codec": "h264",
+    "resolution": [
+      548,
+      512
+    ],
+    "fps": 30.0,
+    "frames_probed": "121",
+    "frames_decoded": 121,
+    "pixel_format": "yuv420p",
+    "color_space": "bt709",
+    "color_primaries": "bt709",
+    "color_transfer": "bt709"
+  },
+  "audio": null,
+  "black_ranges": [],
+  "nearly_static_ranges": [],
+  "largest_frame_changes": [
+    {
+      "time_s": 3.833,
+      "gray_MAD": 55.39
+    },
+    {
+      "time_s": 3.8,
+      "gray_MAD": 48.22
+    },
+    {
+      "time_s": 3.967,
+      "gray_MAD": 47.03
+    },
+    {
+      "time_s": 3.9,
+      "gray_MAD": 45.37
+    },
+    {
+      "time_s": 4.0,
+      "gray_MAD": 45.05
+    },
+    {
+      "time_s": 3.667,
+      "gray_MAD": 39.02
+    },
+    {
+      "time_s": 3.933,
+      "gray_MAD": 38.84
+    },
+    {
+      "time_s": 3.733,
+      "gray_MAD": 34.67
+    }
+  ],
+  "warnings": [
+    "not_native_9x16",
+    "below_1080x1920",
+    "no_audio"
+  ],
+  "interpretation_note": "Image brightness/MAE and audio metrics do not certify 3D depth, character fidelity, music quality, SFX alignment, or artistic excellence."
+}

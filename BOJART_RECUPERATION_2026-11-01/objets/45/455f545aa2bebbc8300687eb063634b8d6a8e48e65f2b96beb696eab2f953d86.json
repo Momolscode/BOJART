@@ -1,0 +1,101 @@
+{
+  "id": "MAR05-REVERSE-API-20261030",
+  "date": "2026-10-30",
+  "version": "0.2.0",
+  "owner": "Pilotage Marwin",
+  "request": "Reverse API engineer intègre ça à Marwin",
+  "scope": "Extension locale du kit existant, sans déploiement poste/client",
+  "upstream": {
+    "repo": "https://github.com/kalil0321/reverse-api-engineer",
+    "commit": "c644f8af453136ac69489370d6c581d89b9e1bf9",
+    "commit_date": "2026-10-29T03:36:59Z",
+    "read_on": "2026-10-30",
+    "license": "MIT",
+    "installed_pypi_version": "0.14.0",
+    "pypi_dist_equals_audited_commit": false,
+    "files": [
+      {
+        "path": "README.md",
+        "blob_sha": "dcb951a5d981b4e2395a4ef690c91d2cb7958fae"
+      },
+      {
+        "path": "pyproject.toml",
+        "blob_sha": "c92a8820e1fe1ada3a0ef83c0fffa543f5a1b705"
+      },
+      {
+        "path": "LICENSE",
+        "blob_sha": "0b4233a07ea9eb34b58557e57bab7f46892d906c"
+      },
+      {
+        "path": "skills/reverse-api-engineer/SKILL.md",
+        "blob_sha": "beb2336dfe1bbdda1c0a84915be9f32ffce98695"
+      },
+      {
+        "path": "src/reverse_api/cli.py",
+        "blob_sha": "174098ccb6fa6bf12fb242c6223cfd63cc13e865"
+      },
+      {
+        "path": "src/reverse_api/utils.py",
+        "blob_sha": "142cf7d5f7d51965c905d10be11062cf74abcb4f"
+      }
+    ],
+    "not_executed": [
+      "third-party browser capture",
+      "LLM-generated client",
+      "client on external service"
+    ],
+    "model_cost_usd": 0
+  },
+  "installed": "reverse-api-engineer 0.14.0 in isolated Python environment",
+  "cli_preflight": {
+    "status": "ok",
+    "warnings": [
+      {
+        "name": "sdk:claude",
+        "status": "warn",
+        "message": "ANTHROPIC_API_KEY not set in env (the SDK may still resolve auth via a config file)"
+      }
+    ],
+    "scope": "No browser opened, no LLM called"
+  },
+  "tests": {
+    "integration": 31,
+    "new_reverse_api": 18,
+    "legacy_pilot": 38,
+    "existing_control": 37,
+    "total": 106,
+    "http_demo_separate": true
+  },
+  "http_demo": {
+    "endpoint": "GET /health",
+    "typed_payload": {
+      "service": "marwin-local",
+      "media_executor": false
+    },
+    "single_journal_event": true,
+    "repeat_status": "duplicate",
+    "target": "our loopback API only",
+    "capture": "HAR reconstructed from actual HTTP response, not RAE browser capture"
+  },
+  "changes": [
+    "Authenticated local API route /connectors/inspect-har",
+    "MCP tool connector_inspect_har",
+    "Origin scope, metadata-only extraction and candidate OpenAPI",
+    "Existing journal deduplicates contract imports",
+    "Marwin method expanded with reusable connector workflow"
+  ],
+  "limitations": [
+    "No external service captured",
+    "No generated client executed",
+    "Model authentication not validated",
+    "Path and parameter names still require privacy review",
+    "No deployment to Morgan workstation, hosted console or UNUM"
+  ],
+  "budgets": {
+    "llm_usd": 0,
+    "media_credits": 0,
+    "recurring_authorization": false
+  },
+  "artistic_state": "Unchanged; R02 remains completed trial without likeness approval",
+  "next_proof": "One authorized useful service lacking sufficient official API/connector, with bounded capture and typed result verification."
+}

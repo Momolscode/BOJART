@@ -1,0 +1,18 @@
+[
+  {
+    "name": "painted-reality-01",
+    "job_id": "9d7c949b-e456-407f-ae43-8efa0b4cbe89",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261030_223437_9d7c949b-e456-407f-ae43-8efa0b4cbe89.mp4",
+    "destination": "renders/higgsfield/painted-reality-01.mp4",
+    "downloaded": false,
+    "sha256": null
+  },
+  {
+    "name": "the-awakening-01",
+    "job_id": "38729645-1659-463f-874b-22bbf447cee2",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261030_223039_38729645-1659-463f-874b-22bbf447cee2.mp4",
+    "destination": "renders/higgsfield/the-awakening-01.mp4",
+    "downloaded": false,
+    "sha256": null
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "schema": "bojart.decisions.v1",
+  "as_of": "2026-10-30",
+  "decisions": [
+    {
+      "id": "scope",
+      "status": "user_constraint",
+      "value": "Atelier BOJ.ART indépendant d’UNUM/M-Tek, 7–8 FDM/résine et trois écrans",
+      "source": "messages utilisateur dans le fil"
+    },
+    {
+      "id": "budget",
+      "status": "user_constraint",
+      "value": "3000–5000 EUR, matériel existant à examiner avant achat",
+      "source": "messages utilisateur dans le fil"
+    },
+    {
+      "id": "hardware",
+      "status": "unknown",
+      "value": null,
+      "source": "aucun inventaire de la tour dans les pièces"
+    },
+    {
+      "id": "voice_rule",
+      "status": "proposed",
+      "value": "ASR → intention + contexte → contrôles → outil → reçu → affichage/TTS",
+      "source": "research/voice-jev/NOTE_DE_REFERENCE.md"
+    },
+    {
+      "id": "jev",
+      "status": "documented",
+      "value": "Décideur TypeSafe facultatif sur texte/état structuré, pas moteur de voix",
+      "source": "https://docs.typesafe.ai/models"
+    },
+    {
+      "id": "langgraph",
+      "status": "proposed",
+      "value": "Orchestrateur de missions longues, aucune garantie exactly-once des effets",
+      "source": "research/voice-jev/NOTE_DE_REFERENCE.md"
+    },
+    {
+      "id": "source_base",
+      "status": "recovered",
+      "value": "Sources M03, incluant M01/M02",
+      "source": "apps/jarvis/README.md"
+    },
+    {
+      "id": "knowledge",
+      "status": "recovered",
+      "value": "54 fiches et 38 références dans la base métier",
+      "source": "knowledge/metier/data/fiches.json"
+    },
+    {
+      "id": "v11",
+      "status": "missing",
+      "value": "Sources des sites V11 et données D1 non présentes",
+      "source": "historique de conversation, fichiers absents"
+    },
+    {
+      "id": "social",
+      "status": "user_constraint",
+      "value": "Les deux comptes TikTok appartiennent à l’associé",
+      "source": "capture IMG_4285.jpeg et confirmation utilisateur"
+    },
+    {
+      "id": "art",
+      "status": "user_constraint",
+      "value": "Identité de la vraie sculpture prioritaire, mouvements fluides et spectaculaires",
+      "source": "creative/character-lock-v6/BOJART_CHARACTER_LOCK_V6.json"
+    },
+    {
+      "id": "github",
+      "status": "blocked",
+      "value": "Pas de push effectué ; owner/repo non fixé ; écriture non disponible",
+      "source": "lecture des deux comptes via connecteur durant cette session"
+    },
+    {
+      "id": "local_privacy",
+      "status": "policy",
+      "value": "Aucun nouveau flux cloud/physique payant sans autorisation",
+      "source": "AGENTS.md"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "data": {
+      "evidence_refs": [
+        "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / reference_learning.handoff",
+        "https://www.instagram.com/reel/DcbXzlANZRK/",
+        "https://www.facebook.com/cnatale2/videos/a-behind-the-scenes-look-at-how-we-put-a-staircase-in-an-elevator-behindthescene/1368895921350103/",
+        "https://www.instagram.com/sayantan_visuals/reel/DcnI96DM-iQ/"
+      ],
+      "mission_id": "MAR-01",
+      "next_action": "Contexte et scénario : retenir un apport utile à l’audit ou à la scène choisie, puis définir un essai borné.",
+      "observed_on": "2026-10-25",
+      "open_questions": "Audio, mouvements exacts de caméra, prompts et statistiques privés non vérifiés ; parenté avec Click non filiation démontrée.",
+      "origin": "authored_documentary_handoff",
+      "owner": "Session Recherche artistique, ce fil",
+      "provenance": {
+        "payload_sha256": "d9b64cda97f4d33918e73cd85ab71dcb81c454b391d0e81af6b6c218c13b33f1",
+        "source_payload": {
+          "changed": "Trois études sourcées, règle bénéfice/coût/choix, décomposition par éléments et cadrage lisible ; guide édition 03.",
+          "date": "2026-10-25",
+          "decision": "Caleb et Sayantan restent prioritaires. Les méthodes sont proposées au fil Contexte et scénario ; pas de scénario concurrent sélectionné.",
+          "deliverable": {
+            "library_file_id": "libfile_ffa732acdbe08191abc78e6fff8082d9",
+            "pages": 16,
+            "status": "Guide terminé et contrôlé ; aucun nouveau film ou essai publié."
+          },
+          "evidence": [
+            {
+              "study": "DREAM01",
+              "url": "https://www.instagram.com/reel/DcbXzlANZRK/"
+            },
+            {
+              "study": "CAL02",
+              "url": "https://www.facebook.com/cnatale2/videos/a-behind-the-scenes-look-at-how-we-put-a-staircase-in-an-elevator-behindthescene/1368895921350103/"
+            },
+            {
+              "study": "SAY02",
+              "url": "https://www.instagram.com/sayantan_visuals/reel/DcnI96DM-iQ/"
+            }
+          ],
+          "mission": "MAR-01 / recherche artistique",
+          "next_action": "Contexte et scénario : retenir un apport utile à l’audit ou à la scène choisie, puis définir un essai borné.",
+          "open": "Audio, mouvements exacts de caméra, prompts et statistiques privés non vérifiés ; parenté avec Click non filiation démontrée.",
+          "operational_page_id": "page_4ec13488958481919ac2e098f3e4b42a",
+          "production_context_at_handoff": {
+            "next_brief_status": "Comparaison de deux découpages préparée ; pas de nouveau film payé ou de test humain exécuté",
+            "scope": "État lu dans la continuité ; recherche artistique sans nouveau rendu.",
+            "status": "Terminé, contrôlé ; Morgan aime bien pour le moment et demande de faire mieux",
+            "title": "Le pont a perdu la résolution"
+          },
+          "proposed_test": {
+            "audience_causality_proven": false,
+            "constants": "Même plan, même effet, même action ; contrôler les raccords.",
+            "status": "Proposé, non exécuté",
+            "success_criterion": "Lecture correcte de l’action, de sa conséquence et du choix du personnage lors d’un retour qualitatif situé.",
+            "variable": "Durée de maintien de la réaction finale",
+            "variants_seconds": [
+              0.8,
+              1.6
+            ]
+          },
+          "responsible": "Session Recherche artistique, ce fil",
+          "scope": "Nouveau Reel Dreamchase ; approfondissement des deux premiers comptes Caleb et Sayantan."
+        },
+        "source_pointer": "/reference_learning/handoff"
+      },
+      "summary": "Trois études sourcées, règle bénéfice/coût/choix, décomposition par éléments et cadrage lisible ; guide édition 03."
+    },
+    "entity_id": "research-latest",
+    "event_id": "documentary-7326d75d328c66cc1fb6bfb80adaae9015c260d7a717316a156f3b43b2076906",
+    "expected_revision": 0,
+    "kind": "handoff",
+    "project": "marwin"
+  },
+  {
+    "data": {
+      "active_test_id": "AUDIT-MOTIVATION-01",
+      "evidence_refs": [
+        "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / global_audit",
+        "https://chatgpt.com/library?file_id=libfile_5ecf6f4a3f6081918b4e3d7bcf4f9b69&account_id=personal / next_test"
+      ],
+      "mission_id": "MAR-02",
+      "next_action": "Préparer l’essai AUDIT-MOTIVATION-01 : Pourquoi Morgan pince le décor. Critère : Un premier spectateur réel peut reformuler intention, cause et chute sans légende ; conserver sa réponse et les contresens. Critère de clarté, pas preuve de rétention.",
+      "normalization_note": "Capsule produite par le pilotage depuis le rapport ; pas une passation rédigée ou un message émis par ce fil.",
+      "observed_on": "2026-10-25",
+      "origin": "structured_report_projection",
+      "owner": "Session Contexte et scénario",
+      "provenance": {
+        "payload_sha256": "8e8c02cdfffb7f4a4579fee05b8a8787041327e8859ce2367307350a09b9147f",
+        "source_payload": {
+          "audit_summary": {
+            "audio_limit": "Pas d’écoute perceptuelle complète sur téléphone",
+            "date": "2026-10-25T04:59:48+01:00",
+            "library_files": {
+              "pdf": "libfile_885515b41f3c8191b8b3cafd6917006b",
+              "structured_report": "libfile_5ecf6f4a3f6081918b4e3d7bcf4f9b69"
+            },
+            "model_benchmark": "Protocole préparé, non exécuté",
+            "next_test": "AUDIT-MOTIVATION-01",
+            "priorities": [
+              "Motivation concrète avant effet",
+              "Jeu et son liés au gag",
+              "Contexte courant rapproché et reprise ciblée"
+            ],
+            "report": "MARWIN_Audit_Global_2026-10-25.pdf",
+            "scope": "7 exports / 5 épisodes / 3 films Morgan ; histoire visible et preuves accessibles. Pas nouvel audit technique intégral de tous les dépôts.",
+            "skill_commit": "ff16ecefb18313a7707390f71669b77d4a170f8b",
+            "structured_report": "MARWIN_Audit_Global_2026-10-25.json",
+            "technical_decode": "7 exports décodés sans erreur"
+          },
+          "next_test": {
+            "A": "Version actuelle : geste de pince puis transformation et cube sous la chaussure",
+            "B": "Morgan veut réussir une photo du pont ; il corrige le cadrage par son geste, dérègle le paysage, puis doit se débarrasser du dernier cube pour repartir",
+            "constant": "Même pont, même acteur, même effet et même chute, durée cible de 14 s",
+            "fallback": "Si le storyboard n’explique pas la motivation, réécrire avant de payer un rendu.",
+            "pass_condition": "Un premier spectateur réel peut reformuler intention, cause et chute sans légende ; conserver sa réponse et les contresens. Critère de clarté, pas preuve de rétention.",
+            "questions": [
+              "Que voulait Morgan au départ ?",
+              "Quel geste a changé la situation ?",
+              "Quel problème reste-t-il et comment se résout-il ?"
+            ],
+            "status": "Deux découpages préparés, aucun nouveau film ou test humain exécuté",
+            "title": "Pourquoi Morgan pince le décor",
+            "variable": "Lisibilité de l’objectif quotidien ; le plan de prise de photo est à produire"
+          }
+        },
+        "source_pointer": "/global_audit + audit:/next_test"
+      },
+      "summary": "7 exports / 5 épisodes / 3 films Morgan ; histoire visible et preuves accessibles. Pas nouvel audit technique intégral de tous les dépôts. Priorités : Motivation concrète avant effet; Jeu et son liés au gag; Contexte courant rapproché et reprise ciblée"
+    },
+    "entity_id": "context-latest",
+    "event_id": "documentary-b6601dd0fbcf478ef78faad4e2ee8ebf5c5264c1e07d2d9779ca8922f42c9ba8",
+    "expected_revision": 0,
+    "kind": "handoff",
+    "project": "marwin"
+  }
+]

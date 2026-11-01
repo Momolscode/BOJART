@@ -1,0 +1,137 @@
+{
+  "kind": "separate_original_dll_runtime_comparison",
+  "runtime_version": "10.0.14",
+  "dll_sha256": "693ce5d8c68645e64745a3001de52019e20108b7d1a21704404228ea3dea79f7",
+  "tolerance_fixed_before_test": 3e-06,
+  "parameter_cases": 9,
+  "state_transition_cases": [
+    {
+      "method": "SetLowPassFilter",
+      "compared_samples_after_change": 512,
+      "max_abs_error": 0.0,
+      "first_sample": 0.0,
+      "original_output_float32_sha256": "20702e1e8c22e144332bc2e64a5648c430ea1b7f895c163e4bf5a485809f1175",
+      "reconstructed_output_float32_sha256": "20702e1e8c22e144332bc2e64a5648c430ea1b7f895c163e4bf5a485809f1175"
+    },
+    {
+      "method": "UpdateLowPassFilter",
+      "compared_samples_after_change": 512,
+      "max_abs_error": 0.0,
+      "first_sample": -0.11340279877185822,
+      "original_output_float32_sha256": "9841c8352a56d0add491603943c9e05e2c761a36e712feb6039a19c72803330b",
+      "reconstructed_output_float32_sha256": "9841c8352a56d0add491603943c9e05e2c761a36e712feb6039a19c72803330b"
+    }
+  ],
+  "total_compared_output_samples": 47104,
+  "exact_float32_output_samples": 47104,
+  "max_abs_error_all_cases": 0,
+  "cases": [
+    {
+      "sample_rate": 44100,
+      "cutoff": 882.0,
+      "q_input": 0.5,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "4d3106d7a8c88345b65ac2f83e5d1cec893307270881f08a8839158317890d80",
+      "reconstructed_output_float32_sha256": "4d3106d7a8c88345b65ac2f83e5d1cec893307270881f08a8839158317890d80"
+    },
+    {
+      "sample_rate": 44100,
+      "cutoff": 2205.0,
+      "q_input": 0.7071067811865475,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "125744a7c1fdc329a9ffee450e408b3af8890cd9caeb24ea2bd6ade6dc85d809",
+      "reconstructed_output_float32_sha256": "125744a7c1fdc329a9ffee450e408b3af8890cd9caeb24ea2bd6ade6dc85d809"
+    },
+    {
+      "sample_rate": 44100,
+      "cutoff": 4410.0,
+      "q_input": 2.0,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "a523c4edc43b9ee5c719d45afe7390364f1c59db0de0fb9817da6a5b2b8fb26b",
+      "reconstructed_output_float32_sha256": "a523c4edc43b9ee5c719d45afe7390364f1c59db0de0fb9817da6a5b2b8fb26b"
+    },
+    {
+      "sample_rate": 48000,
+      "cutoff": 960.0,
+      "q_input": 0.5,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "f189705eb6ab6c972b198044fd2fa3cd6e2fa79bf7e2f2775926d0a3fe41b2ad",
+      "reconstructed_output_float32_sha256": "f189705eb6ab6c972b198044fd2fa3cd6e2fa79bf7e2f2775926d0a3fe41b2ad"
+    },
+    {
+      "sample_rate": 48000,
+      "cutoff": 2400.0,
+      "q_input": 0.7071067811865475,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "ee7fd937082e235e781773a3c5b6a27d660033aa60043cfc1101e76692f52cbf",
+      "reconstructed_output_float32_sha256": "ee7fd937082e235e781773a3c5b6a27d660033aa60043cfc1101e76692f52cbf"
+    },
+    {
+      "sample_rate": 48000,
+      "cutoff": 4800.0,
+      "q_input": 2.0,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "85501c23ad22cf8226cf72415629d6dcef127b9bac1821bc25a4e9ef6c6737ee",
+      "reconstructed_output_float32_sha256": "85501c23ad22cf8226cf72415629d6dcef127b9bac1821bc25a4e9ef6c6737ee"
+    },
+    {
+      "sample_rate": 96000,
+      "cutoff": 1920.0,
+      "q_input": 0.5,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "547842e46dfca319e034b17fe689a29754840469142cdca478cf31f138ec6afa",
+      "reconstructed_output_float32_sha256": "547842e46dfca319e034b17fe689a29754840469142cdca478cf31f138ec6afa"
+    },
+    {
+      "sample_rate": 96000,
+      "cutoff": 4800.0,
+      "q_input": 0.7071067811865475,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "dc04405d90dee2d52dc3eaea7920366b101b9ae17fa4ff4fccf4dc4c2bfe5dfa",
+      "reconstructed_output_float32_sha256": "dc04405d90dee2d52dc3eaea7920366b101b9ae17fa4ff4fccf4dc4c2bfe5dfa"
+    },
+    {
+      "sample_rate": 96000,
+      "cutoff": 9600.0,
+      "q_input": 2.0,
+      "samples": 5120,
+      "max_abs_error": 0.0,
+      "exact_float32_samples": 5120,
+      "coefficients_max_abs_error": 0.0,
+      "original_output_float32_sha256": "8f29b1969b73e8d21c055af694858ac10b933fb2598e186f029515895e1d93e4",
+      "reconstructed_output_float32_sha256": "8f29b1969b73e8d21c055af694858ac10b933fb2598e186f029515895e1d93e4"
+    }
+  ],
+  "passed": true,
+  "float32_bytes_equal_all_cases": true,
+  "domain": "finite float32 signals, selected sample rates/cutoffs/Q and scalar Transform only",
+  "limits": [
+    "Finite tests are not global equivalence or a perceptual listening test.",
+    "No codecs, sound device, real music, voice identification or audience measurement tested.",
+    "The wrapper rejects nonfinite values more strictly than binary unordered comparisons."
+  ]
+}

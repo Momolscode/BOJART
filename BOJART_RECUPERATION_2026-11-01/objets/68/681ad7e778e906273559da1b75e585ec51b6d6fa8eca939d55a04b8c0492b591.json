@@ -1,0 +1,65 @@
+{
+  "artifact": "BOJ-SOCLE-DEMO-001",
+  "revision": 1,
+  "intent_origin": "paramètres préparés dans ce livrable, pas de reconnaissance vocale ni de Jev exécutés",
+  "parameters": {
+    "diameter_mm": 180.0,
+    "height_mm": 24.0,
+    "upper_diameter_mm": 150.0,
+    "upper_height_mm": 4.0,
+    "mount_hole_diameter_mm": 6.0,
+    "mount_pitch_circle_mm": 96.0,
+    "edge_chamfer_mm": 1.0
+  },
+  "units_stl": "mm (STL sans unité intégrée ; manifeste fait foi)",
+  "units_step": "mm",
+  "units_glb": "m",
+  "checks": {
+    "cad_brep_valid": true,
+    "stl_watertight": true,
+    "stl_winding_consistent": true,
+    "solid_count": 1,
+    "bounds_mm": [
+      180.0,
+      179.96441650390625,
+      24.0
+    ],
+    "cad_bounds_mm": [
+      180.04058660208668,
+      180.0050059606985,
+      24.03806115694752
+    ],
+    "triangles": 4752,
+    "geometric_volume_cm3": 575.96
+  },
+  "not_tested": [
+    "résistance et stabilité sous charge",
+    "tolérances de montage",
+    "profil et tranchage FDM/résine",
+    "impression physique",
+    "commande vocale",
+    "appel Jev"
+  ],
+  "files": {
+    "socle_180mm_metres.glb": {
+      "bytes": 86508,
+      "sha256": "35e3a5a6463db6276fee732ddc3dc82fb6344808ee5c7becf6a00674eb9f195a"
+    },
+    "socle_180mm.stl": {
+      "bytes": 237684,
+      "sha256": "22c366de185c1d54a538b9a0bcf5d46ecf04409c292e033b4eb6a9e08db16c20"
+    },
+    "generer_socle.py": {
+      "bytes": 1448,
+      "sha256": "b1fb234471b710cdd3028851c5c6239bada73a700523096f59064e46dc5df4f2"
+    },
+    "socle_180mm.step": {
+      "bytes": 36559,
+      "sha256": "55bf278416a2c6917f689b7a7f796da676065a691be4e2cea76613fca2a5a57e"
+    },
+    "socle_180mm.svg": {
+      "bytes": 178634,
+      "sha256": "cf109c81a8b6a96706502d86fcde628c3246e8324e3fb5b7401e75f4556ce931"
+    }
+  }
+}

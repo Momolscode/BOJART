@@ -1,0 +1,86 @@
+[
+  {
+    "site": "bojart-studio",
+    "version": 3,
+    "sha": "87306314a847c6d2f109bf5833345b3b80af22e1",
+    "present": true
+  },
+  {
+    "site": "bojart-studio",
+    "version": 2,
+    "sha": "11ced14511012cace74fb6df90b81bd7e80798e9",
+    "present": true
+  },
+  {
+    "site": "bojart-studio",
+    "version": 1,
+    "sha": "4606ded4ca2bc63fa3d3ea16141d698c509dd668",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 11,
+    "sha": "58309e61e2d70364b3a18223f706a478761da8b3",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 10,
+    "sha": "31ca88e9e0c40a945b6c77193989dad1f3614282",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 9,
+    "sha": "be767671423fe023dc62690c7bcf9a078de01832",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 8,
+    "sha": "d3e7e9d2412555a41c47343aefacbf2ce6c1924f",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 7,
+    "sha": "92860b6b5bcd484a5041798088a688b346f9ac26",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 6,
+    "sha": "52e6af58a5ad236c49c4bad1142ec6687c05c998",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 5,
+    "sha": "42678209e5fe98869aa82741ad0a27e1107bc668",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 4,
+    "sha": "e852b847d9f7200895f0fd963f5db37341ba555c",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 3,
+    "sha": "a01b63694e4b689f81e6785f9a8f9dfdf06b65be",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 2,
+    "sha": "0459e7b98ba69ee2b2e99cff2cfe9cabcb15f5a2",
+    "present": true
+  },
+  {
+    "site": "bojart-atelier",
+    "version": 1,
+    "sha": "94b542ce2a3158fc5b42d8a9a9c788ae18f5897e",
+    "present": true
+  }
+]

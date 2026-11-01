@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-01",
+  "project": "BOJ.ART",
+  "job_id": "0a942e6f-541c-4f00-ba65-f9f921671f3f",
+  "status": "completed",
+  "quoted_credits": 28,
+  "scope": "Separate abstract material shot; no human/figurine inputs. Editorial insert, not captured atelier footage.",
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "t2v",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "generate_audio": false,
+    "bitrate_mode": "high",
+    "count": 1,
+    "prompt": "A physically realistic extreme macro cinematography insert for an artist's painted sculpture film. No people and no figurines are present. One fine artist paintbrush loaded with deep burgundy acrylic pigment hangs above a polished charcoal-black painter's palette. One coherent action, one continuous shot: 0.0-0.7 s a single heavy bead of burgundy paint stretches from the bristles; 0.7-1.3 s it releases and falls under gravity; 1.3-2.2 s it lands on the palette and spreads into a thick smooth circular pool with a low, believable crown and minute viscous ripples; 2.2-4.0 s the camera glides very close alongside the spreading burgundy surface until the glossy red paint and a narrow silver-white studio reflection fill the frame for a match cut. The fluid volume is conserved, surface tension and viscosity are believable, no paint appears from nowhere. True continuous fluid and camera motion, high-end product photography, macro 100 mm lens, shallow focus that follows the drop, controlled black studio, ivory key light with restrained carmine reflection, real optical bokeh and natural motion blur. Palette: deep burgundy, charcoal and ivory. No glass, no debris, no smoke, no particles, no neon, no text, no logos, no human anatomy, no cuts. Silent video."
+  },
+  "usable_new_output": true,
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261101_184232_0a942e6f-541c-4f00-ba65-f9f921671f3f.mp4",
+  "observed_balance_before": 303.85,
+  "observed_balance_after": 275.85,
+  "net_credit_change": 28
+}

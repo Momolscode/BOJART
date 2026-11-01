@@ -1,0 +1,1490 @@
+[
+  {
+    "path": "apps/jarvis/AGENTS.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/AGENTS.md",
+    "sha256": "892ad54bcf3ce1ae9940cd3ebbc5c104e83ec082c2d2a47d649591b8c134cc76",
+    "bytes": 1841
+  },
+  {
+    "path": "apps/jarvis/APERCU_MISSION_02.html",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/APERCU_MISSION_02.html",
+    "sha256": "bc37b02ea73292a66b26e05d4a7f95f96f0203b8d6ff2f8e6282d0e8f93b15ab",
+    "bytes": 1287425
+  },
+  {
+    "path": "apps/jarvis/APERCU_STUDIO_M03.html",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/APERCU_STUDIO_M03.html",
+    "sha256": "485fd4f13992b3ad1f40bfe910058b8870f591709d2b68a8db8bb3c9444b4649",
+    "bytes": 2698898
+  },
+  {
+    "path": "apps/jarvis/CONTEXTE_LISIBLE.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/CONTEXTE_LISIBLE.md",
+    "sha256": "756e9cfb0a980a7850c8daa30c515848b7dc1e7611f75fb2e751b97ef16b4722",
+    "bytes": 6597
+  },
+  {
+    "path": "apps/jarvis/Lancer_Jarvis.cmd",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/Lancer_Jarvis.cmd",
+    "sha256": "8176a88ddebb27c977063b61ca8fd1ab275bc71788ae722eefdc8439bc39a20a",
+    "bytes": 677
+  },
+  {
+    "path": "apps/jarvis/Lancer_Jarvis.sh",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/Lancer_Jarvis.sh",
+    "sha256": "76274985cad428bc61a6f91cd3fa34a657695a6f8a23fd629fa28d5ac13202b7",
+    "bytes": 308
+  },
+  {
+    "path": "apps/jarvis/MANIFESTE_SHA256.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/MANIFESTE_SHA256.json",
+    "sha256": "e31c50b48c0588be4559830a1b701e07b87acb053ad58206246b727c95457357",
+    "bytes": 18302
+  },
+  {
+    "path": "apps/jarvis/README.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/README.md",
+    "sha256": "fa67abb7335c9ba8ac52038619ee8f0e133b97e87118bc95e1361f8ee763d982",
+    "bytes": 4260
+  },
+  {
+    "path": "apps/jarvis/REPRISE_CLAUDE.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/REPRISE_CLAUDE.txt",
+    "sha256": "06074065efdb7f4409e4536dd871ef4d4f238506655834cf6a72fc5153be184c",
+    "bytes": 1902
+  },
+  {
+    "path": "apps/jarvis/app/audio_worklet.js",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/audio_worklet.js",
+    "sha256": "ac15a58a87fd2c41134c63fb8e1ba72446421f5a1e82acfd5eb7dbfb161fbb52",
+    "bytes": 392
+  },
+  {
+    "path": "apps/jarvis/app/capture.js",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/capture.js",
+    "sha256": "89e378a06c87a907ee718074b836f6eb63622b87508980b2d5417509ac25803d",
+    "bytes": 2932
+  },
+  {
+    "path": "apps/jarvis/app/console.html",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/console.html",
+    "sha256": "ff6f7f653966099c70c4118ef695be437f3e281df6b5adbb8b14448238067fdf",
+    "bytes": 7941
+  },
+  {
+    "path": "apps/jarvis/app/context_guard.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/context_guard.py",
+    "sha256": "b24369ca6a8dd7710b2e319e89d6ab751f3adb7c3c4cf7c2e40938a58d61d108",
+    "bytes": 2825
+  },
+  {
+    "path": "apps/jarvis/app/core.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/core.py",
+    "sha256": "1c2d75af2b04d16acd80ef405736081c7cdd1b388582eb3d3d0dafcdf40b75d1",
+    "bytes": 18302
+  },
+  {
+    "path": "apps/jarvis/app/diagnostics.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/diagnostics.py",
+    "sha256": "37517a5eb5e09a0a8ebbbdab72632fc8956e17adfde1dcd852413abd3b3df659",
+    "bytes": 3798
+  },
+  {
+    "path": "apps/jarvis/app/dialogue.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/dialogue.py",
+    "sha256": "86deccfd1c8b3813709666bb31d7ddbaf93dd8d43b4faf6e8b6c4d4131ed3842",
+    "bytes": 14157
+  },
+  {
+    "path": "apps/jarvis/app/index.html",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/index.html",
+    "sha256": "d0412f1b2a9b3a2d5d35a6a27ca02b6b2d39878b97538e20289bd029be9fac29",
+    "bytes": 23947
+  },
+  {
+    "path": "apps/jarvis/app/media_library.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/media_library.py",
+    "sha256": "9afeff32fa7b03822f3c7addae8f648434210cf01552297d619402b44d639809",
+    "bytes": 15103
+  },
+  {
+    "path": "apps/jarvis/app/proposals.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/proposals.py",
+    "sha256": "aaba4edabf752750f8630512321c4e9196c9c591a6c2b6560bb2b0c81a1daeca",
+    "bytes": 5064
+  },
+  {
+    "path": "apps/jarvis/app/server.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/server.py",
+    "sha256": "7e36c9bdffeccfa962fba9270bb6ab21a7c1328103a1acfa0b84714dda78d421",
+    "bytes": 8742
+  },
+  {
+    "path": "apps/jarvis/app/studio.css",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/studio.css",
+    "sha256": "9231f73b13a4f7a441d3eda16465c1535815526fc0275b252ffba8653888c4a2",
+    "bytes": 7267
+  },
+  {
+    "path": "apps/jarvis/app/studio.html",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/studio.html",
+    "sha256": "3427de9e0d89283c0a29460a205adb2709eb252638d6b46f016d7bcfdac08f6a",
+    "bytes": 5293
+  },
+  {
+    "path": "apps/jarvis/app/studio.js",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/studio.js",
+    "sha256": "96ab99ca55eefd688effc52dc1fff99f4afc0bc9d452c0d38bdc21be2c1c66c2",
+    "bytes": 6624
+  },
+  {
+    "path": "apps/jarvis/app/studio_seed.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/studio_seed.py",
+    "sha256": "cee2a95cd9175a4b7945cd416a03a01b941ff327ae0d1ee80a6563c553166378",
+    "bytes": 3374
+  },
+  {
+    "path": "apps/jarvis/app/studio_workbench.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/studio_workbench.py",
+    "sha256": "0cd16506b9c21d772146ee3cc844b661621679d9c713d5a8bc983b11b240cf6b",
+    "bytes": 5209
+  },
+  {
+    "path": "apps/jarvis/app/ui.css",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/ui.css",
+    "sha256": "8aa63519edf2ada8575990d4c83d57dcf2e68e6730148d86049b1f618a8f51fd",
+    "bytes": 9705
+  },
+  {
+    "path": "apps/jarvis/app/ui.js",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/ui.js",
+    "sha256": "1b61abe944f2ed9c5cb418242db64811e44da631c6d25095c7196c4213edeb08",
+    "bytes": 16089
+  },
+  {
+    "path": "apps/jarvis/app/viewer.js",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/viewer.js",
+    "sha256": "f5c68df5c53c41e9a63b52a6105ffc9701470e5beb336e0a1ab241976457dbe4",
+    "bytes": 2697
+  },
+  {
+    "path": "apps/jarvis/app/voice.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/voice.py",
+    "sha256": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d",
+    "bytes": 4112
+  },
+  {
+    "path": "apps/jarvis/app/workbench.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/app/workbench.py",
+    "sha256": "0a78a791f0326fc71f922085a0b7f682cdb1eed621cd41146ef6c946631f0fa1",
+    "bytes": 9986
+  },
+  {
+    "path": "apps/jarvis/config.example.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/config.example.json",
+    "sha256": "acad29728f08b5991677894b2fb40bb60f1a43890bfe101c2172e9d0f458ab0d",
+    "bytes": 245
+  },
+  {
+    "path": "apps/jarvis/context/CHARACTER_LOCK_ORIGINAL_V6.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/context/CHARACTER_LOCK_ORIGINAL_V6.json",
+    "sha256": "a60c34510e3e986b148f50b21a647118a8c6f54589c399d5ad580872f72af1d9",
+    "bytes": 1689
+  },
+  {
+    "path": "apps/jarvis/context/CONTEXTE_REFERENCE.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/context/CONTEXTE_REFERENCE.json",
+    "sha256": "f31e1d034a4899cd4ea893ab5077ff01eb26b564d0e99d10de16cca89d2cd58b",
+    "bytes": 10035
+  },
+  {
+    "path": "apps/jarvis/context/CONTEXTE_STUDIO_M03.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/context/CONTEXTE_STUDIO_M03.json",
+    "sha256": "ba1d5e336de8bddca1752e0d9fbefbc6d91c05f083f30d9afb0e974e6f10aa11",
+    "bytes": 1679
+  },
+  {
+    "path": "apps/jarvis/docs/PROGRES_ET_LIMITES_M02.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/docs/PROGRES_ET_LIMITES_M02.md",
+    "sha256": "b724a1306f9a9f6754d0ced3facc85c2eb2e84587c0d479e818700161f81c87b",
+    "bytes": 3487
+  },
+  {
+    "path": "apps/jarvis/docs/PROGRES_ET_LIMITES_M03.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/docs/PROGRES_ET_LIMITES_M03.md",
+    "sha256": "fa95e7ddb94538d4e903d265fe03c44c82dba25902d134b1b709481403f5c6d7",
+    "bytes": 4975
+  },
+  {
+    "path": "apps/jarvis/docs/REPRISE_PC_CIBLE.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/docs/REPRISE_PC_CIBLE.md",
+    "sha256": "b5295b610a4f77bec345ab25557b7a856fee4e9f26bbe9c8a3c1c03971c36890",
+    "bytes": 3945
+  },
+  {
+    "path": "apps/jarvis/docs/SOURCES_M02.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/docs/SOURCES_M02.md",
+    "sha256": "73ab434544b493d42e167b0e411fad036fce12fe9f00099f81ce52f9c0409331",
+    "bytes": 1619
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/manifeste.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/manifeste.json",
+    "sha256": "3d52709bb2c9f8763aa22ff6b106c3e79ed129bd0cff57a890eedb28237bec63",
+    "bytes": 2110
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/modele.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/modele.json",
+    "sha256": "9dfff398b3805e90b1a869acb0a9a242aefb0f2ab19bde85be81061ffb340003",
+    "bytes": 616640
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/parametres.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/parametres.json",
+    "sha256": "6a6d336ebc094b33341d87d40a60982cb1d829f0b12b0fa4024f42d68e51568e",
+    "bytes": 188
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/proposition.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/proposition.json",
+    "sha256": "66c7b1831330484582c07ac8595233c7d5f770661d1ba6db92ff22e8ff33e32a",
+    "bytes": 11799
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/recette_core.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/recette_core.py",
+    "sha256": "1c2d75af2b04d16acd80ef405736081c7cdd1b388582eb3d3d0dafcdf40b75d1",
+    "bytes": 18302
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/socle.step",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/socle.step",
+    "sha256": "4f11adec924db05b35ca5751475bf72291fd766c4be9d643c0801c23c88a5671",
+    "bytes": 36559
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/socle.stl",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/socle.stl",
+    "sha256": "22c366de185c1d54a538b9a0bcf5d46ecf04409c292e033b4eb6a9e08db16c20",
+    "bytes": 237684
+  },
+  {
+    "path": "apps/jarvis/exemples/180mm/socle_metres.glb",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/180mm/socle_metres.glb",
+    "sha256": "9f3a78b8dc3bbbf99b8e2124f28d8d753f2c3821ae6f6562a8480fb5fe40735f",
+    "bytes": 86484
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/manifeste.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/manifeste.json",
+    "sha256": "7ca19d42e926675de2ca807e3e81dbf2136b33d23ad7a24a6cf59043f8baf390",
+    "bytes": 2112
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/modele.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/modele.json",
+    "sha256": "8040fe03a039d257d2770df7ed4303c57ceacefbcb56132b47fe2214280eeae8",
+    "bytes": 620052
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/parametres.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/parametres.json",
+    "sha256": "443591541340c61bc614853429f7870eb7697177f076fdda717dea8d09d9cc9f",
+    "bytes": 189
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/proposition.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/proposition.json",
+    "sha256": "e56b04e21f3f58af6245e54aadcca2257c4437a249c05af9d667fcac7f08ab72",
+    "bytes": 11800
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/recette_core.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/recette_core.py",
+    "sha256": "1c2d75af2b04d16acd80ef405736081c7cdd1b388582eb3d3d0dafcdf40b75d1",
+    "bytes": 18302
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/socle.step",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/socle.step",
+    "sha256": "8e092e56a819d3c4bde7d8abddf78b1f64abeebb553ec89eebf780aef827f9de",
+    "bytes": 36586
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/socle.stl",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/socle.stl",
+    "sha256": "bece348eb6263933d2e3776821bdf60a35724587ab9283a3847a8cc43a36ba11",
+    "bytes": 237684
+  },
+  {
+    "path": "apps/jarvis/exemples/240mm/socle_metres.glb",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/240mm/socle_metres.glb",
+    "sha256": "2bccd8ee622502d38a5b9bd67bf8ab4ff79b378c7a0b83b6dacc107f91b262b8",
+    "bytes": 86484
+  },
+  {
+    "path": "apps/jarvis/exemples/SAUVEGARDE_MISSION02.zip",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/SAUVEGARDE_MISSION02.zip",
+    "sha256": "cdebe74cb59b8cb64cc59f99ccc2fe2a3db470a9549ac4e53ebf0b8d1d130cf2",
+    "bytes": 291429
+  },
+  {
+    "path": "apps/jarvis/heritage/M01_AGENTS.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/M01_AGENTS.md",
+    "sha256": "7ce70471959dfd79177c50692e7a45103af9641df0cf4c1983d435a910ca8f9f",
+    "bytes": 2766
+  },
+  {
+    "path": "apps/jarvis/heritage/M01_README.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/M01_README.md",
+    "sha256": "df80249792bb88f2f0c339da593fb6a7b520b94e8cc1831ea3d9aff4a78b7073",
+    "bytes": 6725
+  },
+  {
+    "path": "apps/jarvis/heritage/M02_AGENTS.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/M02_AGENTS.md",
+    "sha256": "52f17daa19bfd3593f2dff925b6ccc70d9e90445d1508cae5b49d2bb8ffc8573",
+    "bytes": 1395
+  },
+  {
+    "path": "apps/jarvis/heritage/M02_README.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/M02_README.md",
+    "sha256": "3e2cb4f0c7ae80a3385f8bae82e9c4cacfc446ea79c836913c3ce87008bfb973",
+    "bytes": 5999
+  },
+  {
+    "path": "apps/jarvis/heritage/SAUVEGARDE_DEMONSTRATION_M01.zip",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/SAUVEGARDE_DEMONSTRATION_M01.zip",
+    "sha256": "6b166c2c2629a78e6861e17fb26868a56a17791b91744528b6ced4099078e27c",
+    "bytes": 286685
+  },
+  {
+    "path": "apps/jarvis/heritage/docs_m01/AMELIORATIONS_CONSOLIDEES.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/docs_m01/AMELIORATIONS_CONSOLIDEES.md",
+    "sha256": "433f8a3b6175e597845982d83655a8b7a413b37f3b49e80ee260e3198b5e88fb",
+    "bytes": 11473
+  },
+  {
+    "path": "apps/jarvis/heritage/docs_m01/RECETTE_PC_CIBLE.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/docs_m01/RECETTE_PC_CIBLE.md",
+    "sha256": "0241f5c43f586771fd9a1b3c97f5e85319e57948c15fbb4e0a1c11f9ca085b81",
+    "bytes": 1817
+  },
+  {
+    "path": "apps/jarvis/heritage/docs_m01/SOURCES.md",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/docs_m01/SOURCES.md",
+    "sha256": "31fedee93d123a820d41fc3d1a28ba7140baa75aa625796258ec58d6658e037d",
+    "bytes": 2902
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/APERCU_MISSION01.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/APERCU_MISSION01.png",
+    "sha256": "3e524cc346061bcc952a86f44e35b8cb1cf87651e8241e7cab2d9eebf92b0376",
+    "bytes": 779303
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/ETAT_LIVRAISON.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/ETAT_LIVRAISON.json",
+    "sha256": "dcc9a47b3639c519af34a4c0804a8ae11057358746924a1f821d20318347091b",
+    "bytes": 695
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/INTEGRITE_PACK_ANTERIEUR.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/INTEGRITE_PACK_ANTERIEUR.json",
+    "sha256": "9e6e2f713fd68f013d82c8f34f7e55936673167877b29fbe715d9af29dfb0326",
+    "bytes": 2115
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/LIMITE_TEST_NAVIGATEUR.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/LIMITE_TEST_NAVIGATEUR.txt",
+    "sha256": "749ef9dbc67042d347c8600e249419ddab0de9c7eefce4287594df812706de5a",
+    "bytes": 432
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/LOG_RECETTE_INTERFACE.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/LOG_RECETTE_INTERFACE.txt",
+    "sha256": "00c4024b94daa9c84f104ab0ec33b186b0c3b7b8444409aa6549d4322b844c16",
+    "bytes": 1776
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/POSTE_MISSION01_DESKTOP.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/POSTE_MISSION01_DESKTOP.png",
+    "sha256": "c28b83c4d9b575627dafa5ba9347d77ad658a0820eefa28d237cd4239de05b91",
+    "bytes": 792364
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/POSTE_MISSION01_MOBILE.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/POSTE_MISSION01_MOBILE.png",
+    "sha256": "fe5160cb885a243f833725d92065c50920774a112dfb922c6387c44a6249a10d",
+    "bytes": 613755
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/SAUVEGARDE_VERIFIEE.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/SAUVEGARDE_VERIFIEE.json",
+    "sha256": "88c12a6141127fac2ac0835cf8e8c721bd830b3d6d24294c638ae906575acb33",
+    "bytes": 40
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/TESTS_ANTERIEURS_REEXECUTES.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/TESTS_ANTERIEURS_REEXECUTES.txt",
+    "sha256": "5ab0ae30823901363a45721f821d82e0086e8813a51ec59d7e20f3891944d7d3",
+    "bytes": 1949
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/TESTS_INTERFACE.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/TESTS_INTERFACE.json",
+    "sha256": "3d9d09c059a58a77eca34e6f423d38e4782519f6a37bc5e5dde43f4e7d901285",
+    "bytes": 1775
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/TESTS_MISSION01.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/TESTS_MISSION01.txt",
+    "sha256": "abbe6c48d930e4999e03e8fc4de518cf3432fffde94122acecba08cf52aa0fb8",
+    "bytes": 8280
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/inventaire_antecedents.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/inventaire_antecedents.json",
+    "sha256": "0a9c744a8b99761c57b2ac1663f3b84a5ac6d3b1e8a9c5363bfec94d20960f41",
+    "bytes": 4364
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/mission_180mm.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/mission_180mm.json",
+    "sha256": "27fc2826088404febc123c607ec90c7d0ece4b970b598061ed06558a7c41ea44",
+    "bytes": 2110
+  },
+  {
+    "path": "apps/jarvis/heritage/preuves_m01/mission_240mm.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/preuves_m01/mission_240mm.json",
+    "sha256": "0e132f31e6f47e7a5e02832b7515215587106f67de88aec9b51bdf5fd0b9374e",
+    "bytes": 2112
+  },
+  {
+    "path": "apps/jarvis/preuves/APERCU_M02_DESKTOP.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/APERCU_M02_DESKTOP.png",
+    "sha256": "8e46afc7f0782c4f76c77f13aea7a85f6c8d98c8f5f36f8c6909fa7dfbcb33a9",
+    "bytes": 809805
+  },
+  {
+    "path": "apps/jarvis/preuves/APERCU_M02_MOBILE.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/APERCU_M02_MOBILE.png",
+    "sha256": "9624bde9ec1821ed247c45392ce4f9e991b41c1af267fc39549ab1510dee0157",
+    "bytes": 570861
+  },
+  {
+    "path": "apps/jarvis/preuves/ENVIRONNEMENT_TEST.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/ENVIRONNEMENT_TEST.json",
+    "sha256": "6d88468109f269ee1427b082b35456ec4a93cb303a572a3205e42e899627c283",
+    "bytes": 238
+  },
+  {
+    "path": "apps/jarvis/preuves/ETAT_LIVRAISON_M02.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/ETAT_LIVRAISON_M02.json",
+    "sha256": "f37eda488aa7613625778b99f791ee73bb665c084fa0b7b401bf07e51cb765df",
+    "bytes": 841
+  },
+  {
+    "path": "apps/jarvis/preuves/LIMITES_RECETTE.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/LIMITES_RECETTE.txt",
+    "sha256": "332b92e7de5ff403f139313c344701455f77742620eaf228aa2157c9281a7856",
+    "bytes": 1095
+  },
+  {
+    "path": "apps/jarvis/preuves/M02_DESKTOP_RESULTAT.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/M02_DESKTOP_RESULTAT.png",
+    "sha256": "74763675a0909775a8dade75385e53808d7fab26941cfe55f096af039efe849b",
+    "bytes": 810121
+  },
+  {
+    "path": "apps/jarvis/preuves/M02_MOBILE.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/M02_MOBILE.png",
+    "sha256": "f23c0abe9980e125ff6605bbf829fa0c45267db7ead96563e3211fff3eb3ec6a",
+    "bytes": 573489
+  },
+  {
+    "path": "apps/jarvis/preuves/M02_PROPOSITION_DESKTOP.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/M02_PROPOSITION_DESKTOP.png",
+    "sha256": "90a7a0442ba206e1ffa5fa5f18f6e0d6762a7a72176b827b4bb097e690577986",
+    "bytes": 745010
+  },
+  {
+    "path": "apps/jarvis/preuves/SAUVEGARDE_M02.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/SAUVEGARDE_M02.json",
+    "sha256": "5df63d0d72d8f03525950a921c2dcc6eb84cabbd724469c56f506050ae5941dc",
+    "bytes": 185
+  },
+  {
+    "path": "apps/jarvis/preuves/TESTS_APERCU.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/TESTS_APERCU.json",
+    "sha256": "b6295ae7c6a101e5fa7fbe84c050b6bd7e76b07ca2abd1ed4136086603a79e72",
+    "bytes": 308
+  },
+  {
+    "path": "apps/jarvis/preuves/TESTS_INTERFACE_M02.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/TESTS_INTERFACE_M02.json",
+    "sha256": "76f782d44fb8b4e3f163189ed46874ae69dc099ee2c1a90e9ffa0875182675a0",
+    "bytes": 4978
+  },
+  {
+    "path": "apps/jarvis/preuves/TESTS_INTERFACE_M02.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/TESTS_INTERFACE_M02.txt",
+    "sha256": "7fdab4e48a25fe0742db50afd69083c9be44fc4d79714d3bf1cc6d51b6560477",
+    "bytes": 1007
+  },
+  {
+    "path": "apps/jarvis/preuves/TESTS_M01_REEXECUTES.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/TESTS_M01_REEXECUTES.txt",
+    "sha256": "53b4eee8b427deaddb052dfba08fbc7fc8c1950830789c2806b51ed37fda9aa8",
+    "bytes": 8280
+  },
+  {
+    "path": "apps/jarvis/preuves/TESTS_M02.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/TESTS_M02.txt",
+    "sha256": "74c15a6f7b10a267e869d67feb65e5a47bc778f9db6c26cd6debdd96aff2a931",
+    "bytes": 181
+  },
+  {
+    "path": "apps/jarvis/preuves/mission_m02_180mm.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/mission_m02_180mm.json",
+    "sha256": "7f157871e3892e0c0ee19dd653bbf5ef9fa7e9e00bfd485fcc8ba8708629c233",
+    "bytes": 2110
+  },
+  {
+    "path": "apps/jarvis/preuves/mission_m02_240mm.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves/mission_m02_240mm.json",
+    "sha256": "f369b32d134ff95a46f990c0887cc1974435c61d41a004202b3d1f213b7cf84c",
+    "bytes": 2112
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/BRIEF_EXPORT_APERCU.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/BRIEF_EXPORT_APERCU.json",
+    "sha256": "8c4ede3086301be7b75a05fefb7264b934ffe6cc8aa716704cb7bdc789c4fa14",
+    "bytes": 2589
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/BRIEF_PREPARE.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/BRIEF_PREPARE.json",
+    "sha256": "07ccf3304e562a325b656fded135a66c707e03a36dd37513f0c5594530df6bde",
+    "bytes": 2593
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/CATALOGUE_VERIFIE.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/CATALOGUE_VERIFIE.json",
+    "sha256": "b09af3c817af7c007dfc4c60786f48604428726f81d1c6e520d78ee102467afd",
+    "bytes": 8927
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/ETAT_LIVRAISON_M03.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/ETAT_LIVRAISON_M03.json",
+    "sha256": "6d784b3aac7158ef43e375bf3d0e9daad913332afaa306fe56cbe82cad92ab14",
+    "bytes": 722
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/LIMITE_NAVIGATEUR_DIRECT.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/LIMITE_NAVIGATEUR_DIRECT.txt",
+    "sha256": "c4377ac571777821f3d0e42651f548c05df0a8a2e45d0a6e39f6554389e6105d",
+    "bytes": 1890
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/REGRESSIONS_M01_M02.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/REGRESSIONS_M01_M02.txt",
+    "sha256": "553d8b857b4d70fe0bc84e6a713b87071056ba34f6bc06fa9b099a5e50e1454c",
+    "bytes": 261
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/STUDIO_DESKTOP.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/STUDIO_DESKTOP.png",
+    "sha256": "60a6d2c3565ec9b15b3f51ba7315946e080acccf2007b2656549776814da40a6",
+    "bytes": 895682
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/STUDIO_MOBILE.png",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/STUDIO_MOBILE.png",
+    "sha256": "b2318aa08f1018935442f46b0d7a44b23e21896f60413d08ef53382c5b123781",
+    "bytes": 666146
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/TESTS_APERCU_M03.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/TESTS_APERCU_M03.json",
+    "sha256": "9636c111c0e5cffa97701a2736641f38936b1bc791c4d07dfac6be41fcccd758",
+    "bytes": 1417
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/TESTS_APERCU_M03.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/TESTS_APERCU_M03.txt",
+    "sha256": "a4a4d5283c730fe313d95d6b98568b96125a8b169550c98e7b72ad149162a013",
+    "bytes": 43
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/TESTS_BIBLIOTHEQUE.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/TESTS_BIBLIOTHEQUE.txt",
+    "sha256": "c56e968be2a83a9e0cad6f9b819b5650f326dfbc21fd07cdc1f9a95bb045fb04",
+    "bytes": 4265
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/TESTS_HTTP.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/TESTS_HTTP.txt",
+    "sha256": "979cc16495d89a12ba1e3fa9ecc73adcc70a89c5e39320931d74e6a035477c4c",
+    "bytes": 1631
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/VERIFICATION_ARCHIVE.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/VERIFICATION_ARCHIVE.json",
+    "sha256": "b2336cfc7d686d854a7fef301db26a1162d88f041a4c9bda14ca32aca2e91331",
+    "bytes": 115
+  },
+  {
+    "path": "apps/jarvis/preuves_m03/VERIFICATION_BRIEF.json",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/preuves_m03/VERIFICATION_BRIEF.json",
+    "sha256": "e7f49dec5bbd87412527a39cc4fb0569ba9bdd90b94a239b6b22e227f1f85235",
+    "bytes": 84
+  },
+  {
+    "path": "apps/jarvis/requirements.txt",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/requirements.txt",
+    "sha256": "930b116ccd2b56f3631695bd45719bd907914af35c360a2d366277af94ce39a6",
+    "bytes": 208
+  },
+  {
+    "path": "apps/jarvis/studio_assets/concept-v4.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/concept-v4.jpg",
+    "sha256": "036bb686a445e3a175427057e2acfdcc453bffd4da47ebd34189e3578026e4e2",
+    "bytes": 24908
+  },
+  {
+    "path": "apps/jarvis/studio_assets/ensemble.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/ensemble.jpg",
+    "sha256": "73cf5b2b40f7aeabdb6673b0bccb0f177d1df2364a668f4411a440fa5995200c",
+    "bytes": 33709
+  },
+  {
+    "path": "apps/jarvis/studio_assets/intro.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/intro.jpg",
+    "sha256": "10f8c0c8087a5c3df2f5397f4a07aa9e20df33e127e7968371c3b0a978cecfc9",
+    "bytes": 25671
+  },
+  {
+    "path": "apps/jarvis/studio_assets/outro.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/outro.jpg",
+    "sha256": "b26596265f4894fbee74b88d8269f93ae54e2eeae2fe7a840af66f897e284e3a",
+    "bytes": 27289
+  },
+  {
+    "path": "apps/jarvis/studio_assets/profil.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/profil.jpg",
+    "sha256": "6e47003f7281e409603de3665a9d3c5847296eb95d38efcff01946ee9b9b3c1e",
+    "bytes": 32307
+  },
+  {
+    "path": "apps/jarvis/studio_assets/troisquarts.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/troisquarts.jpg",
+    "sha256": "20c66c7bdcde19aa5e79bbb239215fe74fbcdd905de26f1c05f8c8c72627b3d2",
+    "bytes": 27211
+  },
+  {
+    "path": "apps/jarvis/studio_assets/vfx-2d.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/vfx-2d.jpg",
+    "sha256": "e72ed2357aeb7542afc8af181be7c089b1eaf1f760061ae677894e3e1c151d2e",
+    "bytes": 32606
+  },
+  {
+    "path": "apps/jarvis/studio_assets/visage.jpg",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_assets/visage.jpg",
+    "sha256": "648bd0b33158ae7027e0358ad24f885a92104e523829c8651a097f3663730966",
+    "bytes": 25961
+  },
+  {
+    "path": "apps/jarvis/studio_media/animatique_v4.mp4",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_media/animatique_v4.mp4",
+    "sha256": "6b4e373efa0d107abc9c16975fbe70b99db21f92615507d42b939ef24b61564a",
+    "bytes": 763185
+  },
+  {
+    "path": "apps/jarvis/studio_media/essai_vfx_2d.mp4",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_media/essai_vfx_2d.mp4",
+    "sha256": "4391a4af24f5e3ce7f08666bcc3ac687d3460d0373487cd3e5aaaf1e83387fe0",
+    "bytes": 1314403
+  },
+  {
+    "path": "apps/jarvis/studio_media/source_bojart.mp4",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/studio_media/source_bojart.mp4",
+    "sha256": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+    "bytes": 9310485
+  },
+  {
+    "path": "apps/jarvis/tests/test_browser.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests/test_browser.py",
+    "sha256": "a66be3513d20c344735f19f0b956605a4124bbc48258002efdd866269d01df0b",
+    "bytes": 5124
+  },
+  {
+    "path": "apps/jarvis/tests/test_browser_direct.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests/test_browser_direct.py",
+    "sha256": "a0e7c5420cc3b1b064b7afff87b8600b8694a133da7a6fe35eda631017973d52",
+    "bytes": 1283
+  },
+  {
+    "path": "apps/jarvis/tests/test_browser_m02.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests/test_browser_m02.py",
+    "sha256": "7b2443a99d0d83b01de039f72f2fe278e5330d5b5d573775f2c38629195bd98f",
+    "bytes": 9362
+  },
+  {
+    "path": "apps/jarvis/tests/test_m02.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests/test_m02.py",
+    "sha256": "b54579d21efddcc470bd331fff7f298e7c8bef993cf573aeaabdbdabbb985c85",
+    "bytes": 15737
+  },
+  {
+    "path": "apps/jarvis/tests/test_mission01.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests/test_mission01.py",
+    "sha256": "f509e526bb09056a4ed8460cf9c9da3a1f42ae353826b57a71d72b57c8e4ad9f",
+    "bytes": 16220
+  },
+  {
+    "path": "apps/jarvis/tests/test_preview.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests/test_preview.py",
+    "sha256": "67a58ce1c006b27531256aa9e38fb2cc42b065f45603e52bb65f0d0631c17c71",
+    "bytes": 2313
+  },
+  {
+    "path": "apps/jarvis/tests/test_ui.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests/test_ui.py",
+    "sha256": "2ec5513f6f6b06a8e46d343485f254ed99720ff1af4298727a68bd8fe001d9e5",
+    "bytes": 8034
+  },
+  {
+    "path": "apps/jarvis/tests_m03/test_media_library.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests_m03/test_media_library.py",
+    "sha256": "bb4deae6e65965c0a15250f9cc4c705afa6285bf97f344ea3c5cefe58464d9a9",
+    "bytes": 9568
+  },
+  {
+    "path": "apps/jarvis/tests_m03/test_preview_m03.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests_m03/test_preview_m03.py",
+    "sha256": "93ea56a68f1876d27745752dd176cfa097498575250d6e8303ef03821cbaa148",
+    "bytes": 3724
+  },
+  {
+    "path": "apps/jarvis/tests_m03/test_studio_browser.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests_m03/test_studio_browser.py",
+    "sha256": "06efd5bb1d018b97de33811f04db5f2bb7a72ef575769bd62ea302704b866262",
+    "bytes": 4242
+  },
+  {
+    "path": "apps/jarvis/tests_m03/test_studio_http.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tests_m03/test_studio_http.py",
+    "sha256": "74f40552cc122acda6f3ffad07358396d05d06e7319f4ba94a615960e3ec92d3",
+    "bytes": 4622
+  },
+  {
+    "path": "apps/jarvis/tools/build_studio_preview.py",
+    "from": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/tools/build_studio_preview.py",
+    "sha256": "355f27d80009b70b4a6286a351fc1085c1aee0f728a08fb93dcc23cf0b7b7408",
+    "bytes": 2374
+  },
+  {
+    "path": "knowledge/metier/BASE_METIER.html",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/BASE_METIER.html",
+    "sha256": "60e8bb14c0ef834f6a7345e0fcbe1f012c7117bc3530821f61a5bd89926dd211",
+    "bytes": 96518
+  },
+  {
+    "path": "knowledge/metier/BASE_METIER.md",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/BASE_METIER.md",
+    "sha256": "3251eed479d3365878ccd715d7eff8d38508da8498b8e3a2a315e11843580e69",
+    "bytes": 63204
+  },
+  {
+    "path": "knowledge/metier/MANIFESTE_SHA256.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/MANIFESTE_SHA256.json",
+    "sha256": "afbd57b4f7e9aa580bfb98b0854d927a5171954f8fb03f9cde452e39a2d9b454",
+    "bytes": 3920
+  },
+  {
+    "path": "knowledge/metier/README.md",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/README.md",
+    "sha256": "383166b58c21eaf3373bc4d368cc33f2cad3a50f71693ca4b4f44d8fd13fb0f7",
+    "bytes": 2500
+  },
+  {
+    "path": "knowledge/metier/app/base_metier.py",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/app/base_metier.py",
+    "sha256": "6c83c4a7bcfdd5dff5e73580d7047b4e0a3d7d66cd9b160e39f83733ce3e3469",
+    "bytes": 10444
+  },
+  {
+    "path": "knowledge/metier/data/contexte.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/data/contexte.json",
+    "sha256": "246b114e9d6a5bcae149bcdad709b0d48841c8c61a99672806edf7d4ded04b02",
+    "bytes": 1596
+  },
+  {
+    "path": "knowledge/metier/data/fiches.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/data/fiches.json",
+    "sha256": "8ac541863087ba8d3e2e4cd565216532d9c1c3b938e550bcdfc17fbbc3246f9c",
+    "bytes": 52631
+  },
+  {
+    "path": "knowledge/metier/data/index_metier.sqlite",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/data/index_metier.sqlite",
+    "sha256": "8db24a26e0b021bcaee48430622d7ea67686c490a947be9d2f8ee1a959ab588c",
+    "bytes": 77824
+  },
+  {
+    "path": "knowledge/metier/data/procedures.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/data/procedures.json",
+    "sha256": "03ec24a2da2a63e51064ec613698d6a7064017cf1838f6e9cd1d26d6df8ae5ed",
+    "bytes": 11399
+  },
+  {
+    "path": "knowledge/metier/data/registres_a_renseigner.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/data/registres_a_renseigner.json",
+    "sha256": "b8e582ac33de59787603c434443dd7277115ba0c76e40d88f32a7cb43eae7d18",
+    "bytes": 2898
+  },
+  {
+    "path": "knowledge/metier/data/sources.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/data/sources.json",
+    "sha256": "4a96a7fc4707d39d108a828943e772010e2811f53b2959a356fe2a1ce42d09d4",
+    "bytes": 27453
+  },
+  {
+    "path": "knowledge/metier/docs/BILAN_LIVRAISON.md",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/docs/BILAN_LIVRAISON.md",
+    "sha256": "5b048e7c9645bf1fc38dcf11cb93fc2fb2603557a48857b2acc90a648758c254",
+    "bytes": 1908
+  },
+  {
+    "path": "knowledge/metier/docs/EXEMPLES_JARVIS.md",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/docs/EXEMPLES_JARVIS.md",
+    "sha256": "9fe448e872ba3f374ec811e9a3be631b9a0719a7e5a06f55dfbe6dc0f62ffa72",
+    "bytes": 2205
+  },
+  {
+    "path": "knowledge/metier/docs/INTEGRATION_M03.md",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/docs/INTEGRATION_M03.md",
+    "sha256": "aeec781a68af32624172464479e7cab9fa01bd48da4e3ab29393ee96c301d852",
+    "bytes": 2206
+  },
+  {
+    "path": "knowledge/metier/preuves/BIBLIOTHEQUE_DESKTOP.png",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/BIBLIOTHEQUE_DESKTOP.png",
+    "sha256": "ef31e0352047018f09b003b3265e64b89bbd1299319014111386d70ad207f263",
+    "bytes": 233527
+  },
+  {
+    "path": "knowledge/metier/preuves/BIBLIOTHEQUE_MOBILE.png",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/BIBLIOTHEQUE_MOBILE.png",
+    "sha256": "ae0e5554612c52695e50cbfe137cbcfcbb03f4736ab174da1bbf4f0fff69dc61",
+    "bytes": 183378
+  },
+  {
+    "path": "knowledge/metier/preuves/ETAT_LIVRAISON.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/ETAT_LIVRAISON.json",
+    "sha256": "8d48a26439b42f574e2ea7a0bcce9c49acd5e495e7b678597c100e0e7167ff3e",
+    "bytes": 1454
+  },
+  {
+    "path": "knowledge/metier/preuves/PROVENANCE_REPRISE.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/PROVENANCE_REPRISE.json",
+    "sha256": "56853bf7e92f04d5e42c8509473b78533da3e9459dbb59c122731736812cfd70",
+    "bytes": 480
+  },
+  {
+    "path": "knowledge/metier/preuves/RECHERCHES_TESTEES.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/RECHERCHES_TESTEES.json",
+    "sha256": "b9f2c1d2070bf4057f3f067947551e3b693acd1579ffd0593c2dfa2b9f6f1036",
+    "bytes": 51315
+  },
+  {
+    "path": "knowledge/metier/preuves/TESTS_INTERFACE.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/TESTS_INTERFACE.json",
+    "sha256": "292970d57fb5d7b44cc36eeba28e34f5b09a3cb8e686efa2879948d2670a37d0",
+    "bytes": 1616
+  },
+  {
+    "path": "knowledge/metier/preuves/TESTS_UNITAIRES.txt",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/TESTS_UNITAIRES.txt",
+    "sha256": "22584f6e2cda26dc2a9cce4bdcc128c859f74b0c82184cb9543aeb43371643d5",
+    "bytes": 3559
+  },
+  {
+    "path": "knowledge/metier/preuves/exemple_recherche_resine.json",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/preuves/exemple_recherche_resine.json",
+    "sha256": "aaf8f7f2a5325c326488e420c9d9aece598c1be715863d8bf72fa25cc9c83fe7",
+    "bytes": 5682
+  },
+  {
+    "path": "knowledge/metier/skills/bojart-base-metier/SKILL.md",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/skills/bojart-base-metier/SKILL.md",
+    "sha256": "b650802db744c164bbe76e09fef7ced22113afae5477dd5c2afef39c90826980",
+    "bytes": 1858
+  },
+  {
+    "path": "knowledge/metier/tests/check_interface.py",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/tests/check_interface.py",
+    "sha256": "adf8fdfb2c39e23ca16b9336a842acf69429aed3bd7161868a16c8d5fca2c5c8",
+    "bytes": 4015
+  },
+  {
+    "path": "knowledge/metier/tests/test_base_metier.py",
+    "from": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip::BOJART_BASE_METIER_2026-10-30/tests/test_base_metier.py",
+    "sha256": "ce269d85a2edfe9d38a9c0dd13e9fbbe50983e4d16f4854c312a286057205e89",
+    "bytes": 6894
+  },
+  {
+    "path": "labs/planning/APERCU_PLANNING.html",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/APERCU_PLANNING.html",
+    "sha256": "30ba2eaa44dc8fc7ce479dd33060f43edab62130d35aa49dc7ac4005ff712b68",
+    "bytes": 64360
+  },
+  {
+    "path": "labs/planning/INNOVATIONS.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/INNOVATIONS.json",
+    "sha256": "340c3e2b64489cf0db775d11df0d96c03503326ca5836e56300e4f969aeec6a3",
+    "bytes": 3031
+  },
+  {
+    "path": "labs/planning/MANIFESTE_SHA256.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/MANIFESTE_SHA256.json",
+    "sha256": "1e5cffa58b26df6f76b6b7785505cfb422982132fb2cf5a292cbd77e71ec0382",
+    "bytes": 4799
+  },
+  {
+    "path": "labs/planning/README.md",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/README.md",
+    "sha256": "478f01adc83d6885088295b8d7fbf150dcc4aa91ba4b2d220e0ff0fe6fd43702",
+    "bytes": 2377
+  },
+  {
+    "path": "labs/planning/REPRISE_CLAUDE.txt",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/REPRISE_CLAUDE.txt",
+    "sha256": "a0c0c99513ccd06ec686bdf2405b411e77b694729ab27f9f0f0ba4255fdabe6a",
+    "bytes": 1821
+  },
+  {
+    "path": "labs/planning/build_dashboard.py",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/build_dashboard.py",
+    "sha256": "301e41631fd520186d8bcc391ae3acbe19cd93bba910458e835ea126d88cc40d",
+    "bytes": 10044
+  },
+  {
+    "path": "labs/planning/docs/INNOVATIONS_JARVIS.md",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/docs/INNOVATIONS_JARVIS.md",
+    "sha256": "213b6ef849f7952d69f4435c0632629249e70ecb936f2ebd7581aa4d867c057a",
+    "bytes": 13222
+  },
+  {
+    "path": "labs/planning/docs/SOURCES.md",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/docs/SOURCES.md",
+    "sha256": "3f9adf5d091ef29f9894d2a6bd5776aec03356092df4cab5d216429a9e65e777",
+    "bytes": 2556
+  },
+  {
+    "path": "labs/planning/exemples/base.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/exemples/base.json",
+    "sha256": "450d6cfe73128b34b33883227e7de4956b59ab1a4d93bf16d7882b6abae5d1ff",
+    "bytes": 2180
+  },
+  {
+    "path": "labs/planning/exemples/compatibilite_manquante.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/exemples/compatibilite_manquante.json",
+    "sha256": "daf7ffbd5c27a9d15d5cd9d22d2a9657145bd881355a26e901210a7d66fdd498",
+    "bytes": 2128
+  },
+  {
+    "path": "labs/planning/exemples/echeance_courte.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/exemples/echeance_courte.json",
+    "sha256": "e36723b03993cc033d59f36a9318509331b79a12db7795ff04948dbf5e431e43",
+    "bytes": 2170
+  },
+  {
+    "path": "labs/planning/exemples/finition_plus_longue.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/exemples/finition_plus_longue.json",
+    "sha256": "e74e203fcacb309c8008522e021bb463f7f037a8c75b19cb173a8ff73c7e50ed",
+    "bytes": 2167
+  },
+  {
+    "path": "labs/planning/exemples/machine_absente.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/exemples/machine_absente.json",
+    "sha256": "863578ba9985a0d985deb716d4ca8fee220ea2b05f512be64db307f774b722c4",
+    "bytes": 2240
+  },
+  {
+    "path": "labs/planning/preuves/APERCU_DESKTOP.png",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/APERCU_DESKTOP.png",
+    "sha256": "b43f3f34e2825940dc4b61d6a54ca9b8d008782e4e4aefdeb62ecc54e3c0a7f9",
+    "bytes": 200471
+  },
+  {
+    "path": "labs/planning/preuves/APERCU_MOBILE.png",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/APERCU_MOBILE.png",
+    "sha256": "941ab7788c9e9f0f951dd28352ce3387c5a240451c73b8a20673ffeef714af0d",
+    "bytes": 189594
+  },
+  {
+    "path": "labs/planning/preuves/ETAT_LIVRAISON.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/ETAT_LIVRAISON.json",
+    "sha256": "e36e2b58ae09d52e112ce6cabd15661f4429c905df451661a0933f440b066228",
+    "bytes": 672
+  },
+  {
+    "path": "labs/planning/preuves/ORTOOLS_INSTALLATION_NON_REALISEE.txt",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/ORTOOLS_INSTALLATION_NON_REALISEE.txt",
+    "sha256": "fffb1ce2805cf702c90d699ea0d1ef939efe396d90379854e7e1bee6916fcfa5",
+    "bytes": 2017
+  },
+  {
+    "path": "labs/planning/preuves/PROVENANCE.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/PROVENANCE.json",
+    "sha256": "40ac1b5b146fc8ddb0b166d87148a583e2ed005465a008e7517eeb5347a5ce37",
+    "bytes": 431
+  },
+  {
+    "path": "labs/planning/preuves/TESTS_INTERFACE.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/TESTS_INTERFACE.json",
+    "sha256": "25959cac3426b6664cd422d7e09216054bebebacbcb2697e6ac20edef2e99e76",
+    "bytes": 1203
+  },
+  {
+    "path": "labs/planning/preuves/TESTS_PLANNING.txt",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/TESTS_PLANNING.txt",
+    "sha256": "1bb8b302a5d72238f48942c971ebe49fc6f125d62356608f933765ab6a9e76de",
+    "bytes": 1913
+  },
+  {
+    "path": "labs/planning/preuves/planning_base.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/planning_base.json",
+    "sha256": "a255abbfc18cb5957f14f62f49d2d29c3f28bda642ed1f511b2f5a8577866092",
+    "bytes": 12111
+  },
+  {
+    "path": "labs/planning/preuves/planning_compatibilite_manquante.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/planning_compatibilite_manquante.json",
+    "sha256": "edb847ccce185beb7cfc67f559e943d8aeeffdcf375b4e27cfb96ee11f52913f",
+    "bytes": 853
+  },
+  {
+    "path": "labs/planning/preuves/planning_echeance_courte.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/planning_echeance_courte.json",
+    "sha256": "998d87a1a83b13f9211744cedf4dedadbd2a2a5d700dc1bb44722918a7a2ddb8",
+    "bytes": 12107
+  },
+  {
+    "path": "labs/planning/preuves/planning_finition_plus_longue.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/planning_finition_plus_longue.json",
+    "sha256": "b624182951ae0c71d58da15c7e23a9bc8031663e65a8658b3abb8a10a1924e3a",
+    "bytes": 12097
+  },
+  {
+    "path": "labs/planning/preuves/planning_machine_absente.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/planning_machine_absente.json",
+    "sha256": "84d09cc191f866c6225a028e70e1c7fde97f1414548b7a90af89df3ea7159794",
+    "bytes": 12322
+  },
+  {
+    "path": "labs/planning/preuves/resultats.json",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/preuves/resultats.json",
+    "sha256": "45c2d557110cc5e783946b7f9ffb7fe27f95f3bd56479796d3ffd2d02309b379",
+    "bytes": 54585
+  },
+  {
+    "path": "labs/planning/prototype/build_examples.py",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/prototype/build_examples.py",
+    "sha256": "6a284ddae0d8c8fcf300763bf2632173dea5fe727797aaa04c069dbe737ea032",
+    "bytes": 2923
+  },
+  {
+    "path": "labs/planning/prototype/planner.py",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/prototype/planner.py",
+    "sha256": "5ecdc4b5224ea57d79155e012869b3c9211edfff9729c582704c7b43b28c7f5f",
+    "bytes": 11234
+  },
+  {
+    "path": "labs/planning/prototype/test_dashboard.py",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/prototype/test_dashboard.py",
+    "sha256": "bd4dab6c866abae7c851c7cc23e4e1df44ca4b1f09646b773b915ab01ec73755",
+    "bytes": 3057
+  },
+  {
+    "path": "labs/planning/prototype/test_planner.py",
+    "from": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip::BOJART_LAB_INNOVATIONS_2026-10-30/prototype/test_planner.py",
+    "sha256": "19667899f5a7b3a5ff2146d062157ceed919429dafcb51d0c8d470f83f1dda97",
+    "bytes": 4333
+  },
+  {
+    "path": "marketing/coherence-v3/AUDIT_COHERENCE.md",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/AUDIT_COHERENCE.md",
+    "sha256": "fcd7ca86b8a17dc3fb401cf0d5290851c116574caacc8e581a2eab4bfbcd5480",
+    "bytes": 12513
+  },
+  {
+    "path": "marketing/coherence-v3/REGLES_INTEGRATION.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/REGLES_INTEGRATION.json",
+    "sha256": "0b7d818a8e2d3b33a07fdcffd7494de3459ccfaa7af55f3e1bd6ff1ab8b74e31",
+    "bytes": 1472
+  },
+  {
+    "path": "marketing/coherence-v3/SOURCES.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/SOURCES.json",
+    "sha256": "6c318a5312e2e21525087d44f05f14cfe9f4154003333c9bae8e5297295ad767",
+    "bytes": 1377
+  },
+  {
+    "path": "marketing/coherence-v3/DASHBOARD_COHERENCE.html",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/DASHBOARD_COHERENCE.html",
+    "sha256": "9e10b92162f554200e5a9c169488a8b6f3b9904f545b9aa2c0aa3c6bb5f2ae1c",
+    "bytes": 16499
+  },
+  {
+    "path": "marketing/coherence-v3/MANIFESTE_SHA256.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/MANIFESTE_SHA256.json",
+    "sha256": "34e6a860f236d4613db2e56409f0d3b8d82e1eae3c9d07741f60a6046c0ace03",
+    "bytes": 1902
+  },
+  {
+    "path": "marketing/coherence-v3/campagne_18_concepts.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/campagne_18_concepts.json",
+    "sha256": "3754012380cdc2f9abb68c61dbd0208f9f89a4ea0fa408482bcc2f808e80e85e",
+    "bytes": 20111
+  },
+  {
+    "path": "marketing/coherence-v3/CALENDRIER.md",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/CALENDRIER.md",
+    "sha256": "b1b9725dbdd6d5e4dc8d0a63fd754519011b8d8ad692f8ef0eda15a129098cf4",
+    "bytes": 2845
+  },
+  {
+    "path": "marketing/coherence-v3/README.md",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/README.md",
+    "sha256": "a050b8d4165801d33f0c72f8d433c9a23e29fd8167d8a6071e82eeaed98bcf0a",
+    "bytes": 876
+  },
+  {
+    "path": "marketing/coherence-v3/APERCU_DASHBOARD.png",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/APERCU_DASHBOARD.png",
+    "sha256": "7b282dbfe1aa78c2d309f0bd1ae24672af9b9fdf1fccaf98b6c56e11758d8989",
+    "bytes": 329565
+  },
+  {
+    "path": "marketing/coherence-v3/preuves/tests_pack_v3.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/preuves/tests_pack_v3.json",
+    "sha256": "8c3d595352b713a19fc94317c42d7ebcf3f94381555b6dcadfa716c12ee663cb",
+    "bytes": 2012
+  },
+  {
+    "path": "marketing/coherence-v3/preuves/tests_simulateur.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/preuves/tests_simulateur.json",
+    "sha256": "02620a344256ffb57c676931adf01fc31cdc7791244d25b0f3ade6a62aca083b",
+    "bytes": 188
+  },
+  {
+    "path": "marketing/coherence-v3/preuves/APERCU_MOBILE.png",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/preuves/APERCU_MOBILE.png",
+    "sha256": "7b5d3351996324e4c927e1cf6e72a08949db689bc75e140c9ac9e0813101d240",
+    "bytes": 326870
+  },
+  {
+    "path": "marketing/coherence-v3/preuves/tests_simulateur.txt",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/preuves/tests_simulateur.txt",
+    "sha256": "415dee5692a5d3fe3997d4b0c274401cbc51a858b8ad8ab3b2eb96cd296e86eb",
+    "bytes": 1949
+  },
+  {
+    "path": "marketing/coherence-v3/preuves/controle_geometrie.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/preuves/controle_geometrie.json",
+    "sha256": "65a8d3ad049541c3ef19ead5c44a3d94aa6a1ecb509e03bfbb487b469bbcd595",
+    "bytes": 336
+  },
+  {
+    "path": "marketing/coherence-v3/preuves/constats_livrables.json",
+    "from": "BOJART_Audit_Coherence_Corrections_V3.zip::BOJART_AUDIT_COHERENCE_V3/preuves/constats_livrables.json",
+    "sha256": "ee9fd9ab1c3932301788dc5e684458cd6b9ae6bf2c9d3bc3dde6b4246f6d296e",
+    "bytes": 1414
+  },
+  {
+    "path": "marketing/growth-v2/README.md",
+    "from": "BOJART_Growth_Kit_V2.zip::README.md",
+    "sha256": "ee092ca59013908d7c10925be4d9ae83e1e9b7a339013c5063e20ac2e63b6936",
+    "bytes": 1988
+  },
+  {
+    "path": "marketing/growth-v2/spec_growth_dashboard.md",
+    "from": "BOJART_Growth_Kit_V2.zip::spec_growth_dashboard.md",
+    "sha256": "82abfef3387fa6bd92595c80e99d063dfcb62cf0c01d075c5290936cb3648055",
+    "bytes": 1417
+  },
+  {
+    "path": "marketing/growth-v2/calendrier_30_jours.csv",
+    "from": "BOJART_Growth_Kit_V2.zip::calendrier_30_jours.csv",
+    "sha256": "2768d7be163488a0d5357837edf199522bc74a36f70522a21e99f46591794128",
+    "bytes": 3569
+  },
+  {
+    "path": "creative/character-lock-v6/BOJART_CHARACTER_LOCK_V6.json",
+    "from": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip::BOJART_CHARACTER_LOCK_V6.json",
+    "sha256": "a60c34510e3e986b148f50b21a647118a8c6f54589c399d5ad580872f72af1d9",
+    "bytes": 1689
+  },
+  {
+    "path": "creative/character-lock-v6/BOJART_V6_SHOT_LIST.csv",
+    "from": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip::BOJART_V6_SHOT_LIST.csv",
+    "sha256": "06fafc30b80066673404925a48e6ecd319ead97cee615870b9af641728ec4d2d",
+    "bytes": 861
+  },
+  {
+    "path": "creative/character-lock-v6/BOJART_V6_GENERATION_PROMPTS.txt",
+    "from": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip::BOJART_V6_GENERATION_PROMPTS.txt",
+    "sha256": "ee8331d9f5cb5e14e4913801bc7a8c15a64993033c9b1ea90bf2bda238ac111f",
+    "bytes": 2010
+  },
+  {
+    "path": "creative/character-lock-v6/orig_8.5.png",
+    "from": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip::orig_8.5.png",
+    "sha256": "63c8153482e53553bb24341453b2813cef604b7330a73b9be42aafda31fd8b0d",
+    "bytes": 769259
+  },
+  {
+    "path": "creative/character-lock-v6/orig_10.2.png",
+    "from": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip::orig_10.2.png",
+    "sha256": "dc9fff355bdf0ead2a759c910d42117f3d3665daffc43b3e20c159479681e941",
+    "bytes": 790688
+  },
+  {
+    "path": "creative/character-lock-v6/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+    "from": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip::BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+    "sha256": "714fdc7cade14207669cf62d739f430df69e6eb1ceea51f731857286fa92e8bd",
+    "bytes": 784472
+  },
+  {
+    "path": "creative/character-lock-v6/BOJART_V6_STORYBOARD_CONCEPT.png",
+    "from": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip::BOJART_V6_STORYBOARD_CONCEPT.png",
+    "sha256": "5fa03c6b57dda674532f45529effcd34ea623e60ae3932608cddbb42577fbdce",
+    "bytes": 2626028
+  },
+  {
+    "path": "research/voice-jev/NOTE_DE_REFERENCE.md",
+    "from": "BOJART_Jarvis_Voix_Jev_Architecture_Verifiee_2026-10-30.zip::NOTE_DE_REFERENCE.md",
+    "sha256": "bca88af40d57825957d646903606db26753aa084f874e81a53e17725f1bf20ad",
+    "bytes": 10643
+  },
+  {
+    "path": "research/voice-jev/PREUVES_LECTURE_M03.json",
+    "from": "BOJART_Jarvis_Voix_Jev_Architecture_Verifiee_2026-10-30.zip::PREUVES_LECTURE_M03.json",
+    "sha256": "76dab182f56e1cbad83103f0c0404a3fb1388a4d5897cf87e914b50f668be36d",
+    "bytes": 3711
+  },
+  {
+    "path": "research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
+    "from": "BOJART_Jarvis_Voix_Jev_Architecture_Verifiee_2026-10-30.zip::ARCHITECTURE_CORRIGEE.mmd",
+    "sha256": "ca58072efb8e6dbbb18b88205993e208e4cc8f204e0ce5d5b5a22e799cb95934",
+    "bytes": 1689
+  },
+  {
+    "path": "research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
+    "from": "BOJART_Jarvis_Voix_Jev_Architecture_Verifiee_2026-10-30.zip::EXEMPLE_COMMANDE_AFFICHAGE.json",
+    "sha256": "c93a4afa0ebdac0983af750d2cd009297eefca48c9ee66ee8f4bffd97b4b81ac",
+    "bytes": 946
+  },
+  {
+    "path": "tools/pc-audit-v1/MISSION_CLAUDE.md",
+    "from": "BOJART_Jarvis_Kit_Preparation_PC.zip::BOJART_Jarvis_Preparation_PC/MISSION_CLAUDE.md",
+    "sha256": "e4dab3f3cf60cfa28e5ba806de5b38ef8ec027c7f2e26b41208b938b3ca89edb",
+    "bytes": 2741
+  },
+  {
+    "path": "tools/pc-audit-v1/audit_pc.py",
+    "from": "BOJART_Jarvis_Kit_Preparation_PC.zip::BOJART_Jarvis_Preparation_PC/audit_pc.py",
+    "sha256": "98dfc27ec12fcff19688f807aa2e8f3eac5516482464159be0eaecb87a381721",
+    "bytes": 1582
+  },
+  {
+    "path": "tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json",
+    "from": "BOJART_Jarvis_Kit_Preparation_PC.zip::BOJART_Jarvis_Preparation_PC/DECISION_ENGINE_CONTRACT.json",
+    "sha256": "02a8654f93b054add152961b3fb90d0b33cf49df13878eff316ec0ba0a0e6239",
+    "bytes": 704
+  },
+  {
+    "path": "tools/pc-audit-v1/README.md",
+    "from": "BOJART_Jarvis_Kit_Preparation_PC.zip::BOJART_Jarvis_Preparation_PC/README.md",
+    "sha256": "97caa3de7d80ca1184a59174d71ee68e5dcb40f510f9804dca4312c6f73fd8f7",
+    "bytes": 1305
+  },
+  {
+    "path": "tools/pc-audit-v1/TESTS_ACCEPTATION.md",
+    "from": "BOJART_Jarvis_Kit_Preparation_PC.zip::BOJART_Jarvis_Preparation_PC/TESTS_ACCEPTATION.md",
+    "sha256": "ba8b06e310853743434f2c00b47780d599e0813c51f4988cf74e1fd9fe3e2dc5",
+    "bytes": 786
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/APERCU_DEMONSTRATION.png",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/APERCU_DEMONSTRATION.png",
+    "sha256": "6a7ca90b001380a8cae4ab9abe267fe9f620f85391c66ace29e7b5159a97f060",
+    "bytes": 679582
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/DEMONSTRATION_BOJART.html",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/DEMONSTRATION_BOJART.html",
+    "sha256": "92f4e20c36f226bab0a192bfd8ea65373ad055f99da73dba7bb187fef4cd63c0",
+    "bytes": 789488
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/PREUVE_GEOMETRIE.json",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/PREUVE_GEOMETRIE.json",
+    "sha256": "681ad7e778e906273559da1b75e585ec51b6d6fa8eca939d55a04b8c0492b591",
+    "bytes": 1797
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/RENDU_DU_STL.png",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/RENDU_DU_STL.png",
+    "sha256": "6c8791e9d78f0f19ab6ba9e3bc26e967ea78ef6af35c27c36edd483ea473193d",
+    "bytes": 32600
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/generer_socle.py",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/generer_socle.py",
+    "sha256": "b1fb234471b710cdd3028851c5c6239bada73a700523096f59064e46dc5df4f2",
+    "bytes": 1448
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm.step",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/socle_180mm.step",
+    "sha256": "55bf278416a2c6917f689b7a7f796da676065a691be4e2cea76613fca2a5a57e",
+    "bytes": 36559
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm.stl",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/socle_180mm.stl",
+    "sha256": "22c366de185c1d54a538b9a0bcf5d46ecf04409c292e033b4eb6a9e08db16c20",
+    "bytes": 237684
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm.svg",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/socle_180mm.svg",
+    "sha256": "cf109c81a8b6a96706502d86fcde628c3246e8324e3fb5b7401e75f4556ce931",
+    "bytes": 178634
+  },
+  {
+    "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm_metres.glb",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/01_Demonstration/socle_180mm_metres.glb",
+    "sha256": "35e3a5a6463db6276fee732ddc3dc82fb6344808ee5c7becf6a00674eb9f195a",
+    "bytes": 86508
+  },
+  {
+    "path": "history/launch-2026-10-20/02_Audit_PC/Audit_Windows.ps1",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/02_Audit_PC/Audit_Windows.ps1",
+    "sha256": "567efc9524eb62521e172c12b4e4712f2b9fed20f374d730e7761b6568cdc54a",
+    "bytes": 2861
+  },
+  {
+    "path": "history/launch-2026-10-20/02_Audit_PC/Demarrer_Audit_Linux.sh",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/02_Audit_PC/Demarrer_Audit_Linux.sh",
+    "sha256": "7ca4326c8ad6c5fbbf79ab7439d4314a393288fe857f8d92a583a0d92401ffa5",
+    "bytes": 326
+  },
+  {
+    "path": "history/launch-2026-10-20/02_Audit_PC/Demarrer_Audit_Windows.cmd",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/02_Audit_PC/Demarrer_Audit_Windows.cmd",
+    "sha256": "571b41801fe9bfce9be34fca92866153d83f363f8fbc450f8f0571d7b211d539",
+    "bytes": 216
+  },
+  {
+    "path": "history/launch-2026-10-20/02_Audit_PC/audit_pc_v2.py",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/02_Audit_PC/audit_pc_v2.py",
+    "sha256": "eec316ae1e6df94fcdfceabc6bcbbd390607275ded327cd7b2c2e3db8465d6c8",
+    "bytes": 5620
+  },
+  {
+    "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/CONTROLE_PDF.json",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/03_Preuve_Et_Tests/CONTROLE_PDF.json",
+    "sha256": "e77768e8add26b879bfa945a76a6f19d92552a161160cef2fb1b22afaad6e088",
+    "bytes": 246
+  },
+  {
+    "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/RESULTATS_TESTS.json",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/03_Preuve_Et_Tests/RESULTATS_TESTS.json",
+    "sha256": "02620a344256ffb57c676931adf01fc31cdc7791244d25b0f3ade6a62aca083b",
+    "bytes": 188
+  },
+  {
+    "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/RESULTATS_VISUALISEUR.json",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/03_Preuve_Et_Tests/RESULTATS_VISUALISEUR.json",
+    "sha256": "5d15569648fd0763a910a3f9cf9db53971f71a59d298bde0008aeb6c57efb3da",
+    "bytes": 664
+  },
+  {
+    "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/TESTS_EXECUTES.txt",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/03_Preuve_Et_Tests/TESTS_EXECUTES.txt",
+    "sha256": "48a773d5e5a53e8f5f40612c23fab7a6e2d95e343aa03e798c1853bd1ef1849f",
+    "bytes": 1949
+  },
+  {
+    "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/decision_gate_demo.py",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/03_Preuve_Et_Tests/decision_gate_demo.py",
+    "sha256": "5525a7a1c52ed1ddd294ce596f0242098c392e63647cc9ab5dc653f5ce605c23",
+    "bytes": 2971
+  },
+  {
+    "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/test_proof.py",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/03_Preuve_Et_Tests/test_proof.py",
+    "sha256": "445eaa05340972b742a0f31f6de017dea2260f885cc26d1978ea97ab737915e2",
+    "bytes": 5062
+  },
+  {
+    "path": "history/launch-2026-10-20/04_Documents/CONTRAT_LANCEMENT.json",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/04_Documents/CONTRAT_LANCEMENT.json",
+    "sha256": "251e1d9e05a4505ac09b0646eec63f7c0e9f63839471e5f94eb24da16bc086e3",
+    "bytes": 3046
+  },
+  {
+    "path": "history/launch-2026-10-20/04_Documents/Dossier_Associes.pdf",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/04_Documents/Dossier_Associes.pdf",
+    "sha256": "2707fb31452d3eb48c431a17eb202f2dd373d9d01513de5932b0c34fc9512f7f",
+    "bytes": 5690191
+  },
+  {
+    "path": "history/launch-2026-10-20/04_Documents/MISSION_REPRISE_CLAUDE.md",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/04_Documents/MISSION_REPRISE_CLAUDE.md",
+    "sha256": "f52e255755188dce2b98bfcaf5ce79eedd8a3fd2f8756a3f70805d6590f2dfd5",
+    "bytes": 3961
+  },
+  {
+    "path": "history/launch-2026-10-20/04_Documents/REGISTRE_PREUVES.md",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/04_Documents/REGISTRE_PREUVES.md",
+    "sha256": "8aeb843938ef91d22b92d3a837b28ebf6d0a5bfaabea79a3fc96ed884608d43e",
+    "bytes": 3656
+  },
+  {
+    "path": "history/launch-2026-10-20/04_Documents/SOURCES.md",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/04_Documents/SOURCES.md",
+    "sha256": "1c8d355cce76ad9309405f97b68448d6619f68f9d37219b34eeed77c24cdf2da",
+    "bytes": 1251
+  },
+  {
+    "path": "history/launch-2026-10-20/MANIFESTE_SHA256.json",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/MANIFESTE_SHA256.json",
+    "sha256": "71cd89063c655d103724797d7a0b22829e27158762aab0cfd3136271d045f0c2",
+    "bytes": 4027
+  },
+  {
+    "path": "history/launch-2026-10-20/README_COMMENCER_ICI.md",
+    "from": "BOJART_Pack_Lancement_20-10-2026.zip::BOJART_Pack_Lancement/README_COMMENCER_ICI.md",
+    "sha256": "302f405d726abc66e317b043509883f9ab77dfd12833816f1cdc50866917cedf",
+    "bytes": 3875
+  },
+  {
+    "path": "history/ai-design-2026-10-20/CONTRAT_DEPLOIEMENT.json",
+    "from": "BOJ_ART_Integration_IA_Locale_Jev_REA_2026-10-20.zip::CONTRAT_DEPLOIEMENT.json",
+    "sha256": "f0886cc3fefe94cebacdbe6ed7e109bf347f68df64edd30c0f8da4c3c145c894",
+    "bytes": 2412
+  },
+  {
+    "path": "history/ai-design-2026-10-20/PLAN_INTEGRATION.md",
+    "from": "BOJ_ART_Integration_IA_Locale_Jev_REA_2026-10-20.zip::PLAN_INTEGRATION.md",
+    "sha256": "28a21df045795bdd45875da141fef4f759fba4556bfdfa040a105b5eaf5cc179",
+    "bytes": 13491
+  }
+]

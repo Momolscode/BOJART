@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "media": [
+    {
+      "id": "media_07e5683c5787",
+      "file": "inbox/source_portrait.mp4",
+      "sha256": "07e5683c578772594d26c4eb8fa6e4e9159f8a891c4b8cb2b9fb4c71a6c4cd9b",
+      "width": 512,
+      "height": 910,
+      "duration": 10.066667,
+      "created": "2026-10-24T22:54:33.468548+00:00",
+      "state": "source du film livré"
+    }
+  ],
+  "posts": [
+    {
+      "id": "brief_2026-10-25",
+      "date": "2026-10-25",
+      "idea_id": "F01",
+      "pillar": "Humour personnel",
+      "state": "story humoristique corrigée et livrée",
+      "decision": "Rotation éditoriale sans supposer des performances.",
+      "brief": {
+        "id": "F01",
+        "pillar": "Humour personnel",
+        "title": "Ce soir, je reste sage",
+        "hook": "Moi, en début de soirée : « Ce soir, je reste sage. »",
+        "script": "0–2,3 s : « Ce soir, je reste sage. » / 2,3–7,1 s : « 20 minutes plus tard » et révélation du texte Babylone du rush / 7,1–10 s : fausse notification Babylone : « Frérot, je t’ai même pas cherché. »",
+        "shots": [
+          "Portrait et texte Babylone du rush conservés."
+        ],
+        "source_status": "Story humoristique exportée et vérifiée ; première version manifeste rejetée.",
+        "experiment": "Préserver le ton personnel du rush avant de décider de son habillage."
+      },
+      "media_ids": [
+        "media_07e5683c5787"
+      ],
+      "feedback": null
+    }
+  ]
+}

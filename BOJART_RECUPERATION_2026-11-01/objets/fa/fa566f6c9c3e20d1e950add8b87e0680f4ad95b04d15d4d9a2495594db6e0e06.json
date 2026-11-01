@@ -1,0 +1,168 @@
+{
+  "observed_date": "2026-11-01",
+  "sources": [
+    "Atelier V11",
+    "Studio V3",
+    "Jarvis M07"
+  ],
+  "deployments": [
+    {
+      "title": "BOJ.ART — Œuvres, créations sur mesure & prototypes",
+      "slug": "bojart-studio",
+      "url": "https://bojart-studio.yellowghost64.chatgpt.site",
+      "versions": [
+        {
+          "version": 3,
+          "sha": "87306314a847c6d2f109bf5833345b3b80af22e1",
+          "id": "appgprj_6ad609f64b3c819184daedd11273e8d6~appgver_509b76a49f508191998d23e37fdbbeca"
+        },
+        {
+          "version": 2,
+          "sha": "11ced14511012cace74fb6df90b81bd7e80798e9",
+          "id": "appgprj_6ad609f64b3c819184daedd11273e8d6~appgver_d8c4551924f08191a8e720c3990d89d2"
+        },
+        {
+          "version": 1,
+          "sha": "4606ded4ca2bc63fa3d3ea16141d698c509dd668",
+          "id": "appgprj_6ad609f64b3c819184daedd11273e8d6~appgver_9506fb5e21908191ba2ffe3e29796cc0"
+        }
+      ],
+      "deployment": {
+        "id": "appgdep_6ad66c59b360819188a20f8557dd8c05",
+        "project_id": "appgprj_6ad609f64b3c819184daedd11273e8d6",
+        "title": "BOJ.ART — Œuvres, créations sur mesure & prototypes",
+        "version_id": "appgprj_6ad609f64b3c819184daedd11273e8d6~appgver_509b76a49f508191998d23e37fdbbeca",
+        "type": "publish",
+        "status": "succeeded",
+        "url": "https://bojart-studio.yellowghost64.chatgpt.site",
+        "has_mcp": false,
+        "screenshot_asset_pointer": "sediment://file_000000000f6c81f8a4f4be423c419572",
+        "provider_deployment_id": "site---6ad609f64b3c819184daedd11273e8d6",
+        "failure_message": null,
+        "env_set_revision": 1,
+        "updated_at": "2026-10-19T19:16:50.129854+00:00"
+      }
+    },
+    {
+      "title": "BOJ.ART — Jarvis, tour de contrôle",
+      "slug": "bojart-atelier",
+      "url": "https://bojart-atelier.yellowghost64.chatgpt.site",
+      "versions": [
+        {
+          "version": 11,
+          "sha": "58309e61e2d70364b3a18223f706a478761da8b3",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_f8198bbd695081919ab0d39dc336cb24"
+        },
+        {
+          "version": 10,
+          "sha": "31ca88e9e0c40a945b6c77193989dad1f3614282",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_1e41502760388191b11ae69201b5b6a9"
+        },
+        {
+          "version": 9,
+          "sha": "be767671423fe023dc62690c7bcf9a078de01832",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_22e578ebc4188191acbae08c5b2a8ef6"
+        },
+        {
+          "version": 8,
+          "sha": "d3e7e9d2412555a41c47343aefacbf2ce6c1924f",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_c8be320405308191bed57d4ea8717e72"
+        },
+        {
+          "version": 7,
+          "sha": "92860b6b5bcd484a5041798088a688b346f9ac26",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_f1ed3520934c8191bac82657c910d43e"
+        },
+        {
+          "version": 6,
+          "sha": "52e6af58a5ad236c49c4bad1142ec6687c05c998",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_b0e2607a34f881919d9ef8d51e2732ef"
+        },
+        {
+          "version": 5,
+          "sha": "42678209e5fe98869aa82741ad0a27e1107bc668",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_5a1b7c5749608191b77f0e4fa4324a77"
+        },
+        {
+          "version": 4,
+          "sha": "e852b847d9f7200895f0fd963f5db37341ba555c",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_ddffac997b508191900b3c5151b90375"
+        },
+        {
+          "version": 3,
+          "sha": "a01b63694e4b689f81e6785f9a8f9dfdf06b65be",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_fc770b2432f0819191a4dc61605bc731"
+        },
+        {
+          "version": 2,
+          "sha": "0459e7b98ba69ee2b2e99cff2cfe9cabcb15f5a2",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_5abcf20a0f1481919b0ebffd301fcf42"
+        },
+        {
+          "version": 1,
+          "sha": "94b542ce2a3158fc5b42d8a9a9c788ae18f5897e",
+          "id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_5b119843626c8191a8a4c1f192612770"
+        }
+      ],
+      "deployment": {
+        "id": "appgdep_6ad66d5dc7dc819194f142bb0c6ec670",
+        "project_id": "appgprj_6ad4e743f61081919626c610d86ef57f",
+        "title": "BOJ.ART — Jarvis, tour de contrôle",
+        "version_id": "appgprj_6ad4e743f61081919626c610d86ef57f~appgver_f8198bbd695081919ab0d39dc336cb24",
+        "type": "publish",
+        "status": "succeeded",
+        "url": "https://bojart-atelier.yellowghost64.chatgpt.site",
+        "has_mcp": false,
+        "screenshot_asset_pointer": "sediment://file_000000001f0c820eb798c19408431111",
+        "provider_deployment_id": "site---6ad4e743f61081919626c610d86ef57f",
+        "failure_message": null,
+        "env_set_revision": 0,
+        "updated_at": "2026-10-19T19:21:18.041809+00:00"
+      }
+    }
+  ],
+  "d1": {
+    "atelier": {
+      "project_id": "appgprj_6ad4e743f61081919626c610d86ef57f",
+      "bindings": [],
+      "selected_binding_name": null,
+      "tables": [],
+      "model_projection": {
+        "truncated": false,
+        "omitted_project_id": false,
+        "omitted_selected_binding": false,
+        "omitted_bindings": 0,
+        "omitted_tables": 0
+      }
+    },
+    "studio": [
+      {
+        "table": "inquiries",
+        "rows": 0,
+        "next_offset": null
+      },
+      {
+        "table": "inquiry_rate_limits",
+        "rows": 0,
+        "next_offset": null
+      },
+      {
+        "table": "inquiry_tombstones",
+        "rows": 0,
+        "next_offset": null
+      }
+    ]
+  },
+  "github": {
+    "repository": "Momolscode/bojart-jarvis",
+    "observed": "404 with selected connected account; not proof of deletion or nonexistence"
+  },
+  "qa_limits": [
+    "Private Atelier live browser access requires login; source V11 used for screenshots",
+    "WebGL2 unavailable in audit cloud browser",
+    "M07 command blocked on HTTP preview by crypto.randomUUID; 127.0.0.1 local acceptance is a separate environment",
+    "Fresh demo state, not the owner's browser or PC state"
+  ],
+  "new_paid_generations": false,
+  "physical_commands": false
+}

@@ -1,0 +1,9 @@
+﻿shot,in,out,action,source,vfx,sound,acceptance
+S01,00:00.00,00:00.70,"Macro réelle, regard/cicatrices",Photographie/vidéo réelle,Macro et léger mouvement,Room tone + tension,Reconnaissance immédiate
+S02,00:00.70,00:01.55,Anticipation poing,Rush approuvé,Match-on-action,Bandage + souffle,Geste lisible
+S03,00:01.55,00:02.25,HERO SHOT : sortie de cadre,Rush test approuvé,Vraie profondeur ou passage caméra,Silence court + attaque + grave,Collision/occlusion crédibles
+S04,00:02.25,00:03.20,Traversée / raccord,Plan transition,Match-cut directionnel,Pont sonore,Même identité
+S05,00:03.20,00:05.00,"Manga original, même sujet",Plan animé validé,Contours stables,Motif musical,Tenue/visage constants
+S06,00:05.00,00:07.60,Geste corporel expressif,Plan animé validé,Caméra suivie,Riff + un accent,Pas de morphing
+S07,00:07.60,00:09.50,Retour matière réelle,Match-pose + vraie source,Transformation localisée,Résolution musicale,Vraie sculpture reconnue
+S08,00:09.50,00:11.50,Reveal BOJ.ART,Photo/vidéo réelle,Stabilisation et lumière,Accord final,Logo et produit lisibles

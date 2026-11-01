@@ -1,0 +1,686 @@
+[
+  {
+    "path": "README_FR.md",
+    "ok": true
+  },
+  {
+    "path": "collect_public_archive.py",
+    "ok": true
+  },
+  {
+    "path": "evidence/creator-embed.json",
+    "ok": true
+  },
+  {
+    "path": "evidence/pages/page-001.json",
+    "ok": true
+  },
+  {
+    "path": "evidence/pages/page-002.json",
+    "ok": true
+  },
+  {
+    "path": "evidence/pages/page-003.json",
+    "ok": true
+  },
+  {
+    "path": "evidence/profile.json",
+    "ok": true
+  },
+  {
+    "path": "inventaire-public.json",
+    "ok": true
+  },
+  {
+    "path": "inventaire.csv",
+    "ok": true
+  },
+  {
+    "path": "manifest.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7017405944237755653/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7017405944237755653/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7017405944237755653/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7017405944237755653/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7017405944237755653/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7017408440901356806/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7017408440901356806/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7017408440901356806/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7017408440901356806/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7017408440901356806/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7018076092208614661/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7018076092208614661/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7018076092208614661/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7018076092208614661/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7018076092208614661/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7020677644077305094/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7020677644077305094/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7020677644077305094/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7020677644077305094/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7020677644077305094/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7053124840668138758/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7053124840668138758/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7053124840668138758/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7053124840668138758/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7053124840668138758/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7071144007094537477/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7071144007094537477/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7071144007094537477/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7071144007094537477/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7071144007094537477/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7099716894994730246/VIDEO_NON_RECUPEREE.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7099716894994730246/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7099716894994730246/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7099716894994730246/download-alternatives-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7099716894994730246/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7099716894994730246/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7152166862053264646/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7152166862053264646/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7152166862053264646/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7152166862053264646/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7152166862053264646/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7171832154769427718/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7171832154769427718/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7171832154769427718/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7171832154769427718/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7171832154769427718/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7218076700217707781/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7218076700217707781/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7218076700217707781/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7218076700217707781/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7218076700217707781/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7227744838907628827/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7227744838907628827/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7227744838907628827/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7227744838907628827/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7227744838907628827/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7228267566194609434/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7228267566194609434/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7228267566194609434/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7228267566194609434/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7228267566194609434/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7230914764518739226/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7230914764518739226/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7230914764518739226/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7230914764518739226/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7230914764518739226/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7288007289615682848/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7288007289615682848/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7288007289615682848/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7288007289615682848/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7288007289615682848/subtitles-eng-US-01.vtt",
+    "ok": true
+  },
+  {
+    "path": "posts/7288007289615682848/subtitles-fra-FR-02.vtt",
+    "ok": true
+  },
+  {
+    "path": "posts/7288007289615682848/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7293166971678395681/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7293166971678395681/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7293166971678395681/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7293166971678395681/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7293166971678395681/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7301607821282381089/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7301607821282381089/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7301607821282381089/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7301607821282381089/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7301607821282381089/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7305439787203235104/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7305439787203235104/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7305439787203235104/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7305439787203235104/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7305439787203235104/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7328113523244928289/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7328113523244928289/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7328113523244928289/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7328113523244928289/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7328113523244928289/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7331788287171988768/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7331788287171988768/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7331788287171988768/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7331788287171988768/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7331788287171988768/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7376602431603346721/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7376602431603346721/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7376602431603346721/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7376602431603346721/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7376602431603346721/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7376603511556984097/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7376603511556984097/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7376603511556984097/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7376603511556984097/official-player-metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7376603511556984097/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/image-01.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/image-02.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/image-03.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/image-04.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/image-05.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/image-06.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/image-07.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7389771662532594977/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7463487192195927298/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7463487192195927298/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7463487192195927298/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7463487192195927298/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7464268707989114134/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7464268707989114134/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7464268707989114134/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7464268707989114134/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7466163957854735638/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7466163957854735638/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7466163957854735638/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7466163957854735638/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7467517355535404310/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7467517355535404310/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7467517355535404310/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7467517355535404310/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7470886903877831958/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7470886903877831958/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7470886903877831958/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7470886903877831958/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7472009171861310742/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7472009171861310742/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7472009171861310742/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7472009171861310742/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7475396486864407830/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7475396486864407830/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7475396486864407830/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7475396486864407830/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7480904142689635607/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7480904142689635607/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7480904142689635607/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7480904142689635607/subtitles-eng-US-01.vtt",
+    "ok": true
+  },
+  {
+    "path": "posts/7480904142689635607/subtitles-fra-FR-02.vtt",
+    "ok": true
+  },
+  {
+    "path": "posts/7480904142689635607/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "posts/7489469547725049110/caption.txt",
+    "ok": true
+  },
+  {
+    "path": "posts/7489469547725049110/cover.jpg",
+    "ok": true
+  },
+  {
+    "path": "posts/7489469547725049110/metadata.json",
+    "ok": true
+  },
+  {
+    "path": "posts/7489469547725049110/video.mp4",
+    "ok": true
+  },
+  {
+    "path": "verification/bojart-couvertures-01.jpg",
+    "ok": true
+  },
+  {
+    "path": "verification/bojart-couvertures-02.jpg",
+    "ok": true
+  },
+  {
+    "path": "verification/cover-integrity.json",
+    "ok": true
+  },
+  {
+    "path": "verification/media-integrity.json",
+    "ok": true
+  },
+  {
+    "path": "verification/observations-couvertures.txt",
+    "ok": true
+  }
+]

@@ -1,0 +1,26 @@
+B.OJ.art — examen des 31 couvertures publiques archivées
+
+Périmètre : couvertures uniquement. Les vidéos entières et l'audio ne sont pas analysés dans cet examen.
+31 fichiers vérifiés avec PIL Image.verify puis décodage complet Image.load. Aucun échec.
+30 dates de publication disponibles dans createTime ; 7475396486864407830 ne contient pas de createTime et reste explicitement « Date non exposée ».
+Période connue : 10/10/2021 au 04/04/2025, dates converties en Europe/Paris.
+Planches internes : bojart-couvertures-01.jpg et bojart-couvertures-02.jpg. Intégrité et correspondances : cover-integrity.json.
+
+SIGNATURE VISUELLE OBSERVÉE
+- 7480904142689635607 (12/03/2025) : emblème le plus net. Personnage dessiné aux cheveux orange hérissés, tenue noire et blanche, volutes magenta/rouges, lettrage noir Boj.Art sur cartouche blanc aux bords irréguliers, fond noir. Bon candidat comme source graphique de référence pour le cockpit ; ce n'est pas un fichier maître vectoriel.
+- 7301607821282381089 (15/11/2023) : ancien emblème différent. Silhouette féminine, fleurs et couronne de feuilles, dégradé magenta/violet/bleu, lettrage irrégulier. L'illustration centrale est violette sur halo blanc et fond noir, avec « news projet » blanc cerné rouge. Ne pas fusionner les deux emblèmes en prétendant qu'ils sont identiques.
+- 7463487192195927298, 7464268707989114134 et 7466163957854735638 (janvier 2025) : série Baki reconnaissable par sujet isolé sur noir, intitulés inclinés sur bande de brosse blanche, repères PART dans cadres angulaires clairs/lumineux. Les variantes de titrage montrent que la charte n'était pas totalement uniforme.
+- 7470886903877831958 (13/02/2025) : couverture d'éclairs jaunes/or sur noir. Variation propre au projet ; elle ne justifie pas de remplacer toute la marque par de l'or.
+- 7489469547725049110 (04/04/2025) reprend visuellement 7218076700217707781 (04/04/2023) : sujet central sur décor rouge/orange lumineux. Le bandeau « ce jour-là » est rétrospectif, pas une nouvelle palette globale.
+- 7389771662532594977, 7376603511556984097, 7376602431603346721, 7331788287171988768 et 7328113523244928289 (2024) : photographies de figurines physiques dans leur atelier, socles très présents, papier peint manga et tapis de découpe vert. Le vert observé est celui du matériel/décor, pas une preuve de couleur de marque.
+- 7071144007094537477 (04/03/2022) : pièces grises séparées sur table, pinceaux et matériel de peinture autour. Référence concrète pour parler d'assemblage et de fabrication.
+- 2021–2022 : variété plus large que les figurines, dont tableaux pop culture, rouge/rose/or, contours dessinés et coulures de peinture. Exemples 7099716894994730246, 7020677644077305094 et 7018076092208614661. L'identité historique inclut peinture et travail manuel.
+
+EXCLUSIONS / LIMITES POUR LE DASHBOARD
+- 7472009171861310742 : la couverture montre des avatars/identités de gagnants d'un tirage au sort. Archiver comme source mais ne pas l'utiliser en décor ni vignette publique de démonstration. Aucune lecture des messages internes de la vidéo n'a été réalisée ici.
+- 7293166971678395681 : capture de jeu avec textes humoristiques, non représentative d'un élément de charte de l'atelier.
+- 7171832154769427718 : capture d'écran avec barre de navigation Android ; ne pas reproduire l'interface du téléphone comme élément de marque.
+- 7467517355535404310 : couverture JPEG entièrement noire, confirmée extrema RGB 0..0 sur tous les canaux. Elle est valide techniquement mais inutilisable comme vignette informative ; préférer une image extraite de la vidéo déjà disponible.
+- Les couvertures ne permettent pas de conclure sur le rythme de montage, les transitions temporelles, l'audio ni la vitesse des animations.
+
+Aucun manifeste ni média source modifié par cette vérification.

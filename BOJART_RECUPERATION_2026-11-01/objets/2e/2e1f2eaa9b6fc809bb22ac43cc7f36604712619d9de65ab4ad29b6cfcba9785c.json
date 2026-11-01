@@ -1,0 +1,8 @@
+{
+  "format": "hypit.cli-get@1",
+  "build": "bld_20261028T102720571Z_67E2E9195A",
+  "output": "final.video",
+  "type": "@hypit/blob@1/Blob",
+  "kind": "resource",
+  "path": "/workspace/scratch/537238f8fe99/outputs/hyperframes_hypit_20261028/MARWIN_Hypit_Timing_B.mp4"
+}

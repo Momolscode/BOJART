@@ -1,0 +1,107 @@
+BOJ.ART — REPRISE DE LA SESSION RENDUS
+Récupération du 1 novembre 2026 — Europe/Paris
+
+PÉRIMÈTRE
+Reconstitution du contexte utile de « Rendus BOJ.ART V6 » et de la reprise directement liée du 30 octobre 2026. Les échanges retrouvés, les mémoires DA et les archives ont été recoupés. Ce fichier n'est pas une copie intégrale, mot pour mot, des conversations. Les observations et soldes historiques restent datés.
+
+OBJECTIF ET EXIGENCES DE MORGAN
+Créer un véritable édit vidéo premium autour de la sculpture BOJ.ART existante : sujets animés lorsque cela est justifié, fidélité au personnage, transitions fluides et percutantes, profondeur et contacts crédibles, sound design travaillé.
+Ne pas traiter un diaporama, un poster mobile, une photo détourée ou des effets 2D plaqués comme un résultat premium validé.
+Garder la sculpture existante distincte des concepts de future sculpture originale, dont « CENDRE ». Les affiches générées ne sont pas des références fidèles du produit.
+Les instructions créatives plus récentes priment sur l'ancien storyboard V6 : son arène et son combat ne sont plus le scénario actif.
+
+REPÈRES ET DÉCISIONS RETROUVÉS
+- TEST 15 : référence de sortie de cadre et d'énergie, pas d'identité. Audit historique : 4,033 s, 548 × 512, 30 i/s, muet.
+- V17 : transition vers la galerie conservée comme option.
+- V18 : matière de transition et galerie utilisée dans les montages suivants.
+- V21 : référence de rythme, montage et bande-son ; candidat de travail, pas master approuvé.
+- V23 : conclusion photographique détourée rejetée ; ne pas la réintroduire comme une fin validée.
+- V24 : remontage des éléments existants, candidat ; fidélité et profondeur encore limitées.
+- V25 / V26 : prototypes de poster / motion manga ; pas une animation validée de la sculpture.
+- V27–V35 : des essais ultérieurs sont mentionnés par la bible et l'audit. Ils ne sont pas des masters validés. Tous leurs fichiers ne sont pas récupérés localement dans cette passe.
+- Aucun master final BOJ.ART approuvé n'a été retrouvé dans les preuves examinées.
+
+DERNIÈRE ORIENTATION DE REPRISE
+Un HERO SHOT muet de 1,5 à 2 s : identité stable, action et passage de cadre compréhensibles, vraie profondeur, raccord exploitable. Comparer au TEST 15 pour l'énergie et à V17 pour la transition. Ensuite seulement étendre le montage et travailler le son.
+La note du 29 octobre rapporte la demande de continuer avec les éléments disponibles sans attendre un scan ou de nouvelles photos. Les documents du 30 octobre signalent ensuite des limites de sources. Pour poursuivre, exploiter d'abord les références récupérées et établir précisément quel plan manque avant de redemander des médias.
+Painted Reality et The Awakening ont été évoqués dans la reprise du 30 octobre comme pistes de DA. Aucun rendu correspondant n'a été confirmé dans cette récupération.
+Morgan a indiqué avoir rechargé 30 € ; cela ne fournit pas un solde actuel ni un plafond récurrent. Cette récupération n'a lancé aucune génération payante.
+
+ARCHIVES EFFECTIVEMENT RÉCUPÉRÉES ET CONTRÔLÉES
+1. BOJART_MARWIN_REPRISE_V6_2026-10-30.zip
+   17 entrées ; intégrité ZIP vérifiée.
+   Mémoires V22–V24, storyboard V6, bible de production, audit V2, manifestes et note de reprise.
+   Library : libfile_d56374ccc65c81919653e750828eb58b
+2. BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip
+   7 entrées ; intégrité ZIP vérifiée.
+   Fiche d'identité, prompts, shot list, PDF, concept et deux images de référence orig_8.5.png / orig_10.2.png.
+   La fiche les rattache à la vidéo v24044gl0000cuei73fog65q7gjmvfc0.mp4. Cette vidéo entière n'est pas présente dans cette archive.
+   Library : libfile_8663268466108191a34b359eb181ad62
+3. BOJART_MARWIN_MEDIA_RECUPERES_V7_2026-10-30.zip
+   30 entrées, dont 28 médias ; intégrité ZIP vérifiée.
+   L'index montre principalement des références personnelles Morgan / Marwin Studio, des décors et des concepts. Ne pas les présenter comme 28 rushs de la sculpture BOJ.ART.
+   Library : libfile_227dc81926b48191b69c452de2feb6b2
+
+IDENTITÉ DOCUMENTÉE DE LA SCULPTURE
+Cheveux sculptés gris-noir avec reflets argentés ; yeux rouges ; cicatrices peintes ; anatomie sculptée ; short bordeaux ; large ceinture blanche ; bandages blancs/gris ; socle gris sculpté.
+Comparer les détails aux images réelles. Ces descriptions ne remplacent pas une validation visuelle. Deux images ne prouvent pas une reconstruction 3D complète.
+
+SOURCES RELUES DANS LEUR ÉTAT ACCESSIBLE
+- BOJART_MEMOIRE_DA_V24.md — libfile_e5487a91080c8191abc3096208701458
+- BOJART_Bible_Edit_Premium_2026.md — libfile_9c1cadfaeb3881919cc60c6c26e1bfdb
+- AUDIT_MASTER_BOJART_V2.md — libfile_51117743df708191ac79c9e8ddf1a633
+- BOJART_HERO_SHOT_2S_PLAN.md — libfile_9090f9c3cc74819184bc4f2c5070cd8b
+- BOJART_DEMANDE_SOURCES_ORIGINALES(1).txt — libfile_dcbfad8b244c8191a5f1b28b2859789b
+- MARWIN_STUDIO_REGISTRE_R_D_2026-10-30.md — libfile_3269aa7ccfec81919adffc081bb49c41
+- EAGLEMIC_Studio_Creatif.json : version accessible 81 ; recherche ciblée effectuée. Ce registre concerne surtout le studio personnel, pas un historique exhaustif BOJ.ART.
+- Contexte personnel : échanges ciblés des 28–30 octobre retrouvés.
+
+LIENS HISTORIQUES DES RENDUS — ACCESSIBILITÉ NON RETESTÉE
+V17 : https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/f761a0fa-44ca-4b80-9285-919db1ffe831.mp4
+V18 : https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/f8731113-df23-4c14-a15e-2aeccc8fa79a.mp4
+V21 : https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/4aa8f4fd-36c9-44d9-87cb-16ab963fda41.mp4
+Musique V21 : https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/3209de2c-cfcf-4d3f-8e10-1f85d2eeb858.mp3
+V24 : https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/9f85f40d-ea6a-4fd7-a6f0-92c5f3d6120d.mp4
+
+PROCHAINE ACTION CONCRÈTE
+Ouvrir les deux références d'identité et les meilleurs plans existants, vérifier quels médias de la sculpture sont réellement exploitables, puis choisir un défaut précis à corriger dans le HERO SHOT. Conserver les originaux, les rejets, les paramètres et les coûts. Aucune nouvelle génération ni publication n'a été effectuée pendant cette récupération.
+
+
+MISE À JOUR DE PRODUCTION — 1 NOVEMBRE 2026
+
+État courant : première coupe de reprise produite, retour de Morgan attendu.
+- Vidéo complète de la sculpture retrouvée : v24044gl0000cuei73fog65q7gjmvfc0.mp4, Library libfile_f7228a316adc8191916abcebbe8c5fe2 ; 15,1 s, 512 × 1108, 30 i/s, décodage contrôlé. Version de diffusion avec watermark et bandes, pas un rush caméra non compressé.
+- TEST19 récupéré : b51304bb-e84a-435e-a21d-3ac0eaab12e6, vidéo terminée ; corps, main et caméra animés. L’autre ancien essai 721cf6a8-310b-40c9-b4c0-3b864e2bd53d est classé ip_detected, pas en traitement.
+- Nouveau plan de figurine Seedance 2.5 : e41cf631-e33a-45f4-8a1a-b71e9310f2a0, statut final nsfw ; aucun résultat utilisable. Solde après refus : 303,85 crédits.
+- Nouveau plan matière indépendant : 0a942e6f-541c-4f00-ba65-f9f921671f3f, Seedance 2.5, 4 s, 720p, muet, terminé. Aucun personnage ou image de figurine en entrée. Devis 28 crédits ; solde après achèvement 275,85.
+- BOJART_REPRISE01_L_ART_PREND_CORPS.mp4 : coupe de 8,416667 s / 202 images, 720 × 1280, 24 i/s, H.264/AAC. Nouveau plan peinture + vidéo réelle de la sculpture + animation TEST19 récupérée + emblème original. Composition originale V21 rééditée ; aucun nouveau Foley revendiqué.
+- Décodage intégral bon ; contact général et raccords examinés par échantillons. Audio mesuré : −15,71 LUFS intégrés et −1,51 dBTP. Écoute casque/téléphone et retour de Morgan non vérifiés.
+- Aucun nouveau plan animé de figurine réussi dans cette passe ; ne pas attribuer TEST19 à la génération du 1 novembre. Aucun master final ni performance d’audience validés. Aucune publication.
+- Projet reproductible : BOJART_REPRISE01_PROJET_SOURCES.zip (scripts, EDL, sources, paramètres, contrôles, refus et résultat conservés).
+Prochaine action : recueillir le retour sur cette coupe, puis définir le plan de personnage à améliorer avec une identité contrôlable et une voie de production disponible.
+
+MISE À JOUR R02 — LE DERNIER GESTE
+
+Morgan autorise la poursuite des prochaines générations sans nouvelle demande de validation dans ce fil. Une seule génération G1 a été engagée dans cette passe, sous plafond de 30 crédits.
+G1 : e81c8ed0-5535-4216-ad7e-e88c2a4d8da3 — Seedance 2.5, 4 s, 720p, muet, TERMINÉ. Coût net 28 crédits ; solde 247,85.
+Le pinceau touche, trace puis se retire. Le trait est plus large que le trait fin visé ; le raccord exact à la cicatrice reste à améliorer.
+BOJART_LE_DERNIER_GESTE_R02.mp4 : 10,5 s, 252 images, 24 i/s, 720 × 1280, H.264/AAC. G1 nouveau, TEST19 historique pour le personnage, prises authentiques pour les détails et la révélation.
+Foley de pinceau BenDrain sous CC0 déclaré par la page auteur, préécoute MP3 publique utilisée. Score V21 réédité ; retrait sonore d’environ 97 ms avant son entrée principale.
+G2 : aucun modèle exact retrouvé dans les recherches ciblées Library / Drive. Le fichier BOJART_Demonstration_3D.html contient un socle CadQuery. Aucune nouvelle animation fidèle de figurine produite dans cette passe.
+Contrôles : décodage intégral bon ; contact général et raccords échantillonnés. Écoute casque/téléphone, validation artistique de Morgan et audience non vérifiées.
+Le projet source conserve R01 et ajoute le dossier R02_LE_DERNIER_GESTE. Prochaine dépendance : modèle exact, peinture et rig pour G2 ; la coupe reste une prévisualisation.
+
+SUIVI DE RÉALISATION — 1 NOVEMBRE 2026 / R03
+
+Retour de Morgan après R02 : « Stylé on arrive à quelque chose de State of Art », puis attente d’un bon résultat une fois générations et montage achevés. Ce retour est positif sur la progression et la direction ; il ne valide ni un master final ni une comparaison technique « état de l’art ».
+Mandat confirmé : « je te laisse maître d’œuvre pour la suite ». Les décisions courantes de réalisation et le travail autorisé peuvent continuer sans nouvelle demande de validation. Ce mandat est propre à BOJ.ART.
+
+Vérifications nouvelles :
+- Scène Higgsfield 3D V35 retrouvée et interrogée en lecture seule : projet 3a59ace3-5c77-4a60-9d99-626bd4a1c884, révision 2, opération bojart-g2-inspect-v35-20261101-01 réussie. 47 objets, aucun rig, aucune image, aucun maillage de figurine : décor de portail/tunnel/débris uniquement. Aucun changement de scène.
+- TEST62 historique récupéré et examiné par contacts, y compris mains et poignet. Visage/peinture dérivent et socle différent ; aucun détail ne fournit le geste manquant. Non intégré. Son rejet reste valable.
+- G2 définitif toujours non produit. Les recherches ciblées ne constituent pas un inventaire exhaustif de toutes les machines. Modèle exact, peinture et capacités d’animation restent à qualifier.
+
+Résultat concret : BOJART_LE_DERNIER_GESTE_R03.mp4, 9,25 s / 222 images / 24 i/s / 720 × 1280, H.264/AAC. Le TEST19 historique est raccourci avant la sortie de visage et raccordé à un détail continu de son poing qui se ferme. G1 déjà terminé est resserré de six images ; signature tenue trois images de plus. R02 reste conservée. Aucun nouveau plan de personnage revendiqué.
+Contrôle : décodage intégral bon, neuf images générales et quatre images autour de chacune des six coupes examinées ; niveau −15,18 LUFS intégrés / −1,49 dBTP. Écoute casque/téléphone non effectuée. Retour de Morgan sur R03 et audience inconnus.
+Solde constaté au début de cette passe : 247,85 crédits. Plafond exploratoire annoncé : 30 crédits ; aucune soumission payante, dépense de cette passe : 0.
+Prochaine preuve : un plan G2 avec identité, peinture et geste contrôlés. Le resserrage R03 améliore le montage d’intention selon la réalisation, sans résoudre ce plan manquant. Aucune publication.

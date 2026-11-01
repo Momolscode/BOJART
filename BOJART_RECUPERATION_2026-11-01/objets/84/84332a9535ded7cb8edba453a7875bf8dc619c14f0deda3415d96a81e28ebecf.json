@@ -1,0 +1,227 @@
+{
+  "id": "MAR01-HYPERFRAMES-HYPIT-20261028",
+  "date": "2026-10-28T11:36:44+01:00",
+  "owner": "Recherche artistique",
+  "mandate": "D accord et bien nickel 👌 je te laisses continuer",
+  "scope": "Essai borné des outils, sans nouvelle fabrication de scène ni génération payante.",
+  "status": "Deux installations de projet et quatre exports locaux contrôlés.",
+  "tool_versions": {
+    "hyperframes": "0.8.210",
+    "hypit": "0.3.1",
+    "fontsource": "0.2.0",
+    "chromium": "153.0.8010.0",
+    "sparticuz": "153.0.0"
+  },
+  "installation_scope": "Environnement de travail de cette conversation ; pas PC personnel, pas installation de compétences personnelles.",
+  "current_architecture_finding": {
+    "fact": "Hypit 0.3.1 sélectionne @hypit/html-video et @hypit/provider-html-local ; ce dernier décrit et implémente son propre rasterizer sans dépendance à un moteur vidéo HTML externe.",
+    "evidence": "README et sources du paquet installé, plan de production et deux Builds réellement terminés.",
+    "historical_hyperframes_adapter": "Documenté dans les anciennes versions, pas utilisé dans ces Builds.",
+    "current_direct_integration_tested": false
+  },
+  "hyperframes": {
+    "checks": {
+      "a": true,
+      "b": true
+    },
+    "render_job_ids": [
+      "87a6a83a-474b-44e7-8c19-860915204f66",
+      "2d3f3a2e-72ce-4002-a9a7-f7911704b321"
+    ],
+    "capture": "Screenshot / software GPU",
+    "render_seconds_observed": [
+      56.4,
+      8.6
+    ],
+    "duration_s_each": 6,
+    "cut_frames_a": [
+      60,
+      120
+    ],
+    "cut_frames_b": [
+      75,
+      120
+    ],
+    "source_planche_preserved": true,
+    "preview_remote_access_verified": false
+  },
+  "hypit": {
+    "source_checks": {
+      "a": true,
+      "b": true
+    },
+    "builds": [
+      {
+        "id": "bld_20261028T102618765Z_AC7B4E5E06",
+        "targets": [
+          "final.video"
+        ],
+        "work": {
+          "state": "done",
+          "outcome": "complete"
+        },
+        "result": {
+          "state": "complete",
+          "outputCount": 9
+        }
+      },
+      {
+        "id": "bld_20261028T102720571Z_67E2E9195A",
+        "targets": [
+          "final.video"
+        ],
+        "work": {
+          "state": "done",
+          "outcome": "complete"
+        },
+        "result": {
+          "state": "complete",
+          "outputCount": 9
+        }
+      }
+    ],
+    "duration_s_each": 8,
+    "authored_reveal_frames": [
+      105,
+      120
+    ],
+    "measured_entrance_frames": [
+      106,
+      121
+    ],
+    "runtime_global_status": "Worker stopped with a stale working/capacity count of 1; each specific Build is done/complete. Durable lifecycle not verified.",
+    "paid_endpoints": 0
+  },
+  "verification": {
+    "exports": [
+      {
+        "name": "MARWIN_HyperFrames_Montage_A.mp4",
+        "sha256": "0f56c12a9722b834b66b131b1c4828035bbc23f6be134b3be34928348d32f495",
+        "duration_seconds": 6.0,
+        "width": 540,
+        "height": 960,
+        "fps": "30/1",
+        "frame_count": 180,
+        "full_decode_ok": true,
+        "audio_streams": 0,
+        "sound": [],
+        "timing": {
+          "cut_frames": [
+            60,
+            120
+          ],
+          "cut_seconds": [
+            2.0,
+            4.0
+          ]
+        }
+      },
+      {
+        "name": "MARWIN_HyperFrames_Montage_B.mp4",
+        "sha256": "978fd583c76998598bb50f197cae760af83017fae3f47ad66180e4ebfbddab17",
+        "duration_seconds": 6.0,
+        "width": 540,
+        "height": 960,
+        "fps": "30/1",
+        "frame_count": 180,
+        "full_decode_ok": true,
+        "audio_streams": 0,
+        "sound": [],
+        "timing": {
+          "cut_frames": [
+            75,
+            120
+          ],
+          "cut_seconds": [
+            2.5,
+            4.0
+          ]
+        }
+      },
+      {
+        "name": "MARWIN_Hypit_Timing_A.mp4",
+        "sha256": "bb38712cdf8b6ce3e566c4eb410b3247b6ceae1099303fa8e3693f901afc680e",
+        "duration_seconds": 8.0,
+        "width": 540,
+        "height": 960,
+        "fps": "30/1",
+        "frame_count": 240,
+        "full_decode_ok": true,
+        "audio_streams": 1,
+        "sound": {
+          "decoded_peak": 0.0,
+          "interpretation": "encoded digital silence, no perceptual listening claimed"
+        },
+        "timing": {
+          "authored_instant_frame": 105,
+          "first_measurable_entrance_frame": 106,
+          "first_measurable_entrance_s": 3.533333333333333
+        }
+      },
+      {
+        "name": "MARWIN_Hypit_Timing_B.mp4",
+        "sha256": "1f385c30723347be1e83fe4660f8bf3ab0cea823f54d7215abf470bddc4156ac",
+        "duration_seconds": 8.0,
+        "width": 540,
+        "height": 960,
+        "fps": "30/1",
+        "frame_count": 240,
+        "full_decode_ok": true,
+        "audio_streams": 1,
+        "sound": {
+          "decoded_peak": 0.0,
+          "interpretation": "encoded digital silence, no perceptual listening claimed"
+        },
+        "timing": {
+          "authored_instant_frame": 120,
+          "first_measurable_entrance_frame": 121,
+          "first_measurable_entrance_s": 4.033333333333333
+        }
+      }
+    ],
+    "same_planche_in_source_and_both_hyperframes_variants": true,
+    "planche_sha256": "a004be26629945363cefdeceb1e580193439b896412b3148825f487d789e9f19",
+    "new_generative_calls": 0,
+    "higgsfield_credits_spent": 0,
+    "audience_test": null
+  },
+  "visual_review": {
+    "sampled": true,
+    "frames_per_export": 9,
+    "contact_sheets_viewed": 4,
+    "full_perceptual_playback": false,
+    "sound": "Hypit encoded digital silence measured at zero; HyperFrames has no audio. No artistic listening claimed.",
+    "likeness_approval": null,
+    "audience_metrics": null
+  },
+  "solutions_applied": [
+    {
+      "problem": "Default Chrome download timed out",
+      "change": "Browser supplied by pinned npm package; atomic synchronized write and checksum after an initially incomplete extraction.",
+      "status": "Render-tested"
+    },
+    {
+      "problem": "Old Fontsource export incompatible with Hypit 0.3.1",
+      "change": "Selected @hypit/fontsource 0.2.0 from its published compatibility manifest.",
+      "status": "Check- and render-tested"
+    },
+    {
+      "problem": "Background preview unavailable across command sessions",
+      "change": "Kept real control captures and exports; no localhost URL represented as accessible to Morgan.",
+      "status": "Preview access unresolved"
+    }
+  ],
+  "artifact_names": {
+    "report": "MARWIN_HyperFrames_Hypit_Essai.txt",
+    "comparison": "MARWIN_Comparatif_Montage.mp4",
+    "project": "MARWIN_HyperFrames_Hypit_Projet.zip"
+  },
+  "next_action": "Revenir aux scènes : nommer intention, bascule, réaction et chute, garder les médias et modifier un seul repère à la fois. La vidéo de scène reste différée.",
+  "new_generative_jobs": 0,
+  "new_higgsfield_jobs": 0,
+  "higgsfield_credit_cap_this_pass": 0,
+  "local_technical_exports": 4,
+  "new_publications": 0,
+  "current_creative_brief_preserved": true,
+  "routine_cadence_changed": false
+}

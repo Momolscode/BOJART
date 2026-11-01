@@ -1,0 +1,24 @@
+{
+  "experiment_id": "BOJART_EXP_0001",
+  "date": "2026-10-30",
+  "shot_id": "S03_HERO_BREAK",
+  "hypothesis": "A tester : une plate propre et un raccord masqué par le poing évitent le verre plat",
+  "changed_variable": "VFX transition technique only",
+  "control_asset_sha256": null,
+  "candidate_asset_sha256": null,
+  "model": null,
+  "prompt_version": null,
+  "cost_preflight": null,
+  "job_status": null,
+  "scores": {
+    "identity": null,
+    "continuity": null,
+    "depth": null,
+    "emotion": null,
+    "editability": null
+  },
+  "blocking_issues": [],
+  "defects_timecodes": [],
+  "decision": "NOT_RUN",
+  "notes": "No experiment launched by this audit"
+}

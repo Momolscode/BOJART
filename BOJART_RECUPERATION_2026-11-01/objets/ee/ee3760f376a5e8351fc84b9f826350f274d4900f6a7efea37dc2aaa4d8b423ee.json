@@ -1,0 +1,93 @@
+{
+  "exports": [
+    {
+      "name": "MARWIN_HyperFrames_Montage_A.mp4",
+      "sha256": "0f56c12a9722b834b66b131b1c4828035bbc23f6be134b3be34928348d32f495",
+      "duration_seconds": 6.0,
+      "width": 540,
+      "height": 960,
+      "fps": "30/1",
+      "frame_count": 180,
+      "full_decode_ok": true,
+      "audio_streams": 0,
+      "sound": [],
+      "timing": {
+        "cut_frames": [
+          60,
+          120
+        ],
+        "cut_seconds": [
+          2.0,
+          4.0
+        ]
+      }
+    },
+    {
+      "name": "MARWIN_HyperFrames_Montage_B.mp4",
+      "sha256": "978fd583c76998598bb50f197cae760af83017fae3f47ad66180e4ebfbddab17",
+      "duration_seconds": 6.0,
+      "width": 540,
+      "height": 960,
+      "fps": "30/1",
+      "frame_count": 180,
+      "full_decode_ok": true,
+      "audio_streams": 0,
+      "sound": [],
+      "timing": {
+        "cut_frames": [
+          75,
+          120
+        ],
+        "cut_seconds": [
+          2.5,
+          4.0
+        ]
+      }
+    },
+    {
+      "name": "MARWIN_Hypit_Timing_A.mp4",
+      "sha256": "bb38712cdf8b6ce3e566c4eb410b3247b6ceae1099303fa8e3693f901afc680e",
+      "duration_seconds": 8.0,
+      "width": 540,
+      "height": 960,
+      "fps": "30/1",
+      "frame_count": 240,
+      "full_decode_ok": true,
+      "audio_streams": 1,
+      "sound": {
+        "decoded_peak": 0.0,
+        "interpretation": "encoded digital silence, no perceptual listening claimed"
+      },
+      "timing": {
+        "authored_instant_frame": 105,
+        "first_measurable_entrance_frame": 106,
+        "first_measurable_entrance_s": 3.533333333333333
+      }
+    },
+    {
+      "name": "MARWIN_Hypit_Timing_B.mp4",
+      "sha256": "1f385c30723347be1e83fe4660f8bf3ab0cea823f54d7215abf470bddc4156ac",
+      "duration_seconds": 8.0,
+      "width": 540,
+      "height": 960,
+      "fps": "30/1",
+      "frame_count": 240,
+      "full_decode_ok": true,
+      "audio_streams": 1,
+      "sound": {
+        "decoded_peak": 0.0,
+        "interpretation": "encoded digital silence, no perceptual listening claimed"
+      },
+      "timing": {
+        "authored_instant_frame": 120,
+        "first_measurable_entrance_frame": 121,
+        "first_measurable_entrance_s": 4.033333333333333
+      }
+    }
+  ],
+  "same_planche_in_source_and_both_hyperframes_variants": true,
+  "planche_sha256": "a004be26629945363cefdeceb1e580193439b896412b3148825f487d789e9f19",
+  "new_generative_calls": 0,
+  "higgsfield_credits_spent": 0,
+  "audience_test": null
+}

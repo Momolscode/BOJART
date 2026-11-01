@@ -1,0 +1,20 @@
+{
+  "platform": "Instagram",
+  "surface": "Reel",
+  "window": "À renseigner après publication : 24 h, 72 h ou 7 jours",
+  "denominator_name": "comptes touchés dans la même fenêtre",
+  "definition_source": "Définitions natives à recopier lors du relevé ; https://about.fb.com/news/2023/04/instagram-reels-trending-audio-and-gifts-updates/",
+  "duration_seconds": null,
+  "average_watch_seconds": null,
+  "reach": null,
+  "views": null,
+  "sends": null,
+  "shares": null,
+  "attributed_follows": null,
+  "completion_rate": null,
+  "native_completion_source": null,
+  "publication_ref": null,
+  "audience_result": false,
+  "paid_or_organic": null,
+  "observed_at": null
+}

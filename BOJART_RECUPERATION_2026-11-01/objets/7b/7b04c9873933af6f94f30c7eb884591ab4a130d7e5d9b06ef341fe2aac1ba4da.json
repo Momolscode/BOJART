@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "output": "BOJART_REPRISE01_L_ART_PREND_CORPS.mp4",
+  "status": "Première coupe de reprise, retour de Morgan attendu",
+  "visual_review": "Contact général et 4 images autour de chacun des 6 raccords examinés ; contrôle visuel échantillonné, pas lecture perceptuelle intégrale certifiée.",
+  "observed": [
+    "Une goutte et son étalement dans le nouveau plan matière",
+    "Mouvement du bras, de la main et de la caméra dans le TEST19 récupéré",
+    "Retour à la vidéo authentique de la sculpture",
+    "Emblème original en conclusion",
+    "202 images, 720 × 1280, 24 i/s, H.264/AAC, décodage intégral sans erreur"
+  ],
+  "audio_measured": {
+    "integrated_lufs": -15.71,
+    "true_peak_dbtp": -1.51,
+    "lra_lu": 2.4
+  },
+  "not_verified": [
+    "Écoute perceptuelle casque/téléphone",
+    "Réaction de Morgan",
+    "Performance d’audience",
+    "Fidélité au pixel de l’animation historique",
+    "Exactitude d’une simulation de fluide — sortie vidéo générée, pas simulation physique contrôlée"
+  ],
+  "limitation": "Le nouveau plan animé de figurine est classé nsfw par le fournisseur et ne fournit aucun résultat utilisable. L’animation de figurine visible reste celle du TEST19 antérieur."
+}

@@ -1,0 +1,38 @@
+BOJ.ART — BRIEF DE GÉNÉRATION DU HERO SHOT
+
+Version : 30 octobre 2026. Durée de génération : 4 secondes. Extrait visé au montage : 1,5 à 2 secondes.
+
+INTENTION
+
+Le poing de la sculpture semble traverser le plan de la caméra. L’illusion doit être physique, lisible, brutale mais fluide. Une seule rupture. L’effet ne doit jamais cacher un changement de visage.
+
+ENTRÉES OBLIGATOIRES
+
+-   Source authentique : photo ou vidéo originale de la sculpture, non redessinée.
+-   Angle secondaire réel, si disponible.
+-   Image de départ et image de sortie approuvées.
+-   Référence TEST 15 : uniquement pour le rythme, la trajectoire et l’anticipation ; ne pas copier son combattant.
+-   Vérification préalable des droits sur l’œuvre et sur les éléments réutilisés.
+
+PROMPT DE RÉALISATION (anglais, à adapter au modèle)
+
+Create one coherent four-second cinematic VFX shot using the supplied, authorized physical artwork references as the strict source of visual truth. Preserve the exact sculpted face, hair geometry and color, scar placements, wrist wraps, waistband, shorts, original proportions and recognizable silhouette across every frame. Begin with a restrained macro and a clear moment of anticipation. The existing raised fist advances toward the lens in a physically plausible movement, with articulated shoulder and elbow, natural acceleration, lens perspective, and realistic motion blur. At the precise near-lens contact, the picture plane appears to rupture in three-dimensional depth: believable thickness, occlusion, parallax, subtle material response, and fragments moving both toward and away from the camera. This is ONE event, not a series of repeated glass shatters. Follow the fist through the transition into a clean, spatially coherent end frame suitable for a match-on-action cut. Keep lighting, character identity, camera direction and spatial geometry continuous. The action must be emotionally legible at normal playback speed. Prioritize fidelity over spectacle. No new character, no face replacement, no costume changes, no extra limbs, no random tattoos or scars, no flat glass overlay, no repeated flash frames, no generic explosion, no teleportation, no static-image zoom, no text, no logo, no soundtrack. Silent source video for frame-accurate postproduction.
+
+SORTIE DEMANDÉE
+
+-   Format natif vertical 9:16 si le modèle et les références le permettent.
+-   Génération de 4 secondes si le modèle impose ce minimum ; utiliser seulement les meilleures 1,5–2 secondes au montage.
+-   Vidéo muette, lumière contrôlée, fin raccordable au plan suivant.
+-   Fiche de contrôle avec images de départ, de contact, de sortie et défauts par timecode.
+
+TESTS BLOQUANTS
+
+1.  Même visage et mêmes cicatrices au début, au contact et à la fin ?
+2.  Même poing et même nombre de doigts, anatomie plausible ?
+3.  Point de contact spatial et réel, pas simple texture de verre ?
+4.  Mouvement continu sans saut de décor ou d’identité ?
+5.  Lisible et spectaculaire sans musique ?
+
+SI UN TEST ÉCHOUE
+
+Rejeter le plan. Ne pas ajouter de filtres, de bruitages ou de musique pour cacher le défaut. Modifier une seule variable avant une éventuelle nouvelle génération. Ne pas contourner un blocage de propriété intellectuelle.

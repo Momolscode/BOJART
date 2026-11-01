@@ -1,0 +1,27 @@
+test_baseline_feasible (test_planner.PlannerTests.test_baseline_feasible) ... ok
+test_bool_not_minutes (test_planner.PlannerTests.test_bool_not_minutes) ... ok
+test_calendar_break (test_planner.PlannerTests.test_calendar_break) ... ok
+test_digest_changes (test_planner.PlannerTests.test_digest_changes) ... ok
+test_duplicate_job (test_planner.PlannerTests.test_duplicate_job) ... ok
+test_fixed_downtime_no_overlap (test_planner.PlannerTests.test_fixed_downtime_no_overlap) ... ok
+test_input_not_mutated (test_planner.PlannerTests.test_input_not_mutated) ... ok
+test_late_status (test_planner.PlannerTests.test_late_status) ... ok
+test_missing_compatibility_blocked (test_planner.PlannerTests.test_missing_compatibility_blocked) ... ok
+test_negative_duration (test_planner.PlannerTests.test_negative_duration) ... ok
+test_no_commands (test_planner.PlannerTests.test_no_commands) ... ok
+test_no_operator (test_planner.PlannerTests.test_no_operator) ... ok
+test_no_optimality_claim (test_planner.PlannerTests.test_no_optimality_claim) ... ok
+test_no_overlap (test_planner.PlannerTests.test_no_overlap) ... ok
+test_no_plan_not_infeasibility_proof (test_planner.PlannerTests.test_no_plan_not_infeasibility_proof) ... ok
+test_no_real_data_permitted (test_planner.PlannerTests.test_no_real_data_permitted) ... ok
+test_precedences (test_planner.PlannerTests.test_precedences) ... ok
+test_print_hold_until_unload (test_planner.PlannerTests.test_print_hold_until_unload) ... ok
+test_reproducible (test_planner.PlannerTests.test_reproducible) ... ok
+test_station_not_double_counted (test_planner.PlannerTests.test_station_not_double_counted) ... ok
+test_unavailable_printer (test_planner.PlannerTests.test_unavailable_printer) ... ok
+test_wrong_process_rejected (test_planner.PlannerTests.test_wrong_process_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.086s
+
+OK

@@ -1,0 +1,216 @@
+{
+  "commit": "ee9458c0a2184f1da8bcfd1b1a2a62763b9e5736",
+  "files": [
+    {
+      "path": ".github/workflows/quality.yml",
+      "bytes": 819,
+      "git_sha1": "fb154c4eaabd5ab89d6c4da9053dbfddca1da377",
+      "sha256": "b360eea50d81efd1da8344e28019e7d59d4899d75d458c6f41232319106428f5"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 270,
+      "git_sha1": "6bc094d5af7b4f0532b4476618dde5dfa6e1890b",
+      "sha256": "6e5a43f57d021a4963ac2ede85c6e5e2abbc9918b10809d180e42b9b1ec89692"
+    },
+    {
+      "path": "PRODUCTION.md",
+      "bytes": 2878,
+      "git_sha1": "0e538c932491c2172bacea6c0b98ba777257ede9",
+      "sha256": "349152fd21ea5cdf83dec3c03d6130b658500b0c63df39225cefec0fe2364845"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3146,
+      "git_sha1": "2934f4a890e39b21b9b938bfa467227ae209e01d",
+      "sha256": "703458c602654f09cecdbb5fce022ebb71723363a98955f40234b95aab909e7b"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1058,
+      "git_sha1": "b5fee5ef33efe4b36a2e63d342bda1a108c2c2a0",
+      "sha256": "93e9f7e9907ae40712b1aa9340814fdf34b5b53379fac00a91f4574cae3caa86"
+    },
+    {
+      "path": "configs/quality_gates.json",
+      "bytes": 848,
+      "git_sha1": "39b6c23ff4f35c28baffc89e7c7d2c24003bc21f",
+      "sha256": "03b5d2e1a39f953a4e38a8bbaaadb79923b1be7244fe7ce6a5a3973708d267c7"
+    },
+    {
+      "path": "docs/ARCHIVE_INVENTAIRE_PUBLIC.json",
+      "bytes": 693,
+      "git_sha1": "3b4cb506ea540997284b83cef3dbab6c560546d5",
+      "sha256": "a99348f284340f889cf1fafcef76b93e70fef45135aac567a5e9ee683317f97e"
+    },
+    {
+      "path": "docs/ARCHIVE_RESTAURATION.md",
+      "bytes": 1274,
+      "git_sha1": "ffde4cd9a90694afaa10ebbf18b86f3a1f1a39ef",
+      "sha256": "96f9edc86636410340e4448e675888a21619514bf41c75a0f60f2a458c2afe40"
+    },
+    {
+      "path": "docs/ETAT_SAUVEGARDE.md",
+      "bytes": 1728,
+      "git_sha1": "1703443bd379d0d3748ebd344e7d6f5b1d25f9ec",
+      "sha256": "1f7207edcd7e8b466d4964542229e7c84e2cb581655cb0a5cfb9477d375d37d0"
+    },
+    {
+      "path": "docs/PRIVATE_ARCHIVE_HANDOFF.md",
+      "bytes": 971,
+      "git_sha1": "20ffcda0d8c90275147d170ea40931edd21ad9a9",
+      "sha256": "ddd079268c4ddbe4537926cb6d92ad5829e9507b267babc551a4a69d4d064e3f"
+    },
+    {
+      "path": "docs/PRODUCTION_RTX.md",
+      "bytes": 1580,
+      "git_sha1": "51b782e54329a3e7269f5c3e152760a703a225df",
+      "sha256": "7f31b173fefe847582a28a890a4dbedef4ed79b73f060783d10c18a88f94b82f"
+    },
+    {
+      "path": "docs/RECHERCHE_ARTISTES.md",
+      "bytes": 1337,
+      "git_sha1": "8a8a02d935d734ec00c5d103fa5907fe20ce6881",
+      "sha256": "f2bbc1c8329af615d4b4f3a33990c94777c47042e15969d196968f09ff7f4c9e"
+    },
+    {
+      "path": "docs/RESEARCH_BACKLOG.md",
+      "bytes": 1737,
+      "git_sha1": "63856c457a0d3f03f1732ab329f631932b35b7d3",
+      "sha256": "c66a97df9701e0c69b885a6e58b7c4b59af434ea16a9d9682b6c74beacdb12a1"
+    },
+    {
+      "path": "docs/creative/PAINTED_REALITY.md",
+      "bytes": 2021,
+      "git_sha1": "636352fe7721ebe4e30ad4c9a5928d5c1a8620e4",
+      "sha256": "5b2118826b9c50e16f25f31c0307a6aecf9083cde9c19af77dd54d0398fe0ee5"
+    },
+    {
+      "path": "docs/creative/THE_AWAKENING.md",
+      "bytes": 1537,
+      "git_sha1": "131577a6da7c99cc9f2952185cf93f9a3ee9e21f",
+      "sha256": "32f3c88e249582d9ad85c014c096f27373e73e36cdf140cb2f2567dded29b367"
+    },
+    {
+      "path": "docs/validation/SHOT_REVIEW_TEMPLATE.md",
+      "bytes": 832,
+      "git_sha1": "1e9afb3a2622a0f399a72b9434b5d946dc92e61e",
+      "sha256": "a1eed18bb20b4f093bafffa23efd867f0cdb49ead6ab567d9bf5b0166f7cffc1"
+    },
+    {
+      "path": "productions/le-dernier-geste/.gitignore",
+      "bytes": 134,
+      "git_sha1": "fac5ba7a2b56f24c68c316abf278efbc5e5eb5cd",
+      "sha256": "1f31142264a3dee5f97ebc5ee345d710bb35f84390bc49737b9d65eec0f0c0a2"
+    },
+    {
+      "path": "productions/le-dernier-geste/ASSETS.json",
+      "bytes": 1283,
+      "git_sha1": "2500018c7726ca7835d7e161595f5ad4b7e12380",
+      "sha256": "b7d4ded2cf522b326ab99a919b20030be0394bc02715ca93b8fc5cae6fe313e7"
+    },
+    {
+      "path": "productions/le-dernier-geste/R02_LE_DERNIER_GESTE/FOLEY_PROVENANCE.json",
+      "bytes": 549,
+      "git_sha1": "9d9cc48fa29de3cefe7dd7414a77c67832f17cb7",
+      "sha256": "780f946a1a8d88b92a7d8d81b61ac09aafe86ed7c757eb37c28133d1b92c75d2"
+    },
+    {
+      "path": "productions/le-dernier-geste/R02_LE_DERNIER_GESTE/G1_PARAMETRES.json",
+      "bytes": 1756,
+      "git_sha1": "f9cfeb7a57309fab0bdd41a2428860dda4d8ec90",
+      "sha256": "afe5c2b40383f49410f7faef216a33d6e8b7432cdbe992f30db5fbe5f50f56c0"
+    },
+    {
+      "path": "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/EDL_R03.json",
+      "bytes": 3301,
+      "git_sha1": "ccb5eeb542544882337f897af0f8d69d6053a379",
+      "sha256": "2f06bac24818dd4720bc314cb299b3c39f9d7b86a7991069f6a9adf64f8e8bac"
+    },
+    {
+      "path": "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+      "bytes": 1746,
+      "git_sha1": "e381ce52efd8821b1dd74be7f0090799cad9e237",
+      "sha256": "56646619c9623f156f1cffa4df09b1d999e2509bfb7b0ff5396e865ea6f43320"
+    },
+    {
+      "path": "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/build_dernier_geste_r03.py",
+      "bytes": 4942,
+      "git_sha1": "3b6d146290aec3d02cbc67fe9ec584652957effb",
+      "sha256": "3364f19e445cc775e036a4a8c78794d66cdd25fb015b3232f205f1c46b7ed033"
+    },
+    {
+      "path": "productions/le-dernier-geste/README.md",
+      "bytes": 2936,
+      "git_sha1": "6c7a0733b3d1ff9ac402d0d3625e3370304392ff",
+      "sha256": "033250fcef41e32ec28d626f95ef379f847a2c59e12d31aee8b5746dcb3576b0"
+    },
+    {
+      "path": "productions/le-dernier-geste/STATUT_G2.json",
+      "bytes": 1084,
+      "git_sha1": "273044383eeb82bf80bb03495531fba210bf9cb7",
+      "sha256": "719950f7e65283178b224da7307f1a8430c8da54db011c641a303d3c822d0a31"
+    },
+    {
+      "path": "productions/le-dernier-geste/verify_assets.py",
+      "bytes": 957,
+      "git_sha1": "24b2054034cf205d10971d7f0e23498785c6bf39",
+      "sha256": "36abc093afd1ce1a14d1bb8dfcc03b3b0977e4f46e508dab077cef8627a58a8a"
+    },
+    {
+      "path": "reviews/example.json",
+      "bytes": 314,
+      "git_sha1": "a3bd2a89bbee555b16784c2f09664829939ccfe1",
+      "sha256": "7bf647fd1ef9fcaf41b621d7801a506deab11beaa68b93896335987e843783fe"
+    },
+    {
+      "path": "runs/higgsfield/README.md",
+      "bytes": 653,
+      "git_sha1": "b3c7a89627159717721f5678a286f0630b14ff8f",
+      "sha256": "2b24ea0e41918aaba87f446901108206c8d6bcd05e8b0d34ca03320a4d56bbe7"
+    },
+    {
+      "path": "runs/higgsfield/experiment-template.json",
+      "bytes": 423,
+      "git_sha1": "1d137dd69cb1da15562a0fa9754a5b168dbb34fe",
+      "sha256": "7a139bc3ebcb3129dadb7ce62f748b0152dad886e9ece6af33900cc55715021d"
+    },
+    {
+      "path": "runs/higgsfield/painted-reality-01/prompt.txt",
+      "bytes": 1112,
+      "git_sha1": "a891c07fe86bcea4fa57bbef9f5ab525d7d28e8a",
+      "sha256": "6ee139d650f432c8959aa46442c79d6ac48864dcd766f7974097f04150bae414"
+    },
+    {
+      "path": "runs/higgsfield/the-awakening-01/prompt.txt",
+      "bytes": 1043,
+      "git_sha1": "776eb15ffb076275976467b0ee4f272344dd3e0c",
+      "sha256": "27d7006173780657ccdd7c9e0bcda57c604c798ea4dbdeddcfdacad90e1631f9"
+    },
+    {
+      "path": "tools/download_remote_media.py",
+      "bytes": 2886,
+      "git_sha1": "9302dbd2e490af7627b8eba20d22f402f40119f7",
+      "sha256": "0ee9138ed49da10ccd859cbcd721c1738852c408ccd6916d416967d30caea13d"
+    },
+    {
+      "path": "tools/quality_gate.py",
+      "bytes": 1635,
+      "git_sha1": "d168bb79239c555ca20059866a4a7d60553ba2e1",
+      "sha256": "5473f8969f93b6bd410ef4cb1bf3a99be80bd1f482ce5161317939972c35fd99"
+    },
+    {
+      "path": "tools/verify_manifest.py",
+      "bytes": 1849,
+      "git_sha1": "4e377aa78869ee164c12d82c2b7d244da97509c1",
+      "sha256": "b3c7237bee1c1b304a2c41e760ff1ea98b7d1c433386b8dfb4f39acd6e7af428"
+    },
+    {
+      "path": "docs/historical/BOJART_V25_STORYBOARD.md",
+      "bytes": 2819,
+      "git_sha1": "da1226e8d6c05145db2cc47368e215a9897eb1d6",
+      "sha256": "6d8419909065789a8c9dd37bc07ac651a7a72d90f691247d01a2a366dfefe939"
+    }
+  ],
+  "verified_git_blobs": 35
+}

@@ -1,0 +1,14 @@
+{
+  "file": "/workspace/scratch/09850b76a594/bojart_reprise01/TEST19_SOURCE.mp4",
+  "sha256": "13698fbda04306d087275d7105a6d2a9a33a7ff2cd83608e09bef50450b33779",
+  "duration_seconds": 4.096,
+  "width": 720,
+  "height": 1280,
+  "fps": "24/1",
+  "video_codec": "h264",
+  "audio_streams": 1,
+  "decode_ok": true,
+  "decode_error": "",
+  "artistic_review": "À effectuer visuellement ; le script ne valide aucune ressemblance, narration ou qualité sonore.",
+  "contact": "/workspace/scratch/09850b76a594/bojart_reprise01/TEST19_CONTACT.jpg"
+}

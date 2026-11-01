@@ -1,0 +1,43 @@
+{
+  "schema": "bojart.diagnostic.v1",
+  "observed_at": "2026-10-31T01:53:18.191435+00:00",
+  "scope": "Hôte qui exécute ce diagnostic ; à distinguer du futur PC BOJ.ART.",
+  "os": {
+    "family": "Linux",
+    "release": "6.18.57",
+    "architecture": "x86_64"
+  },
+  "cpu_logical_count": 5,
+  "ram_gib": 5.8,
+  "storage_free_gib": 29.3,
+  "nvidia_gpus": [],
+  "gpu_detection_status": "not_found",
+  "packages": {
+    "cadquery": "2.8.0",
+    "trimesh": "4.11.1",
+    "faster-whisper": null
+  },
+  "python": "3.13.5",
+  "capabilities": {
+    "physical_commands": false,
+    "media_scan": false,
+    "network_scan": false,
+    "downloads": false
+  },
+  "unmeasured": [
+    "audio réel",
+    "bruit atelier",
+    "nombre d’écrans et résolution",
+    "puissance sous charge",
+    "imprimantes",
+    "autres GPU non NVIDIA"
+  ],
+  "recommendation": {
+    "action": "Benchmarks avant sélection définitive, aucun achat proposé automatiquement.",
+    "cad": "Tester une génération 180 mm avec relecture des fichiers.",
+    "speech": "Tester la transcription CPU pour ne pas réserver le GPU au démarrage.",
+    "llm": "Choisir parmi les modèles déjà installés et compatibles, puis mesurer leur qualité en français.",
+    "memory_policy": "Un travail lourd à la fois au pilote ; VRAM totale non assimilée à la mémoire libre."
+  },
+  "launch_scope": "Inventory of this host only; no acceptance of printers or physical monitors."
+}

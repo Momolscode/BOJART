@@ -1,0 +1,18 @@
+test_auth_scope_and_same_durable_gate (test_integration.Api.test_auth_scope_and_same_durable_gate) ... ok
+test_same_audit_after_process_restart_executes_once (test_integration.DurableProcess.test_same_audit_after_process_restart_executes_once) ... ok
+test_completed_rejected_work_remains_closed (test_integration.Gates.test_completed_rejected_work_remains_closed) ... ok
+test_deferred_scene_blocks_render (test_integration.Gates.test_deferred_scene_blocks_render) ... ok
+test_development_available_but_media_not_authorized (test_integration.Gates.test_development_available_but_media_not_authorized) ... ok
+test_no_audience_invention (test_integration.Gates.test_no_audience_invention) ... ok
+test_unknown_stage_rejected (test_integration.Gates.test_unknown_stage_rejected) ... ok
+test_stdio_tools_roundtrip (test_integration.Mcp.test_stdio_tools_roundtrip) ... ok
+test_cobalt_explicit_authority_required (test_integration.Services.test_cobalt_explicit_authority_required) ... ok
+test_cobalt_prepares_without_download (test_integration.Services.test_cobalt_prepares_without_download) ... ok
+test_cobalt_unknown_response_not_success (test_integration.Services.test_cobalt_unknown_response_not_success) ... ok
+test_missing_instance_is_not_defaulted (test_integration.Services.test_missing_instance_is_not_defaulted) ... ok
+test_searxng_json_contract (test_integration.Services.test_searxng_json_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 9.624s
+
+OK

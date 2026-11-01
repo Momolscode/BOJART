@@ -1,0 +1,17 @@
+{
+  "job_id": "9d7c949b-e456-407f-ae43-8efa0b4cbe89",
+  "status": "completed",
+  "type": "video",
+  "model": "seedance_2_5",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261030_223437_9d7c949b-e456-407f-ae43-8efa0b4cbe89.mp4",
+  "verification_date": "2026-11-01",
+  "verification_source": "Higgsfield.jobs_wait",
+  "binary_in_this_package": false,
+  "binary_download_error": "DNS failure in container; dedicated download rejected URL as not retrievable.",
+  "visual_quality_validation": "not_performed",
+  "authentic_sculpture_reference_injected": false,
+  "source": "text-to-video",
+  "final_premium_master": false,
+  "seed": null,
+  "actual_credit_cost": null
+}

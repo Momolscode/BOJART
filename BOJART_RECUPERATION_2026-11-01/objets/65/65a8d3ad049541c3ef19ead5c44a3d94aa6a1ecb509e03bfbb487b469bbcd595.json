@@ -1,0 +1,13 @@
+{
+  "objet": "socle paramétrique du pack existant",
+  "triangles": 4752,
+  "dimensions_mm": [
+    180.0,
+    179.96441650390625,
+    24.0
+  ],
+  "ferme": true,
+  "normales_coherentes": true,
+  "volume_geometrique_cm3": 575.9597010798502,
+  "limites": "Unité mm issue du manifeste; ni slicing, ni résistance, ni impression testés."
+}

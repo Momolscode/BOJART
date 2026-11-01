@@ -1,0 +1,23 @@
+[
+  {
+    "event_id": "marwin-artistic-audit-20261028-v1",
+    "project": "marwin",
+    "kind": "handoff",
+    "entity_id": "MAR01-AUDIT-20261028",
+    "expected_revision": 0,
+    "data": {
+      "owner": "Recherche artistique",
+      "mission_id": "MAR-01",
+      "observed_on": "2026-10-28",
+      "summary": "Audit documentaire de 11 épisodes et 33 entrées de référence ; Pont, Cookies et Banc décodés et échantillonnés à nouveau. Contrôles typés vidéo/image/carrousel ajoutés, 37 tests passés. La photo de famille reste en développement, vidéo différée. Cette entrée provient du présent audit, pas d'un message d'une autre conversation.",
+      "evidence_refs": [
+        "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal",
+        "https://chatgpt.com/space/page_4ec13488958481919ac2e098f3e4b42a",
+        "verification/rapport_controles.json",
+        "verification/tests.log"
+      ],
+      "next_action": "Contexte et scénario : clarifier la réponse de la place au deuxième cadrage dans les images clés. Garder le contrôle de lecture déjà préparé et la vidéo différée.",
+      "critical": true
+    }
+  }
+]

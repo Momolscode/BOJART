@@ -1,0 +1,878 @@
+{
+  "AIGCDescription": "",
+  "CategoryType": 100,
+  "IsHDBitrate": false,
+  "ShowAIGC": true,
+  "author": {
+    "avatarLarger": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=041efeb5&x-expires=1792508400&x-signature=FxUDw4YyqLCEg7hVtp37secijzk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "avatarMedium": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:720:720.jpeg?dr=10399&refresh_token=23a422de&x-expires=1792508400&x-signature=tjhol64LA%2F1plKU0cT%2BBNj%2B91Yc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "avatarThumb": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=3f095fe5&x-expires=1792508400&x-signature=tzMNnpxkLt2ll3OmxUlEsNNG3QQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "commentSetting": 0,
+    "downloadSetting": 0,
+    "duetSetting": 0,
+    "ftc": false,
+    "id": "6593375005073211397",
+    "isADVirtual": false,
+    "isEmbedBanned": false,
+    "nickname": "boj.Art",
+    "openFavorite": false,
+    "privateAccount": false,
+    "relation": 0,
+    "secUid": "MS4wLjABAAAAfrnDm3LlZg6Q6FbOQYZIV4B8U1M2DFZRJ_R4X_UjLWzG1XZDpADIeEqk6tq04TWj",
+    "secret": false,
+    "shortDramaCreator": {},
+    "signature": "Rejoins-moi et regarde tes idées devenir des œuvres d’art uniques 🎨",
+    "stitchSetting": 0,
+    "uniqueId": "boj.art",
+    "verified": false
+  },
+  "authorStats": {
+    "diggCount": 13200,
+    "followerCount": 13500,
+    "followingCount": 1649,
+    "friendCount": 0,
+    "heart": 13600,
+    "heartCount": 13600,
+    "videoCount": 31
+  },
+  "authorStatsV2": {
+    "diggCount": "13200",
+    "followerCount": "13500",
+    "followingCount": "1649",
+    "friendCount": "0",
+    "heart": "13600",
+    "heartCount": "13600",
+    "videoCount": "31"
+  },
+  "backendSourceEventTracking": "",
+  "challenges": [
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1196485",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "baki"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1639322758910982",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakimanga"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1691530086523910",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakifans"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7269491149629947910",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakiartwork"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1636726764564486",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakianime"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7463483908961599510",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "figurinepeinturée"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7154243108195008518",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "peinturedefigurines"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7018260398000308229",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "figurinesart"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1594670622113798",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "miniaturepainting"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7048476280391467009",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "figurineartist"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1599460481617925",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "impression3d"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1649108",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "3dprinting"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7082063822852194309",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "3dprintedfigures"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "436874",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "3dart"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "30729303",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "3dmodeling"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7463487010628435990",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakifigurines"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7463486368640040982",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "baki3dprinting"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7008584592638607362",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakiart"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7463486900293238806",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "peinture3dfigurines"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7270224906942414881",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakicollectibles"
+    }
+  ],
+  "collected": false,
+  "contents": [
+    {
+      "desc": "Premier parti sur 3 du projet baki hanma de 60 cm #Baki#BakiManga#BakiFans",
+      "textExtra": [
+        {
+          "awemeId": "",
+          "end": 55,
+          "hashtagName": "baki",
+          "isCommerce": false,
+          "start": 50,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 65,
+          "hashtagName": "bakimanga",
+          "isCommerce": false,
+          "start": 55,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 74,
+          "hashtagName": "bakifans",
+          "isCommerce": false,
+          "start": 65,
+          "subType": 0,
+          "type": 1
+        }
+      ]
+    },
+    {
+      "desc": "#BakiArtwork#BakiAnime#FigurinePeinturée#PeintureDeFigurines#FigurinesArt",
+      "textExtra": [
+        {
+          "awemeId": "",
+          "end": 12,
+          "hashtagName": "bakiartwork",
+          "isCommerce": false,
+          "start": 0,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 22,
+          "hashtagName": "bakianime",
+          "isCommerce": false,
+          "start": 12,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 40,
+          "hashtagName": "figurinepeinturée",
+          "isCommerce": false,
+          "start": 22,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 60,
+          "hashtagName": "peinturedefigurines",
+          "isCommerce": false,
+          "start": 40,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 73,
+          "hashtagName": "figurinesart",
+          "isCommerce": false,
+          "start": 60,
+          "subType": 0,
+          "type": 1
+        }
+      ]
+    },
+    {
+      "desc": "#MiniaturePainting#FigurineArtist#Impression3D#3DPrinting#3DPrintedFigures#3DArt",
+      "textExtra": [
+        {
+          "awemeId": "",
+          "end": 18,
+          "hashtagName": "miniaturepainting",
+          "isCommerce": false,
+          "start": 0,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 33,
+          "hashtagName": "figurineartist",
+          "isCommerce": false,
+          "start": 18,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 46,
+          "hashtagName": "impression3d",
+          "isCommerce": false,
+          "start": 33,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 57,
+          "hashtagName": "3dprinting",
+          "isCommerce": false,
+          "start": 46,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 74,
+          "hashtagName": "3dprintedfigures",
+          "isCommerce": false,
+          "start": 57,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 80,
+          "hashtagName": "3dart",
+          "isCommerce": false,
+          "start": 74,
+          "subType": 0,
+          "type": 1
+        }
+      ]
+    },
+    {
+      "desc": "#3DModeling#BakiFigurines#Baki3DPrinting#BakiArt#Peinture3DFigurines",
+      "textExtra": [
+        {
+          "awemeId": "",
+          "end": 11,
+          "hashtagName": "3dmodeling",
+          "isCommerce": false,
+          "start": 0,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 25,
+          "hashtagName": "bakifigurines",
+          "isCommerce": false,
+          "start": 11,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 40,
+          "hashtagName": "baki3dprinting",
+          "isCommerce": false,
+          "start": 25,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 48,
+          "hashtagName": "bakiart",
+          "isCommerce": false,
+          "start": 40,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 68,
+          "hashtagName": "peinture3dfigurines",
+          "isCommerce": false,
+          "start": 48,
+          "subType": 0,
+          "type": 1
+        }
+      ]
+    },
+    {
+      "desc": "#BakiCollectibles",
+      "textExtra": [
+        {
+          "awemeId": "",
+          "end": 17,
+          "hashtagName": "bakicollectibles",
+          "isCommerce": false,
+          "start": 0,
+          "subType": 0,
+          "type": 1
+        }
+      ]
+    }
+  ],
+  "createTime": 1737728533,
+  "desc": "Premier parti sur 3 du projet baki hanma de 60 cm #Baki#BakiManga#BakiFans #BakiArtwork#BakiAnime#FigurinePeinturée#PeintureDeFigurines#FigurinesArt #MiniaturePainting#FigurineArtist#Impression3D#3DPrinting#3DPrintedFigures#3DArt #3DModeling#BakiFigurines#Baki3DPrinting#BakiArt#Peinture3DFigurines #BakiCollectibles",
+  "digged": false,
+  "diversificationId": 10052,
+  "duetDisplay": 0,
+  "duetEnabled": true,
+  "effectStickers": [
+    {
+      "ID": "16721656",
+      "name": "Blue Soda",
+      "stickerStats": {
+        "useCount": 0
+      }
+    }
+  ],
+  "forFriend": false,
+  "id": "7463487192195927298",
+  "isAd": false,
+  "isProhibited": false,
+  "isReviewing": false,
+  "itemCommentStatus": 0,
+  "item_control": {
+    "can_repost": true
+  },
+  "music": {
+    "authorName": "boj.Art",
+    "coverLarge": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=041efeb5&x-expires=1792508400&x-signature=FxUDw4YyqLCEg7hVtp37secijzk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "coverMedium": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:720:720.jpeg?dr=10399&refresh_token=23a422de&x-expires=1792508400&x-signature=tjhol64LA%2F1plKU0cT%2BBNj%2B91Yc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "coverThumb": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=3f095fe5&x-expires=1792508400&x-signature=tzMNnpxkLt2ll3OmxUlEsNNG3QQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "duration": 17,
+    "id": "7463487174911838998",
+    "isCopyrighted": false,
+    "is_commerce_music": true,
+    "is_unlimited_music": false,
+    "original": true,
+    "playUrl": "https://v19-webapp-prime.tiktok.com/video/tos/no1a/tos-no1a-v-2370-no/owqIQkAlXDCDRxaOD6F3FJnIEUCghBekYsfjnE/?a=1988&bti=ODszNWYuMDE6&&bt=125&ft=GNDpcInz7ThDnBeGXq8Zmo&mime_type=audio_mpeg&rc=aGU6ZDU5NzhlZTM5ZGlpZUBpM2pyaHU5cjh0eDMzbzU8NUAvMzAyYV4uXmExLWMtLjFgYSNkLzNtMmRzMTZgLS1kMTFzcw%3D%3D&expire=1792341500&l=20261018153803E37ACD29ED836B9D9096&ply_type=3&policy=3&signature=d3a73e383db1abb898ff864693367d09&tk=0&btag=e00078000",
+    "private": false,
+    "shoot_duration": 17,
+    "title": "son original",
+    "tt2dsp": {
+      "tt_to_dsp_song_infos": [
+        {
+          "meta_song_id": "7078646849627817985",
+          "platform": 1,
+          "song_id": "1646305425",
+          "token": {
+            "apple_music_token": {
+              "developer_token": "eyJhbGciOiJFUzI1NiIsImtpZCI6Ikc2Q0dLMjdWQzMifQ.eyJleHAiOjE3OTI1NzcwNjQsImlhdCI6MTc5MjMxNzg2NCwiaXNzIjoiTUo3OTdEOFU2RiJ9.HMpfYZvqkhKRbv8x9ZUIQ9gBVSYhKPCR_CKGV488BgLPw3UezUA2FuByfxmcNwNsl9HoEWPgkkN3hG8r--Svbw"
+            }
+          }
+        },
+        {
+          "meta_song_id": "7078646849627817985",
+          "platform": 3,
+          "song_id": "5YIWPBYvEwBPv7A4mJ5M8s"
+        }
+      ]
+    }
+  },
+  "officalItem": false,
+  "originalItem": false,
+  "penaltyContext": {
+    "display_penalty_type": 0,
+    "display_policy": 0,
+    "display_ui_type": 0,
+    "reviewed": 0,
+    "status": 102,
+    "tns_status": 102,
+    "video_status": 10
+  },
+  "playlistId": "7469820491735599894",
+  "privateItem": false,
+  "secret": false,
+  "shareEnabled": true,
+  "stats": {
+    "collectCount": 26,
+    "commentCount": 18,
+    "diggCount": 337,
+    "playCount": 5373,
+    "shareCount": 6
+  },
+  "statsV2": {
+    "collectCount": "26",
+    "commentCount": "18",
+    "diggCount": "337",
+    "playCount": "5373",
+    "repostCount": "0",
+    "shareCount": "6"
+  },
+  "stitchDisplay": 0,
+  "stitchEnabled": true,
+  "textExtra": [
+    {
+      "awemeId": "",
+      "end": 55,
+      "hashtagName": "baki",
+      "isCommerce": false,
+      "start": 50,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 65,
+      "hashtagName": "bakimanga",
+      "isCommerce": false,
+      "start": 55,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 74,
+      "hashtagName": "bakifans",
+      "isCommerce": false,
+      "start": 65,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 87,
+      "hashtagName": "bakiartwork",
+      "isCommerce": false,
+      "start": 75,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 97,
+      "hashtagName": "bakianime",
+      "isCommerce": false,
+      "start": 87,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 115,
+      "hashtagName": "figurinepeinturée",
+      "isCommerce": false,
+      "start": 97,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 135,
+      "hashtagName": "peinturedefigurines",
+      "isCommerce": false,
+      "start": 115,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 148,
+      "hashtagName": "figurinesart",
+      "isCommerce": false,
+      "start": 135,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 167,
+      "hashtagName": "miniaturepainting",
+      "isCommerce": false,
+      "start": 149,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 182,
+      "hashtagName": "figurineartist",
+      "isCommerce": false,
+      "start": 167,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 195,
+      "hashtagName": "impression3d",
+      "isCommerce": false,
+      "start": 182,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 206,
+      "hashtagName": "3dprinting",
+      "isCommerce": false,
+      "start": 195,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 223,
+      "hashtagName": "3dprintedfigures",
+      "isCommerce": false,
+      "start": 206,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 229,
+      "hashtagName": "3dart",
+      "isCommerce": false,
+      "start": 223,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 241,
+      "hashtagName": "3dmodeling",
+      "isCommerce": false,
+      "start": 230,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 255,
+      "hashtagName": "bakifigurines",
+      "isCommerce": false,
+      "start": 241,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 270,
+      "hashtagName": "baki3dprinting",
+      "isCommerce": false,
+      "start": 255,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 278,
+      "hashtagName": "bakiart",
+      "isCommerce": false,
+      "start": 270,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 298,
+      "hashtagName": "peinture3dfigurines",
+      "isCommerce": false,
+      "start": 278,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 316,
+      "hashtagName": "bakicollectibles",
+      "isCommerce": false,
+      "start": 299,
+      "subType": 0,
+      "type": 1
+    }
+  ],
+  "textLanguage": "fr",
+  "textTranslatable": true,
+  "video": {
+    "PlayAddrStruct": {
+      "DataSize": 641069,
+      "FileCs": "c:0-15813-985a",
+      "FileHash": "d7f1d3e1baf239db606deb15d9800b6d",
+      "Height": 1024,
+      "Uri": "v24044gl0000cu9q1bnog65jr9l4eu4g",
+      "UrlKey": "v24044gl0000cu9q1bnog65jr9l4eu4g_h264_540p_296430",
+      "UrlList": [
+        "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/oIskkQuIDSaC6BR8gEfDAUTFOFtNknFECnSRen/?a=1988&bti=ODszNWYuMDE6&&bt=289&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=ZjpmOTg8NTc7PDk7N2Q5N0Bpang3PG05cmV0eDMzbzczNUBfY19hLjM2NjQxLy4zYjNgYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=cb646016c5082697d997ab3716405ead&tk=tt_chain_token&btag=e000b8000",
+        "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/oIskkQuIDSaC6BR8gEfDAUTFOFtNknFECnSRen/?a=1988&bti=ODszNWYuMDE6&&bt=289&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=ZjpmOTg8NTc7PDk7N2Q5N0Bpang3PG05cmV0eDMzbzczNUBfY19hLjM2NjQxLy4zYjNgYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=cb646016c5082697d997ab3716405ead&tk=tt_chain_token&btag=e000b8000",
+        "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=c466ea641826497894926915d6bcf7bc&is_play_url=1&item_id=7463487192195927298&line=0&ply_type=2&pt=YXdlbWUud2ViLndlYmFwaSYvYXBpL2NyZWF0b3IvaXRlbV9saXN0LyYyMDI2MTAxODE1MzgwM0UzN0FDRDI5RUQ4MzZCOUQ5MDk2JjE3OTIzMzc4ODMmN2IxY2JjMDVlMGUy&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmZkYjEwYWIyODBkMWEzNDQwOTNkMGQ3NjIwYmIwNGVl&tk=tt_chain_token&video_id=v24044gl0000cu9q1bnog65jr9l4eu4g"
+      ],
+      "Width": 576
+    },
+    "VQScore": "65.6",
+    "bitrate": 296430,
+    "bitrateInfo": [
+      {
+        "Bitrate": 296430,
+        "BitrateFPS": 30,
+        "CodecType": "h264",
+        "Format": "mp4",
+        "GearName": "normal_540_0",
+        "MVMAF": "{\"v2.0\": {\"srv1\": {\"v1080\": 99.122, \"v960\": 99.99, \"v864\": 100, \"v720\": 100}, \"ori\": {\"v1080\": 87.07, \"v960\": 88.545, \"v864\": 90.859, \"v720\": 93.422}}}",
+        "PlayAddr": {
+          "DataSize": 641069,
+          "FileCs": "c:0-15813-985a",
+          "FileHash": "d7f1d3e1baf239db606deb15d9800b6d",
+          "Height": 1024,
+          "Uri": "v24044gl0000cu9q1bnog65jr9l4eu4g",
+          "UrlKey": "v24044gl0000cu9q1bnog65jr9l4eu4g_h264_540p_296430",
+          "UrlList": [
+            "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/oIskkQuIDSaC6BR8gEfDAUTFOFtNknFECnSRen/?a=1988&bti=ODszNWYuMDE6&&bt=289&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=ZjpmOTg8NTc7PDk7N2Q5N0Bpang3PG05cmV0eDMzbzczNUBfY19hLjM2NjQxLy4zYjNgYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=cb646016c5082697d997ab3716405ead&tk=tt_chain_token&btag=e000b8000",
+            "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/oIskkQuIDSaC6BR8gEfDAUTFOFtNknFECnSRen/?a=1988&bti=ODszNWYuMDE6&&bt=289&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=ZjpmOTg8NTc7PDk7N2Q5N0Bpang3PG05cmV0eDMzbzczNUBfY19hLjM2NjQxLy4zYjNgYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=cb646016c5082697d997ab3716405ead&tk=tt_chain_token&btag=e000b8000",
+            "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=c466ea641826497894926915d6bcf7bc&is_play_url=1&item_id=7463487192195927298&line=0&ply_type=2&pt=YXdlbWUud2ViLndlYmFwaSYvYXBpL2NyZWF0b3IvaXRlbV9saXN0LyYyMDI2MTAxODE1MzgwM0UzN0FDRDI5RUQ4MzZCOUQ5MDk2JjE3OTIzMzc4ODMmN2IxY2JjMDVlMGUy&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmZkYjEwYWIyODBkMWEzNDQwOTNkMGQ3NjIwYmIwNGVl&tk=tt_chain_token&video_id=v24044gl0000cu9q1bnog65jr9l4eu4g"
+          ],
+          "Width": 576
+        },
+        "QualityType": 20,
+        "VideoExtra": "{\"PktOffsetMap\":\"[{\\\"time\\\": 1, \\\"offset\\\": 83285}, {\\\"time\\\": 2, \\\"offset\\\": 92334}, {\\\"time\\\": 3, \\\"offset\\\": 103116}, {\\\"time\\\": 4, \\\"offset\\\": 188513}, {\\\"time\\\": 5, \\\"offset\\\": 215717}, {\\\"time\\\": 10, \\\"offset\\\": 400737}]\",\"mvmaf\":\"{\\\"v2.0\\\": {\\\"srv1\\\": {\\\"v1080\\\": 99.122, \\\"v960\\\": 99.99, \\\"v864\\\": 100, \\\"v720\\\": 100}, \\\"ori\\\": {\\\"v1080\\\": 87.07, \\\"v960\\\": 88.545, \\\"v864\\\": 90.859, \\\"v720\\\": 93.422}}}\",\"ufq\":\"\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"13b7b37dea7241b0b7632fa88ed11584\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":32098}"
+      },
+      {
+        "Bitrate": 200225,
+        "BitrateFPS": 30,
+        "CodecType": "h264",
+        "Format": "mp4",
+        "GearName": "lower_540_0",
+        "MVMAF": "{\"v2.0\": {\"srv1\": {\"v1080\": 97.414, \"v960\": 97.677, \"v864\": 98.935, \"v720\": 99.032}, \"ori\": {\"v1080\": 84.592, \"v960\": 87.0, \"v864\": 88.99, \"v720\": 91.902}}}",
+        "PlayAddr": {
+          "DataSize": 433013,
+          "FileCs": "c:0-15781-6a52",
+          "FileHash": "25dce783d5b991f3d18c937cdfd98c7b",
+          "Height": 1024,
+          "Uri": "v24044gl0000cu9q1bnog65jr9l4eu4g",
+          "UrlKey": "v24044gl0000cu9q1bnog65jr9l4eu4g_h264_540p_200225",
+          "UrlList": [
+            "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/ogkOkJqReItSEoNFEn6g1CDnFufGABhmWEkT3q/?a=1988&bti=ODszNWYuMDE6&&bt=195&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=NzpmN2g5MzloNTw3NTZkO0Bpang3PG05cmV0eDMzbzczNUBhMDBjNl4uNi4xL2FeNGFeYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=113715c9da3810bd1bb223ae8e1f073f&tk=tt_chain_token&btag=e000b8000",
+            "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/ogkOkJqReItSEoNFEn6g1CDnFufGABhmWEkT3q/?a=1988&bti=ODszNWYuMDE6&&bt=195&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=NzpmN2g5MzloNTw3NTZkO0Bpang3PG05cmV0eDMzbzczNUBhMDBjNl4uNi4xL2FeNGFeYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=113715c9da3810bd1bb223ae8e1f073f&tk=tt_chain_token&btag=e000b8000",
+            "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=a8da73a2d429421e9610a69ef43c37d4&is_play_url=1&item_id=7463487192195927298&line=0&ply_type=2&pt=YXdlbWUud2ViLndlYmFwaSYvYXBpL2NyZWF0b3IvaXRlbV9saXN0LyYyMDI2MTAxODE1MzgwM0UzN0FDRDI5RUQ4MzZCOUQ5MDk2JjE3OTIzMzc4ODMmN2IxY2JjMDVlMGUy&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjFkYjYzMjE4MDFkY2QyMjJmYzg3MzJhMzI0YzU4NGI3&tk=tt_chain_token&video_id=v24044gl0000cu9q1bnog65jr9l4eu4g"
+          ],
+          "Width": 576
+        },
+        "QualityType": 24,
+        "VideoExtra": "{\"PktOffsetMap\":\"[{\\\"time\\\": 1, \\\"offset\\\": 60157}, {\\\"time\\\": 2, \\\"offset\\\": 66785}, {\\\"time\\\": 3, \\\"offset\\\": 74362}, {\\\"time\\\": 4, \\\"offset\\\": 131784}, {\\\"time\\\": 5, \\\"offset\\\": 149115}, {\\\"time\\\": 10, \\\"offset\\\": 270320}]\",\"mvmaf\":\"{\\\"v2.0\\\": {\\\"srv1\\\": {\\\"v1080\\\": 97.414, \\\"v960\\\": 97.677, \\\"v864\\\": 98.935, \\\"v720\\\": 99.032}, \\\"ori\\\": {\\\"v1080\\\": 84.592, \\\"v960\\\": 87.0, \\\"v864\\\": 88.99, \\\"v720\\\": 91.902}}}\",\"ufq\":\"\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"13b7b37dea7241b0b7632fa88ed11584\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":32098}"
+      },
+      {
+        "Bitrate": 186284,
+        "BitrateFPS": 30,
+        "CodecType": "h265_hvc1",
+        "Format": "mp4",
+        "GearName": "adapt_540_1",
+        "MVMAF": "{\"v2.0\": {\"srv1\": {\"v1080\": 96.738, \"v960\": 98.361, \"v864\": 98.818, \"v720\": 99.769}, \"ori\": {\"v1080\": 84.418, \"v960\": 87.963, \"v864\": 89.699, \"v720\": 92.785}}}",
+        "PlayAddr": {
+          "DataSize": 402863,
+          "FileCs": "c:0-15958-afaf",
+          "FileHash": "68bdf7b9f53c5f136ae94865d2dcf9fa",
+          "Height": 1024,
+          "Uri": "v24044gl0000cu9q1bnog65jr9l4eu4g",
+          "UrlKey": "v24044gl0000cu9q1bnog65jr9l4eu4g_bytevc1_540p_186284",
+          "UrlList": [
+            "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/o4SSEFAFOQ1n8RMgtlEk8CI6lSuuDf7BkfonNn/?a=1988&bti=ODszNWYuMDE6&&bt=181&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=PDNpZmQ4OTo3Njo2aGUzZ0Bpang3PG05cmV0eDMzbzczNUAxYGM2NTMxNjYxNTY0NGA2YSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=c28c21b23afc340de879a3b4bd4faf29&tk=tt_chain_token&btag=e000b8000",
+            "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/o4SSEFAFOQ1n8RMgtlEk8CI6lSuuDf7BkfonNn/?a=1988&bti=ODszNWYuMDE6&&bt=181&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=PDNpZmQ4OTo3Njo2aGUzZ0Bpang3PG05cmV0eDMzbzczNUAxYGM2NTMxNjYxNTY0NGA2YSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=c28c21b23afc340de879a3b4bd4faf29&tk=tt_chain_token&btag=e000b8000",
+            "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=9dc07b7e938743949746658a9cffc049&is_play_url=1&item_id=7463487192195927298&line=0&ply_type=2&pt=YXdlbWUud2ViLndlYmFwaSYvYXBpL2NyZWF0b3IvaXRlbV9saXN0LyYyMDI2MTAxODE1MzgwM0UzN0FDRDI5RUQ4MzZCOUQ5MDk2JjE3OTIzMzc4ODMmN2IxY2JjMDVlMGUy&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmU2Mzc4NjA2NTY5ZjVkMTBjODI3NWE1MGNmY2MyNTAz&tk=tt_chain_token&video_id=v24044gl0000cu9q1bnog65jr9l4eu4g"
+          ],
+          "Width": 576
+        },
+        "QualityType": 28,
+        "VideoExtra": "{\"PktOffsetMap\":\"[{\\\"time\\\": 1, \\\"offset\\\": 55689}, {\\\"time\\\": 2, \\\"offset\\\": 60967}, {\\\"time\\\": 3, \\\"offset\\\": 69700}, {\\\"time\\\": 4, \\\"offset\\\": 114043}, {\\\"time\\\": 5, \\\"offset\\\": 133754}, {\\\"time\\\": 10, \\\"offset\\\": 266176}]\",\"mvmaf\":\"{\\\"v2.0\\\": {\\\"srv1\\\": {\\\"v1080\\\": 96.738, \\\"v960\\\": 98.361, \\\"v864\\\": 98.818, \\\"v720\\\": 99.769}, \\\"ori\\\": {\\\"v1080\\\": 84.418, \\\"v960\\\": 87.963, \\\"v864\\\": 89.699, \\\"v720\\\": 92.785}}}\",\"ufq\":\"{\\\"enh\\\":80.11,\\\"playback\\\":{\\\"ori\\\":68.674,\\\"srv1\\\":78.955},\\\"src\\\":80.11,\\\"trans\\\":68.674,\\\"version\\\":\\\"v1.2\\\"}\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"5f8366f6cf28952a4a81394fcfd5f021\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":32098}"
+      }
+    ],
+    "claInfo": {
+      "enableAutoCaption": true,
+      "hasOriginalAudio": true,
+      "noCaptionReason": 3
+    },
+    "codecType": "h264",
+    "cover": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/oMKEOGFkeEDrunAACJDgfNEtnTITR0SFkjh6oB~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=L%2FQkuHceDQ%2BrnPzdw2taq7N4Zcg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a",
+    "definition": "540p",
+    "downloadAddr": "https://v16-webapp-prime.tiktok.com/video/tos/no1a/tos-no1a-ve-0068c001-no/oIEDnkLnoSu6EBJtBuCFvOSAE6khTeGINgfFRo/?a=1988&bti=ODszNWYuMDE6&&bt=328&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=M2c7M2g1OTpnNzNnPDRmZEBpang3PG05cmV0eDMzbzczNUAzYGEvX2AxXjYxLl9hMmBjYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=8621d478f7167731c4fb9b359607cae7&tk=tt_chain_token&btag=e00078000",
+    "duration": 17,
+    "dynamicCover": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/o8IDnkBn3Su6EBJtKgCFoO0AEKkhTetINgfFRo~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=eCReA%2BKnj2yNG5Dt3Qn4226U748%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a",
+    "encodeUserTag": "",
+    "encodedType": "normal",
+    "format": "mp4",
+    "height": 1024,
+    "id": "7463487192195927298",
+    "originCover": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/ocSC6BkDnBon8QOFEe26IAQtEFSTfkggNRQhGu~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=d%2FlTUpiJyFRKeFGp4xRmRMsmprc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a",
+    "playAddr": "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/oIskkQuIDSaC6BR8gEfDAUTFOFtNknFECnSRen/?a=1988&bti=ODszNWYuMDE6&&bt=289&ft=-Csk_mH1PD12N.PQ6n-UxD.2SY3W3wv25UcAp&mime_type=video_mp4&rc=ZjpmOTg8NTc7PDk7N2Q5N0Bpang3PG05cmV0eDMzbzczNUBfY19hLjM2NjQxLy4zYjNgYSMxYmlvMmRrLjZgLS1kMTFzcw%3D%3D&expire=1792510700&l=20261018153803E37ACD29ED836B9D9096&ply_type=2&policy=2&signature=cb646016c5082697d997ab3716405ead&tk=tt_chain_token&btag=e000b8000",
+    "ratio": "540p",
+    "size": 641069,
+    "videoID": "v24044gl0000cu9q1bnog65jr9l4eu4g",
+    "videoQuality": "normal",
+    "volumeInfo": {
+      "Loudness": -32.6,
+      "Peak": 0.09772
+    },
+    "width": 576,
+    "zoomCover": {
+      "240": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/oMKEOGFkeEDrunAACJDgfNEtnTITR0SFkjh6oB~tplv-photomode-zoomcover:240:240.jpeg?dr=10375&x-expires=1792508400&x-signature=85vCQ2KUP7Z9hPV%2FNqnetNu0to4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a&ftpl=1",
+      "480": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/oMKEOGFkeEDrunAACJDgfNEtnTITR0SFkjh6oB~tplv-photomode-zoomcover:480:480.jpeg?dr=10375&x-expires=1792508400&x-signature=4MGJ880v%2BrOdBCKkIy4EJFmhsu4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a&ftpl=1",
+      "720": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/oMKEOGFkeEDrunAACJDgfNEtnTITR0SFkjh6oB~tplv-photomode-zoomcover:720:720.jpeg?dr=10375&x-expires=1792508400&x-signature=7gzjm5CrkjOGc%2F0WJE%2BSasU6QJY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a&ftpl=1",
+      "960": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-p-0037-no/oMKEOGFkeEDrunAACJDgfNEtnTITR0SFkjh6oB~tplv-photomode-zoomcover:960:960.jpeg?dr=10375&x-expires=1792508400&x-signature=EEuIVS7c2GhXYGXqVHpyzLBwk0o%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=no1a&ftpl=1"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-10-30",
+  "mounted_paths": 81,
+  "unique_objects": 75,
+  "bytes_with_aliases": 113363124,
+  "unique_bytes": 108913871,
+  "text_entries_scanned": 607,
+  "secret_pattern_findings": [],
+  "font_files_found": [],
+  "zip_crc_checks": [
+    {
+      "path": "BOJART_Audit_Coherence_Corrections_V3.zip",
+      "entries": 15,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip",
+      "entries": 25,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Growth_Kit_V2.zip",
+      "entries": 3,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip",
+      "entries": 30,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Kit_Preparation_PC.zip",
+      "entries": 5,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission01_Contexte_Sources_Tests_2026-10-28.zip",
+      "entries": 49,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission01_Contexte_Sources_Tests_2026-10-28.zip::BOJART_JARVIS_MISSION01/exemples/SAUVEGARDE_DEMONSTRATION.zip",
+      "entries": 17,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission02_Dialogue_Vocal_2026-10-28.zip",
+      "entries": 89,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission02_Dialogue_Vocal_2026-10-28.zip::BOJART_JARVIS_MISSION02/exemples/SAUVEGARDE_MISSION02.zip",
+      "entries": 17,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission02_Dialogue_Vocal_2026-10-28.zip::BOJART_JARVIS_MISSION02/heritage/SAUVEGARDE_DEMONSTRATION_M01.zip",
+      "entries": 17,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip",
+      "entries": 131,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/exemples/SAUVEGARDE_MISSION02.zip",
+      "entries": 17,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip::BOJART_JARVIS_MISSION03_STUDIO/heritage/SAUVEGARDE_DEMONSTRATION_M01.zip",
+      "entries": 17,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Jarvis_Voix_Jev_Architecture_Verifiee_2026-10-30.zip",
+      "entries": 4,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_Pack_Lancement_20-10-2026.zip",
+      "entries": 26,
+      "crc_error": null
+    },
+    {
+      "path": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip",
+      "entries": 7,
+      "crc_error": null
+    },
+    {
+      "path": "BOJ_ART_Integration_IA_Locale_Jev_REA_2026-10-20.zip",
+      "entries": 2,
+      "crc_error": null
+    }
+  ],
+  "scope": "Bounded high-confidence secret patterns and archive CRC, not an exhaustive security or privacy certification. No source bytes altered."
+}

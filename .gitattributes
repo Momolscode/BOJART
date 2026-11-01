@@ -1,2 +1,2 @@
-# Preserve source bytes and SHA-256 manifests across platforms.
+# Preserve exact recovery bytes, including on Windows.
 * -text

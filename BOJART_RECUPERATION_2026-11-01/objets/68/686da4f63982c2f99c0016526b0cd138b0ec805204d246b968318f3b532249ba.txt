@@ -1,0 +1,5 @@
+QUATRE APERCUS RECONSTRUITS - PROPOSITIONS, PAS DE PUBLICATION
+
+Les fichiers de 48 octets sont restes intacts dans le depot Atelier. Ces quatre propositions reutilisent les videos de diffusion retrouvees dans l archive TikTok. Elles respectent les points de depart de archive-index.json : six secondes, 24 i/s, largeur 320 px, H.264, sans audio. Le decodage integral et l absence de piste audio sont controles.
+
+Avant application : examiner chaque extrait, conserver une branche et sauvegarder la version existante. Remplacer uniquement les quatre chemins indiques dans CONTROLE_ET_APPLICATION.json, verifier le catalogue et la lecture dans le navigateur, puis publier une nouvelle version avec autorisation adaptee. La base de donnees et les comptes n ont pas ete modifies. Les originaux complets ne doivent pas remplacer directement des apercus silencieux.

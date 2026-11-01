@@ -1,44 +1,79 @@
-# BOJ.ART — atelier, Jarvis et direction artistique
+# BOJ.ART — récupération du 1 novembre 2026, partie 3 sur 3
 
-Installation de la mémoire pour le poste BOJ.ART : **[INSTALLER_DEMAIN.md](INSTALLER_DEMAIN.md)**. Installer avec `Installer_BOJART.cmd` ou `bash Installer_BOJART.sh`, puis lancer Jarvis. [Architecture mémoire](docs/memory/OUTILS_ET_ARCHITECTURE.md) · [Connexion MCP](docs/memory/MCP.md).
+Cette branche conserve les **1 114 fichiers originaux** de
+`BOJART_RECUPERATION_2026-11-01_PARTIE_3_SUR_3.zip`, soit **363 198 134 octets**
+décompressés, à la demande explicite du propriétaire de `Momolscode/BOJART`.
+Elle est une sauvegarde historique, séparée du code actif de Jarvis sur `main`.
+Ne pas fusionner cette branche d'archive dans le runtime.
 
-Point d’entrée consolidé : [contexte courant](context/CURRENT.md), [installation](docs/INSTALLATION.md), [passation](context/SESSION_HANDOFF.md).
+Les objets comprennent notamment **33 vidéos MP4, 3 bundles Git, 2 ZIP et 5 PDF**,
+ainsi que code, images, audio, documents et sauvegardes. Les versions anciennes,
+variantes et résultats rejetés sont conservés ; leur présence ne signifie pas
+qu'ils constituent la version actuelle ou une réalisation validée.
 
-| Dossier | Contenu | État |
-|---|---|---|
-| `jarvis/` | M07, CAO, trois vues, Studio, Growth, base métier | Code local ; matériel à qualifier |
-| `bojart_memory/` | Import, versions, recherche sourcée, sauvegarde/restauration | Implémenté ; sans LLM ni accès automatique aux chats |
-| `creative/` | Direction, exigences et statut courant | R03 est une coupe de travail |
-| `productions/`, `runs/` | Scripts de montage, timelines, sources et essais | R01–R03 et générations historisées |
-| `sites/atelier/`, `sites/studio/` | Sources V11/V3 | Copies ; publications d’origine conservées |
-| `data/catalog/` | Empreintes et provenance | 1 060 emplacements, 1016 contenus distincts |
-| `data/knowledge/` | Affirmations, sources et contradictions | Distillation révisable |
+## Télécharger et restaurer
 
-Dans `main`, les médias, bases actives, conversations brutes et archives restent externes ; le catalogue en conserve les références. **Sauvegarde explicitement demandée : [la partie 1 du ZIP de récupération est intégralement conservée sur une branche dédiée](docs/RECUPERATION_PARTIE_1_2026-11-01.md)**, avec reconstruction et empreintes vérifiées. Les parties 2 et 3 ne sont pas incluses dans cet envoi. Les autres originaux restent dans leurs sources d’origine.
-
-## Démarrer
-
-La mémoire seule fonctionne avec Python standard et SQLite FTS5 :
+Télécharger cette branche avec **Code → Download ZIP**, puis décompresser le ZIP
+GitHub. Depuis le dossier contenant ce README, lancer :
 
 ```bash
-python3 -m bojart_memory index-repo
-python3 -m bojart_memory search "Jev et voix" --project bojart.jarvis
+python3 RECONSTRUIRE.py --verify-only
+python3 RECONSTRUIRE.py --destination ../BOJART_PARTIE_3_RESTAUREE
 ```
 
-Pour le poste complet, suivre [INSTALLATION.md](docs/INSTALLATION.md), puis `Lancer_BOJART.sh` ou `Lancer_BOJART.cmd`. Le lanceur indexe les documents sélectionnés et ouvre l’application. **Mémoire du projet** retrouve les passages avec provenance et numéros de lignes.
+Sous Windows, `python` peut remplacer `python3`. Décompresser dans un chemin court
+(par exemple `C:\BOJART`) : certains chemins relatifs atteignent 194 caractères.
+Le programme utilise uniquement la bibliothèque standard de Python 3.9 ou plus récent.
+La destination doit être un dossier neuf,
+hors du dossier source. Le programme refuse toute destination déjà existante,
+vérifie les sources avant écriture, ne remplace aucun fichier et n'exécute ni ne
+décompresse le code ou les archives récupérés. Une erreur produit un bilan JSON
+avec `ok: false` et un code de sortie non nul.
 
-## Reprendre
+Le résultat attendu est : **1 114 objets, 363 198 134 octets, 6 objets reconstitués
+à partir de 23 fragments**. Les fichiers apparaissent dans
+`BOJART_PARTIE_3_RESTAUREE/BOJART_RECUPERATION_2026-11-01/objets/` avec leurs chemins
+et leurs octets d'origine. Le ZIP de transport initial n'est pas reconstruit :
+ses 1 114 fichiers le sont. Il faut environ 364 Mo disponibles pour la destination,
+en plus de la copie téléchargée.
 
-Lire `context/CURRENT.md`, vérifier les sources du domaine concerné, importer les nouveaux documents localement, puis consigner les décisions avec leurs preuves. Voir [le protocole GitHub](docs/GITHUB_WORKFLOW.md) et [les données](docs/DATA_GOVERNANCE.md).
+L'option `--source /chemin/source` permet de lire les objets dans un autre dossier ;
+le manifeste contrôlé reste celui livré à côté du programme.
 
-Les poids ASR, le micro, les moniteurs, le GPU et les imprimantes restent à qualifier sur la tour. Jev est facultatif et distant. Conversation continue, commandes physiques, publication sociale et synchronisation automatique des chats ne sont pas activées. Les sites et Jarvis partagent un dépôt, pas encore une base métier commune.
+## Stockage et intégrité
 
-Le montage courant est **Le dernier geste R03** ; son plan G2 fidèle manque. Une réussite technique ne vaut pas validation artistique ou mesure d’audience.
+**1 108 fichiers sont directement disponibles. Six gros objets sont stockés en
+23 fragments binaires ordonnés** de 8 Mio maximum, soit **1 131 fichiers physiques**.
+Cette découpe permet leur transfert par le connecteur GitHub. Elle ne change pas
+les octets restaurés. Parmi les 33 MP4, **32 sont directement lisibles et un est
+reconstitué par le programme**. Les trois bundles Git, un ZIP et un autre fichier
+binaire sont également reconstitués.
 
-Les apports des autres sessions sont conservés : [recette R03](productions/le-dernier-geste/README.md), [recherche artistes](docs/RECHERCHE_ARTISTES.md), [pistes RTX](docs/PRODUCTION_RTX.md), [restauration des archives](docs/ARCHIVE_RESTAURATION.md) et [pipeline créatif historique](docs/CREATIVE_PIPELINE_HISTORIQUE.md).
+`MANIFESTE_PARTIE_3.json` contient les tailles et les empreintes SHA-256 et SHA-1
+Git des originaux et des fragments, ainsi que leur ordre. Le programme épingle
+l'identité exacte de ce manifeste et vérifie chaque fragment puis chaque original
+assemblé. Les signatures de secrets connues restent contrôlées, y compris entre
+deux fragments ; ce contrôle de motifs ne garantit pas l'absence de toute donnée
+sensible dans un format compressé.
 
-Les archives et médias simplement référencés ne sont pas tous hébergés ici. Les documents anciens sous `docs/historical/` décrivent leur époque ; le contexte courant distingue ce qui a été récupéré depuis. Voir [les preuves de consolidation](docs/evidence/consolidation-2026-11-01.json).
+Le ZIP fourni fait **340 986 970 octets** et son SHA-256 est :
 
-Les ajouts simultanés sont intégrés : [audit et journal des générations](docs/OPERATIONS.md), `bojart_ops/`, `tests_ops/` et leur workflow GitHub. Ils complètent la mémoire documentaire ; les sauvegardes restent distinctes.
+```text
+6a23245cda664686f0d8dac40d49107032bd5f94a09a686edaa833ed39300b06
+```
 
-La [récupération étendue vérifiée](docs/RECUPERATION_VERIFIEE_2026-11-01.md) ajoute un catalogue de 3 340 contenus distincts et 6 445 emplacements, avec les liens des trois archives et leurs contrôles SHA-256. Ce catalogue ne transfère pas les médias dans GitHub.
+La comparaison au commit `ccb79a118e04c282bcd8cd1dc0fd514a9810ebeb` a identifié
+**202 blobs déjà présents à l'identique**. Git réutilise ces contenus ; leurs
+emplacements existants restent indiqués dans le manifeste. Les recouvrements
+internes aux bundles et ZIP sont conservés afin de préserver les sources.
+
+## Portée
+
+Cette branche conserve **la partie 3 uniquement**. Elle ne certifie pas un export
+intégral des conversations ni l'installation de Jarvis sur la tour de l'atelier.
+La partie 3 ne contient pas le catalogue général des noms d'origine. Les
+correspondances et la provenance sont décrites dans le
+[catalogue de récupération sur main](https://github.com/Momolscode/BOJART/tree/main/data/catalog/recovery-2026-11-01).
+La [partie 1](https://github.com/Momolscode/BOJART/tree/archive/recovery-2026-11-01-part-1)
+dispose de sa propre branche de sauvegarde. La présence d'un index décrivant les
+trois parties ne prouve pas à elle seule que leurs octets ont tous été transférés.

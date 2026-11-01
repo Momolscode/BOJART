@@ -1,0 +1,10 @@
+﻿category,check,weight_points,gate
+Identity,Face/hair/scars/clothing stable,30,Blocking if fail
+Temporal,"Hands/body motion, no morphing or flicker",25,Blocking if severe
+VFX depth,Occlusion/parallax/collision/light,20,Blocking if spatially false
+Emotion,Anticipation/contact/follow-through/story,15,Revise if weak
+Editability,"Handles, continuity, resolution",10,Revise if poor
+Audio sync,SFX transient within one frame of contact,0,Blocking for final
+Audio mastering,"Working target ~ -14 to -16 LUFS, true peak <= -1 dBTP",0,Check on multiple devices
+Rights,Clear use of character/music/source,0,Blocking if unresolved for commercial release
+Export,"1080x1920, native consistent FPS, Rec709 SDR, no black frames",0,Blocking if failed

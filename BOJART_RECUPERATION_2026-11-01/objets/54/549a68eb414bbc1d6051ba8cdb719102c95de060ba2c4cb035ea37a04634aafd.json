@@ -1,0 +1,41 @@
+{
+  "target": {
+    "package": "Avalonia",
+    "package_version": "12.1.4",
+    "assembly": "Avalonia.Base.dll",
+    "assembly_version": "12.1.4.0",
+    "sha256": "ffaf5263f964ea313ed29361c0dc86ed20fa7fda1473aefa687fde3a90622f8d",
+    "mvid": "6b8c048b-6062-4c98-bbb3-ddb072211ea2",
+    "upstream_commit": "2d79ba55fae1b1e71c69f93a668080c9029e6a31"
+  },
+  "static_evidence_ids": {
+    "members": "ev_2a0403d54f2b2689462f04115f18f2327df1a0875dcf92e368cd0448efb57504",
+    "bounce_helper": "ev_18449a2db936b4854c8aec96989e58d7aa93b90fc8d5e047c008a09d4b6c5a27",
+    "artifact_parent": "ev_5c7088d2a581805562209f16181575ed0b63b18f82e9b253eca3934b35b7ed0d"
+  },
+  "method_tokens": {
+    "Avalonia.Matrix..ctor(r8,r8,r8,r8,r8,r8)": "0x06000156",
+    "Avalonia.Matrix..ctor(r8,r8,r8,r8,r8,r8,r8,r8,r8)": "0x06000157",
+    "Avalonia.Matrix.op_Multiply(valuetype:224,valuetype:224)": "0x06000164",
+    "Avalonia.Matrix.CreateRotation(r8,valuetype:244)": "0x06000169",
+    "Avalonia.Matrix.Append(valuetype:224)": "0x06000170",
+    "Avalonia.Matrix.Prepend(valuetype:224)": "0x06000171",
+    "Avalonia.Matrix.Transform(valuetype:244)": "0x06000173",
+    "Avalonia.Animation.Easings.BounceEaseOut.Ease(r8)": "0x06002f7d",
+    "Avalonia.Animation.Easings.CubicEaseInOut.Ease(r8)": "0x06002f87",
+    "Avalonia.Animation.Easings.SineEaseInOut.Ease(r8)": "0x06002fb5",
+    "Avalonia.Animation.Utils.BounceEaseUtils.Bounce(r8)": "0x06002f72"
+  },
+  "reconstruction_status": "original Python implementation from decoded CIL, runtime corroborated on finite tests",
+  "invariant_tests_passed": 6,
+  "curve_original_comparisons": 30093,
+  "affine_original_coordinate_comparisons": 8000,
+  "all_comparisons_passed": true,
+  "maximum_absolute_error": 0.0,
+  "evidence_boundary": "Static REA did not execute or decompile C#. Explicit pythonnet oracle subsequently executed selected original methods.",
+  "remaining_unknowns": [
+    "Finite numeric samples are evidence for this artifact and these tested domains, not global equivalence.",
+    "No perspective, matrix inversion, non-finite IEEE inputs or platform-specific rendering tested.",
+    "No person tracking, artistic approval, audience measurement or retention gain established."
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "schema": "marwin.control-report/v1",
+  "tool_version": "1.0.0",
+  "snapshot_at": "2026-10-28T12:29:57+01:00",
+  "document_valid": true,
+  "errors": [],
+  "warnings": [
+    {
+      "type": "historical_slot",
+      "id": "P00",
+      "decision": "archive ; ne pas transformer en programmation"
+    },
+    {
+      "type": "historical_slot",
+      "id": "P01",
+      "decision": "archive ; ne pas transformer en programmation"
+    },
+    {
+      "type": "historical_slot",
+      "id": "P07",
+      "decision": "archive ; ne pas transformer en programmation"
+    },
+    {
+      "type": "historical_slot",
+      "id": "P02",
+      "decision": "archive ; ne pas transformer en programmation"
+    },
+    {
+      "type": "historical_slot",
+      "id": "P03",
+      "decision": "archive ; ne pas transformer en programmation"
+    },
+    {
+      "type": "historical_slot",
+      "id": "P04",
+      "decision": "archive ; ne pas transformer en programmation"
+    },
+    {
+      "type": "historical_slot",
+      "id": "P05",
+      "decision": "archive ; ne pas transformer en programmation"
+    },
+    {
+      "type": "historical_slot",
+      "id": "P06",
+      "decision": "archive ; ne pas transformer en programmation"
+    }
+  ],
+  "counts": {
+    "references": 33,
+    "reference_kinds": {
+      "video": 25,
+      "carousel_excerpt": 1,
+      "documentary": 7
+    },
+    "scenes": 4,
+    "assets": 7
+  },
+  "gates": [
+    {
+      "id": "PHOTO-FAMILLE",
+      "title": "La photo de famille",
+      "develop": [],
+      "render": [
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé candidat : capacité pour ces plans non testée"
+      ],
+      "publish": [
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé candidat : capacité pour ces plans non testée",
+        "film identifié par empreinte manquant",
+        "artistic: accord attaché à ce fichier manquant",
+        "likeness: accord attaché à ce fichier manquant",
+        "son et lecture mobile non contrôlés",
+        "rights_checked: non établi",
+        "account_ready: non établi",
+        "publication_authorized: non établi"
+      ]
+    },
+    {
+      "id": "UN-FIL",
+      "title": "À un fil",
+      "develop": [
+        "piste en réserve, hors développement actif"
+      ],
+      "render": [
+        "piste en réserve, hors développement actif",
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé par plan manquant"
+      ],
+      "publish": [
+        "piste en réserve, hors développement actif",
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé par plan manquant",
+        "film identifié par empreinte manquant",
+        "artistic: accord attaché à ce fichier manquant",
+        "likeness: accord attaché à ce fichier manquant",
+        "son et lecture mobile non contrôlés",
+        "rights_checked: non établi",
+        "account_ready: non établi",
+        "publication_authorized: non établi"
+      ]
+    },
+    {
+      "id": "COOKIES",
+      "title": "Les cookies qui me suivent",
+      "develop": [
+        "direction écartée"
+      ],
+      "render": [
+        "direction écartée",
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé par plan manquant"
+      ],
+      "publish": [
+        "direction écartée",
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé par plan manquant",
+        "artistic: accord attaché à ce fichier manquant",
+        "likeness: accord attaché à ce fichier manquant",
+        "son et lecture mobile non contrôlés",
+        "rights_checked: non établi",
+        "account_ready: non établi",
+        "publication_authorized: non établi"
+      ]
+    },
+    {
+      "id": "BANC",
+      "title": "La pause me fuit — essai Banc",
+      "develop": [
+        "direction écartée"
+      ],
+      "render": [
+        "direction écartée",
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé par plan manquant"
+      ],
+      "publish": [
+        "direction écartée",
+        "vidéo différée par Morgan",
+        "goal_visible: reste à démontrer",
+        "causal_action_visible: reste à démontrer",
+        "resolution_visible: reste à démontrer",
+        "spatial_continuity: reste à démontrer",
+        "procédé par plan manquant",
+        "artistic: accord attaché à ce fichier manquant",
+        "likeness: accord attaché à ce fichier manquant",
+        "son et lecture mobile non contrôlés",
+        "rights_checked: non établi",
+        "account_ready: non établi",
+        "publication_authorized: non établi"
+      ]
+    },
+    {
+      "request": "PHOTO-FAMILLE-VIDEO-01",
+      "submission": [
+        "vidéo différée",
+        "plan de dépense non autorisé",
+        "devis absent, invalide ou au-dessus du plafond"
+      ]
+    }
+  ],
+  "scope": "Cohérence documentaire uniquement ; aucune qualité, audience ou autorisation créée."
+}

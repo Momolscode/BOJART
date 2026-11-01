@@ -1,0 +1,14 @@
+{
+  "file": "/workspace/scratch/09850b76a594/bojart_reprise01/BOJART_INSERT_PEINTURE_BRUT.mp4",
+  "sha256": "de21ed8d12f717ee308a3fc60f2e2f16c1c741368f4277d8802029ee1ac91201",
+  "duration_seconds": 4.041667,
+  "width": 720,
+  "height": 1280,
+  "fps": "24/1",
+  "video_codec": "h264",
+  "audio_streams": 0,
+  "decode_ok": true,
+  "decode_error": "",
+  "artistic_review": "À effectuer visuellement ; le script ne valide aucune ressemblance, narration ou qualité sonore.",
+  "contact": "/workspace/scratch/09850b76a594/bojart_reprise01/INSERT_CONTACT.jpg"
+}

@@ -1,0 +1,43 @@
+test_cancel_only_before_dispatch (test_commandes.OrchestrationTests.test_cancel_only_before_dispatch) ... ok
+test_cap_includes_other_reserved_commands (test_commandes.OrchestrationTests.test_cap_includes_other_reserved_commands) ... ok
+test_completion_requires_proof (test_commandes.OrchestrationTests.test_completion_requires_proof) ... ok
+test_duplicate_uses_same_command_and_one_reservation (test_commandes.OrchestrationTests.test_duplicate_uses_same_command_and_one_reservation) ... ok
+test_inflight_is_project_wide_across_plans (test_commandes.OrchestrationTests.test_inflight_is_project_wide_across_plans) ... ok
+test_invalid_money_never_enters_journal (test_commandes.OrchestrationTests.test_invalid_money_never_enters_journal) ... ok
+test_job_identity_and_revision_checked (test_commandes.OrchestrationTests.test_job_identity_and_revision_checked) ... ok
+test_policy_cannot_silently_raise_cap (test_commandes.OrchestrationTests.test_policy_cannot_silently_raise_cap) ... ok
+test_project_scope_and_plan_separated (test_commandes.OrchestrationTests.test_project_scope_and_plan_separated) ... ok
+test_real_overrun_recorded_and_blocks_future_spend (test_commandes.OrchestrationTests.test_real_overrun_recorded_and_blocks_future_spend) ... ok
+test_reopen_after_crash_keeps_submitting_and_blocks_retry (test_commandes.OrchestrationTests.test_reopen_after_crash_keeps_submitting_and_blocks_retry) ... ok
+test_reused_key_changed_payload_rejected (test_commandes.OrchestrationTests.test_reused_key_changed_payload_rejected) ... ok
+test_terminal_unknown_cost_keeps_reservation (test_commandes.OrchestrationTests.test_terminal_unknown_cost_keeps_reservation) ... ok
+test_two_workers_one_dispatch_wins (test_commandes.OrchestrationTests.test_two_workers_one_dispatch_wins) ... ok
+test_unauthorized_action_refused (test_commandes.OrchestrationTests.test_unauthorized_action_refused) ... ok
+test_unknown_after_dispatch_cannot_be_resubmitted (test_commandes.OrchestrationTests.test_unknown_after_dispatch_cannot_be_resubmitted) ... ok
+test_unknown_can_be_reconciled_with_existing_job (test_commandes.OrchestrationTests.test_unknown_can_be_reconciled_with_existing_job) ... ok
+test_unum_projection_exact_shape_and_unknown_preserved (test_commandes.OrchestrationTests.test_unum_projection_exact_shape_and_unknown_preserved) ... ok
+test_changed_research_updates_only_its_revision (test_passations.HandoffIntegrationTests.test_changed_research_updates_only_its_revision) ... ok
+test_different_active_tests_stop_before_any_write (test_passations.HandoffIntegrationTests.test_different_active_tests_stop_before_any_write) ... ok
+test_repeated_documents_after_restart_are_not_new_handoffs (test_passations.HandoffIntegrationTests.test_repeated_documents_after_restart_are_not_new_handoffs) ... ok
+test_written_handoff_and_report_projection_keep_distinct_origins (test_passations.HandoffIntegrationTests.test_written_handoff_and_report_projection_keep_distinct_origins) ... ok
+test_brief_budget_reports_omissions (test_pilote.ContinuityTests.test_brief_budget_reports_omissions) ... ok
+test_critical_memory_is_never_silently_cut (test_pilote.ContinuityTests.test_critical_memory_is_never_silently_cut) ... ok
+test_duplicate_has_one_effect (test_pilote.ContinuityTests.test_duplicate_has_one_effect) ... ok
+test_expired_fact_is_flagged_and_not_loaded (test_pilote.ContinuityTests.test_expired_fact_is_flagged_and_not_loaded) ... ok
+test_handoff_requires_a_next_action (test_pilote.ContinuityTests.test_handoff_requires_a_next_action) ... ok
+test_hypotheses_do_not_replace_facts (test_pilote.ContinuityTests.test_hypotheses_do_not_replace_facts) ... ok
+test_hypothesis_promotion_requires_reason_and_source (test_pilote.ContinuityTests.test_hypothesis_promotion_requires_reason_and_source) ... ok
+test_pont_done_and_unproduced_conflict (test_pilote.ContinuityTests.test_pont_done_and_unproduced_conflict) ... ok
+test_projects_are_isolated (test_pilote.ContinuityTests.test_projects_are_isolated) ... ok
+test_rejected_update_leaves_no_event (test_pilote.ContinuityTests.test_rejected_update_leaves_no_event) ... ok
+test_replay_reconstructs_current_state (test_pilote.ContinuityTests.test_replay_reconstructs_current_state) ... ok
+test_restart_keeps_state (test_pilote.ContinuityTests.test_restart_keeps_state) ... ok
+test_reused_event_id_different_content_is_rejected (test_pilote.ContinuityTests.test_reused_event_id_different_content_is_rejected) ... ok
+test_stale_write_preserves_newer_change (test_pilote.ContinuityTests.test_stale_write_preserves_newer_change) ... ok
+test_superseded_claim_keeps_history_and_clears_conflict (test_pilote.ContinuityTests.test_superseded_claim_keeps_history_and_clears_conflict) ... ok
+test_two_writers_one_revision_one_winner (test_pilote.ContinuityTests.test_two_writers_one_revision_one_winner) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 0.363s
+
+OK

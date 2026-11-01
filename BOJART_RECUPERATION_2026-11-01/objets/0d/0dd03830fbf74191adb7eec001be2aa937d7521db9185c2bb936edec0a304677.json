@@ -1,0 +1,17 @@
+{
+  "format": "hypit.cli-status@1",
+  "build": {
+    "id": "bld_20261028T102618765Z_AC7B4E5E06",
+    "targets": [
+      "final.video"
+    ],
+    "work": {
+      "state": "done",
+      "outcome": "complete"
+    },
+    "result": {
+      "state": "complete",
+      "outputCount": 9
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "bojart.launch.plan.v2",
+  "date": "2026-10-20",
+  "status": "preparation_not_installed",
+  "budget_eur": {
+    "minimum": 3000,
+    "maximum": 5000,
+    "reuse_first": true,
+    "market_quotation": false
+  },
+  "target": {
+    "os": null,
+    "cpu": null,
+    "gpu": null,
+    "vram_gib": null,
+    "ram_gib": null,
+    "pc_audited": false
+  },
+  "privacy": {
+    "local_default": true,
+    "automatic_cloud_fallback": false,
+    "private_media_uploads": false,
+    "raw_microphone_recording_persisted_by_default": false
+  },
+  "ai": {
+    "general_model": null,
+    "decision_backend": "provider_adapter_after_tests",
+    "candidate_endpoint": "http://127.0.0.1:11434/v1/systemone",
+    "decision_candidates": [
+      "Nimble (exact artifact and license to verify)",
+      "Tev1 (experimental; exact artifact and license to verify)"
+    ],
+    "jev_remote_enabled": false,
+    "voice_installed": false,
+    "model_artifact_hashes": []
+  },
+  "execution": {
+    "physical_commands_enabled": false,
+    "requires_project_revision_and_asset_hash": true,
+    "requires_qualified_profile": true,
+    "unknown_state_blocks_new_dispatch": true,
+    "real_machine_gateway_implemented_in_this_pack": false
+  },
+  "resources": [
+    {
+      "id": "P01",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": false
+    },
+    {
+      "id": "P02",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": false
+    },
+    {
+      "id": "P03",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": false
+    },
+    {
+      "id": "P04",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": false
+    },
+    {
+      "id": "P05",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": false
+    },
+    {
+      "id": "P06",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": false
+    },
+    {
+      "id": "P07",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": false
+    },
+    {
+      "id": "P08",
+      "process": null,
+      "model": null,
+      "firmware": null,
+      "network_interface": null,
+      "qualified": false,
+      "optional": true
+    }
+  ],
+  "measurements": {
+    "simulator_tests": 22,
+    "viewer_checks": 7,
+    "target_pc_benchmarks": 0,
+    "real_print_tests": 0,
+    "real_provider_tests": 0
+  },
+  "boundaries": [
+    "Not a production-ready installation package",
+    "Not a re-execution of V11 application tests",
+    "No website changes",
+    "No new footage recorded"
+  ]
+}

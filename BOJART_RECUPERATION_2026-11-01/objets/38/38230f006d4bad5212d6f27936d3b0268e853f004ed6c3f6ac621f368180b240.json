@@ -1,0 +1,21 @@
+{
+  "schema": "bojart.github-destination.v1",
+  "recorded_at": "2026-10-30T22:32:03.439446+00:00",
+  "user_selected_owner": "Momolscode",
+  "repository_full_name": "Momolscode/bojart-jarvis",
+  "visibility": "private",
+  "github_publication_status": "not_published",
+  "remote_verification": {
+    "get_repo": "404_not_found_or_not_accessible",
+    "remote_desktop": "offline"
+  },
+  "limitations": [
+    "Connector offers changes to files and branches but no repository-creation or release-asset upload action.",
+    "No authenticated GitHub CLI session is available in this working runtime."
+  ],
+  "no_force_push": true,
+  "no_overwrite_assets": true,
+  "source_commit": "b2c46db5b7408ddeb537ec096ce0583e1536adc4",
+  "source_bundle_sha256": "270edf98e7f7d2122513fdca4e8744f9747c7f1c75b87db77117eb6c8e7cc1a1",
+  "original_vault_sha256": "b6466d50bd779cbfe161d7a35ecd784c3a215dedc877180c8e6db0e7b5d4451e"
+}

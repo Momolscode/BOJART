@@ -1,0 +1,24 @@
+{
+  "pilot_source_sha256": "efbdb081b2ee241f7eea80c505d86f2b2bc9293032b4494f4c9c5f35d20725b0",
+  "first_receipt": [
+    {
+      "status": "applied",
+      "revision": 1,
+      "event_id": "marwin-artistic-audit-20261028-v1"
+    }
+  ],
+  "repeat_receipt": [
+    {
+      "status": "duplicate",
+      "event_id": "marwin-artistic-audit-20261028-v1"
+    }
+  ],
+  "event_count_after_reopen": 1,
+  "state_preserved": true,
+  "before_sha256": "eec698e3665ff30fe802b64992e03b48c784e4c0401b77be4cc7bba34b781a0e",
+  "after_sha256": "eec698e3665ff30fe802b64992e03b48c784e4c0401b77be4cc7bba34b781a0e",
+  "scope": "Base locale de test ; processus fermé et rouvert à chaque commande. Pas de conversation ou outil connecté.",
+  "pilot_library_file_id": "libfile_a4439b3e46948191b5ab081ab6cc5002",
+  "pilot_library_version": 2,
+  "pilot_package_version": "0.2"
+}

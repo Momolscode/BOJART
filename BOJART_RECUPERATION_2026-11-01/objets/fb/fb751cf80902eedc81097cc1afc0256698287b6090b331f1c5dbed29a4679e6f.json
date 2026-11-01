@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "test HTTP avec accusés simulés, sans navigateur réel",
+  "real_cad_model": true,
+  "sha256_glb_verified": true,
+  "roles": {
+    "pilotage": {
+      "action": "show_sources",
+      "ack": "rendered"
+    },
+    "atelier": {
+      "action": "show_planning_demo",
+      "ack": "rendered"
+    },
+    "creation": {
+      "action": "show_model",
+      "ack": "rendered"
+    }
+  },
+  "launch_ready": false,
+  "physical_commands": false
+}

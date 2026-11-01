@@ -1,0 +1,14 @@
+{
+  "file": "/workspace/scratch/09850b76a594/bojart_reprise01/BOJART_REPRISE01_L_ART_PREND_CORPS.mp4",
+  "sha256": "a02707ad9a8922b6a52eb473cee288768d077aac73b1c02dac1968e06b6b7be4",
+  "duration_seconds": 8.416667,
+  "width": 720,
+  "height": 1280,
+  "fps": "24/1",
+  "video_codec": "h264",
+  "audio_streams": 1,
+  "decode_ok": true,
+  "decode_error": "",
+  "artistic_review": "À effectuer visuellement ; le script ne valide aucune ressemblance, narration ou qualité sonore.",
+  "contact": "/workspace/scratch/09850b76a594/bojart_reprise01/EDIT_CONTACT.jpg"
+}

@@ -1,0 +1,22 @@
+BOJ.ART — BREAK THE FRAME V6 / GENERATION BRIEF
+
+SOURCE PRIORITY: real BOJ.ART statue, NOT the generated storyboard.
+LOCK: spiky gray-black silver-highlighted hair, angular face, red eyes, painted scars, realistic skin-tone sculpture, shiny burgundy boxing shorts, white ribbed waistband, light gray wrist wraps, distinctive gray sculpted wave pedestal.
+NEGATIVE: no beard, no buzz cut, no black pants, no black shorts, no new face, no stone-skin transformation, no character swapping, no extra limbs, no random text.
+
+PLAN 02 / AWAKEN (2s):
+Starting from a real close-up photo of the hand-painted BOJ.ART sculpture, introduce only a subtle eye movement and breath, while retaining every physical facial and costume detail. Single smooth dolly-in, no scene change.
+
+PLAN 03 / BREAK (4s):
+Same hero, one coherent movement: fist moves toward camera, contacts transparent glass, radial cracks propagate FROM THE IMPACT POINT, shards fly outward. Keep face, hair and maroon shorts unchanged. VFX cracks can be added separately in compositing.
+
+PLAN 04 / ARENA (3s):
+Same hero enters a single established underground arena, landing with grounded footwork. The opponent is already present. Camera moves smoothly in the same direction as the previous shot. No character or costume changes.
+
+PLAN 05 / FIGHT (7s total, in 2-3 shots):
+One readable grounded martial-arts exchange per generation: feint -> slip -> one clean counter with visible contact and recoil. Keep same hero and same opponent. No energy beams, no instant teleportation.
+
+PLAN 06 / RETURN (6s):
+After the impact, motion decelerates; the same hero freezes in a pose that matches the real BOJ.ART sculpture. Match cut to original source footage showing the true burgundy shorts and distinctive gray pedestal. No generic new statue.
+
+REVIEW GATE: compare each output frame to orig_10.2.png and orig_8.5.png. Reject if face, hair, scars, shorts, wraps, or pedestal differ. Do not publish before a manual quality check and appropriate rights clearance.

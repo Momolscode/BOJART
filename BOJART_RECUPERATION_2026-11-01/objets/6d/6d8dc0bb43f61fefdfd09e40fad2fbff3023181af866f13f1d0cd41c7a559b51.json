@@ -1,0 +1,9 @@
+{
+  "observed_on": "2026-10-25",
+  "command": "python3 -m unittest discover -s tests -v",
+  "tests_run": 20,
+  "failures": 0,
+  "errors": 0,
+  "observed_exit_code": 0,
+  "scope": "16 cas du journal et 4 cas de l’adaptateur documentaire ; pas un benchmark de modèle."
+}

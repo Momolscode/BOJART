@@ -1,4 +1,0 @@
-# Versions effectivement utilisées pour cet essai sous Linux / CPython 3.13.
-# La disponibilité des roues Windows et dépendances transitives reste à vérifier sur la tour.
-cadquery==2.8.0
-trimesh==4.11.1

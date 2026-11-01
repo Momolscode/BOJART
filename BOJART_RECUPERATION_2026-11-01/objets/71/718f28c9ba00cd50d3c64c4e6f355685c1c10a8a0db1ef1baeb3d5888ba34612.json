@@ -1,0 +1,182 @@
+{
+  "kind": "CIL-derived reconstruction, not recovered C# source",
+  "artifact_sha256": "693ce5d8c68645e64745a3001de52019e20108b7d1a21704404228ea3dea79f7",
+  "mvid": "709a502f-0363-452c-9aba-e20ff9d9567c",
+  "rea_evidence_id": "ev_99e36a06eec59b6af6c1bb6283bc8c126de8ad03d5f23d93ad9fb11fc27d1235",
+  "metadata_coverage": {
+    "state": "complete",
+    "issues": []
+  },
+  "selected_type": "NAudio.Dsp.BiQuadFilter",
+  "methods": [
+    {
+      "name": "Transform",
+      "token": "0x060008e8",
+      "signature": {
+        "raw_length": 4,
+        "raw_sha256": "ae8b60a671edc009a56dfc7635d9b0d1961b9880ef7f2ca04e31e17143b26c31",
+        "resolved_sha256": "ae8b60a671edc009a56dfc7635d9b0d1961b9880ef7f2ca04e31e17143b26c31",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "r4",
+        "parameter_types": [
+          "r4"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "841f68f6142d830da393b7a10504ee33f91499f98b2d4c09b5cac7aeda25d65e",
+      "decoded_instruction_count": 52,
+      "truncated_instructions": 0
+    },
+    {
+      "name": "SetCoefficients",
+      "token": "0x060008eb",
+      "signature": {
+        "raw_length": 9,
+        "raw_sha256": "7ed070219ffc5d5c5641fd9f0e5eb483a56613449b02df7ed6507826c7ea7d3f",
+        "resolved_sha256": "7ed070219ffc5d5c5641fd9f0e5eb483a56613449b02df7ed6507826c7ea7d3f",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 6,
+        "return_type": "void",
+        "parameter_types": [
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "cd94f50efaacae2a9303b25eb7319757f0c093be6ef2bc81e43f30e619cbb6ae",
+      "decoded_instruction_count": 42,
+      "truncated_instructions": 0
+    },
+    {
+      "name": "ValidateParameters",
+      "token": "0x060008ec",
+      "signature": {
+        "raw_length": 8,
+        "raw_sha256": "0cd74657a6044b0f255481c2b9b65e9cfecc4bab799b689b68bc0e65531f45b3",
+        "resolved_sha256": "0cd74657a6044b0f255481c2b9b65e9cfecc4bab799b689b68bc0e65531f45b3",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default",
+        "generic_parameter_count": null,
+        "parameter_count": 5,
+        "return_type": "void",
+        "parameter_types": [
+          "r4",
+          "r4",
+          "string",
+          "r4",
+          "string"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "ef579179657007f22ca11fdeb2a9d5f9aee2e670eaa1fb335dade852f84197b3",
+      "decoded_instruction_count": 45,
+      "truncated_instructions": 0
+    },
+    {
+      "name": "SetLowPassFilter",
+      "token": "0x060008ed",
+      "signature": {
+        "raw_length": 6,
+        "raw_sha256": "3ea6e2b1d19da00dc51ff5558f2de6e7003c4e45b01c0cb52fdb52152690814e",
+        "resolved_sha256": "3ea6e2b1d19da00dc51ff5558f2de6e7003c4e45b01c0cb52fdb52152690814e",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 3,
+        "return_type": "void",
+        "parameter_types": [
+          "r4",
+          "r4",
+          "r4"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "601411a15d7c0449f8c8040da34fa77ba58f8f5fdfa126eb697d8f51d3c151e3",
+      "decoded_instruction_count": 60,
+      "truncated_instructions": 0
+    },
+    {
+      "name": "UpdateLowPassFilter",
+      "token": "0x060008ee",
+      "signature": {
+        "raw_length": 6,
+        "raw_sha256": "3ea6e2b1d19da00dc51ff5558f2de6e7003c4e45b01c0cb52fdb52152690814e",
+        "resolved_sha256": "3ea6e2b1d19da00dc51ff5558f2de6e7003c4e45b01c0cb52fdb52152690814e",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 3,
+        "return_type": "void",
+        "parameter_types": [
+          "r4",
+          "r4",
+          "r4"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "9666b794e29958fe5370aef39afc23d479bdf97becae3e8d9a4d81c56fa31436",
+      "decoded_instruction_count": 77,
+      "truncated_instructions": 0
+    },
+    {
+      "name": "LowPassFilter",
+      "token": "0x060008f5",
+      "signature": {
+        "raw_length": 8,
+        "raw_sha256": "50e5cf23795510a4a1725aa0bfa08c047a41f21ce21800d645268afac23c1888",
+        "resolved_sha256": "6bdf2d1e7bb977a4b927d782c4c1951e4cecfa6b7735f93af421a54a4bccc41e",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default",
+        "generic_parameter_count": null,
+        "parameter_count": 3,
+        "return_type": "class:1008",
+        "parameter_types": [
+          "r4",
+          "r4",
+          "r4"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "il_sha256": "2848bce3a2c9a078b4ced8a57fdaa5270703f16f291359704e6dfd1ed1d62790",
+      "decoded_instruction_count": 7,
+      "truncated_instructions": 0
+    }
+  ],
+  "observations": [
+    "Coefficients a0..a4 are r8 (double); four histories x1/x2/y1/y2 are r4 (float32).",
+    "SetLowPassFilter computes sin/cos coefficients and calls SetCoefficients.",
+    "SetCoefficients normalizes b0,b1,b2,a1,a2 by a0, then clears four histories.",
+    "UpdateLowPassFilter writes the normalized coefficients directly, preserving histories.",
+    "Scalar Transform promotes sample and history to double, sums products sequentially, rounds final output to float32, advances histories."
+  ],
+  "wrapper_choices": [
+    "Require finite inputs and useful audio parameter ranges. This is stricter than the binary validation for NaN/unordered comparisons.",
+    "One separate filter state per channel; no implicit processing of interleaved stereo with shared state."
+  ],
+  "limits": [
+    "Canonical REA inspection did not execute, load or decompile the assembly.",
+    "Selected type only; not all NAudio, device backends, codecs or sample providers.",
+    "A runtime oracle is separate from REA and finite-domain comparisons do not establish global equivalence."
+  ]
+}

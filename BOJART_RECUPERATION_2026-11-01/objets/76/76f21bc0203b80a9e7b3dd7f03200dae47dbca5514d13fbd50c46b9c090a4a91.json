@@ -1,0 +1,50 @@
+{
+  "kind": "numerical_bench_visualization_not_finished_narrative_film",
+  "frames": 180,
+  "fps": 30,
+  "duration_s": 6,
+  "size": [
+    720,
+    1280
+  ],
+  "uses_reconstructed_motion_and_affine": true,
+  "audio_source": "original synthetic test tone, lowpass output repeated twice",
+  "actor_or_identity_generated": false,
+  "audience_test": false,
+  "human_listening": false,
+  "static_waveform_display": "240 PCM samples at 0.7 seconds; static 5 ms comparison, no playback cursor",
+  "sampled_visual_states": [
+    {
+      "frame": 0,
+      "progress": 0.0,
+      "pivot": [
+        260.0,
+        694.0
+      ]
+    },
+    {
+      "frame": 59,
+      "progress": 0.329608938547486,
+      "pivot": [
+        288.64751325074246,
+        694.0
+      ]
+    },
+    {
+      "frame": 119,
+      "progress": 0.664804469273743,
+      "pivot": [
+        429.8710050094685,
+        694.0
+      ]
+    },
+    {
+      "frame": 179,
+      "progress": 1.0,
+      "pivot": [
+        460.0,
+        694.0
+      ]
+    }
+  ]
+}

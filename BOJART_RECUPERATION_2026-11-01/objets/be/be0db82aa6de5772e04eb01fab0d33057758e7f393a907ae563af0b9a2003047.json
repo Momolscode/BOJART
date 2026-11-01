@@ -1,0 +1,11 @@
+{
+  "source": "wheresryan22/anatomy",
+  "commit": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+  "new_design": "établi des preuves",
+  "solid_parts": 52,
+  "fasteners": 8,
+  "width": 900,
+  "height": 590,
+  "geometry": "slabs in one shared projection; no pipe or lathe geometry",
+  "scope": "illustration explicative originale, pas machine installée"
+}

@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-31",
+  "commit": "7eb5022d38b3af71438290b9054fe141c777253b",
+  "files": [
+    {
+      "path": "APERCU_SEO_PUBLICATIONS.html",
+      "bytes": 28265,
+      "sha256": "dbe2ea6a13967f589f0cb96d9dd0e6b3d85bb8dea41fd46bf6159a550f74e693"
+    },
+    {
+      "path": "BOJART_SEO_Publication_Apercu.png",
+      "bytes": 397704,
+      "sha256": "e7f513773270ee3bc434a2d0ecc56806ff32a15b19575e444c890451ee8494bd"
+    },
+    {
+      "path": "BOJART_SEO_Publication_Mobile.png",
+      "bytes": 276199,
+      "sha256": "d72dc77ce20be82e633337f5ae6c41a388daf2d8d0f8c88b6832a5bf9143261f"
+    },
+    {
+      "path": "EXEMPLE_BROUILLON_VERIFIE.json",
+      "bytes": 3809,
+      "sha256": "d627af8d640af1ed8fe993d313edf02538a78fc5ed3624d0b47d640c7ed7334d"
+    },
+    {
+      "path": "LIRE_AVANT_INTEGRATION.md",
+      "bytes": 3004,
+      "sha256": "c03b64ef7c2451dfd908739f221b2540259e55a7bf5d01a78926c1d0d6a23880"
+    },
+    {
+      "path": "RECHERCHE_SEO_ET_PUBLICATION.md",
+      "bytes": 16586,
+      "sha256": "1f05715b85cfedcbacce79a32b4cb15f16965a933d55b9a59d61d0e239d5b94a"
+    },
+    {
+      "path": "TESTS_BROWSER_LOCAL.json",
+      "bytes": 500,
+      "sha256": "477970e74a002ed85b8f532f507a29c81c78a6b965da942c58ef73b3524db261"
+    },
+    {
+      "path": "TESTS_INTERFACE.json",
+      "bytes": 859,
+      "sha256": "6c227ec890b1793e33ed577914f30380f68022261603370b122ce96ef4c6c693"
+    },
+    {
+      "path": "VERIFICATION_DEPOT.json",
+      "bytes": 137,
+      "sha256": "cd6944b7bce923bc30829d11c56ec913a281e9f124ad17aef4a408b48bb23389"
+    },
+    {
+      "path": "VERIFICATION_RESTAURATION.json",
+      "bytes": 366,
+      "sha256": "b623943ea805acda028a7021595e9ace33c6ffbb4a875936070f6fba9b0dd3b9"
+    },
+    {
+      "path": "connaissances_et_sources/AUDIT_SKILLS.md",
+      "bytes": 1515,
+      "sha256": "f41ec8042032da92ea456af07dbf1e5be4297a0c234dabad665e6d9bd37e8f5c"
+    },
+    {
+      "path": "connaissances_et_sources/BRAND_CONTEXT.json",
+      "bytes": 2539,
+      "sha256": "cd99903d3afdf0bb82b00c212840df2cd545bc7d45e15ed6e174854ac8a11262"
+    },
+    {
+      "path": "connaissances_et_sources/PLATFORM_RULES.json",
+      "bytes": 944,
+      "sha256": "f655fa720a7918d2a087bdf82224d5d7f820ffb2ff5cfeb5ed650aa60dbf947a"
+    },
+    {
+      "path": "connaissances_et_sources/PUBLISHING_CONTRACT.md",
+      "bytes": 2706,
+      "sha256": "2baf2c120776d58a7a69d9d1a42687842be55f7b2317c97cb70ea61d70ced42c"
+    },
+    {
+      "path": "connaissances_et_sources/SKILLS_INSTALLED.json",
+      "bytes": 2791,
+      "sha256": "34ce7704ff4db869d77791c17c5cda77023c01e53126bb97c41c81fa9e42ab7c"
+    },
+    {
+      "path": "connaissances_et_sources/SOURCES.json",
+      "bytes": 7288,
+      "sha256": "14c2b62984e0a3458b5189b849a6a8950ded82031c3454aa7d4ae0deebbb0529"
+    },
+    {
+      "path": "connaissances_et_sources/TOPICS.json",
+      "bytes": 2876,
+      "sha256": "51b889c5f9ab69553d502bf771ab0f5dec59b997e01a069499ac58fb50270f3a"
+    },
+    {
+      "path": "integration/BOJART_GROWTH_INCREMENTAL.bundle",
+      "bytes": 77732,
+      "sha256": "d193ad96f53e75b63a539fdee183d6339c79bac0c026fcec0143eb431579557c"
+    },
+    {
+      "path": "integration/CUMUL_DEPUIS_PRESERVATION.patch",
+      "bytes": 285144,
+      "sha256": "035251151bfefa93264ce41413d0eef7fa6f09e66a9cca64915d4da06ada8fc8"
+    },
+    {
+      "path": "integration/SEO_DELTA_APRES_ENRICHISSEMENT.patch",
+      "bytes": 185474,
+      "sha256": "785874e35fea46f2cca2e1bff4c966eed719b2a5ab5c40eed14a4ed4fb06ab02"
+    },
+    {
+      "path": "preuves/EXEMPLE_BROUILLON_VERIFIE.json",
+      "bytes": 3809,
+      "sha256": "d627af8d640af1ed8fe993d313edf02538a78fc5ed3624d0b47d640c7ed7334d"
+    },
+    {
+      "path": "preuves/GROWTH_TESTS.txt",
+      "bytes": 4202,
+      "sha256": "0494ddba7a082ba3ab9b4ea4c125c6d9583a7983ca309e27ae0cf65036ea2970"
+    },
+    {
+      "path": "preuves/METIER_TESTS.txt",
+      "bytes": 3559,
+      "sha256": "b1fe840ef1f07c03a33e8a3886cbe4e066e6ade85389a4bc28e11ff3b0fee195"
+    },
+    {
+      "path": "preuves/PLANNING_TESTS.txt",
+      "bytes": 1913,
+      "sha256": "c9cb1ee6ab9eb5b46ecc34593c7930e7d0241a5d1914e4e28d43bd67f5895758"
+    },
+    {
+      "path": "preuves/PYTEST_RECHECK.txt",
+      "bytes": 355,
+      "sha256": "ed001dc1fd469646f473e79fe0281b549c3d162a220730cd3f077840334c4217"
+    },
+    {
+      "path": "preuves/TESTS_BROWSER_LOCAL.json",
+      "bytes": 500,
+      "sha256": "477970e74a002ed85b8f532f507a29c81c78a6b965da942c58ef73b3524db261"
+    },
+    {
+      "path": "preuves/TESTS_INTERFACE.json",
+      "bytes": 859,
+      "sha256": "6c227ec890b1793e33ed577914f30380f68022261603370b122ce96ef4c6c693"
+    },
+    {
+      "path": "preuves/TESTS_SUMMARY.json",
+      "bytes": 530,
+      "sha256": "4c330419ec73e25b1763dc083f09421cfcc915cbcd2a4bc648dfb24cb95ef89a"
+    },
+    {
+      "path": "preuves/UNITTEST_FINAL.txt",
+      "bytes": 11075,
+      "sha256": "3fe3ce570577791217effb785f63fb886f59b808dd05bee385b0a8afc65dc87c"
+    },
+    {
+      "path": "preuves/recipe_browser_preview.py",
+      "bytes": 3752,
+      "sha256": "f33412b734a472b31fcc2ccdcb9ca2b1d9a7335fb17fd9707892611c7965a530"
+    },
+    {
+      "path": "skills_bojart/bojart-creative-packaging/SKILL.md",
+      "bytes": 2558,
+      "sha256": "cedf004513ca254c391352fc3d2982c7496d44e8119d1bc95c4ea7049039acf7"
+    },
+    {
+      "path": "skills_bojart/bojart-growth-measurement/SKILL.md",
+      "bytes": 2618,
+      "sha256": "ae8919d832c0eb642410d0e31e3b028fdc146a09942e3af1131a2f3982228fca"
+    },
+    {
+      "path": "skills_bojart/bojart-knowledge-review/SKILL.md",
+      "bytes": 2559,
+      "sha256": "138aba2c6e96bdd81bc8d8bad709ae5be8fcb7be7fb85eac6ecade016f28e40c"
+    },
+    {
+      "path": "skills_bojart/bojart-publishing/SKILL.md",
+      "bytes": 2693,
+      "sha256": "4318d358cd0f458ba9c9c34770fdc1c86cc56f7e5ce76960a98be12edf84feb2"
+    },
+    {
+      "path": "skills_bojart/bojart-seo-site/SKILL.md",
+      "bytes": 2455,
+      "sha256": "0776b6702517334bec0e799ae472263c405c5ae6cdb1591ee02a3d4edfd5fab1"
+    },
+    {
+      "path": "skills_bojart/bojart-social-search/SKILL.md",
+      "bytes": 2499,
+      "sha256": "178ed9afa326f8fe9e72a06e4bcc627a242ac832295f7a76318bd3f43d9d9358"
+    }
+  ],
+  "note": "Empreintes, pas une signature cryptographique de l’éditeur."
+}

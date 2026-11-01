@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://www.instagram.com/reel/Dembp0IIpQh/",
+    "study": "SAM01",
+    "creator_public_identity": "Sam John Creates",
+    "prior_visual_scope": "six stopped samples, not whole playback",
+    "audio_listened": false,
+    "local_media_access": "one browser download attempt canceled; no complete media obtained",
+    "next_authorized_route": "explicit local file obtained through a permitted public or creator-provided route"
+  },
+  {
+    "url": "https://www.instagram.com/reel/DefHiTwMLMd/",
+    "study": "COO01",
+    "creator_public_identity": "Aiden Faherty / coolacloy",
+    "prior_visual_scope": "five stopped samples, not whole playback",
+    "audio_listened": false,
+    "project_obtained": false
+  },
+  {
+    "url": "https://www.instagram.com/reel/DcOmTzTTJ50/",
+    "study": null,
+    "interface_account": "goated_arts",
+    "status": "age_restriction_content_not_viewed",
+    "author_verified": false,
+    "next_authorized_route": "public accessible version or author-provided file; no bypass"
+  }
+]

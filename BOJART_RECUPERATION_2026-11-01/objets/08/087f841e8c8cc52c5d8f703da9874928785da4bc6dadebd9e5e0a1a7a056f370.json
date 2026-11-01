@@ -1,0 +1,4498 @@
+{
+  "target": {
+    "path": "/workspace/scratch/537238f8fe99/work/rea_reverse_20261027/targets/avalonia/lib/net8.0/Avalonia.Base.dll",
+    "sha256": "ffaf5263f964ea313ed29361c0dc86ed20fa7fda1473aefa687fde3a90622f8d",
+    "byte_length": 2360320,
+    "format": "pe"
+  },
+  "module": {
+    "name": "Avalonia.Base.dll",
+    "generation": 0,
+    "mvid": "6b8c048b-6062-4c98-bbb3-ddb072211ea2",
+    "enc_id": null,
+    "enc_base_id": null,
+    "token": "0x00000001",
+    "row_offset": 714096
+  },
+  "static_members_evidence_id": "ev_2a0403d54f2b2689462f04115f18f2327df1a0875dcf92e368cd0448efb57504",
+  "bounce_helper_evidence_id": "ev_18449a2db936b4854c8aec96989e58d7aa93b90fc8d5e047c008a09d4b6c5a27",
+  "methods": [
+    {
+      "token": "0x06000156",
+      "row_offset": 839340,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": ".ctor",
+      "rva": 20228,
+      "impl_flags": 0,
+      "flags": 6278,
+      "signature": {
+        "raw_length": 9,
+        "raw_sha256": "7ed070219ffc5d5c5641fd9f0e5eb483a56613449b02df7ed6507826c7ea7d3f",
+        "resolved_sha256": "7ed070219ffc5d5c5641fd9f0e5eb483a56613449b02df7ed6507826c7ea7d3f",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 6,
+        "return_type": "void",
+        "parameter_types": [
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 20228,
+        "file_offset": 12548,
+        "max_stack": 10,
+        "init_locals": true,
+        "local_var_sig_token": null,
+        "il_size": 43,
+        "il_sha256": "70cf4882ac401239560c149035796d562b12d39acbac243a826f16da54551753",
+        "normalized_il_sha256": "cd67946d6b8455833185d80fd38ac46dbc5a65a324825061481f9295810b2880",
+        "instruction_count": 12,
+        "decoded_instruction_count": 12,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.0": 1,
+          "ldarg.1": 1,
+          "ldarg.2": 1,
+          "ldc.r8": 3,
+          "ldarg.3": 1,
+          "ldarg.s": 3,
+          "call": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 2,
+            "opcode": "ldarg.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 3,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 12,
+            "opcode": "ldarg.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 13,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 15,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 24,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 26,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 28,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 37,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000157"
+          },
+          {
+            "il_offset": 42,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000157",
+      "row_offset": 839358,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": ".ctor",
+      "rva": 20284,
+      "impl_flags": 0,
+      "flags": 6278,
+      "signature": {
+        "raw_length": 12,
+        "raw_sha256": "f80b2dc6371b3fb715d5baeddb5b9ed1d4fcd5eed6add397e9c43fabf4b371ed",
+        "resolved_sha256": "f80b2dc6371b3fb715d5baeddb5b9ed1d4fcd5eed6add397e9c43fabf4b371ed",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 9,
+        "return_type": "void",
+        "parameter_types": [
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8",
+          "r8"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 20284,
+        "file_offset": 12604,
+        "max_stack": 2,
+        "init_locals": true,
+        "local_var_sig_token": null,
+        "il_size": 70,
+        "il_sha256": "2fff0d1b45e9bcd1f59391b12cdfe00833254e711c9a54fbb40d1aaa6164a571",
+        "normalized_il_sha256": "a6d3b430d94df04d9f019966e3b3817760c9c764ce229c1a54e94917c4ec0027",
+        "instruction_count": 28,
+        "decoded_instruction_count": 28,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.0": 9,
+          "ldarg.1": 1,
+          "stfld": 9,
+          "ldarg.2": 1,
+          "ldarg.3": 1,
+          "ldarg.s": 6,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 2,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b1"
+          },
+          {
+            "il_offset": 7,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 8,
+            "opcode": "ldarg.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 9,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b2"
+          },
+          {
+            "il_offset": 14,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 15,
+            "opcode": "ldarg.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 16,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b3"
+          },
+          {
+            "il_offset": 21,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 22,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "4"
+          },
+          {
+            "il_offset": 24,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b4"
+          },
+          {
+            "il_offset": 29,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 30,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "5"
+          },
+          {
+            "il_offset": 32,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b5"
+          },
+          {
+            "il_offset": 37,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 38,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "6"
+          },
+          {
+            "il_offset": 40,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b6"
+          },
+          {
+            "il_offset": 45,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 46,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "7"
+          },
+          {
+            "il_offset": 48,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b7"
+          },
+          {
+            "il_offset": 53,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 54,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "8"
+          },
+          {
+            "il_offset": 56,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b8"
+          },
+          {
+            "il_offset": 61,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 62,
+            "opcode": "ldarg.s",
+            "operand_kind": "variable",
+            "operand": "9"
+          },
+          {
+            "il_offset": 64,
+            "opcode": "stfld",
+            "operand_kind": "field",
+            "operand": "0x040000b9"
+          },
+          {
+            "il_offset": 69,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000164",
+      "row_offset": 839592,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "op_Multiply",
+      "rva": 20476,
+      "impl_flags": 0,
+      "flags": 2198,
+      "signature": {
+        "raw_length": 11,
+        "raw_sha256": "5c68e3d89a5aa48cc597c66a4c93eb86bbe493cf9cbaa1537e2dbbf498f62632",
+        "resolved_sha256": "1e4b569e5bfaa995ad34f19aa3d8fb7f671b400e91368583126593808210ac28",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default",
+        "generic_parameter_count": null,
+        "parameter_count": 2,
+        "return_type": "valuetype:224",
+        "parameter_types": [
+          "valuetype:224",
+          "valuetype:224"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 20476,
+        "file_offset": 12796,
+        "max_stack": 11,
+        "init_locals": true,
+        "local_var_sig_token": null,
+        "il_size": 429,
+        "il_sha256": "3096a59f6fcf9afab80ef1d3c5fc26e2e46439edfd752dcb0e2388ca074854d0",
+        "normalized_il_sha256": "5dbc02a00c301c4ecca51be4120e0ffe909982436f682443a4faa4ae8e540f61",
+        "instruction_count": 155,
+        "decoded_instruction_count": 155,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarga.s": 54,
+          "call": 54,
+          "mul": 27,
+          "add": 18,
+          "newobj": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 2,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 7,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 9,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 14,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 15,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 17,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 22,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 24,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 29,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 30,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 31,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 33,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015d"
+          },
+          {
+            "il_offset": 38,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 40,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 45,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 46,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 47,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 49,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 54,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 56,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 61,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 62,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 64,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 69,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 71,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 76,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 77,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 78,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 80,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015d"
+          },
+          {
+            "il_offset": 85,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 87,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 92,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 93,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 94,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 96,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 101,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 103,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015d"
+          },
+          {
+            "il_offset": 108,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 109,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 111,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 116,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 118,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000160"
+          },
+          {
+            "il_offset": 123,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 124,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 125,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 127,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015d"
+          },
+          {
+            "il_offset": 132,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 134,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000163"
+          },
+          {
+            "il_offset": 139,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 140,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 141,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 143,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 148,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 150,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 155,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 156,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 158,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 163,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 165,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 170,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 171,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 172,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 174,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000160"
+          },
+          {
+            "il_offset": 179,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 181,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 186,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 187,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 188,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 190,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 195,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 197,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 202,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 203,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 205,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 210,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 212,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 217,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 218,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 219,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 221,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000160"
+          },
+          {
+            "il_offset": 226,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 228,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 233,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 234,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 235,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 237,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 242,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 244,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015d"
+          },
+          {
+            "il_offset": 249,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 250,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 252,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 257,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 259,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000160"
+          },
+          {
+            "il_offset": 264,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 265,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 266,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 268,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000160"
+          },
+          {
+            "il_offset": 273,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 275,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000163"
+          },
+          {
+            "il_offset": 280,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 281,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 282,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 284,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 289,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 291,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 296,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 297,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 299,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 304,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 306,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 311,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 312,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 313,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 315,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000163"
+          },
+          {
+            "il_offset": 320,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 322,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 327,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 328,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 329,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 331,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 336,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 338,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 343,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 344,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 346,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 351,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 353,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 358,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 359,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 360,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 362,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000163"
+          },
+          {
+            "il_offset": 367,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 369,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 374,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 375,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 376,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 378,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 383,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 385,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015d"
+          },
+          {
+            "il_offset": 390,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 391,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 393,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 398,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 400,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000160"
+          },
+          {
+            "il_offset": 405,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 406,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 407,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 409,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000163"
+          },
+          {
+            "il_offset": 414,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 416,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000163"
+          },
+          {
+            "il_offset": 421,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 422,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 423,
+            "opcode": "newobj",
+            "operand_kind": "method",
+            "operand": "0x06000157"
+          },
+          {
+            "il_offset": 428,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000169",
+      "row_offset": 839682,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "CreateRotation",
+      "rva": 21008,
+      "impl_flags": 0,
+      "flags": 150,
+      "signature": {
+        "raw_length": 9,
+        "raw_sha256": "64a1c6d9d9767cde47d70b621aebf81529e7fd01b8a5b7b0f9b649306467525a",
+        "resolved_sha256": "5f46984d59fb822fb21a874dbf45f54378691e7a8ec7f70e003d14d32a0c735c",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default",
+        "generic_parameter_count": null,
+        "parameter_count": 2,
+        "return_type": "valuetype:224",
+        "parameter_types": [
+          "r8",
+          "valuetype:244"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 21008,
+        "file_offset": 13328,
+        "max_stack": 8,
+        "init_locals": true,
+        "local_var_sig_token": "0x11000034",
+        "il_size": 75,
+        "il_sha256": "bbe1911a66efc8ef5f17d10bcba06d9989c75b39c8bab9997892c6ec562f71a9",
+        "normalized_il_sha256": "f10090a37179f6db270e260a6601da239c5996ffbc6d978e53846332b690716f",
+        "instruction_count": 37,
+        "decoded_instruction_count": 37,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.0": 2,
+          "call": 4,
+          "stloc.0": 1,
+          "stloc.1": 1,
+          "ldarga.s": 2,
+          "stloc.2": 1,
+          "stloc.3": 1,
+          "ldloc.0": 4,
+          "ldloc.1": 4,
+          "neg": 1,
+          "ldloc.2": 2,
+          "ldc.r8": 2,
+          "sub": 3,
+          "mul": 4,
+          "ldloc.3": 2,
+          "add": 1,
+          "newobj": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a0001bc"
+          },
+          {
+            "il_offset": 6,
+            "opcode": "stloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 7,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 8,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a0001bd"
+          },
+          {
+            "il_offset": 13,
+            "opcode": "stloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 14,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 16,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f4"
+          },
+          {
+            "il_offset": 21,
+            "opcode": "stloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 22,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 24,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f5"
+          },
+          {
+            "il_offset": 29,
+            "opcode": "stloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 30,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 31,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 32,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 33,
+            "opcode": "neg",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 34,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 35,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 36,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 45,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 46,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 47,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 48,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 49,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 50,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 51,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 52,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 53,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 62,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 63,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 64,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 65,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 66,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 67,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 68,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 69,
+            "opcode": "newobj",
+            "operand_kind": "method",
+            "operand": "0x06000156"
+          },
+          {
+            "il_offset": 74,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000170",
+      "row_offset": 839808,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "Append",
+      "rva": 21311,
+      "impl_flags": 0,
+      "flags": 134,
+      "signature": {
+        "raw_length": 8,
+        "raw_sha256": "21be366843c186f60f160b0b35900789abcd1042e289fc02e67f4e25cd479acf",
+        "resolved_sha256": "3cb40d1808179b1eb891a1e7f814772a415165a336de72595e540760ecc643d8",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "valuetype:224",
+        "parameter_types": [
+          "valuetype:224"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "tiny",
+        "rva": 21311,
+        "file_offset": 13631,
+        "max_stack": 8,
+        "init_locals": false,
+        "local_var_sig_token": null,
+        "il_size": 13,
+        "il_sha256": "82b9572a4304a15faef218b310acab8d13033ceda39723108f4b11910552194f",
+        "normalized_il_sha256": "f0defeefe202b3c32ad417cf8289046cdd9d55b43d5c39245d7e20a4113576f6",
+        "instruction_count": 5,
+        "decoded_instruction_count": 5,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.0": 1,
+          "ldobj": 1,
+          "ldarg.1": 1,
+          "call": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "ldobj",
+            "operand_kind": "type",
+            "operand": "0x02000038"
+          },
+          {
+            "il_offset": 6,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 7,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000164"
+          },
+          {
+            "il_offset": 12,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000171",
+      "row_offset": 839826,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "Prepend",
+      "rva": 21325,
+      "impl_flags": 0,
+      "flags": 134,
+      "signature": {
+        "raw_length": 8,
+        "raw_sha256": "21be366843c186f60f160b0b35900789abcd1042e289fc02e67f4e25cd479acf",
+        "resolved_sha256": "3cb40d1808179b1eb891a1e7f814772a415165a336de72595e540760ecc643d8",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "valuetype:224",
+        "parameter_types": [
+          "valuetype:224"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "tiny",
+        "rva": 21325,
+        "file_offset": 13645,
+        "max_stack": 8,
+        "init_locals": false,
+        "local_var_sig_token": null,
+        "il_size": 13,
+        "il_sha256": "131a9326e4c823736a3910028ca8d37bc69d1b2897d88fd68fde7a52688a03d5",
+        "normalized_il_sha256": "2282f0d5ff1916c0d17f73afe0e2e8024046a8208f765261e849a248a387a292",
+        "instruction_count": 5,
+        "decoded_instruction_count": 5,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.1": 1,
+          "ldarg.0": 1,
+          "ldobj": 1,
+          "call": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 2,
+            "opcode": "ldobj",
+            "operand_kind": "type",
+            "operand": "0x02000038"
+          },
+          {
+            "il_offset": 7,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000164"
+          },
+          {
+            "il_offset": 12,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06000173",
+      "row_offset": 839862,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "Transform",
+      "rva": 21460,
+      "impl_flags": 0,
+      "flags": 134,
+      "signature": {
+        "raw_length": 8,
+        "raw_sha256": "20bb0d8ed25a3ca4acfbe40fb189b1c18d3069cf49f775a34412e15eb0d95ef3",
+        "resolved_sha256": "d0d6de21f379598bd7706cdacaa390a9ba482325d58382c2c49d974c97199844",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "valuetype:244",
+        "parameter_types": [
+          "valuetype:244"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 21460,
+        "file_offset": 13780,
+        "max_stack": 17,
+        "init_locals": true,
+        "local_var_sig_token": "0x11000035",
+        "il_size": 269,
+        "il_sha256": "cbd7cc5fdf2630660fd9e4dd2cad2c47dc1ca1010593641c28e4e0eccce7f3c6",
+        "normalized_il_sha256": "c34639a9e9e05ef7cd765456c9e1caeeaac20eca19fca2ca35d5f73ecdacf266",
+        "instruction_count": 100,
+        "decoded_instruction_count": 100,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.0": 16,
+          "call": 25,
+          "brfalse": 1,
+          "ldloca.s": 2,
+          "conv.r4": 11,
+          "ldc.r4": 9,
+          "ldarga.s": 6,
+          "newobj": 2,
+          "ldloc.1": 1,
+          "stloc.2": 1,
+          "ldloc.2": 3,
+          "ldfld": 3,
+          "div": 1,
+          "stloc.3": 1,
+          "ldloc.3": 2,
+          "mul": 6,
+          "conv.r8": 2,
+          "br.s": 1,
+          "add": 4,
+          "ret": 2,
+          "ldloc.0": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000177"
+          },
+          {
+            "il_offset": 6,
+            "opcode": "brfalse",
+            "operand_kind": "branch",
+            "operand": "189"
+          },
+          {
+            "il_offset": 11,
+            "opcode": "ldloca.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 13,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 14,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 19,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 20,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 21,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 26,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 27,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 28,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015d"
+          },
+          {
+            "il_offset": 33,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 34,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 39,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 40,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 45,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 46,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 47,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 52,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 53,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 54,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000160"
+          },
+          {
+            "il_offset": 59,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 60,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 65,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 66,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 71,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 72,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 73,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 78,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 79,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 80,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000163"
+          },
+          {
+            "il_offset": 85,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 86,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 91,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 96,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 101,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "0"
+          },
+          {
+            "il_offset": 106,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 111,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a0001bf"
+          },
+          {
+            "il_offset": 116,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 118,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f4"
+          },
+          {
+            "il_offset": 123,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 124,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 126,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f5"
+          },
+          {
+            "il_offset": 131,
+            "opcode": "conv.r4",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 132,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 137,
+            "opcode": "newobj",
+            "operand_kind": "method",
+            "operand": "0x0a0001c0"
+          },
+          {
+            "il_offset": 142,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 143,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a0001c1"
+          },
+          {
+            "il_offset": 148,
+            "opcode": "stloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 149,
+            "opcode": "ldc.r4",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 154,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 155,
+            "opcode": "ldfld",
+            "operand_kind": "field",
+            "operand": "0x0a0001c2"
+          },
+          {
+            "il_offset": 160,
+            "opcode": "div",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 161,
+            "opcode": "stloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 162,
+            "opcode": "ldloca.s",
+            "operand_kind": "variable",
+            "operand": "0"
+          },
+          {
+            "il_offset": 164,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 165,
+            "opcode": "ldfld",
+            "operand_kind": "field",
+            "operand": "0x0a0001c3"
+          },
+          {
+            "il_offset": 170,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 171,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 172,
+            "opcode": "conv.r8",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 173,
+            "opcode": "ldloc.2",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 174,
+            "opcode": "ldfld",
+            "operand_kind": "field",
+            "operand": "0x0a0001c4"
+          },
+          {
+            "il_offset": 179,
+            "opcode": "ldloc.3",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 180,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 181,
+            "opcode": "conv.r8",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 182,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f3"
+          },
+          {
+            "il_offset": 187,
+            "opcode": "br.s",
+            "operand_kind": "branch",
+            "operand": "267"
+          },
+          {
+            "il_offset": 189,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 191,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f4"
+          },
+          {
+            "il_offset": 196,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 197,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015b"
+          },
+          {
+            "il_offset": 202,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 203,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 205,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f5"
+          },
+          {
+            "il_offset": 210,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 211,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015e"
+          },
+          {
+            "il_offset": 216,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 217,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 218,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 219,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000161"
+          },
+          {
+            "il_offset": 224,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 225,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 227,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f4"
+          },
+          {
+            "il_offset": 232,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 233,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015c"
+          },
+          {
+            "il_offset": 238,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 239,
+            "opcode": "ldarga.s",
+            "operand_kind": "variable",
+            "operand": "1"
+          },
+          {
+            "il_offset": 241,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x060001f5"
+          },
+          {
+            "il_offset": 246,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 247,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0600015f"
+          },
+          {
+            "il_offset": 252,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 253,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 254,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 255,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06000162"
+          },
+          {
+            "il_offset": 260,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 261,
+            "opcode": "newobj",
+            "operand_kind": "method",
+            "operand": "0x060001f3"
+          },
+          {
+            "il_offset": 266,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 267,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 268,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06002f7d",
+      "row_offset": 1052010,
+      "declaring_type_token": "0x020005d9",
+      "declaring_type": "Avalonia.Animation.Easings.BounceEaseOut",
+      "name": "Ease",
+      "rva": 619868,
+      "impl_flags": 0,
+      "flags": 198,
+      "signature": {
+        "raw_length": 4,
+        "raw_sha256": "e656593835da1842ca02413f92fbd0b952af1da5f5b1cc417608322b2649cab1",
+        "resolved_sha256": "e656593835da1842ca02413f92fbd0b952af1da5f5b1cc417608322b2649cab1",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "r8",
+        "parameter_types": [
+          "r8"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "tiny",
+        "rva": 619868,
+        "file_offset": 612188,
+        "max_stack": 8,
+        "init_locals": false,
+        "local_var_sig_token": null,
+        "il_size": 7,
+        "il_sha256": "107f3c874a95c960982279105bf76eaf9ea9e059975e1e9ad75470f3c72afa34",
+        "normalized_il_sha256": "bcc0d224ddb0f88ad90cb6213952cf85c09b66bce5c8367836fb7d64c4071e45",
+        "instruction_count": 3,
+        "decoded_instruction_count": 3,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.1": 1,
+          "call": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x06002f72"
+          },
+          {
+            "il_offset": 6,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06002f87",
+      "row_offset": 1052190,
+      "declaring_type_token": "0x020005de",
+      "declaring_type": "Avalonia.Animation.Easings.CubicEaseInOut",
+      "name": "Ease",
+      "rva": 620124,
+      "impl_flags": 0,
+      "flags": 198,
+      "signature": {
+        "raw_length": 4,
+        "raw_sha256": "e656593835da1842ca02413f92fbd0b952af1da5f5b1cc417608322b2649cab1",
+        "resolved_sha256": "e656593835da1842ca02413f92fbd0b952af1da5f5b1cc417608322b2649cab1",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "r8",
+        "parameter_types": [
+          "r8"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 620124,
+        "file_offset": 612444,
+        "max_stack": 3,
+        "init_locals": true,
+        "local_var_sig_token": "0x11000033",
+        "il_size": 78,
+        "il_sha256": "6abb50cbb6f1c40bd9ab771db0155cc6c026c677f73eecf1e1c96b47d3b991ef",
+        "normalized_il_sha256": "ebfe381f099c1db6929585ea6edab4e7f22038f2f8d53da5068548e3b2b21e4c",
+        "instruction_count": 29,
+        "decoded_instruction_count": 29,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.1": 2,
+          "stloc.0": 1,
+          "ldc.r8": 6,
+          "bge.un.s": 1,
+          "ldloc.0": 4,
+          "mul": 7,
+          "ret": 2,
+          "sub": 1,
+          "stloc.1": 1,
+          "ldloc.1": 3,
+          "add": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "stloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 2,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 3,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0.5"
+          },
+          {
+            "il_offset": 12,
+            "opcode": "bge.un.s",
+            "operand_kind": "branch",
+            "operand": "30"
+          },
+          {
+            "il_offset": 14,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "4"
+          },
+          {
+            "il_offset": 23,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 24,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 25,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 26,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 27,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 28,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 29,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 30,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "2"
+          },
+          {
+            "il_offset": 39,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 40,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 49,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 50,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 51,
+            "opcode": "stloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 52,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0.5"
+          },
+          {
+            "il_offset": 61,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 62,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 63,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 64,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 65,
+            "opcode": "ldloc.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 66,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 67,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 76,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 77,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06002fb5",
+      "row_offset": 1053018,
+      "declaring_type_token": "0x020005f4",
+      "declaring_type": "Avalonia.Animation.Easings.SineEaseInOut",
+      "name": "Ease",
+      "rva": 623368,
+      "impl_flags": 0,
+      "flags": 198,
+      "signature": {
+        "raw_length": 4,
+        "raw_sha256": "e656593835da1842ca02413f92fbd0b952af1da5f5b1cc417608322b2649cab1",
+        "resolved_sha256": "e656593835da1842ca02413f92fbd0b952af1da5f5b1cc417608322b2649cab1",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default has-this",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "r8",
+        "parameter_types": [
+          "r8"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "tiny",
+        "rva": 623368,
+        "file_offset": 615688,
+        "max_stack": 8,
+        "init_locals": false,
+        "local_var_sig_token": null,
+        "il_size": 37,
+        "il_sha256": "3de7317d96f10c8d9fe02d444f55045e09195172336383e8437607e81447b25b",
+        "normalized_il_sha256": "fb360651eb41e01b681bfc21d0d023837cba520ac5a5ecbe9890c590a84dc57e",
+        "instruction_count": 9,
+        "decoded_instruction_count": 9,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldc.r8": 3,
+          "ldarg.1": 1,
+          "mul": 2,
+          "call": 1,
+          "sub": 1,
+          "ret": 1
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0.5"
+          },
+          {
+            "il_offset": 9,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "1"
+          },
+          {
+            "il_offset": 18,
+            "opcode": "ldarg.1",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 19,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "3.141592653589793"
+          },
+          {
+            "il_offset": 28,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 29,
+            "opcode": "call",
+            "operand_kind": "method",
+            "operand": "0x0a0001bc"
+          },
+          {
+            "il_offset": 34,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 35,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 36,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    },
+    {
+      "token": "0x06002f72",
+      "row_offset": 1051812,
+      "declaring_type_token": "0x020005d2",
+      "declaring_type": "Avalonia.Animation.Utils.BounceEaseUtils",
+      "name": "Bounce",
+      "rva": 619256,
+      "impl_flags": 0,
+      "flags": 147,
+      "signature": {
+        "raw_length": 4,
+        "raw_sha256": "5ec2ae82f46843573128416c6a34c659a1a89c1d36d25ce9b7b16e4d4b921f96",
+        "resolved_sha256": "5ec2ae82f46843573128416c6a34c659a1a89c1d36d25ce9b7b16e4d4b921f96",
+        "kind": "method",
+        "parse_status": "decoded",
+        "calling_convention": "default",
+        "generic_parameter_count": null,
+        "parameter_count": 1,
+        "return_type": "r8",
+        "parameter_types": [
+          "r8"
+        ],
+        "field_type": null,
+        "issue": null
+      },
+      "body": {
+        "status": "present",
+        "header_format": "fat",
+        "rva": 619256,
+        "file_offset": 611576,
+        "max_stack": 3,
+        "init_locals": true,
+        "local_var_sig_token": "0x1100002b",
+        "il_size": 170,
+        "il_sha256": "086b10638d5601c96cd310f889f4c556ffca794c30a0203a74545b17b3e7c25a",
+        "normalized_il_sha256": "6681bf6bba34ef793c9b1c50271a7d8a2ddf5a1987aeefad3fb5b3c072957894",
+        "instruction_count": 55,
+        "decoded_instruction_count": 55,
+        "truncated_instructions": 0,
+        "opcode_counts": {
+          "ldarg.0": 1,
+          "stloc.0": 1,
+          "ldloc.0": 14,
+          "ldc.r8": 14,
+          "bge.un.s": 3,
+          "mul": 11,
+          "div": 1,
+          "ret": 4,
+          "sub": 3,
+          "add": 3
+        },
+        "anchors": [
+          {
+            "il_offset": 0,
+            "opcode": "ldarg.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 1,
+            "opcode": "stloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 2,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 3,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0.36363636363636365"
+          },
+          {
+            "il_offset": 12,
+            "opcode": "bge.un.s",
+            "operand_kind": "branch",
+            "operand": "38"
+          },
+          {
+            "il_offset": 14,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "121"
+          },
+          {
+            "il_offset": 23,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 24,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 25,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 26,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 27,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "16"
+          },
+          {
+            "il_offset": 36,
+            "opcode": "div",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 37,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 38,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 39,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0.7272727272727273"
+          },
+          {
+            "il_offset": 48,
+            "opcode": "bge.un.s",
+            "operand_kind": "branch",
+            "operand": "86"
+          },
+          {
+            "il_offset": 50,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "9.075"
+          },
+          {
+            "il_offset": 59,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 60,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 61,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 62,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 63,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "9.9"
+          },
+          {
+            "il_offset": 72,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 73,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 74,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 75,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "3.4"
+          },
+          {
+            "il_offset": 84,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 85,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 86,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 87,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "0.9"
+          },
+          {
+            "il_offset": 96,
+            "opcode": "bge.un.s",
+            "operand_kind": "branch",
+            "operand": "134"
+          },
+          {
+            "il_offset": 98,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "12.066481994459833"
+          },
+          {
+            "il_offset": 107,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 108,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 109,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 110,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 111,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "19.63545706371191"
+          },
+          {
+            "il_offset": 120,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 121,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 122,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 123,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "8.898060941828255"
+          },
+          {
+            "il_offset": 132,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 133,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 134,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "10.8"
+          },
+          {
+            "il_offset": 143,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 144,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 145,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 146,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 147,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "20.52"
+          },
+          {
+            "il_offset": 156,
+            "opcode": "ldloc.0",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 157,
+            "opcode": "mul",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 158,
+            "opcode": "sub",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 159,
+            "opcode": "ldc.r8",
+            "operand_kind": "constant",
+            "operand": "10.72"
+          },
+          {
+            "il_offset": 168,
+            "opcode": "add",
+            "operand_kind": "none",
+            "operand": null
+          },
+          {
+            "il_offset": 169,
+            "opcode": "ret",
+            "operand_kind": "none",
+            "operand": null
+          }
+        ],
+        "exception_regions": [],
+        "issue": null
+      }
+    }
+  ],
+  "field_mapping": [
+    {
+      "token": "0x040000b1",
+      "row_offset": 758602,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m11",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b2",
+      "row_offset": 758612,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m12",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b3",
+      "row_offset": 758622,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m13",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b4",
+      "row_offset": 758632,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m21",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b5",
+      "row_offset": 758642,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m22",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b6",
+      "row_offset": 758652,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m23",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b7",
+      "row_offset": 758662,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m31",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b8",
+      "row_offset": 758672,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m32",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    },
+    {
+      "token": "0x040000b9",
+      "row_offset": 758682,
+      "declaring_type_token": "0x02000038",
+      "declaring_type": "Avalonia.Matrix",
+      "name": "_m33",
+      "flags": 33,
+      "signature": {
+        "raw_length": 2,
+        "raw_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "resolved_sha256": "42cf92d66156bb4e2ebb162770b3b6c2200971c459257cb398e5a516577e20dd",
+        "kind": "field",
+        "parse_status": "decoded",
+        "calling_convention": "field",
+        "generic_parameter_count": null,
+        "parameter_count": null,
+        "return_type": null,
+        "parameter_types": [],
+        "field_type": "r8",
+        "issue": null
+      }
+    }
+  ],
+  "focused_call_edges": [
+    {
+      "caller_token": "0x06000156",
+      "il_offset": 37,
+      "target_identity_sha256": "6bc2c986f6119794b585d78a5a697a0652bffca90c1b00c695708e9f2371ca8a",
+      "caller": "Avalonia.Matrix..ctor",
+      "opcode": "call",
+      "target_token": "0x06000157",
+      "target_kind": "method-def",
+      "target_name": ".ctor",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 2,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 9,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 17,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 24,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 33,
+      "target_identity_sha256": "eafbb02ee0e45256c8ba8131696a0465bb70dc8b7d6c22b3f14715ced902f164",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015d",
+      "target_kind": "method-def",
+      "target_name": "get_M13",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 40,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 49,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 56,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 64,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 71,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 80,
+      "target_identity_sha256": "eafbb02ee0e45256c8ba8131696a0465bb70dc8b7d6c22b3f14715ced902f164",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015d",
+      "target_kind": "method-def",
+      "target_name": "get_M13",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 87,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 96,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 103,
+      "target_identity_sha256": "eafbb02ee0e45256c8ba8131696a0465bb70dc8b7d6c22b3f14715ced902f164",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015d",
+      "target_kind": "method-def",
+      "target_name": "get_M13",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 111,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 118,
+      "target_identity_sha256": "c3009f390378533724a78d285d2e82528d10bb0ef435fdbd4355f1fee0ea6861",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000160",
+      "target_kind": "method-def",
+      "target_name": "get_M23",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 127,
+      "target_identity_sha256": "eafbb02ee0e45256c8ba8131696a0465bb70dc8b7d6c22b3f14715ced902f164",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015d",
+      "target_kind": "method-def",
+      "target_name": "get_M13",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 134,
+      "target_identity_sha256": "01073f5bdaeb4044e0fd8ad0a7233f5a31d18018648a5c2434227f30da14ed68",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000163",
+      "target_kind": "method-def",
+      "target_name": "get_M33",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 143,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 150,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 158,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 165,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 174,
+      "target_identity_sha256": "c3009f390378533724a78d285d2e82528d10bb0ef435fdbd4355f1fee0ea6861",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000160",
+      "target_kind": "method-def",
+      "target_name": "get_M23",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 181,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 190,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 197,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 205,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 212,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 221,
+      "target_identity_sha256": "c3009f390378533724a78d285d2e82528d10bb0ef435fdbd4355f1fee0ea6861",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000160",
+      "target_kind": "method-def",
+      "target_name": "get_M23",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 228,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 237,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 244,
+      "target_identity_sha256": "eafbb02ee0e45256c8ba8131696a0465bb70dc8b7d6c22b3f14715ced902f164",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015d",
+      "target_kind": "method-def",
+      "target_name": "get_M13",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 252,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 259,
+      "target_identity_sha256": "c3009f390378533724a78d285d2e82528d10bb0ef435fdbd4355f1fee0ea6861",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000160",
+      "target_kind": "method-def",
+      "target_name": "get_M23",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 268,
+      "target_identity_sha256": "c3009f390378533724a78d285d2e82528d10bb0ef435fdbd4355f1fee0ea6861",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000160",
+      "target_kind": "method-def",
+      "target_name": "get_M23",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 275,
+      "target_identity_sha256": "01073f5bdaeb4044e0fd8ad0a7233f5a31d18018648a5c2434227f30da14ed68",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000163",
+      "target_kind": "method-def",
+      "target_name": "get_M33",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 284,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 291,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 299,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 306,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 315,
+      "target_identity_sha256": "01073f5bdaeb4044e0fd8ad0a7233f5a31d18018648a5c2434227f30da14ed68",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000163",
+      "target_kind": "method-def",
+      "target_name": "get_M33",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 322,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 331,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 338,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 346,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 353,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 362,
+      "target_identity_sha256": "01073f5bdaeb4044e0fd8ad0a7233f5a31d18018648a5c2434227f30da14ed68",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000163",
+      "target_kind": "method-def",
+      "target_name": "get_M33",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 369,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 378,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 385,
+      "target_identity_sha256": "eafbb02ee0e45256c8ba8131696a0465bb70dc8b7d6c22b3f14715ced902f164",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x0600015d",
+      "target_kind": "method-def",
+      "target_name": "get_M13",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 393,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 400,
+      "target_identity_sha256": "c3009f390378533724a78d285d2e82528d10bb0ef435fdbd4355f1fee0ea6861",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000160",
+      "target_kind": "method-def",
+      "target_name": "get_M23",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 409,
+      "target_identity_sha256": "01073f5bdaeb4044e0fd8ad0a7233f5a31d18018648a5c2434227f30da14ed68",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000163",
+      "target_kind": "method-def",
+      "target_name": "get_M33",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 416,
+      "target_identity_sha256": "01073f5bdaeb4044e0fd8ad0a7233f5a31d18018648a5c2434227f30da14ed68",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "call",
+      "target_token": "0x06000163",
+      "target_kind": "method-def",
+      "target_name": "get_M33",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000164",
+      "il_offset": 423,
+      "target_identity_sha256": "6bc2c986f6119794b585d78a5a697a0652bffca90c1b00c695708e9f2371ca8a",
+      "caller": "Avalonia.Matrix.op_Multiply",
+      "opcode": "newobj",
+      "target_token": "0x06000157",
+      "target_kind": "method-def",
+      "target_name": ".ctor",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000169",
+      "il_offset": 1,
+      "target_identity_sha256": "de7d130f004c3fe611af12735ddfa1e60f0349fc6360aea53b8a2fa5696ed4f0",
+      "caller": "Avalonia.Matrix.CreateRotation",
+      "opcode": "call",
+      "target_token": "0x0a0001bc",
+      "target_kind": "member-ref",
+      "target_name": "Cos",
+      "target_declaring_type": "System.Math"
+    },
+    {
+      "caller_token": "0x06000169",
+      "il_offset": 8,
+      "target_identity_sha256": "4fbb8f06bcd4eb78b9f7237a3ecd350771bf690817174735a88be1dfe9055cde",
+      "caller": "Avalonia.Matrix.CreateRotation",
+      "opcode": "call",
+      "target_token": "0x0a0001bd",
+      "target_kind": "member-ref",
+      "target_name": "Sin",
+      "target_declaring_type": "System.Math"
+    },
+    {
+      "caller_token": "0x06000169",
+      "il_offset": 16,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.CreateRotation",
+      "opcode": "call",
+      "target_token": "0x060001f4",
+      "target_kind": "method-def",
+      "target_name": "get_X",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000169",
+      "il_offset": 24,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.CreateRotation",
+      "opcode": "call",
+      "target_token": "0x060001f5",
+      "target_kind": "method-def",
+      "target_name": "get_Y",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000169",
+      "il_offset": 69,
+      "target_identity_sha256": "7f36cac36c7b4524340df5fea9513eb26fb9cd0159cc48d81e2191c7486f82fa",
+      "caller": "Avalonia.Matrix.CreateRotation",
+      "opcode": "newobj",
+      "target_token": "0x06000156",
+      "target_kind": "method-def",
+      "target_name": ".ctor",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000170",
+      "il_offset": 7,
+      "target_identity_sha256": "49b10e178d537ee6e34d6f13d4ef65e325cadfaaca55e12c7558f6fc4f3393ea",
+      "caller": "Avalonia.Matrix.Append",
+      "opcode": "call",
+      "target_token": "0x06000164",
+      "target_kind": "method-def",
+      "target_name": "op_Multiply",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000171",
+      "il_offset": 7,
+      "target_identity_sha256": "49b10e178d537ee6e34d6f13d4ef65e325cadfaaca55e12c7558f6fc4f3393ea",
+      "caller": "Avalonia.Matrix.Prepend",
+      "opcode": "call",
+      "target_token": "0x06000164",
+      "target_kind": "method-def",
+      "target_name": "op_Multiply",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 1,
+      "target_identity_sha256": "a70524d7edc286823699cb3338012fc130a1b9ac869a858b0b9bac94bf908a72",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x06000177",
+      "target_kind": "method-def",
+      "target_name": "ContainsPerspective",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 14,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 21,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 28,
+      "target_identity_sha256": "eafbb02ee0e45256c8ba8131696a0465bb70dc8b7d6c22b3f14715ced902f164",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015d",
+      "target_kind": "method-def",
+      "target_name": "get_M13",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 40,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 47,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 54,
+      "target_identity_sha256": "c3009f390378533724a78d285d2e82528d10bb0ef435fdbd4355f1fee0ea6861",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x06000160",
+      "target_kind": "method-def",
+      "target_name": "get_M23",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 66,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 73,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 80,
+      "target_identity_sha256": "01073f5bdaeb4044e0fd8ad0a7233f5a31d18018648a5c2434227f30da14ed68",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x06000163",
+      "target_kind": "method-def",
+      "target_name": "get_M33",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 111,
+      "target_identity_sha256": "ffccf95e2111599b16f4a82d873c6fbe2c32ae14e38fe1fa8fc516621dc459a7",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0a0001bf",
+      "target_kind": "member-ref",
+      "target_name": ".ctor",
+      "target_declaring_type": "System.Numerics.Matrix4x4"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 118,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x060001f4",
+      "target_kind": "method-def",
+      "target_name": "get_X",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 126,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x060001f5",
+      "target_kind": "method-def",
+      "target_name": "get_Y",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 137,
+      "target_identity_sha256": "d9e444965232b86c40c23ba8fd33f83758f51fccada6c1b06c3ac800f49f84e4",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "newobj",
+      "target_token": "0x0a0001c0",
+      "target_kind": "member-ref",
+      "target_name": ".ctor",
+      "target_declaring_type": "System.Numerics.Vector3"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 143,
+      "target_identity_sha256": "8ac5068840d99706cd3b277f6a89ffe9a5f4f1e5ec482d284532e78148999452",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0a0001c1",
+      "target_kind": "member-ref",
+      "target_name": "Transform",
+      "target_declaring_type": "System.Numerics.Vector3"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 182,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x060001f3",
+      "target_kind": "method-def",
+      "target_name": ".ctor",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 191,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x060001f4",
+      "target_kind": "method-def",
+      "target_name": "get_X",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 197,
+      "target_identity_sha256": "d29b21faa088aba0d7cdc33c8b950433addc86fbd368d125a21f65aba9c673db",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015b",
+      "target_kind": "method-def",
+      "target_name": "get_M11",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 205,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x060001f5",
+      "target_kind": "method-def",
+      "target_name": "get_Y",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 211,
+      "target_identity_sha256": "d7b6a8c9993bffd615bc63eeda2f30d2b315a4d77aac41338edf8a6a1cd47845",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015e",
+      "target_kind": "method-def",
+      "target_name": "get_M21",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 219,
+      "target_identity_sha256": "8f22127d494150abeb3f37f443e5da9781f0db664b4890dc9e14ec7cfc7eddec",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x06000161",
+      "target_kind": "method-def",
+      "target_name": "get_M31",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 227,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x060001f4",
+      "target_kind": "method-def",
+      "target_name": "get_X",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 233,
+      "target_identity_sha256": "ce59fbb4a42314f94f77d915e8e77621a7911f0778982aa79aa11eb1579cb37f",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015c",
+      "target_kind": "method-def",
+      "target_name": "get_M12",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 241,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x060001f5",
+      "target_kind": "method-def",
+      "target_name": "get_Y",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 247,
+      "target_identity_sha256": "a3fa7558a022f9e304667ed8319ee402bc83d2fbbc2aa1dd818915d80a29af00",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x0600015f",
+      "target_kind": "method-def",
+      "target_name": "get_M22",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 255,
+      "target_identity_sha256": "74d6dabc180d6ce127b86c0a1cf71d91fe0f4fa0f06d8c637da3e3ec8adbb2e5",
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "call",
+      "target_token": "0x06000162",
+      "target_kind": "method-def",
+      "target_name": "get_M32",
+      "target_declaring_type": "Avalonia.Matrix"
+    },
+    {
+      "caller_token": "0x06000173",
+      "il_offset": 261,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Matrix.Transform",
+      "opcode": "newobj",
+      "target_token": "0x060001f3",
+      "target_kind": "method-def",
+      "target_name": ".ctor",
+      "target_declaring_type": "Avalonia.Point"
+    },
+    {
+      "caller_token": "0x06002f7d",
+      "il_offset": 1,
+      "target_identity_sha256": null,
+      "caller": "Avalonia.Animation.Easings.BounceEaseOut.Ease",
+      "opcode": "call",
+      "target_token": "0x06002f72",
+      "target_kind": "method-def",
+      "target_name": "Bounce",
+      "target_declaring_type": "Avalonia.Animation.Utils.BounceEaseUtils"
+    },
+    {
+      "caller_token": "0x06002fb5",
+      "il_offset": 29,
+      "target_identity_sha256": "de7d130f004c3fe611af12735ddfa1e60f0349fc6360aea53b8a2fa5696ed4f0",
+      "caller": "Avalonia.Animation.Easings.SineEaseInOut.Ease",
+      "opcode": "call",
+      "target_token": "0x0a0001bc",
+      "target_kind": "member-ref",
+      "target_name": "Cos",
+      "target_declaring_type": "System.Math"
+    }
+  ],
+  "source_complete_member_evidence": "members_evidence.json",
+  "source_complete_helper_evidence": "bounce_helper_evidence.json",
+  "no_source_repository_used_for_algorithm_reconstruction": true
+}

@@ -1,0 +1,7 @@
+﻿plan,debut,fin,action,methode,controle
+01,00:00,00:03,SCULPTURE,"Original footage, dolly in, sculpted gray base visible",Original footage,No generative reinterpretation
+02,00:03,00:05,AWAKEN,"Tiny eye/breath motion; same face, hair, scars",image-to-video from authentic close-up,No character mutation
+03,00:05,00:09,BREAK,One fist impacts glass; cracks then debris,short animation + tracked VFX,Contact before glass fracture
+04,00:09,00:12,ARENA,Same hero lands in arena; original opponent already present,start/end keyframes,"Same body, outfit and camera axis"
+05,00:12,00:19,FIGHT,"One feint, one dodge, one counter and recoil",short motion-controlled shots,"One visible impact, consistent opponent"
+06,00:19,00:25,RETURN,Freeze to physical statue; match cut to authentic original,compositing and authentic still,Exact original pedestal and costume

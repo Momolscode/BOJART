@@ -1,0 +1,42 @@
+{
+  "kind": "original_DLL_runtime_oracle_not_REA_static_execution",
+  "target_sha256": "ffaf5263f964ea313ed29361c0dc86ed20fa7fda1473aefa687fde3a90622f8d",
+  "target_assembly_version": "12.1.4.0",
+  "runtime": "10.0.14",
+  "curve_input_count": 10031,
+  "curves": {
+    "cubic_in_out": {
+      "samples": 10031,
+      "max_absolute_error": 0.0,
+      "failed": 0,
+      "first_failures": []
+    },
+    "sine_in_out": {
+      "samples": 10031,
+      "max_absolute_error": 0.0,
+      "failed": 0,
+      "first_failures": []
+    },
+    "bounce_out": {
+      "samples": 10031,
+      "max_absolute_error": 0.0,
+      "failed": 0,
+      "first_failures": []
+    }
+  },
+  "affine": {
+    "cases": 1000,
+    "coordinate_comparisons": 8000,
+    "max_absolute_error": 0.0,
+    "failed": 0,
+    "first_failures": []
+  },
+  "random_seed": 27102026,
+  "elapsed_seconds": 0.336,
+  "all_comparisons_passed": true,
+  "limits": [
+    "Finite numeric samples are evidence for this artifact and these tested domains, not global equivalence.",
+    "No perspective, matrix inversion, non-finite IEEE inputs or platform-specific rendering tested.",
+    "No person tracking, artistic approval, audience measurement or retention gain established."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "rea_version": "6.8.0",
+  "static_targets": 2,
+  "curve_original_comparisons": 30093,
+  "affine_original_coordinate_comparisons": 8000,
+  "audio_original_sample_comparisons": 47104,
+  "original_comparison_max_absolute_error": 0,
+  "invariant_and_dsp_tests_passed": 12,
+  "runtime_oracle": ".NET 10.0.14 / pythonnet 3.2.1, separate from REA static analysis",
+  "demo_frames": 180,
+  "demo_duration_s": 6,
+  "demo_decode_passed": true,
+  "rea_sqlite": "blocked",
+  "javascript_preflight": "blocked by process namespace prerequisite",
+  "production_film_changed": false,
+  "new_paid_media_jobs": 0,
+  "private_instagram_metrics_obtained": false,
+  "artistic_or_audience_validation": false
+}

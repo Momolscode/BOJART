@@ -1,0 +1,35 @@
+{
+  "environment": "headless Chromium, Canvas mesh renderer; not target GPU or production dashboard",
+  "checks": [
+    {
+      "name": "real mesh rasterized",
+      "passed": true
+    },
+    {
+      "name": "five-step navigation",
+      "passed": true
+    },
+    {
+      "name": "proof displayed",
+      "passed": true
+    },
+    {
+      "name": "desktop no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "guided visit",
+      "passed": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "no Javascript errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

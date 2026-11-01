@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-26T21:02:12.388Z",
+  "id": "6add379913988191918ea9d7ae6a6eca",
+  "title": "Studio Marwin",
+  "enabled": true,
+  "schedule_preserved": true,
+  "existing_schedule": "BEGIN:VEVENT\nDTSTART;TZID=Europe/Paris:20261025T080000\nRRULE:FREQ=DAILY\nEND:VEVENT",
+  "added_followup": "one useful blocker per planned run, conditional readiness and zero additional media credits",
+  "created_new_automation": false,
+  "continuous_background_service": false
+}

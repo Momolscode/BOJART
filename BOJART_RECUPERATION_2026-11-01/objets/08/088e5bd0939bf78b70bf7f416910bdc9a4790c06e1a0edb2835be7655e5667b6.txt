@@ -1,0 +1,228 @@
+BOJ.ART — REPRISE SUR LE PC DE L’ATELIER AVEC CLAUDE CODE
+Brief d’audit, de migration et de préparation de la connaissance de Jarvis
+Préparé le 20 octobre 2026
+
+STATUT DE CE DOCUMENT
+Ce document prépare un travail futur sur le PC cible. Il ne contient aucun résultat d’analyse de ce PC : son système, ses composants, ses disques et ses médias ne sont pas encore vérifiés. Il ne contient ni les sources complètes du projet, ni les sauvegardes de ses données, ni un installateur.
+
+UTILISATION
+Ouvrir une session locale de Claude Code sur le PC de l’atelier, dans le dossier du projet lorsqu’il est disponible. Lui fournir ce document et l’accès aux dossiers professionnels à examiner. Commencer par l’inventaire ci-dessous. Si une partie manque, traiter les parties accessibles et préciser exactement ce qui reste non vérifié.
+
+MISSION POUR CLAUDE
+
+Tu reprends BOJ.ART, un atelier de création et de fabrication 3D avec un objectif de 7 à 8 imprimantes FDM et résine, une tour de contrôle sur trois écrans, une interaction vocale, une vitrine commerciale et une activité de création vidéo. L’orthographe de marque est BOJ.ART.
+
+Jarvis doit progressivement relier création, devis, fichiers 3D, préparation, fabrication, contrôle, contenus et acquisition client. Sa connaissance doit être vérifiable et à jour. Une interface, une animation ou une démonstration ne prouve pas qu’une imprimante, un slicer ou une commande vocale fonctionne réellement.
+
+Travaille à partir des observations de CE PC. Ne déduis pas sa configuration de son budget, d’une autre machine mentionnée ailleurs ou d’une ancienne conversation. Réutilise les outils déjà présents lorsqu’ils conviennent. Avance sur les travaux accessibles sans demander à nouveau les informations que les outils permettent de constater.
+
+L’audit initial lit les sources et écrit ses rapports dans un nouveau dossier de travail daté. Il conserve les originaux. Les étapes d’installation et de modification suivent ensuite les demandes effectivement autorisées dans la session. Ne transforme pas l’inventaire en réinstallation générale.
+
+1. REPÈRES DU PROJET EXISTANT
+
+Atelier :
+https://bojart-atelier.yellowghost64.chatgpt.site/
+
+Vitrine :
+https://bojart-studio.yellowghost64.chatgpt.site/
+
+Référence du dépôt atelier vérifiée lors de cette préparation :
+58309e61e2d70364b3a18223f706a478761da8b3
+
+Cette révision est un point de comparaison, pas une consigne de revenir en arrière. Identifier la révision réellement fournie, les changements locaux et les évolutions ultérieures avant toute migration.
+
+À consulter dans les sources de l’atelier :
+- local/WORKSHOP.md
+- local/jev-gateway.mjs
+- package.json
+- docs/AUDIT_GLOBAL_V11.md
+- les instructions de travail présentes dans le dépôt.
+
+État constaté à la révision de référence :
+- Un service local et un stockage atelier existent.
+- La documentation du service demande Node 24 ou supérieur et indique un démarrage par npm run start:local.
+- L’adresse locale par défaut est http://127.0.0.1:3137.
+- Le journal et les fichiers sources sont stockés en dehors du répertoire de publication.
+- Le studio utilise un catalogue de références déjà intégré. Il ne découvre pas automatiquement les vidéos présentes sur un PC.
+- La voix, les connecteurs de slicers et le lancement physique des imprimantes ne sont pas des capacités opérationnelles établies par cette version.
+
+Vérifier ces éléments sur la révision reçue. Ne pas confondre l’affichage du site hébergé avec l’installation effective du service local.
+
+2. AUDIT MATÉRIEL ET SYSTÈME
+
+Relever les caractéristiques avec leur outil de mesure, leur date et leur statut :
+observé / inaccessible / non vérifié / absent dans le périmètre recherché.
+
+Examiner :
+- Système d’exploitation, version, architecture et environnement d’exécution.
+- Processeur, nombre de cœurs et de threads, mémoire installée et disponible.
+- Chaque GPU séparément : modèle exact, mémoire vidéo, pilote et capacité de calcul réellement utilisable. Ne pas additionner les VRAM comme une réserve automatiquement disponible.
+- Disques et volumes accessibles : capacité libre, type de support lorsqu’il est observable, volumes externes et partages déjà montés.
+- Répertoires synchronisés : distinguer fichiers disponibles localement et simples références nécessitant un téléchargement.
+- Trois écrans : résolution, fréquence, disposition, mise à l’échelle, limites observables.
+- Microphone, sortie audio, caméras et périphériques utiles à l’atelier.
+- Outils existants : Node, Python, FFmpeg/ffprobe, Git, logiciels de CAO et de sculpture, slicers, montage vidéo et moteurs d’IA locale. Relever chemins et versions utiles.
+- Services et ports pertinents pour le projet, sans exporter de secrets ou de lignes de commande contenant des identifiants.
+- Sources du projet, sauvegardes et espace disponible pour les médias, les dérivés et les modèles.
+
+Un outil absent ou une commande refusée ne signifie pas que le composant recherché n’existe pas. Utiliser une autre source disponible ou déclarer la limite.
+
+Le premier passage ne nécessite pas de test de charge prolongé ni de balayage du réseau. Inventorier les imprimantes déclarées ou déjà configurées : modèle, firmware, technologie, volume utile, formats acceptés, profil de matériau et mode de connexion. La qualification de chaque machine est un travail distinct.
+
+Livrer une matrice :
+fonction souhaitée / prérequis / capacité observée / mesure manquante / prochaine étape.
+
+3. RETROUVER LES MÉDIAS BOJ.ART
+
+Rechercher dans les dossiers professionnels accessibles et les volumes identifiés. Définir le périmètre parcouru pour que la couverture soit vérifiable.
+
+Chercher notamment :
+- Rushes de tournage, masters, exports et copies de publications TikTok.
+- Photographies des œuvres et du processus.
+- Projets de montage et dépendances : sources, sons, polices, LUT, effets et plugins.
+- Logo original, fichiers vectoriels, typographies, modèles de titres et éléments graphiques.
+- Fichiers de sculpture, CAO, STL/3MF et rendus liés aux œuvres.
+- Notes de production et éléments de provenance.
+
+Commencer par les noms, types, tailles et métadonnées. Un nom contenant BOJ, Baki ou Vegeta constitue une piste, pas une preuve d’auteur, de sujet ou de droits d’utilisation.
+
+Pour chaque candidat, relever :
+- Identifiant stable, emplacement, disponibilité et empreinte SHA-256 lorsque le fichier est réellement lisible.
+- Format réel, taille, durée, résolution, cadence, orientation, codecs et pistes audio pour les vidéos.
+- Dates disponibles en distinguant date du fichier, date d’enregistrement et date de publication.
+- Origine connue : master caméra, export, publication récupérée, dérivé ou inconnue.
+- Association à une œuvre ou à une référence : proposée, confirmée, rejetée ou indéterminée.
+- Usage documenté : portfolio, réseaux sociaux, publicité ou autre, avec preuve et restrictions connues.
+
+Une copie locale n’établit pas à elle seule le droit d’utiliser l’image, la musique ou le sujet représenté dans une campagne. Maintenir le statut inconnu lorsqu’aucun élément ne permet de conclure.
+
+Repérer les doublons exacts par empreinte. Conserver les versions, recadrages et exports ; leur similarité ne justifie pas une suppression automatique.
+
+4. COMPRENDRE LES VIDÉOS ET LA SIGNATURE VISUELLE
+
+Traiter progressivement les médias lisibles :
+1) inspection technique ;
+2) vignettes et copies de consultation, si utiles ;
+3) segmentation en séquences ;
+4) sous-titres existants, transcription et lecture des textes à l’image lorsque les outils le permettent ;
+5) analyse visuelle de passages identifiés ;
+6) rattachement aux œuvres et aux usages.
+
+Les fichiers dérivés restent reliés à l’empreinte du parent et à la recette qui les a produits. Ils ne remplacent pas les originaux.
+
+Pour analyser le montage et le mouvement, consulter des passages en mouvement. Quelques images fixes ne suffisent pas à établir le rythme, la durée d’un geste, un raccord ou la synchronisation musicale. Déclarer précisément les passages examinés et les limites des outils.
+
+Extraire une fiche d’identité visuelle fondée sur des exemples :
+- lumière, fond, palette et cadrage ;
+- gestes, matières et détails mis en valeur ;
+- ordre de révélation de l’œuvre ;
+- rythme, transitions et mouvement ;
+- présence du logo, titres, son et voix ;
+- éléments récurrents et exceptions.
+
+Chaque règle doit citer des fichiers et timecodes. Distinguer ce qui est observé, ce qui est proposé pour la suite et ce qui est approuvé par BOJ.ART. Ne pas transformer une supposition esthétique en règle officielle.
+
+L’inspection locale des métadonnées et un traitement local par FFmpeg ne signifient pas que l’analyse par un modèle distant reste locale. Indiquer, pour chaque traitement, son lieu d’exécution et les données qui quittent éventuellement le PC.
+
+5. CONSTRUIRE UNE CONNAISSANCE CONSULTABLE PAR JARVIS
+
+Prévoir un catalogue local durable comprenant :
+- Assets : fichiers et identités stables.
+- Emplacements : chemins, volumes, disponibilité, dernière vérification.
+- Segments : timecodes, texte, observations et source.
+- Associations : œuvres, projets et références, avec statut de vérification.
+- Dérivés : parent, paramètres, version de l’outil et empreinte.
+- Conditions d’usage : preuve disponible, périmètre et statut.
+- Historique : modifications, corrections et anciennes versions.
+
+Commencer par une recherche structurée et textuelle fiable. Ajouter une recherche par similarité sémantique ou visuelle lorsqu’elle apporte un gain mesuré. Cette indexation n’est pas un entraînement du modèle.
+
+Préserver les identifiants et associations existants. Étendre explicitement le catalogue du studio et ses validations côté interface et service : déposer des MP4 dans un dossier ne suffit pas.
+
+Jarvis doit pouvoir répondre, par exemple :
+« Retrouve les plans de peinture de cette œuvre, propose les passages utilisables pour un montage vertical et ouvre leurs sources. »
+
+La réponse attendue comporte les fichiers, les timecodes, le motif de sélection, le degré de vérification et les conditions d’usage connues. Si l’information manque, elle doit le signaler.
+
+Les renseignements opérationnels — machine disponible, stock, progression, devis validé — doivent être relus dans leur source actuelle au moment de décider. Un index documentaire ne remplace pas un état machine actualisé.
+
+6. MAINTENIR LA CONNAISSANCE À JOUR
+
+Prévoir une surveillance des dossiers et une vérification périodique :
+- Nouveau fichier : ajout au catalogue et traitements utiles.
+- Fichier modifié : nouvelle version, invalidation des analyses devenues périmées.
+- Fichier déplacé : rattachement à son identité lorsque vérifiable.
+- Disque débranché : source indisponible, sans conclure à une suppression.
+- Suppression confirmée : mise à jour du catalogue et des dérivés selon la politique définie.
+
+Ne pas utiliser seulement le nom ou la date de modification pour identifier un contenu.
+
+Afficher des compteurs séparés : fichiers découverts, fichiers lisibles, inspection technique terminée, analyse visuelle effectuée, associations confirmées, erreurs et sources indisponibles. Afficher aussi la dernière synchronisation. Éviter une jauge de « connaissance à 100 % » sans périmètre et méthode.
+
+7. MIGRER LE TRAVAIL EXISTANT
+
+Préparer séparément :
+- Les sources du projet et leur révision.
+- Les données métier.
+- Les fichiers 3D originaux.
+- Les médias et leurs associations.
+- Les réglages nécessaires, en réintroduisant les secrets par les mécanismes prévus.
+
+Le site web et les données du navigateur ne constituent pas une copie complète du service local.
+
+À la révision de référence, la reprise de l’atelier utilise deux exports complémentaires :
+- le journal au format JSON ;
+- les originaux dans une archive .bojassets.
+
+Suspendre les éditions pendant la préparation des deux exports, car ils ne constituent pas ensemble un instantané atomique. Restaurer les assets avant le journal et vérifier l’ouverture des fichiers associés.
+
+Les données commerciales du backend de la vitrine ont leur propre stockage : ne pas supposer qu’elles sont incluses dans le journal de l’atelier.
+
+Suivre local/WORKSHOP.md pour les emplacements et sauvegardes. Une base SQLite en cours d’utilisation peut avoir des données dans son journal WAL ; copier uniquement le fichier principal ne garantit pas une sauvegarde cohérente.
+
+8. CHOISIR L’ARCHITECTURE À PARTIR DES MESURES
+
+Distinguer :
+- Claude Code, utilisé pour l’audit, le développement et la maintenance.
+- Jarvis, service et interface de l’atelier.
+- Les moteurs de langage, vision et voix, locaux ou distants selon les choix retenus.
+- Les connecteurs de fichiers, de slicers, de machines et de services commerciaux.
+
+Installer Claude Code localement ne rend pas son modèle entièrement local. Vérifier aussi les dépendances réelles de Jev et des autres composants avant de qualifier une chaîne de « locale ».
+
+Après l’inventaire, proposer une configuration adaptée au PC. Ne pas imposer Docker, WSL ou un moteur particulier par habitude.
+
+Mesurer les fonctions importantes sur des exemples représentatifs : transcription française avec le microphone utilisé, réponse vocale, recherche d’un extrait, analyse vidéo, rendu des trois écrans et préparation d’un modèle 3D. Vérifier le comportement lorsque plusieurs tâches fonctionnent ensemble.
+
+Les imprimantes sont raccordées et qualifiées progressivement. L’allocation FDM/résine dépend des exigences de chaque pièce, du volume, du matériau, de la finition, de l’orientation et du post-traitement ; elle ne doit pas être fixée uniquement par « petite » ou « grosse » pièce.
+
+9. LIVRABLES À PRODUIRE SUR LE PC
+
+Créer un dossier daté contenant :
+- Un rapport d’audit avec les preuves, limites et priorités.
+- Un inventaire matériel et logiciel exploitable.
+- Un catalogue des médias et des sources parcourues.
+- Une fiche de signature visuelle avec références et timecodes.
+- Un plan de migration et d’installation adapté aux observations.
+- Un journal de reprise indiquant ce qui est terminé, en cours ou restant.
+
+Ces livrables sont à créer sur le PC cible. Ils n’existent pas encore du seul fait de ce brief.
+
+Critères de première réussite :
+- La configuration du PC est documentée sans supposition.
+- Le travail existant est identifié et sa reprise est vérifiable.
+- Une requête retrouve une séquence réellement examinée et ouvre la bonne source au bon timecode.
+- Le catalogue distingue correctement déplacement, modification et disque indisponible.
+- Les trois écrans sont testés à leur résolution réelle.
+- Les capacités démontrées sont distinguées des fonctionnalités futures.
+
+10. RÉFÉRENCES
+
+Documentation officielle Claude Code consultée pour cette préparation :
+https://code.claude.com/docs/en/overview
+https://code.claude.com/docs/en/setup
+https://code.claude.com/docs/en/permissions
+
+Les dépendances et capacités des produits évoluent. Vérifier les versions et la documentation au moment de l’installation.
+
+FIN DU BRIEF

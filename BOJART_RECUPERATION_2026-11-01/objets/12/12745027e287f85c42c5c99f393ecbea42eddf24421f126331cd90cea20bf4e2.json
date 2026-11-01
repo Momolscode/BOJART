@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "node": "24.22.1",
+  "npm": "11.9.0",
+  "browser": "153.0.8010.0",
+  "packages_check": "pip check sans conflit",
+  "notes": [
+    "Extraction standard Sparticuz bloquée sur chown du système de fichiers ; archives npm décompressées dans un répertoire isolé sans changer les propriétaires.",
+    "Première capture sans fontes : refusée ; Fontconfig du système réutilisé, quatre captures refaites et lues.",
+    "Aucune garde REA modifiée, aucun nouveau service exposé."
+  ]
+}

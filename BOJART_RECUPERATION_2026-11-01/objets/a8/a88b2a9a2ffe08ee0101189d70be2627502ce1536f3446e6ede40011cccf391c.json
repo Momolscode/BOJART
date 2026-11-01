@@ -1,0 +1,99 @@
+{
+  "project": "BOJ.ART",
+  "date": "2026-10-30",
+  "version": "2.0",
+  "scope": "Technical/creative audit; not a final video",
+  "file_count": 18,
+  "files": [
+    {
+      "path": "AUDIT_MASTER_BOJART_V2.md",
+      "bytes": 20549,
+      "sha256": "239a7fb8ae97b9a278d87a1f0fa2483abd25274b4bd83dccf55d2f081dc48efe"
+    },
+    {
+      "path": "COMMENCER_ICI.md",
+      "bytes": 2693,
+      "sha256": "6aaa2f17c79fd8533a3ed6c9f166f2096d23f5da74b8d39149d0ffbb48d527c0"
+    },
+    {
+      "path": "DEMANDE_SOURCES_BOJART.txt",
+      "bytes": 1052,
+      "sha256": "2b39e3f3f8862aafca5a75ff3f9cf37a3f5f2d4516bbdfe08c4a405b1eca9bfd"
+    },
+    {
+      "path": "ETAT_VERSIONS_ET_DECISIONS.md",
+      "bytes": 3380,
+      "sha256": "f3267f3bf5491a5d6fd9773dbffba9da412a7234fffe06fbd5994a30e4dc4fe7"
+    },
+    {
+      "path": "PROTOCOLE_AUDIO_PREMIUM.md",
+      "bytes": 2223,
+      "sha256": "4d1a50f1bd4e2b5994280cddf93418c34f9570019a207c826ac9a63d56542bb7"
+    },
+    {
+      "path": "PROTOCOLE_BENCHMARK_MODELES.md",
+      "bytes": 2555,
+      "sha256": "0b78152e3df68ff5f4eb4e2742edf8664dff72376244f13188a1a4900f362897"
+    },
+    {
+      "path": "PROTOCOLE_CAPTURE_BOJART.md",
+      "bytes": 3524,
+      "sha256": "6b8b98c9f9791b6a4133df00674243b70157a4a60892a1992adcffc3b93f4dc1"
+    },
+    {
+      "path": "REGISTRE_MANQUES_V2.json",
+      "bytes": 13821,
+      "sha256": "14cd230125a62d6e2e6887c3a39d09d52adb8ce0bd5dadc5be1e7c43bd5898c6"
+    },
+    {
+      "path": "qc_video.py",
+      "bytes": 4494,
+      "sha256": "f3c17df59dcfc190034fb841830cfaa126083842477ce1840cfde08394dfe7d0"
+    },
+    {
+      "path": "reports/BOJ-ART-BREAK-THE-FRAME-TEST-15-Animate_QC.json",
+      "bytes": 1291,
+      "sha256": "f4b613c747155dee3ff5283dd0f8c42676ebac5e4c244f6232b5a3a11b4b1146"
+    },
+    {
+      "path": "reports/BOJART_CONTACT_SHEET.png",
+      "bytes": 1307566,
+      "sha256": "ec3557dd5eb0f98ef0b2751d6151d3ae213bd03f0cd18b25f3bf5c7c946f3106"
+    },
+    {
+      "path": "reports/BOJART_MANGA_OPENING_V25_QC.json",
+      "bytes": 1420,
+      "sha256": "10a4514a751ceb612dd01fa828984c8f6f18100631090c6dc6ae2a0ce94191be"
+    },
+    {
+      "path": "reports/BOJART_V26_EYES_ALIVE_1080P_QC.json",
+      "bytes": 1421,
+      "sha256": "826cdbc274208819f21e2446f3940f7ae9ff09c100fa1882afc545f83d696733"
+    },
+    {
+      "path": "reports/BOJART_media_inventory_2026.json",
+      "bytes": 3018,
+      "sha256": "8dbadbd09e3c747206b7d311126f54cedf31c23693093f76bbfc6f58d7caf761"
+    },
+    {
+      "path": "reports/HIGGSFIELD_REMOTE_AUDIT.json",
+      "bytes": 2701,
+      "sha256": "c3a1ea8557666b16697232f7d76975fcbb931e02f5967f34a4c1c250196af0c3"
+    },
+    {
+      "path": "templates/EXPERIMENT_TEMPLATE.json",
+      "bytes": 669,
+      "sha256": "327d244f585f30f17623e3fa89007d152a7e04fec4656cf91527725e0266eb2e"
+    },
+    {
+      "path": "templates/RIGHTS_LEDGER_TEMPLATE.json",
+      "bytes": 479,
+      "sha256": "3dca3f0f33050efac0a6194fc0a2adef9023dc4076bd57594e645bc9527de49c"
+    },
+    {
+      "path": "templates/SHOT_CARD_TEMPLATE.json",
+      "bytes": 2088,
+      "sha256": "3db22b8e1664317ee8e712801621f8fd43014cfa1ddebc1687f7cf74f4f6023b"
+    }
+  ]
+}

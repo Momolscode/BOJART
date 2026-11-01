@@ -1,0 +1,14 @@
+{
+  "node_tests": {
+    "passed": 8,
+    "failed": 0,
+    "command": "node --test light-envelope.test.js"
+  },
+  "python_js_temporal_envelope_comparison": {
+    "samples": 8,
+    "absolute_tolerance": 1e-12,
+    "passed": true
+  },
+  "visual_review": "Source contact inspected before selecting conservative top-band mask; five matching original/result phases inspected. Person visible below protected edge with margin at sampled phases.",
+  "scope": "Technical fixture and background-only light test. No new acting, jar interaction, artistic approval, complete person tracker or audience performance proven."
+}

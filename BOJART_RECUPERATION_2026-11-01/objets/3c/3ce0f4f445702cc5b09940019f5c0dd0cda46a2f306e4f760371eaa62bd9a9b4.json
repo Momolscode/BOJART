@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-01",
+  "version": "R02",
+  "status": "Montage d’intention livré avec G1 terminé ; G2 définitif en attente du modèle fidèle",
+  "observed": [
+    "G1 : contact des poils, dépôt de peinture et retrait du pinceau",
+    "Film : nouvelle macro intégrée, détail réel, ancien TEST19 animé, révélation authentique et emblème",
+    "Contact général et quatre frames autour de chacun des cinq raccords examinés",
+    "Décodage intégral sans erreur, 252 images à 24 i/s, 720 × 1280, H.264/AAC, 10,5 s"
+  ],
+  "audio_measured": {
+    "integrated_lufs": -15.32,
+    "true_peak_dbtp": -1.34,
+    "lra_lu": 2.5
+  },
+  "sound_change": "Enregistrement de pinceau, ouverture filtrée et retrait d’environ 97 ms avant l’entrée du score V21 réédité",
+  "limits": [
+    "G1 dépose un trait plus épais que le trait fin demandé ; il ne certifie pas le raccord exact à la cicatrice réelle",
+    "Le nouveau plan G2 de la figurine n’est pas produit ; la scène animée reste l’ancien TEST19",
+    "Écoute perceptuelle casque/téléphone non certifiée",
+    "Aucun retour artistique de Morgan sur R02 ni mesure d’audience",
+    "Sources de diffusion de la sculpture limitées à 512 px de large"
+  ]
+}

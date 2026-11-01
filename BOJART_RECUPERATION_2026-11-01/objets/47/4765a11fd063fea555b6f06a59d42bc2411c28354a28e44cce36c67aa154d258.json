@@ -1,0 +1,362 @@
+{
+  "source": "EAGLEMIC_Studio_Creatif.json",
+  "sections": {
+    "created_local": {
+      "type": "str",
+      "items": null
+    },
+    "next_creative_brief": {
+      "type": "dict",
+      "items": 23
+    },
+    "updated_local": {
+      "type": "str",
+      "items": null
+    },
+    "historical_sources": {
+      "type": "list",
+      "items": 1
+    },
+    "feedback": {
+      "type": "dict",
+      "items": 9
+    },
+    "publication_plan": {
+      "type": "dict",
+      "items": 16
+    },
+    "next_scene_ideas": {
+      "type": "dict",
+      "items": 2
+    },
+    "rejected_outputs": {
+      "type": "list",
+      "items": 6
+    },
+    "source": {
+      "type": "dict",
+      "items": 5
+    },
+    "ideas": {
+      "type": "list",
+      "items": 3
+    },
+    "history": {
+      "type": "list",
+      "items": 66
+    },
+    "pipeline": {
+      "type": "list",
+      "items": 7
+    },
+    "identity_scope": {
+      "type": "dict",
+      "items": 4
+    },
+    "master": {
+      "type": "dict",
+      "items": 17
+    },
+    "github_usage": {
+      "type": "dict",
+      "items": 6
+    },
+    "marwin_structure": {
+      "type": "dict",
+      "items": 5
+    },
+    "identity_correction": {
+      "type": "dict",
+      "items": 4
+    },
+    "studio_promise": {
+      "type": "str",
+      "items": null
+    },
+    "editorial_routing": {
+      "type": "dict",
+      "items": 8
+    },
+    "visual_system": {
+      "type": "dict",
+      "items": 5
+    },
+    "research_watch": {
+      "type": "list",
+      "items": 2
+    },
+    "retention_influence": {
+      "type": "dict",
+      "items": 33
+    },
+    "version": {
+      "type": "str",
+      "items": null
+    },
+    "audience_panel": {
+      "type": "dict",
+      "items": 2
+    },
+    "media_inventory": {
+      "type": "dict",
+      "items": 7
+    },
+    "recurring_work": {
+      "type": "dict",
+      "items": 26
+    },
+    "role": {
+      "type": "str",
+      "items": null
+    },
+    "global_audit": {
+      "type": "dict",
+      "items": 15
+    },
+    "previous_direction_requests": {
+      "type": "list",
+      "items": 4
+    },
+    "status": {
+      "type": "str",
+      "items": null
+    },
+    "weekly_review_latest": {
+      "type": "dict",
+      "items": 7
+    },
+    "audio_assets": {
+      "type": "list",
+      "items": 2
+    },
+    "production_method_learning_latest": {
+      "type": "dict",
+      "items": 9
+    },
+    "identity": {
+      "type": "str",
+      "items": null
+    },
+    "concept_selection_latest": {
+      "type": "dict",
+      "items": 4
+    },
+    "mission": {
+      "type": "str",
+      "items": null
+    },
+    "future_campaigns": {
+      "type": "list",
+      "items": 2
+    },
+    "tone": {
+      "type": "list",
+      "items": 6
+    },
+    "previous_next_creative_briefs": {
+      "type": "list",
+      "items": 16
+    },
+    "people": {
+      "type": "dict",
+      "items": 4
+    },
+    "distribution_policy": {
+      "type": "dict",
+      "items": 10
+    },
+    "delivered_film": {
+      "type": "dict",
+      "items": 36
+    },
+    "masters": {
+      "type": "list",
+      "items": 5
+    },
+    "audit_revision": {
+      "type": "str",
+      "items": null
+    },
+    "project_context": {
+      "type": "dict",
+      "items": 10
+    },
+    "ready_caption": {
+      "type": "NoneType",
+      "items": null
+    },
+    "current_production": {
+      "type": "dict",
+      "items": 35
+    },
+    "previous_visual_systems": {
+      "type": "list",
+      "items": 1
+    },
+    "reference_learning": {
+      "type": "dict",
+      "items": 50
+    },
+    "creative_checks": {
+      "type": "list",
+      "items": 5
+    },
+    "previous_proposals": {
+      "type": "dict",
+      "items": 4
+    },
+    "research": {
+      "type": "dict",
+      "items": 7
+    },
+    "direction_request_latest": {
+      "type": "dict",
+      "items": 3
+    },
+    "future_agent_role": {
+      "type": "dict",
+      "items": 10
+    },
+    "audit_followup_latest": {
+      "type": "dict",
+      "items": 13
+    },
+    "previous_ready_captions": {
+      "type": "list",
+      "items": 7
+    },
+    "production_method_learning_previous": {
+      "type": "dict",
+      "items": 8
+    },
+    "episodes": {
+      "type": "list",
+      "items": 12
+    },
+    "production_history": {
+      "type": "list",
+      "items": 14
+    },
+    "context_governance": {
+      "type": "dict",
+      "items": 29
+    },
+    "identity_reference_policy_latest": {
+      "type": "dict",
+      "items": 12
+    },
+    "production_method_learning_history": {
+      "type": "list",
+      "items": 9
+    },
+    "identity_reference_policy_history": {
+      "type": "list",
+      "items": 7
+    },
+    "portrait_approval_latest": {
+      "type": "dict",
+      "items": 7
+    },
+    "motion_test_latest": {
+      "type": "dict",
+      "items": 31
+    },
+    "audit_followup_light_latest": {
+      "type": "dict",
+      "items": 9
+    },
+    "concept_selection_history": {
+      "type": "list",
+      "items": 3
+    },
+    "global_audit_history": {
+      "type": "list",
+      "items": 1
+    },
+    "distribution_policy_history": {
+      "type": "list",
+      "items": 1
+    },
+    "art_direction_update_history": {
+      "type": "list",
+      "items": 0
+    },
+    "art_direction_update_latest": {
+      "type": "dict",
+      "items": 9
+    },
+    "reception_preparation_latest": {
+      "type": "dict",
+      "items": 9
+    },
+    "ready_caption_status": {
+      "type": "str",
+      "items": null
+    },
+    "reception_preparation_history": {
+      "type": "list",
+      "items": 1
+    },
+    "production_source_checks_latest": {
+      "type": "dict",
+      "items": 5
+    },
+    "artistic_recalibration_latest": {
+      "type": "dict",
+      "items": 12
+    },
+    "audience_ambition_latest": {
+      "type": "dict",
+      "items": 11
+    },
+    "active_generation_tasks": {
+      "type": "list",
+      "items": 0
+    },
+    "banc_review_latest": {
+      "type": "dict",
+      "items": 28
+    },
+    "orchestration_architecture_latest": {
+      "type": "dict",
+      "items": 24
+    },
+    "publication_plan_history": {
+      "type": "list",
+      "items": 1
+    },
+    "generation_task_history": {
+      "type": "list",
+      "items": 1
+    },
+    "creative_control_latest": {
+      "type": "dict",
+      "items": 19
+    },
+    "active_production": {
+      "type": "NoneType",
+      "items": null
+    },
+    "latest_production_plan": {
+      "type": "dict",
+      "items": 4
+    },
+    "creative_control_history": {
+      "type": "list",
+      "items": 2
+    },
+    "memory_resume": {
+      "type": "dict",
+      "items": 18
+    },
+    "memory_hygiene_latest": {
+      "type": "dict",
+      "items": 7
+    },
+    "memory_hygiene_history": {
+      "type": "list",
+      "items": 1
+    }
+  },
+  "notes": "Inventaire structurel, pas une validation des faits ni de l'exhaustivité."
+}

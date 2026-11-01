@@ -1,0 +1,70 @@
+{
+  "file": "BOJART_V26_EYES_ALIVE_1080P.mp4",
+  "sha256": "885ff28048df455de00d359377975a1af3d9290a3c2ba8b57e5aec67816093b7",
+  "size_bytes": 7541600,
+  "duration_s": 10.958,
+  "video": {
+    "codec": "h264",
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 24.0,
+    "frames_probed": "263",
+    "frames_decoded": 263,
+    "pixel_format": "yuv420p",
+    "color_space": null,
+    "color_primaries": null,
+    "color_transfer": null
+  },
+  "audio": {
+    "codec": "aac",
+    "channels": 2,
+    "sample_rate": "48000",
+    "loudness": {
+      "integrated_lufs": -16.7,
+      "lra_lu": 4.6,
+      "true_peak_dbfs": -1.2
+    }
+  },
+  "black_ranges": [],
+  "nearly_static_ranges": [],
+  "largest_frame_changes": [
+    {
+      "time_s": 1.708,
+      "gray_MAD": 31.87
+    },
+    {
+      "time_s": 7.458,
+      "gray_MAD": 29.46
+    },
+    {
+      "time_s": 7.917,
+      "gray_MAD": 27.32
+    },
+    {
+      "time_s": 1.75,
+      "gray_MAD": 27.16
+    },
+    {
+      "time_s": 7.333,
+      "gray_MAD": 26.98
+    },
+    {
+      "time_s": 3.5,
+      "gray_MAD": 25.6
+    },
+    {
+      "time_s": 8.375,
+      "gray_MAD": 24.97
+    },
+    {
+      "time_s": 4.875,
+      "gray_MAD": 24.45
+    }
+  ],
+  "warnings": [
+    "color_metadata_unspecified"
+  ],
+  "interpretation_note": "Image brightness/MAE and audio metrics do not certify 3D depth, character fidelity, music quality, SFX alignment, or artistic excellence."
+}

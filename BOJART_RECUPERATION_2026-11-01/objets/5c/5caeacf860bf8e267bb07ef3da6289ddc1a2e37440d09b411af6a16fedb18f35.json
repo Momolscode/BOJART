@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@hypit/fontsource": "0.2.0",
+    "@hypit/hypit": "0.3.1",
+    "@sparticuz/chromium": "153.0.0",
+    "hyperframes": "0.8.210"
+  }
+}
