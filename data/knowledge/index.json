@@ -133,5 +133,10 @@
     "path": "docs/ORCHESTRATION.md",
     "project": "bojart.sites",
     "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
+  },
+  {
+    "path": "docs/memory/RESILIENCE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Atomic import and consistent context snapshot implementation; forced launcher restart checked on Windows and Linux at d57330052b32cb5f638e841bdc086804cd65ede1 (GitHub Actions run 41357380816); no hardware power-loss qualification."
   }
 ]

@@ -57,3 +57,15 @@ Réconciliation avant publication : le correctif concurrent `461d46ff39caaf142ce
 ## Dossier d’audit Jarvis — 1 novembre 2026
 
 Publication demandée par l’utilisateur : [rapport, visuel et mission indépendante](../docs/audits/jarvis-installation-2026-11-01/README.md). Base rapprochée : `9f58fa29f0051cc8a7098855359a8a6dd0eef7e6`. Les versions, observations, sorties transcrites, limites et commandes sont consignées dans ce dossier. Le moteur et le matériel facultatifs restent à qualifier. Les journaux locaux complets sont indisponibles après déconnexion ; les contrôles distants sont attribués à leur propre SHA. Le workflow du dossier régénère le manifeste du dépôt, valide les empreintes et fournit un ZIP. Prochaine preuve : retour de l’auditeur sur la version choisie et le PC cible.
+
+## Résilience mémoire avant installation
+
+Base examinée : `5268e7e7b70fa25efee7d186f27cd3716a49c4c1`, dont les contrôles GitHub sont réussis. Le blocage des archives observé précédemment est résolu dans cette base.
+
+Renforcement : transaction unique pour chaque lot documentaire, points de sauvegarde pour les opérations imbriquées, lecture cohérente des faits et passages, recette du vrai lanceur après arrêt forcé. Aucun second magasin, changement de modèle ou raccordement machine. Voir `docs/memory/RESILIENCE.md`.
+
+L’environnement local a été interrompu pendant la préparation. Les nouveaux contrôles sont donc exécutés sur une branche isolée par GitHub Actions, sous Windows et Linux ; leurs résultats par commit servent de preuve. Ne pas assimiler ces essais de processus à une coupure électrique du poste.
+
+Réconciliation : les améliorations de diversité des sources et de signalement des preuves manquantes du commit `461d46ff39caaf142ce37a3e0b78f22dfcc2e842` sont conservées. Le premier passage des douze scénarios atomiques réussit sous Windows et Linux ; la recette du lanceur a exposé un serveur détaché sous Windows. Exécution dans le même processus ajoutée avant un nouveau passage complet.
+
+Validation : les contrôles du commit `d57330052b32cb5f638e841bdc086804cd65ede1` réussissent, y compris la recette réelle du lanceur sous Windows et Linux, l’arrêt forcé, le redémarrage et les douze scénarios atomiques. Preuve : https://github.com/Momolscode/BOJART/actions/runs/41357380816. Les ajouts d’orchestration sont préservés ; les contrôles de leur consolidation avec la mémoire réussissent également au commit `f15e323da95d7a9a81a5de6ae3e3fe66a97eb4b7` (recette Windows/Linux : https://github.com/Momolscode/BOJART/actions/runs/41357688600). Le dossier d’audit publié entre-temps à `241db66fcaf4ed602782d0fce1f6fb019c2e88b5` est conservé sans modification de ses preuves datées.

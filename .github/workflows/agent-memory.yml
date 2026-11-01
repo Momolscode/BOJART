@@ -19,3 +19,11 @@ jobs:
         run: python -m unittest discover -s tests_agent -v
       - name: Existing memory compatibility
         run: python -m unittest discover -s tests -v
+      - name: Forced launcher stop and verified restart
+        run: python tools/check_startup.py --abrupt --output .bojart-audit/forced-restart.json
+      - name: Save restart evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: memory-restart-${{ matrix.os }}
+          path: .bojart-audit/forced-restart.json
+          retention-days: 14
