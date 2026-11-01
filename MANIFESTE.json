@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "archive": {
+    "filename": "BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip",
+    "bytes": 331492004,
+    "sha256": "9f0544b915ebcd34482a0ff33076eb0ae25dfe333c9493b746f15a183c61fc8f",
+    "library_file_id": "libfile_8fe4cb5dac708191a5b11d0767f110a1"
+  },
+  "part_of_collection": {
+    "number": 1,
+    "total": 3,
+    "objects_in_this_part": 1112,
+    "objects_in_full_collection": 3340,
+    "other_parts_uploaded_by_this_operation": false
+  },
+  "parts": [
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.001",
+      "offset": 0,
+      "bytes": 8388608,
+      "sha256": "7bbd53be46a1be7ff072c74699bb1285c3c54f8eefadbeceb473675154a8d200",
+      "git_blob_sha1": "719bb6e0681ad54a9dcce5c82a72063f653d5759"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.002",
+      "offset": 8388608,
+      "bytes": 8388608,
+      "sha256": "f5a8d1e1c7fc8231516240cf3bc9706baf6ff21c81f5aaa9f63ffff037271cb2",
+      "git_blob_sha1": "aff07c9a5734a51f01343850f26056565e8de3cf"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.003",
+      "offset": 16777216,
+      "bytes": 8388608,
+      "sha256": "75dc80de8c331c748c5724d276c217d61cf0fa01cbc0761fdb790754c6eff719",
+      "git_blob_sha1": "9e3aa1eb7e146039d6db05e821c701593db670e5"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.004",
+      "offset": 25165824,
+      "bytes": 8388608,
+      "sha256": "3845d32374f15d2ba4eda1b9be157e53cfabf7ea6697aadfa1e91f0a349254b2",
+      "git_blob_sha1": "f423a2d44f1a58e074e5f4c3975a7635fd5943dd"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.005",
+      "offset": 33554432,
+      "bytes": 8388608,
+      "sha256": "7a256031975c4c39f997b3d420fb0bd255cec033406c6062de9aaf5256529c4a",
+      "git_blob_sha1": "18e9a9455b755c409ff65c19d33dd3cc3da2e78a"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.006",
+      "offset": 41943040,
+      "bytes": 8388608,
+      "sha256": "27422a77e051d9d554fcb8891fe8f0688b7544e73ebad586d9baca8023e1b16b",
+      "git_blob_sha1": "82071e17bf6e6fa752e17748df0ad63a847f9361"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.007",
+      "offset": 50331648,
+      "bytes": 8388608,
+      "sha256": "5ad914e2992a455400e602d037b75f261eeda79f5ec34d0c9eb5056f45cc2052",
+      "git_blob_sha1": "f95e00f9c66fd3b0ef73d66f02128137eda75c77"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.008",
+      "offset": 58720256,
+      "bytes": 8388608,
+      "sha256": "83ec502f38f4891cdb5bbb9110ebea7aea35c0e55eeea626332af2005d7cea19",
+      "git_blob_sha1": "45688417c689307c6ddae32af1ee781e5cd034b3"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.009",
+      "offset": 67108864,
+      "bytes": 8388608,
+      "sha256": "42738a29e0a562238d4fc5203a375d95f6fa53027cf066d1a6dd9b00dfca3227",
+      "git_blob_sha1": "45dcbe3de3e67408e8d68e68ad42b60c67076fbe"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.010",
+      "offset": 75497472,
+      "bytes": 8388608,
+      "sha256": "321e7f25b1cecbda0815ed583396df8e5b03596cd34ed6c4880583972ac27a91",
+      "git_blob_sha1": "dca22aa8416ac711da488fe66ad9b9ea5b2d27d0"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.011",
+      "offset": 83886080,
+      "bytes": 8388608,
+      "sha256": "43da981e3787fecbfddd8b3bcb4358ce4e198425a9ff8288da5967a95cdc8ce7",
+      "git_blob_sha1": "5cedc094a1dcf7a702021d9eab061705ac333208"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.012",
+      "offset": 92274688,
+      "bytes": 8388608,
+      "sha256": "b45315fe7515a92225c423882538d3f2e21d3d9a5d0ba24a58ac282960bd2bf8",
+      "git_blob_sha1": "5e1f34f939bcb40db658acfdc95b4a019d3c6ef8"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.013",
+      "offset": 100663296,
+      "bytes": 8388608,
+      "sha256": "6a481273013a839d55a307334cc5fb60f02903abfc92e3e7a59ad0cac62ff344",
+      "git_blob_sha1": "ab2cac77bc0774fbf2d2f1c88f7ebf7f3a6cea2d"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.014",
+      "offset": 109051904,
+      "bytes": 8388608,
+      "sha256": "f8f413041264f8797b69d23a4405aa407b339be6728f6a1048813394f09a3007",
+      "git_blob_sha1": "590685745eea7e64fa038bcfd06f7511b3b0290b"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.015",
+      "offset": 117440512,
+      "bytes": 8388608,
+      "sha256": "3fb40f376a060e776a1792fae810d0501dc2cf455fd377172ab404b8efff041a",
+      "git_blob_sha1": "ecbd8e942641a9e395f5e6fc75f375df90b00eb7"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.016",
+      "offset": 125829120,
+      "bytes": 8388608,
+      "sha256": "b8b6e9ef5fce9806003a26a759b5fefdcc0924d8baca79dd7e8cf79dccd8626a",
+      "git_blob_sha1": "ada1e53e07ce245d9b56b6bc9adae13affca2bc8"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.017",
+      "offset": 134217728,
+      "bytes": 8388608,
+      "sha256": "5d5fa3b0eadb360349aebe3fa2f6982cc4f1d35ef1d027ebc4b71f2d01c4f0ea",
+      "git_blob_sha1": "2836fd52d31ce3438d3b7e7fb3f972c5cafe8375"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.018",
+      "offset": 142606336,
+      "bytes": 8388608,
+      "sha256": "6c6c9f7a86ff681c4e95a168b42431f19e30182a6d38aa010df2b113441d6949",
+      "git_blob_sha1": "aa7209e26842efb7fb2699a2f78dfc93c3259154"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.019",
+      "offset": 150994944,
+      "bytes": 8388608,
+      "sha256": "a2b65774e63e7f2c3e8f40a1b6e0e3959335e137accb99129470f0b6a5e037b0",
+      "git_blob_sha1": "1355757eaf93043fa0d9f63cc10dade7e377e9ee"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.020",
+      "offset": 159383552,
+      "bytes": 8388608,
+      "sha256": "9956e00a2e633c7df8ac1fdcaf527c0361af7389240805deef502ea1379f5142",
+      "git_blob_sha1": "0496d76626bb9907b10bd9315e4ea8c0b9a382a3"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.021",
+      "offset": 167772160,
+      "bytes": 8388608,
+      "sha256": "af09d6442c095b4691a9c2133e0724ccaa947e7bf8932c4ca12af30572bce2de",
+      "git_blob_sha1": "e897faf1a136e35c5888fe4df2c12ce7c5d65e01"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.022",
+      "offset": 176160768,
+      "bytes": 8388608,
+      "sha256": "c6bebf971fd5b237d65c1ce118ad88ec36bdffbbf8ffb35f3e783b5cf1f87010",
+      "git_blob_sha1": "d86c6f2fdd0a4419412a2bfb8482478d83f139f1"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.023",
+      "offset": 184549376,
+      "bytes": 8388608,
+      "sha256": "e9fcf6de66f8ffdfd0b88ad0276442c9137e2af849f46e1e716e0ddf8ff4912e",
+      "git_blob_sha1": "6d57c86a6656de0e50ddd815c382bb0b3b4f1b53"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.024",
+      "offset": 192937984,
+      "bytes": 8388608,
+      "sha256": "d99343867142323ee6ba8b0f8ac2d24d5d2eb07d984e6e62ce6af942aa1e0537",
+      "git_blob_sha1": "eaa63f73057912a3fee44c478aad81d2c4ab48db"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.025",
+      "offset": 201326592,
+      "bytes": 8388608,
+      "sha256": "4392d5c81d67b1a7fbf61d94faf31e00f76073e3aad2ef9a5548712d7339b4cb",
+      "git_blob_sha1": "6ad5dc9c7677029bb662f9ba1e3d055f28446591"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.026",
+      "offset": 209715200,
+      "bytes": 8388608,
+      "sha256": "2f45bcd50fec4047b44be15a6d3dda1126809d7bede815b3be866bf9c9ec9ce9",
+      "git_blob_sha1": "29553c8375becc2f58a1af1a2128f7e9136fac3f"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.027",
+      "offset": 218103808,
+      "bytes": 8388608,
+      "sha256": "7b45516321391355f931572d5433a8aa443eab42584e57055927fe64aca0bfc8",
+      "git_blob_sha1": "c9156f4c62865fbc16c25fa3ad220d033fc60391"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.028",
+      "offset": 226492416,
+      "bytes": 8388608,
+      "sha256": "231d8b9dd95b819480bf38ff8ec98b9ce4afec5dceeec8f9c7dff81fd86cf9be",
+      "git_blob_sha1": "257ead59f98d5feca3acc3a2b11e30b1ed627e6b"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.029",
+      "offset": 234881024,
+      "bytes": 8388608,
+      "sha256": "21eb3500b9a1600d44a0f22457732de5148010419326b8e1eab5acf8f72b3a6a",
+      "git_blob_sha1": "4636271b3bda15236b1655bcb910594787369615"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.030",
+      "offset": 243269632,
+      "bytes": 8388608,
+      "sha256": "3f9fd5fc213167a0c29c691c5b4bca01151e2128058402182d820b40906ea34c",
+      "git_blob_sha1": "364f5988a1a081c3d22a2488de62797887b8c932"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.031",
+      "offset": 251658240,
+      "bytes": 8388608,
+      "sha256": "bf1e07d38b1c4022c5014c365eea6a844ffcfabedc6906d89c4518c5db894322",
+      "git_blob_sha1": "ca8a44e95a62193a390fc6ed570a93f5ab5e650e"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.032",
+      "offset": 260046848,
+      "bytes": 8388608,
+      "sha256": "5092dc4e22dea2e1ebdf8cc9540641ca5bd14f615181a092ddfdb5cd25011a73",
+      "git_blob_sha1": "cbe0a92e74bdac23bca4afcd7593cd8da8d234f9"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.033",
+      "offset": 268435456,
+      "bytes": 8388608,
+      "sha256": "e087f385c31f1495ca5439c9de0645f7527936efb4c55269c08b430d53d16210",
+      "git_blob_sha1": "80edb416a9e02f94ad70f9877336a71947e2d2e3"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.034",
+      "offset": 276824064,
+      "bytes": 8388608,
+      "sha256": "01e955154868869265f9ae2c39b99f5a0e1921b14fa94615cf3015cda43838ac",
+      "git_blob_sha1": "8bf888f70239e3868d367ed5797fe910db506123"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.035",
+      "offset": 285212672,
+      "bytes": 8388608,
+      "sha256": "4f4d9dedd2daf7ba27c3a9a381332075a921313b3b4ae148d33626d680a79dea",
+      "git_blob_sha1": "b25375b7a0825a65ad06d7f936620c8492cba609"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.036",
+      "offset": 293601280,
+      "bytes": 8388608,
+      "sha256": "1d25943d3173e0aeff2b06733910b44581153b7b10692328dad50b5c77c94a99",
+      "git_blob_sha1": "6168767f0754ba9c4799d6f18b7abd4bccd456ef"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.037",
+      "offset": 301989888,
+      "bytes": 8388608,
+      "sha256": "3700a66d439b29e697ea1aa46c4c6f6cdafa8aec27565923e74065460dbf6250",
+      "git_blob_sha1": "d71098cecaa8ae10e37b3f049a1e45d33085137c"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.038",
+      "offset": 310378496,
+      "bytes": 8388608,
+      "sha256": "5afa19b032c427e92117251baa2b0921b16b0f150abab0f99d5300ebc6e2e7ba",
+      "git_blob_sha1": "8496eeef4d0aea146f9cc33a3bf5128df3389483"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.039",
+      "offset": 318767104,
+      "bytes": 8388608,
+      "sha256": "8aeb2fca0f046c0b91ab92934140c19f8e46ace78a7b88296ef186370c60fa1e",
+      "git_blob_sha1": "fa23388861c65b53aa096af7b8994b4ab3b0afd0"
+    },
+    {
+      "path": "parts/BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip.040",
+      "offset": 327155712,
+      "bytes": 4336292,
+      "sha256": "d832fe668c1debf2ac7ba30a799b7e62d90d24d2ac9e272b4ea937b84c98cec3",
+      "git_blob_sha1": "1a6fde5dfba2d73ed15e9cb0c389e284aeb9692b"
+    }
+  ]
+}

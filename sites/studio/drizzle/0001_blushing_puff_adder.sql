@@ -1,1 +1,0 @@
-ALTER TABLE `inquiries` ADD `privacy_version` text DEFAULT '2026-10-19' NOT NULL;
