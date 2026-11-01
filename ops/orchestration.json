@@ -143,7 +143,8 @@
         "docs/DEMARRAGE*",
         "docs/memory/*",
         "jarvis/apps/jarvis/app/memory.*",
-        "jarvis/tests/memory_*"
+        "jarvis/tests/memory_*",
+        "Installer_BOJART_4060Ti.cmd"
       ],
       "reason": "Mémoire persistante, isolation des domaines et reprise après interruption."
     },
@@ -247,11 +248,12 @@
       "status": "blocked",
       "depends_on": [],
       "blockers": [
-        "Accès à la tour, OS, GPU, mémoire, moniteurs, micro et modèles d'imprimantes à renseigner."
+        "OS, GPU, RAM et CPU rapportés le 2 novembre 2026 ; diagnostic réel, pilote, espaces libres, moniteurs, micro et modèles d'imprimantes restent à établir."
       ],
       "evidence": [
         "context/CURRENT.md",
-        "INSTALLER_DEMAIN.md"
+        "INSTALLER_DEMAIN.md",
+        "docs/memory/POSTE_RTX4060TI.md"
       ],
       "acceptance": "Inventaire observé sur le poste ; choix de modèles fondé sur ses ressources.",
       "required_datasets": [

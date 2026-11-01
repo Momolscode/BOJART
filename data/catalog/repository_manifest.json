@@ -2354,8 +2354,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 11994,
-      "sha256": "2980e9ff3c15bd56fa3d85cb8b3efb860b026aa636e2cc93b9bbbd47688c9965"
+      "bytes": 12137,
+      "sha256": "2cc4a854c2a2ff25e4b5750a7614b1e5559b2be63310bb08fc0237cd1d089d0a"
     },
     {
       "path": "ops/request-example.json",
