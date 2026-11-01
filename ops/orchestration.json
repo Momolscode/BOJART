@@ -144,7 +144,9 @@
         "docs/memory/*",
         "jarvis/apps/jarvis/app/memory.*",
         "jarvis/tests/memory_*",
-        "Installer_BOJART_4060Ti.cmd"
+        "Installer_BOJART_4060Ti.cmd",
+        "Mesurer_BOJART.cmd",
+        "tools/benchmark_jarvis.py"
       ],
       "reason": "Mémoire persistante, isolation des domaines et reprise après interruption."
     },

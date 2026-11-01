@@ -178,3 +178,13 @@ Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `
 Réconciliation avant publication : les corrections des lanceurs historiques et leurs quatorze tests, publiés sur `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Le guide d'installation et le journal ont été réunis ; le manifeste repart de cette tête.
 
 Réconciliation du dossier de production : les informations matérielles sourcées, l’installeur RTX 4060 Ti et les contrôles de contexte compact du commit `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` sont conservés avec la reconstruction des cinq médias R03. Le correctif de simulation de collision de dossiers est passé sous Windows et Linux au commit `0d853787285142292a70850a1e38c49ce45b385e`. Les contrôles de l’ensemble réuni sont consignés dans la preuve de récupération.
+
+## Simulations mesurées — 2 novembre 2026
+
+Demande : confirmer le push, trouver des simulations utiles et fournir des statistiques. Le push RTX 4060 Ti est vérifié sur `2025ac1c8f376341532fbd2df8a176b0b8fc3de4`. Les sources runtime/corpus de cette révision ont été comparées à leurs empreintes avant trois répétitions indépendantes en états temporaires sur un hôte Linux sans GPU NVIDIA détecté. Le code du banc et les corpus gardent leurs empreintes dans les rapports.
+
+Résultats : 1 260 recherches, soit 14 questions répétées 90 fois, retrouvent la référence dans les cinq premiers résultats. Médiane 0,706 ms, p95 1,053 ms. Les paquets de 8 000 octets conservent cette référence précise dans 900/1260 cas, contre 1170/1260 à 13 000 octets ; plusieurs sources peuvent contenir la même réponse, ce n'est pas un score d'exactitude du modèle. Trois corpus de 5 000 documents synthétiques, 960 opérations mixtes avec huit workers sans erreur, 60 arrêts forcés et neuf autres scénarios de panne vérifiés. Sauvegarde/restauration : les documents et les 64 notes de chaque lot sont préservés. Les durées de file et de service restent séparées.
+
+Ajouts : banc sans dépendance supplémentaire, rapports bruts, guide de lecture des limites, essai facultatif des modèles déjà installés avec 30 appels et télémétrie Ollama, raccourci Windows `Mesurer_BOJART.cmd` et workflow Ubuntu/Windows. AIPerf est documenté comme piste pour mesurer la première réponse et les intervalles entre tokens ; aucune installation n'est revendiquée. Aucune inférence de modèle réel, latence de commande physique ou qualité artistique n'a été mesurée ici.
+
+Les corrections concurrentes de récupération des sources R03 publiées jusqu'à `70848b97dd59de037801628f6ec67c34b63e56d7` sont conservées. Leurs nouveaux documents restent distincts du corpus figé utilisé pour ces statistiques. Résultats et limites : `docs/evidence/simulations-2026-11-02/README.md`.

@@ -33,6 +33,11 @@
       "sha256": "b360eea50d81efd1da8344e28019e7d59d4899d75d458c6f41232319106428f5"
     },
     {
+      "path": ".github/workflows/simulations.yml",
+      "bytes": 922,
+      "sha256": "373c1e640cfda60f643bb3dee7a7b85224f19019c97ce1114056e3c0a2f7444e"
+    },
+    {
       "path": ".gitignore",
       "bytes": 723,
       "sha256": "873e188cad757388f6c256feb6c1248be3db513b34693bd9b3bb61167fdf2b3f"
@@ -71,6 +76,11 @@
       "path": "Lancer_BOJART.sh",
       "bytes": 198,
       "sha256": "9b004f789856af651dbb471a2cab3e653bd9bedd0589fbbf5017f2150c1f1a0b"
+    },
+    {
+      "path": "Mesurer_BOJART.cmd",
+      "bytes": 685,
+      "sha256": "94ef2a0ad13a717facc7d29bc73066f116818e9a99c859839f81b43fb16e9652"
     },
     {
       "path": "PRODUCTION.md",
@@ -218,6 +228,11 @@
       "sha256": "c804536c7895f65028c2489461701a862d023ffdea0e947b571c76282e50c2a3"
     },
     {
+      "path": "bojart_memory/benchmarks.py",
+      "bytes": 22718,
+      "sha256": "190623bf26eb1ad262bff84e57014c13936f9a237c3056e79ac0aeff9722dd15"
+    },
+    {
       "path": "bojart_memory/conversation.py",
       "bytes": 5856,
       "sha256": "3a8b41f6efcd11635bdb350e7c75a32cc3dbcacb994015b0166e5a81d9ceeaf7"
@@ -319,8 +334,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 30741,
-      "sha256": "008949b54aa1b58fedd19dd77aa37fa64f5d42a02e6206989b43b162a4858102"
+      "bytes": 32739,
+      "sha256": "7ef7a7facf3c221be0b91b123b80c9fbec03ddfb5a8a5511bcc96c1ab96a529f"
     },
     {
       "path": "creative/CURRENT.md",
@@ -419,8 +434,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 9403,
-      "sha256": "dacf9144151c06a364c9ad6b957846d2e854b9b772c8fd4bfb89e7b0fbcd0731"
+      "bytes": 9708,
+      "sha256": "1f3e9229a9bcfff41507826a8be8113692662b98c5de592dea2aa809fd052c62"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -703,6 +718,31 @@
       "sha256": "78a3777e543b5dddb12092b1eb81f03d9faf9b99868fdaf7ac4be79a6b5d1d41"
     },
     {
+      "path": "docs/evidence/simulations-2026-11-02/README.md",
+      "bytes": 5344,
+      "sha256": "b640894c80b9e7c176b47f7fa7ef4edf165ffe077ee41e09c45318ca30da44f8"
+    },
+    {
+      "path": "docs/evidence/simulations-2026-11-02/run-1.json",
+      "bytes": 309095,
+      "sha256": "ec7f325d605322f9db27284985a5fd1b5d5eed2dce46dfc00921eb43fdfa2371"
+    },
+    {
+      "path": "docs/evidence/simulations-2026-11-02/run-2.json",
+      "bytes": 309125,
+      "sha256": "bd370bbee76f55f2139804c621be1e1193982bdebaf57c41dff4ed051f6f5479"
+    },
+    {
+      "path": "docs/evidence/simulations-2026-11-02/run-3.json",
+      "bytes": 309140,
+      "sha256": "583f03dacd4ff438f87350ffff873821d78436c2ed92a2d56d4d3033b99e01b2"
+    },
+    {
+      "path": "docs/evidence/simulations-2026-11-02/summary.json",
+      "bytes": 2265,
+      "sha256": "90899d83e86a51e3d12c5c3338d490386707438cc2a31791ca71e34984bcd800"
+    },
+    {
       "path": "docs/evidence/startup-2026-11-01.json",
       "bytes": 3922,
       "sha256": "91b1ec719edfbf8fe8364ee7405f24d00e081652c683174678110508123a44f1"
@@ -826,6 +866,11 @@
       "path": "docs/memory/RESILIENCE.md",
       "bytes": 3677,
       "sha256": "701428ed57672214a71da33b61453a0cedf74ee2ef1f269bcd97dbc161d4628f"
+    },
+    {
+      "path": "docs/memory/SIMULATIONS.md",
+      "bytes": 6942,
+      "sha256": "704e9b42508c319755659e87413f2c1a7058d5e1cee843b110220759a069de72"
     },
     {
       "path": "docs/memory/VALIDATION.json",
@@ -2369,8 +2414,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 13024,
-      "sha256": "153c2577338b699a16dfd301cf6c5f93d4f51cb746dd03c56a56e3bb17c11036"
+      "bytes": 13091,
+      "sha256": "58b11aed3b2b2cb5e015e473aa1b4a46c16084405c024c4a664ef0b95e0e2c80"
     },
     {
       "path": "ops/request-example.json",
@@ -4033,6 +4078,11 @@
       "sha256": "c954ea5fe7e76dfbad208ade99935b87080c61edec9f276f7925338dbbf9530c"
     },
     {
+      "path": "tests_agent/test_benchmarks.py",
+      "bytes": 4906,
+      "sha256": "0623343c9c4f9c479af95250f74ac101f3ca8bd1c88ed78221b213b620c56b60"
+    },
+    {
       "path": "tests_agent/test_compact_context.py",
       "bytes": 6729,
       "sha256": "c704f854da3c0e1becf5856c6069efc53fa7d09a046d0f1f2f8b747c2fd15a75"
@@ -4101,6 +4151,11 @@
       "path": "tools/audit_repository.py",
       "bytes": 937,
       "sha256": "c17763734617bb272b412bb94913aeb31dde88325bec57a419e9994846dda118"
+    },
+    {
+      "path": "tools/benchmark_jarvis.py",
+      "bytes": 1990,
+      "sha256": "fddb1f1277bf0ee974bbf60562dd8f6d016a8316a5cb6df26024d1a680bd7647"
     },
     {
       "path": "tools/check_startup.py",

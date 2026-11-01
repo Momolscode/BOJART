@@ -201,5 +201,10 @@
     "project": "bojart.jarvis",
     "collection": "canonical",
     "provenance": "Hardware reported by user and supplied photograph, 2026-11-02; sanitized facts with source IDs; proposed compact profile, no target inference or performance qualification."
+  },
+  {
+    "path": "docs/memory/SIMULATIONS.md",
+    "project": "bojart.jarvis",
+    "provenance": "Reproducible host measurements and explicit limits, 2026-11-02; raw reports and runtime/corpus fingerprints in docs/evidence/simulations-2026-11-02. No GPU or generative quality measured on the target."
   }
 ]
