@@ -34,8 +34,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 2121,
-      "sha256": "9908479c341ae6d22327f0e708df8f51c0cc6633d1247d4f7ed8e49053eb091c"
+      "bytes": 2344,
+      "sha256": "dabd9e26b318a291e2a1ad74d13d1ead7758bef17ddc1471264469b99878dc90"
     },
     {
       "path": "INSTALLER_DEMAIN.md",
@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3922,
-      "sha256": "5e230e9757264863f8a2a47dd7714e1d68c8e2ed1f838e22dc0e714b1c4075f1"
+      "bytes": 4151,
+      "sha256": "3082e3c4cbebf7c6f996eacfd8c98ae9dc638917b955dd901eebd2b52bf73c4e"
     },
     {
       "path": "SECURITY.md",
@@ -338,6 +338,11 @@
       "sha256": "f2bbc1c8329af615d4b4f3a33990c94777c47042e15969d196968f09ff7f4c9e"
     },
     {
+      "path": "docs/RECUPERATION_PARTIE_1_2026-11-01.md",
+      "bytes": 2286,
+      "sha256": "b9de469bfe65279404954eda9aea10f96739aa198b3e6d42ac25921c48a5428e"
+    },
+    {
       "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
       "bytes": 3693,
       "sha256": "ace7bf6d8886f88dbfdea83d32342ad2e2cacf34a6c3c6c9fe81b02948bb84d6"
@@ -391,6 +396,11 @@
       "path": "docs/evidence/ops-consolidated-tests.log",
       "bytes": 3733,
       "sha256": "27c4b2859d95a09e4b532352a54393468d81af077615fe5c2886ca5a25bbfa70"
+    },
+    {
+      "path": "docs/evidence/recovery-part-1-2026-11-01.json",
+      "bytes": 623,
+      "sha256": "07ee5aa7eae07f8762da84438d858a99d57fbc17154aed7252f51e758fabe8dd"
     },
     {
       "path": "docs/evidence/retrieval-2026-11-01.json",
