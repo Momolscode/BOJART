@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "20283c3136c66fbfca78a9e733b5c74bd5dfcf03",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/20283c3136c66fbfca78a9e733b5c74bd5dfcf03.continuation-studio.json",
+      "head_sha": "a0500b39ddf5a6154c701c225c5b2ad80767cc70",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/a0500b39ddf5a6154c701c225c5b2ad80767cc70.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
@@ -612,7 +612,7 @@
         "4be8480b653d98b4744b5a59ca89d2ee1d732d6e",
         "20283c3136c66fbfca78a9e733b5c74bd5dfcf03"
       ],
-      "updated_at": "2026-11-01T23:20:57.574Z"
+      "updated_at": "2026-11-01T23:29:38Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
