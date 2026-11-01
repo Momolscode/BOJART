@@ -172,7 +172,7 @@ class EnvironmentTests(unittest.TestCase):
 
     def test_saved_report_is_new_private_and_outside_repository(self):
         destination = self.root/'diagnostics/report.json'
-        self.assertEqual(cli.save_report({'fixture': True}, destination), destination)
+        self.assertEqual(cli.save_report({'fixture': True}, destination), destination.resolve())
         self.assertEqual(json.loads(destination.read_text()), {'fixture': True})
         if os.name != 'nt':
             self.assertEqual(destination.stat().st_mode & 0o777, 0o600)

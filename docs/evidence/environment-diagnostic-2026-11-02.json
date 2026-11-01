@@ -78,7 +78,7 @@
     "tools/start_jarvis.py": "721761e15ab2f18f96fe85923e07781579ca0c67323fc1a00a8a32fe611b0c44",
     "Diagnostic_BOJART.cmd": "8bb709f75beebd6e806ede7325d8cca345fdc6c52c3fc87b996f3262c4c727a5",
     "Diagnostic_BOJART.sh": "af6ebdb22bf94f11a668fc15d397cb32e368cfaff609dc4322ffd2cf5acb155a",
-    "tests/test_environment_diagnostic.py": "ad0ad89bb7e189b60bf5b64a3dc946783440160aea7099e9650797d706b9eccb",
+    "tests/test_environment_diagnostic.py": "04a660507feea53717d021120348bcdc4ff6c27260842c069a5d88a4a684581c",
     "docs/DIAGNOSTIC_OUTILS.md": "eff44742ae4df505d671c84436c5cdd786d7a6fd10740edcd78e6bda340539bb"
   },
   "target_hardware_qualified": false,
@@ -92,6 +92,12 @@
     "workflow_run": 41363090720,
     "failure": "Two new root diagnostic launchers were unclassified after manifest regeneration.",
     "fix": "Add Diagnostic_BOJART.* to the existing memory routing rule; retain the zero-unclassified assertion.",
-    "operations_suite_rerun_after_manifest_refresh": true
+    "operations_suite_rerun_after_manifest_refresh": true,
+    "windows_path_alias": {
+      "workflow_run": 41363100786,
+      "job_id": 125017480353,
+      "failure": "The test compared a resolved long Windows path with its short 8.3 alias.",
+      "fix": "Compare the returned canonical path with destination.resolve(); retain file-content, overwrite and repository-boundary checks."
+    }
   }
 }
