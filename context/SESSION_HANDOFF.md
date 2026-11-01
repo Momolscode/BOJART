@@ -53,3 +53,14 @@ Ajouts : registre des domaines et de dix tâches sourcées, planificateur en lec
 L’environnement local était indisponible pendant cette préparation ; la validation de ce changement passe par les contrôles GitHub de sa révision. Aucun nouveau test de modèle, navigateur, micro, écran ou imprimante n’est revendiqué. Les prochaines preuves restent l’inventaire de la tour, l’installation réelle et la source fidèle G2.
 
 Réconciliation avant publication : le correctif concurrent `461d46ff39caaf142ce37a3e0b78f22dfcc2e842` est conservé, notamment la diversification avant limite, les avertissements de sources absentes et ses tests de mémoire/interface. Il devient le parent du changement d’orchestration.
+## Résilience mémoire avant installation
+
+Base examinée : `5268e7e7b70fa25efee7d186f27cd3716a49c4c1`, dont les contrôles GitHub sont réussis. Le blocage des archives observé précédemment est résolu dans cette base.
+
+Renforcement : transaction unique pour chaque lot documentaire, points de sauvegarde pour les opérations imbriquées, lecture cohérente des faits et passages, recette du vrai lanceur après arrêt forcé. Aucun second magasin, changement de modèle ou raccordement machine. Voir `docs/memory/RESILIENCE.md`.
+
+L’environnement local a été interrompu pendant la préparation. Les nouveaux contrôles sont donc exécutés sur une branche isolée par GitHub Actions, sous Windows et Linux ; leurs résultats par commit servent de preuve. Ne pas assimiler ces essais de processus à une coupure électrique du poste.
+
+Réconciliation : les améliorations de diversité des sources et de signalement des preuves manquantes du commit `461d46ff39caaf142ce37a3e0b78f22dfcc2e842` sont conservées. Le premier passage des douze scénarios atomiques réussit sous Windows et Linux ; la recette du lanceur a exposé un serveur détaché sous Windows. Exécution dans le même processus ajoutée avant un nouveau passage complet.
+
+Validation : les contrôles du commit `d57330052b32cb5f638e841bdc086804cd65ede1` réussissent, y compris la recette réelle du lanceur sous Windows et Linux, l’arrêt forcé, le redémarrage et les douze scénarios atomiques. Preuve : https://github.com/Momolscode/BOJART/actions/runs/41357380816. Les ajouts d’orchestration jusqu’à `9f58fa29f0051cc8a7098855359a8a6dd0eef7e6` sont préservés dans cette consolidation.
