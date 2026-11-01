@@ -46,3 +46,5 @@ Les ajouts simultanés sont intégrés : [audit et journal des générations](do
 La [récupération étendue](docs/RECUPERATION_VERIFIEE_2026-11-01.md) décrit 3 340 contenus distincts et 6 445 emplacements. Leur présence sur les trois branches GitHub est désormais confirmée par une [restauration vérifiée](docs/evidence/recovery-resumption-2026-11-01.json). Ce périmètre ne certifie pas la récupération de toutes les conversations ni des fichiers du PC de l'atelier.
 
 Le [démarrage et la reprise de session](docs/DEMARRAGE_ET_REPRISE.md) ajoutent le contrôle des moteurs natifs, l’export de contexte avec provenance et une recette de redémarrage/restauration.
+
+Le [dossier d’audit Jarvis du 1 novembre 2026](docs/audits/jarvis-installation-2026-11-01/README.md) réunit le schéma d’orchestration, les résultats datés, leurs limites, une recette de reproduction et une mission à transmettre à un auditeur. Le [workflow du dossier](https://github.com/Momolscode/BOJART/actions/workflows/jarvis-audit-dossier.yml) produit son ZIP vérifié.

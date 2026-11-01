@@ -53,3 +53,7 @@ Ajouts : registre des domaines et de dix tâches sourcées, planificateur en lec
 L’environnement local était indisponible pendant cette préparation ; la validation de ce changement passe par les contrôles GitHub de sa révision. Aucun nouveau test de modèle, navigateur, micro, écran ou imprimante n’est revendiqué. Les prochaines preuves restent l’inventaire de la tour, l’installation réelle et la source fidèle G2.
 
 Réconciliation avant publication : le correctif concurrent `461d46ff39caaf142ce37a3e0b78f22dfcc2e842` est conservé, notamment la diversification avant limite, les avertissements de sources absentes et ses tests de mémoire/interface. Il devient le parent du changement d’orchestration.
+
+## Dossier d’audit Jarvis — 1 novembre 2026
+
+Publication demandée par l’utilisateur : [rapport, visuel et mission indépendante](../docs/audits/jarvis-installation-2026-11-01/README.md). Base rapprochée : `9f58fa29f0051cc8a7098855359a8a6dd0eef7e6`. Les versions, observations, sorties transcrites, limites et commandes sont consignées dans ce dossier. Le moteur et le matériel facultatifs restent à qualifier. Les journaux locaux complets sont indisponibles après déconnexion ; les contrôles distants sont attribués à leur propre SHA. Le workflow du dossier régénère le manifeste du dépôt, valide les empreintes et fournit un ZIP. Prochaine preuve : retour de l’auditeur sur la version choisie et le PC cible.
