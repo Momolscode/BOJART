@@ -1,0 +1,14 @@
+{
+  "job_id": "38729645-1659-463f-874b-22bbf447cee2",
+  "status": "completed",
+  "type": "video",
+  "model": "seedance_2_5",
+  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261030_223039_38729645-1659-463f-874b-22bbf447cee2.mp4",
+  "verification_date": "2026-11-01",
+  "verification_source": "Higgsfield.jobs_wait",
+  "binary_in_this_repository": false,
+  "visual_quality_validation": "not_performed",
+  "authentic_sculpture_reference_injected": false,
+  "source": "text-to-video",
+  "final_premium_master": false
+}
