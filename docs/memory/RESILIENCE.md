@@ -34,3 +34,5 @@ La seconde commande utilise des données temporaires, arrête de force le premie
 Le workflow [Jarvis agent memory](https://github.com/Momolscode/BOJART/actions/workflows/agent-memory.yml) exécute cette recette sous Windows et Linux. Le rapport JSON est conservé comme artefact `memory-restart-<système>` pendant 14 jours. Lire le résultat du commit concerné avant d’annoncer une validation.
 
 Un arrêt forcé de processus n’est pas une coupure électrique du PC. Le disque, les pilotes, le GPU, le micro et les imprimantes nécessitent leurs essais réels sur le poste BOJ.ART.
+
+Le test réel a également exposé le détachement du serveur par l’ancien appel `execve` sous Windows. Le lanceur Windows exécute maintenant le serveur dans son propre processus ; la recette contrôle le redémarrage sur le même état et la libération des fichiers temporaires.

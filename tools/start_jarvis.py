@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import runpy
 import subprocess
 import sys
 from pathlib import Path
@@ -85,6 +86,15 @@ def main():
     if args.no_browser:
         server.append('--no-browser')
     os.chdir(ROOT/'jarvis')
+    if os.name == 'nt':
+        # Windows execve starts a replacement process without preserving the
+        # launcher's lifetime. Keep the actual server in this process so a
+        # stop/restart cannot leave an untracked server and locked state.
+        os.environ.update(env)
+        sys.argv = server[1:]
+        sys.path.insert(0, str(Path(server[1]).parent))
+        runpy.run_path(server[1], run_name='__main__')
+        return 0
     os.execve(sys.executable, server, env)
 
 

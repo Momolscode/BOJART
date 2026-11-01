@@ -35,7 +35,11 @@ Le budget compte les caractères Unicode du champ `text`, pas les jetons d’un 
 
 Le téléchargement reste local et peut contenir tes données importées : vérifier son contenu avant partage. Changer de domaine ou de question invalide les anciens résultats. Une réponse tardive ne remplace pas le nouveau contexte.
 
-La recherche donne d’abord une place à chaque source distincte parmi les meilleurs candidats, puis complète avec les autres passages. Un long document ne remplit ainsi plus à lui seul toute la fenêtre de résultats. Les passages restent disponibles lorsque le budget le permet.
+La recherche donne d’abord une place aux sources distinctes, puis complète avec les autres passages. La sélection intervient avant la limite de passages, en recherche lexicale et sémantique, puis après leur fusion : un document long ne masque plus une source plus courte en remplissant une fenêtre intermédiaire. Le nombre final de résultats et le budget de contexte restent bornés ; cette diversification ne prouve pas la pertinence sémantique.
+
+Si une source retrouvée est absente ou altérée, son exclusion est signalée dans la recherche et le contexte. Une réponse du modèle sans citation reconnue est également signalée. Une citation reconnue n’est pas une validation de la réponse.
+
+La régression dédiée utilise deux documents synthétiques et plus de 200 passages, ainsi qu’un double d’embeddings sans appel de modèle : `python -m unittest discover -s tests_agent -p 'test_retrieval_diversity.py' -v`.
 
 ```bash
 python -m bojart_memory.agent_cli context "Que manque-t-il pour G2 ?" --project bojart.creative
@@ -59,3 +63,5 @@ Preuves : [startup-2026-11-01.json](evidence/startup-2026-11-01.json). Les essai
 Les imports documentaires sont désormais validés par lot complet. Une erreur conserve les références précédentes, et la construction d’un contexte utilise un même instantané pour ses faits et ses passages. Voir [la recette de résilience mémoire](memory/RESILIENCE.md).
 
 Pour simuler un arrêt forcé du processus avec des données temporaires : `python tools/check_startup.py --abrupt --output .bojart-audit/forced-restart.json`.
+
+Sous Windows, le serveur reste dans le processus du lanceur. La recette d’arrêt forcé vérifie sa fermeture et la réouverture du même dossier, sans serveur orphelin.

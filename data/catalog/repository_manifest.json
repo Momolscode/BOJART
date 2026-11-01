@@ -199,8 +199,8 @@
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 17355,
-      "sha256": "cc895a24160009b2acea38c38556d86564ff1a6e73d36147129e23981a130582"
+      "bytes": 17940,
+      "sha256": "2a421f6fbaafa248c2c423da89a8d48fd1ef8f103c0a38e02dc03f45ef0e0944"
     },
     {
       "path": "bojart_memory/agent_cli.py",
@@ -209,8 +209,8 @@
     },
     {
       "path": "bojart_memory/core.py",
-      "bytes": 19446,
-      "sha256": "48b7f504ce1151a7652bb575226b2dede84dc8f7f31bef0bc80f8926f1284626"
+      "bytes": 19605,
+      "sha256": "45384ba83825905b17cd85b33a8549d77d16da19e8c2e1d93e32e01ab86db7a7"
     },
     {
       "path": "bojart_memory/http_api.py",
@@ -269,8 +269,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 8152,
-      "sha256": "3b51fd2270eb68f10185d581fb4eb366bc700a97b1fcb493e5ddf1aa2ffdb353"
+      "bytes": 8556,
+      "sha256": "07ddb041660efde089ba9b895f7841e6ea5272fba1411beb764cd6658c798c78"
     },
     {
       "path": "creative/CURRENT.md",
@@ -414,8 +414,8 @@
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
-      "bytes": 4966,
-      "sha256": "6a39c4f148e5fe5470486ed74226701365c9b2eb5381ca844a1f068441c9064c"
+      "bytes": 5793,
+      "sha256": "c7ef0dc947213311a354a5e00c6162c0f8f6434ff49f7f27ae48a4b4dcbea7ac"
     },
     {
       "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
@@ -649,8 +649,8 @@
     },
     {
       "path": "docs/memory/RESILIENCE.md",
-      "bytes": 3392,
-      "sha256": "f0f38210e9f60b5560d58fcda6257e5810b7d17e17362d587e7664415a5db991"
+      "bytes": 3677,
+      "sha256": "701428ed57672214a71da33b61453a0cedf74ee2ef1f269bcd97dbc161d4628f"
     },
     {
       "path": "docs/memory/VALIDATION.json",
@@ -949,8 +949,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.js",
-      "bytes": 5930,
-      "sha256": "6145c39ae61d181e4962608cf9525916b49ec3b39bb2d7a1a3eac502f7668c22"
+      "bytes": 6384,
+      "sha256": "24b3463eb8d275b99fa945359b2f55659709d2203c7360364d8ed28ea8d27276"
     },
     {
       "path": "jarvis/apps/jarvis/app/proposals.py",
@@ -1979,8 +1979,8 @@
     },
     {
       "path": "jarvis/tests/memory_context.test.cjs",
-      "bytes": 4841,
-      "sha256": "f224eb7598a49f21330ba9bdfb431a611f281b4f79b7a7906ee0084e40ad57e4"
+      "bytes": 6235,
+      "sha256": "5f25d6b470133b62ede23d3f9f831f9ec0bbbe88afc6f2394ce15fc9a4ffd794"
     },
     {
       "path": "jarvis/tests/test_connection_lifetime.py",
@@ -3803,6 +3803,11 @@
       "sha256": "0fce26ac9126272b47db0a7393c8a8d00e1d78555da5adcd433cde7cd6c29e5e"
     },
     {
+      "path": "tests_agent/test_retrieval_diversity.py",
+      "bytes": 4682,
+      "sha256": "8062a3c9fab47d4fea41aaac0542586a98c5408c440444b433281b055374f2ac"
+    },
+    {
       "path": "tests_ops/test_archive_restore.py",
       "bytes": 5014,
       "sha256": "1c85859de6aa7145a6632313d792ebb72aefdec91dc6cf8949730dd4928d49cc"
@@ -3819,8 +3824,8 @@
     },
     {
       "path": "tools/check_startup.py",
-      "bytes": 7980,
-      "sha256": "4a47dbc7735a7ab74fb4a486e8c500dded78ee1328a565bfa6520299995b87e1"
+      "bytes": 8047,
+      "sha256": "d94d64ed1d71455d694ec06f75f688e6f57b3cb5f49d151324bea6fc504bb6a6"
     },
     {
       "path": "tools/doctor.py",
@@ -3874,8 +3879,8 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 4436,
-      "sha256": "507e24bb56eec89f12733ebd709fafb276a256477e0e1952dc7e2fc4e0fa9fc4"
+      "bytes": 4888,
+      "sha256": "8261902e710dfd022f88e9dfd3f26b33ccfd530438888e920ad93b3b3a58f87d"
     },
     {
       "path": "tools/validate_repository.py",

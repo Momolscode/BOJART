@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 from contextlib import nullcontext
 
-from .core import Memory, MemoryError, PROJECTS, canonical, file_sha, now, project_ok
+from .core import Memory, MemoryError, PROJECTS, canonical, distinct_sources, file_sha, now, project_ok
 from .paths import default_state
 from .ollama import Ollama
 from .vectors import cosine, validate_vector
@@ -145,6 +145,7 @@ class AgentMemory:
             raise MemoryError('Recherche hors limites.')
         with (nullcontext(_memory) if _memory is not None else Memory(self.state, readonly=True)) as m:
             lexical = m.search(query, project=project, limit=30)
+            warnings = list(lexical['warnings'])
             lexical_rows = [r for r in lexical['results'] if r['source_path'] != 'data/knowledge/claims.jsonl']
             semantic_rows, semantic_status = [], 'disabled'
             embedder = embedder or self.embedder()
@@ -160,16 +161,23 @@ class AgentMemory:
                     semantic_status = 'ready' if rows and len(rows) == total else 'partial_index' if rows else 'not_indexed'
                     ranked = sorted(((cosine(vector, json.loads(r['vector'])), dict(r)) for r in rows), key=lambda x: x[0], reverse=True)
                     checked = {}
-                    for score, r in ranked[:40]:
-                        if score <= 0:
-                            continue
-                        h = r['sha256']
-                        if h not in checked:
-                            p = m._object(h)
-                            checked[h] = p.is_file() and not p.is_symlink() and file_sha(p) == h
-                        if checked[h]:
-                            r.pop('vector'); r['source_bytes_verified'] = True; r['current_version'] = True
-                            semantic_rows.append(r)
+                    def verified_semantic_rows():
+                        for score, r in ranked:
+                            if score <= 0:
+                                continue
+                            h = r['sha256']
+                            if h not in checked:
+                                p = m._object(h)
+                                checked[h] = p.is_file() and not p.is_symlink() and file_sha(p) == h
+                                warning = {'sha256': h, 'reason': 'source_missing_or_changed'}
+                                if not checked[h] and warning not in warnings:
+                                    warnings.append(warning)
+                            if checked[h]:
+                                r.pop('vector')
+                                r['source_bytes_verified'] = True
+                                r['current_version'] = True
+                                yield r
+                    semantic_rows = distinct_sources(verified_semantic_rows(), 30)
                 except (ValueError, OSError, KeyError, TypeError) as e:
                     semantic_status = 'unavailable: ' + type(e).__name__
             scores, candidates = {}, {}
@@ -179,8 +187,9 @@ class AgentMemory:
                     key = row['version_id'] + ':' + str(row['start_line']) + ':' + sha(row['text'])[:12]
                     scores[key] = scores.get(key, 0) + 1 / (60 + position)
                     candidates[key] = {**row, 'citation': key}
-            hits = [candidates[key] for key in sorted(scores, key=lambda k: (-scores[k], k))[:limit]]
-        return {**lexical, 'results': hits, 'semantic_status': semantic_status,
+            ranking = (candidates[key] for key in sorted(scores, key=lambda k: (-scores[k], k)))
+            hits = distinct_sources(ranking, limit)
+        return {**lexical, 'results': hits, 'warnings': warnings, 'semantic_status': semantic_status,
                 'retrieval': 'bm25+rrf' if semantic_rows else 'sqlite_fts5_bm25'}
 
     def context(self, query, project, max_chars=14000):
