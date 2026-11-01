@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT))
 from bojart_ops.audit import strict_json
 from bojart_ops.orchestration import markdown, plan
 from bojart_ops.qualification import load_qualification
+from bojart_ops.production_recovery import load_production
 
 LIMIT = 16 * 1024 * 1024
 
@@ -47,6 +48,9 @@ def main():
     qualification = load_qualification(ROOT, audit, config)
     if qualification is not None:
         report["qualification"] = qualification
+    production = load_production(ROOT, audit, config)
+    if production is not None:
+        report["production_recovery"] = production
     report["input_sha256"] = {"audit": audit_sha, "configuration": config_sha,
                               "checkpoint": checkpoint_sha}
     output = args.output.resolve()
@@ -66,6 +70,8 @@ def main():
     print(json.dumps(report["summary"], ensure_ascii=False))
     if qualification is not None:
         print(json.dumps({"qualification_dependencies": qualification["summary"]}))
+    if production is not None:
+        print(json.dumps({"production_recovery": production["summary"]}))
     print(json.dumps({"checkpoint_state": report["context_audit"]["state"],
                       "same_revision": report["context_audit"]["same_revision"],
                       "tasks_executed": 0}))

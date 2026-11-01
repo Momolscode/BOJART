@@ -174,6 +174,11 @@
     "provenance": "Local model configuration, metadata-only diagnostics and lexical fallback implementation; official Ollama API checked 2026-11-01. No inference or target-hardware qualification."
   },
   {
+    "path": "docs/creative/RECUPERATION_PRODUCTION.md",
+    "project": "bojart.creative",
+    "provenance": "Current production reconstruction procedure; exact asset hashes, isolated workspace and explicit separation from artistic approval. See production-recovery-2026-11-02 evidence."
+  },
+  {
     "path": "docs/memory/INSTALLATION_MODELES.md",
     "project": "bojart.jarvis",
     "collection": "canonical",

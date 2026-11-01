@@ -113,6 +113,12 @@ Six nouveaux tests couvrent le refus des anciennes demandes, les nouvelles deman
 
 Rapprochement du pilotage : le correctif de restauration `9c2a0fb47baf1b610e31d2deb800a5323bb9495e` est conservé avec ses six scénarios. La preuve d’orchestration est actualisée sur le corpus et le code réunis.
 
+## Sources de production reliées aux archives — 2 novembre 2026
+
+Base rapprochée : `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, après les correctifs de modèles locaux et de sélection Studio/Growth. Le rapprochement par empreinte identifie les cinq médias R03 dans la collecte initiale ; leurs noms de stockage différaient des chemins attendus par le montage. Le plan expose ce lien, et `tools/prepare_production.py` prépare une copie de travail externe vérifiée avec les recettes courantes.
+
+Les originaux et les anciennes versions sont préservés. Aucune génération, publication ou validation artistique n'est ajoutée ; TEST19 reste provisoire et G2 manque toujours. Guide : `docs/creative/RECUPERATION_PRODUCTION.md`. Recette, empreintes et limites : `docs/evidence/production-recovery-2026-11-02.json`.
+
 ## Modèles facultatifs et premier lancement
 
 Base examinée : `0a7a08dd0a0bed445ef0dc5734be7c841b30467a`, contrôles GitHub réussis. Demande : continuer la préparation de Jarvis.
@@ -145,6 +151,8 @@ Les contrôles avec serveur local simulé vérifient erreurs, changements de tag
 
 Réconciliation : les améliorations concurrentes du Studio/Growth et leurs treize tests d’interface, publiées au commit `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, sont conservées.
 
+Réconciliation du raccordement des médias : la préparation des profils locaux et le contrôle des identités de modèles publiés à `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont préservés. Les sélections documentaires des deux contributions sont réunies par projet et chemin.
+
 ## Suite de l’audit : lanceurs historiques — 2 novembre 2026
 
 Base examinée : `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`. Les contrôles GitHub de cette base et le reçu Studio/Growth `870896c1f1f313ce64479894a1d174fc34073808` sont réussis.
@@ -154,6 +162,8 @@ Défauts reproduits : les lanceurs de `jarvis/` et `jarvis/apps/jarvis/` démarr
 Validation locale : dix tests exécutent les vrais scripts contre des programmes Python de contrôle et des environnements isolés, sans installation de dépendances ni accès réseau. Ils vérifient les arguments, les espaces/accents, la sélection Python, le choix de dossier et les erreurs. Quatre contrôles HTTP supplémentaires vérifient le téléchargement exact d'une sauvegarde, sa restauration dans un nouveau dossier, les accès authentifiés et les longueurs de réponse ; cette voie existante fonctionne sans correction du serveur. Deux appels réels `--check-only` par les anciens lanceurs atteignent le diagnostic complet sans créer d'état ni appeler de fournisseur. La suite racine compte maintenant 66 tests, exécutés automatiquement sous Ubuntu et Windows ; ses résultats distants et la portée exacte sont consignés dans le reçu d'audit. Ces essais ne qualifient ni le poste cible ni ses moteurs optionnels.
 
 Réconciliation avant publication : les profils de modèles et le contrôle d’identité pendant l’inférence du commit `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont conservés. Les documents communs ont été fusionnés ; le manifeste repart de cette nouvelle tête.
+
+Raccordement des médias : les lanceurs unifiés et les contrôles de téléchargement de sauvegarde, rapprochés jusqu’à `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Les essais des deux contributions sont relancés ensemble.
 
 ## Adaptation au poste RTX 4060 Ti — 2 novembre 2026
 
@@ -166,3 +176,5 @@ Le contexte de conversation réserve la place de la question, des instructions e
 Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `POSTE_RTX4060TI.md`, qui rassemble le GPU rapporté et les inconnues du parc. Son ancienne source attendue, le résumé `CURRENT.md`, a reculé au classement après l'ajout de ce guide ; la question et le seuil de cinq résultats restent inchangés. Le journal historique conserve les anciennes inconnues à leur date ; seul l'état courant est actualisé.
 
 Réconciliation avant publication : les corrections des lanceurs historiques et leurs quatorze tests, publiés sur `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Le guide d'installation et le journal ont été réunis ; le manifeste repart de cette tête.
+
+Réconciliation du dossier de production : les informations matérielles sourcées, l’installeur RTX 4060 Ti et les contrôles de contexte compact du commit `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` sont conservés avec la reconstruction des cinq médias R03. Le correctif de simulation de collision de dossiers est passé sous Windows et Linux au commit `0d853787285142292a70850a1e38c49ce45b385e`. Les contrôles de l’ensemble réuni sont consignés dans la preuve de récupération.

@@ -16,3 +16,5 @@ Exigences : sujet animé, contacts/profondeur crédibles, raccords motivés, ryt
 Ces caractéristiques viennent de `../productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json`. Elles ne sont pas une nouvelle analyse perceptuelle de cette consolidation. Aucun master final approuvé. Aucun nouveau rendu payant ni publication.
 
 Le pack original version 2 conserve vidéos, sons, scripts, références et contrôles. Le dépôt conserve les recettes textuelles et leurs références. Provenance : `data/knowledge/sources.json` et `data/catalog/assets.jsonl`.
+
+Les cinq médias de la recette R03 peuvent être replacés automatiquement dans un dossier de travail externe à partir de la collecte restaurée, avec contrôle de leurs empreintes et copie des recettes actuelles. Voir `docs/creative/RECUPERATION_PRODUCTION.md`. Cette préparation conserve le rôle provisoire de TEST19 et ne remplace pas le plan G2 fidèle.
