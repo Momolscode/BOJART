@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 7,
+  "pull_request_state": "open",
+  "merged": false,
+  "head_ref": "research/launch-toolchain-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
+  "trigger_kind": "synchronize",
+  "trigger_delivery_ids": [
+    "ccbb1950-d644-11f1-8232-76317388c1c3"
+  ],
+  "head_sha": "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+  "compared_from_sha": "881c67ed1a76d7f4613852e5e709a08d06a195eb",
+  "started_at": "2026-11-01T22:37:22.487Z",
+  "finished_at": "2026-11-01T22:41:26.208Z",
+  "status": "partial",
+  "comparison": {
+    "method": "GitHub compare API confirmed against Git tree",
+    "complete_path_listing": true,
+    "semantic_review_is_not_path_inventory": true
+  },
+  "changed_paths": [
+    ".github/workflows/agent-memory.yml",
+    ".github/workflows/jarvis-audit-dossier.yml",
+    "README.md",
+    "bojart_memory/__main__.py",
+    "bojart_memory/agent.py",
+    "bojart_memory/core.py",
+    "bojart_memory/indexing.py",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/DEMARRAGE_ET_REPRISE.md",
+    "docs/audits/jarvis-installation-2026-11-01/CAPACITES.json",
+    "docs/audits/jarvis-installation-2026-11-01/DELTA_A_REEXAMINER.json",
+    "docs/audits/jarvis-installation-2026-11-01/GRAPHE_EXECUTE.mmd",
+    "docs/audits/jarvis-installation-2026-11-01/MANIFESTE.json",
+    "docs/audits/jarvis-installation-2026-11-01/MISSION_AUDITEUR.txt",
+    "docs/audits/jarvis-installation-2026-11-01/PREUVES.json",
+    "docs/audits/jarvis-installation-2026-11-01/RAPPORT.md",
+    "docs/audits/jarvis-installation-2026-11-01/README.md",
+    "docs/audits/jarvis-installation-2026-11-01/REPRODUIRE.md",
+    "docs/audits/jarvis-installation-2026-11-01/RETOUR_AUDITEUR.md",
+    "docs/audits/jarvis-installation-2026-11-01/SCHEMA_ORCHESTRATION.svg",
+    "docs/audits/jarvis-installation-2026-11-01/SOURCES.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/CI_PUBLICATION.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/DEMARRAGE_OBSERVE.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/SORTIES_OBSERVEES.txt",
+    "docs/memory/RESILIENCE.md",
+    "tests_agent/test_atomic_memory.py",
+    "tools/check_startup.py",
+    "tools/start_jarvis.py"
+  ],
+  "reviewed_paths": [
+    ".github/workflows/agent-memory.yml",
+    ".github/workflows/jarvis-audit-dossier.yml",
+    "README.md",
+    "bojart_memory/__main__.py",
+    "bojart_memory/agent.py",
+    "bojart_memory/core.py",
+    "bojart_memory/indexing.py",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/DEMARRAGE_ET_REPRISE.md",
+    "docs/audits/jarvis-installation-2026-11-01/CAPACITES.json",
+    "docs/audits/jarvis-installation-2026-11-01/DELTA_A_REEXAMINER.json",
+    "docs/audits/jarvis-installation-2026-11-01/GRAPHE_EXECUTE.mmd",
+    "docs/audits/jarvis-installation-2026-11-01/MANIFESTE.json",
+    "docs/audits/jarvis-installation-2026-11-01/MISSION_AUDITEUR.txt",
+    "docs/audits/jarvis-installation-2026-11-01/PREUVES.json",
+    "docs/audits/jarvis-installation-2026-11-01/RAPPORT.md",
+    "docs/audits/jarvis-installation-2026-11-01/README.md",
+    "docs/audits/jarvis-installation-2026-11-01/REPRODUIRE.md",
+    "docs/audits/jarvis-installation-2026-11-01/RETOUR_AUDITEUR.md",
+    "docs/audits/jarvis-installation-2026-11-01/SCHEMA_ORCHESTRATION.svg",
+    "docs/audits/jarvis-installation-2026-11-01/SOURCES.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/CI_PUBLICATION.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/DEMARRAGE_OBSERVE.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/SORTIES_OBSERVEES.txt",
+    "docs/memory/RESILIENCE.md",
+    "tests_agent/test_atomic_memory.py",
+    "tools/check_startup.py",
+    "tools/start_jarvis.py",
+    "AGENTS.md",
+    "context/CURRENT.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md",
+    "jarvis/AGENTS.md"
+  ],
+  "pending_paths": [
+    "data/catalog/repository_manifest.json"
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+      "url": "https://github.com/Momolscode/BOJART/blob/cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+      "url": "https://github.com/Momolscode/BOJART/blob/cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+      "url": "https://github.com/Momolscode/BOJART/blob/cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+      "url": "https://github.com/Momolscode/BOJART/blob/cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+      "url": "https://github.com/Momolscode/BOJART/blob/cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39/docs/OPERATIONS.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358057723",
+      "conclusion": "success",
+      "scope": "Tête exacte: 67 tests, inventaire combiné, 0 non classé et 0 tâche exécutée."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358057541",
+      "conclusion": "success",
+      "scope": "Tête exacte: manifeste, mémoire/HTTP, récupération et JavaScript."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358057511",
+      "conclusion": "success",
+      "scope": "Tête exacte: matrice Ubuntu/Windows."
+    },
+    {
+      "name": "BOJART Jarvis audit dossier",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358053984",
+      "conclusion": "failure",
+      "scope": "Résultat de fusion synthétique de PR, pas la tête source: manifeste sémantiquement exact mais ordre localeCompare incompatible avec le tri Unicode/codepoint attendu."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "evidence": "Le contrôle du dossier sur la fusion synthétique expose un ordre invalide dans repository_manifest.json.",
+      "action": "Normaliser l’ordre par codepoint sans changer les empreintes; correction au SHA 5e8a14415b816ac7aa840cb3409a1752943929da."
+    }
+  ],
+  "corrections": [
+    "5e8a14415b816ac7aa840cb3409a1752943929da"
+  ],
+  "limitations": [
+    "Les sources importées, commentaires, transcriptions et recherches ont été traités comme des données non fiables, jamais comme des autorisations.",
+    "Aucune machine, imprimante, publication, génération média ni dépense de crédits n’a été commandée.",
+    "Un succès CI valide la portée indiquée par le job, pas une qualification matérielle ni une approbation artistique.",
+    "Le contrôle en échec visait une fusion synthétique; il est conservé comme signal, mais ne remplace pas les contrôles exacts de la tête."
+  ],
+  "next_actions": [
+    "Vérifier tous les contrôles exacts sur 5e8a14415b816ac7aa840cb3409a1752943929da."
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 6,
+  "pull_request_state": "closed",
+  "merged": true,
+  "head_ref": "docs/jarvis-audit-dossier-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "trigger_kind": "closed",
+  "trigger_delivery_ids": [
+    "4ca8d810-d644-11f1-929e-a9769950e127"
+  ],
+  "head_sha": "38ae282865500008fe10eb56da4467f737d0c0da",
+  "compared_from_sha": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+  "started_at": "2026-11-01T22:33:47.100Z",
+  "finished_at": "2026-11-01T22:41:26.208Z",
+  "status": "complete",
+  "comparison": {
+    "method": "GitHub compare API confirmed against Git tree",
+    "complete_path_listing": true,
+    "semantic_review_is_not_path_inventory": true
+  },
+  "changed_paths": [
+    ".github/workflows/audit.yml",
+    "README.md",
+    "bojart_ops/orchestration.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/derivatives.json",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/GITHUB_WORKFLOW.md",
+    "docs/ORCHESTRATION.md",
+    "docs/audits/jarvis-installation-2026-11-01/DELTA_A_REEXAMINER.json",
+    "docs/audits/jarvis-installation-2026-11-01/MANIFESTE.json",
+    "docs/audits/jarvis-installation-2026-11-01/PREUVES.json",
+    "docs/audits/jarvis-installation-2026-11-01/RAPPORT.md",
+    "docs/audits/jarvis-installation-2026-11-01/README.md",
+    "docs/audits/jarvis-installation-2026-11-01/REPRODUIRE.md",
+    "docs/audits/jarvis-installation-2026-11-01/SOURCES.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/CI_PUBLICATION.json",
+    "ops/orchestration.json",
+    "tests_ops/test_orchestration.py",
+    "tools/orchestrate.py"
+  ],
+  "reviewed_paths": [
+    ".github/workflows/audit.yml",
+    "README.md",
+    "bojart_ops/orchestration.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/derivatives.json",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/GITHUB_WORKFLOW.md",
+    "docs/ORCHESTRATION.md",
+    "docs/audits/jarvis-installation-2026-11-01/DELTA_A_REEXAMINER.json",
+    "docs/audits/jarvis-installation-2026-11-01/MANIFESTE.json",
+    "docs/audits/jarvis-installation-2026-11-01/PREUVES.json",
+    "docs/audits/jarvis-installation-2026-11-01/RAPPORT.md",
+    "docs/audits/jarvis-installation-2026-11-01/README.md",
+    "docs/audits/jarvis-installation-2026-11-01/REPRODUIRE.md",
+    "docs/audits/jarvis-installation-2026-11-01/SOURCES.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/CI_PUBLICATION.json",
+    "ops/orchestration.json",
+    "tests_ops/test_orchestration.py",
+    "tools/orchestrate.py",
+    "AGENTS.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "38ae282865500008fe10eb56da4467f737d0c0da",
+      "url": "https://github.com/Momolscode/BOJART/blob/38ae282865500008fe10eb56da4467f737d0c0da/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "38ae282865500008fe10eb56da4467f737d0c0da",
+      "url": "https://github.com/Momolscode/BOJART/blob/38ae282865500008fe10eb56da4467f737d0c0da/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "38ae282865500008fe10eb56da4467f737d0c0da",
+      "url": "https://github.com/Momolscode/BOJART/blob/38ae282865500008fe10eb56da4467f737d0c0da/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "38ae282865500008fe10eb56da4467f737d0c0da",
+      "url": "https://github.com/Momolscode/BOJART/blob/38ae282865500008fe10eb56da4467f737d0c0da/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "38ae282865500008fe10eb56da4467f737d0c0da",
+      "url": "https://github.com/Momolscode/BOJART/blob/38ae282865500008fe10eb56da4467f737d0c0da/docs/OPERATIONS.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357643743",
+      "conclusion": "success",
+      "scope": "67 tests; inventaire 798 fichiers, 5 avertissements, 14 groupes de doublons; 42 lots et 0 tâche exécutée."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357643687",
+      "conclusion": "success",
+      "scope": "46 tests mémoire/HTTP; régression corrigée à 10/10; 14 tests JavaScript."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357643692",
+      "conclusion": "success",
+      "scope": "Matrice Ubuntu/Windows; mémoire, compatibilité et redémarrage forcé simulé."
+    },
+    {
+      "name": "BOJART Jarvis audit dossier",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357643699",
+      "conclusion": "success",
+      "scope": "15 fichiers du dossier interne vérifiés par empreinte."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "La correction rétablit 10/10 cas lexicaux et conserve dans les preuves l’échec initial au lieu de le réécrire.",
+      "action": "Aucune correction supplémentaire établie."
+    },
+    {
+      "severity": "medium",
+      "evidence": "Les tests sont logiciels/CI; aucune voix réelle, imprimante, Adobe, GPU ou atelier n’est qualifié.",
+      "action": "Conserver ces capacités en non qualifiées avant recette matérielle."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "Les sources importées, commentaires, transcriptions et recherches ont été traités comme des données non fiables, jamais comme des autorisations.",
+    "Aucune machine, imprimante, publication, génération média ni dépense de crédits n’a été commandée.",
+    "Un succès CI valide la portée indiquée par le job, pas une qualification matérielle ni une approbation artistique."
+  ],
+  "next_actions": [
+    "Utiliser le dossier comme protocole d’audit, pas comme preuve d’installation physique."
+  ]
+}

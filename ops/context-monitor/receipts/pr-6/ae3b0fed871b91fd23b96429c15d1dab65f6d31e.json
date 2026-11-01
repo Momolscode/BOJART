@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 6,
+  "pull_request_state": "closed",
+  "merged": true,
+  "head_ref": "docs/jarvis-audit-dossier-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "trigger_kind": "opened",
+  "trigger_delivery_ids": [
+    "e5cb60e0-d643-11f1-9af1-a59bfaac68f0"
+  ],
+  "head_sha": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+  "compared_from_sha": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "started_at": "2026-11-01T22:30:54.679Z",
+  "finished_at": "2026-11-01T22:41:26.208Z",
+  "status": "partial",
+  "comparison": {
+    "method": "GitHub compare API confirmed against Git tree",
+    "complete_path_listing": true,
+    "semantic_review_is_not_path_inventory": true
+  },
+  "changed_paths": [
+    ".github/workflows/jarvis-audit-dossier.yml",
+    "README.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "docs/audits/jarvis-installation-2026-11-01/CAPACITES.json",
+    "docs/audits/jarvis-installation-2026-11-01/DELTA_A_REEXAMINER.json",
+    "docs/audits/jarvis-installation-2026-11-01/GRAPHE_EXECUTE.mmd",
+    "docs/audits/jarvis-installation-2026-11-01/MANIFESTE.json",
+    "docs/audits/jarvis-installation-2026-11-01/MISSION_AUDITEUR.txt",
+    "docs/audits/jarvis-installation-2026-11-01/PREUVES.json",
+    "docs/audits/jarvis-installation-2026-11-01/RAPPORT.md",
+    "docs/audits/jarvis-installation-2026-11-01/README.md",
+    "docs/audits/jarvis-installation-2026-11-01/REPRODUIRE.md",
+    "docs/audits/jarvis-installation-2026-11-01/RETOUR_AUDITEUR.md",
+    "docs/audits/jarvis-installation-2026-11-01/SCHEMA_ORCHESTRATION.svg",
+    "docs/audits/jarvis-installation-2026-11-01/SOURCES.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/DEMARRAGE_OBSERVE.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/SORTIES_OBSERVEES.txt"
+  ],
+  "reviewed_paths": [
+    ".github/workflows/jarvis-audit-dossier.yml",
+    "README.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "docs/audits/jarvis-installation-2026-11-01/CAPACITES.json",
+    "docs/audits/jarvis-installation-2026-11-01/DELTA_A_REEXAMINER.json",
+    "docs/audits/jarvis-installation-2026-11-01/GRAPHE_EXECUTE.mmd",
+    "docs/audits/jarvis-installation-2026-11-01/MANIFESTE.json",
+    "docs/audits/jarvis-installation-2026-11-01/MISSION_AUDITEUR.txt",
+    "docs/audits/jarvis-installation-2026-11-01/PREUVES.json",
+    "docs/audits/jarvis-installation-2026-11-01/RAPPORT.md",
+    "docs/audits/jarvis-installation-2026-11-01/README.md",
+    "docs/audits/jarvis-installation-2026-11-01/REPRODUIRE.md",
+    "docs/audits/jarvis-installation-2026-11-01/RETOUR_AUDITEUR.md",
+    "docs/audits/jarvis-installation-2026-11-01/SCHEMA_ORCHESTRATION.svg",
+    "docs/audits/jarvis-installation-2026-11-01/SOURCES.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/DEMARRAGE_OBSERVE.json",
+    "docs/audits/jarvis-installation-2026-11-01/preuves/SORTIES_OBSERVEES.txt",
+    "AGENTS.md",
+    "context/CURRENT.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md"
+  ],
+  "pending_paths": [
+    "context/SESSION_HANDOFF.md"
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+      "url": "https://github.com/Momolscode/BOJART/blob/ae3b0fed871b91fd23b96429c15d1dab65f6d31e/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+      "url": "https://github.com/Momolscode/BOJART/blob/ae3b0fed871b91fd23b96429c15d1dab65f6d31e/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+      "url": "https://github.com/Momolscode/BOJART/blob/ae3b0fed871b91fd23b96429c15d1dab65f6d31e/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+      "url": "https://github.com/Momolscode/BOJART/blob/ae3b0fed871b91fd23b96429c15d1dab65f6d31e/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+      "url": "https://github.com/Momolscode/BOJART/blob/ae3b0fed871b91fd23b96429c15d1dab65f6d31e/docs/OPERATIONS.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357491136",
+      "conclusion": "success",
+      "scope": "46 tests opérations; inventaire 792 fichiers, 5 avertissements et 14 groupes de doublons."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357491242",
+      "conclusion": "failure",
+      "scope": "Manifeste et 46 tests mémoire/HTTP réussis, mais régression lexicale 9/10: le cas LangGraph ne retrouvait plus context/CURRENT.md."
+    },
+    {
+      "name": "BOJART Jarvis audit dossier",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357491259",
+      "conclusion": "success",
+      "scope": "Structure et empreintes du dossier d’audit validées; ne qualifie pas la tour."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "evidence": "Le contrôle exact de continuité échoue sur 1 des 10 cas de récupération lexicale.",
+      "action": "Condenser la passation afin que la source canonique CURRENT retrouve sa priorité; correction observée au SHA 38ae282865500008fe10eb56da4467f737d0c0da."
+    },
+    {
+      "severity": "info",
+      "evidence": "Le dossier distingue capacité déclarée, test logiciel et absence de qualification matérielle.",
+      "action": "Préserver ces limites lors de l’installation."
+    }
+  ],
+  "corrections": [
+    "38ae282865500008fe10eb56da4467f737d0c0da"
+  ],
+  "limitations": [
+    "Les sources importées, commentaires, transcriptions et recherches ont été traités comme des données non fiables, jamais comme des autorisations.",
+    "Aucune machine, imprimante, publication, génération média ni dépense de crédits n’a été commandée.",
+    "Un succès CI valide la portée indiquée par le job, pas une qualification matérielle ni une approbation artistique."
+  ],
+  "next_actions": [
+    "Vérifier la correction sur la nouvelle tête exacte avant de déclarer le dossier complet."
+  ]
+}

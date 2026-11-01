@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 7,
+  "pull_request_state": "open",
+  "merged": false,
+  "head_ref": "research/launch-toolchain-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
+  "trigger_kind": "synchronize",
+  "trigger_delivery_ids": [
+    "f14b7350-d644-11f1-96ad-5ac5207e6e35"
+  ],
+  "head_sha": "5e8a14415b816ac7aa840cb3409a1752943929da",
+  "compared_from_sha": "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+  "started_at": "2026-11-01T22:38:23.489Z",
+  "finished_at": "2026-11-01T22:41:26.208Z",
+  "status": "complete",
+  "comparison": {
+    "method": "GitHub compare API confirmed against Git tree",
+    "complete_path_listing": true,
+    "semantic_review_is_not_path_inventory": true
+  },
+  "changed_paths": [
+    "data/catalog/repository_manifest.json"
+  ],
+  "reviewed_paths": [
+    "data/catalog/repository_manifest.json",
+    "AGENTS.md",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md",
+    "jarvis/AGENTS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "5e8a14415b816ac7aa840cb3409a1752943929da",
+      "url": "https://github.com/Momolscode/BOJART/blob/5e8a14415b816ac7aa840cb3409a1752943929da/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "5e8a14415b816ac7aa840cb3409a1752943929da",
+      "url": "https://github.com/Momolscode/BOJART/blob/5e8a14415b816ac7aa840cb3409a1752943929da/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "5e8a14415b816ac7aa840cb3409a1752943929da",
+      "url": "https://github.com/Momolscode/BOJART/blob/5e8a14415b816ac7aa840cb3409a1752943929da/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "5e8a14415b816ac7aa840cb3409a1752943929da",
+      "url": "https://github.com/Momolscode/BOJART/blob/5e8a14415b816ac7aa840cb3409a1752943929da/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "5e8a14415b816ac7aa840cb3409a1752943929da",
+      "url": "https://github.com/Momolscode/BOJART/blob/5e8a14415b816ac7aa840cb3409a1752943929da/docs/OPERATIONS.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358143654",
+      "conclusion": "success",
+      "scope": "67 tests; inventaire 808 fichiers, 5 avertissements, 14 groupes de doublons; 44 lots, 0 non classé, 0 tâche exécutée."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358143710",
+      "conclusion": "success",
+      "scope": "46 tests mémoire/HTTP; 14 cas lexicaux sélectionnés, sans évaluation de réponse générative; 14 tests JavaScript."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358143709",
+      "conclusion": "success",
+      "scope": "Ubuntu et Windows; mémoire/recherche, compatibilité, arrêt/redémarrage en état temporaire."
+    },
+    {
+      "name": "BOJART quality schema",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358143640",
+      "conclusion": "success",
+      "scope": "Schémas et manifeste vérifiés sur la tête exacte."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Le seul delta depuis cb8 est l’ordre du manifeste; toutes les empreintes et tailles restent cohérentes et les contrôles exacts réussissent.",
+      "action": "Aucune autre correction établie."
+    },
+    {
+      "severity": "medium",
+      "evidence": "La recherche décrit des outils et portes d’acceptation; elle n’installe ni ne qualifie la tour.",
+      "action": "Maintenir la séparation canonical/research et exécuter des essais bornés ultérieurs."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "Les sources importées, commentaires, transcriptions et recherches ont été traités comme des données non fiables, jamais comme des autorisations.",
+    "Aucune machine, imprimante, publication, génération média ni dépense de crédits n’a été commandée.",
+    "Un succès CI valide la portée indiquée par le job, pas une qualification matérielle ni une approbation artistique."
+  ],
+  "next_actions": [
+    "Attendre une décision de fusion utilisateur; ne pas fusionner automatiquement.",
+    "Qualifier les outils un par un sur le matériel avant promotion."
+  ]
+}

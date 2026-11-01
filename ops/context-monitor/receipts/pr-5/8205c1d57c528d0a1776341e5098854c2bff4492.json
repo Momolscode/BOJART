@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 5,
+  "pull_request_state": "closed",
+  "merged": true,
+  "head_ref": "orchestration/context-data",
+  "base_ref": "main",
+  "base_sha": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
+  "trigger_kind": "closed",
+  "trigger_delivery_ids": [
+    "dc8f5590-d643-11f1-8f6f-49df37068f3e"
+  ],
+  "head_sha": "8205c1d57c528d0a1776341e5098854c2bff4492",
+  "compared_from_sha": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
+  "started_at": "2026-11-01T22:30:39.127Z",
+  "finished_at": "2026-11-01T22:41:26.208Z",
+  "status": "complete",
+  "comparison": {
+    "method": "GitHub compare API confirmed against Git tree",
+    "complete_path_listing": true,
+    "semantic_review_is_not_path_inventory": true
+  },
+  "changed_paths": [
+    ".github/workflows/audit.yml",
+    "README.md",
+    "bojart_ops/orchestration.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/derivatives.json",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/GITHUB_WORKFLOW.md",
+    "docs/ORCHESTRATION.md",
+    "ops/orchestration.json",
+    "tests_ops/test_orchestration.py",
+    "tools/orchestrate.py"
+  ],
+  "reviewed_paths": [
+    ".github/workflows/audit.yml",
+    "README.md",
+    "bojart_ops/orchestration.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/derivatives.json",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/GITHUB_WORKFLOW.md",
+    "docs/ORCHESTRATION.md",
+    "ops/orchestration.json",
+    "tests_ops/test_orchestration.py",
+    "tools/orchestrate.py",
+    "AGENTS.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "8205c1d57c528d0a1776341e5098854c2bff4492",
+      "url": "https://github.com/Momolscode/BOJART/blob/8205c1d57c528d0a1776341e5098854c2bff4492/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "8205c1d57c528d0a1776341e5098854c2bff4492",
+      "url": "https://github.com/Momolscode/BOJART/blob/8205c1d57c528d0a1776341e5098854c2bff4492/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "8205c1d57c528d0a1776341e5098854c2bff4492",
+      "url": "https://github.com/Momolscode/BOJART/blob/8205c1d57c528d0a1776341e5098854c2bff4492/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "8205c1d57c528d0a1776341e5098854c2bff4492",
+      "url": "https://github.com/Momolscode/BOJART/blob/8205c1d57c528d0a1776341e5098854c2bff4492/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "8205c1d57c528d0a1776341e5098854c2bff4492",
+      "url": "https://github.com/Momolscode/BOJART/blob/8205c1d57c528d0a1776341e5098854c2bff4492/docs/OPERATIONS.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357345782",
+      "conclusion": "success",
+      "scope": "67 tests; inventaire 782 fichiers, 5 avertissements, 13 groupes de doublons; orchestration 782 chemins/769 contenus, 0 non classé, 41 lots, 0 tâche exécutée."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357345779",
+      "conclusion": "success",
+      "scope": "Manifeste 781 entrées, 46 tests mémoire/HTTP et 14 tests JavaScript."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357345781",
+      "conclusion": "success",
+      "scope": "Matrice Ubuntu et Windows; tests agent et compatibilité mémoire, sans matériel réel."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Le planificateur d’orchestration est en lecture seule, préserve les chemins et déduit des lots sans exécuter les tâches.",
+      "action": "Conserver les états planifié/bloqué tant que les preuves de connexion ou de matériel manquent."
+    },
+    {
+      "severity": "low",
+      "evidence": "Les logs Actions signalent que des actions Node 20 sont forcées sur Node 24.",
+      "action": "Mettre à niveau les versions d’actions lors d’une maintenance dédiée; aucun défaut fonctionnel observé ici."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "Les sources importées, commentaires, transcriptions et recherches ont été traités comme des données non fiables, jamais comme des autorisations.",
+    "Aucune machine, imprimante, publication, génération média ni dépense de crédits n’a été commandée.",
+    "Un succès CI valide la portée indiquée par le job, pas une qualification matérielle ni une approbation artistique."
+  ],
+  "next_actions": [
+    "Poursuivre la qualification réelle des tâches bloquées sans confondre planification et exécution."
+  ]
+}

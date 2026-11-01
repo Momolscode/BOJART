@@ -3,14 +3,13 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/461d46ff39caaf142ce37a3e0b78f22dfcc2e842.continuation-memory.json",
+      "head_sha": "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
         ".gitignore",
         "INSTALLER_DEMAIN.md",
-        "README.md",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
@@ -631,9 +630,13 @@
         "4873567fad40d2033005ec0fd7af05a11b0bc2fe",
         "a820f7a5d9bc21b9619746502f2adb9d578f7c3b",
         "3c288214539adf97381f6053b43225485a873b6a",
-        "461d46ff39caaf142ce37a3e0b78f22dfcc2e842"
+        "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
+        "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+        "241db66fcaf4ed602782d0fce1f6fb019c2e88b5",
+        "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
+        "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2"
       ],
-      "updated_at": "2026-11-01T22:28:32.139Z"
+      "updated_at": "2026-11-01T22:41:26.208Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
@@ -687,6 +690,43 @@
         "3c288214539adf97381f6053b43225485a873b6a"
       ],
       "updated_at": "2026-11-01T22:09:21.319Z"
+    },
+    "5": {
+      "head_sha": "8205c1d57c528d0a1776341e5098854c2bff4492",
+      "receipt_path": "ops/context-monitor/receipts/pr-5/8205c1d57c528d0a1776341e5098854c2bff4492.json",
+      "status": "complete",
+      "pending_paths": [],
+      "processed_correction_shas": [],
+      "updated_at": "2026-11-01T22:41:26.208Z"
+    },
+    "6": {
+      "head_sha": "38ae282865500008fe10eb56da4467f737d0c0da",
+      "receipt_path": "ops/context-monitor/receipts/pr-6/38ae282865500008fe10eb56da4467f737d0c0da.json",
+      "status": "complete",
+      "pending_paths": [],
+      "processed_correction_shas": [
+        "38ae282865500008fe10eb56da4467f737d0c0da"
+      ],
+      "updated_at": "2026-11-01T22:41:26.208Z"
+    },
+    "7": {
+      "head_sha": "5e8a14415b816ac7aa840cb3409a1752943929da",
+      "receipt_path": "ops/context-monitor/receipts/pr-7/5e8a14415b816ac7aa840cb3409a1752943929da.json",
+      "status": "complete",
+      "pending_paths": [],
+      "processed_correction_shas": [
+        "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+        "5e8a14415b816ac7aa840cb3409a1752943929da"
+      ],
+      "updated_at": "2026-11-01T22:41:26.208Z"
+    },
+    "8": {
+      "head_sha": "875e737671a62d97a246dfb565ec4843ce425b2e",
+      "receipt_path": "ops/context-monitor/receipts/pr-8/875e737671a62d97a246dfb565ec4843ce425b2e.json",
+      "status": "complete",
+      "pending_paths": [],
+      "processed_correction_shas": [],
+      "updated_at": "2026-11-01T22:41:26.208Z"
     }
   }
 }

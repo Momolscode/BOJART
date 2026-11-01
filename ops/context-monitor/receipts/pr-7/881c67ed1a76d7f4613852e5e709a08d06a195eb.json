@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 7,
+  "pull_request_state": "open",
+  "merged": false,
+  "head_ref": "research/launch-toolchain-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "trigger_kind": "opened",
+  "trigger_delivery_ids": [
+    "45455d50-d644-11f1-8ea2-d177858d189c"
+  ],
+  "head_sha": "881c67ed1a76d7f4613852e5e709a08d06a195eb",
+  "compared_from_sha": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "started_at": "2026-11-01T22:33:34.846Z",
+  "finished_at": "2026-11-01T22:41:26.208Z",
+  "status": "complete",
+  "comparison": {
+    "method": "GitHub compare API confirmed against Git tree",
+    "complete_path_listing": true,
+    "semantic_review_is_not_path_inventory": true
+  },
+  "changed_paths": [
+    "bojart_memory/__main__.py",
+    "bojart_memory/agent.py",
+    "bojart_memory/indexing.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "data/knowledge/retrieval_cases.json",
+    "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+    "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+    "docs/research/launch-toolchain-2026-11-01/README.md",
+    "docs/research/launch-toolchain-2026-11-01/SOURCE_SNAPSHOT.json",
+    "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+    "docs/research/launch-toolchain-2026-11-01/VALIDATION.json",
+    "jarvis/knowledge/growth/BRAND_CONTEXT.json",
+    "tests_agent/test_research_indexing.py",
+    "tools/evaluate_memory.py"
+  ],
+  "reviewed_paths": [
+    "bojart_memory/__main__.py",
+    "bojart_memory/agent.py",
+    "bojart_memory/indexing.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "data/knowledge/retrieval_cases.json",
+    "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+    "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+    "docs/research/launch-toolchain-2026-11-01/README.md",
+    "docs/research/launch-toolchain-2026-11-01/SOURCE_SNAPSHOT.json",
+    "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+    "docs/research/launch-toolchain-2026-11-01/VALIDATION.json",
+    "jarvis/knowledge/growth/BRAND_CONTEXT.json",
+    "tests_agent/test_research_indexing.py",
+    "tools/evaluate_memory.py",
+    "AGENTS.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md",
+    "jarvis/AGENTS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "881c67ed1a76d7f4613852e5e709a08d06a195eb",
+      "url": "https://github.com/Momolscode/BOJART/blob/881c67ed1a76d7f4613852e5e709a08d06a195eb/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "881c67ed1a76d7f4613852e5e709a08d06a195eb",
+      "url": "https://github.com/Momolscode/BOJART/blob/881c67ed1a76d7f4613852e5e709a08d06a195eb/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "881c67ed1a76d7f4613852e5e709a08d06a195eb",
+      "url": "https://github.com/Momolscode/BOJART/blob/881c67ed1a76d7f4613852e5e709a08d06a195eb/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "881c67ed1a76d7f4613852e5e709a08d06a195eb",
+      "url": "https://github.com/Momolscode/BOJART/blob/881c67ed1a76d7f4613852e5e709a08d06a195eb/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "881c67ed1a76d7f4613852e5e709a08d06a195eb",
+      "url": "https://github.com/Momolscode/BOJART/blob/881c67ed1a76d7f4613852e5e709a08d06a195eb/docs/OPERATIONS.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357716385",
+      "conclusion": "success",
+      "scope": "67 tests; inventaire 790 fichiers, 5 avertissements, 13 groupes de doublons; aucune tâche exécutée."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357716409",
+      "conclusion": "success",
+      "scope": "46 tests mémoire/HTTP; 14/14 cas de récupération citée; 14 tests JavaScript."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41357716348",
+      "conclusion": "success",
+      "scope": "Ubuntu et Windows; 44 tests agent/recherche et 46 tests de compatibilité par environnement."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "evidence": "Les 18 dépôts, 26 capacités, 14 besoins de données et 12 portes sont des propositions épinglées, pas des intégrations installées ni qualifiées.",
+      "action": "Conserver collection=research et les statuts not_run/not_verified jusqu’aux essais bornés."
+    },
+    {
+      "severity": "medium",
+      "evidence": "La branche est devenue en conflit après l’avancée concurrente de main.",
+      "action": "Réconcilier sans force en préservant les deux historiques; effectué aux SHA cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39 puis 5e8a14415b816ac7aa840cb3409a1752943929da."
+    }
+  ],
+  "corrections": [
+    "cb8f90ae3ae80ecd2079e1dc9592e8d18f360b39",
+    "5e8a14415b816ac7aa840cb3409a1752943929da"
+  ],
+  "limitations": [
+    "Les sources importées, commentaires, transcriptions et recherches ont été traités comme des données non fiables, jamais comme des autorisations.",
+    "Aucune machine, imprimante, publication, génération média ni dépense de crédits n’a été commandée.",
+    "Un succès CI valide la portée indiquée par le job, pas une qualification matérielle ni une approbation artistique."
+  ],
+  "next_actions": [
+    "Exécuter chaque porte d’acceptation séparément sur la tour; ne pas promouvoir les propositions en contexte canonique avant preuve."
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 8,
+  "pull_request_state": "closed",
+  "merged": true,
+  "head_ref": "recovery/deep-inventory-2026-11-01-v2",
+  "base_ref": "main",
+  "base_sha": "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
+  "trigger_kind": "closed",
+  "trigger_delivery_ids": [
+    "03f34c80-d645-11f1-82a8-732ec75361fe"
+  ],
+  "head_sha": "875e737671a62d97a246dfb565ec4843ce425b2e",
+  "compared_from_sha": "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
+  "started_at": "2026-11-01T22:38:54.229Z",
+  "finished_at": "2026-11-01T22:41:26.208Z",
+  "status": "complete",
+  "comparison": {
+    "method": "GitHub compare API confirmed against Git tree",
+    "complete_path_listing": true,
+    "semantic_review_is_not_path_inventory": true
+  },
+  "changed_paths": [
+    "README.md",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/claims.jsonl",
+    "data/knowledge/index.json",
+    "data/knowledge/sources.json",
+    "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+    "docs/evidence/deep-recovery-2026-11-01.json"
+  ],
+  "reviewed_paths": [
+    "README.md",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/claims.jsonl",
+    "data/knowledge/index.json",
+    "data/knowledge/sources.json",
+    "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+    "docs/evidence/deep-recovery-2026-11-01.json",
+    "AGENTS.md",
+    "docs/OPERATIONS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "875e737671a62d97a246dfb565ec4843ce425b2e",
+      "url": "https://github.com/Momolscode/BOJART/blob/875e737671a62d97a246dfb565ec4843ce425b2e/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "875e737671a62d97a246dfb565ec4843ce425b2e",
+      "url": "https://github.com/Momolscode/BOJART/blob/875e737671a62d97a246dfb565ec4843ce425b2e/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "875e737671a62d97a246dfb565ec4843ce425b2e",
+      "url": "https://github.com/Momolscode/BOJART/blob/875e737671a62d97a246dfb565ec4843ce425b2e/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "875e737671a62d97a246dfb565ec4843ce425b2e",
+      "url": "https://github.com/Momolscode/BOJART/blob/875e737671a62d97a246dfb565ec4843ce425b2e/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "875e737671a62d97a246dfb565ec4843ce425b2e",
+      "url": "https://github.com/Momolscode/BOJART/blob/875e737671a62d97a246dfb565ec4843ce425b2e/docs/OPERATIONS.md"
+    },
+    {
+      "path": "MANIFEST.json",
+      "sha": "81d43e7910f17ebb85fdccab244b3f53bf360f9d",
+      "url": "https://github.com/Momolscode/BOJART/blob/81d43e7910f17ebb85fdccab244b3f53bf360f9d/MANIFEST.json"
+    },
+    {
+      "path": "COVERAGE.json",
+      "sha": "81d43e7910f17ebb85fdccab244b3f53bf360f9d",
+      "url": "https://github.com/Momolscode/BOJART/blob/81d43e7910f17ebb85fdccab244b3f53bf360f9d/COVERAGE.json"
+    },
+    {
+      "path": "MEDIA_VALIDATION.json",
+      "sha": "81d43e7910f17ebb85fdccab244b3f53bf360f9d",
+      "url": "https://github.com/Momolscode/BOJART/blob/81d43e7910f17ebb85fdccab244b3f53bf360f9d/MEDIA_VALIDATION.json"
+    },
+    {
+      "path": "sources/generations-original-metadata.json",
+      "sha": "81d43e7910f17ebb85fdccab244b3f53bf360f9d",
+      "url": "https://github.com/Momolscode/BOJART/blob/81d43e7910f17ebb85fdccab244b3f53bf360f9d/sources/generations-original-metadata.json"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358054813",
+      "conclusion": "success",
+      "scope": "67 tests; inventaire 802 fichiers, 5 avertissements, 14 groupes de doublons; 42 lots, 0 non classé, 0 tâche exécutée."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358054843",
+      "conclusion": "success",
+      "scope": "46 tests mémoire/HTTP; 10 cas lexicaux sélectionnés, sans évaluation générative; 14 tests JavaScript."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358054893",
+      "conclusion": "success",
+      "scope": "Ubuntu et Windows; mémoire et redémarrage simulé."
+    },
+    {
+      "name": "BOJART quality schema",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41358054811",
+      "conclusion": "success",
+      "scope": "Manifeste et schémas sur la tête exacte."
+    },
+    {
+      "name": "Higgsfield job status reread",
+      "url": "higgsfield://authorized-connector",
+      "conclusion": "matched",
+      "scope": "76 fiches relues: 60 completed, 2 nsfw, 8 ip_detected, 6 failed; aucun écart avec l’archive; aucune génération ou relance."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "L’archive au commit 81d43e7910f17ebb85fdccab244b3f53bf360f9d contient 62 objets uniques, 390425092 octets, 85 blobs/parties, 62 enregistrements de validation tous valides; les noms content-addressed correspondent aux SHA-256.",
+      "action": "Préserver l’archive séparée de main et sa provenance."
+    },
+    {
+      "severity": "medium",
+      "evidence": "Les 76 statuts Higgsfield sont cohérents, mais completed signifie seulement résultat disponible, pas approbation artistique; 16 jobs restent refusés/échoués (2 nsfw, 8 ip_detected, 6 failed).",
+      "action": "Conserver ces refus et ne relancer aucun job sans décision explicite."
+    },
+    {
+      "severity": "medium",
+      "evidence": "Les conversations intégrales, les fichiers uniquement sur le PC, le maillage/rig G2 et la vidéo TikTok ciblée restent non récupérés ou non certifiés.",
+      "action": "Ne pas revendiquer l’exhaustivité; utiliser un export original et une recette atelier séparée si disponibles."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "Les sources importées, commentaires, transcriptions et recherches ont été traités comme des données non fiables, jamais comme des autorisations.",
+    "Aucune machine, imprimante, publication, génération média ni dépense de crédits n’a été commandée.",
+    "Un succès CI valide la portée indiquée par le job, pas une qualification matérielle ni une approbation artistique.",
+    "Les 390425092 octets n’ont pas été retéléchargés et réassemblés pendant ce passage; le manifeste, la couverture, les 62 validations et la preuve de restauration distante ont été relus et recoupés.",
+    "Les recherches Drive/Notion/Gmail rapportées restent des observations datées de la collecte, pas une preuve d’absence absolue."
+  ],
+  "next_actions": [
+    "Conserver l’archive sur sa branche dédiée.",
+    "Ne qualifier artistiquement que les médias explicitement revus par Morgan."
+  ]
+}
