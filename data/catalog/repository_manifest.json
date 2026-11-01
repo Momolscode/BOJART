@@ -289,8 +289,13 @@
     },
     {
       "path": "bojart_ops/orchestration.py",
-      "bytes": 13316,
-      "sha256": "29bdedb5f530b44bd73185f4a050a5ca9de7b103dc95e1ba90ba46673625411d"
+      "bytes": 14221,
+      "sha256": "691c3542bf52a4eee0402acf683e790f098d310bba04eea307bd17913813e41e"
+    },
+    {
+      "path": "bojart_ops/production_recovery.py",
+      "bytes": 9908,
+      "sha256": "43b9c5c650735150277c31a10d98139ac9a6fb1a0f6275663c2b14eba362ae52"
     },
     {
       "path": "bojart_ops/qualification.py",
@@ -309,13 +314,13 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 24428,
-      "sha256": "11a011ded139ee46b60d21b4f0a6fe0e02fc5a44b93069c6779d2184200baee7"
+      "bytes": 25537,
+      "sha256": "7b38f2c3f50716f1448ec1764d23f3fe062fe8bf74d8929005d079688225ffba"
     },
     {
       "path": "creative/CURRENT.md",
-      "bytes": 1742,
-      "sha256": "a328317fbb1d89aea822d54721b93d008cc181ae9595de10de420eba000e536e"
+      "bytes": 2104,
+      "sha256": "625b0d81507f0c9d744cec5869d4fbb703af59021ee5fcce146ae76c33822329"
     },
     {
       "path": "data/catalog/assets.jsonl",
@@ -409,8 +414,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 8797,
-      "sha256": "b24de4ccc7df581e08e5a734b63c39b1168aa1ac03f6c5998ebe7ae28d1d2344"
+      "bytes": 9093,
+      "sha256": "d592e416cfc66b6195d33d0000f161256388e625e48e900fd5181b1aa03eb4cb"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -484,8 +489,8 @@
     },
     {
       "path": "docs/ORCHESTRATION.md",
-      "bytes": 9488,
-      "sha256": "9e6e91acc35f2c72c0e8c27e3d8dbf2cff4f3443208263680d9b5e132335c049"
+      "bytes": 10288,
+      "sha256": "b2fdf9bc6ec991c694774fcb730dcb7b9f237b5ee40d9091fc3a0534705d0691"
     },
     {
       "path": "docs/OUTILS_ET_ESSAIS.md",
@@ -623,6 +628,11 @@
       "sha256": "5b2118826b9c50e16f25f31c0307a6aecf9083cde9c19af77dd54d0398fe0ee5"
     },
     {
+      "path": "docs/creative/RECUPERATION_PRODUCTION.md",
+      "bytes": 3714,
+      "sha256": "abd60255f4c5fb83339ccfafc0bd81d4415cb45afcc23804b57e9e8f9290cfae"
+    },
+    {
       "path": "docs/creative/THE_AWAKENING.md",
       "bytes": 1537,
       "sha256": "32f3c88e249582d9ad85c014c096f27373e73e36cdf140cb2f2567dded29b367"
@@ -661,6 +671,11 @@
       "path": "docs/evidence/orchestration-integration-2026-11-01.json",
       "bytes": 40714,
       "sha256": "14b6bb3b485941e00e55d031107d717a93780831d9d831d65efb745c4c3d5fb9"
+    },
+    {
+      "path": "docs/evidence/production-recovery-2026-11-02.json",
+      "bytes": 19784,
+      "sha256": "5789db722465f147603a2e58d584eb2961148b7d7e8f05d82933112d00af087f"
     },
     {
       "path": "docs/evidence/recovery-part-1-2026-11-01.json",
@@ -2344,8 +2359,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 11994,
-      "sha256": "2980e9ff3c15bd56fa3d85cb8b3efb860b026aa636e2cc93b9bbbd47688c9965"
+      "bytes": 12881,
+      "sha256": "03c6397c9f8cf0d57dd4017140192c352703ce5920054725e0c68080ad8f9766"
     },
     {
       "path": "ops/request-example.json",
@@ -2404,8 +2419,8 @@
     },
     {
       "path": "productions/le-dernier-geste/README.md",
-      "bytes": 2936,
-      "sha256": "033250fcef41e32ec28d626f95ef379f847a2c59e12d31aee8b5746dcb3576b0"
+      "bytes": 3272,
+      "sha256": "d6d474bbaf75e414ed07cb9e9a7632c86ebab66d4b660ce4242d779518a913f6"
     },
     {
       "path": "productions/le-dernier-geste/STATUT_G2.json",
@@ -3978,6 +3993,11 @@
       "sha256": "bf8ddde9cdbc954d5b7cb33387d937a3fb087673732d96c9983ee34c1602a6c1"
     },
     {
+      "path": "tests/test_production_recovery.py",
+      "bytes": 10922,
+      "sha256": "a8da6fd7e66b36391795114ecbb94a9050ee3036cf25d07a8b0343ed1af3f845"
+    },
+    {
       "path": "tests/test_workspace_restore.py",
       "bytes": 7679,
       "sha256": "dfdd925dc1c24c9964937ba57d561be9ce0c07aaf5a32922a910384dc30d2cb8"
@@ -4094,13 +4114,18 @@
     },
     {
       "path": "tools/orchestrate.py",
-      "bytes": 3823,
-      "sha256": "0bc1389f67149002b1ed1bc086bd9e347f8ce799ba43194cd217e22aac779515"
+      "bytes": 4123,
+      "sha256": "012d83cd6bf812b05a0a97b4f9dcc3ffa464a5ae027dbdbc5d88b6308b2269a3"
     },
     {
       "path": "tools/prepare_installation.py",
       "bytes": 3148,
       "sha256": "04da8d52217b050c2731b933d8e42520955cdd4a82e238e53205f57bf8d78622"
+    },
+    {
+      "path": "tools/prepare_production.py",
+      "bytes": 1315,
+      "sha256": "bd6c187ae2bdadf379f8b010b4e2714f5e1f99db5af02d2839de002821fa7c0c"
     },
     {
       "path": "tools/quality_gate.py",

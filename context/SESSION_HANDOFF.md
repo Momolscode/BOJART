@@ -113,6 +113,12 @@ Six nouveaux tests couvrent le refus des anciennes demandes, les nouvelles deman
 
 Rapprochement du pilotage : le correctif de restauration `9c2a0fb47baf1b610e31d2deb800a5323bb9495e` est conservé avec ses six scénarios. La preuve d’orchestration est actualisée sur le corpus et le code réunis.
 
+## Sources de production reliées aux archives — 2 novembre 2026
+
+Base rapprochée : `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, après les correctifs de modèles locaux et de sélection Studio/Growth. Le rapprochement par empreinte identifie les cinq médias R03 dans la collecte initiale ; leurs noms de stockage différaient des chemins attendus par le montage. Le plan expose ce lien, et `tools/prepare_production.py` prépare une copie de travail externe vérifiée avec les recettes courantes.
+
+Les originaux et les anciennes versions sont préservés. Aucune génération, publication ou validation artistique n'est ajoutée ; TEST19 reste provisoire et G2 manque toujours. Guide : `docs/creative/RECUPERATION_PRODUCTION.md`. Recette, empreintes et limites : `docs/evidence/production-recovery-2026-11-02.json`.
+
 ## Modèles facultatifs et premier lancement
 
 Base examinée : `0a7a08dd0a0bed445ef0dc5734be7c841b30467a`, contrôles GitHub réussis. Demande : continuer la préparation de Jarvis.
@@ -144,3 +150,5 @@ Ajouts : plan hors ligne, téléchargement explicite des seuls modèles manquant
 Les contrôles avec serveur local simulé vérifient erreurs, changements de tag, refus d'activation, conservation des réglages, index unique et paramètres transmis. Les tests de CI portent sur le logiciel exact sous Windows/Linux ; seuls des essais sur la tour pourront prouver les modèles et temps réels. Aucun poids téléchargé ici et aucun résultat artistique nouveau.
 
 Réconciliation : les améliorations concurrentes du Studio/Growth et leurs treize tests d’interface, publiées au commit `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, sont conservées.
+
+Réconciliation du raccordement des médias : la préparation des profils locaux et le contrôle des identités de modèles publiés à `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont préservés. Les sélections documentaires des deux contributions sont réunies par projet et chemin.
