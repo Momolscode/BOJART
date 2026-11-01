@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-01",
+  "repository": "https://github.com/Momolscode/BOJART",
+  "references": {
+    "initial_execution": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+    "final_graph_and_ops": "3c288214539adf97381f6053b43225485a873b6a",
+    "publication_base_read": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842"
+  },
+  "assessment": {
+    "minimal_local_validation_install": "observed_working_on_test_host",
+    "target_pc": "not_qualified",
+    "complete_autonomous_workshop": "not_demonstrated"
+  },
+  "environment": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "fts5": true,
+    "installation": "isolated_minimal_venv_without_optional_engines",
+    "ffmpeg_detected": true,
+    "ffprobe_detected": true
+  },
+  "python_suites": [
+    {
+      "suite": "tests/",
+      "reference": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+      "tests": 37,
+      "seconds": 3.682,
+      "outcome": "passed",
+      "evidence_kind": "observed_summary_transcription",
+      "complete_raw_log_in_packet": false
+    },
+    {
+      "suite": "tests_agent/",
+      "reference": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+      "tests": 25,
+      "seconds": 3.216,
+      "outcome": "passed",
+      "evidence_kind": "observed_summary_transcription",
+      "complete_raw_log_in_packet": false
+    },
+    {
+      "suite": "jarvis/tests/test_jarvis_m06.py",
+      "reference": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+      "tests": 42,
+      "seconds": 5.875,
+      "outcome": "passed",
+      "evidence_kind": "observed_summary_transcription",
+      "complete_raw_log_in_packet": false
+    },
+    {
+      "suite": "jarvis/tests/test_jarvis_m07.py",
+      "reference": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+      "tests": 22,
+      "seconds": 1.243,
+      "outcome": "passed",
+      "evidence_kind": "observed_summary_transcription",
+      "complete_raw_log_in_packet": false
+    },
+    {
+      "suite": "tests_ops/",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "tests": 46,
+      "seconds": 0.131,
+      "outcome": "passed",
+      "evidence_kind": "observed_summary_transcription",
+      "complete_raw_log_in_packet": false
+    }
+  ],
+  "python_total_selected": 172,
+  "javascript": {
+    "reference": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+    "command": "node --test jarvis/tests/voice_endpoint.test.cjs jarvis/tests/memory_context.test.cjs",
+    "tests": 11,
+    "failed": 0,
+    "duration_ms": 149.62521,
+    "evidence_kind": "observed_summary_transcription"
+  },
+  "retrieval": {
+    "reference": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+    "cases": 10,
+    "hits_at_5": 10,
+    "citations_verified": true,
+    "scope": "hand-authored lexical retrieval cases; no generative-answer evaluation"
+  },
+  "startup_evidence": "preuves/DEMARRAGE_OBSERVE.json",
+  "limitations": [
+    "Mixed explicitly pinned revisions, not a single full monorepo test run.",
+    "Historical 578-test acceptance not rerun in this evaluation.",
+    "Real LangGraph/CAD engines were not installed in the isolated smoke environment.",
+    "Live ASR, Jev, Ollama answer quality, target hardware and printers not qualified.",
+    "Complete raw local logs unavailable after environment disconnect; excerpts are transcriptions, not original log files.",
+    "Later runtime changes must be reexamined at their own SHA."
+  ],
+  "ci_evidence": {
+    "reference": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
+    "kind": "GitHub Actions status observed before package publication",
+    "runs": [
+      {
+        "id": 41355700456,
+        "name": "BOJART continuity",
+        "conclusion": "success",
+        "url": "https://github.com/Momolscode/BOJART/actions/runs/41355700456"
+      },
+      {
+        "id": 41355700481,
+        "name": "BOJART quality schema",
+        "conclusion": "success",
+        "url": "https://github.com/Momolscode/BOJART/actions/runs/41355700481"
+      },
+      {
+        "id": 41355700490,
+        "name": "BOJART data audit",
+        "conclusion": "success",
+        "url": "https://github.com/Momolscode/BOJART/actions/runs/41355700490"
+      },
+      {
+        "id": 41355700468,
+        "name": "Jarvis agent memory",
+        "conclusion": "success",
+        "url": "https://github.com/Momolscode/BOJART/actions/runs/41355700468"
+      }
+    ],
+    "note": "These are distinct remote CI observations; they do not turn the earlier local smoke into a newer-revision test."
+  }
+}

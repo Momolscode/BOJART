@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "scope": "Exact UTF-8 bytes of this audit folder except MANIFESTE.json itself",
+  "files": [
+    {
+      "path": "CAPACITES.json",
+      "bytes": 2255,
+      "sha256": "c5c0b7ededc991bacac5d75a1e2da5fc15b1d9725480791031a5b5cea77de7fc"
+    },
+    {
+      "path": "DELTA_A_REEXAMINER.json",
+      "bytes": 5338,
+      "sha256": "efeb3155ef2a7b6e936df41e79629c25804bb10adca11973c194fd1efe1e464c"
+    },
+    {
+      "path": "GRAPHE_EXECUTE.mmd",
+      "bytes": 357,
+      "sha256": "7ef3bb81f4c20e2f13ef8e2481dad33eaff8e09ec427f0a6e18a0a8ff2ced519"
+    },
+    {
+      "path": "MISSION_AUDITEUR.txt",
+      "bytes": 4085,
+      "sha256": "e713f82963e0d27980a6f67e8cfdadd44d4964c20158998fc9c424ac6f3d0b94"
+    },
+    {
+      "path": "PREUVES.json",
+      "bytes": 4453,
+      "sha256": "db3abe24fd7797fd1c8ddf6e2c067b36e4400dee8056cf83118a04cba3425a93"
+    },
+    {
+      "path": "RAPPORT.md",
+      "bytes": 7348,
+      "sha256": "94282906d9a65c0a3cb2a41156650e5643751cfe5cee3e064a4e0d6ccd485644"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2849,
+      "sha256": "aa8231dc4012a782ad704ab7b3c37c9e632ea9dd89ec7ce709e0dce7e64e63f2"
+    },
+    {
+      "path": "REPRODUIRE.md",
+      "bytes": 5486,
+      "sha256": "a7fddaa659a1a2d77d13a52adfadcd27a07fa004a7233fbc060339658888e566"
+    },
+    {
+      "path": "RETOUR_AUDITEUR.md",
+      "bytes": 1285,
+      "sha256": "6332c8d6e27c0c862256f8e5ec4010c05a740ba07785d32da009940c10ce72dc"
+    },
+    {
+      "path": "SCHEMA_ORCHESTRATION.svg",
+      "bytes": 22348,
+      "sha256": "b228dd76aba2bdb8e1beff3cedd5f840ad2ef79601247a03053c1871ac833946"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 12024,
+      "sha256": "fb475b786b3b4135001004762561abd4b38d551bea504d005f478a6d7837b407"
+    },
+    {
+      "path": "preuves/DEMARRAGE_OBSERVE.json",
+      "bytes": 1505,
+      "sha256": "4e8a2dd803ddbdc72854a5d9f156b35b6c530b372f02461593a7ed996b0c7872"
+    },
+    {
+      "path": "preuves/SORTIES_OBSERVEES.txt",
+      "bytes": 1527,
+      "sha256": "9a9ba0b34c448bc2f74e1c4432ddbff3144e741f17a3af8355d41a79d2453521"
+    }
+  ]
+}

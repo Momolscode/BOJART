@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "source_rule": "Pinned code references; source existence or tests with fixtures do not prove a live integration.",
+  "code_sources": [
+    {
+      "path": "tools/prepare_installation.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/tools/prepare_installation.py",
+      "git_blob_sha": "27440055201e7061ebeb67bfeff50e87ff21f01e",
+      "sha256": "49cc0b0b3a6785a390e5e4f12e6a815c3139d1969ae04a79e096e6acb57aad06",
+      "bytes": 2509
+    },
+    {
+      "path": "tools/start_jarvis.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/tools/start_jarvis.py",
+      "git_blob_sha": "0aa05c917e1f893604b16e81b0c6963431c3e3c4",
+      "sha256": "940c1f9ea56c0bdc4a418f1f9d8f1b27d60c14257bc5e1dc6956607d3beb5f21",
+      "bytes": 729
+    },
+    {
+      "path": "tools/doctor.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/tools/doctor.py",
+      "git_blob_sha": "d0ed2a43d60476ab1912822b78e29c05f96ffb51",
+      "sha256": "dbf64d932cea855f24f42ee053e7e6c29f665b71f3b2215c3c5d57b14cdfb915",
+      "bytes": 1109
+    },
+    {
+      "path": "INSTALLER_DEMAIN.md",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/INSTALLER_DEMAIN.md",
+      "git_blob_sha": "2b81b936c1e52afd925f4c2350ce146d22b03090",
+      "sha256": "1cc5d40a0575bbb067c469d3703624850573807fa49c7739c6db1b0a65837784",
+      "bytes": 4932
+    },
+    {
+      "path": "docs/INSTALLATION.md",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/docs/INSTALLATION.md",
+      "git_blob_sha": "acabc69f828163e03b15fed3095cb390affd29b9",
+      "sha256": "b652dbf9b01e853dfffe8e77bc3c4a7848434f600631524fb1468f6f3ac30d8a",
+      "bytes": 3441
+    },
+    {
+      "path": "jarvis/requirements.txt",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/requirements.txt",
+      "git_blob_sha": "cf4c82ea07c5d07e676ee69963a4ea3a0585ceba",
+      "sha256": "0b7fde68615753dd6f0ab6541fdb32a8b6c41391ca1827381cecd418e66b2d31",
+      "bytes": 146
+    },
+    {
+      "path": "jarvis/requirements-orchestration.txt",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/requirements-orchestration.txt",
+      "git_blob_sha": "38bc7f1866672521d842c797244edb986844dfb8",
+      "sha256": "c6985cf9d0f5812699028cdec3325914d9bea906800429709b83bdb653df31d5",
+      "bytes": 266
+    },
+    {
+      "path": "jarvis/requirements-voice.txt",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/requirements-voice.txt",
+      "git_blob_sha": "66ed582af92b0e97e63d3f34030ec68f4fd52fd0",
+      "sha256": "ed3facd220d69beafe6f66830124fa94dffbadc6bc053328609e2ff9b33ca75e",
+      "bytes": 122
+    },
+    {
+      "path": "bojart_memory/core.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/bojart_memory/core.py",
+      "git_blob_sha": "bb38786cc49f183077a9f2de072e7323c87c9420",
+      "sha256": "74af6afce2e30543be38322776a91d20b2bc1476ca5fd9b70827269c5a5e5df6",
+      "bytes": 17389
+    },
+    {
+      "path": "bojart_memory/agent.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/bojart_memory/agent.py",
+      "git_blob_sha": "77da95ee4cf16481a736cbe1186a4c934fc5f9fa",
+      "sha256": "0f28aeada8ae0da9483084e191265307aa4c567dc72a93b1bfa7600eff1a46c8",
+      "bytes": 15933
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/jarvis_runtime.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/jarvis_runtime.py",
+      "git_blob_sha": "fd7d2a18a7b52910d150236a16d924eb212b3569",
+      "sha256": "e0e3243ebf754f41f579b6fc073141a65d3c32744375b0748496ab688811b3a0",
+      "bytes": 20152
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/control_tower.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/control_tower.py",
+      "git_blob_sha": "745a62249d8b38d12df2613f74b396c898f73251",
+      "sha256": "f610deef425543abdbccb8a4a072b41799d324a2107c04ddbb1139f4098ed16d",
+      "bytes": 11659
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/core.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/core.py",
+      "git_blob_sha": "a430d0d01b57dfa9241c772b51a2ed8f3f80fb82",
+      "sha256": "ff79558a2a58f4321b54185783910f6dcfd874ec432d5ff49fe44611e8396eb1",
+      "bytes": 23038
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/proposals.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/proposals.py",
+      "git_blob_sha": "121a8ec5885f23d7f4d661daca466ea493369ac6",
+      "sha256": "4740c3440c5cf81dac835c7ded773078349c85bec407a247dd3fc4d0a5bbd48b",
+      "bytes": 5630
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/voice.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/voice.py",
+      "git_blob_sha": "f8a474290a9e0ee6f74f73790ab682b130b97f27",
+      "sha256": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d",
+      "bytes": 4112
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/jev_decider.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/jev_decider.py",
+      "git_blob_sha": "10545dd4f890a1f0a16d1add9d3dae6d04711ee5",
+      "sha256": "fe162bc6cd5f61576fec83e1bc1214ce9da1bec8c6ebc8d7a25b68ed0671136a",
+      "bytes": 4892
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/launch_readiness.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/launch_readiness.py",
+      "git_blob_sha": "d5640b72fb0dbfb42c10f0862643587d1fa3a405",
+      "sha256": "c84a04ac74f3043178d47b83e2cdbf1cf5af27881c4a7c7b3406585c80c206b6",
+      "bytes": 4474
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/growth.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/apps/jarvis/app/growth.py",
+      "git_blob_sha": "9db6d0ad6f211597d750ee94f8dc531e9b9069e0",
+      "sha256": "fae4e22d4cfd17510c8f13187d1eee23b91fc7a05e0cf458fb54107ff2345921",
+      "bytes": 9710
+    },
+    {
+      "path": "jarvis/tests/test_jarvis_m07.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/tests/test_jarvis_m07.py",
+      "git_blob_sha": "4b089e0b55e44dbb8eeb832a9367c83d0223405a",
+      "sha256": "bf35f4c154813d0455e601adb10792850dc3234630ebf6c491399cd1a29b4c2c",
+      "bytes": 9463
+    },
+    {
+      "path": "bojart_ops/ledger.py",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/bojart_ops/ledger.py",
+      "git_blob_sha": "db8057662f0bc69fa81d03e1132cc778223bbe49",
+      "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31",
+      "bytes": 10884
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/docs/OPERATIONS.md",
+      "git_blob_sha": "3ddd7fa10040698af5088f768fa975e9d6fdcf6e",
+      "sha256": "d75bf56b9578e7259dba8a5e21f6586e74364a827ae6116dd15310382b4dab9c",
+      "bytes": 8253
+    },
+    {
+      "path": "jarvis/docs/m07/RELEASE_M07.md",
+      "reference": "3c288214539adf97381f6053b43225485a873b6a",
+      "url": "https://github.com/Momolscode/BOJART/blob/3c288214539adf97381f6053b43225485a873b6a/jarvis/docs/m07/RELEASE_M07.md",
+      "git_blob_sha": "77ef6cedd131fcb7a821c9bd580437459ef99c11",
+      "sha256": "04a23ccc80e60ffdf5522c8f2136cb7198c3405eb722d84d99319f3b8a8543c8",
+      "bytes": 3130
+    }
+  ],
+  "additional_session_evidence": {
+    "reference": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
+    "origin": "Previously committed by another session, not raw logs from this evaluation",
+    "paths": [
+      {
+        "path": "docs/evidence/startup-2026-11-01.json",
+        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-2026-11-01.json"
+      },
+      {
+        "path": "docs/evidence/startup-final-agent-tests.log",
+        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-agent-tests.log"
+      },
+      {
+        "path": "docs/evidence/startup-final-m07-scenes-tests.log",
+        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-m07-scenes-tests.log"
+      },
+      {
+        "path": "docs/evidence/startup-final-m07-workbench-tests.log",
+        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-m07-workbench-tests.log"
+      },
+      {
+        "path": "docs/evidence/startup-final-ops-tests.log",
+        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-ops-tests.log"
+      },
+      {
+        "path": "docs/evidence/startup-final-root-tests.log",
+        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-root-tests.log"
+      },
+      {
+        "path": "docs/evidence/startup-retrieval-2026-11-01.json",
+        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-retrieval-2026-11-01.json"
+      }
+    ]
+  },
+  "official_architecture_references": [
+    {
+      "topic": "LangGraph",
+      "url": "https://www.langchain.com/oss-overview"
+    },
+    {
+      "topic": "LangGraph checkpoints",
+      "url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/checkpointers.mdx"
+    },
+    {
+      "topic": "Pipecat transports",
+      "url": "https://github.com/pipecat-ai/docs/blob/main/pipecat/learn/transports.mdx"
+    },
+    {
+      "topic": "Temporal workflows",
+      "url": "https://docs.temporal.io/workflows"
+    },
+    {
+      "topic": "Temporal error handling",
+      "url": "https://github.com/temporalio/documentation/blob/main/docs/develop/python/best-practices/error-handling.mdx"
+    }
+  ],
+  "recommendations_status": "Proposals, not implemented integrations or a benchmark-based ranking."
+}

@@ -43,3 +43,11 @@ Demande explicite : pousser le fichier joint `JARVIS5_REPRISE_VERIFIEE_2026-10-3
 ## Suite : démarrage et reprise
 
 Base rapprochée : `e5cd9f3f18f744b800aa8bb655a70fa643c634a1` (PR #4). La reprise commune des archives et les contrôles du manifeste binaire sont réutilisés. Diagnostic de lancement, chemin mémoire partagé, export sourcé, invalidation des réponses périmées et diversification des sources sont ajoutés. Voir `docs/DEMARRAGE_ET_REPRISE.md` et les preuves de démarrage/restauration dans `docs/evidence/startup-2026-11-01.json`. Les modèles et périphériques réels restent à qualifier.
+
+## Dossier d’audit installation et orchestration — 1 novembre 2026
+
+Demande : publier le diagnostic Jarvis, son visuel et un dossier transmissible à un auditeur. Base distante rapprochée : `461d46ff39caaf142ce37a3e0b78f22dfcc2e842`. Ajout documentaire sous `docs/audits/jarvis-installation-2026-11-01/` : rapport, schéma SVG, graphe Mermaid, preuves structurées, extraits observés, références épinglées, reproduction, mission TXT et modèle de retour. Le workflow « BOJART audit dossier » vérifie les empreintes et fournit un ZIP.
+
+Faits de cette évaluation : installation minimale et HTTP observés sur `e5cd9f3f18f744b800aa8bb655a70fa643c634a1`, 126 tests Python sélectionnés et 11 tests JavaScript réussis, puis 46 tests opérations réussis sur `3c288214539adf97381f6053b43225485a873b6a` ; 10 cas lexicaux avec citations vérifiées. Le schéma porte sur cette dernière référence. Le lancement isolé utilisait le repli local sans LangGraph installé. La tour, la voix réelle, les moteurs CAO et les imprimantes ne sont pas qualifiés par ces résultats.
+
+Les changements ultérieurs de démarrage/mémoire sont conservés et listés pour réexamen ; leurs preuves propres restent distinctes. Après déconnexion de l’environnement local, le dossier a été préparé via l’accès GitHub : les sorties jointes sont des transcriptions explicites, pas des journaux bruts complets. Le manifeste exact est reconstruit à partir du manifeste distant et des octets ajoutés ; le workflow le régénère et contrôle l’absence de différence avant validation complète. Prochaine preuve : audit indépendant de la version choisie et recette sur le PC cible.

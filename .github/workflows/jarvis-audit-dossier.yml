@@ -1,0 +1,55 @@
+name: BOJART audit dossier
+on:
+  push:
+    paths:
+      - 'docs/audits/jarvis-installation-2026-11-01/**'
+      - '.github/workflows/jarvis-audit-dossier.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bojart-audit-dossier-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recompute and validate repository manifest
+        run: |
+          python tools/validate_repository.py --write-manifest
+          git diff --exit-code -- data/catalog/repository_manifest.json
+          python tools/validate_repository.py
+      - name: Verify exact audit contents and SVG
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          root = Path('docs/audits/jarvis-installation-2026-11-01').resolve()
+          manifest = json.loads((root / 'MANIFESTE.json').read_text(encoding='utf-8'))
+          expected = {entry['path'] for entry in manifest['files']} | {'MANIFESTE.json'}
+          actual = {path.relative_to(root).as_posix() for path in root.rglob('*') if path.is_file()}
+          assert expected == actual, (expected - actual, actual - expected)
+          assert len(expected) == len(manifest['files']) + 1, 'Duplicate manifest entry'
+          for entry in manifest['files']:
+              path = (root / entry['path']).resolve()
+              assert path.is_relative_to(root), entry['path']
+              raw = path.read_bytes()
+              assert len(raw) == entry['bytes'], entry['path']
+              assert hashlib.sha256(raw).hexdigest() == entry['sha256'], entry['path']
+          for path in root.rglob('*.json'):
+              json.loads(path.read_text(encoding='utf-8'))
+          ET.parse(root / 'SCHEMA_ORCHESTRATION.svg')
+          print(f'Audit folder verified: {len(actual)} files')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BOJART_DOSSIER_AUDIT_JARVIS_2026-11-01
+          path: docs/audits/jarvis-installation-2026-11-01/
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 9
