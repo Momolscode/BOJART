@@ -19,8 +19,8 @@
     },
     {
       "path": ".github/workflows/continuity.yml",
-      "bytes": 811,
-      "sha256": "613b767ebda7490f880084316ca46196b6a68f1d347adbaffff97d4a86aaf0e3"
+      "bytes": 867,
+      "sha256": "9caaeafa0f75405abd17be1fc41fec13b8dcbb9c3b0824fd37f67a8fba6e813d"
     },
     {
       "path": ".github/workflows/quality.yml",
@@ -754,8 +754,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.js",
-      "bytes": 4560,
-      "sha256": "e5f7aa880419b56cb4df6789c27d49d29a2d26b1d6b6b431c28945aa2521e70a"
+      "bytes": 5471,
+      "sha256": "a8e329c7d7f729cfbb631dbe709a6247cfa9c66aeefd138e5dd3109b90ea8e62"
     },
     {
       "path": "jarvis/apps/jarvis/app/proposals.py",
@@ -1781,6 +1781,11 @@
       "path": "jarvis/research/voice-jev/PREUVES_LECTURE_M03.json",
       "bytes": 3711,
       "sha256": "76dab182f56e1cbad83103f0c0404a3fb1388a4d5897cf87e914b50f668be36d"
+    },
+    {
+      "path": "jarvis/tests/memory_context.test.cjs",
+      "bytes": 4841,
+      "sha256": "f224eb7598a49f21330ba9bdfb431a611f281b4f79b7a7906ee0084e40ad57e4"
     },
     {
       "path": "jarvis/tests/test_connection_lifetime.py",
