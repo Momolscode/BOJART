@@ -51,7 +51,7 @@ La mémoire apporte du contexte sourcé. La CAO suit un circuit séparé et born
 | Conversation permanente | Non activée | Intégration et recette d’une couche temps réel |
 
 ## Changements postérieurs et prochaines vérifications
-La publication se prépare sur 461d46f, deux commits après 3c28821. Le démarrage, la mémoire et des tests ont changé. Le fichier DELTA_A_REEXAMINER.json donne la comparaison exacte. Les preuves déjà présentes sous docs/evidence/startup-* proviennent d’une autre session ; elles sont utiles, mais ne doivent pas être confondues avec les sorties transcrites ici. Les nouveaux contrôles CI de cette publication sont consultables dans GitHub Actions et doivent être attribués à leur propre commit.
+La publication se prépare sur 9f58fa2, quatre commits après 3c28821. Le démarrage, la mémoire, le pilotage des revues et des tests ont changé. Le fichier DELTA_A_REEXAMINER.json donne la comparaison exacte. Les preuves déjà présentes sous docs/evidence/startup-* proviennent d’une autre session ; elles sont utiles, mais ne doivent pas être confondues avec les sorties transcrites ici. Les nouveaux contrôles CI de cette publication sont consultables dans GitHub Actions et doivent être attribués à leur propre commit.
 
 Priorités pour l’auditeur :
 1. Rejouer installation, redémarrage et restauration sur la tête choisie et sur la tour cible ; vérifier les cinq bases opérationnelles séparément.
@@ -62,3 +62,6 @@ Priorités pour l’auditeur :
 Conserver LangGraph est cohérent avec le graphe déjà implémenté. Pour une conversation audio continue, Pipecat est une piste complémentaire, pas une intégration actuelle. Temporal devient pertinent si des tâches longues et distribuées doivent survivre à des redémarrages et à des reprises interservices ; son ajout n’est pas justifié par le seul besoin de dessiner le graphe.
 
 Ce sont des propositions d’architecture, pas des fonctionnalités annoncées. Le SVG décrit l’état examiné et distingue les circuits présents des éléments à raccorder. Les documentations officielles consultées figurent dans SOURCES.json.
+
+## Contrôle pendant la publication
+La première version documentaire ae3b0fe a passé le contrôle du manifeste et les 46 tests mémoire/HTTP de sa CI, mais son évaluation documentaire a obtenu 9/10 : la source attendue pour « LangGraph » n’apparaissait plus dans les cinq premiers résultats. Le document de passation nouvellement enrichi apparaissait à sa place. La passation de publication a été condensée en renvoyant au dossier détaillé ; aucun seuil de test ni code de recherche n’a été modifié pour faire passer ce contrôle. Les faits et le lien du journal initial sont conservés dans preuves/CI_PUBLICATION.json ; consulter les exécutions ultérieures de la PR nº 6 pour vérifier le résultat final. Cet incident montre que le classement lexical dépend du corpus documentaire.

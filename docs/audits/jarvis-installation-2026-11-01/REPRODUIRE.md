@@ -82,7 +82,7 @@ Repartir d’un clone propre, épingler sa tête et examiner DELTA_A_REEXAMINER.
 python3.12 tools/check_startup.py --output .bojart-audit/startup.json
 ```
 
-Consulter les CI du même SHA et joindre leurs liens. La tête préparée pour ce dossier est 461d46ff39caaf142ce37a3e0b78f22dfcc2e842 ; elle peut évoluer ensuite. Remplir RETOUR_AUDITEUR.md avec trois verdicts séparés.
+Consulter les CI du même SHA et joindre leurs liens. La tête préparée pour ce dossier est 9f58fa29f0051cc8a7098855359a8a6dd0eef7e6 ; elle peut évoluer ensuite. Remplir RETOUR_AUDITEUR.md avec trois verdicts séparés.
 
 ## Vérifier le dossier téléchargé
 Depuis la racine du dossier d’audit, ce contrôle Python vérifie les fichiers décrits, hors MANIFESTE.json lui-même :

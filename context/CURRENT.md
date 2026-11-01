@@ -39,3 +39,7 @@ GPU, OS, modèles d’imprimantes et nombre exact de machines sont inconnus. Les
 ## Complément de récupération vérifié
 
 La collecte étendue de 219 sources est conservée sur les trois branches de récupération GitHub : 3 340 contenus uniques et leurs 6 445 emplacements vérifiés. Tous les contenus ont été restaurés depuis les commits distants puis comparés octet par octet aux trois ZIP d'origine. Les 87 fichiers du paquet créatif préparé et les 22 textes du transfert interrompu sont inclus. Voir `docs/ETAT_ARCHIVES_2026-11-01.md` pour la preuve et la commande de restauration commune. Ce périmètre dépasse le catalogue initial et ne doit pas lui être additionné. Il ne certifie pas la récupération intégrale des conversations ou du PC.
+
+## Pilotage des prochaines sessions
+
+Le registre `ops/orchestration.json` ordonne les domaines, les tâches et leurs dépendances. Le workflow d’audit produit un plan de lecture à chaque poussée à partir des empreintes existantes ; une observation contextuelle d’un autre SHA ne valide pas la révision courante. Voir `docs/ORCHESTRATION.md`. Le classement ne remplace pas la lecture des sources ni la qualification matérielle et artistique.

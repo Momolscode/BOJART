@@ -5,7 +5,7 @@
   "references": {
     "initial_execution": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
     "final_graph_and_ops": "3c288214539adf97381f6053b43225485a873b6a",
-    "publication_base_read": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842"
+    "publication_base_read": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6"
   },
   "assessment": {
     "minimal_local_validation_install": "observed_working_on_test_host",

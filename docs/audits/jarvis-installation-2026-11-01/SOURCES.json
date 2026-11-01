@@ -180,36 +180,36 @@
     }
   ],
   "additional_session_evidence": {
-    "reference": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
+    "reference": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
     "origin": "Previously committed by another session, not raw logs from this evaluation",
     "paths": [
       {
         "path": "docs/evidence/startup-2026-11-01.json",
-        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-2026-11-01.json"
+        "url": "https://github.com/Momolscode/BOJART/blob/9f58fa29f0051cc8a7098855359a8a6dd0eef7e6/docs/evidence/startup-2026-11-01.json"
       },
       {
         "path": "docs/evidence/startup-final-agent-tests.log",
-        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-agent-tests.log"
+        "url": "https://github.com/Momolscode/BOJART/blob/9f58fa29f0051cc8a7098855359a8a6dd0eef7e6/docs/evidence/startup-final-agent-tests.log"
       },
       {
         "path": "docs/evidence/startup-final-m07-scenes-tests.log",
-        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-m07-scenes-tests.log"
+        "url": "https://github.com/Momolscode/BOJART/blob/9f58fa29f0051cc8a7098855359a8a6dd0eef7e6/docs/evidence/startup-final-m07-scenes-tests.log"
       },
       {
         "path": "docs/evidence/startup-final-m07-workbench-tests.log",
-        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-m07-workbench-tests.log"
+        "url": "https://github.com/Momolscode/BOJART/blob/9f58fa29f0051cc8a7098855359a8a6dd0eef7e6/docs/evidence/startup-final-m07-workbench-tests.log"
       },
       {
         "path": "docs/evidence/startup-final-ops-tests.log",
-        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-ops-tests.log"
+        "url": "https://github.com/Momolscode/BOJART/blob/9f58fa29f0051cc8a7098855359a8a6dd0eef7e6/docs/evidence/startup-final-ops-tests.log"
       },
       {
         "path": "docs/evidence/startup-final-root-tests.log",
-        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-final-root-tests.log"
+        "url": "https://github.com/Momolscode/BOJART/blob/9f58fa29f0051cc8a7098855359a8a6dd0eef7e6/docs/evidence/startup-final-root-tests.log"
       },
       {
         "path": "docs/evidence/startup-retrieval-2026-11-01.json",
-        "url": "https://github.com/Momolscode/BOJART/blob/461d46ff39caaf142ce37a3e0b78f22dfcc2e842/docs/evidence/startup-retrieval-2026-11-01.json"
+        "url": "https://github.com/Momolscode/BOJART/blob/9f58fa29f0051cc8a7098855359a8a6dd0eef7e6/docs/evidence/startup-retrieval-2026-11-01.json"
       }
     ]
   },

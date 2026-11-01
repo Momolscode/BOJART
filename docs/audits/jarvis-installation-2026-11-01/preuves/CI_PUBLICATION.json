@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "observed_remote_CI_result",
+  "revision": "ae3b0fed871b91fd23b96429c15d1dab65f6d31e",
+  "run_id": 41357491242,
+  "job_id": 125000581767,
+  "url": "https://github.com/Momolscode/BOJART/actions/runs/41357491242",
+  "observed": {
+    "repository_manifest": "passed",
+    "memory_and_http_tests": {
+      "passed": 46,
+      "seconds": 3.777
+    },
+    "retrieval": {
+      "cases": 10,
+      "hits_at_5": 9,
+      "failed_case": {
+        "question": "LangGraph",
+        "expected_source": "context/CURRENT.md",
+        "returned_sources": [
+          "docs/memory/OUTILS_ET_ARCHITECTURE.md",
+          "docs/RESEARCH_2026-11-01.md",
+          "context/SESSION_HANDOFF.md",
+          "docs/DEMARRAGE_ET_REPRISE.md",
+          "INSTALLER_DEMAIN.md"
+        ],
+        "all_citations_verified": true
+      }
+    },
+    "later_steps": "skipped_after_retrieval_failure"
+  },
+  "response": {
+    "documentation": "Condense new handoff entry and link the detailed audit, avoiding duplication in indexed context.",
+    "runtime_or_test_threshold_changes": false,
+    "final_check": "See later runs for the final PR head; this observation remains pinned to its original revision."
+  },
+  "pull_request": "https://github.com/Momolscode/BOJART/pull/6"
+}

@@ -1,11 +1,17 @@
 {
   "schema_version": 1,
   "base": "3c288214539adf97381f6053b43225485a873b6a",
-  "head": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
-  "compare_url": "https://github.com/Momolscode/BOJART/compare/3c288214539adf97381f6053b43225485a873b6a...461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
-  "ahead_by": 2,
+  "head": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "compare_url": "https://github.com/Momolscode/BOJART/compare/3c288214539adf97381f6053b43225485a873b6a...9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "ahead_by": 4,
   "scope": "Changes after final graph/ops reference; not locally requalified by this audit",
   "files": [
+    {
+      "path": ".github/workflows/audit.yml",
+      "status": "modified",
+      "additions": 19,
+      "deletions": 0
+    },
     {
       "path": ".github/workflows/continuity.yml",
       "status": "modified",
@@ -27,7 +33,7 @@
     {
       "path": "README.md",
       "status": "modified",
-      "additions": 2,
+      "additions": 4,
       "deletions": 0
     },
     {
@@ -55,15 +61,21 @@
       "deletions": 0
     },
     {
+      "path": "bojart_ops/orchestration.py",
+      "status": "added",
+      "additions": 208,
+      "deletions": 0
+    },
+    {
       "path": "context/CURRENT.md",
       "status": "modified",
-      "additions": 2,
+      "additions": 6,
       "deletions": 0
     },
     {
       "path": "context/SESSION_HANDOFF.md",
       "status": "modified",
-      "additions": 4,
+      "additions": 14,
       "deletions": 0
     },
     {
@@ -75,8 +87,8 @@
     {
       "path": "data/catalog/repository_manifest.json",
       "status": "modified",
-      "additions": 114,
-      "deletions": 44
+      "additions": 143,
+      "deletions": 48
     },
     {
       "path": "data/knowledge/claims.jsonl",
@@ -87,7 +99,7 @@
     {
       "path": "data/knowledge/index.json",
       "status": "modified",
-      "additions": 5,
+      "additions": 20,
       "deletions": 0
     },
     {
@@ -109,9 +121,21 @@
       "deletions": 0
     },
     {
+      "path": "docs/GITHUB_WORKFLOW.md",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 1
+    },
+    {
       "path": "docs/INSTALLATION.md",
       "status": "modified",
       "additions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "docs/ORCHESTRATION.md",
+      "status": "added",
+      "additions": 75,
       "deletions": 0
     },
     {
@@ -181,6 +205,12 @@
       "deletions": 0
     },
     {
+      "path": "ops/orchestration.json",
+      "status": "added",
+      "additions": 349,
+      "deletions": 0
+    },
+    {
       "path": "tests/test_installation.py",
       "status": "added",
       "additions": 95,
@@ -205,6 +235,12 @@
       "deletions": 0
     },
     {
+      "path": "tests_ops/test_orchestration.py",
+      "status": "added",
+      "additions": 202,
+      "deletions": 0
+    },
+    {
       "path": "tools/check_startup.py",
       "status": "added",
       "additions": 143,
@@ -223,11 +259,17 @@
       "deletions": 0
     },
     {
+      "path": "tools/orchestrate.py",
+      "status": "added",
+      "additions": 74,
+      "deletions": 0
+    },
+    {
       "path": "tools/start_jarvis.py",
       "status": "modified",
       "additions": 85,
       "deletions": 7
     }
   ],
-  "note": "Review later changes too if main advances after this publication base."
+  "note": "Includes a read-only review planner; its existence does not activate Jarvis production actions. Review later changes too if main advances."
 }

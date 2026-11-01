@@ -15,9 +15,9 @@ Date de l’évaluation : 1 novembre 2026. Dépôt : https://github.com/Momolsco
 |---|---|
 | e5cd9f3f18f744b800aa8bb655a70fa643c634a1 | Installation minimale, HTTP, mémoire, restauration, suites mémoire/agents/M06/M07/JavaScript |
 | 3c288214539adf97381f6053b43225485a873b6a | Lecture finale du graphe, schéma et relance des 46 tests opérations |
-| 461d46ff39caaf142ce37a3e0b78f22dfcc2e842 | Tête relue pour préparer cette publication ; changements de démarrage/mémoire à réexaminer |
+| 9f58fa29f0051cc8a7098855359a8a6dd0eef7e6 | Tête relue pour préparer cette publication ; changements de démarrage, mémoire et pilotage des revues à réexaminer |
 
-La tête relue contient deux commits après 3c28821. [DELTA_A_REEXAMINER.json](DELTA_A_REEXAMINER.json) liste leurs chemins. Les anciens résultats locaux ne deviennent pas des résultats de cette tête par simple rattachement du dossier.
+La tête relue contient quatre commits après 3c28821. [DELTA_A_REEXAMINER.json](DELTA_A_REEXAMINER.json) liste leurs chemins. Les anciens résultats locaux ne deviennent pas des résultats de cette tête par simple rattachement du dossier.
 
 Les sorties sélectionnées sont des transcriptions d’observations, pas des journaux bruts complets : voir [preuves/SORTIES_OBSERVEES.txt](preuves/SORTIES_OBSERVEES.txt). L’environnement ayant été déconnecté avant l’empaquetage, les journaux locaux complets ne sont pas joints. Les preuves de démarrage déjà versionnées par une autre session sont référencées séparément.
 

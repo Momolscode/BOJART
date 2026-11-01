@@ -9,8 +9,8 @@
     },
     {
       "path": "DELTA_A_REEXAMINER.json",
-      "bytes": 5338,
-      "sha256": "efeb3155ef2a7b6e936df41e79629c25804bb10adca11973c194fd1efe1e464c"
+      "bytes": 6287,
+      "sha256": "c1f4ac7d891229a061788a2aaf3df366b757e14bfd77c75689f686965574af25"
     },
     {
       "path": "GRAPHE_EXECUTE.mmd",
@@ -25,22 +25,22 @@
     {
       "path": "PREUVES.json",
       "bytes": 4453,
-      "sha256": "db3abe24fd7797fd1c8ddf6e2c067b36e4400dee8056cf83118a04cba3425a93"
+      "sha256": "691a4287fb61dfacb4ce4ea2d21ccbf75a95284f3d2cfd108c4f83b710180ce2"
     },
     {
       "path": "RAPPORT.md",
-      "bytes": 7348,
-      "sha256": "94282906d9a65c0a3cb2a41156650e5643751cfe5cee3e064a4e0d6ccd485644"
+      "bytes": 8183,
+      "sha256": "de55e4e1bf60913ace46e6dcd468bb82c09539eed71db640bbd72a008c650f6e"
     },
     {
       "path": "README.md",
-      "bytes": 2849,
-      "sha256": "aa8231dc4012a782ad704ab7b3c37c9e632ea9dd89ec7ce709e0dce7e64e63f2"
+      "bytes": 2875,
+      "sha256": "0132fddbec4e5c1c08d62f4c5ce1ea1da43c62061402605d2f0cf32b216f93b4"
     },
     {
       "path": "REPRODUIRE.md",
       "bytes": 5486,
-      "sha256": "a7fddaa659a1a2d77d13a52adfadcd27a07fa004a7233fbc060339658888e566"
+      "sha256": "3e654da95aeeb5cd1b54a31ae81c9ace9cca3235daebc22508765281a91f8241"
     },
     {
       "path": "RETOUR_AUDITEUR.md",
@@ -55,7 +55,12 @@
     {
       "path": "SOURCES.json",
       "bytes": 12024,
-      "sha256": "fb475b786b3b4135001004762561abd4b38d551bea504d005f478a6d7837b407"
+      "sha256": "ffe761a21ac120eb925b6a3f2233692e3485e5f456566011e522ab14d58239ae"
+    },
+    {
+      "path": "preuves/CI_PUBLICATION.json",
+      "bytes": 1278,
+      "sha256": "37c891f7c9f57d5947662db5d923a43b9c5058d696fef23736cac366cfeb00b3"
     },
     {
       "path": "preuves/DEMARRAGE_OBSERVE.json",
