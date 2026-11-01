@@ -107,6 +107,11 @@
   {
     "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
     "project": "bojart.jarvis",
-    "provenance": "Three recovery ZIPs and all 3340 unique objects verified by SHA-256 on 2026-11-01; see data/catalog/recovery-2026-11-01/verification.json. External bytes are not hosted in GitHub."
+    "provenance": "Original recovery inventory checked on 2026-11-01; current GitHub byte restoration is documented in docs/ETAT_ARCHIVES_2026-11-01.md."
+  },
+  {
+    "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
+    "project": "bojart.jarvis",
+    "provenance": "3340 unique objects restored from three pinned GitHub commits and compared byte-for-byte to source ZIPs; see docs/evidence/recovery-resumption-2026-11-01.json."
   }
 ]

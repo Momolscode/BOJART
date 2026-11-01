@@ -14,7 +14,7 @@ Point d’entrée consolidé : [contexte courant](context/CURRENT.md), [installa
 | `data/catalog/` | Empreintes et provenance | 1 060 emplacements, 1016 contenus distincts |
 | `data/knowledge/` | Affirmations, sources et contradictions | Distillation révisable |
 
-Dans `main`, les médias, bases actives, conversations brutes et archives restent externes ; le catalogue en conserve les références. **Sauvegardes explicitement demandées : [partie 1](docs/RECUPERATION_PARTIE_1_2026-11-01.md) et [partie 3](docs/RECUPERATION_PARTIE_3_2026-11-01.md)**, conservées sur leurs branches de récupération dédiées, avec restauration et empreintes vérifiées. Les autres originaux restent dans leurs sources d’origine.
+**[Archives : état vérifié et restauration complète](docs/ETAT_ARCHIVES_2026-11-01.md).** Les trois branches de récupération conservent les 3 340 contenus de la collecte, restaurés depuis GitHub et comparés aux originaux. Une commande commune rassemble les trois parties. La sauvegarde historique reste séparée du runtime ; `main` contient aussi la sélection binaire précisément inventoriée sous `archive/2026-11-01/`.
 
 ## Démarrer
 
@@ -41,4 +41,4 @@ Les archives et médias simplement référencés ne sont pas tous hébergés ici
 
 Les ajouts simultanés sont intégrés : [audit et journal des générations](docs/OPERATIONS.md), `bojart_ops/`, `tests_ops/` et leur workflow GitHub. Ils complètent la mémoire documentaire ; les sauvegardes restent distinctes.
 
-La [récupération étendue vérifiée](docs/RECUPERATION_VERIFIEE_2026-11-01.md) ajoute un catalogue de 3 340 contenus distincts et 6 445 emplacements, avec les liens des trois archives et leurs contrôles SHA-256. Ce catalogue ne transfère pas les médias dans GitHub.
+La [récupération étendue](docs/RECUPERATION_VERIFIEE_2026-11-01.md) décrit 3 340 contenus distincts et 6 445 emplacements. Leur présence sur les trois branches GitHub est désormais confirmée par une [restauration vérifiée](docs/evidence/recovery-resumption-2026-11-01.json). Ce périmètre ne certifie pas la récupération de toutes les conversations ni des fichiers du PC de l'atelier.

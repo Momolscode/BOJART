@@ -34,8 +34,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 2344,
-      "sha256": "dabd9e26b318a291e2a1ad74d13d1ead7758bef17ddc1471264469b99878dc90"
+      "bytes": 2432,
+      "sha256": "fd8e85189b4eccfde8b654fed82d23586f2860b15fab9551fc8c5745aebe8591"
     },
     {
       "path": "INSTALLER_DEMAIN.md",
@@ -69,13 +69,123 @@
     },
     {
       "path": "README.md",
-      "bytes": 4128,
-      "sha256": "a6709d941881fd04c433b14df600437a19daf0d69665ac04fe0443d5da846757"
+      "bytes": 4231,
+      "sha256": "233c7081d9ff2f1c4d7e20df70e7f9a9f6d03f8a2049810fdfefc6b47a13928c"
     },
     {
       "path": "SECURITY.md",
       "bytes": 1058,
       "sha256": "93e9f7e9907ae40712b1aa9340814fdf34b5b53379fac00a91f4574cae3caa86"
+    },
+    {
+      "path": "archive/2026-11-01/MANIFEST.json",
+      "bytes": 7263,
+      "sha256": "062a8b216a324dc2c68d69051dd03cb020634b2c0c2a2860d4978054fead12ee"
+    },
+    {
+      "path": "archive/2026-11-01/README.md",
+      "bytes": 1950,
+      "sha256": "1419f737d708f78272c63707854be901750788b4964a14303c8d5287203eef13"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+      "bytes": 900000,
+      "sha256": "9f1ce163182f2931554299f6b67ef09580ff557d2583b30e9118fd495233e1fb"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+      "bytes": 900000,
+      "sha256": "543b2ab91dfd2f4891af7e9804ece993106a59487d1021b4f3949805f29c5be7"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+      "bytes": 900000,
+      "sha256": "a0afb9d17fe2f72e96fd2bc5bd456601405c7b4b6feeed8da489883c64438278"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+      "bytes": 900000,
+      "sha256": "e268c5f421b48c1636f546cfcbeb2b27741d3b308eb737621766e49fcfb00ec8"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+      "bytes": 322906,
+      "sha256": "37dfcd9f8fffe7d610ed5cf97ad96bb1419ce3f2f9c70f1e024b2eb48503078f"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+      "bytes": 900000,
+      "sha256": "1eca473e7fde5d733bf2a809893f90e76cd37c76903c3372741a4a11a751b84c"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+      "bytes": 900000,
+      "sha256": "1561a2b6deb55a941af33bb43c5bad4ca241ca104f4349ae88ff8e77a7ea428d"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+      "bytes": 648867,
+      "sha256": "85f43591e4b26901739e4327571c39465ccc87177be320a47ba755971af7c787"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+      "bytes": 900000,
+      "sha256": "cfbfd475c5b9fea315ce3857fdce7038371dcad5c844f68939c6b8c10909a202"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+      "bytes": 900000,
+      "sha256": "3b53e3a10cd5dc641482d0f3f31574b6ae0eabea34e9ae91579109955c2f2b76"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+      "bytes": 900000,
+      "sha256": "610d427d5867d649f7db4ca85b4a38248864c5c6153fea790ef2be636852a046"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+      "bytes": 900000,
+      "sha256": "a1a95906f6c327e4d89958208c1260aa16b1b0dbefbb8d13c8926ba9d8d4e1a5"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+      "bytes": 900000,
+      "sha256": "5a1ad404eefc20a203e928a4164e9639043d3a9ee1558f10d454bae3952bb8f0"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+      "bytes": 900000,
+      "sha256": "f17dfc77700826920271cc46317e1369f5ae60555d01c2154a2052e83b8ce50d"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+      "bytes": 900000,
+      "sha256": "cf18f1e8cdea05582e8f1956786faec55ede0b50723073d8446f032ab22b3e74"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+      "bytes": 900000,
+      "sha256": "88991f13d5e45d8b4f63c3bd408f58d7a9ef8d1c1428d72dc94a804c8aa65fa5"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+      "bytes": 900000,
+      "sha256": "06fd3d4a4561348ccdbd843507c93ff9ce96d56603dd377fe49295e569cf35f9"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+      "bytes": 900000,
+      "sha256": "739cdaa03f7e294501445624505d0a4d7338bb2a70493d38ca8ba7574aa3e6b4"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+      "bytes": 900000,
+      "sha256": "471545855653a37959d4a73289c23be1c924085276560c354011417c969e5b96"
+    },
+    {
+      "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
+      "bytes": 401908,
+      "sha256": "5f2ec371a5eaa7d20c1e55fa4620cff1bef171c01f7ee23d8fa09718d931295b"
     },
     {
       "path": "bojart_memory/__init__.py",
@@ -149,13 +259,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 3891,
-      "sha256": "d45a1475ea959e0d122e6ea75ee7fc7dd583cac1bb1895a20c39d610383dabe7"
+      "bytes": 4035,
+      "sha256": "ce32c8f8051e343098cedc3c8ef5a263729b44b7a978a3477942b6a7504be875"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 5127,
-      "sha256": "81ad4013fc6198014a48cd09d53cb2d4abf08e828e37c5fc17c4d4ce3d933fbc"
+      "bytes": 6777,
+      "sha256": "5b2e6ec2ab46a3881a3ab568ad91bf8925887905aab821e049e5db607c76f8ab"
     },
     {
       "path": "creative/CURRENT.md",
@@ -244,8 +354,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 5765,
-      "sha256": "ec08d454be605f3a6240f06823ae0ee57496a2a3cd7ba91ac1b3cc4ca5550828"
+      "bytes": 6346,
+      "sha256": "02a620bbecb48c8ebe3b4b6a563750cb9d46cd08dcf3de9dea89652f777b5815"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -254,8 +364,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 4253,
-      "sha256": "cc7be9d23a6917da71eb5069bd2c0a88ca554f9d30be0479d4b1a612fd04a32b"
+      "bytes": 4476,
+      "sha256": "9172444ef5e83f12aec502db4f4a6c2731fc48790ffa95f77cc29ed80d91fdc5"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -264,8 +374,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 3797,
-      "sha256": "71830da1bb66cd7578f2e407b7b36112641bc545090cddef601c93d681b96ccc"
+      "bytes": 4189,
+      "sha256": "8a347867c15964d9fc68428448d5c226fe96f881ebc9f0a50479d6e9f1d4835d"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -296,6 +406,11 @@
       "path": "docs/DATA_GOVERNANCE.md",
       "bytes": 3038,
       "sha256": "ce617cad16d3e61fab8303e5644254b170acf390845a5c7654cbba9917772881"
+    },
+    {
+      "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
+      "bytes": 3508,
+      "sha256": "fe6ac917aef3a82097de6a312062f4cb33837c960526f70cfc037c22178bccae"
     },
     {
       "path": "docs/ETAT_SAUVEGARDE.md",
@@ -349,8 +464,8 @@
     },
     {
       "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
-      "bytes": 3693,
-      "sha256": "ace7bf6d8886f88dbfdea83d32342ad2e2cacf34a6c3c6c9fe81b02948bb84d6"
+      "bytes": 3933,
+      "sha256": "ff91c767a8f05b2c821ca60d871b4164e2169da1fb79763631ef4e91aedc1e0d"
     },
     {
       "path": "docs/RESEARCH_2026-11-01.md",
@@ -413,9 +528,19 @@
       "sha256": "631fe059202f5d9176340c5c1e1863c90d445d5b56d2e1b3cb8c5a22c110e31e"
     },
     {
+      "path": "docs/evidence/recovery-resumption-2026-11-01.json",
+      "bytes": 14103,
+      "sha256": "eab2d2cc6e7dde3335a570e94fb40c1e95451feb6a7cb09ffc45599f61d37237"
+    },
+    {
       "path": "docs/evidence/retrieval-2026-11-01.json",
       "bytes": 3893,
       "sha256": "78a3777e543b5dddb12092b1eb81f03d9faf9b99868fdaf7ac4be79a6b5d1d41"
+    },
+    {
+      "path": "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+      "bytes": 784472,
+      "sha256": "714fdc7cade14207669cf62d739f430df69e6eb1ceea51f731857286fa92e8bd"
     },
     {
       "path": "docs/historical/BOJART_Bilan_Consolidation_GitHub_2026-10-30.md",
@@ -436,6 +561,11 @@
       "path": "docs/historical/BOJART_V25_STORYBOARD.md",
       "bytes": 2819,
       "sha256": "6d8419909065789a8c9dd37bc07ac651a7a72d90f691247d01a2a366dfefe939"
+    },
+    {
+      "path": "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
+      "bytes": 1014463,
+      "sha256": "54230fe6b6480e7789fd41ac3ba33aed441c79348425f236115ad5c44baeed20"
     },
     {
       "path": "docs/historical/BOJ_ART_TOUR_CONTROLE_SNAPSHOT.txt",
@@ -3583,6 +3713,11 @@
       "sha256": "6f6d890794fbe23f3e35cceb327f49d5977432a5aaf715e040a6408932da395b"
     },
     {
+      "path": "tests/test_archive_recovery.py",
+      "bytes": 3467,
+      "sha256": "659388f705ed8987b90e8eb14cbb04b546a8437123712056376e1da6d781b437"
+    },
+    {
       "path": "tests/test_memory.py",
       "bytes": 8093,
       "sha256": "743f163d347e424532c2976fb1634e0af753a268afbdb8377470e20eadfb997f"
@@ -3648,14 +3783,24 @@
       "sha256": "bb08f544c51d065efcfaeb3d3fd35efe627ac804aad7e325b389d44bd078ebed"
     },
     {
+      "path": "tools/restore_archive_2026_11_01.py",
+      "bytes": 2378,
+      "sha256": "f0a1f8685cbb24f97c133ac49a0a7110bcea9b8057dbd40bc93ab1811d89612e"
+    },
+    {
+      "path": "tools/restore_recovery_2026_11_01.py",
+      "bytes": 9523,
+      "sha256": "dc18931255977dcb336138562fb4282e9c23b6b1268e40ed34f732b5ed729c73"
+    },
+    {
       "path": "tools/start_jarvis.py",
       "bytes": 729,
       "sha256": "940c1f9ea56c0bdc4a418f1f9d8f1b27d60c14257bc5e1dc6956607d3beb5f21"
     },
     {
       "path": "tools/validate_repository.py",
-      "bytes": 5118,
-      "sha256": "ffc776c8a13d478cdd19b3405b474306c1dd418140240c92c2223b4cdddd362b"
+      "bytes": 7028,
+      "sha256": "f37760d05fe95155cd7429e00ed000f5ba8b4e472c678bbc3f2a574aba4660a9"
     },
     {
       "path": "tools/verify_manifest.py",

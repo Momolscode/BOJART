@@ -1,6 +1,6 @@
 # Récupération vérifiée — 1 novembre 2026
 
-Le dépôt contient le code consolidé Jarvis M07, les sources des deux sites et la direction artistique. Ce complément ajoute le catalogue de la récupération étendue et ses notes de reprise. Les médias et archives restent dans les fichiers sauvegardés ci-dessous ; leurs octets ne sont pas hébergés dans ce dépôt.
+Le dépôt contient le code consolidé Jarvis M07, les sources des deux sites et la direction artistique. Ce complément avait ajouté le catalogue de récupération et ses notes de reprise. **Mise à jour après les transferts : les trois parties sont maintenant conservées sur leurs branches GitHub et leur restauration complète est vérifiée.** Voir [l'état actuel des archives](ETAT_ARCHIVES_2026-11-01.md) et sa commande unique. Les contrôles ci-dessous décrivent la collecte initiale ; les liens d'origine restent utiles comme sauvegarde indépendante.
 
 ## Contrôles exécutés pendant ce transfert
 

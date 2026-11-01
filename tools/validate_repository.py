@@ -10,6 +10,9 @@ from pathlib import Path, PurePosixPath
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST='data/catalog/repository_manifest.json'
+ARCHIVE_MANIFEST='archive/2026-11-01/MANIFEST.json'
+# Exact manifest already published in PR #3; no general binary exemption.
+ARCHIVE_MANIFEST_SHA256='062a8b216a324dc2c68d69051dd03cb020634b2c0c2a2860d4978054fead12ee'
 PRIVATE_EXT={'.zip','.bundle','.mp4','.mov','.mp3','.wav','.sqlite','.sqlite3','.db','.pem','.key','.png','.jpg','.jpeg','.webp','.pdf','.ttf'}
 SECRET=[re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}'),re.compile(r'github_pat_[A-Za-z0-9_]{40,}'),re.compile(r'sk-proj-[A-Za-z0-9_-]{30,}'),re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),re.compile(r'https?://[^\s"<>]+[?&](?:X-Amz-Signature|sig)=[A-Za-z0-9%]{20,}')]
 
@@ -17,11 +20,41 @@ def names(root=ROOT):
     data=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z'],cwd=root)
     return sorted(set(x for x in data.decode().split('\0') if x))
 
+def verified_archive_files(root):
+    approved={};issues=[]
+    manifest=root/ARCHIVE_MANIFEST
+    if not manifest.is_file():
+        return approved,[{'path':ARCHIVE_MANIFEST,'error':'archive_manifest_missing'}]
+    raw=manifest.read_bytes()
+    if hashlib.sha256(raw).hexdigest()!=ARCHIVE_MANIFEST_SHA256:
+        return approved,[{'path':ARCHIVE_MANIFEST,'error':'archive_manifest_changed'}]
+    data=json.loads(raw)
+    entries=[dict(e,path=e['source_path']) for e in data['direct_files']]
+    entries += [part for e in data['split_files'] for part in e['parts']]
+    for entry in entries:
+        name=entry['path'];path=root/name
+        if path.is_symlink() or not path.is_file() or not path.resolve().is_relative_to(root.resolve()):
+            issues.append({'path':name,'error':'archive_file_missing_or_unsafe'});continue
+        raw=path.read_bytes()
+        if len(raw)!=entry['bytes'] or hashlib.sha256(raw).hexdigest()!=entry['sha256']:
+            issues.append({'path':name,'error':'archive_checksum_mismatch'});continue
+        approved[name]={'path':name,'bytes':len(raw),'sha256':entry['sha256']}
+    for entry in data['split_files']:
+        if not all(p['path'] in approved for p in entry['parts']):continue
+        digest=hashlib.sha256();size=0
+        for part in entry['parts']:
+            raw=(root/part['path']).read_bytes();digest.update(raw);size+=len(raw)
+        if size!=entry['bytes'] or digest.hexdigest()!=entry['sha256']:
+            issues.append({'path':entry['path'],'error':'archive_reconstruction_mismatch'})
+    return approved,issues
+
 def validate(write_manifest=False):
-    issues=[];files=[]
+    approved,issues=verified_archive_files(ROOT);files=[]
     for name in names():
         p=ROOT/name;rel=PurePosixPath(name)
         if p.is_symlink() or not p.is_file() or '..' in rel.parts:issues.append({'path':name,'error':'missing_or_unsafe'});continue
+        if name in approved:
+            files.append(approved[name]);continue
         if p.suffix.lower() in PRIVATE_EXT or (p.name.startswith('.env') and p.name!='.env.example') or any(part in {'node_modules','.venv','private','objects'} for part in rel.parts):
             issues.append({'path':name,'error':'private_or_binary_in_public_git'});continue
         b=p.read_bytes()
