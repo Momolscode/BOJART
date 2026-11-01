@@ -135,6 +135,11 @@
     "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
   },
   {
+    "path": "docs/memory/RESILIENCE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Atomic import and consistent context snapshot implementation; forced launcher restart checked on Windows and Linux at d57330052b32cb5f638e841bdc086804cd65ede1 (GitHub Actions run 41357380816); no hardware power-loss qualification."
+  },
+  {
     "path": "docs/research/launch-toolchain-2026-11-01/README.md",
     "project": "bojart.jarvis",
     "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",

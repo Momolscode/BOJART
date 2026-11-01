@@ -34,19 +34,20 @@ def index_repository(memory, root):
             raise MemoryError('Source classée plusieurs fois dans le même projet.')
         seen.add(identity)
         normalized.append({**record, 'collection': collection})
-    files = [memory.ingest_file(
-        root / r['path'], root=root, project=r['project'], collection=r['collection'],
-        provenance=r['provenance'],
-        kind='reference' if r['collection'] == 'research' else 'project_document',
-    ) for r in normalized]
-    retired = {
-        collection: {
-            project: memory.reconcile_collection(
-                project=project, collection=collection,
-                source_paths=[r['path'] for r in normalized
-                              if r['project'] == project and r['collection'] == collection],
-            ) for project in sorted(PROJECTS)
-        } for collection in COLLECTIONS
-    }
+    with memory.transaction():
+        files = [memory.ingest_file(
+            root / r['path'], root=root, project=r['project'], collection=r['collection'],
+            provenance=r['provenance'],
+            kind='reference' if r['collection'] == 'research' else 'project_document',
+        ) for r in normalized]
+        retired = {
+            collection: {
+                project: memory.reconcile_collection(
+                    project=project, collection=collection,
+                    source_paths=[r['path'] for r in normalized
+                                  if r['project'] == project and r['collection'] == collection],
+                ) for project in sorted(PROJECTS)
+            } for collection in COLLECTIONS
+        }
     return {'files': files, 'retired': retired['canonical'],
             'research_retired': retired['research']}

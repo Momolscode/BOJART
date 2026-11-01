@@ -57,3 +57,11 @@ Données temporaires : deux démarrages par le vrai lanceur, session HTTP authen
 Avec Playwright et un Chromium déjà disponibles, `--browser --chromium CHEMIN_CHROMIUM` ajoute les contrôles d’interface, de téléchargement, de réponse périmée et de rendu mobile. Aucun navigateur n’est téléchargé. La recette sans navigateur est exécutée à chaque push/PR par le workflow de continuité.
 
 Preuves : [startup-2026-11-01.json](evidence/startup-2026-11-01.json). Les essais sur cet hôte Linux ne remplacent pas la recette du GPU, du micro, des trois moniteurs ou des imprimantes de l’atelier.
+
+## Interruption pendant une mise à jour
+
+Les imports documentaires sont désormais validés par lot complet. Une erreur conserve les références précédentes, et la construction d’un contexte utilise un même instantané pour ses faits et ses passages. Voir [la recette de résilience mémoire](memory/RESILIENCE.md).
+
+Pour simuler un arrêt forcé du processus avec des données temporaires : `python tools/check_startup.py --abrupt --output .bojart-audit/forced-restart.json`.
+
+Sous Windows, le serveur reste dans le processus du lanceur. La recette d’arrêt forcé vérifie sa fermeture et la réouverture du même dossier, sans serveur orphelin.

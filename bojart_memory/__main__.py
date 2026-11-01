@@ -28,7 +28,8 @@ def main():
                 if not root.is_dir() or m.state.is_relative_to(root):raise MemoryError('Dossier source invalide ou contenant la mémoire.')
                 paths=[f for f in root.rglob('*') if f.is_file() and f.suffix.lower() in TEXT_EXT and not any(part in IGNORED_PARTS or part.startswith('.env') for part in f.relative_to(root).parts)]
                 if len(paths)>MAX_FILES:raise MemoryError('Lot trop grand.')
-                result={'files':[m.ingest_file(f,root=root,project=a.project,collection=a.collection,provenance=a.provenance) for f in sorted(paths)]}
+                with m.transaction():
+                    result={'files':[m.ingest_file(f,root=root,project=a.project,collection=a.collection,provenance=a.provenance) for f in sorted(paths)]}
             elif a.cmd=='index-repo':
                 result=index_repository(m,a.repo)
             elif a.cmd=='search':result=m.search(a.query,project=a.project,limit=a.limit,history=a.history)
