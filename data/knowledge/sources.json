@@ -114,5 +114,19 @@
     "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee",
     "evidence": "remote_git_bytes_restored_and_compared_with_provider_and_library_originals",
     "scope": "62 additional indexed originals; not all original conversations"
+  },
+  {
+    "source_id": "hardware-user-20261102",
+    "evidence": "user_report",
+    "description": "L'utilisateur indique RTX 4060 Ti pour le poste BOJ.ART ; information reçue le 2 novembre 2026, heure de Paris.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "hardware-photo-20261102",
+    "evidence": "user_supplied_photo_read",
+    "description": "Photo des informations système reçue le 2 novembre 2026 : mémoire graphique 8 GB, RAM 16,0 Go, AMD Ryzen 5 5600G, Windows 11 Professionnel Insider Preview 25H2, stockage affiché 932 GB. Date de prise de vue non vérifiée ; capacité affichée, pas espace libre ; aucun diagnostic exécuté sur le poste.",
+    "sha256": "f3de8799d7a5d8ff26a9e537913638ee70039ab992cb35f07e3864a1d2be8053",
+    "scope": "Sanitized reported hardware only; no device/product identifiers or image in Git; no inference benchmark",
+    "raw_content_in_git": false
   }
 ]

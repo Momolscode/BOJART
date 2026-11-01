@@ -40,7 +40,7 @@ Sélection d'outils et de skills du 1 novembre : voir `docs/research/launch-tool
 2. Qualifier voix française, bruit, trois écrans, charge CAO et reprise après coupure.
 3. Inventorier le parc, qualifier une FDM et une résine avec opérateur, puis étendre.
 
-GPU, OS, modèles d’imprimantes et nombre exact de machines sont inconnus. Les mentions 7–8 puis « une dizaine » ne remplacent pas un inventaire.
+GPU : le 2 novembre, l'utilisateur indique une RTX 4060 Ti. Sa photo montre 8 Go de mémoire graphique, 16 Go de RAM, un Ryzen 5 5600G et Windows 11 Professionnel Insider Preview 25H2. Ces informations rapportées remplacent l'incertitude sur le poste ; elles ne prouvent ni pilote, ni VRAM libre, ni fonctionnement réel. Le stockage affiché de 932 GB n'est pas une mesure d'espace libre. Voir `docs/memory/POSTE_RTX4060TI.md`. Les modèles d'imprimantes et le nombre exact de machines restent inconnus ; les mentions 7–8 puis « une dizaine » ne remplacent pas un inventaire.
 
 ## Complément de récupération vérifié
 
@@ -57,3 +57,5 @@ Le complément du 1 novembre ajoute 62 originaux distincts : 57 médias, quatre 
 ## Préparation des modèles — 2 novembre 2026
 
 Trois profils locaux sont préparés : `speed`, `balanced`, `quality`. Voir `docs/research/MODELES_LOCAUX_2026-11-02.md` pour les candidats datés et `docs/memory/INSTALLATION_MODELES.md` pour le parcours exécutable. Celui-ci contrôle des réponses synthétiques, les temps et les vecteurs avant d'activer les réglages. La mémoire épingle les empreintes des modèles et refuse les changements observés pendant une inférence. Le contexte, la limite de sortie et le maintien en mémoire sont explicites. Ces ajouts ne constituent pas une installation ni une qualification de la tour, de la création ou de la voix.
+
+Pour la RTX 4060 Ti 8 Go rapportée, le profil retenu pour essai est `speed` : Qwen3.5 4B Q4_K_M et Qwen3 Embedding 0.6B, contexte demandé de 16 384 tokens et réponse de 512 tokens maximum. `Installer_BOJART_4060Ti.cmd` prépare et mesure ce profil après installation de Python 3.12 et Ollama. Le contexte adapte ses sources et l'historique sous une enveloppe UTF-8, sans couper de fait, passage ou champ historique ni relancer la recherche. Les originaux sont conservés. Aucun modèle réel n'a été essayé sur le poste pendant cette préparation.

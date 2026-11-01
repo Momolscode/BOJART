@@ -144,3 +144,13 @@ Ajouts : plan hors ligne, téléchargement explicite des seuls modèles manquant
 Les contrôles avec serveur local simulé vérifient erreurs, changements de tag, refus d'activation, conservation des réglages, index unique et paramètres transmis. Les tests de CI portent sur le logiciel exact sous Windows/Linux ; seuls des essais sur la tour pourront prouver les modèles et temps réels. Aucun poids téléchargé ici et aucun résultat artistique nouveau.
 
 Réconciliation : les améliorations concurrentes du Studio/Growth et leurs treize tests d’interface, publiées au commit `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, sont conservées.
+
+## Adaptation au poste RTX 4060 Ti — 2 novembre 2026
+
+L'utilisateur nomme une RTX 4060 Ti ; la photo fournie affiche 8 Go de mémoire graphique, 16 Go de RAM, un Ryzen 5 5600G et Windows 11 Professionnel Insider Preview 25H2. Le registre conserve les statuts `source_reported`, remplace l'ancienne inconnue de système par une affirmation sourcée et ne conserve ni photo ni identifiants Windows dans Git. Les 932 GB affichés ne sont pas l'espace libre. Cette information ne constitue pas un diagnostic exécuté sur le poste.
+
+Base examinée : `a0500b39ddf5a6154c701c225c5b2ad80767cc70`. Profil d'essai retenu : `speed`, Qwen3.5 4B Q4_K_M + Qwen3 Embedding 0.6B ; contexte demandé 16384, sortie 512, think faux, keep_alive 300 secondes. L'installeur Windows dédié lance la préparation et les mesures existantes après installation de Python 3.12 et Ollama. Les autres profils restent disponibles pour d'autres matériels.
+
+Le contexte de conversation réserve la place de la question, des instructions et de l'historique selon l'enveloppe UTF-8. Il sélectionne ensuite des faits et passages entiers, en une seule recherche, et conserve les originaux historiques. Les cinq nouvelles régressions couvrent les caractères multioctets, les longues conversations, le nombre d'appels, le plus petit contexte accepté et le refus avant réseau d'une question trop grande. Les tests de serveur simulé ne prouvent pas la qualité ou la vitesse d'un modèle réel. Les résultats exacts Windows/Linux sont à consulter dans les workflows du commit publié ; la tour reste à qualifier.
+
+Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `POSTE_RTX4060TI.md`, qui rassemble le GPU rapporté et les inconnues du parc. Son ancienne source attendue, le résumé `CURRENT.md`, a reculé au classement après l'ajout de ce guide ; la question et le seuil de cinq résultats restent inchangés. Le journal historique conserve les anciennes inconnues à leur date ; seul l'état courant est actualisé.
