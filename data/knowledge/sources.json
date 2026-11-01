@@ -65,5 +65,33 @@
     "evidence": "user_instruction",
     "description": "Demande du 2026-11-01 : mémoire et contexte Jarvis prêts pour installation le lendemain ; système du poste pas encore décidé.",
     "raw_content_in_git": false
+  },
+  {
+    "source_id": "recovery-note",
+    "filename": "BOJART_JARVIS5_RECUPERATION_2026-11-01.txt",
+    "library_file_id": "libfile_e6f40cc9ea048191bc57fc6bad000271",
+    "version_id": null,
+    "path": "docs/historical/recovery-2026-11-01/BOJART_JARVIS5_RECUPERATION_2026-11-01.txt",
+    "sha256": "410b97a7ddd73808bb05da158f35772c861564199258122d3b9a46ad88d49a9f",
+    "evidence": "original_bytes_read_and_preserved",
+    "scope": "BOJART historical recovery before GitHub consolidation",
+    "raw_content_in_git": true
+  },
+  {
+    "source_id": "recovery-guide",
+    "filename": "BOJART_RECUPERATION_LIRE_D_ABORD.txt",
+    "library_file_id": "libfile_d68b7ab8e6c08191b0b623c8f4cbac7b",
+    "version_id": null,
+    "path": "docs/historical/BOJART_RECUPERATION_LIRE_D_ABORD.txt",
+    "sha256": "7ca1dd2d4ab9cc746c434a547de7023205e24b539698b1c7433c7c43ca4bdd3c",
+    "evidence": "original_bytes_read_and_preserved",
+    "scope": "BOJART historical recovery before GitHub consolidation",
+    "raw_content_in_git": true
+  },
+  {
+    "source_id": "recovery-integrity-20261101",
+    "path": "data/catalog/recovery-2026-11-01/verification.json",
+    "evidence": "sha256_and_crc_executed_this_session",
+    "scope": "recovery_archive_integrity_only"
   }
 ]

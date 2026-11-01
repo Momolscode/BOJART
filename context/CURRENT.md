@@ -33,3 +33,7 @@ Le catalogue couvre 1 060 emplacements de trois archives, deux sources de sites 
 3. Inventorier le parc, qualifier une FDM et une résine avec opérateur, puis étendre.
 
 GPU, OS, modèles d’imprimantes et nombre exact de machines sont inconnus. Les mentions 7–8 puis « une dizaine » ne remplacent pas un inventaire.
+
+## Complément de récupération vérifié
+
+La collecte étendue de 219 sources a été téléchargée et contrôlée : trois ZIP conformes, 3 340 contenus uniques et leurs 6 445 emplacements vérifiés. Le catalogue public est ajouté sous `data/catalog/recovery-2026-11-01/`. Les octets des médias et archives restent externes ; voir `docs/RECUPERATION_VERIFIEE_2026-11-01.md`. Ce périmètre dépasse le catalogue initial et ne doit pas lui être additionné. Il ne certifie pas la récupération intégrale des conversations ou du PC.

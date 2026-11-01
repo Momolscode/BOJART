@@ -40,3 +40,5 @@ Les apports des autres sessions sont conservés : [recette R03](productions/le-d
 Les archives et médias simplement référencés ne sont pas tous hébergés ici. Les documents anciens sous `docs/historical/` décrivent leur époque ; le contexte courant distingue ce qui a été récupéré depuis. Voir [les preuves de consolidation](docs/evidence/consolidation-2026-11-01.json).
 
 Les ajouts simultanés sont intégrés : [audit et journal des générations](docs/OPERATIONS.md), `bojart_ops/`, `tests_ops/` et leur workflow GitHub. Ils complètent la mémoire documentaire ; les sauvegardes restent distinctes.
+
+La [récupération étendue vérifiée](docs/RECUPERATION_VERIFIEE_2026-11-01.md) ajoute un catalogue de 3 340 contenus distincts et 6 445 emplacements, avec les liens des trois archives et leurs contrôles SHA-256. Ce catalogue ne transfère pas les médias dans GitHub.

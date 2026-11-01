@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3649,
-      "sha256": "efb39f3ccc47673c46636214c46d3be8e6cb8aca9658eade4146ac7b4ddc8289"
+      "bytes": 3922,
+      "sha256": "5e230e9757264863f8a2a47dd7714e1d68c8e2ed1f838e22dc0e714b1c4075f1"
     },
     {
       "path": "SECURITY.md",
@@ -149,13 +149,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 3350,
-      "sha256": "d612400c1641d74edfeb5de1ebe841387e09a7012e0472c0a584881b4967a58f"
+      "bytes": 3891,
+      "sha256": "d45a1475ea959e0d122e6ea75ee7fc7dd583cac1bb1895a20c39d610383dabe7"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 2969,
-      "sha256": "383ba42be4e41609eb92fb70ef1f7814d2e95b3b36e00611889ce57d2271bf82"
+      "bytes": 4231,
+      "sha256": "405a9d1dd00133999b2f6579ad896457412610c6eb84ef96e1498e51ec18f283"
     },
     {
       "path": "creative/CURRENT.md",
@@ -183,6 +183,61 @@
       "sha256": "1fcbc8aab3b02623fa6fd99f53d1b2785c971cfeed410542638fc23c3010211a"
     },
     {
+      "path": "data/catalog/recovery-2026-11-01/contents-part-01.jsonl",
+      "bytes": 375114,
+      "sha256": "c4a4f48e8cdfef5bca16fe05068ac9be0002dded4decc4ea55cff344ebc9fbc3"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/contents-part-02.jsonl",
+      "bytes": 374994,
+      "sha256": "cb07509101d9ef7ebf1ad696f72dab4451216d9b71baf3894aaf313b51632a46"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/contents-part-03.jsonl",
+      "bytes": 374694,
+      "sha256": "2c7a3abc87bfbeef5cd55fbc9f704aaa8ecd307bdc643ff6e9b4938fc6e72c18"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/locations-01.jsonl",
+      "bytes": 276353,
+      "sha256": "ec5762c8c8559f77f5ed608835a4623827af8da32c02f2c7cf37273f5b66bf68"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/locations-02.jsonl",
+      "bytes": 304615,
+      "sha256": "43a07c8906879138f880fe54c568eab228050ce866a11619d4ad176788f8b829"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/locations-03.jsonl",
+      "bytes": 320590,
+      "sha256": "894552e8ef02e04122d2b7257e5521de5b6ecc0cb3695319d48e93c9c7d81554"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/locations-04.jsonl",
+      "bytes": 267553,
+      "sha256": "5b8f4248a19da471740bbc1b62db89a24812116a0e135694003aa8ab3922be18"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/locations-05.jsonl",
+      "bytes": 261907,
+      "sha256": "b77958ede4737a419ab68ec96cfd3a4d9e53599a42c186fcbb34e707a8d6dab3"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/locations-06.jsonl",
+      "bytes": 90074,
+      "sha256": "d24720745161a041540d9eb04faabb94fd1c4fc62f8b661f5053142f233f5ba2"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/sources.json",
+      "bytes": 62604,
+      "sha256": "385f280d9e385102b6469ebc5de4e8a3e00c3539a4ea0faf85166b46653fafbe"
+    },
+    {
+      "path": "data/catalog/recovery-2026-11-01/verification.json",
+      "bytes": 2758,
+      "sha256": "0a0f204e1ec880c39effa66e954a0f587e349c77d3f87764d94175c741c2d6d1"
+    },
+    {
       "path": "data/catalog/summary.json",
       "bytes": 392,
       "sha256": "05568bbfd3f8b5dd8eb6d4a92f99d1d58801665a908f7040137effd940f32e6c"
@@ -199,8 +254,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 3956,
-      "sha256": "7bd5438b245eb7f503a9423c67b7ee09b029740702ce45eeb5530fc87728adfd"
+      "bytes": 4253,
+      "sha256": "cc7be9d23a6917da71eb5069bd2c0a88ca554f9d30be0479d4b1a612fd04a32b"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -209,8 +264,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 2442,
-      "sha256": "e45446f56c9868edadacee9af47ca5714408ea64fa4e6f452bdc17c7d7bc57d9"
+      "bytes": 3691,
+      "sha256": "6d600c84be62e8c08844fa60e6f93a43781b0350248cbeffb7b354b0b16c4bae"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -281,6 +336,11 @@
       "path": "docs/RECHERCHE_ARTISTES.md",
       "bytes": 1337,
       "sha256": "f2bbc1c8329af615d4b4f3a33990c94777c47042e15969d196968f09ff7f4c9e"
+    },
+    {
+      "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+      "bytes": 3693,
+      "sha256": "ace7bf6d8886f88dbfdea83d32342ad2e2cacf34a6c3c6c9fe81b02948bb84d6"
     },
     {
       "path": "docs/RESEARCH_2026-11-01.md",
@@ -366,6 +426,16 @@
       "path": "docs/historical/MARWIN_STUDIO_REGISTRE_R_D_2026-10-30.md",
       "bytes": 4156,
       "sha256": "6336d7fee2b985dda530c6ccb3b061f55339feee9fd252c2701996455533be5b"
+    },
+    {
+      "path": "docs/historical/recovery-2026-11-01/BOJART_JARVIS5_RECUPERATION_2026-11-01.txt",
+      "bytes": 7453,
+      "sha256": "410b97a7ddd73808bb05da158f35772c861564199258122d3b9a46ad88d49a9f"
+    },
+    {
+      "path": "docs/historical/recovery-2026-11-01/README.md",
+      "bytes": 866,
+      "sha256": "4ddaaa1e212fbdef40bbcd548878be56efdf21e712e38f568bca38e28e4006f0"
     },
     {
       "path": "docs/memory/MCP.md",

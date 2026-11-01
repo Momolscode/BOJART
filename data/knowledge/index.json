@@ -103,5 +103,10 @@
     "path": "docs/memory/MCP.md",
     "project": "bojart.jarvis",
     "provenance": "Agent memory preparation, 2026-11-01; proposals distinguished from validated integrations"
+  },
+  {
+    "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+    "project": "bojart.jarvis",
+    "provenance": "Three recovery ZIPs and all 3340 unique objects verified by SHA-256 on 2026-11-01; see data/catalog/recovery-2026-11-01/verification.json. External bytes are not hosted in GitHub."
   }
 ]
