@@ -289,13 +289,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 5879,
-      "sha256": "d4e5b63f52769e217eb01d8469a04f55762288870f9225eff6999fa9d1374c22"
+      "bytes": 6259,
+      "sha256": "5b2da779a3cc19ca27e9f27ade57e25f36b54c45ad1f44ca3c365b5afa273574"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 17629,
-      "sha256": "0a11cc11c8082517f7b3c52a36cbb375e61d1a981fdf95ba592cd5331ae6033d"
+      "bytes": 19375,
+      "sha256": "099fd5965f213fd495ae10fcfda952136e615d73590d3e3d4c3a31a38e88615b"
     },
     {
       "path": "creative/CURRENT.md",
@@ -644,8 +644,8 @@
     },
     {
       "path": "docs/evidence/orchestration-integration-2026-11-01.json",
-      "bytes": 40085,
-      "sha256": "1cf028fc7702122b898a71c27409b3152947473947e9e4c6f6f94d07c8984571"
+      "bytes": 40714,
+      "sha256": "14b6bb3b485941e00e55d031107d717a93780831d9d831d65efb745c4c3d5fb9"
     },
     {
       "path": "docs/evidence/recovery-part-1-2026-11-01.json",
@@ -1029,8 +1029,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/display_contracts.py",
-      "bytes": 6213,
-      "sha256": "f8bd1d9d4156f0125d958dbd13fe942c710447342532f4195ee67a5eb2ca6e36"
+      "bytes": 6877,
+      "sha256": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c"
     },
     {
       "path": "jarvis/apps/jarvis/app/growth.css",
@@ -1109,8 +1109,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/proposals.py",
-      "bytes": 5630,
-      "sha256": "4740c3440c5cf81dac835c7ded773078349c85bec407a247dd3fc4d0a5bbd48b"
+      "bytes": 5758,
+      "sha256": "9fcc59d14548958a1844162228cd5bcac70d778a325119a3523f170fb2abe8f6"
     },
     {
       "path": "jarvis/apps/jarvis/app/server.py",
@@ -1224,8 +1224,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace_state.py",
-      "bytes": 21496,
-      "sha256": "a3291a92f6e8b991106b9a3cc77a2a2092487d865d2c8e6e6a454e56f0a80068"
+      "bytes": 22279,
+      "sha256": "9974501d5d337b59d546ad3f38adf964e1f084ae56339b2a4374cf3986684f1f"
     },
     {
       "path": "jarvis/apps/jarvis/config.example.json",
@@ -1664,8 +1664,8 @@
     },
     {
       "path": "jarvis/docs/m05/RELEASE_M05.md",
-      "bytes": 7792,
-      "sha256": "9cf76955958c0b8f5af9455e994f6fa9e5d78485e4fc3a0f8f400987ca8358e9"
+      "bytes": 8032,
+      "sha256": "a2faecd2e7abe8ece67550129b4c9536791d56778ce822f42a80ab9ee15fb350"
     },
     {
       "path": "jarvis/docs/m05/REPRISE_M05.txt",
@@ -3941,6 +3941,11 @@
       "path": "tests/test_memory_http.py",
       "bytes": 3186,
       "sha256": "bf8ddde9cdbc954d5b7cb33387d937a3fb087673732d96c9983ee34c1602a6c1"
+    },
+    {
+      "path": "tests/test_workspace_restore.py",
+      "bytes": 7679,
+      "sha256": "dfdd925dc1c24c9964937ba57d561be9ce0c07aaf5a32922a910384dc30d2cb8"
     },
     {
       "path": "tests_agent/test_agent.py",

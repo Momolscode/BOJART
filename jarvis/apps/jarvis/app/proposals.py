@@ -60,6 +60,7 @@ class ProposalBook:
                 result=self.store.get(row['operation_id'])
                 self.record_outcome(key,result)
                 return result
+            if row['state']!='PROPOSED':raise Rejected('Proposition arrêtée ou restaurée : préparez une nouvelle demande.')
             if self.clock()>row['expires']:raise Rejected('Proposition expirée : relisez la demande.')
             if file_digest(self.store.context_path)!=row['context_hash']:raise Rejected('Le contexte a changé ; proposition à recalculer.')
             if self.store.project_revision(row['project'])!=row['revision']:raise Rejected('Le dossier a changé ; proposition à recalculer.')

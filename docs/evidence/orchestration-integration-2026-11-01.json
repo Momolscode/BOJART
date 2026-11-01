@@ -1,10 +1,10 @@
 {
   "schema": "bojart.orchestration-integration.v1",
-  "observed_at": "2026-11-01T22:57:34.859843+00:00",
+  "observed_at": "2026-11-01T23:00:49.291783+00:00",
   "scope": "Local integration working tree with explicit input hashes. GitHub Actions independently validates the published commit.",
   "parents": {
-    "main": "0a7a08dd0a0bed445ef0dc5734be7c841b30467a",
-    "research_pr_7": "5e8a14415b816ac7aa840cb3409a1752943929da"
+    "integration_previous": "882b30d88788486be903910b5db95a13fcc9d322",
+    "main": "9c2a0fb47baf1b610e31d2deb800a5323bb9495e"
   },
   "environment": {
     "os": "Linux",
@@ -15,14 +15,14 @@
     {
       "suite": "memory",
       "command": "python -m unittest discover -s tests -v",
-      "passed": 46,
-      "log_sha256": "43ddd3391b806a2bc60ae0e2cdfdbda1c20aa67b1ce8e6d32d859ac8aa55000b"
+      "passed": 52,
+      "log_sha256": "37152a51a0f26b7d0ebdc97fba486b1d197b70f8dc2c1d9fc722496628dce450"
     },
     {
       "suite": "agent",
       "command": "python -m unittest discover -s tests_agent -v",
       "passed": 78,
-      "log_sha256": "cceb6583d81bf79d1ab935ebfa1d98849ba26a6971669cbfa4d6c1d791f5fea7"
+      "log_sha256": "05325f418e6396f5bc4cd4b041ccc1eeb3f45f7dc845e356a5ce63329181d8ba"
     },
     {
       "suite": "operations",
@@ -37,7 +37,7 @@
       "log_sha256": "793ec2a02f247dc87818c37305ad740e26baff7fae9784fb0eb9a97201ac8e08"
     }
   ],
-  "python_tests_passed": 207,
+  "python_tests_passed": 213,
   "new_scenarios": {
     "qualification_dependencies": 16,
     "session_collection": 5
@@ -103,9 +103,9 @@
           "returned_sources": [
             "docs/DATA_GOVERNANCE.md",
             "INSTALLER_DEMAIN.md",
+            "context/CURRENT.md",
             "docs/memory/RESILIENCE.md",
-            "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
-            "docs/ETAT_ARCHIVES_2026-11-01.md"
+            "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
           ],
           "all_citations_verified": true
         },
@@ -247,7 +247,7 @@
     "command": "python tools/check_startup.py --abrupt --output .bojart-audit/startup-integration.json",
     "result": {
       "schema": "bojart.startup-acceptance.v1",
-      "observed_at": "2026-11-01T22:57:24.679341+00:00",
+      "observed_at": "2026-11-01T23:00:40.129109+00:00",
       "python": "3.12.14",
       "platform": "linux",
       "launcher_started_twice": true,
@@ -1049,8 +1049,8 @@
     "bojart_memory/paths.py": "3f776181ca3ef620649fcc3017d74ecc34d0b24b7deee3883e46037b7bc7e1d6",
     "bojart_ops/orchestration.py": "29bdedb5f530b44bd73185f4a050a5ca9de7b103dc95e1ba90ba46673625411d",
     "bojart_ops/qualification.py": "ee489bedf74506add484d3644f71273f0b7e8179674c586899589fcbd9527998",
-    "context/CURRENT.md": "d4e5b63f52769e217eb01d8469a04f55762288870f9225eff6999fa9d1374c22",
-    "context/SESSION_HANDOFF.md": "0a11cc11c8082517f7b3c52a36cbb375e61d1a981fdf95ba592cd5331ae6033d",
+    "context/CURRENT.md": "5b2da779a3cc19ca27e9f27ade57e25f36b54c45ad1f44ca3c365b5afa273574",
+    "context/SESSION_HANDOFF.md": "099fd5965f213fd495ae10fcfda952136e615d73590d3e3d4c3a31a38e88615b",
     "creative/CURRENT.md": "a328317fbb1d89aea822d54721b93d008cc181ae9595de10de420eba000e536e",
     "data/knowledge/claims.jsonl": "1a25d50ab9b68969660e997684951da843904fa4dab0ec65e71b009d73f5c1fd",
     "data/knowledge/index.json": "31410d2b55e5c9bb3049288949089fff7b7e4208171e03993457c36b979da42b",
@@ -1078,9 +1078,13 @@
     "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json": "c005ec8231874b0a92513ecafbcc7cc1fa431afc2f84316f139fa014ed74be10",
     "docs/research/launch-toolchain-2026-11-01/VALIDATION.json": "15cd726e48088d52ceb149ab6aea859c300c624557431f97ae3e73e8a7938c17",
     "jarvis/apps/jarvis/app/consolidated_workbench.py": "6bb4d4162b658a9441b09969dfede320c9bd7f07b44ea2c7403775119e80bde4",
+    "jarvis/apps/jarvis/app/display_contracts.py": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c",
     "jarvis/apps/jarvis/app/memory.css": "9a406323d11db43094576a09e192de1ae7fdf13cd57750dbfcbbdf4721bfc1a5",
     "jarvis/apps/jarvis/app/memory.html": "845087eaf551b64e62fb591152b36ee199865aee5a793995fb7c3ef2920892f6",
     "jarvis/apps/jarvis/app/memory.js": "24b3463eb8d275b99fa945359b2f55659709d2203c7360364d8ed28ea8d27276",
+    "jarvis/apps/jarvis/app/proposals.py": "9fcc59d14548958a1844162228cd5bcac70d778a325119a3523f170fb2abe8f6",
+    "jarvis/apps/jarvis/app/workspace_state.py": "9974501d5d337b59d546ad3f38adf964e1f084ae56339b2a4374cf3986684f1f",
+    "jarvis/docs/m05/RELEASE_M05.md": "a2faecd2e7abe8ece67550129b4c9536791d56778ce822f42a80ab9ee15fb350",
     "jarvis/knowledge/growth/BRAND_CONTEXT.json": "aa0a6109d5ccb1bec9b713f4f4a6e676a481933461283fa7f9c91c73c9d2a317",
     "ops/higgsfield-observations.json": "1ce6600d97e0f74baecd674103f56db290b2e467428e62a615eb09c4dcd510f5",
     "ops/orchestration.json": "2980e9ff3c15bd56fa3d85cb8b3efb860b026aa636e2cc93b9bbbd47688c9965",
@@ -1088,6 +1092,7 @@
     "productions/le-dernier-geste/README.md": "033250fcef41e32ec28d626f95ef379f847a2c59e12d31aee8b5746dcb3576b0",
     "productions/le-dernier-geste/STATUT_G2.json": "719950f7e65283178b224da7307f1a8430c8da54db011c641a303d3c822d0a31",
     "sites/README.md": "c790a601a64d5eef579b41fa6e26d277259e05b36ef4bd7eb29d96c95cac53c7",
+    "tests/test_workspace_restore.py": "dfdd925dc1c24c9964937ba57d561be9ce0c07aaf5a32922a910384dc30d2cb8",
     "tests_agent/test_conversation_context.py": "da36efb63fd51977b19faa936baa4b08cf16575f983d466920919fefb3d11d21",
     "tests_agent/test_research_indexing.py": "0f986abb8d1e68ebde03c62e9545c5d84b35c96a68730f32e36b9e653d3efaae",
     "tests_agent/test_session_indexing.py": "b10d9cf24ddd3a05be6d3670c3c51a4fbecbf52e5a55cbc7987e3d260228bc69",
@@ -1110,9 +1115,11 @@
     "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2",
     "5e8a14415b816ac7aa840cb3409a1752943929da",
     "f290812a2a3d90e1ac19e7d9ac945e42b050037f",
-    "0a7a08dd0a0bed445ef0dc5734be7c841b30467a"
+    "0a7a08dd0a0bed445ef0dc5734be7c841b30467a",
+    "9c2a0fb47baf1b610e31d2deb800a5323bb9495e"
   ],
   "preserved_concurrent_scenarios": {
-    "conversation_context": 17
+    "conversation_context": 17,
+    "workspace_restore": 6
   }
 }

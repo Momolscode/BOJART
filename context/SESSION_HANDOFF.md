@@ -92,6 +92,7 @@ Réconciliation de la récupération approfondie (`7ac120994cdcf6102b6b2a353bf78
 Le plan relie les fiches d'outils, les besoins de données et les critères réels déclarés dans le runtime. Les calculs de dépendances restent descriptifs, sans installation ni qualification automatique. Seize scénarios dédiés couvrent les références, empreintes, exclusions, ordres stables et refus des validations fabriquées. Résultats exécutés : `docs/evidence/orchestration-integration-2026-11-01.json`. Aucun modèle, périphérique ou service payant lancé par cette intégration.
 
 La première évaluation du corpus réuni réussissait 13 cas lexicaux sur 14 : ce journal repoussait le guide de gouvernance hors des cinq premiers résultats pour « restauration sauvegarde ». Classement dans `session_log`, étiquette historique et conservation des anciennes versions ajoutés ; cinq nouveaux scénarios vérifient migration, recherche et restauration. Les 14 cas passent après correction. La recette locale du vrai lanceur réussit également après arrêt forcé, redémarrage et restauration dans un nouveau dossier ; elle ne qualifie pas une coupure électrique, les modèles ou le matériel.
+
 ## Continuité des réponses et fraîcheur de l’historique
 
 Demande : poursuivre la préparation de la mémoire Jarvis avant l’installation. Base examinée : `7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2`, contrôles GitHub réussis. Les 62 originaux de récupération récemment ajoutés et leurs preuves sont conservés.
@@ -101,3 +102,13 @@ Constat : le client Ollama transmettait les 6 000 derniers caractères du JSON d
 Vérifications locales : 17 scénarios ciblés réussis avec client Ollama simulé, plus les tests sélectionnés de mémoire, contexte, transactions, diversité et MCP. Le workflow mémoire exécute les suites complètes et la reprise du lanceur sous Windows et Linux sur la révision publiée. La qualité d’un modèle réel et la tour BOJ.ART restent à qualifier.
 
 Réconciliation supplémentaire avant publication : `0a7a08dd0a0bed445ef0dc5734be7c841b30467a` est conservé. Le contexte conversationnel borné, ses contrôles de fraîcheur et ses dix-sept scénarios restent intégrés à la mémoire commune. Les résultats consolidés figurent dans la preuve d’orchestration.
+
+## Suite de l’audit : propositions après restauration
+
+Base initialement examinée : `7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2`, rapprochée de `0a7a08dd0a0bed445ef0dc5734be7c841b30467a` avant publication. Les modifications concurrentes de continuité des conversations sont conservées.
+
+Deux défauts reproduits : une proposition visuelle préparée mais non distribuée restait courante après restauration ; une proposition CAO non exécutée pouvait encore atteindre le constructeur avec son ancienne confirmation. La restauration révoque désormais ces propositions. Les octets des propositions visuelles et des reçus restent conservés ; les résultats CAO déjà enregistrés se rejouent sans recalcul. Aucune réexécution automatique n’est ajoutée.
+
+Six nouveaux tests couvrent le refus des anciennes demandes, les nouvelles demandes, les reçus terminés, la compatibilité des anciennes sauvegardes, le redémarrage et une seconde sauvegarde/restauration. Ils sont intégrés à la suite `tests` exécutée par le workflow mémoire sous Windows et Linux. Vérifications locales complémentaires : 64 tests d’orchestration M06/M07, 44 tests de régie M04, 31 tests M05 sans médias privés et 7 tests de fermeture SQLite réussis. Trois cas M05 restent non validés ici faute des médias d’exemple ; aucune qualification CAO réelle, voix, écran ou imprimante n’est revendiquée. Les résultats CI et les empreintes du commit sont consignés dans le reçu de continuation de `audit/context-results`.
+
+Rapprochement du pilotage : le correctif de restauration `9c2a0fb47baf1b610e31d2deb800a5323bb9495e` est conservé avec ses six scénarios. La preuve d’orchestration est actualisée sur le corpus et le code réunis.
