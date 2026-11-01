@@ -715,6 +715,14 @@
       "pending_paths": [],
       "processed_correction_shas": [],
       "updated_at": "2026-11-01T22:41:26.208Z"
+    },
+    "9": {
+      "head_sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "receipt_path": "ops/context-monitor/receipts/pr-9/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f.json",
+      "status": "complete",
+      "pending_paths": [],
+      "processed_correction_shas": [],
+      "updated_at": "2026-11-01T23:03:54Z"
     }
   }
 }

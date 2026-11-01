@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 9,
+  "pull_request_state": "closed",
+  "merged": true,
+  "head_ref": "orchestrate/qualification-data-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "9c2a0fb47baf1b610e31d2deb800a5323bb9495e",
+  "merge_commit_sha": "54f245ba852a8d1c611d96d818ee36d1aa5adba9",
+  "trigger_kind": "closed",
+  "trigger_delivery_ids": [
+    "695d0810-d648-11f1-99fd-585904f99563"
+  ],
+  "head_sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+  "compared_from_sha": "9c2a0fb47baf1b610e31d2deb800a5323bb9495e",
+  "started_at": "2026-11-01T23:01:38Z",
+  "finished_at": "2026-11-01T23:03:54Z",
+  "status": "complete",
+  "comparison": {
+    "method": "GitHub compare API plus paginated PR file listing; 25 paths agreed; exact UTF-8 contents fetched at the frozen head",
+    "commits_ahead": 5,
+    "commits_behind": 0,
+    "complete_path_listing": true,
+    "api_truncated": false,
+    "semantic_review_is_not_path_inventory": true,
+    "prior_receipt_path": null
+  },
+  "changed_paths": [
+    "bojart_memory/__main__.py",
+    "bojart_memory/agent.py",
+    "bojart_memory/indexing.py",
+    "bojart_ops/orchestration.py",
+    "bojart_ops/qualification.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "data/knowledge/retrieval_cases.json",
+    "docs/ORCHESTRATION.md",
+    "docs/evidence/orchestration-integration-2026-11-01.json",
+    "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+    "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+    "docs/research/launch-toolchain-2026-11-01/README.md",
+    "docs/research/launch-toolchain-2026-11-01/SOURCE_SNAPSHOT.json",
+    "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+    "docs/research/launch-toolchain-2026-11-01/VALIDATION.json",
+    "jarvis/knowledge/growth/BRAND_CONTEXT.json",
+    "ops/orchestration.json",
+    "tests_agent/test_research_indexing.py",
+    "tests_agent/test_session_indexing.py",
+    "tests_ops/test_qualification.py",
+    "tools/evaluate_memory.py",
+    "tools/orchestrate.py"
+  ],
+  "reviewed_paths": [
+    "bojart_memory/__main__.py",
+    "bojart_memory/agent.py",
+    "bojart_memory/indexing.py",
+    "bojart_ops/orchestration.py",
+    "bojart_ops/qualification.py",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "data/knowledge/retrieval_cases.json",
+    "docs/ORCHESTRATION.md",
+    "docs/evidence/orchestration-integration-2026-11-01.json",
+    "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+    "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+    "docs/research/launch-toolchain-2026-11-01/README.md",
+    "docs/research/launch-toolchain-2026-11-01/SOURCE_SNAPSHOT.json",
+    "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+    "docs/research/launch-toolchain-2026-11-01/VALIDATION.json",
+    "jarvis/knowledge/growth/BRAND_CONTEXT.json",
+    "ops/orchestration.json",
+    "tests_agent/test_research_indexing.py",
+    "tests_agent/test_session_indexing.py",
+    "tests_ops/test_qualification.py",
+    "tools/evaluate_memory.py",
+    "tools/orchestrate.py",
+    "AGENTS.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md",
+    "jarvis/AGENTS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "bojart_memory/__main__.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "06db699160b951b77e5a9aab31c159eba9bbffb1",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/bojart_memory/__main__.py"
+    },
+    {
+      "path": "bojart_memory/agent.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "31ca7ce7a4cbe411649accbefadd9998101a0058",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/bojart_memory/agent.py"
+    },
+    {
+      "path": "bojart_memory/indexing.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "8880da538df69b4f68d4fe2c3458fb7e62e7d12b",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/bojart_memory/indexing.py"
+    },
+    {
+      "path": "bojart_ops/orchestration.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "60b3009dcf0c8bdc8f6c5e1f8dacd5ebbd7cfb1f",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/bojart_ops/orchestration.py"
+    },
+    {
+      "path": "bojart_ops/qualification.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "8766857f420bc7c786dd12db6a9192101a932fc6",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/bojart_ops/qualification.py"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "7ebbea378ef2472aea9abd3854f6f1bb69dc23da",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "0552f69bfca64eb6eee07bc3e9f95b9d3c7cd3b0",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/catalog/repository_manifest.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "78eafe4469c42527d9f05159111ab02cdad40c76",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/data/catalog/repository_manifest.json"
+    },
+    {
+      "path": "data/knowledge/index.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "8f68060cf4e4c63b8ffc467e48da03217db15c27",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/data/knowledge/index.json"
+    },
+    {
+      "path": "data/knowledge/retrieval_cases.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "e83976651610561dd016819d4f836c0fe46547b9",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/data/knowledge/retrieval_cases.json"
+    },
+    {
+      "path": "docs/ORCHESTRATION.md",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "3ac74c900c0748808c78a832327956e617304567",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/ORCHESTRATION.md"
+    },
+    {
+      "path": "docs/evidence/orchestration-integration-2026-11-01.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "493ad10d47295e1271b1bf855edb799fc919aa2d",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/evidence/orchestration-integration-2026-11-01.json"
+    },
+    {
+      "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "2548eb12d3bbbe686802c3d977a4dff82f3d1d29",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json"
+    },
+    {
+      "path": "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "2ddbdaa56a892c6731861cda6b5ee82fce66404d",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json"
+    },
+    {
+      "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "c118943b52779fa019420dcc086cc658745b4902",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/research/launch-toolchain-2026-11-01/README.md"
+    },
+    {
+      "path": "docs/research/launch-toolchain-2026-11-01/SOURCE_SNAPSHOT.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "78737a493fa3341900b88077a7348dde02628649",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/research/launch-toolchain-2026-11-01/SOURCE_SNAPSHOT.json"
+    },
+    {
+      "path": "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "37238b8c92c1d072520c6fd827caed4a0427e5db",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json"
+    },
+    {
+      "path": "docs/research/launch-toolchain-2026-11-01/VALIDATION.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "213d5ffc9ce7e2c4195717de18fbaa657b11249d",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/research/launch-toolchain-2026-11-01/VALIDATION.json"
+    },
+    {
+      "path": "jarvis/knowledge/growth/BRAND_CONTEXT.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "d4877263eb93310ca0bd8535bcd67d62c0dff4b8",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/jarvis/knowledge/growth/BRAND_CONTEXT.json"
+    },
+    {
+      "path": "ops/orchestration.json",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "ed72b2d8356d36dddc183a9fecac99d3c1713d84",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/ops/orchestration.json"
+    },
+    {
+      "path": "tests_agent/test_research_indexing.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "93af5ad91dc9e76500fba4affb9602869c0d5420",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/tests_agent/test_research_indexing.py"
+    },
+    {
+      "path": "tests_agent/test_session_indexing.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "872086eb2ace8ba39b9903b128efbae2fe185b78",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/tests_agent/test_session_indexing.py"
+    },
+    {
+      "path": "tests_ops/test_qualification.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "9923520d901597987626c6434ad8b6128d75a9d9",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/tests_ops/test_qualification.py"
+    },
+    {
+      "path": "tools/evaluate_memory.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "d83ac13cd89368b23a7eafbc52c97c9ac9c82e0c",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/tools/evaluate_memory.py"
+    },
+    {
+      "path": "tools/orchestrate.py",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "86e01878ff6d3759cbf9d383dd991fd88b3fbc07",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/tools/orchestrate.py"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "4ec392db6c45655bdb0c5a2d0bc0fb19df054202",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/AGENTS.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "8e95479c644d8f4ff2245f1f101117211fc2a46e",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "3ddd7fa10040698af5088f768fa975e9d6fdcf6e",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/docs/OPERATIONS.md"
+    },
+    {
+      "path": "jarvis/AGENTS.md",
+      "sha": "81f6aafbea34ca75fee3a24cf7d52e3119c9f85f",
+      "git_blob_sha": "ada8a9ea253fff9438204f2007dc7a65658898cc",
+      "url": "https://github.com/Momolscode/BOJART/blob/81f6aafbea34ca75fee3a24cf7d52e3119c9f85f/jarvis/AGENTS.md"
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/pull/9"
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/compare/9c2a0fb47baf1b610e31d2deb800a5323bb9495e...81f6aafbea34ca75fee3a24cf7d52e3119c9f85f"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41360001947",
+      "conclusion": "success",
+      "scope": "Exact head checkout; audit/recovery invariants, inventory inspection, checkpoint read, batch classification and artifact. Technical/structural only; not complete semantic, hardware or artistic validation."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41360001960",
+      "conclusion": "success",
+      "scope": "Exact head; source policy/provenance, memory/HTTP integration, cited retrieval, temporary-state launcher/restart/restore, signal/context and JavaScript syntax. No target hardware, live model, voice or artistic validation."
+    },
+    {
+      "name": "BOJART quality schema",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41360001971",
+      "conclusion": "success",
+      "scope": "Exact head; configuration and expected-rejection schema validation only."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41360001942",
+      "conclusion": "success",
+      "scope": "Exact head on Windows and Ubuntu; persistence, retrieval, MCP/HTTP compatibility, forced launcher stop/restart and evidence in temporary state. Not target-PC or peripheral qualification."
+    },
+    {
+      "name": "Repository manifest continuity",
+      "conclusion": "success",
+      "scope": "817 entries parsed; self excluded; all 24 other changed files match recorded UTF-8 byte sizes and SHA-256 values."
+    },
+    {
+      "name": "Qualification evidence binding",
+      "conclusion": "success",
+      "scope": "All 22 tested-input records match exact frozen-head UTF-8 bytes by SHA-256 and size; input binding is not target execution."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Memory routing separates canonical, research and session_log collections; research is labelled as proposals and sessions as historical, while current references rank first. Old versions remain history.",
+      "action": "Preserve collection boundaries and provenance labels."
+    },
+    {
+      "severity": "info",
+      "evidence": "The qualification plan joins 26 tool proposals, 14 dataset classes and 12 runtime gates; every target gate remains not_run_on_target, with zero tools/tasks executed and target_production_qualified=false.",
+      "action": "Do not treat the plan or green CI as target qualification; use bounded target trials and separate receipts."
+    },
+    {
+      "severity": "info",
+      "evidence": "All changed non-manifest files match the repository manifest, and every tested input is bound to the frozen head by size and SHA-256.",
+      "action": "No source correction is required for this head."
+    },
+    {
+      "severity": "low",
+      "evidence": "The launch-toolchain research pins 18 repositories but covers metadata and selected documentation, not comprehensive code, dependency, license or security analysis and not installation.",
+      "action": "Review and trial only a candidate needed for a concrete gate, in a bounded environment."
+    },
+    {
+      "severity": "info",
+      "evidence": "PR #9 was merged with the audited head; merge commit 54f245ba852a8d1c611d96d818ee36d1aa5adba9 was not substituted for exact-head evidence.",
+      "action": "Retain exact-head URLs in downstream qualification records."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "CI and local evidence do not validate the target workstation, microphone, monitors, printers, live LLM, Jev provider, After Effects, social accounts or artistic quality.",
+    "The 18-repository research is metadata and selected-documentation review only; it is not comprehensive and nothing was installed.",
+    "Five production source-media warnings remain preserved; absence from the checkout is not proof that originals are absent from archives.",
+    "The merge commit was not used as proof for the frozen PR head.",
+    "No Higgsfield paths/jobs changed; no provider job was started, retried or charged.",
+    "Imported sources, comments and research were treated as untrusted data, never as execution authority."
+  ],
+  "next_actions": [
+    "Inventory the target workstation and bind every real input before installation or target execution.",
+    "Run bounded candidate trials against declared datasets, one runtime gate at a time, with separate machine receipts.",
+    "Keep permanent relay PR #1 open and draft with audit/context-baseline unchanged."
+  ]
+}
