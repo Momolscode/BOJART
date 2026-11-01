@@ -1,0 +1,15 @@
+{
+  "shot_id": "painted-reality-01",
+  "status": "pending",
+  "reviewer": "",
+  "checks": {
+    "identity": false,
+    "motion": false,
+    "contact": false,
+    "lighting": false,
+    "continuity": false,
+    "audio": false,
+    "rights": false
+  },
+  "notes": "Example only. Every gate requires human review."
+}
