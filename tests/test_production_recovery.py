@@ -181,13 +181,18 @@ class ProductionRecoveryTests(unittest.TestCase):
 
     def test_destination_created_by_another_process_is_preserved(self):
         original_mkdir = Path.mkdir
+        target = self.destination.resolve()
+        injected = []
         def concurrent_mkdir(path, *args, **kwargs):
-            if path == self.destination:
+            # Windows temporary paths can have a short-name alias before resolve().
+            if path.resolve() == target:
+                injected.append(True)
                 original_mkdir(path)
                 (path / 'concurrent.txt').write_bytes(b'keep')
             return original_mkdir(path, *args, **kwargs)
         with patch.object(Path, 'mkdir', concurrent_mkdir), self.assertRaises(FileExistsError):
             self.prepare()
+        self.assertEqual(injected, [True])
         self.assertEqual((self.destination / 'concurrent.txt').read_bytes(), b'keep')
         self.assertFalse((self.destination / 'le-dernier-geste').exists())
 

@@ -674,8 +674,8 @@
     },
     {
       "path": "docs/evidence/production-recovery-2026-11-02.json",
-      "bytes": 19910,
-      "sha256": "dc77002822a02e568beb2d2bf25e4dc74af57248c2e9f894f674231289af2268"
+      "bytes": 20219,
+      "sha256": "c849b7f45893734a870bb1ef93d5464673e836d8db0ddf4ee4f58a16dd34e944"
     },
     {
       "path": "docs/evidence/recovery-part-1-2026-11-01.json",
@@ -3999,8 +3999,8 @@
     },
     {
       "path": "tests/test_production_recovery.py",
-      "bytes": 10922,
-      "sha256": "a8da6fd7e66b36391795114ecbb94a9050ee3036cf25d07a8b0343ed1af3f845"
+      "bytes": 11153,
+      "sha256": "0b1aac2277a1f3b9a882f2bc1d091a2fad16380bb8f25e920ff5ffafc5f19029"
     },
     {
       "path": "tests/test_workspace_download.py",

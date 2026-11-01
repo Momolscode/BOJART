@@ -1,6 +1,6 @@
 {
   "schema": "bojart.production-recovery-acceptance.v1",
-  "observed_at": "2026-11-02T00:37:53.040614+01:00",
+  "observed_at": "2026-11-02T00:41:11.892657+01:00",
   "base_commit": "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
   "environment": {
     "python": "3.12.14",
@@ -310,7 +310,7 @@
       "name": "core",
       "command": "python -m unittest discover -s tests -v",
       "passed": 85,
-      "log_sha256": "d366a2648dd8915bafb5227f354fc7f6fc3d733464a7c586bc0d0c612f7070fb"
+      "log_sha256": "ef277d0de4f92751dfb26da3b94c37a5a2dcf7a5f7887810686b463c4b09f2d1"
     },
     {
       "name": "agent",
@@ -532,7 +532,7 @@
     "productions/le-dernier-geste/ASSETS.json": "b7d4ded2cf522b326ab99a919b20030be0394bc02715ca93b8fc5cae6fe313e7",
     "productions/le-dernier-geste/README.md": "d6d474bbaf75e414ed07cb9e9a7632c86ebab66d4b660ce4242d779518a913f6",
     "productions/le-dernier-geste/verify_assets.py": "36abc093afd1ce1a14d1bb8dfcc03b3b0977e4f46e508dab077cef8627a58a8a",
-    "tests/test_production_recovery.py": "a8da6fd7e66b36391795114ecbb94a9050ee3036cf25d07a8b0343ed1af3f845",
+    "tests/test_production_recovery.py": "0b1aac2277a1f3b9a882f2bc1d091a2fad16380bb8f25e920ff5ffafc5f19029",
     "tools/orchestrate.py": "012d83cd6bf812b05a0a97b4f9dcc3ffa464a5ae027dbdbc5d88b6308b2269a3",
     "tools/prepare_production.py": "bd6c187ae2bdadf379f8b010b4e2714f5e1f99db5af02d2839de002821fa7c0c",
     "tools/restore_recovery_2026_11_01.py": "dc18931255977dcb336138562fb4282e9c23b6b1268e40ed34f732b5ed729c73"
@@ -564,5 +564,14 @@
   "reconciled_commits": [
     "a0500b39ddf5a6154c701c225c5b2ad80767cc70",
     "d5855c1e8c10f6ab57d7b362eb1d954c722b340b"
+  ],
+  "platform_corrections": [
+    {
+      "platform": "Windows",
+      "scope": "test_fixture",
+      "failed_run": 41363074885,
+      "change": "Compare resolved destination paths and assert that the simulated concurrent creation was actually injected.",
+      "application_behavior_changed": false
+    }
   ]
 }
