@@ -6,7 +6,9 @@ Le dépôt contient le code M07 et son contexte de départ. La mémoire fonction
 
 Installer Python **3.12** depuis [python.org](https://www.python.org/downloads/). Sous Linux, prévoir le paquet `venv` correspondant si le système le sépare. Récupérer ce dépôt avec Git ou **Code → Download ZIP**, puis extraire entièrement le ZIP dans un dossier utilisateur accessible en écriture.
 
-Windows : double-cliquer **Installer_BOJART.cmd**, puis **Lancer_BOJART.cmd**.
+Windows, sur le poste **RTX 4060 Ti 8 Go / RAM 16 Go** indiqué par l'utilisateur : installer et démarrer aussi [Ollama](https://ollama.com/download/windows), puis double-cliquer **Installer_BOJART_4060Ti.cmd**. Après réussite, ouvrir **Lancer_BOJART.cmd**. Voir le [guide dédié au poste](docs/memory/POSTE_RTX4060TI.md) pour les réglages et la recette.
+
+Pour préparer uniquement la mémoire, sans télécharger de modèles : **Installer_BOJART.cmd**, puis **Lancer_BOJART.cmd**.
 
 Linux, dans le dossier extrait :
 
@@ -43,12 +45,12 @@ Linux : remplacer `py -3.12` par `python3.12`. Ajouter `--voice` pour les biblio
 
 ## 3. Installer les modèles locaux choisis
 
-La [sélection du 2 novembre](docs/research/MODELES_LOCAUX_2026-11-02.md) propose trois profils : `speed` (Qwen3.5 4B), `balanced` (Gemma 4 12B) et `quality` (Qwen3.8 27B). Tous utilisent Qwen3 Embedding 0.6B. Choisir après inventaire de la carte graphique ; les tailles de poids ne sont pas toute la VRAM nécessaire.
+La [sélection du 2 novembre](docs/research/MODELES_LOCAUX_2026-11-02.md) propose trois profils : `speed` (Qwen3.5 4B), `balanced` (Gemma 4 12B) et `quality` (Qwen3.8 27B). Tous utilisent Qwen3 Embedding 0.6B. Pour le poste RTX 4060 Ti 8 Go rapporté, retenir **`speed`** pour le premier essai. Les tailles de poids ne sont pas toute la VRAM nécessaire.
 
-Installer et démarrer [Ollama](https://ollama.com/download). Exemple Windows pour le profil intermédiaire :
+Installer et démarrer [Ollama](https://ollama.com/download). Commande Windows équivalente à l'installeur dédié ; inutile de la répéter après une installation réussie :
 
 ```powershell
-py -3.12 tools/prepare_installation.py --model-profile balanced --download-models
+py -3.12 tools/prepare_installation.py --model-profile speed --download-models
 ```
 
 Linux : remplacer `py -3.12` par `python3.12`. Cette commande prépare aussi l'environnement Python, télécharge seulement les modèles manquants du profil, mesure quatre réponses synthétiques, contrôle les embeddings et indexe la mémoire. Les nouveaux réglages sont activés seulement après réussite. Sans `--download-models`, les modèles doivent déjà être installés. Une seule préparation à la fois.

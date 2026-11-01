@@ -259,6 +259,8 @@ class QualificationTests(unittest.TestCase):
         self.assertTrue(result['activated'])
         config = load_config(self.state)
         self.assertEqual(config['embedding_model'], EMBEDDING)
+        self.assertEqual(config['chat_options']['num_ctx'], 16384)
+        self.assertEqual(config['chat_options']['num_predict'], 512)
         self.assertEqual(len(config['model_keys']), 2)
         with Memory(self.state, readonly=True) as memory:
             self.assertEqual(memory.db.execute('SELECT count(*) FROM agent_vectors').fetchone()[0], 1)

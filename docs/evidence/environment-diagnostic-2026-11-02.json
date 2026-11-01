@@ -1,9 +1,9 @@
 {
   "schema": "bojart.environment-diagnostic-validation.v1",
-  "observed_at": "2026-11-01T23:38:03.812436+00:00",
+  "observed_at": "2026-11-01T23:43:13.613333+00:00",
   "user_date": "2026-11-02",
   "timezone": "Europe/Paris",
-  "base_commit": "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
+  "base_commit": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
   "environment": {
     "python": "3.12.14",
     "os": "Linux",
@@ -11,9 +11,9 @@
   },
   "unit_tests": {
     "tests": 84,
-    "tests_agent": 123,
+    "tests_agent": 128,
     "tests_ops": 83,
-    "total": 290,
+    "total": 295,
     "new_environment_tests": 18,
     "passed": true
   },
@@ -21,7 +21,7 @@
     "cases": 14,
     "hits_at_5": 14,
     "all_citations_verified": true,
-    "case_definitions_modified": false
+    "case_definitions_modified_by_this_change": false
   },
   "real_environment_command": {
     "exit_code": 0,
@@ -44,7 +44,7 @@
   },
   "launcher_restart": {
     "schema": "bojart.startup-acceptance.v1",
-    "observed_at": "2026-11-01T23:37:04.348293+00:00",
+    "observed_at": "2026-11-01T23:42:58.728648+00:00",
     "python": "3.12.14",
     "platform": "linux",
     "launcher_started_twice": true,
@@ -63,7 +63,7 @@
       "tools/start_jarvis.py": "721761e15ab2f18f96fe85923e07781579ca0c67323fc1a00a8a32fe611b0c44",
       "tools/doctor.py": "a2a36c679f543d14ed0ebf05f29854396d9594e85d96d39e095d3de7104648bc",
       "bojart_memory/paths.py": "3f776181ca3ef620649fcc3017d74ecc34d0b24b7deee3883e46037b7bc7e1d6",
-      "bojart_memory/agent.py": "d9ff3db24437f0d94e539061a4bbc431cebad88a4539f96bc3a1de106f5002e2",
+      "bojart_memory/agent.py": "faf7dd4acd339fab9fa703b4584ff8325a75b7524345a972c99361c91c951f4b",
       "bojart_memory/core.py": "45384ba83825905b17cd85b33a8549d77d16da19e8c2e1d93e32e01ab86db7a7",
       "jarvis/apps/jarvis/app/consolidated_workbench.py": "6bb4d4162b658a9441b09969dfede320c9bd7f07b44ea2c7403775119e80bde4",
       "jarvis/apps/jarvis/app/memory.html": "845087eaf551b64e62fb591152b36ee199865aee5a793995fb7c3ef2920892f6",
@@ -99,5 +99,10 @@
       "failure": "The test compared a resolved long Windows path with its short 8.3 alias.",
       "fix": "Compare the returned canonical path with destination.resolve(); retain file-content, overwrite and repository-boundary checks."
     }
+  },
+  "upstream_reconciliation": {
+    "commit": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+    "preserved": "RTX 4060 Ti declared by user, 8 GB shown in reported photo, dedicated installer and compact model context. These are source-reported facts, not a live diagnostic on the PC.",
+    "retrieval_case_update": "Preserved upstream hardware-aware expected source; no case changed by the diagnostic contribution."
   }
 }
