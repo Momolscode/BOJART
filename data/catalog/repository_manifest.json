@@ -3739,8 +3739,8 @@
     },
     {
       "path": "tests_ops/test_archive_restore.py",
-      "bytes": 4695,
-      "sha256": "0e8e3f261211deece391ff017c2fc29c05cb8436fd03fbfa1a0daf0952e6785f"
+      "bytes": 5014,
+      "sha256": "1c85859de6aa7145a6632313d792ebb72aefdec91dc6cf8949730dd4928d49cc"
     },
     {
       "path": "tests_ops/test_ops.py",
@@ -3789,8 +3789,8 @@
     },
     {
       "path": "tools/restore_archive_2026_11_01.py",
-      "bytes": 4351,
-      "sha256": "bc5e95546521b9e7a43bec73ec48a5886fd27788666194df7d25195bd18b2189"
+      "bytes": 4495,
+      "sha256": "1c0ab7167d1b09089a74c4c7608d072107ac4852ab875802703203126d478256"
     },
     {
       "path": "tools/restore_recovery_2026_11_01.py",

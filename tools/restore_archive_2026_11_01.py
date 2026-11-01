@@ -78,6 +78,8 @@ def main():
             raise ValueError(f"Corrupt source {p}")
         out=ensure_inside(destination,p.name)
         shutil.copyfile(p,out)
+        if out.stat().st_size != entry["bytes"] or checksum(out) != entry["sha256"]:
+            raise ValueError(f"Invalid copied file {out}")
         done.append(out)
     for entry in manifest["split_files"]:
         out=ensure_inside(destination,entry["path"])

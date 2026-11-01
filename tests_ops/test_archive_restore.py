@@ -95,6 +95,13 @@ class RestoreArchiveTests(unittest.TestCase):
         self.assertEqual(list(self.destination.iterdir()), [marker])
         self.assertEqual(marker.read_bytes(), b'untouched')
 
+    def test_corrupt_direct_copy_never_emits_a_success_receipt(self):
+        def corrupt_copy(source, output):
+            output.write_bytes(b'broken')
+        with patch.object(restore.shutil, 'copyfile', side_effect=corrupt_copy):
+            with self.assertRaises(ValueError):
+                self.run_restore()
+
     def test_escaping_output_is_rejected_before_writing(self):
         self.manifest['split_files'][0]['path'] = '../escape.bin'
         with self.assertRaises(ValueError):
