@@ -1,5 +1,13 @@
 # Passation — consolidation du 1 novembre 2026
 
+## Recherche des outils et qualification — 1 novembre 2026
+
+Demande : enrichir BOJ.ART/Jarvis pour la 3D, la voix, le studio VFX, l'identité et le marketing. Revue de 18 dépôts à références épinglées et de documentations officielles ; 26 fiches, 14 besoins de données et 12 portes de recette dans `docs/research/launch-toolchain-2026-11-01/`. Aucun outil tiers installé ni génération payante ou publication lancée. La tour n'est pas accessible pour une qualification. Metricool n'est pas retenu dans cette demande ; repli proposé par données natives/exportées, sans prétendre les avoir collectées.
+
+L'indexation de recherche a révélé une régression : l'état courant disparaissait des cinq premiers résultats d'un cas existant. Ajout d'une collection `research` dans la même mémoire, classification partagée entre CLI et agent, priorité aux sources de référence dans le lexical et la fusion sémantique, libellé explicite des propositions et retrait non destructif. Sept tests dédiés et quatre cas de recherche métier ajoutés. La destination historique du contexte marketing est corrigée vers `Momolscode/BOJART`. Les dépendances et portes physiques du runtime ne sont pas activées. Résultats exécutés : voir `docs/research/launch-toolchain-2026-11-01/VALIDATION.json`.
+
+Base examinée `5268e7e7b70fa25efee7d186f27cd3716a49c4c1`, puis évolution distante `461d46ff39caaf142ce37a3e0b78f22dfcc2e842` rapprochée avant modification ; les corrections concurrentes de diversité de sources sont conservées. La nouvelle orchestration à `9f58fa29f0051cc8a7098855359a8a6dd0eef7e6` est également rapprochée, y compris ses entrées de mémoire. Prochaine preuve : qualification sur la tour et une machine, puis un plan sur la vraie œuvre et des statistiques de compte sourcées.
+
 Demande : orchestrer les poussées vers `Momolscode/BOJART`, classer la direction artistique et Jarvis, améliorer la continuité et préparer la gestion future des données sur la tour.
 
 Sources examinées : M07, archive créative préparée pour GitHub, sources R01–R03, notes actuelles, sources Sites V11/V3 et BOJART à `6bc5645c23eeec5e2b7f707b46fde8a0c64a1b5f` avant consolidation. Provenance : `data/catalog/` et `data/knowledge/sources.json`.

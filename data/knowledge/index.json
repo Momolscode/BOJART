@@ -133,5 +133,23 @@
     "path": "docs/ORCHESTRATION.md",
     "project": "bojart.sites",
     "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.jarvis",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.creative",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.sites",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
   }
 ]

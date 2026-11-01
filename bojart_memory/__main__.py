@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from .core import Memory, MemoryError, MAX_FILES, TEXT_EXT, IGNORED_PARTS, PROJECTS
 from .paths import default_state
+from .indexing import index_repository
 
 
 def main():
@@ -29,9 +30,7 @@ def main():
                 if len(paths)>MAX_FILES:raise MemoryError('Lot trop grand.')
                 result={'files':[m.ingest_file(f,root=root,project=a.project,collection=a.collection,provenance=a.provenance) for f in sorted(paths)]}
             elif a.cmd=='index-repo':
-                root=a.repo.resolve();records=json.loads((root/'data/knowledge/index.json').read_text())
-                result={'files':[m.ingest_file(root/r['path'],root=root,project=r['project'],collection='canonical',provenance=r['provenance'],kind='project_document') for r in records]}
-                result['retired']={project:m.reconcile_collection(project=project,collection='canonical',source_paths=[r['path'] for r in records if r['project']==project]) for project in sorted(PROJECTS)}
+                result=index_repository(m,a.repo)
             elif a.cmd=='search':result=m.search(a.query,project=a.project,limit=a.limit,history=a.history)
             elif a.cmd=='stats':result=m.stats()
             elif a.cmd=='verify':
