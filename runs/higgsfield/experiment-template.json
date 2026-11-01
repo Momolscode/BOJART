@@ -8,7 +8,9 @@
   "generate_audio": true,
   "mode": "t2v",
   "source_media_used": false,
-  "render_status": "completed",
+  "render_status": "not_submitted",
   "artistic_review": "not_reviewed",
-  "notes": "Template of the two original runs. Job identifiers and unlisted output URLs are held in the private handoff package."
+  "notes": "Gabarit pour une nouvelle expérience. Ne prouve aucune soumission. Les deux essais historiques restent documentés dans README.md.",
+  "is_template": true,
+  "job_id": null
 }

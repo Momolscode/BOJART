@@ -55,3 +55,9 @@ La mémoire historique disponible est progressivement versée dans `docs/histori
 **Portée de la sauvegarde :** les documents et métadonnées ont été publiés ; le ZIP de travail préparé localement, les 28 médias récupérés, les PDF originaux et les MP4 Higgsfield ne sont **pas tous stockés sur GitHub**. Une archive annoncée comme préparée ne signifie pas qu'elle a été poussée. Un inventaire indique explicitement les éléments non publiés et les vérifications nécessaires.
 
 Certaines images de la récupération historique montrent des personnes ou des captures de conversations non directement liées aux sculptures. Leur diffusion publique est suspendue tant que la provenance et les autorisations pertinentes ne sont pas vérifiées.
+
+## Audit des données et suivi des générations
+
+[Mode d’emploi opérationnel](docs/OPERATIONS.md) · [Audit du 1 novembre](docs/AUDIT_CONTINU_2026-11-01.md) · [Outils et essais](docs/OUTILS_ET_ESSAIS.md).
+
+Un contrôle technique couvre chaque push et chaque PR avec un inventaire SHA-256. Le journal local `bojart_ops` conserve requêtes, budgets, statuts et reçus sans appeler de fournisseur. L’analyse contextuelle des PR est programmée séparément ; les limites et les preuves figurent dans le mode d’emploi.

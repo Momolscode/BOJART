@@ -20,3 +20,7 @@ archives/private/
 *.zip
 *.7z
 *.rar
+
+# Rapports régénérables et état local de l’audit
+.bojart-audit/
+.bojart-state/

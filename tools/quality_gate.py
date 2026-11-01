@@ -15,7 +15,7 @@ MANDATORY = {gate["id"] for gate in GATES if gate["required"]}
 
 
 def validate(review):
-    if not isinstance(review, dict) or not review.get("shot_id"):
+    if not isinstance(review, dict) or not isinstance(review.get("shot_id"), str) or not review["shot_id"].strip():
         return False, ["shot_id missing"]
     checks = review.get("checks")
     if not isinstance(checks, dict):
@@ -26,8 +26,11 @@ def validate(review):
             problems.append(f"{gate_id}: not approved")
     if review.get("status") != "approved":
         problems.append("status must be approved")
-    if not str(review.get("reviewer", "")).strip():
+    if not isinstance(review.get("reviewer"), str) or not review["reviewer"].strip():
         problems.append("human reviewer missing")
+    unknown = set(checks) - {gate["id"] for gate in GATES}
+    if unknown:
+        problems.append("unknown quality gates: " + ", ".join(sorted(unknown)))
     return not problems, problems
 
 
@@ -49,3 +52,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
