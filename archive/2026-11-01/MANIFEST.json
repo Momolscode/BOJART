@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-01",
+  "status": "partial_verified_public_archive",
+  "notes": "One other historical PDF was withheld after a security control blocked a binary segment. This manifest only lists complete, checksum-matched files. The rendered MP4 is an unapproved previsualization, not a finished premium edit.",
+  "direct_files": [
+    {
+      "source_path": "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+      "bytes": 784472,
+      "sha256": "714fdc7cade14207669cf62d739f430df69e6eb1ceea51f731857286fa92e8bd"
+    },
+    {
+      "source_path": "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
+      "bytes": 1014463,
+      "sha256": "54230fe6b6480e7789fd41ac3ba33aed441c79348425f236115ad5c44baeed20"
+    }
+  ],
+  "split_files": [
+    {
+      "path": "BOJ_ART_Reaudit_Concept_2026-10-19.pdf",
+      "bytes": 2448867,
+      "sha256": "44717f1ed32edd6b9154effc80869f2af32790a0c4698d6fa0dc658b7944d439",
+      "parts": [
+        {
+          "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+          "bytes": 900000,
+          "sha256": "1eca473e7fde5d733bf2a809893f90e76cd37c76903c3372741a4a11a751b84c",
+          "blob_sha": "e9d52a6d7c9e7fc68f48be111ab091bc386cf371"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+          "bytes": 900000,
+          "sha256": "1561a2b6deb55a941af33bb43c5bad4ca241ca104f4349ae88ff8e77a7ea428d",
+          "blob_sha": "8640b2828062bdf025a6d70bb99d8e3ff371d687"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+          "bytes": 648867,
+          "sha256": "85f43591e4b26901739e4327571c39465ccc87177be320a47ba755971af7c787",
+          "blob_sha": "eb865fd942f2a628bb126545b648f3f446eadf81"
+        }
+      ]
+    },
+    {
+      "path": "MARWIN_Audit_Global_2026-10-25.pdf",
+      "bytes": 10301908,
+      "sha256": "4a60f4f6e118d6fd900ff7e9bde37aa47df5d71706b5f0e44bb38b5fee9e0167",
+      "parts": [
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+          "bytes": 900000,
+          "sha256": "cfbfd475c5b9fea315ce3857fdce7038371dcad5c844f68939c6b8c10909a202",
+          "blob_sha": "51fc3015961e86885692efa637ab54b3ab926bbc"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+          "bytes": 900000,
+          "sha256": "3b53e3a10cd5dc641482d0f3f31574b6ae0eabea34e9ae91579109955c2f2b76",
+          "blob_sha": "70eeeb20832a835322dca673347c99905cb43f79"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+          "bytes": 900000,
+          "sha256": "610d427d5867d649f7db4ca85b4a38248864c5c6153fea790ef2be636852a046",
+          "blob_sha": "02c4180220be8fab31f423f358885e287c79ddd7"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+          "bytes": 900000,
+          "sha256": "a1a95906f6c327e4d89958208c1260aa16b1b0dbefbb8d13c8926ba9d8d4e1a5",
+          "blob_sha": "ad21e32f7522e36d051c8372a438d0a4b27eb5c9"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+          "bytes": 900000,
+          "sha256": "5a1ad404eefc20a203e928a4164e9639043d3a9ee1558f10d454bae3952bb8f0",
+          "blob_sha": "31d127c56f0e53cf211b81cbdc4887cacd740bc5"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+          "bytes": 900000,
+          "sha256": "f17dfc77700826920271cc46317e1369f5ae60555d01c2154a2052e83b8ce50d",
+          "blob_sha": "34ec0eb98935558cf61ca0af0bc4d4014e29eeda"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+          "bytes": 900000,
+          "sha256": "cf18f1e8cdea05582e8f1956786faec55ede0b50723073d8446f032ab22b3e74",
+          "blob_sha": "c9e0cdb136d97c694cffc90554b049b47b837d35"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+          "bytes": 900000,
+          "sha256": "88991f13d5e45d8b4f63c3bd408f58d7a9ef8d1c1428d72dc94a804c8aa65fa5",
+          "blob_sha": "cec7ea50d79432e4a454b198787ea12cda3edb18"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+          "bytes": 900000,
+          "sha256": "06fd3d4a4561348ccdbd843507c93ff9ce96d56603dd377fe49295e569cf35f9",
+          "blob_sha": "769bc207b5561fa6e1650ca6a893ec5745fcccc9"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+          "bytes": 900000,
+          "sha256": "739cdaa03f7e294501445624505d0a4d7338bb2a70493d38ca8ba7574aa3e6b4",
+          "blob_sha": "91dfbd9e57517a438411b0f94c22299401d11887"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+          "bytes": 900000,
+          "sha256": "471545855653a37959d4a73289c23be1c924085276560c354011417c969e5b96",
+          "blob_sha": "efd81d47308c88b6abf259b66ef4ce56fd185155"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
+          "bytes": 401908,
+          "sha256": "5f2ec371a5eaa7d20c1e55fa4620cff1bef171c01f7ee23d8fa09718d931295b",
+          "blob_sha": "a3c50ae4ccd863dc662e592b1c9157dd89b3b6d8"
+        }
+      ]
+    },
+    {
+      "path": "BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4",
+      "bytes": 3922906,
+      "sha256": "3fc8f8d9d61b17b14cce81035fc2f3e23f50bdad554775aea99d7209976d06c0",
+      "parts": [
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+          "bytes": 900000,
+          "sha256": "9f1ce163182f2931554299f6b67ef09580ff557d2583b30e9118fd495233e1fb",
+          "blob_sha": "d2515030ff8624959871a1882894632c777b7473"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+          "bytes": 900000,
+          "sha256": "543b2ab91dfd2f4891af7e9804ece993106a59487d1021b4f3949805f29c5be7",
+          "blob_sha": "ab38a9cf06640308ca6da25e3aedd46d9f78e329"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+          "bytes": 900000,
+          "sha256": "a0afb9d17fe2f72e96fd2bc5bd456601405c7b4b6feeed8da489883c64438278",
+          "blob_sha": "1bbe3d0def48b25e5751ad3e65cd5800baa1e1a2"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+          "bytes": 900000,
+          "sha256": "e268c5f421b48c1636f546cfcbeb2b27741d3b308eb737621766e49fcfb00ec8",
+          "blob_sha": "0f2306e0b333add84eb113a71e182e7069205df9"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+          "bytes": 322906,
+          "sha256": "37dfcd9f8fffe7d610ed5cf97ad96bb1419ce3f2f9c70f1e024b2eb48503078f",
+          "blob_sha": "9d0ed3904fb4462bf6da1672b3a73e3dbeafa19a"
+        }
+      ]
+    }
+  ]
+}
