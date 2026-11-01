@@ -1,0 +1,2 @@
+# Portée des licences
+Aucune licence globale nouvelle n'est imposée à l'œuvre, aux médias ou aux données historiques par cette consolidation. Les mentions originales des composants sont conservées. La copie dans un dépôt privé ne constitue pas une autorisation commerciale pour un personnage, un modèle, un média ou une musique. Examiner chaque source avant publication ou distribution. Aucun poids de modèle IA ni fichier de police n'est livré dans ce pack.

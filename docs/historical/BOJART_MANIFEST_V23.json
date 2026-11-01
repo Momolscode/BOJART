@@ -24,11 +24,11 @@
   },
   "assets": {
     "TEST15": "référence de sortie de cadre",
-    "V17": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/f761a0fa-44ca-4b80-9285-919db1ffe831.mp4",
-    "V21": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/4aa8f4fd-36c9-44d9-87cb-16ab963fda41.mp4",
-    "V23": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/e2bee7c7-9e03-4b56-ae6f-24d17a66b3f4.mp4",
-    "TEST62": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261029_174405_cf0d5c4a-9f5d-452b-859b-2051bdd97a46.mp4",
-    "CENDRE_TEST63": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261029_174405_d400962b-2aec-468d-8129-3b00108052bf.mp4"
+    "V17": null,
+    "V21": null,
+    "V23": null,
+    "TEST62": null,
+    "CENDRE_TEST63": null
   },
   "jobs": {
     "hf_mult_replace_object_d71cbbe9-0486-4413-8c9f-96a3302997c6": "ip_detected — terminal, no output"
@@ -37,5 +37,7 @@
   "current_baseline": "V21",
   "next_gate": "comparaison artistique V21/V23 puis acquisition multivues pour fidélité 3D",
   "copyright": "aucune musique ou scène Baki réutilisée dans V23",
-  "automatic_updates": false
+  "automatic_updates": false,
+  "media_locator_policy": "Direct media URLs removed from active public snapshot; job IDs and source metadata commit retain provenance. Original record remains in Git history and source archives.",
+  "source_metadata_commit": "b68878fc5040a15dcee9a89ca415a94cbc946880"
 }

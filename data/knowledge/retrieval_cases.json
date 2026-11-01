@@ -1,0 +1,12 @@
+[
+  {"question":"Jev décideur voix", "project":"bojart.jarvis", "expected_source":"context/CURRENT.md"},
+  {"question":"G2", "project":"bojart.creative", "expected_source":"creative/CURRENT.md"},
+  {"question":"R03", "project":"bojart.creative", "expected_source":"productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json"},
+  {"question":"restauration sauvegarde", "project":"bojart.jarvis", "expected_source":"docs/DATA_GOVERNANCE.md"},
+  {"question":"microphone voix", "project":"bojart.jarvis", "expected_source":"docs/INSTALLATION.md"},
+  {"question":"V11 V3", "project":"bojart.sites", "expected_source":"sites/README.md"},
+  {"question":"LangGraph", "project":"bojart.jarvis", "expected_source":"context/CURRENT.md"},
+  {"question":"destination GitHub", "project":"bojart.jarvis", "expected_source":"docs/GITHUB_WORKFLOW.md"},
+  {"question":"GPU imprimantes", "project":"bojart.jarvis", "expected_source":"context/CURRENT.md"},
+  {"question":"contacts profondeur sound design", "project":"bojart.creative", "expected_source":"creative/CURRENT.md"}
+]

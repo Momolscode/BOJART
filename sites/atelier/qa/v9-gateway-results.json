@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "checks": [
+    "Real decision client → gateway → service → normalizer → client validator, with one injected provider result and no upstream request.",
+    "Origin, Host, fetch-site, body size and unknown action rejected before a decision provider is called.",
+    "Real asset client → guarded gateway → immutable vault; bytes and expected SHA verified on recovery, missing and mismatched files distinguished.",
+    "Asset write denied before storage for a foreign origin; decision HEAD and absent-service status are truthful."
+  ],
+  "scope": "Real modules and in-process streams; no listener, browser engine, credentials, TypeSafe request or machine command."
+}

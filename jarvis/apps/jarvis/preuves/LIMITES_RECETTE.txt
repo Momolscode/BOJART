@@ -1,0 +1,9 @@
+Mission 02 — 28 octobre 2026
+- Accès direct Chromium → http://127.0.0.1 : ERR_BLOCKED_BY_ADMINISTRATOR.
+- Une origine de test routée a été bloquée également. Aucune politique modifiée.
+- Recette UI retenue : page.set_content, scripts de production, pont de test explicite (Playwright binding) vers le vrai serveur HTTP Python. CadQuery et SQLite sont réels ; aucun jeu de réponses géométriques prédéfinies n'est substitué au serveur.
+- Essais voix : encodage WAV réel dans JavaScript, capture simulée et transcripteur contrôlé. Pas d'inférence faster-whisper, pas de microphone physique, pas de précision en français mesurée.
+- Essais Ollama : serveur HTTP de réponse contrôlé, pas de modèle de langage réel ni de benchmark sur la tour.
+- CadQuery et trimesh présents dans l'environnement de préparation ; aucun audit du PC utilisateur.
+- Le lancement Windows, le matériel, les trois moniteurs et le passage sans réseau sur la tour restent à vérifier.
+- Les 8 tests d'aperçu ne constituent pas des générations ; ils affichent des maillages précalculés.

@@ -1,0 +1,47 @@
+{
+  "project": "BOJ.ART BREAK THE FRAME",
+  "version": "V6",
+  "date": "2026-10-28",
+  "reference": "Original BOJ.ART video v24044gl0000cuei73fog65q7gjmvfc0.mp4, actual statue shots at 8.5s and 10.2s",
+  "identity_must_preserve": {
+    "hair": "spiky grey-black hair with light silver highlights",
+    "eyes": "red eyes, angular face",
+    "body": "hyper-muscular sculpted anatomy with distinct painted scars",
+    "shorts": "glossy burgundy/maroon boxing shorts",
+    "waistband": "thick white ribbed waistband",
+    "wrist_wraps": "light gray/white wraps",
+    "base": "distinctive sculpted gray wave-like pedestal",
+    "material": "hand-painted physical sculpture, skin-tone paint with visible details"
+  },
+  "do_not_change": [
+    "no short dark buzz cut",
+    "no beard",
+    "no black trousers or black shorts",
+    "no entirely stone-skinned protagonist",
+    "no replacement of hero with another fighter",
+    "no loss of scars",
+    "no random opponent redesign",
+    "no scene reset between adjacent shots"
+  ],
+  "creative_freedom": [
+    "lighting",
+    "camera angle",
+    "atmosphere",
+    "arena design",
+    "dust",
+    "glass effects",
+    "compositing",
+    "sound design"
+  ],
+  "gates": {
+    "character_lock": "manual compare hero to original reference stills",
+    "motion": "physically plausible contact, footwork, weight and recoil",
+    "continuity": "matching screen direction, pose, scale and light",
+    "ending": "must visibly return to original real statue and gray base"
+  },
+  "source_assets": [
+    "orig_8.5.png",
+    "orig_10.2.png"
+  ],
+  "note": "Concept storyboard is illustrative, not proof of manufactured sculpture or generated video fidelity."
+}

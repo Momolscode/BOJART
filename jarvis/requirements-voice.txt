@@ -1,0 +1,3 @@
+# Optional local ASR runtime. Model weights are installed/configured separately.
+faster-whisper==1.2.1
+ctranslate2==4.8.4

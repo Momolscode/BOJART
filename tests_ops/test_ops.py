@@ -82,6 +82,26 @@ class AuditTests(unittest.TestCase):
         self.write('binary.unknown','bytes')
         self.assertEqual(self.scan()['files'][0]['sha256'],hashlib.sha256(b'bytes').hexdigest())
 
+    def test_legacy_seconds_duration_is_checked(self):
+        edl={'fps':24,'frames':24,'duration_s':1,'shots':[{'shot':'S1','in':0,'frames':24,'timeline_in_frame':0,'timeline_out_frame_exclusive':24}]}
+        self.write('edit.json',json.dumps(edl));self.assertTrue(self.scan()['ok'])
+        edl['duration_seconds']=2
+        self.write('edit.json',json.dumps(edl));self.assertFalse(self.scan()['ok'])
+
+    def test_brand_film_crossfades_are_explicit(self):
+        film={'format':'bojart.brand-film.v1','fps':30,'frames':114,'duration_seconds':3.8,
+              'shots':[{'id':'a','start':1,'duration':2,'output':[0,2]},
+                       {'id':'b','start':5,'duration':2,'output':[1.8,3.8]}],
+              'transitions':[{'type':'crossfade','output_seconds':[1.8,2]}]}
+        self.write('site.json',json.dumps(film));self.assertTrue(self.scan()['ok'])
+        for mode in ('undeclared_overlap','wrong_overlap','gap'):
+            bad=copy.deepcopy(film)
+            if mode=='undeclared_overlap':bad['transitions']=[]
+            elif mode=='wrong_overlap':bad['transitions'][0]['output_seconds']=[1.7,2]
+            else:bad['shots'][1].update(output=[2.1,4.1])
+            self.write('site.json',json.dumps(bad))
+            with self.subTest(mode=mode):self.assertFalse(self.scan()['ok'])
+
     def test_lfs_media_pointer_reported(self):
         self.write('clip.mp4','version https://git-lfs.github.com/spec/v1\noid sha256:placeholder\n')
         self.assertEqual(self.scan()['issues'][0]['code'],'lfs_pointer')

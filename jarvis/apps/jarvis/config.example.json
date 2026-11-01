@@ -1,0 +1,14 @@
+{
+  "version": "bojart.config.v2",
+  "ollama": {
+    "enabled": false,
+    "url": "http://127.0.0.1:11434",
+    "model": "",
+    "model_digest": "",
+    "offline_verified": false
+  },
+  "voice": {
+    "enabled": false,
+    "model_dir": ""
+  }
+}

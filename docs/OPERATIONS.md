@@ -39,7 +39,7 @@ Les pushes directs déclenchent les contrôles techniques. Pour bénéficier aus
 | Montage | Version de l'EDL | Sources, points d'entrée, images, sons, correspondance vers les jobs |
 | Revue | Plan/export + version | Mesures techniques, jugement artistique, retour utilisateur et audience séparés |
 
-La mémoire documentaire doit indexer ces références et fournir des extraits sourcés par domaine (`bojart.jarvis`, `bojart.creative`, `bojart.sites`). Réutiliser `bojart_memory` dès sa consolidation dans le dépôt ; ne pas créer une deuxième base documentaire. Le présent journal n'est qu'un état de production. Les versions historiques restent consultables et ne deviennent pas automatiquement des décisions actuelles.
+La mémoire documentaire doit indexer ces références et fournir des extraits sourcés par domaine (`bojart.jarvis`, `bojart.creative`, `bojart.sites`). Réutiliser `bojart_memory`, maintenant consolidé dans le dépôt ; ne pas créer une deuxième base documentaire. Le présent journal n'est qu'un état de production. Les versions historiques restent consultables et ne deviennent pas automatiquement des décisions actuelles.
 
 La réponse à « où en est G2 ? » doit réunir `STATUT_G2.json`, la revue R03, le dernier reçu fournisseur et la source authentique. Elle doit exposer l'absence de plan fidèle, plutôt que déduire un succès du mot `completed` présent dans un ancien essai.
 
@@ -66,7 +66,7 @@ Après téléchargement par une route autorisée, `attach RUN FICHIER --sha256 E
 
 ## Prochaines preuves à obtenir
 
-1. Réunir le code M07 réellement consolidé, puis lancer sa recette dans un environnement neuf. Distinguer voix simulée, Jev réel et vrai microphone.
+1. Le code M07 est consolidé sous `jarvis/` et sa recette logicielle a été réexécutée ; voir [les preuves](evidence/consolidation-2026-11-01.json). Qualifier maintenant la tour réelle, en distinguant voix simulée, Jev réel et vrai microphone.
 2. Relier un seul adaptateur Higgsfield au journal, avec test d'interruption entre soumission et reçu, dans un essai borné. Aucun adaptateur payant n'est activé par ce changement.
 3. Qualifier G2 sur la sculpture authentique : même visage, peinture, main, socle et geste. Les refus fournisseur restent terminaux ; choisir une méthode autorisée et adaptée.
 4. Exporter une timeline de référence via OpenTimelineIO, puis comparer les 222 images de R03 et la piste son après import. Les effets FFmpeg, recadrages et traitements audio exigent une vérification séparée.

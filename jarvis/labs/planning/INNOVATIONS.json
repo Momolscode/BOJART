@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-30",
+  "items": [
+    {
+      "id": "MULTIMODAL_MEMORY",
+      "priority": "A",
+      "status": "researched_not_installed",
+      "candidates": [
+        "Qwen3-VL-Embedding-2B",
+        "Qwen3-VL-Reranker-2B"
+      ],
+      "sources": [
+        "S01"
+      ],
+      "acceptance": "Sources réelles et timecodes accessibles, essais annotés et droits distincts de la similarité."
+    },
+    {
+      "id": "VOICE_CONTEXT",
+      "priority": "A",
+      "status": "researched_not_installed",
+      "candidates": [
+        "Pipecat SmallWebRTC",
+        "NeMo-Speech.cpp / Parakeet v3",
+        "faster-whisper baseline"
+      ],
+      "sources": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "acceptance": "Contexte de sélection versionné, correction orale et bruit réel ; aucune transcription partielle exécutée."
+    },
+    {
+      "id": "DURABLE_MISSIONS",
+      "priority": "A",
+      "status": "architecture_proposed",
+      "candidates": [
+        "existing SQLite first",
+        "Temporal evaluation later"
+      ],
+      "sources": [
+        "S07",
+        "S08"
+      ],
+      "acceptance": "Résultat externe inconnu non rejoué automatiquement."
+    },
+    {
+      "id": "PLANNING",
+      "priority": "A/B",
+      "status": "isolated_synthetic_prototype_tested",
+      "candidates": [
+        "Python heuristic supplied",
+        "OR-Tools CP-SAT planned, not installed"
+      ],
+      "sources": [
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "acceptance": "Machines et poste humain non chevauchants ; conservation de la réservation jusqu’au retrait."
+    },
+    {
+      "id": "REPRODUCIBLE_STUDIO",
+      "priority": "B",
+      "status": "researched_not_installed",
+      "candidates": [
+        "OpenTimelineIO",
+        "Remotion official skills"
+      ],
+      "sources": [
+        "S12",
+        "S16"
+      ],
+      "acceptance": "Timeline, médias, références authentiques et budgets versionnés ; rendu relu artistiquement."
+    },
+    {
+      "id": "CAD_DIFF",
+      "priority": "B",
+      "status": "architecture_proposed",
+      "candidates": [
+        "CadQuery recipes extension",
+        "Blender preview",
+        "TRELLIS.2 experimental only"
+      ],
+      "sources": [
+        "S13"
+      ],
+      "acceptance": "Interfaces et dimensions fixes conservées ; génération visuelle non assimilée à une validation de fabrication."
+    },
+    {
+      "id": "REGRESSION_LAB",
+      "priority": "A",
+      "status": "architecture_proposed",
+      "candidates": [
+        "webapp-testing skill",
+        "Ollama explicit versions",
+        "Jev optional explicit versions"
+      ],
+      "sources": [
+        "S15",
+        "S17",
+        "S18"
+      ],
+      "acceptance": "Version nouvelle en mode témoin ; aucune mise à jour automatique non qualifiée."
+    }
+  ],
+  "exclude_by_default": [
+    {
+      "project": "CAD-Recode",
+      "reason": "Licence CC BY-NC 4.0 consultée",
+      "source": "S14"
+    }
+  ]
+}

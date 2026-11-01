@@ -1,0 +1,45 @@
+# Consolidation BOJART
+
+Le point d’entrée courant est `../context/CURRENT.md` depuis la racine Jarvis, soit `context/CURRENT.md` à la racine du dépôt BOJART. Destination GitHub actuelle : Momolscode/BOJART. Les mentions de dépôt et comptes ci-dessous sont historiques.
+
+# BOJ.ART — reprise en cinq minutes
+
+## Vision et périmètre
+Atelier artistique augmenté : idée → conception → préparation FDM/résine → fabrication et finition → contenus fidèles → devis et suivi. Trois écrans : atelier à gauche, Jarvis au centre, visuels à droite. Priorité au fonctionnement local ; budget tour 3 000–5 000 EUR et réemploi d'abord. Les caractéristiques du PC UNUM ne s'appliquent pas ici.
+
+## Réalité aujourd'hui — Mission 07
+Lire `docs/m07/RELEASE_M07.md`. Une commande compose désormais les trois vues déjà appairées, avec un plan persistant et trois reçus distincts. Le choix d'affichage de Jev peut être confirmé par une phrase explicite. La prise peut se terminer sur pause. Le contexte est figé avant écoute et les réponses tardives ne ferment plus une nouvelle prise. Les poids STT, la clé Jev et la qualification matérielle restent manquants. Les essais utilisent des doubles ASR/Jev, avec vraie capture synthétique et vrai rendu navigateur. Pipecat 1.15.0 est inspecté, sans pile audio active. Lire les preuves M07 pour les validations actuelles.
+
+## Base héritée — Mission 06
+Lire d'abord `docs/m06/RELEASE_M06.md`. M06 relie les commandes écrites et les transcriptions à un graphe LangGraph local et à la régie, avec checkpoints SQLite, adaptateur Jev facultatif, réservation unique du microphone, annulation et envoi immédiat aux vues. La voix réelle et Jev ne sont pas qualifiés : leurs fichiers de modèle et clé restent à configurer. Les essais de capture utilisent un son synthétique et un double de transcripteur. Les connexions aux imprimantes, aux réseaux sociaux et la conversation continue restent absentes.
+
+## Base héritée — Mission 05
+La base M03/M04 est consolidée en M05 : dossiers CAO distincts, régie contextualisée, catalogue Studio/Growth partagé, sauvegarde globale des cinq bases et restauration dans un nouveau dossier. Le lanceur ouvre `/workspace`. Les interruptions de calcul sont explicites et ne provoquent pas de relance automatique. Lire `docs/m05/RELEASE_M05.md` et `docs/m05/REPRISE_M05.txt`.
+
+Le code des deux sites Atelier et Studio a été récupéré dans deux dépôts séparés, avec leurs historiques disponibles ; il n'est pas intégré ici. Les tables D1 Studio observées pendant la récupération étaient vides. Les états navigateur et données restés sur le PC réel ne sont pas récupérés. Le chat complet reste indisponible.
+
+La recette M05 a été exécutée sous Linux avec Chromium et deux modèles réels, puis deux restaurations, et réexécutée sous M06. Les modèles IA, le microphone réel, Jev, les imprimantes, les moniteurs physiques et les comptes sociaux restent à qualifier. LangGraph est fourni à partir de M06 ; Pipecat n'est pas actif.
+
+## Décisions à ne plus perdre
+Jev n'est pas la voix. Les ordres connus empruntent des règles locales. Les décisions complexes peuvent faire appel à un modèle qualifié, puis passent les mêmes contrôles. Documentation, télémétrie et dossiers métier restent séparés. Une génération vidéo réussie techniquement n'est pas une validation artistique.
+
+## Identité et contenus
+BOJ.ART, deux comptes TikTok @boj.art et @boj.art3d. Leurs audiences uniques et performances récentes sont inconnues ; les chiffres affichés dans la capture étaient arrondis. Lignes éditoriales vitrine/coulisses proposées, non validées par l'analytique.
+L'art réel est la référence : short bordeaux, bandes blanches et détails de la figurine du fichier original. Les storyboards rouge/noir sont des intentions, pas des scans fidèles. Les essais rejetés sont archivés avec leur motif. Aucun remboursement de crédits ne doit être déduit d'un échec.
+
+## Prochaine preuve de bout en bout
+Sur la tour : commande orale → proposition → socle paramétrique → aperçu réel → version conservée. Puis UNE FDM et UNE résine qualifiées avec opérateur, avant extension. Les créneaux humains (traitement, finition, emballage) entrent dans le planning.
+
+## Conservation et publication
+Tous les fichiers montés ont un inventaire SHA-256 et sont conservés dans le coffre, même les anciennes versions. Les absents sont dans preservation/COVERAGE.md. Aucun historique ancien de conversations ou de Git n'est inventé.
+GitHub : destination approuvée par l’utilisateur : `Momolscode/bojart-jarvis`, en privé. La publication du paquet précédent n’a pas été effectuée. Le contrôle des connexions GitHub disponibles n’a pas retrouvé ce dépôt ; aucun push n’a été tenté. Le PC distant n’a pas été réinterrogé. Le script de publication exige une session CLI autorisée et refuse une autre destination. Ne pas confondre choix du dépôt, préparation locale et transfert confirmé.
+
+## Enrichissement du 30 octobre 2026
+La recherche `research/readiness-2026-10-30` ajoute huit dossiers de conception, treize sources et 36 scénarios de recette. Ils ne sont ni des connecteurs installés ni des résultats de benchmark IA. Ces recherches décrivent un état historique : M05 supprime la restriction au seul dossier pilote. Les accusés de navigateur M04/M05 ne certifient toujours pas les moniteurs physiques.
+
+
+## Ajout du 31/10/2026 — SEO et publication
+Lire `docs/SEO_PUBLICATION_2026-10-31.md`. Six skills locaux, contexte marketing et route `/growth` intégrés. Préparation uniquement : fournisseur non relié, aucune génération de légende par LLM, aucune publication. Les sauvegardes CAO/Studio anciennes ne couvrent pas growth.sqlite ; la sauvegarde globale M05 le couvre.
+
+## Mission 04 — tour de contrôle navigateur (31/10/2026)
+Lire `docs/m04/RELEASE_GATE_M04.md` et `docs/m04/REPRISE_CLAUDE_M04.txt`. Une régie locale peut router des commandes d’affichage à trois vues navigateur et conserver des accusés logiciels. Ce n’est PAS encore un appairage des trois moniteurs physiques, une voix connectée, Jev, LangGraph, une commande d’imprimante ni une publication. Les 12 portes de recette restent à qualifier sur la tour réelle.

@@ -98,5 +98,6 @@
     "asset_quality": "Préécoute MP3 publique, pas original WAV",
     "perceptual_listening": "non vérifiée"
   },
-  "status": "Nouvelle coupe de prévisualisation. G2 définitif non produit ; TEST19 reste un essai historique."
+  "status": "Nouvelle coupe de prévisualisation. G2 définitif non produit ; TEST19 reste un essai historique.",
+  "generation_credits_spent_this_pass": 0
 }

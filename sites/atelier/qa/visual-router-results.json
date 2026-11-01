@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": [
+    "French scene vocabulary handles accents and the œuvres ligature without claiming model inference.",
+    "Negation, conflicting scenes and a mismatched destination preserve the display.",
+    "An empty project has no model option; invalid explicit revisions are rejected.",
+    "A decision context requires the exact existing project and piece revisions.",
+    "The real gateway adapter and browser validator agree on an accepted official response.",
+    "Uncertain or no-match Jev decisions abstain even when a selectedView is present for audit.",
+    "Forged scopes, injected view names and incomplete probability distributions never reach a renderer.",
+    "Non-finite fields and invented certainty are rejected by the browser contract.",
+    "Presentation catalog contains only four renderer IDs and no machine operation.",
+    "The client sends one bounded same-origin request with no API credential.",
+    "Configured and connected states stay distinct; a static host remains local-only.",
+    "A provider deadline reports failure without an automatic retry."
+  ],
+  "liveProviderVerified": false,
+  "browserRenderingVerified": false
+}

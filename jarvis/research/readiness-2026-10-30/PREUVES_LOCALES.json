@@ -1,0 +1,32 @@
+{
+  "base_commit": "b2c46db5b7408ddeb537ec096ce0583e1536adc4",
+  "input_archive": "BOJART_Jarvis_Publication_Momolscode.zip",
+  "input_sha256": "9a2c423efd7a9ad13fe3455a954c33763423763628a4ecf511f868b92ac7dc5c",
+  "read_scope": [
+    "context/START_HERE.md",
+    "context/DECISIONS.json",
+    "docs/TRANSFER_GITHUB.md",
+    "tools/publish_github.py",
+    "apps/jarvis/app/core.py",
+    "apps/jarvis/app/display_contracts.py",
+    "apps/jarvis/app/consolidated_workbench.py"
+  ],
+  "checks": {
+    "pre_change_repository_files": 301,
+    "root_unit_tests_passed": 77,
+    "new_acceptance_scenarios_designed": 36,
+    "sources": 13,
+    "research_cards": 8,
+    "all_selected_tests_passed": 381,
+    "additional_subtests": 5
+  },
+  "not_done": [
+    "pas de push",
+    "pas de connexion au PC ou aux imprimantes",
+    "pas de benchmark modèle ou microphone",
+    "pas de génération payante",
+    "pas de mise à jour des sites"
+  ],
+  "distinction": "381 tests logiciels et 5 sous-tests exécutés ; les 36 scénarios métier restent des critères de recette non exécutés sur la tour.",
+  "additional_fix": "Fermeture explicite des connexions SQLite du Store, des propositions et de la cible de sauvegarde. Les recettes historiques exportées sont inchangées."
+}
