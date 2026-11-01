@@ -1,5 +1,9 @@
 # Production BOJ.ART — plan de reprise
 
+## Avancement du 1 novembre 2026
+
+La production **Le dernier geste** combine le geste de peinture et l’éveil contenu de la sculpture. [La recette R03](productions/le-dernier-geste/README.md) resserre le montage à 9,25 s, avec raccord continu du plan large au détail du poing. Une macro G1 a été terminée ; TEST19 reste un essai historique utilisé pour l’intention du plan central. G2 définitif, raccord exact peinture/cicatrice et écoute finale restent à réaliser. Cette version n’a pas de validation artistique finale ni de mesure d’audience.
+
 ## Objectif
 Produire des **édits premium** mettant en valeur des sculptures réelles, et non des diaporamas animés.
 

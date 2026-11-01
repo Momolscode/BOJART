@@ -4,6 +4,12 @@ Projet de direction artistique et de production audiovisuelle hybride pour les s
 
 > **État : recherche & développement.** Les essais de génération ne sont pas des films terminés ni des validations de qualité.
 
+## Production en cours — 1 novembre 2026
+
+[**Le dernier geste — R03**](productions/le-dernier-geste/README.md) dispose d’une coupe de travail de **9,25 s**, 222 images, 24 i/s, 720 × 1280. Le dossier contient le script de montage reproductible, le découpage, les paramètres G1, la provenance sonore et les contrôles techniques.
+
+G1 est terminé ; le personnage animé reste l’ancien TEST19. Le plan d’éveil G2 définitif reste à produire. Les médias et archives demeurent dans le stockage privé, conformément à la politique ci-dessous. La R03 n’est pas un master final approuvé.
+
 ## Deux directions artistiques
 
 ### Painted Reality — prioritaire

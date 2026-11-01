@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-01",
+  "shot": "G2 — L’œuvre répond",
+  "status": "À produire",
+  "current_placeholder": "TEST19 historique",
+  "target_action": "Orientation légère de la tête vers l’objectif, puis fermeture unique de la main. Appuis et socle stables.",
+  "target_duration_s": 4,
+  "usable_duration_s": [
+    2,
+    3
+  ],
+  "identity": "Cheveux sculptés gris-noir avec reflets argentés, yeux rouges, cicatrices peintes, short bordeaux, ceinture et bandages blancs/gris, socle gris de la référence.",
+  "production_dependency": "Modèle exact, peinture fidèle et capacité d’animer cou, poignet et doigts sans déformation visible. Modèle non retrouvé dans les sources examinées.",
+  "acceptance": [
+    "Comparer visage, cheveux, peinture, main, tenue et socle aux prises authentiques.",
+    "Geste lisible sans musique.",
+    "Conserver un raccord de pose et de caméra vers la révélation réelle."
+  ],
+  "claim_limit": "Aucune nouvelle animation fidèle produite pour R03. Les outils candidats ne sont pas présentés comme installés ou validés."
+}
