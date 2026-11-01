@@ -1,0 +1,90 @@
+{
+  "scope": "BOJ.ART/Jarvis",
+  "as_of": "2026-11-01",
+  "library_inventory_files": 722,
+  "library_inventory_complete": true,
+  "generation_history_pages_read": 3,
+  "generation_history_records_examined": 150,
+  "project_generation_records": 76,
+  "completed_generation_results": 60,
+  "no_output_jobs": 16,
+  "media_results_downloaded": 60,
+  "unique_input_urls_downloaded": 41,
+  "additional_unique_media": 57,
+  "additional_conversation_screenshots": 4,
+  "additional_transport_documents": 1,
+  "known_baseline_objects": 3340,
+  "combined_indexed_originals": 3402,
+  "github_initial_archive_commits": [
+    "635116df515f7910c5bc854176b642e282efbfb3",
+    "2d2e01e3576e0a655729f6d273e9038e109f915a",
+    "6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967"
+  ],
+  "scope_checks": [
+    {
+      "source": "Google Drive",
+      "queries": [
+        "BOJ",
+        "Jarvis"
+      ],
+      "matching_items": 0
+    },
+    {
+      "source": "Notion",
+      "queries": [
+        "BOJ",
+        "Jarvis"
+      ],
+      "matching_items": 0
+    },
+    {
+      "source": "Gmail account used for Momolscode",
+      "matching_messages": 16,
+      "classified": "GitHub workflow notifications; no source attachments"
+    },
+    {
+      "source": "Other linked Gmail account",
+      "status": "reauthentication_required",
+      "searched": false
+    },
+    {
+      "source": "ChatGPT Pages",
+      "pages_listed": 12,
+      "matching_pages_read": 3,
+      "additional_originals_saved": 0
+    },
+    {
+      "source": "Higgsfield V35",
+      "revision": 2,
+      "status": "same revision and artifact etags as baseline"
+    },
+    {
+      "source": "M07 ZIP uploaded again",
+      "entries_verified": 441,
+      "additional_entry_contents": 0
+    },
+    {
+      "source": "TikTok 7099716894994730246",
+      "metadata_endpoint": "available",
+      "download_results": [
+        "HTTP 403",
+        "HTTP 404",
+        "HTML instead of video"
+      ],
+      "recovered": false
+    }
+  ],
+  "unresolved": [
+    "Full original transcripts of all historical ChatGPT conversations are not exposed by the connected search tool; only retrieval summaries and supplied screenshots were available.",
+    "Files present only on the workshop PC are not accessible in this environment.",
+    "Exact sculpture mesh and rig for the planned G2 shot were not found; V35 is a scenery project.",
+    "TikTok video 7099716894994730246 could not be downloaded.",
+    "Search results do not certify absence of other unindexed or deleted content; all historical Library versions were not exposed for enumeration."
+  ],
+  "exclusions": "Unrelated personal Morgan/Marwin, UNUM, M-Tek and client data are not part of this supplementary collection.",
+  "recovery_method": "Download provider originals, SHA-256 comparison with all 3340 baseline objects, content-addressed deduplication, checked Git blobs, restore verification.",
+  "transcription_complete": false,
+  "workshop_runtime_validated": false,
+  "new_generations_created": 0,
+  "deduplication_additional_reference": "main at 5268e7e7b70fa25efee7d186f27cd3716a49c4c1"
+}

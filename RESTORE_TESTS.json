@@ -1,0 +1,10 @@
+{
+  "safeguards_passed": 11,
+  "cases": [
+    "seven unsafe paths",
+    "valid restore",
+    "existing destination",
+    "corrupted part with no partial destination",
+    "external symlink"
+  ]
+}
