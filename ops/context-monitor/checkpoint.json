@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "819b34cde4f41e21ecff4d21347d516f73036af5",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/819b34cde4f41e21ecff4d21347d516f73036af5.json",
+      "head_sha": "3c288214539adf97381f6053b43225485a873b6a",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/3c288214539adf97381f6053b43225485a873b6a.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
@@ -54,7 +54,6 @@
         "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
         "docs/historical/BOJART_MANIFEST_V23.json",
         "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
-        "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
         "jarvis/.agents/product-marketing.md",
         "jarvis/.agents/skills/bojart-creative-packaging/SKILL.md",
         "jarvis/.agents/skills/bojart-growth-measurement/SKILL.md",
@@ -84,26 +83,18 @@
         "jarvis/apps/jarvis/CONTEXTE_LISIBLE.md",
         "jarvis/apps/jarvis/Lancer_Jarvis.cmd",
         "jarvis/apps/jarvis/Lancer_Jarvis.sh",
-        "jarvis/apps/jarvis/README.md",
         "jarvis/apps/jarvis/REPRISE_CLAUDE.txt",
         "jarvis/apps/jarvis/app/audio_worklet.js",
-        "jarvis/apps/jarvis/app/capture.js",
         "jarvis/apps/jarvis/app/console.html",
-        "jarvis/apps/jarvis/app/consolidated_workbench.py",
-        "jarvis/apps/jarvis/app/context_guard.py",
-        "jarvis/apps/jarvis/app/control_tower.py",
         "jarvis/apps/jarvis/app/core.py",
         "jarvis/apps/jarvis/app/diagnostics.py",
         "jarvis/apps/jarvis/app/dialogue.py",
-        "jarvis/apps/jarvis/app/display_contracts.py",
         "jarvis/apps/jarvis/app/growth.css",
         "jarvis/apps/jarvis/app/growth.html",
         "jarvis/apps/jarvis/app/growth.js",
         "jarvis/apps/jarvis/app/growth.py",
         "jarvis/apps/jarvis/app/index.html",
         "jarvis/apps/jarvis/app/jarvis_http.py",
-        "jarvis/apps/jarvis/app/jarvis_runtime.py",
-        "jarvis/apps/jarvis/app/jev_decider.py",
         "jarvis/apps/jarvis/app/knowledge.html",
         "jarvis/apps/jarvis/app/knowledge.js",
         "jarvis/apps/jarvis/app/launch_readiness.py",
@@ -121,11 +112,9 @@
         "jarvis/apps/jarvis/app/tower_events.py",
         "jarvis/apps/jarvis/app/tower_screen.html",
         "jarvis/apps/jarvis/app/tower_screen.js",
-        "jarvis/apps/jarvis/app/tower_voice.js",
         "jarvis/apps/jarvis/app/ui.css",
         "jarvis/apps/jarvis/app/ui.js",
         "jarvis/apps/jarvis/app/viewer.js",
-        "jarvis/apps/jarvis/app/voice.py",
         "jarvis/apps/jarvis/app/voice_endpoint.js",
         "jarvis/apps/jarvis/app/workbench.py",
         "jarvis/apps/jarvis/app/workspace.css",
@@ -137,7 +126,6 @@
         "jarvis/apps/jarvis/context/CONTEXTE_REFERENCE.json",
         "jarvis/apps/jarvis/context/CONTEXTE_STUDIO_M03.json",
         "jarvis/apps/jarvis/docs/PROGRES_ET_LIMITES_M02.md",
-        "jarvis/apps/jarvis/docs/PROGRES_ET_LIMITES_M03.md",
         "jarvis/apps/jarvis/docs/REPRISE_PC_CIBLE.md",
         "jarvis/apps/jarvis/docs/SOURCES_M02.md",
         "jarvis/apps/jarvis/exemples/180mm/manifeste.json",
@@ -206,10 +194,6 @@
         "jarvis/apps/jarvis/tests_m03/test_studio_http.py",
         "jarvis/apps/jarvis/tools/build_studio_preview.py",
         "jarvis/config/M04_INVENTAIRE_A_REMPLIR.json",
-        "jarvis/context/CONTRADICTIONS_RESOLUES.md",
-        "jarvis/context/DECISIONS.json",
-        "jarvis/context/HANDOFF_CLAUDE.md",
-        "jarvis/context/PERIMETRE_ET_FEUILLE_DE_ROUTE.md",
         "jarvis/docs/ARCHITECTURE.mmd",
         "jarvis/docs/CONSOLIDATION.md",
         "jarvis/docs/SEO_PUBLICATION_2026-10-31.md",
@@ -233,7 +217,6 @@
         "jarvis/docs/m07/GRAPHE_EXECUTE.mmd",
         "jarvis/docs/m07/PIPELINE_M07.mmd",
         "jarvis/docs/m07/RECHERCHE_2026-11-01.md",
-        "jarvis/docs/m07/REPRISE_M07.txt",
         "jarvis/docs/m07/SCHEMA_M07.html",
         "jarvis/docs/m07/SOURCES.json",
         "jarvis/knowledge/growth/AUDIT_SKILLS.md",
@@ -646,19 +629,19 @@
       ],
       "processed_correction_shas": [
         "1d76c6876de54c7bc37b777ae66bf031207a140d",
-        "4873567fad40d2033005ec0fd7af05a11b0bc2fe"
+        "4873567fad40d2033005ec0fd7af05a11b0bc2fe",
+        "a820f7a5d9bc21b9619746502f2adb9d578f7c3b",
+        "3c288214539adf97381f6053b43225485a873b6a"
       ],
-      "updated_at": "2026-11-01T21:46:00Z"
+      "updated_at": "2026-11-01T22:09:21.319Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
       "receipt_path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.json",
-      "status": "partial",
-      "pending_paths": [
-        "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt"
-      ],
+      "status": "complete",
+      "pending_paths": [],
       "processed_correction_shas": [],
-      "updated_at": "2026-11-01T21:26:19Z"
+      "updated_at": "2026-11-01T22:09:21.319Z"
     },
     "3": {
       "head_sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
@@ -693,6 +676,17 @@
         "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf"
       ],
       "updated_at": "2026-11-01T21:46:00Z"
+    },
+    "4": {
+      "head_sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "receipt_path": "ops/context-monitor/receipts/pr-4/10e4c4a500e376f362c75b5826492f5a3f841739.json",
+      "status": "complete",
+      "pending_paths": [],
+      "processed_correction_shas": [
+        "a820f7a5d9bc21b9619746502f2adb9d578f7c3b",
+        "3c288214539adf97381f6053b43225485a873b6a"
+      ],
+      "updated_at": "2026-11-01T22:09:21.319Z"
     }
   }
 }

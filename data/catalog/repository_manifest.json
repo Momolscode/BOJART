@@ -1789,8 +1789,8 @@
     },
     {
       "path": "ops/context-monitor/checkpoint.json",
-      "bytes": 37076,
-      "sha256": "5913a11e656c5433b19f3e1c0b976d73f5a2450e8198647877fa8f5b449978ff"
+      "bytes": 36649,
+      "sha256": "43911207c5cdfbcd40a0eae4918caeb5fabd92828defa9e1001d880543b2da90"
     },
     {
       "path": "ops/context-monitor/probes/activation-2026-11-01.json",
@@ -1836,6 +1836,16 @@
       "path": "ops/context-monitor/receipts/pr-1/30b3fb9858d81e5499d0a51ed8df6c317b771d7c.md",
       "bytes": 3693,
       "sha256": "467f0c13709f6782ee94a7561bf663bb957621fde6efd9c59ff76db5875b9155"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-1/3c288214539adf97381f6053b43225485a873b6a.json",
+      "bytes": 50611,
+      "sha256": "d4b43bbe127b78fa06b3a03794062a2ac3b1b476daab3d031268acaafe62c957"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-1/3c288214539adf97381f6053b43225485a873b6a.md",
+      "bytes": 5617,
+      "sha256": "089d0bc48c6de0f679ec157ad474c4ff9bc85b29e86eee552647fcfc2712a18d"
     },
     {
       "path": "ops/context-monitor/receipts/pr-1/4873567fad40d2033005ec0fd7af05a11b0bc2fe.json",
@@ -1939,11 +1949,21 @@
     },
     {
       "path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.json",
+      "bytes": 10067,
+      "sha256": "48acc32e6d7bb9d992828e76589e37bb5ef0f36f627b3c3beced3c537f498ba5"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.md",
+      "bytes": 3642,
+      "sha256": "eb3b0da9a3d5e1b5e22f1b6dd2e4723d1085394a3864ee67a1dd27afc8dfc66e"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.v1.json",
       "bytes": 10140,
       "sha256": "fd6ef582959edf8079dd09242ce127a1868520b30f5ec3baf170348175806009"
     },
     {
-      "path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.md",
+      "path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.v1.md",
       "bytes": 4311,
       "sha256": "52a7d7e4f66a3451c0de9f8bff3e3c8b8f38b8e7b155330377fc63d8bd4d8bfb"
     },
@@ -1966,6 +1986,16 @@
       "path": "ops/context-monitor/receipts/pr-3/34fa29b7aaf955bca17e298fcbf9306108e85cef.v1.md",
       "bytes": 5044,
       "sha256": "df6dfb7d001a86bdb2e083a1970166018a3d90e9e54f741703e1dd14d59c47e0"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-4/10e4c4a500e376f362c75b5826492f5a3f841739.json",
+      "bytes": 10453,
+      "sha256": "5bf8d36318f520257ac7bea6b929f8bfafd82db1b011e0026440441fce7b0a92"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-4/10e4c4a500e376f362c75b5826492f5a3f841739.md",
+      "bytes": 3411,
+      "sha256": "1a42c5b66f3eb29cbae0268071736ac22b330b015952df3855aeb103c971329b"
     },
     {
       "path": "ops/higgsfield-observations.json",

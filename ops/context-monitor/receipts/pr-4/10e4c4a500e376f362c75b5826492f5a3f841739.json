@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 4,
+  "pull_request_state": "open",
+  "observed_final_state": "closed",
+  "merged": true,
+  "merge_commit_sha": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+  "head_ref": "recovery/resume-archive-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "819b34cde4f41e21ecff4d21347d516f73036af5",
+  "trigger_kind": "opened",
+  "trigger_delivery_id": "5ca8b500-d63f-11f1-8140-247b7314aac3",
+  "head_sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+  "compared_from_sha": "819b34cde4f41e21ecff4d21347d516f73036af5",
+  "started_at": "2026-11-01T21:54:09.231Z",
+  "finished_at": "2026-11-01T22:09:21.319Z",
+  "status": "complete",
+  "changed_paths": [
+    "AGENTS.md",
+    "README.md",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/claims.jsonl",
+    "data/knowledge/index.json",
+    "data/knowledge/sources.json",
+    "docs/ETAT_ARCHIVES_2026-11-01.md",
+    "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+    "docs/evidence/recovery-resumption-2026-11-01.json",
+    "tests/test_archive_recovery.py",
+    "tools/restore_recovery_2026_11_01.py",
+    "tools/validate_repository.py"
+  ],
+  "reviewed_paths": [
+    "AGENTS.md",
+    "README.md",
+    "context/CURRENT.md",
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/claims.jsonl",
+    "data/knowledge/index.json",
+    "data/knowledge/sources.json",
+    "docs/ETAT_ARCHIVES_2026-11-01.md",
+    "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+    "docs/evidence/recovery-resumption-2026-11-01.json",
+    "tests/test_archive_recovery.py",
+    "tools/restore_recovery_2026_11_01.py",
+    "tools/validate_repository.py"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "4ec392db6c45655bdb0c5a2d0bc0fb19df054202",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "README.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "6ff86cd6ba375eff2a8f19f98b27718448918367",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "239cbc999bf04866efa5e4c1778ee31a38636bea",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "71643a6dbce52794d46a829f63c84aa9d388e07b",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "data/catalog/repository_manifest.json",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "f5a1f077c74cedc7a472d4ece90ed12595edd195",
+      "review_mode": "structured_inventory_and_hash_checks"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "672c8a82c714f3e465ebf4a43c79d4f7292bb167",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "data/knowledge/index.json",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "7af7382e85fe631b9bf37a9921af6509505f0047",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "data/knowledge/sources.json",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "d670c65ebad57f3dc2f0d0529d3c2fd0acf43e5e",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "3b56a82482dc955ab32c5e43817ff2f757e8f1ee",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "2e36a45a378aaaac32b9bf7708d1132ab6730a8b",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "docs/evidence/recovery-resumption-2026-11-01.json",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "e98c69f82842392424d9b78dfe458927d2c3621c",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "tests/test_archive_recovery.py",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "519d007bdea5ea2a1f665e4f832eac0f8e08d2fe",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "tools/restore_recovery_2026_11_01.py",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "8402d0bb61b67d9ddd390d1c4129b396061994ee",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "tools/validate_repository.py",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "ed79433ec2e54a05d2d028775aa7233201eadee9",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "3ddd7fa10040698af5088f768fa975e9d6fdcf6e",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "jarvis/AGENTS.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "ada8a9ea253fff9438204f2007dc7a65658898cc",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "path": "jarvis/apps/jarvis/AGENTS.md",
+      "sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "blob_sha": "46612e2771a263910488911c2c87648338cb189c",
+      "review_mode": "full_text_semantic_review"
+    },
+    {
+      "url": "https://api.github.com/repos/Momolscode/BOJART/git/trees/635116df515f7910c5bc854176b642e282efbfb3?recursive=1",
+      "scope": "part 1 Git metadata only"
+    },
+    {
+      "url": "https://api.github.com/repos/Momolscode/BOJART/git/trees/2d2e01e3576e0a655729f6d273e9038e109f915a?recursive=1",
+      "scope": "part 2 Git metadata only"
+    },
+    {
+      "url": "https://api.github.com/repos/Momolscode/BOJART/git/trees/6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967?recursive=1",
+      "scope": "part 3 Git metadata only"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41354701509",
+      "head_sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "event": "push",
+      "conclusion": "success",
+      "scope": "SHA exact confirmé : 36 tests ops, inventaire de 762 fichiers, 5 avertissements, 13 groupes de doublons ; aucune validation artistique."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41354701603",
+      "head_sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "event": "push",
+      "conclusion": "success",
+      "scope": "SHA exact confirmé : manifeste/politique (761 entrées), 37 tests mémoire/HTTP/restauration, 10 cas cités, 11 tests Node et syntaxe JS."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41354701501",
+      "head_sha": "10e4c4a500e376f362c75b5826492f5a3f841739",
+      "event": "push",
+      "conclusion": "success",
+      "scope": "Tests logiciels agents/mémoire, aucune qualification sur la tour."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "status": "verified",
+      "evidence": "14 fichiers dans l'API paginée (page 2 vide), concordants avec les différences des arbres base/tête non tronqués. Les documents et registres gardent les limites chat/PC.",
+      "action": "Réutiliser les références par empreinte ; aucune suppression ou nouvelle autorisation issue de la preuve importée."
+    },
+    {
+      "severity": "info",
+      "status": "verified",
+      "evidence": "Le manifeste général couvre exactement les 761 blobs hors lui-même ; tailles/empreintes des 16 textes de contexte/preuves/outils lus concordantes. Le validateur contrôle une sélection binaire épinglée par SHA-256 ; ses tests refusent fichier altéré et extension de la liste.",
+      "action": "Conserver l'exception bornée ; les médias eux-mêmes restent dans le backlog PR 1."
+    },
+    {
+      "severity": "medium",
+      "status": "corrected_on_descendant_main",
+      "evidence": "Le petit restaurateur reste inchangé dans la tête gelée PR 4 ; son défaut d'entrée corrompue et de copie directe a été établi par tests.",
+      "action": "Prévalidation et contrôle post-copie poussés sur main après fusion par une autre session ; 10 tests ciblés et 46 tests ops passent sur 3c288214539adf97381f6053b43225485a873b6a.",
+      "correction_shas": [
+        "a820f7a5d9bc21b9619746502f2adb9d578f7c3b",
+        "3c288214539adf97381f6053b43225485a873b6a"
+      ]
+    },
+    {
+      "severity": "info",
+      "status": "observed",
+      "evidence": "PR ouverte au gel, puis fusionnée par une autre session en e5cd9f3f18f744b800aa8bb655a70fa643c634a1 ; arbres tête/fusion identiques.",
+      "action": "État final consigné sans fusion/fermeture/réouverture par l'audit. Le relais PR 1 reste ouvert."
+    }
+  ],
+  "corrections": [
+    "a820f7a5d9bc21b9619746502f2adb9d578f7c3b",
+    "3c288214539adf97381f6053b43225485a873b6a"
+  ],
+  "corrections_target": "main after independently observed merge",
+  "limitations": [
+    "Reçu complet pour 14 chemins de cette PR ; aucune complétude sémantique des archives ou médias revendiquée.",
+    "3 340 objets et 3 348 entrées ZIP comparées : résultat rapporté par la preuve source, non réexécuté ici. Trois commits d'archive et arbres non tronqués relus.",
+    "Le restaurateur commun n'exécute pas les programmes historiques ; aucun --fetch ni restauration de média réel lancé ici. Sept tests de garde passent localement.",
+    "Aucun matériel, Jev réel, microphone ou jugement artistique validé."
+  ],
+  "next_actions": [
+    "Continuer le backlog PR 1, sans rouvrir la PR 4.",
+    "Qualifier la restauration complète sur un poste autorisé, puis la voix et les écrans."
+  ],
+  "coverage": {
+    "changed_paths_inventory_complete": true,
+    "changed_text_paths_semantically_reviewed": 13,
+    "structured_manifest_paths_reviewed": 1,
+    "pending_paths": 0,
+    "inventory_tree_truncated": false,
+    "api_pages": [
+      {
+        "page": 1,
+        "files": 14
+      },
+      {
+        "page": 2,
+        "files": 0
+      }
+    ]
+  }
+}

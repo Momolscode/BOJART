@@ -1,21 +1,17 @@
 {
   "schema_version": 1,
   "repository": "Momolscode/BOJART",
-  "status": "partial",
-  "finished_at": "2026-11-01T21:26:19Z",
+  "status": "complete",
+  "finished_at": "2026-11-01T22:09:21.319Z",
   "limitations": [
-    "Revue contextuelle ciblée ; les chemins pending_paths restent à examiner sémantiquement, même si l'audit technique est réussi.",
-    "Les résultats des tests sont ceux des révisions et environnements cités ; les anciens 578 tests M07 et avis artistiques ne sont pas des validations nouvelles.",
-    "PC BOJ.ART, voix réelle, imprimantes, GPU, qualité d'un vrai modèle et intégrations externes non qualifiés ici.",
-    "Sources, commentaires, historiques et transcriptions traités comme données non fiables ; aucune autorisation extraite de ces contenus.",
-    "Aucune nouvelle génération, aucun crédit média, aucune commande machine, aucune fusion ni message à des tiers.",
-    "Les archives et médias référencés ne sont pas une preuve d'export complet des conversations. Délais de surveillance non garantis."
+    "Les cinq chemins modifiés sont examinés ; les anciens liens/captures/médias externes ne sont pas tous téléchargés ou qualifiés.",
+    "Les 578 tests cités sont historiques. Les contrôles de cette tête exacte sont ceux du précédent reçu conservé, sans réexécution annoncée.",
+    "Aucune autorisation tirée de l'archive ; original inchangé."
   ],
   "corrections": [],
   "next_actions": [
-    "Lire intégralement le document historique de reprise Jarvis 5 et rapprocher chaque affirmation avec CURRENT.md et claims.jsonl sans remplacer les originaux.",
-    "Vérifier la couverture de récupération par partie et l'index documentaire ; une référence de provenance n'est pas la preuve d'une récupération de tous les chats.",
-    "Conserver distincts tests logiciels, installation connectée et qualification sur le matériel."
+    "Réutiliser CURRENT.md et le registre sourcé ; poursuivre les médias dans le backlog de la PR relais.",
+    "Qualifier le PC, la voix, les moniteurs et machines séparément."
   ],
   "pull_request": 2,
   "pull_request_state": "closed",
@@ -24,12 +20,12 @@
   "head_ref": "docs/jarvis5-reprise-2026-11-01-72e627",
   "base_ref": "main",
   "base_sha": "7f29795536188deed4e13249d0f5d4baf48364cf",
-  "trigger_kind": "closed",
+  "trigger_kind": "unknown",
   "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
   "compared_from_sha": "7f29795536188deed4e13249d0f5d4baf48364cf",
-  "started_at": "2026-11-01T21:22:02Z",
-  "previous_receipt_path": null,
-  "summary": "Document de reprise original préservé octet pour octet et relié à la source existante ; PR déjà fusionnée par une autre session. Revue sémantique limitée aux 45 premières lignes de ce document.",
+  "started_at": "2026-11-01T21:54:09.231Z",
+  "previous_receipt_path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.v1.json",
+  "summary": "Lecture intégrale du document Jarvis 5 terminée ; cinq changements textuels de cette PR examinés. Le reçu complet ne valide pas les médias/archives liés ou l'installation matérielle.",
   "changed_paths": [
     "context/SESSION_HANDOFF.md",
     "data/catalog/repository_manifest.json",
@@ -41,11 +37,10 @@
     "context/SESSION_HANDOFF.md",
     "data/catalog/repository_manifest.json",
     "data/knowledge/sources.json",
+    "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
     "docs/historical/recovery-2026-11-01/README.md"
   ],
-  "pending_paths": [
-    "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt"
-  ],
+  "pending_paths": [],
   "sources": [
     {
       "path": "AGENTS.md",
@@ -112,6 +107,13 @@
       "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
       "git_blob_sha": "c60ed77297294a4765ff8d98962bf1c3bf7421ee",
       "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/docs/historical/recovery-2026-11-01/README.md"
+    },
+    {
+      "path": "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "blob_sha": "de3b96a761883345edc34baf26ec7991f47212bc",
+      "sha256": "63958516bfd92fe89ced167a126d6789a40e194ba662896c7b6583218d9a2a69",
+      "review_mode": "full_text_semantic_review"
     }
   ],
   "checks": [
@@ -121,7 +123,8 @@
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
       "event": "push",
       "conclusion": "success",
-      "scope": "36 tests ops réussis ; inventaire technique de 731 fichiers, cinq avertissements de médias absents et treize groupes de doublons. Aucune validation artistique ou lecture sémantique exhaustive."
+      "scope": "36 tests ops réussis ; inventaire technique de 731 fichiers, cinq avertissements de médias absents et treize groupes de doublons. Aucune validation artistique ou lecture sémantique exhaustive.",
+      "observation_origin": "previous_verified_receipt; no new execution"
     },
     {
       "name": "BOJART continuity",
@@ -129,7 +132,8 @@
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
       "event": "push",
       "conclusion": "success",
-      "scope": "Manifeste, 30 tests mémoire/HTTP, dix cas lexicaux et 11 tests Node dont quatre sur les réponses périmées ; portée logicielle, aucune validation matérielle."
+      "scope": "Manifeste, 30 tests mémoire/HTTP, dix cas lexicaux et 11 tests Node dont quatre sur les réponses périmées ; portée logicielle, aucune validation matérielle.",
+      "observation_origin": "previous_verified_receipt; no new execution"
     },
     {
       "name": "Jarvis agent memory",
@@ -137,7 +141,8 @@
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
       "event": "push",
       "conclusion": "success",
-      "scope": "Suite agent et mémoire sur Ubuntu et Windows, modèles simulés. Aucun GPU, microphone ou imprimante qualifié."
+      "scope": "Suite agent et mémoire sur Ubuntu et Windows, modèles simulés. Aucun GPU, microphone ou imprimante qualifié.",
+      "observation_origin": "previous_verified_receipt; no new execution"
     }
   ],
   "findings": [
@@ -154,30 +159,28 @@
     {
       "severity": "medium",
       "evidence": "La lecture du document couvre les lignes 1 à 45 ; l'intégrité complète des octets ne remplace pas la lecture des 2 370 lignes restantes.",
-      "action": "Conserver ce chemin en attente et reprendre sa lecture sémantique, ses citations et ses éventuelles contradictions."
+      "action": "Lecture des 2 415 lignes physiques terminée pendant cette reprise ; ancien reçu partiel conservé sous un nom versionné.",
+      "status": "resolved"
     },
     {
       "severity": "info",
       "evidence": "GitHub indique PR fermée et fusionnée, commit 0455a98aa433aeebb2e1269fe81042a1f0313182 ; les arbres de la tête de PR et du commit de fusion sont identiques.",
       "action": "Auditer également la tête de la PR relais, sans fusionner ni rouvrir aucune PR."
+    },
+    {
+      "severity": "info",
+      "status": "reviewed",
+      "evidence": "Corps et annexes entièrement lus : périmètres 307 contenus/357 chemins, complément de 63 copies, 14 versions Sites et catalogue de références sont distincts et datés. L'ancien dépôt et R02 sont remplacés dans le contexte actuel.",
+      "action": "Conserver les originaux et inconnues ; ne pas sommer les inventaires ni convertir une recette héritée en intégration actuelle."
     }
   ],
   "coverage": {
-    "changed_path_inventory": "PR files pages 1 et 2 : cinq chemins puis page vide ; comparaison avec les arbres Git complets non tronqués.",
-    "semantic_exhaustive": false,
-    "partial_read_paths": [
-      {
-        "path": "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
-        "lines_read": "1-45",
-        "total_lines": 2415
-      }
-    ],
-    "structural_only_paths": [
-      "data/catalog/repository_manifest.json"
-    ],
-    "pending_includes_prior_backlog": false,
-    "required_context_blobs": "Six fichiers obligatoires identiques aux blobs déjà lus ; SESSION_HANDOFF.md relu intégralement à cette tête.",
-    "synthetic_merge_results_used_as_head_proof": false
+    "changed_paths": 5,
+    "reviewed_paths": 5,
+    "pending_paths": 0,
+    "document_lines_read": 2415,
+    "document_bytes": 117992,
+    "external_references_not_revalidated": true
   },
   "observed_events": [
     {
@@ -189,5 +192,6 @@
       "delivery_id": "ffda90f0-d639-11f1-918a-003e350fa996"
     }
   ],
-  "trigger_note": "Le payload ne contient pas de SHA ; état réel et tête figés par lecture GitHub."
+  "trigger_note": "Reprise manuelle autorisée d'un reçu partiel, sans nouvel événement PR 2 fourni.",
+  "receipt_revision": 2
 }

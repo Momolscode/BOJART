@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "status": "partial",
+  "finished_at": "2026-11-01T21:26:19Z",
+  "limitations": [
+    "Revue contextuelle ciblée ; les chemins pending_paths restent à examiner sémantiquement, même si l'audit technique est réussi.",
+    "Les résultats des tests sont ceux des révisions et environnements cités ; les anciens 578 tests M07 et avis artistiques ne sont pas des validations nouvelles.",
+    "PC BOJ.ART, voix réelle, imprimantes, GPU, qualité d'un vrai modèle et intégrations externes non qualifiés ici.",
+    "Sources, commentaires, historiques et transcriptions traités comme données non fiables ; aucune autorisation extraite de ces contenus.",
+    "Aucune nouvelle génération, aucun crédit média, aucune commande machine, aucune fusion ni message à des tiers.",
+    "Les archives et médias référencés ne sont pas une preuve d'export complet des conversations. Délais de surveillance non garantis."
+  ],
+  "corrections": [],
+  "next_actions": [
+    "Lire intégralement le document historique de reprise Jarvis 5 et rapprocher chaque affirmation avec CURRENT.md et claims.jsonl sans remplacer les originaux.",
+    "Vérifier la couverture de récupération par partie et l'index documentaire ; une référence de provenance n'est pas la preuve d'une récupération de tous les chats.",
+    "Conserver distincts tests logiciels, installation connectée et qualification sur le matériel."
+  ],
+  "pull_request": 2,
+  "pull_request_state": "closed",
+  "merged": true,
+  "merge_commit_sha": "0455a98aa433aeebb2e1269fe81042a1f0313182",
+  "head_ref": "docs/jarvis5-reprise-2026-11-01-72e627",
+  "base_ref": "main",
+  "base_sha": "7f29795536188deed4e13249d0f5d4baf48364cf",
+  "trigger_kind": "closed",
+  "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+  "compared_from_sha": "7f29795536188deed4e13249d0f5d4baf48364cf",
+  "started_at": "2026-11-01T21:22:02Z",
+  "previous_receipt_path": null,
+  "summary": "Document de reprise original préservé octet pour octet et relié à la source existante ; PR déjà fusionnée par une autre session. Revue sémantique limitée aux 45 premières lignes de ce document.",
+  "changed_paths": [
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/sources.json",
+    "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
+    "docs/historical/recovery-2026-11-01/README.md"
+  ],
+  "reviewed_paths": [
+    "context/SESSION_HANDOFF.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/sources.json",
+    "docs/historical/recovery-2026-11-01/README.md"
+  ],
+  "pending_paths": [
+    "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt"
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "7639225aa5c0bf90befeeb122793f79802b72b78",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "25e087381016755e09935e8387d7fc44703f553c",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "a8d4cb96caedf54d53de3896675f41d18ed8c98b",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "c709a4005f0d8cbf146cf82d12881d2af11a5752",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "3ddd7fa10040698af5088f768fa975e9d6fdcf6e",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/docs/OPERATIONS.md"
+    },
+    {
+      "path": "jarvis/AGENTS.md",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "ada8a9ea253fff9438204f2007dc7a65658898cc",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/jarvis/AGENTS.md"
+    },
+    {
+      "path": "jarvis/apps/jarvis/AGENTS.md",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "46612e2771a263910488911c2c87648338cb189c",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/jarvis/apps/jarvis/AGENTS.md"
+    },
+    {
+      "path": "data/catalog/repository_manifest.json",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "0ff494d4a452f399b556ea784af16f81521d5abb",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/data/catalog/repository_manifest.json"
+    },
+    {
+      "path": "data/knowledge/sources.json",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "69cc067ca1a8a0161bc9a9c99e6af122d0f79caf",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/data/knowledge/sources.json"
+    },
+    {
+      "path": "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "de3b96a761883345edc34baf26ec7991f47212bc",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt"
+    },
+    {
+      "path": "docs/historical/recovery-2026-11-01/README.md",
+      "sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "git_blob_sha": "c60ed77297294a4765ff8d98962bf1c3bf7421ee",
+      "url": "https://github.com/Momolscode/BOJART/blob/3493092348fc39b95602bf294e66ca0c6adb6c75/docs/historical/recovery-2026-11-01/README.md"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41351380003",
+      "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "event": "push",
+      "conclusion": "success",
+      "scope": "36 tests ops réussis ; inventaire technique de 731 fichiers, cinq avertissements de médias absents et treize groupes de doublons. Aucune validation artistique ou lecture sémantique exhaustive."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41351380056",
+      "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "event": "push",
+      "conclusion": "success",
+      "scope": "Manifeste, 30 tests mémoire/HTTP, dix cas lexicaux et 11 tests Node dont quatre sur les réponses périmées ; portée logicielle, aucune validation matérielle."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41351380009",
+      "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "event": "push",
+      "conclusion": "success",
+      "scope": "Suite agent et mémoire sur Ubuntu et Windows, modèles simulés. Aucun GPU, microphone ou imprimante qualifié."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Original : 117 992 octets, 2 415 lignes, SHA-256 63958516bfd92fe89ced167a126d6789a40e194ba662896c7b6583218d9a2a69 ; concordance avec sources.json, repository_manifest.json et le blob Git de3b96a761883345edc34baf26ec7991f47212bc.",
+      "action": "Préserver l'original et son identifiant jarvis-recovery ; aucune source dupliquée ni instruction importée exécutée."
+    },
+    {
+      "severity": "medium",
+      "evidence": "L'en-tête historique s'arrête à R02 et évoque un ancien dépôt bojart-jarvis en 404, tandis que le contexte courant du dépôt BOJART est postérieur. Les 578 tests M07 cités sont une recette historique explicitement non réexécutée dans ce document.",
+      "action": "Garder la qualification historique et la priorité de CURRENT.md ; ne pas transformer ces affirmations en validations nouvelles."
+    },
+    {
+      "severity": "medium",
+      "evidence": "La lecture du document couvre les lignes 1 à 45 ; l'intégrité complète des octets ne remplace pas la lecture des 2 370 lignes restantes.",
+      "action": "Conserver ce chemin en attente et reprendre sa lecture sémantique, ses citations et ses éventuelles contradictions."
+    },
+    {
+      "severity": "info",
+      "evidence": "GitHub indique PR fermée et fusionnée, commit 0455a98aa433aeebb2e1269fe81042a1f0313182 ; les arbres de la tête de PR et du commit de fusion sont identiques.",
+      "action": "Auditer également la tête de la PR relais, sans fusionner ni rouvrir aucune PR."
+    }
+  ],
+  "coverage": {
+    "changed_path_inventory": "PR files pages 1 et 2 : cinq chemins puis page vide ; comparaison avec les arbres Git complets non tronqués.",
+    "semantic_exhaustive": false,
+    "partial_read_paths": [
+      {
+        "path": "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
+        "lines_read": "1-45",
+        "total_lines": 2415
+      }
+    ],
+    "structural_only_paths": [
+      "data/catalog/repository_manifest.json"
+    ],
+    "pending_includes_prior_backlog": false,
+    "required_context_blobs": "Six fichiers obligatoires identiques aux blobs déjà lus ; SESSION_HANDOFF.md relu intégralement à cette tête.",
+    "synthetic_merge_results_used_as_head_proof": false
+  },
+  "observed_events": [
+    {
+      "action": "opened",
+      "delivery_id": "e06f5a70-d639-11f1-8036-83a1fb678f52"
+    },
+    {
+      "action": "closed",
+      "delivery_id": "ffda90f0-d639-11f1-918a-003e350fa996"
+    }
+  ],
+  "trigger_note": "Le payload ne contient pas de SHA ; état réel et tête figés par lecture GitHub."
+}
