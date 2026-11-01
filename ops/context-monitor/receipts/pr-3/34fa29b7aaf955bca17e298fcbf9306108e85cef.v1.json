@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": 3,
+  "pull_request_state": "open",
+  "head_ref": "archive/bojart-verified-assets-2026-11-01",
+  "base_ref": "main",
+  "base_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+  "trigger_kind": "opened",
+  "trigger_delivery_id": "2b2bb5b0-d63d-11f1-91ff-d4960f3049b7",
+  "head_sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+  "compared_from_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+  "started_at": "2026-11-01T21:43:04Z",
+  "finished_at": "2026-11-01T21:44:58Z",
+  "status": "partial",
+  "changed_paths": [
+    "README.md",
+    "archive/2026-11-01/MANIFEST.json",
+    "archive/2026-11-01/README.md",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+    "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+    "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+    "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
+    "data/catalog/repository_manifest.json",
+    "docs/RECUPERATION_PARTIE_3_2026-11-01.md",
+    "docs/evidence/recovery-part3-2026-11-01.json",
+    "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+    "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
+    "tools/restore_archive_2026_11_01.py"
+  ],
+  "reviewed_paths": [
+    "archive/2026-11-01/MANIFEST.json",
+    "archive/2026-11-01/README.md",
+    "tools/restore_archive_2026_11_01.py"
+  ],
+  "pending_paths": [
+    "README.md",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+    "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+    "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+    "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+    "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+    "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
+    "data/catalog/repository_manifest.json",
+    "docs/RECUPERATION_PARTIE_3_2026-11-01.md",
+    "docs/evidence/recovery-part3-2026-11-01.json",
+    "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+    "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf"
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "7639225aa5c0bf90befeeb122793f79802b72b78",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "25e087381016755e09935e8387d7fc44703f553c",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "a8d4cb96caedf54d53de3896675f41d18ed8c98b",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "c709a4005f0d8cbf146cf82d12881d2af11a5752",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "3ddd7fa10040698af5088f768fa975e9d6fdcf6e",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/docs/OPERATIONS.md"
+    },
+    {
+      "path": "archive/2026-11-01/MANIFEST.json",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "08980efd51073ffbdedfa1150f5a3424c4a23c1f",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/archive/2026-11-01/MANIFEST.json"
+    },
+    {
+      "path": "archive/2026-11-01/README.md",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "f87d91317bdadfe85738bcbe74496576bf82f219",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/archive/2026-11-01/README.md"
+    },
+    {
+      "path": "tools/restore_archive_2026_11_01.py",
+      "sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "git_blob_sha": "47bc475ce38af63f8d79abcd3d4af9072d5df9d0",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/tools/restore_archive_2026_11_01.py"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART data audit",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41353365599",
+      "conclusion": "success",
+      "head_sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "event": "push",
+      "scope": "SHA exact confirmé dans le journal ; 36 tests ops réussis, inventaire de 756 fichiers, 5 avertissements et 13 groupes de doublons. Ne valide ni confidentialité ni contenu des PDF/MP4."
+    },
+    {
+      "name": "BOJART continuity",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41353365774",
+      "conclusion": "failure",
+      "head_sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "event": "push",
+      "scope": "SHA exact confirmé ; échec du contrôle de politique/manifeste : non_utf8, private_or_binary_in_public_git et manifest_mismatch. Les suites suivantes de ce run ne valident pas la tête."
+    },
+    {
+      "name": "Jarvis agent memory",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41353365669",
+      "conclusion": "success",
+      "head_sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "event": "push",
+      "scope": "Tests logiciels mémoire Windows/Linux ; aucun contrôle artistique ou matériel."
+    },
+    {
+      "name": "Essai local du restaurateur",
+      "url": "https://github.com/Momolscode/BOJART/blob/34fa29b7aaf955bca17e298fcbf9306108e85cef/tools/restore_archive_2026_11_01.py",
+      "conclusion": "success_with_limitation",
+      "scope": "Code exact importé dans un dossier temporaire ; deux fragments synthétiques abc/def. Reconstruction conforme, refus destination existante et fragment corrompu vérifiés. Après corruption du second fragment, le fichier partiel abc reste présent. Aucun média réel restauré."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "evidence": "La PR cible main avec 20 fragments binaires et deux PDF ; AGENTS.md réserve main au contexte/runtime sans médias. La continuité échoue effectivement, malgré le succès du data audit.",
+      "action": "Conserver les octets sur la branche d'archive ; résoudre explicitement la séparation archive/runtime avant toute fusion. Aucune fusion, fermeture, suppression ou modification d'archive effectuée."
+    },
+    {
+      "severity": "high",
+      "evidence": "Les 25 chemins ajoutés par la PR ne sont pas accompagnés d'une mise à jour de repository_manifest.json ; la continuité signale manifest_mismatch sur les fichiers textuels/fragments qu'elle examine.",
+      "action": "Rétablir un manifeste adapté au périmètre retenu après vérification des octets et sans assouplir aveuglément la politique binaire. Aucun SHA-256 de contenu non relu n'est inventé."
+    },
+    {
+      "severity": "medium",
+      "evidence": "Le restaurateur vérifie les fragments pendant l'écriture. L'essai synthétique confirme qu'un échec laisse un fichier partiel et rend la même destination non réutilisable.",
+      "action": "Essai d'amélioration borné proposé : validation préalable complète ou écriture dans un dossier temporaire puis publication atomique. Conserver les originaux ; ne pas interpréter un fichier présent comme restauré avec succès."
+    },
+    {
+      "severity": "medium",
+      "evidence": "MANIFEST et README déclarent cinq fichiers logiques disponibles, une prévisualisation non approuvée et un PDF exclu après refus d'un contrôle. Les contenus PDF, dont MARWIN_Audit_Global, et la vidéo n'ont pas été lus/décodés dans cet audit.",
+      "action": "Maintenir la lecture sémantique en attente ; vérifier la séparation BOJ.ART/contexte personnel avant toute intégration. Préserver le refus existant, sans tentative de contournement."
+    },
+    {
+      "severity": "info",
+      "evidence": "Vingt fragments concordent par taille et SHA Git avec le manifeste ; les sommes de tailles des trois fichiers fragmentés concordent. Les tailles des deux PDF directs concordent. Treize groupes de doublons recensés par CI, aucune suppression.",
+      "action": "Conserver cette preuve comme contrôle de métadonnées, distinct du recalcul SHA-256 des octets et d'une validation artistique."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "Le connecteur de lecture de fichiers n'accepte que du texte UTF-8 ; les 22 fichiers binaires n'ont pas été téléchargés/décodés ici.",
+    "La PR diverge de sa base actuelle : merge-base 0455a98aa433aeebb2e1269fe81042a1f0313182, trois commits en avance et un en retard. API PR : 25 ajouts, pages 1 et 2 (seconde vide) ; différence exacte des arbres non tronqués : 29 chemins.",
+    "Les quatre écarts hérités de la divergence (README, manifeste, deux preuves partie 3) ne sont pas des suppressions intentionnelles annoncées par la PR ; ils restent identifiés dans pending_paths.",
+    "Aucune autorisation déduite du README importé. Archives, budgets, secrets et protections inchangés ; aucun message externe, crédit ou commande machine.",
+    "Pas de changement de job Higgsfield : les médias évoqués restent absents, sans nouvelle génération ou approbation artistique."
+  ],
+  "next_actions": [
+    "Résoudre le périmètre archive/runtime et la continuité avant de considérer la PR prête à intégrer.",
+    "Relire les cinq fichiers logiques après restauration vérifiée, en conservant provenance et refus.",
+    "Rapprocher la branche avec les quatre évolutions de la base sans perdre les preuves partie 3.",
+    "Tester une restauration atomique sur fixtures, puis sur un exemplaire autorisé de l'archive."
+  ],
+  "coverage": {
+    "semantic_exhaustive": false,
+    "api_pr_changed_paths": [
+      "archive/2026-11-01/MANIFEST.json",
+      "archive/2026-11-01/README.md",
+      "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+      "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+      "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+      "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+      "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+      "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+      "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+      "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+      "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
+      "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+      "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
+      "tools/restore_archive_2026_11_01.py"
+    ],
+    "tree_comparison_truncated": false,
+    "metadata_only_binary_paths": true,
+    "synthetic_merge_results_used_as_head_proof": false
+  },
+  "archive_metadata_check": {
+    "parts": 20,
+    "direct": 2,
+    "errors": [],
+    "semantic_binary_read": false,
+    "sha256_recomputed": false
+  }
+}

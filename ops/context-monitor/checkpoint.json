@@ -3,12 +3,32 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/5f8aa7f375b4e10cbffe4f65229eb4b22a04d790.json",
+      "head_sha": "819b34cde4f41e21ecff4d21347d516f73036af5",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/819b34cde4f41e21ecff4d21347d516f73036af5.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
         ".gitignore",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+        "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+        "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+        "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
         "bojart_memory/__init__.py",
         "bojart_ops/audit.py",
         "data/catalog/library_inventory.json",
@@ -31,7 +51,9 @@
         "docs/evidence/memory-tests-final.log",
         "docs/evidence/ops-consolidated-tests.log",
         "docs/evidence/retrieval-2026-11-01.json",
+        "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
         "docs/historical/BOJART_MANIFEST_V23.json",
+        "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
         "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
         "jarvis/.agents/product-marketing.md",
         "jarvis/.agents/skills/bojart-creative-packaging/SKILL.md",
@@ -626,7 +648,7 @@
         "1d76c6876de54c7bc37b777ae66bf031207a140d",
         "4873567fad40d2033005ec0fd7af05a11b0bc2fe"
       ],
-      "updated_at": "2026-11-01T21:33:38Z"
+      "updated_at": "2026-11-01T21:46:00Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
@@ -670,7 +692,7 @@
         "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
         "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf"
       ],
-      "updated_at": "2026-11-01T21:44:58Z"
+      "updated_at": "2026-11-01T21:46:00Z"
     }
   }
 }

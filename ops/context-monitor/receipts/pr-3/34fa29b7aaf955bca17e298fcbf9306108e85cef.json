@@ -2,16 +2,16 @@
   "schema_version": 1,
   "repository": "Momolscode/BOJART",
   "pull_request": 3,
-  "pull_request_state": "open",
+  "pull_request_state": "closed",
   "head_ref": "archive/bojart-verified-assets-2026-11-01",
   "base_ref": "main",
   "base_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
-  "trigger_kind": "opened",
-  "trigger_delivery_id": "2b2bb5b0-d63d-11f1-91ff-d4960f3049b7",
+  "trigger_kind": "closed",
+  "trigger_delivery_id": "6f3af540-d63d-11f1-91e9-ddf4bcbf5e06",
   "head_sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
   "compared_from_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
   "started_at": "2026-11-01T21:43:04Z",
-  "finished_at": "2026-11-01T21:44:58Z",
+  "finished_at": "2026-11-01T21:46:00Z",
   "status": "partial",
   "changed_paths": [
     "README.md",
@@ -184,6 +184,11 @@
       "severity": "info",
       "evidence": "Vingt fragments concordent par taille et SHA Git avec le manifeste ; les sommes de tailles des trois fichiers fragmentés concordent. Les tailles des deux PDF directs concordent. Treize groupes de doublons recensés par CI, aucune suppression.",
       "action": "Conserver cette preuve comme contrôle de métadonnées, distinct du recalcul SHA-256 des octets et d'une validation artistique."
+    },
+    {
+      "severity": "high",
+      "evidence": "PR fusionnée par une autre session ; commit 819b34cde4f41e21ecff4d21347d516f73036af5. La continuité du push sur main échoue également.",
+      "action": "Conserver l'historique d'échec ; aucune fusion ni annulation réalisée par cet audit."
     }
   ],
   "corrections": [],
@@ -239,5 +244,9 @@
     "errors": [],
     "semantic_binary_read": false,
     "sha256_recomputed": false
-  }
+  },
+  "merged": true,
+  "merge_commit_sha": "819b34cde4f41e21ecff4d21347d516f73036af5",
+  "receipt_revision": 2,
+  "previous_receipt_path": "ops/context-monitor/receipts/pr-3/34fa29b7aaf955bca17e298fcbf9306108e85cef.v1.json"
 }
