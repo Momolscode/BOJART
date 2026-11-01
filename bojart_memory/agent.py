@@ -9,9 +9,11 @@ import os
 import re
 from pathlib import Path
 from contextlib import nullcontext
+from http.client import HTTPException
 
 from .core import Memory, MemoryError, PROJECTS, canonical, distinct_sources, file_sha, now, project_ok
 from .paths import default_state
+from .model_config import DEFAULT_URL, inspect_models, load_config, save_config
 from .conversation import bounded_history, encoded_history, select_exchanges
 from .ollama import Ollama
 from .vectors import cosine, validate_vector
@@ -61,22 +63,18 @@ class AgentMemory:
                 'session_retired': indexed['session_retired']}
 
     def config(self):
-        path = self.state / 'models.json'
-        cfg = json.loads(path.read_text('utf-8')) if path.exists() else {}
-        if not isinstance(cfg, dict) or set(cfg) - {'embedding_model', 'chat_model', 'ollama_url'}:
-            raise MemoryError('Configuration modèles invalide.')
-        return cfg
+        return load_config(self.state)
 
     def configure(self, embedding_model=None, chat_model=None):
         cfg = self.config()
-        for key, value in [('embedding_model', embedding_model), ('chat_model', chat_model)]:
-            if value:
-                Ollama(value).key()
+        url = cfg.get('ollama_url', DEFAULT_URL)
+        for key, value, capability in [('embedding_model', embedding_model, 'embedding'),
+                                       ('chat_model', chat_model, 'completion')]:
+            if value is not None:
+                Ollama(value, url, timeout=4).inspect(capability)
                 cfg[key] = value
-        cfg['ollama_url'] = 'http://127.0.0.1:11434'
-        temporary = self.state / 'models.json.tmp'
-        temporary.write_text(json.dumps(cfg, indent=2), 'utf-8')
-        temporary.replace(self.state / 'models.json')
+        cfg['ollama_url'] = url
+        save_config(self.state, cfg)
         return cfg
 
     def embedder(self):
@@ -150,9 +148,9 @@ class AgentMemory:
             warnings = list(lexical['warnings'])
             lexical_rows = [r for r in lexical['results'] if r['source_path'] != 'data/knowledge/claims.jsonl']
             semantic_rows, semantic_status = [], 'disabled'
-            embedder = embedder or self.embedder()
-            if embedder:
-                try:
+            try:
+                embedder = self.embedder() if embedder is None else embedder
+                if embedder:
                     key = embedder.key()
                     vector = embedder.embed([query])[0]
                     rows = m.db.execute('''SELECT c.id,c.version_id,c.start_line,c.end_line,c.text,v.sha256,
@@ -181,8 +179,8 @@ class AgentMemory:
                                 r['current_version'] = True
                                 yield r
                     semantic_rows = distinct_sources(verified_semantic_rows(), 30)
-                except (ValueError, OSError, KeyError, TypeError) as e:
-                    semantic_status = 'unavailable: ' + type(e).__name__
+            except (ValueError, OSError, KeyError, TypeError, HTTPException) as e:
+                semantic_status = 'unavailable: ' + type(e).__name__
             scores, candidates = {}, {}
             for ranking in (lexical_rows, semantic_rows):
                 for position, row in enumerate(ranking, 1):
@@ -262,9 +260,11 @@ class AgentMemory:
             result = m.stats()
             result.update({name: m.db.execute('SELECT count(*) FROM ' + name).fetchone()[0] for name in ('agent_notes', 'agent_episodes', 'agent_vectors')})
             result['database_integrity'] = m.db.execute('PRAGMA quick_check').fetchone()[0]
-        cfg = self.config()
-        return {**result, 'chat_configured': bool(cfg.get('chat_model')), 'embeddings_configured': bool(cfg.get('embedding_model')),
-                'physical_commands': False, 'same_database_as_bojart_memory': True}
+        models = inspect_models(self.state)
+        return {**result, 'chat_configured': models['roles']['chat_model']['configured'],
+                'embeddings_configured': models['roles']['embedding_model']['configured'],
+                'models': models, 'physical_commands': False,
+                'same_database_as_bojart_memory': True}
 
     def ask(self, text, project, session, request_id):
         project_ok(project)

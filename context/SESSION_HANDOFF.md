@@ -112,3 +112,15 @@ Deux défauts reproduits : une proposition visuelle préparée mais non distribu
 Six nouveaux tests couvrent le refus des anciennes demandes, les nouvelles demandes, les reçus terminés, la compatibilité des anciennes sauvegardes, le redémarrage et une seconde sauvegarde/restauration. Ils sont intégrés à la suite `tests` exécutée par le workflow mémoire sous Windows et Linux. Vérifications locales complémentaires : 64 tests d’orchestration M06/M07, 44 tests de régie M04, 31 tests M05 sans médias privés et 7 tests de fermeture SQLite réussis. Trois cas M05 restent non validés ici faute des médias d’exemple ; aucune qualification CAO réelle, voix, écran ou imprimante n’est revendiquée. Les résultats CI et les empreintes du commit sont consignés dans le reçu de continuation de `audit/context-results`.
 
 Rapprochement du pilotage : le correctif de restauration `9c2a0fb47baf1b610e31d2deb800a5323bb9495e` est conservé avec ses six scénarios. La preuve d’orchestration est actualisée sur le corpus et le code réunis.
+
+## Modèles facultatifs et premier lancement
+
+Base examinée : `0a7a08dd0a0bed445ef0dc5734be7c841b30467a`, contrôles GitHub réussis. Demande : continuer la préparation de Jarvis.
+
+Défaut reproduit : un `models.json` invalide interrompait la recherche et le statut avant le repli lexical. La configuration est désormais validée séparément ; la recherche reste exploitable, avec un état de modèle explicite. Les contrôles d’intégrité des sources restent bloquants pour les faits altérés.
+
+Ajouts : diagnostic local sans inférence ni création de base, contrôle des capacités déclarées avant configuration, préservation d’un port local existant, écriture atomique des réglages et intégration au diagnostic de lancement. Guide indexé : `docs/memory/MODELES_LOCAUX.md`. L’API Ollama officielle a été relue ; aucun modèle n’a été téléchargé ou qualifié.
+
+Vérification locale : 20 nouveaux cas avec un serveur de métadonnées simulé, erreurs de configuration, modèles absents, capacités incompatibles, référence distante, panne et échec d’écriture. Un cas HTTP du panneau est ajouté à la recette complète Windows/Linux. Les résultats par commit distinguent ces contrôles logiciels de l’essai réel sur la tour.
+
+Réconciliation : le classement des recherches et journaux, l’indexation commune, la priorité aux références et les corrections de restauration du commit `54f245ba852a8d1c611d96d818ee36d1aa5adba9` sont conservés.

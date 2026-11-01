@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local readiness: no installation, microphone, provider call or model download."""
+"""Local readiness; optional loopback metadata probes, no inference or download."""
 import argparse
 import importlib.metadata
 import json
@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from bojart_memory import Memory, MemoryError
 from bojart_memory.paths import default_state
+from bojart_memory.model_config import inspect_models
 
 PACKAGES = ('cadquery', 'trimesh', 'langgraph', 'langgraph-checkpoint-sqlite',
             'faster-whisper', 'ctranslate2')
@@ -76,7 +77,7 @@ def configuration(config=None):
 
 
 def report(*, config=None, memory_state=None, runtime_state=None,
-           probe_imports=False, verify_memory=False):
+           probe_imports=False, verify_memory=False, check_models=False):
     versions = {}
     for name in PACKAGES:
         try:
@@ -105,6 +106,7 @@ def report(*, config=None, memory_state=None, runtime_state=None,
                     memory.stats()  # Confirm the current schema, without migrating it.
         except (MemoryError, sqlite3.Error, OSError):
             document_memory['integrity'] = 'unreadable_or_incompatible'
+    models = inspect_models(memory_path, probe=check_models)
     engines = runtime_probe() if probe_imports else {'status': 'not_checked'}
     modules = engines.get('modules', {})
     cad_present = bool(versions['cadquery'] and versions['trimesh'])
@@ -131,6 +133,7 @@ def report(*, config=None, memory_state=None, runtime_state=None,
             'fts5': fts, 'packages': versions, 'imports': engines,
             'ffmpeg': media['ffmpeg'], 'ffprobe': media['ffprobe'],
             'configuration': settings, 'documentary_memory': document_memory,
+            'models': models,
             'separate_state_directories': separate,
             'memory_ready': memory_ready, 'launch_blockers': launch_blockers,
             'workstation_ready': not workstation_blockers,
@@ -147,12 +150,14 @@ def main():
     parser.add_argument('--state', type=Path, help='Données opérationnelles M07.')
     parser.add_argument('--probe-imports', action='store_true')
     parser.add_argument('--verify-memory', action='store_true')
+    parser.add_argument('--check-models', action='store_true', help='Lire les métadonnées des modèles Ollama locaux ; aucune inférence.')
     args = parser.parse_args()
     result = report(config=args.config, memory_state=args.memory_state, runtime_state=args.state,
-                    probe_imports=args.probe_imports or args.profile == 'workstation', verify_memory=args.verify_memory)
+                    probe_imports=args.probe_imports or args.profile == 'workstation', verify_memory=args.verify_memory,
+                    check_models=args.check_models)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     blockers = result['launch_blockers'] if args.profile == 'memory' else result['workstation_blockers']
-    return 2 if blockers else 0
+    return 2 if blockers or (args.check_models and not result['models']['ok']) else 0
 
 
 if __name__ == '__main__':

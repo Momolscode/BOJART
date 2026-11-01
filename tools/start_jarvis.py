@@ -46,6 +46,7 @@ def main():
     parser.add_argument('--port', type=int, default=8767)
     parser.add_argument('--no-browser', action='store_true')
     parser.add_argument('--check-only', action='store_true', help='Diagnostic complet sans indexer ni démarrer.')
+    parser.add_argument('--check-models', action='store_true', help='Vérifier les métadonnées des modèles locaux, sans génération.')
     parser.add_argument('--require-workstation', action='store_true', help='Exiger aussi CAO, outils média et voix configurée disponibles.')
     args = parser.parse_args()
     if not 0 <= args.port <= 65535:
@@ -59,10 +60,10 @@ def main():
     work = args.state.expanduser().resolve()
     config = args.config.expanduser().resolve() if args.config is not None else None
     result = report(config=config, memory_state=memory, runtime_state=work,
-                    probe_imports=True, verify_memory=args.check_only)
+                    probe_imports=True, verify_memory=args.check_only, check_models=args.check_models)
     if args.check_only:
         print(json.dumps(result, ensure_ascii=False, indent=2))
-        return 2 if result['workstation_blockers'] else 0
+        return 2 if result['workstation_blockers'] or (args.check_models and not result['models']['ok']) else 0
     blockers = result['launch_blockers'] or (result['workstation_blockers'] if args.require_workstation else [])
     if blockers:
         print('Démarrage interrompu : ' + '; '.join(MESSAGES[x] for x in blockers), file=sys.stderr)
@@ -72,6 +73,9 @@ def main():
         return 2
     if result['workstation_blockers']:
         print('Poste limité : ' + '; '.join(MESSAGES[x] for x in result['workstation_blockers']), flush=True)
+    if not result['models']['ok']:
+        print('Modèles IA indisponibles ou mal configurés : la recherche par mots reste disponible. '
+              'Diagnostic : python -m bojart_memory.agent_cli models', flush=True)
     env = dict(os.environ, BOJART_MEMORY_STATE=str(memory))
     command = [sys.executable, '-m', 'bojart_memory.agent_cli', '--state', str(memory), 'index']
     completed = subprocess.run(command, cwd=ROOT, env=env, capture_output=True, text=True)

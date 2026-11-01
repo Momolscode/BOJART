@@ -54,6 +54,25 @@ class AgentHttpTests(unittest.TestCase):
         self.assertEqual(self.request('/api/memory/context?q=Jev&project=unum')[0], 400)
         self.assertEqual(self.request('/api/memory/recall?q=Jev&q=G2')[0], 400)
 
+    def test_invalid_model_config_keeps_memory_http_available(self):
+        configuration = self.root / 'memory/models.json'
+        configuration.write_text('{broken', encoding='utf-8')
+        with patch('urllib.request.OpenerDirector.open', side_effect=AssertionError('network forbidden')):
+            status, raw = self.request('/api/memory/status')
+            self.assertEqual(status, 200)
+            self.assertEqual(json.loads(raw)['models']['configuration_status'], 'invalid')
+            status, raw = self.request('/api/memory/recall?q=Jev&project=bojart.jarvis')
+            self.assertEqual(status, 200)
+            self.assertTrue(json.loads(raw)['results'])
+            status, raw = self.request('/api/memory/context?q=Jev&project=bojart.jarvis')
+            self.assertEqual(status, 200)
+            self.assertTrue(json.loads(raw)['citations'])
+            self.assertEqual(self.request('/api/memory/reindex', {})[0], 200)
+            self.assertEqual(self.request('/api/memory/note', {
+                'key': 'offline', 'value': 'Mémoire disponible',
+                'source': 'HTTP regression fixture', 'project': 'bojart.jarvis'})[0], 200)
+        self.assertEqual(configuration.read_text('utf-8'), '{broken')
+
     def test_backup_and_ui_assets(self):
         status, raw = self.request('/api/memory/backup', {})
         self.assertEqual(status, 200); self.assertTrue(Path(json.loads(raw)['path']).is_dir())

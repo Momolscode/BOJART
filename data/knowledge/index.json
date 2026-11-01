@@ -167,5 +167,10 @@
     "path": "docs/memory/CONVERSATIONS.md",
     "project": "bojart.jarvis",
     "provenance": "Conversation context implementation with source freshness checks and bounded complete JSON; model output quality remains unqualified. See tests_agent/test_conversation_context.py and per-commit GitHub Actions results."
+  },
+  {
+    "path": "docs/memory/MODELES_LOCAUX.md",
+    "project": "bojart.jarvis",
+    "provenance": "Local model configuration, metadata-only diagnostics and lexical fallback implementation; official Ollama API checked 2026-11-01. No inference or target-hardware qualification."
   }
 ]

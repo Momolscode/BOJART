@@ -44,8 +44,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 5379,
-      "sha256": "62369704cac60d78dc48719b535b9880837874cd402ad10808fe51e0c8e70078"
+      "bytes": 5663,
+      "sha256": "696a7d63d006663c1a483da2849f0e042eabf30fb6788f8deb60acb93219959e"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -204,13 +204,13 @@
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 19026,
-      "sha256": "7cb0342a2d48c4e9578353a74e75ade1469edce377f44d12ee64f57c57054e71"
+      "bytes": 19027,
+      "sha256": "67b54950e86080633410abab16d457b73411c6585b09fdae753deb908493f443"
     },
     {
       "path": "bojart_memory/agent_cli.py",
-      "bytes": 1753,
-      "sha256": "175ced2af55e72e725b599bf778aa727a2e2725061a6a45bd2fdb55a4e6907b2"
+      "bytes": 2125,
+      "sha256": "c804536c7895f65028c2489461701a862d023ffdea0e947b571c76282e50c2a3"
     },
     {
       "path": "bojart_memory/conversation.py",
@@ -238,9 +238,14 @@
       "sha256": "133e958c34c73aa814443aad4e2c747a793c5974ec7d616075bba907afcf8251"
     },
     {
+      "path": "bojart_memory/model_config.py",
+      "bytes": 4361,
+      "sha256": "cdcd5e9312dd999ee59ba234f11dbcd60a00f34e3fa4ae9b39eed466d0db479d"
+    },
+    {
       "path": "bojart_memory/ollama.py",
-      "bytes": 4367,
-      "sha256": "392368e7a87e4349c2cabc7174d1daff6eb86c277fcf0816505048ee0e5c4d3c"
+      "bytes": 6450,
+      "sha256": "aa8dce5ee8e3103a9105c419d1db93ba7a75f9a90e889183610c2da103a87c3a"
     },
     {
       "path": "bojart_memory/paths.py",
@@ -294,8 +299,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 19375,
-      "sha256": "099fd5965f213fd495ae10fcfda952136e615d73590d3e3d4c3a31a38e88615b"
+      "bytes": 20860,
+      "sha256": "99d9ce803aa5a4b34f490c69499a646f3bd59880ced9fcd93dbc1244c25247e2"
     },
     {
       "path": "creative/CURRENT.md",
@@ -394,8 +399,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 7534,
-      "sha256": "31410d2b55e5c9bb3049288949089fff7b7e4208171e03993457c36b979da42b"
+      "bytes": 7817,
+      "sha256": "99f7d3bcee3262742979defc8bb06b1f29ce4c483507a5d6334baba34a3205f3"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -766,6 +771,11 @@
       "path": "docs/memory/MCP.md",
       "bytes": 2225,
       "sha256": "ade32c9c0b63ede8eede87cc2350c46cdde2b314c5c0a31907adffe777fb98d3"
+    },
+    {
+      "path": "docs/memory/MODELES_LOCAUX.md",
+      "bytes": 3945,
+      "sha256": "3765064bd82589c8c36841d33d120df92e9a3999844992be4488cb16d9cf6f95"
     },
     {
       "path": "docs/memory/OUTILS_ET_ARCHITECTURE.md",
@@ -3969,8 +3979,13 @@
     },
     {
       "path": "tests_agent/test_http_agent.py",
-      "bytes": 3156,
-      "sha256": "0fce26ac9126272b47db0a7393c8a8d00e1d78555da5adcd433cde7cd6c29e5e"
+      "bytes": 4392,
+      "sha256": "b75321abf69245e4bbe444d376c3fbc7a5cf80543b6537bd819b8cd1b9ad8d90"
+    },
+    {
+      "path": "tests_agent/test_model_setup.py",
+      "bytes": 15594,
+      "sha256": "edba5af4753b8e65429d39c335846509aefba22d19d8508484302a3ede09d02a"
     },
     {
       "path": "tests_agent/test_research_indexing.py",
@@ -4019,8 +4034,8 @@
     },
     {
       "path": "tools/doctor.py",
-      "bytes": 7850,
-      "sha256": "d2e6b078396396d4d799b346633bce0dcd80d83e2139c218c7e68edde45c0ca1"
+      "bytes": 8262,
+      "sha256": "f7d0ef37cd00d5a141fee14af4a766d8f073a7ff507291188501c03588037353"
     },
     {
       "path": "tools/download_remote_media.py",
@@ -4074,8 +4089,8 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 4888,
-      "sha256": "8261902e710dfd022f88e9dfd3f26b33ccfd530438888e920ad93b3b3a58f87d"
+      "bytes": 5335,
+      "sha256": "abd80dab005b96defe67ad81d5357d2cf1584db216c4016060a5ed558befc194"
     },
     {
       "path": "tools/validate_repository.py",

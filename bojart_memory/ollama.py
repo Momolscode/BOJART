@@ -1,5 +1,6 @@
 """Optional loopback-only Ollama client. Never pulls models or calls cloud APIs."""
 import json
+import re
 import urllib.request
 from urllib.parse import urlsplit
 
@@ -7,21 +8,35 @@ from .vectors import validate_vector
 from .conversation import encoded_history
 
 
+class ModelError(ValueError):
+    def __init__(self, code, message):
+        super().__init__(message)
+        self.code = code
+
+
 class Ollama:
     def __init__(self, model, url="http://127.0.0.1:11434", timeout=20):
+        if not isinstance(url, str):
+            raise ValueError("Adresse Ollama locale requise.")
         u = urlsplit(url)
+        if u.port is not None and not 1 <= u.port <= 65535:
+            raise ValueError("Port Ollama invalide.")
         if u.scheme != "http" or u.hostname != "127.0.0.1" or u.username or u.password or u.path not in ("", "/") or u.query or u.fragment:
             raise ValueError("Ollama doit être local : http://127.0.0.1:PORT.")
-        if not isinstance(model, str) or not model or len(model) > 180 or "cloud" in model.lower():
+        if (not isinstance(model, str) or not model or len(model) > 180
+                or model.strip() != model or any(ord(c) < 32 for c in model)
+                or "cloud" in model.lower()):
             raise ValueError("Nom d'un modèle local requis.")
         self.url = url.rstrip("/")
         self.model = model
         self.timeout = timeout
         self._key = None
+        self.request_count = 0
         # Local calls must not pass through an inherited remote HTTP proxy.
         self.opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
 
     def request(self, path, payload=None):
+        self.request_count += 1
         req = urllib.request.Request(self.url + path,
             data=json.dumps(payload).encode() if payload is not None else None,
             headers={"Content-Type": "application/json"})
@@ -33,14 +48,38 @@ class Ollama:
 
     def key(self):
         if self._key is None:
-            models = self.request("/api/tags")["models"]
-            match = next((m for m in models if m.get("name") == self.model or m.get("name") == self.model + ":latest"), None)
-            if not match or not match.get("digest"):
-                raise ValueError("Modèle absent localement. Le télécharger explicitement dans Ollama.")
+            response = self.request("/api/tags")
+            models = response.get("models") if isinstance(response, dict) else None
+            if not isinstance(models, list) or any(not isinstance(m, dict) for m in models):
+                raise ModelError("invalid_metadata", "Liste locale des modèles invalide.")
+            match = next((m for m in models if m.get("name") in
+                          (self.model, self.model + ":latest")), None)
+            if match is None:
+                raise ModelError("model_missing", "Modèle absent localement. Le télécharger explicitement dans Ollama.")
             if match.get("remote_host") or match.get("remote_model"):
-                raise ValueError("Le modèle est distant ; seule l'inférence locale est autorisée ici.")
-            self._key = match["name"] + "@" + match["digest"]
+                raise ModelError("remote_refused", "Le modèle est distant ; seule l'inférence locale est autorisée ici.")
+            digest = match.get("digest")
+            if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+                raise ModelError("invalid_metadata", "Empreinte du modèle local invalide.")
+            self._key = match["name"] + "@" + digest
         return self._key
+
+    def inspect(self, required_capability):
+        if required_capability not in {"embedding", "completion"}:
+            raise ValueError("Rôle de modèle invalide.")
+        key = self.key()
+        details = self.request("/api/show", {"model": self.model})
+        if not isinstance(details, dict):
+            raise ModelError("invalid_metadata", "Métadonnées du modèle invalides.")
+        if details.get("remote_host") or details.get("remote_model"):
+            raise ModelError("remote_refused", "Le modèle est distant.")
+        capabilities = details.get("capabilities")
+        if not isinstance(capabilities, list) or any(not isinstance(c, str) for c in capabilities):
+            raise ModelError("capabilities_unknown", "Capacités du modèle non déclarées par Ollama.")
+        if required_capability not in capabilities:
+            raise ModelError("wrong_capability", "Le modèle local ne déclare pas le rôle demandé.")
+        return {"status": "metadata_available", "model_key": key,
+                "capabilities": sorted(set(capabilities))}
 
     def embed(self, texts):
         self.key()

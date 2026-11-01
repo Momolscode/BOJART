@@ -49,10 +49,11 @@ Depuis le dépôt avec le Python de `.venv` :
 
 ```bash
 python -m bojart_memory.agent_cli configure --embedding-model embeddinggemma
+python -m bojart_memory.agent_cli models
 python -m bojart_memory.agent_cli embed
 ```
 
-Dans ces commandes, utiliser `.venv\Scripts\python.exe` sous Windows ou `.venv/bin/python` sous Linux. Relancer `embed` après l’ajout de documents. Le modèle doit être présent localement. Si Ollama est arrêté, la recherche par mots continue. Les vecteurs sont associés à l’empreinte exacte du modèle ; changer de modèle nécessite sa propre indexation.
+Dans ces commandes, utiliser `.venv\Scripts\python.exe` sous Windows ou `.venv/bin/python` sous Linux. Relancer `embed` après l’ajout de documents. Le modèle doit être présent localement. Le diagnostic `models` vérifie sa présence et sa capacité déclarée sans lancer de génération. Si Ollama est arrêté ou si la configuration est invalide, la recherche par mots continue. Voir [modèles locaux](docs/memory/MODELES_LOCAUX.md) pour lire les statuts et réparer la configuration. Les vecteurs sont associés à l’empreinte exacte du modèle ; changer de modèle nécessite sa propre indexation.
 
 Pour **Parler à Jarvis**, choisir un modèle de conversation adapté à la RAM/VRAM, le télécharger dans Ollama, puis exécuter `python -m bojart_memory.agent_cli configure --chat-model NOM_LOCAL`. Aucun modèle de conversation universel n’est présélectionné. Les échanges de ce panneau et leur contexte exact sont conservés ; les réponses restent à vérifier. L’historique transmis au modèle écarte les anciennes réponses dont les preuves ont changé ; voir [continuité des conversations](docs/memory/CONVERSATIONS.md). Le panneau n’exécute pas de commandes d’atelier.
 
