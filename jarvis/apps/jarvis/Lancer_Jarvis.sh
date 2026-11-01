@@ -1,6 +1,9 @@
 #!/bin/sh
 set -eu
 cd "$(dirname "$0")"
+if [ -f ../../Lancer_Jarvis.sh ]; then
+  exec bash ../../Lancer_Jarvis.sh "$@"
+fi
 if [ -x .venv/bin/python ]; then
   exec .venv/bin/python app/consolidated_workbench.py "$@"
 fi

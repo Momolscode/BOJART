@@ -1,7 +1,7 @@
 {
   "schema": "bojart.production-recovery-acceptance.v1",
-  "observed_at": "2026-11-02T00:35:50.173470+01:00",
-  "base_commit": "a0500b39ddf5a6154c701c225c5b2ad80767cc70",
+  "observed_at": "2026-11-02T00:37:53.040614+01:00",
+  "base_commit": "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
   "environment": {
     "python": "3.12.14",
     "platform": "linux"
@@ -309,8 +309,8 @@
     {
       "name": "core",
       "command": "python -m unittest discover -s tests -v",
-      "passed": 71,
-      "log_sha256": "e040761938be9eaea769b2341a8e3ab18af53c29bdaedcd852d52d95760b4e04"
+      "passed": 85,
+      "log_sha256": "d366a2648dd8915bafb5227f354fc7f6fc3d733464a7c586bc0d0c612f7070fb"
     },
     {
       "name": "agent",
@@ -340,8 +340,8 @@
           "docs/INSTALLATION.md",
           "context/CURRENT.md",
           "docs/ARCHITECTURE.md",
-          "docs/DATA_GOVERNANCE.md",
-          "INSTALLER_DEMAIN.md"
+          "INSTALLER_DEMAIN.md",
+          "docs/DATA_GOVERNANCE.md"
         ],
         "all_citations_verified": true
       },
@@ -395,8 +395,8 @@
         "returned_sources": [
           "docs/INSTALLATION.md",
           "docs/ORCHESTRATION.md",
-          "docs/DEMARRAGE_ET_REPRISE.md",
           "INSTALLER_DEMAIN.md",
+          "docs/DEMARRAGE_ET_REPRISE.md",
           "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
         ],
         "all_citations_verified": true
@@ -419,8 +419,8 @@
         "returned_sources": [
           "docs/memory/OUTILS_ET_ARCHITECTURE.md",
           "docs/RESEARCH_2026-11-01.md",
-          "docs/DEMARRAGE_ET_REPRISE.md",
           "INSTALLER_DEMAIN.md",
+          "docs/DEMARRAGE_ET_REPRISE.md",
           "context/CURRENT.md"
         ],
         "all_citations_verified": true
@@ -432,8 +432,8 @@
         "hit_at_5": true,
         "returned_sources": [
           "docs/ETAT_ARCHIVES_2026-11-01.md",
-          "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
           "data/knowledge/claims.jsonl",
+          "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
           "docs/DATA_GOVERNANCE.md",
           "docs/GITHUB_WORKFLOW.md"
         ],
@@ -523,7 +523,7 @@
   "tested_inputs_sha256": {
     "bojart_ops/orchestration.py": "691c3542bf52a4eee0402acf683e790f098d310bba04eea307bd17913813e41e",
     "bojart_ops/production_recovery.py": "43b9c5c650735150277c31a10d98139ac9a6fb1a0f6275663c2b14eba362ae52",
-    "context/SESSION_HANDOFF.md": "7b38f2c3f50716f1448ec1764d23f3fe062fe8bf74d8929005d079688225ffba",
+    "context/SESSION_HANDOFF.md": "85e7ff0327b2ec98aef81f08f846875b91e31caf37473f0d4a75507d5c5a9d9f",
     "creative/CURRENT.md": "625b0d81507f0c9d744cec5869d4fbb703af59021ee5fcce146ae76c33822329",
     "data/knowledge/index.json": "d592e416cfc66b6195d33d0000f161256388e625e48e900fd5181b1aa03eb4cb",
     "docs/ORCHESTRATION.md": "b2fdf9bc6ec991c694774fcb730dcb7b9f237b5ee40d9091fc3a0534705d0691",
@@ -544,7 +544,7 @@
     "Technical classification is not an exhaustive semantic review of every repository file."
   ],
   "preparation_base_commit": "20283c3136c66fbfca78a9e733b5c74bd5dfcf03",
-  "python_tests_passed": 277,
+  "python_tests_passed": 291,
   "orchestration": {
     "commands": [
       "python tools/audit_repository.py --output .bojart-audit",
@@ -560,5 +560,9 @@
     "tasks_executed": 0,
     "task_records": 12,
     "unclassified_paths": 0
-  }
+  },
+  "reconciled_commits": [
+    "a0500b39ddf5a6154c701c225c5b2ad80767cc70",
+    "d5855c1e8c10f6ab57d7b362eb1d954c722b340b"
+  ]
 }

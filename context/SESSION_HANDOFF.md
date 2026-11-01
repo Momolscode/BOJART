@@ -152,3 +152,15 @@ Les contrôles avec serveur local simulé vérifient erreurs, changements de tag
 Réconciliation : les améliorations concurrentes du Studio/Growth et leurs treize tests d’interface, publiées au commit `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, sont conservées.
 
 Réconciliation du raccordement des médias : la préparation des profils locaux et le contrôle des identités de modèles publiés à `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont préservés. Les sélections documentaires des deux contributions sont réunies par projet et chemin.
+
+## Suite de l’audit : lanceurs historiques — 2 novembre 2026
+
+Base examinée : `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`. Les contrôles GitHub de cette base et le reçu Studio/Growth `870896c1f1f313ce64479894a1d174fc34073808` sont réussis.
+
+Défauts reproduits : les lanceurs de `jarvis/` et `jarvis/apps/jarvis/` démarraient directement le serveur sans les contrôles et l'indexation du lanceur BOJART, et ignoraient le Python installé dans `.venv` à la racine. Le raccourci shell d'ouverture d'un dossier essayait d'exécuter un script suivi sans permission d'exécution. Les raccourcis de restauration choisissaient également un autre environnement. Les lanceurs rejoignent maintenant le point d'entrée canonique ; la restauration choisit son environnement installé, les appels shell passent explicitement par Bash et les scripts Windows conservent le code d'erreur après leur pause. Le repli des paquets historiques séparés est conservé.
+
+Validation locale : dix tests exécutent les vrais scripts contre des programmes Python de contrôle et des environnements isolés, sans installation de dépendances ni accès réseau. Ils vérifient les arguments, les espaces/accents, la sélection Python, le choix de dossier et les erreurs. Quatre contrôles HTTP supplémentaires vérifient le téléchargement exact d'une sauvegarde, sa restauration dans un nouveau dossier, les accès authentifiés et les longueurs de réponse ; cette voie existante fonctionne sans correction du serveur. Deux appels réels `--check-only` par les anciens lanceurs atteignent le diagnostic complet sans créer d'état ni appeler de fournisseur. La suite racine compte maintenant 66 tests, exécutés automatiquement sous Ubuntu et Windows ; ses résultats distants et la portée exacte sont consignés dans le reçu d'audit. Ces essais ne qualifient ni le poste cible ni ses moteurs optionnels.
+
+Réconciliation avant publication : les profils de modèles et le contrôle d’identité pendant l’inférence du commit `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont conservés. Les documents communs ont été fusionnés ; le manifeste repart de cette nouvelle tête.
+
+Raccordement des médias : les lanceurs unifiés et les contrôles de téléchargement de sauvegarde, rapprochés jusqu’à `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Les essais des deux contributions sont relancés ensemble.

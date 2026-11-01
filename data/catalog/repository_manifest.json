@@ -44,8 +44,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 6318,
-      "sha256": "78891c69befa47d83406868b090a2b4a82e7e9a6519ea5da5809190c4e558f0f"
+      "bytes": 6703,
+      "sha256": "d2691dd54fbc83a23608e192d6db7c2853ab97fe7a8c6e1e31dafedd8dfc7b5d"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -59,8 +59,8 @@
     },
     {
       "path": "Lancer_BOJART.cmd",
-      "bytes": 211,
-      "sha256": "119704a94467433f0c34fe5c1503f313e7e8bf3a6dd19ac0d663c516845e6a0f"
+      "bytes": 276,
+      "sha256": "67b7a95a30bb4b49cf5d7416fac78241a5d632c1428d2dcf933460458f15132b"
     },
     {
       "path": "Lancer_BOJART.sh",
@@ -314,8 +314,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 25537,
-      "sha256": "7b38f2c3f50716f1448ec1764d23f3fe062fe8bf74d8929005d079688225ffba"
+      "bytes": 27953,
+      "sha256": "85e7ff0327b2ec98aef81f08f846875b91e31caf37473f0d4a75507d5c5a9d9f"
     },
     {
       "path": "creative/CURRENT.md",
@@ -674,8 +674,8 @@
     },
     {
       "path": "docs/evidence/production-recovery-2026-11-02.json",
-      "bytes": 19784,
-      "sha256": "5789db722465f147603a2e58d584eb2961148b7d7e8f05d82933112d00af087f"
+      "bytes": 19910,
+      "sha256": "dc77002822a02e568beb2d2bf25e4dc74af57248c2e9f894f674231289af2268"
     },
     {
       "path": "docs/evidence/recovery-part-1-2026-11-01.json",
@@ -964,13 +964,13 @@
     },
     {
       "path": "jarvis/Lancer_Jarvis.cmd",
-      "bytes": 561,
-      "sha256": "ad8d151725a70d7b4e9ac71f5402ccb576d99492dd6f9988f92d784e2379a567"
+      "bytes": 789,
+      "sha256": "4bdc5131b87c59ff6b33f249ca73c92480efcf3622fd9e1635eac4e2b8b11668"
     },
     {
       "path": "jarvis/Lancer_Jarvis.sh",
-      "bytes": 185,
-      "sha256": "cf9921b9f7d7e11f84d0521372ec73c9167d8480be76d8cf904cbb3d529d1356"
+      "bytes": 296,
+      "sha256": "0e0f7c7d88a192281b609f4e6c35f3884d6e1fc0e9f6cb04337d1c9dc3261f76"
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.cmd",
@@ -979,23 +979,23 @@
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.sh",
-      "bytes": 98,
-      "sha256": "e8b917c099aa6c05e57fff876c6a0b260bb46983b45195cbd2eeab2ca1487a9a"
+      "bytes": 103,
+      "sha256": "279f1b54d97c435ea40069b01a46a6417d15bdbf0b3fba9a53163e2f54a6ce5d"
     },
     {
       "path": "jarvis/README.md",
-      "bytes": 5977,
-      "sha256": "0ba799518e9928462a1b4cb27a34c0cf371b1dc37f1fea528f52c29b98b56f94"
+      "bytes": 6583,
+      "sha256": "43022c5d9e54fa1f27cc558b9ac173768b3fff718f52341d5397ca1e7c0fb191"
     },
     {
       "path": "jarvis/Restaurer_Jarvis.cmd",
-      "bytes": 703,
-      "sha256": "d14a0caf05871bd381c176b9aadd35048b168606d899c35cec3398053241a1e2"
+      "bytes": 1049,
+      "sha256": "d7bc70e5b0e097cf97c3a334f29877278e401a9401dc6cfca86f3c9d5f58d0d4"
     },
     {
       "path": "jarvis/Restaurer_Jarvis.sh",
-      "bytes": 245,
-      "sha256": "0e2fae501f1f130df32521b382fb31e1963b7831428a05f8e3c189838411e983"
+      "bytes": 344,
+      "sha256": "24b71158aa06ff816ba5b4d4908f79a2bbf56af252e858edd9491f734c57a61e"
     },
     {
       "path": "jarvis/apps/jarvis/AGENTS.md",
@@ -1009,13 +1009,13 @@
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.cmd",
-      "bytes": 704,
-      "sha256": "2d9061e44a19196ad47d1c5d61693d624fa976f6592045ed0a3e0fbed0520896"
+      "bytes": 928,
+      "sha256": "13504208cf7ef851cbec2eae3b99ce7c6cba2ffa4a6d663bba8d2299b5c61889"
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.sh",
-      "bytes": 330,
-      "sha256": "0649a15df73ad35fc41c4d6bcdc930f6b03062a5529ca63f75c0ed66b6e3c083"
+      "bytes": 412,
+      "sha256": "5e53030a338fa725f62b1479d5506212056bfa61fa499fe584b4779535f41ba7"
     },
     {
       "path": "jarvis/apps/jarvis/README.md",
@@ -3983,6 +3983,11 @@
       "sha256": "e4e1b7ac04c44b0c7123bc5b0ae3c847b6fc36e73ea2d005671f1497b1b94f67"
     },
     {
+      "path": "tests/test_launchers.py",
+      "bytes": 8427,
+      "sha256": "d58388513d835465690efeb58fad1f6363a875e8a7ba1f9e611d371f8bf74e34"
+    },
+    {
       "path": "tests/test_memory.py",
       "bytes": 8640,
       "sha256": "3459d0bdb04108f720b46bc3fc469aae18c7217cbcdc412031744fb2a6f21f5d"
@@ -3996,6 +4001,11 @@
       "path": "tests/test_production_recovery.py",
       "bytes": 10922,
       "sha256": "a8da6fd7e66b36391795114ecbb94a9050ee3036cf25d07a8b0343ed1af3f845"
+    },
+    {
+      "path": "tests/test_workspace_download.py",
+      "bytes": 4099,
+      "sha256": "5945fe7fc70653c67cde12fba9e1b327fe204180c1a925ae5bef259ce46b9cee"
     },
     {
       "path": "tests/test_workspace_restore.py",
