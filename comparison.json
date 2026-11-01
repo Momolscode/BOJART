@@ -1,0 +1,1424 @@
+{
+  "summary": {
+    "scope": "Comparison of the local BOJART_MARWIN_PRET_GITHUB archive against its expected repository paths plus the documented archive/2026-11-01 chunk layout. Does not audit every unrelated Jarvis file or search arbitrary renamed copies inside other archives.",
+    "repository": "Momolscode/BOJART",
+    "snapshot_commit": "3c288214539adf97381f6053b43225485a873b6a",
+    "zip_filename": "BOJART_MARWIN_PRET_GITHUB_2026-11-01.zip",
+    "zip_bytes": 49329375,
+    "zip_sha256": "cf7465639afc7d903f2669a7ece914308593a82e3ec0e90d0064afeaa3e4a161",
+    "zip_entries": 87,
+    "zip_regular_files": 87,
+    "zip_directory_entries": 0,
+    "zip_crc_failure": null,
+    "manifest_records": 85,
+    "manifest_errors": [],
+    "unmanifested_files_excluding_manifest": [
+      "docs/historical/MANIFEST_SHA256.json"
+    ],
+    "comparison_counts": {
+      "different_version": 10,
+      "absent_at_expected_path": 68,
+      "identical": 6,
+      "identical_via_chunks": 3
+    },
+    "chunk_verification": {
+      "chunks_checked": 20,
+      "mismatches": 0,
+      "method": "Compare SHA1(blob header + original local bytes) to GitHub tree object SHA, and compute local per-part SHA256. No network re-download performed."
+    },
+    "source_tree_evidence": {
+      "root": "3c288214539adf97381f6053b43225485a873b6a",
+      "docs": "9b87b28e125e8d010392f83425387efc63ecb65d",
+      "historical": "61eb42ac622ab41d79d919a00498ee80b169e4da",
+      "runs": "bb72d557caaaacd4d458dc0361b7cb19df2ad60c",
+      "tools": "dd26e81cba98d58dcafa05d040d363062df419a4",
+      "chunks": "5c323458908ee9c953aa600e2a565fe2c05efef9"
+    },
+    "notes": [
+      "The repository root has no assets/ or renders/ tree at the pinned snapshot. The three split files are explicitly credited as covered via their archive chunks.",
+      "Absence at an expected path is not proof of irretrievable loss or absence from other accounts or differently named storage.",
+      "A different version may be a legitimate update, redaction, or whitespace-only change. It is not automatically corrupt and must not be overwritten blindly.",
+      "This verifies transfer coverage and byte identity, not artistic quality, commercial rights, or successful installation."
+    ]
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 137,
+      "sha256": "c24c2aa15e7f87663895610852cd132f88da747c41595e2b7dd8f0724dbe57e1",
+      "git_blob_sha": "5f0ac8cd560e617c933b1ede53f4c02e3791017f",
+      "manifest_covered": true,
+      "remote_blob_sha": "5cda778c545dddb0de854fb0fe55abae953a5f93",
+      "remote_bytes": 72,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 220,
+      "sha256": "27389dc42c6b1ea1225de59b156aae9832638f90f3d72ebe08cb3c2b3067c658",
+      "git_blob_sha": "036a0b2e240b7619f4a8286769a803b4160cdd99",
+      "manifest_covered": true,
+      "remote_blob_sha": "fd63e61ce7e08e8277a92546541405ddbb20c30f",
+      "remote_bytes": 596,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "MANIFEST_SHA256.json",
+      "bytes": 15054,
+      "sha256": "bd7a12e3003f5712818ce5726e22347213d328e35c917f30ff7cf02d18e7f724",
+      "git_blob_sha": "e12c554549af72c49f51286fd78edb298ef74b2c",
+      "manifest_covered": false,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "README.md",
+      "bytes": 3825,
+      "sha256": "6275d51a5091b593649ecabd357dbaabf91e8c9fece45a10e18b5621563c6f7f",
+      "git_blob_sha": "b91387e00c9f79c60557a4787901e5ecf95a91ec",
+      "manifest_covered": true,
+      "remote_blob_sha": "6ff86cd6ba375eff2a8f19f98b27718448918367",
+      "remote_bytes": 4231,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/1547E3C4-FC35-4566-8BA4-7F9E5EF1D458.mp4.jpg",
+      "bytes": 21775,
+      "sha256": "263a5ce1b926b09dc4d59eba8a17771b78338d9f14c7799c76e5eb64f4d660b4",
+      "git_blob_sha": "9ceaf9ef03f5ae596b1bc34ce03a64d3cd9dac95",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/3A0144AF-0E13-4824-B116-83309DF2CB09.mp4.jpg",
+      "bytes": 24752,
+      "sha256": "8eb9afcac546e73621b9b9adc673d5d19c39c0006c1084cb842a8f075024471f",
+      "git_blob_sha": "8dcd1d7c98317e986cc6938bde330e5d7785b44f",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/IMG_4516(2).jpeg",
+      "bytes": 262772,
+      "sha256": "cab097cac01648d15eb1bf1805d3795b771c8c2db736122cc3daa9b5172527e2",
+      "git_blob_sha": "3412b543571ae82b1e7fb62cb0ec85a6560a339e",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/IMG_4517.jpeg",
+      "bytes": 219403,
+      "sha256": "b1a726d22fb13f880bc512b51b48378b6c4429c6fb3bcf159b3781ebe92b2b3e",
+      "git_blob_sha": "bfc4259f1fc3d2091581645d25cbbd082fde353c",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/IMG_4521.jpeg",
+      "bytes": 257742,
+      "sha256": "e74c0f2b0da3bea3d0ef8b86e834eea1db6dfc7e9936ae8f950d5d9e28be0523",
+      "git_blob_sha": "ce6ac999df602221f0c5a9a3be64d9528f8b38bc",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/IMG_4522.jpeg",
+      "bytes": 288501,
+      "sha256": "e7b3f0dfd8bf9159cebe72da6f44801dc9398769468a6a2d326d69debfa30de0",
+      "git_blob_sha": "82bf4c640948630d34a1112194cf5a2592dd5981",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/IMG_4523.jpeg",
+      "bytes": 255390,
+      "sha256": "e70c9c779bbcab4bd9793d31a16868d819b3cefd3ae6d99aad2d0f147f4a0dbb",
+      "git_blob_sha": "cd1ca48cfc0562157203be7ae72fbdc3a698c7c5",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/contact.jpg",
+      "bytes": 162706,
+      "sha256": "9c2b9633ca3e8e949c728475e0215222e173fea900c39a086235d60ff0f9c067",
+      "git_blob_sha": "7dcb148aa69a41715d3cdff49447e6cbb472e2f7",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/context/contact_all.jpg",
+      "bytes": 91543,
+      "sha256": "a4eb9317e7b804c1f4427eb9afa393e7254835099a94f4529ac0974fa0c76c4c",
+      "git_blob_sha": "cd1bb0270bf58c57f7dcfabdfc915dc86ab378c3",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/1547E3C4-FC35-4566-8BA4-7F9E5EF1D458.mp4",
+      "bytes": 9706741,
+      "sha256": "bb1890e3e4552cb240ac8359117f6715f8660287fb5b866ee91114b664a32588",
+      "git_blob_sha": "10d8e24c35c136113dc23aaa40cdd7396bfae2b9",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/3A0144AF-0E13-4824-B116-83309DF2CB09.mp4",
+      "bytes": 2213419,
+      "sha256": "7bd7b3d5f8b484352606c70e75912d1568e26b39c0535fad5c5adb5b26fc39be",
+      "git_blob_sha": "b9b0a05fdef95626247437acf6df367da6a59577",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/57D74644-901F-4ACF-A52F-7C2709A9669B.jpeg",
+      "bytes": 552930,
+      "sha256": "6ffa617b1b460b43df849abbd11f436b4485bac0a401b8be2238c7c76c54342c",
+      "git_blob_sha": "cf6a5268974822a1c980be5d0030308f61032b7a",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/64053F5F-E325-4A63-BAA1-FECE0FE79023.jpeg",
+      "bytes": 816215,
+      "sha256": "ec050ebc917de7eb345d8c5b45c025b6096b21831925d6ff78bcaaf16d6d1463",
+      "git_blob_sha": "a306347feb63f2272c89cc64b5356b4efbf72b56",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/79F827FC-1202-422A-B21E-C8B1154EA0E0.jpeg",
+      "bytes": 213694,
+      "sha256": "d1adaeffc5d68f5bdd140f21186bbdc2869b05da1fe4a6168a7ae6223e67faa2",
+      "git_blob_sha": "d29441d1bdaa785625eb8be8a863bc00ee568778",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/7AD74982-2249-4421-BD49-7EFB025033E9.jpeg",
+      "bytes": 472533,
+      "sha256": "bae715215635f4f26389f224494ccbc5788cc53c5fea19fd5c468a80cfa002e9",
+      "git_blob_sha": "1ea7e1669c079c138450cc753539ed2aea74c7f3",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/932B74E6-1495-4249-8595-161E0E0D5AF5.jpeg",
+      "bytes": 441296,
+      "sha256": "af477e3823ebd7ecff5e2e818716cf498f4dd71ea21ab8deffed356be1e07260",
+      "git_blob_sha": "6a533bd6a030f6e9fa13f93c06fe0e8314056f98",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/C841D9CA-3947-4C22-825F-1CF19316C651.jpeg",
+      "bytes": 444259,
+      "sha256": "fddfbcdd7122c7ebffbe197dba488e1e44b4158195d8e1318978454b444ecd0f",
+      "git_blob_sha": "8f2cb21d333a41dedb2d555023c637a73cef3136",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/D145C094-8628-48C1-85E1-09200AC8D8A4.jpeg",
+      "bytes": 408373,
+      "sha256": "ef013c67ea96806bbb12c2068ea2de80351437d2940172737c2ccee8ee88c2d7",
+      "git_blob_sha": "338a3b4bd815c8d1cca211a922f0ce21fe22e1ab",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/E8AC8297-915A-48C5-B28E-5F9907C34533.jpeg",
+      "bytes": 458780,
+      "sha256": "7327bb2089a86686745538959b4eccf8b45d808a4b1721e0eea60a9447ede6d1",
+      "git_blob_sha": "3da23ffb6b2541487550dce064a1b17f7a564fc6",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/F1F59B86-AF3E-4584-BC3D-FD6779B0032C.jpeg",
+      "bytes": 841842,
+      "sha256": "8f2f5a2c6da1b6de8307b97960c385ecc7808acd5953b47b2f453ddd8fee55a8",
+      "git_blob_sha": "d7712460bf89d9591b53cbf70ae07e6debb707b5",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_3942.jpeg",
+      "bytes": 610577,
+      "sha256": "b4fbdd27d0ce4d1ffd6e428e69030d27cd21fa1cb016c45500dcc1a62d691fec",
+      "git_blob_sha": "b70daee02411bc3659bf16fd913a19ada354fb10",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4090.jpeg",
+      "bytes": 601645,
+      "sha256": "e620cb66855fbbff717c9646664506a3f499c23a2fb97539bac4c01ece9a8d61",
+      "git_blob_sha": "db84a2e3b5bfdfc6a70d0d6388e562ffc2ff77a0",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4159.jpeg",
+      "bytes": 977723,
+      "sha256": "b9b85d2ce8755c8965c17272231e964ad80995c4f48dcd5cb0f9f311eb7e278b",
+      "git_blob_sha": "89429194b8cd29ba96def0f73323ef3d8bc3f557",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4165.jpeg",
+      "bytes": 1028391,
+      "sha256": "2de0e1ea1a6d12e5120ff67a25fa5cbdc971066cd053e9877b90defaff08b45c",
+      "git_blob_sha": "19a87323846c3664b3bf850a9b7a09208df42921",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4167.jpeg",
+      "bytes": 918801,
+      "sha256": "3f0dd933905e5363e4525de9111269c79dc5f69fcf7e9e55429ff0b206b11ad5",
+      "git_blob_sha": "2840154fa1ac6d767d1939413df2add8f3cd3970",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4183.jpeg",
+      "bytes": 484522,
+      "sha256": "90d2d398159aa4ef7caf8ae3b6f9122ba5ec013f8f0c02fa7a24061a272706e0",
+      "git_blob_sha": "fb4140e776957488add8e95bc32d5ee055ed38c2",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4214(1).jpeg",
+      "bytes": 704759,
+      "sha256": "8b2d9bf671d7c198b9748df85145a9006db694479d20cb199b89f2afabcc4841",
+      "git_blob_sha": "85cf73c79c9eab8d040ef6d6eef3255bf30a85df",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4231.jpeg",
+      "bytes": 632816,
+      "sha256": "6bd99f6a2c5f18da97f13b68b8eecde5e60bfa77a34c139069fc0dafae0bec49",
+      "git_blob_sha": "4bb6a1be506753aa1edfc4ae5171fb3c0c0d840c",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4241.jpeg",
+      "bytes": 662049,
+      "sha256": "81a4152d1ef226f514fe1656ab3e6f2701f440f3f7144509c1cc69f6dde92345",
+      "git_blob_sha": "005e2c39483064b06f6081eccf1735f569432465",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4290.png",
+      "bytes": 800689,
+      "sha256": "acd78cd59a14434e3f20af381e00102ee9c80e7cbe8417c5eae4ba1a4fc0108e",
+      "git_blob_sha": "2da8b920142e3216522d3b80e32a30b82f9f805d",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4294.jpeg",
+      "bytes": 409481,
+      "sha256": "158b966c14c10634487fa2ca612c81405bff2ede498671b0ac885f4143648fd7",
+      "git_blob_sha": "7b7d0218f790810dfde7f3b3b9131b90c5047cb5",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4301.jpeg",
+      "bytes": 804166,
+      "sha256": "4efd16cb4bc3d3017fa9d28f3b5f8afd5d814c90ec4d19093563974890aa00bd",
+      "git_blob_sha": "9c802178fafddf0accd6eb900fb035b4e76ab343",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4305.jpeg",
+      "bytes": 454747,
+      "sha256": "75501fd2c4c441f3ac24d555a7d010c7e8d996d69f66e0adc815f10e0c3c0acb",
+      "git_blob_sha": "4ce8af34b70a7dc9b70c69eeb078560f8b427146",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4307.jpeg",
+      "bytes": 539534,
+      "sha256": "59296329c60231554e13ad1fddd7eb3c8bffec53c9de1ea4306b79af1d351a59",
+      "git_blob_sha": "8eaa8d77cc22627bc19ba3f24ba36300d7e4d7b5",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4336.jpeg",
+      "bytes": 558586,
+      "sha256": "1e5fd7b0085e33160794dd3c623489b1d68bc2063adec5291dee169b4f38e2cc",
+      "git_blob_sha": "db2ea4dfda6058ac32eb5079253e5df8de3f15dd",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4373.jpeg",
+      "bytes": 207086,
+      "sha256": "60fcde040ef16d0d28102790c6cf1f3bcd10895d9bfe6df2e47d248646106374",
+      "git_blob_sha": "2da59da1076de02d691c5f371b8a958a8a4a2123",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "assets/recovered/IMG_4376.jpeg",
+      "bytes": 217295,
+      "sha256": "77fa889fe278229147bf83e3d3934d4d1ae1a99b76bf10fa887a0e2f9935975c",
+      "git_blob_sha": "86797afa38a6fce40844b969b041c83ba3e5f3d3",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/DECISIONS_ACTUELLES.md",
+      "bytes": 2571,
+      "sha256": "6f624795d9c4872b9063a36db80ae29c14eea52b9f85a330626ab5b63130fc48",
+      "git_blob_sha": "0b45ef9efe5157633d860385171618e0487ece3d",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/ETAT.md",
+      "bytes": 1938,
+      "sha256": "6305883d2d0d012bca4e8b31ad6782eb3d029a0504eee975c3f664c90dccffe7",
+      "git_blob_sha": "326aac2c205eadc50bf9924c011060f56f20ce57",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/PUBLICATION.md",
+      "bytes": 799,
+      "sha256": "9529fbf23ba104d03fa47d93f1cd1621e1e9d684709b47039305e3d4cb607589",
+      "git_blob_sha": "de7ac7d1b57c436f7f367daab40e82813ac71674",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/ANALYSE_STRUCTURE_JSON.json",
+      "bytes": 6811,
+      "sha256": "4765a11fd063fea555b6f06a59d42bc2411c28354a28e44cce36c67aa154d258",
+      "git_blob_sha": "010fb9afe30eb6e2b90b3e9cb41af772c32331f3",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/AUDIT_MASTER_BOJART_V2.md",
+      "bytes": 20549,
+      "sha256": "239a7fb8ae97b9a278d87a1f0fa2483abd25274b4bd83dccf55d2f081dc48efe",
+      "git_blob_sha": "787430285eab75e8ffcc6942b7d8275bc6ff41f8",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+      "bytes": 784472,
+      "sha256": "714fdc7cade14207669cf62d739f430df69e6eb1ceea51f731857286fa92e8bd",
+      "git_blob_sha": "0c6b2ddf774e746bd6e4b0d0774bad42787eef13",
+      "manifest_covered": true,
+      "remote_blob_sha": "0c6b2ddf774e746bd6e4b0d0774bad42787eef13",
+      "remote_bytes": 784472,
+      "status": "identical",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJART_Bible_Edit_Premium_2026.md",
+      "bytes": 19642,
+      "sha256": "8a2328b46406388b92321d05ddf43c6872534b6178e25f47b1616807f0f72349",
+      "git_blob_sha": "52ecaf16f5487ed041c3553e72bb1861b25a1b3b",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJART_MANIFEST_V23.json",
+      "bytes": 1786,
+      "sha256": "5e3065f1ba8407e957e835555fb5677441eec36d07b35994388722f891053cb0",
+      "git_blob_sha": "f16244fbd39aa6e83415e9746f8d8123dcffce9c",
+      "manifest_covered": true,
+      "remote_blob_sha": "43f2637ee57aa13e9e048b18b47420978fea2ee5",
+      "remote_bytes": 1476,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJART_MEMOIRE_DA_V22.md",
+      "bytes": 10098,
+      "sha256": "e3df34d72d8ac315a1d963b23d800cb73e0def38b83f75a2dc8f5b93f3dc222e",
+      "git_blob_sha": "d5ec1d157dc85fa034bdde148314dba616985724",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJART_MEMOIRE_DA_V23.md",
+      "bytes": 14063,
+      "sha256": "dc23c957da0849095d13f9d0464f8f94d759db6830f069dc71e2b62597ea4206",
+      "git_blob_sha": "6a5935a1baf54869812a16a46c01d8261edb3dda",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJART_MEMOIRE_DA_V24.md",
+      "bytes": 16436,
+      "sha256": "34c1edebaa0ea94f9d6c53855b2a5bc5494570f5623d414b50a6dd7cfc46c96f",
+      "git_blob_sha": "d1e0698179c457a93fc4ce55b1ee0057adc0fa9e",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJART_V25_STORYBOARD.md",
+      "bytes": 2820,
+      "sha256": "aa8cbf27219b158971ea5c4961f9b791f364713687fc70872de2cbbd6a6a6ddd",
+      "git_blob_sha": "9b75aa1f40a571a8a32e4a89941d13ad4d15fe61",
+      "manifest_covered": true,
+      "remote_blob_sha": "da1226e8d6c05145db2cc47368e215a9897eb1d6",
+      "remote_bytes": 2819,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
+      "bytes": 1014463,
+      "sha256": "54230fe6b6480e7789fd41ac3ba33aed441c79348425f236115ad5c44baeed20",
+      "git_blob_sha": "7bc136970627d04dd7f858ecd74b63b79c121734",
+      "manifest_covered": true,
+      "remote_blob_sha": "7bc136970627d04dd7f858ecd74b63b79c121734",
+      "remote_bytes": 1014463,
+      "status": "identical",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJ_ART_JARVIS_Dossier_Lancement_Associes_20-10-2026.pdf",
+      "bytes": 5690191,
+      "sha256": "2707fb31452d3eb48c431a17eb202f2dd373d9d01513de5932b0c34fc9512f7f",
+      "git_blob_sha": "138da621aac5bcfefcab724346cc8aaf8e8aa539",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/BOJ_ART_Reaudit_Concept_2026-10-19.pdf",
+      "bytes": 2448867,
+      "sha256": "44717f1ed32edd6b9154effc80869f2af32790a0c4698d6fa0dc658b7944d439",
+      "git_blob_sha": "75ca43e1c3bc5af5cf9dd0ab2901dafb38d581b8",
+      "manifest_covered": true,
+      "status": "identical_via_chunks",
+      "remote_location": "archive/2026-11-01/chunks/",
+      "parts": [
+        {
+          "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+          "bytes": 900000,
+          "local_blob_sha": "e9d52a6d7c9e7fc68f48be111ab091bc386cf371",
+          "remote_blob_sha": "e9d52a6d7c9e7fc68f48be111ab091bc386cf371",
+          "match": true,
+          "sha256": "1eca473e7fde5d733bf2a809893f90e76cd37c76903c3372741a4a11a751b84c"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+          "bytes": 900000,
+          "local_blob_sha": "8640b2828062bdf025a6d70bb99d8e3ff371d687",
+          "remote_blob_sha": "8640b2828062bdf025a6d70bb99d8e3ff371d687",
+          "match": true,
+          "sha256": "1561a2b6deb55a941af33bb43c5bad4ca241ca104f4349ae88ff8e77a7ea428d"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+          "bytes": 648867,
+          "local_blob_sha": "eb865fd942f2a628bb126545b648f3f446eadf81",
+          "remote_blob_sha": "eb865fd942f2a628bb126545b648f3f446eadf81",
+          "match": true,
+          "sha256": "85f43591e4b26901739e4327571c39465ccc87177be320a47ba755971af7c787"
+        }
+      ],
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/DECISIONS.md",
+      "bytes": 385,
+      "sha256": "263fd0455f2cfd8a7a543f564da8c7dbf0a18b1012172ee0d39546ba975532a7",
+      "git_blob_sha": "5e5c8d5c091efba1071f7564a7b83598fce3b5b8",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/EAGLEMIC_Studio_Creatif.json",
+      "bytes": 1522206,
+      "sha256": "c76c4f6166e23ec35e6cbfac6bfc7c9cbe4c6124cd4cc983c1d2537332436627",
+      "git_blob_sha": "4f962d459ecc84a897f037e539c1c15bf9f159bb",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/ETAT.md",
+      "bytes": 347,
+      "sha256": "00aa5fabf2751629282e315367c334a8f5abf8cd2cca922e835e83e4f258e1ba",
+      "git_blob_sha": "10949f87a5c17a91b68379fc9fb2639a3e785599",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/INDEX_MEDIA_A_RECUPERER.json",
+      "bytes": 15573,
+      "sha256": "f01648c1b641509fc84847dcd4e8160ecf3d7813f04d5ef45ce7d9565803167d",
+      "git_blob_sha": "111ac033b8ad8fb19a102ef28c86c81097dd16d2",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/INVENTAIRE.md",
+      "bytes": 484,
+      "sha256": "2756c8495f19a61c5d6d5f5adf1e87a2eacb93b31a7cd0eccb0114ca6a5397aa",
+      "git_blob_sha": "00d816a116578db49ced77c706139ab5d7a9e91e",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/INVENTAIRE_SHA256.json",
+      "bytes": 4189,
+      "sha256": "e84820187519f878e1a74f9d8170b2fe7aadbd00587ae4414a1ede16e465950d",
+      "git_blob_sha": "629d2eb1bb684e763873dd506cc086f0a4a8827f",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/JOURNAL.md",
+      "bytes": 204,
+      "sha256": "749b0c0c67c42b23ed074c65130eaee7be11ee74e14dbee67d3e7f9779ae2e60",
+      "git_blob_sha": "1b947da11dc02390bed0318e2ac04ce586ace565",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/LIRE_EN_PREMIER.txt",
+      "bytes": 183,
+      "sha256": "4429f0f9007520698dec1ff16c85a7c1dd3b9ef4926cefc5728b90cdcd4bc9d0",
+      "git_blob_sha": "13a5cb1e245e721d11bf08d8855ae59fc30364ed",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/LIRE_EN_PREMIER__6f1eecebac.txt",
+      "bytes": 179,
+      "sha256": "6f1eecebac8fa6a1338f99bf1107ad3451e3dac3562e68cb3dd84505f60ffcf8",
+      "git_blob_sha": "9215c0e1a0e582b0f5c8058234b70a7694f97e74",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MANIFEST_MEDIA.json",
+      "bytes": 4754,
+      "sha256": "001c196112b7d5e302bf11fb60c20195ca23c34d428b13b7568e05e8789294f3",
+      "git_blob_sha": "4d93cb7c271eb3f0a54828559998d34c4d75e881",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MANIFEST_SHA256.json",
+      "bytes": 1528,
+      "sha256": "8d49e701ed3edda8b694178c1d4480cc3d0be0f63aa9e9857f609bb61f1e8e56",
+      "git_blob_sha": "027453e9ac10822f36cd7f0d6e2eede59fb9b038",
+      "manifest_covered": false,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MANIFEST_SHA256__451e978420.json",
+      "bytes": 1685,
+      "sha256": "451e9784202a8b3e4c1151b582a35d92fbdb0ca336e64474b23ccfcf04381299",
+      "git_blob_sha": "6599b09e79c38e2fc55e6d4e9cd2e2238e4916c5",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MANIFEST_V3.json",
+      "bytes": 2875,
+      "sha256": "4716febd45c2184ff7368e2785e5b5a89b95cf6a37b11814d383ec06fd4bfe6a",
+      "git_blob_sha": "bd507fc383ba54a9630bdcd0210d940fb0f98574",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MANIFEST_V4.json",
+      "bytes": 2443,
+      "sha256": "cc474b869f061f706c91747d11a7ae689363d9c7b65e9f6d3c00fa81832435aa",
+      "git_blob_sha": "164cd87041e0962c3fe755a71cfaefcae61a54d7",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MARWIN_Audit_Global_2026-10-25.pdf",
+      "bytes": 10301908,
+      "sha256": "4a60f4f6e118d6fd900ff7e9bde37aa47df5d71706b5f0e44bb38b5fee9e0167",
+      "git_blob_sha": "7b3c557d269f585a2e136d2d12144d62c16b67ef",
+      "manifest_covered": true,
+      "status": "identical_via_chunks",
+      "remote_location": "archive/2026-11-01/chunks/",
+      "parts": [
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+          "bytes": 900000,
+          "local_blob_sha": "51fc3015961e86885692efa637ab54b3ab926bbc",
+          "remote_blob_sha": "51fc3015961e86885692efa637ab54b3ab926bbc",
+          "match": true,
+          "sha256": "cfbfd475c5b9fea315ce3857fdce7038371dcad5c844f68939c6b8c10909a202"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+          "bytes": 900000,
+          "local_blob_sha": "70eeeb20832a835322dca673347c99905cb43f79",
+          "remote_blob_sha": "70eeeb20832a835322dca673347c99905cb43f79",
+          "match": true,
+          "sha256": "3b53e3a10cd5dc641482d0f3f31574b6ae0eabea34e9ae91579109955c2f2b76"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+          "bytes": 900000,
+          "local_blob_sha": "02c4180220be8fab31f423f358885e287c79ddd7",
+          "remote_blob_sha": "02c4180220be8fab31f423f358885e287c79ddd7",
+          "match": true,
+          "sha256": "610d427d5867d649f7db4ca85b4a38248864c5c6153fea790ef2be636852a046"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+          "bytes": 900000,
+          "local_blob_sha": "ad21e32f7522e36d051c8372a438d0a4b27eb5c9",
+          "remote_blob_sha": "ad21e32f7522e36d051c8372a438d0a4b27eb5c9",
+          "match": true,
+          "sha256": "a1a95906f6c327e4d89958208c1260aa16b1b0dbefbb8d13c8926ba9d8d4e1a5"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+          "bytes": 900000,
+          "local_blob_sha": "31d127c56f0e53cf211b81cbdc4887cacd740bc5",
+          "remote_blob_sha": "31d127c56f0e53cf211b81cbdc4887cacd740bc5",
+          "match": true,
+          "sha256": "5a1ad404eefc20a203e928a4164e9639043d3a9ee1558f10d454bae3952bb8f0"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+          "bytes": 900000,
+          "local_blob_sha": "34ec0eb98935558cf61ca0af0bc4d4014e29eeda",
+          "remote_blob_sha": "34ec0eb98935558cf61ca0af0bc4d4014e29eeda",
+          "match": true,
+          "sha256": "f17dfc77700826920271cc46317e1369f5ae60555d01c2154a2052e83b8ce50d"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+          "bytes": 900000,
+          "local_blob_sha": "c9e0cdb136d97c694cffc90554b049b47b837d35",
+          "remote_blob_sha": "c9e0cdb136d97c694cffc90554b049b47b837d35",
+          "match": true,
+          "sha256": "cf18f1e8cdea05582e8f1956786faec55ede0b50723073d8446f032ab22b3e74"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+          "bytes": 900000,
+          "local_blob_sha": "cec7ea50d79432e4a454b198787ea12cda3edb18",
+          "remote_blob_sha": "cec7ea50d79432e4a454b198787ea12cda3edb18",
+          "match": true,
+          "sha256": "88991f13d5e45d8b4f63c3bd408f58d7a9ef8d1c1428d72dc94a804c8aa65fa5"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+          "bytes": 900000,
+          "local_blob_sha": "769bc207b5561fa6e1650ca6a893ec5745fcccc9",
+          "remote_blob_sha": "769bc207b5561fa6e1650ca6a893ec5745fcccc9",
+          "match": true,
+          "sha256": "06fd3d4a4561348ccdbd843507c93ff9ce96d56603dd377fe49295e569cf35f9"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+          "bytes": 900000,
+          "local_blob_sha": "91dfbd9e57517a438411b0f94c22299401d11887",
+          "remote_blob_sha": "91dfbd9e57517a438411b0f94c22299401d11887",
+          "match": true,
+          "sha256": "739cdaa03f7e294501445624505d0a4d7338bb2a70493d38ca8ba7574aa3e6b4"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+          "bytes": 900000,
+          "local_blob_sha": "efd81d47308c88b6abf259b66ef4ce56fd185155",
+          "remote_blob_sha": "efd81d47308c88b6abf259b66ef4ce56fd185155",
+          "match": true,
+          "sha256": "471545855653a37959d4a73289c23be1c924085276560c354011417c969e5b96"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
+          "bytes": 401908,
+          "local_blob_sha": "a3c50ae4ccd863dc662e592b1c9157dd89b3b6d8",
+          "remote_blob_sha": "a3c50ae4ccd863dc662e592b1c9157dd89b3b6d8",
+          "match": true,
+          "sha256": "5f2ec371a5eaa7d20c1e55fa4620cff1bef171c01f7ee23d8fa09718d931295b"
+        }
+      ],
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MARWIN_STUDIO_REGISTRE_R_D_2026-10-30.md",
+      "bytes": 4157,
+      "sha256": "352a23bfee96135c0486af2cb6a10b8856ed9be652e38b1e8d100396aa3a78bd",
+      "git_blob_sha": "26cdb39f7219b8b424a8545ea11b9f7d16e86bc9",
+      "manifest_covered": true,
+      "remote_blob_sha": "840521027a23f0455b31d0d4801d317b715e32e3",
+      "remote_bytes": 4156,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/MASTER_BOJART_MARWIN_2026-10-30.md",
+      "bytes": 6866,
+      "sha256": "c991eaf5d0f308136a0af6015a1f332f6467c22be385e3b9d66658806c9cbed5",
+      "git_blob_sha": "0ae8a80e8cdf1c3792e503cc758747a074babf97",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/RECUPERATION_COMPLEMENTAIRE.md",
+      "bytes": 1978,
+      "sha256": "5541021adf8551808659bced2737abbe255eb92a0d0f968a66146fcb44bf8ef5",
+      "git_blob_sha": "c0abea3752d994feac4282b3b30aa9c99484bb12",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "docs/historical/REPRISE_REVERSE_ENGINEERING.md",
+      "bytes": 1918,
+      "sha256": "6d856cedf1cfc075dab72b6e1fd17af0e3e5876dfc50b84bbfa7eaa8364f6d9c",
+      "git_blob_sha": "1952957378a41fd3e92f447b2446815bd059e638",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 30119,
+      "sha256": "ac9468dc8616b234221a47e28c1b459ae0197909f29bb3bb77a426f14517a933",
+      "git_blob_sha": "54a125fc5ac5807e5d83f6e993a92741b3a4ebc8",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "renders/previsualisation/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4",
+      "bytes": 3922906,
+      "sha256": "3fc8f8d9d61b17b14cce81035fc2f3e23f50bdad554775aea99d7209976d06c0",
+      "git_blob_sha": "b3fec396bc99e5c4318eb7c530e3312dca86e480",
+      "manifest_covered": true,
+      "status": "identical_via_chunks",
+      "remote_location": "archive/2026-11-01/chunks/",
+      "parts": [
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+          "bytes": 900000,
+          "local_blob_sha": "d2515030ff8624959871a1882894632c777b7473",
+          "remote_blob_sha": "d2515030ff8624959871a1882894632c777b7473",
+          "match": true,
+          "sha256": "9f1ce163182f2931554299f6b67ef09580ff557d2583b30e9118fd495233e1fb"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+          "bytes": 900000,
+          "local_blob_sha": "ab38a9cf06640308ca6da25e3aedd46d9f78e329",
+          "remote_blob_sha": "ab38a9cf06640308ca6da25e3aedd46d9f78e329",
+          "match": true,
+          "sha256": "543b2ab91dfd2f4891af7e9804ece993106a59487d1021b4f3949805f29c5be7"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+          "bytes": 900000,
+          "local_blob_sha": "1bbe3d0def48b25e5751ad3e65cd5800baa1e1a2",
+          "remote_blob_sha": "1bbe3d0def48b25e5751ad3e65cd5800baa1e1a2",
+          "match": true,
+          "sha256": "a0afb9d17fe2f72e96fd2bc5bd456601405c7b4b6feeed8da489883c64438278"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+          "bytes": 900000,
+          "local_blob_sha": "0f2306e0b333add84eb113a71e182e7069205df9",
+          "remote_blob_sha": "0f2306e0b333add84eb113a71e182e7069205df9",
+          "match": true,
+          "sha256": "e268c5f421b48c1636f546cfcbeb2b27741d3b308eb737621766e49fcfb00ec8"
+        },
+        {
+          "path": "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+          "bytes": 322906,
+          "local_blob_sha": "9d0ed3904fb4462bf6da1672b3a73e3dbeafa19a",
+          "remote_blob_sha": "9d0ed3904fb4462bf6da1672b3a73e3dbeafa19a",
+          "match": true,
+          "sha256": "37dfcd9f8fffe7d610ed5cf97ad96bb1419ce3f2f9c70f1e024b2eb48503078f"
+        }
+      ],
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "runs/higgsfield/painted-reality-01/prompt.txt",
+      "bytes": 1112,
+      "sha256": "6ee139d650f432c8959aa46442c79d6ac48864dcd766f7974097f04150bae414",
+      "git_blob_sha": "a891c07fe86bcea4fa57bbef9f5ab525d7d28e8a",
+      "manifest_covered": true,
+      "remote_blob_sha": "a891c07fe86bcea4fa57bbef9f5ab525d7d28e8a",
+      "remote_bytes": 1112,
+      "status": "identical",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "runs/higgsfield/painted-reality-01/request.json",
+      "bytes": 1250,
+      "sha256": "e5a216d49384a0f7ca83951b55e151ac3c017ae62ae0359bb16f2845f2c251d0",
+      "git_blob_sha": "e62c42a84564137a3e7adece9e4efedc99d01d06",
+      "manifest_covered": true,
+      "remote_blob_sha": "e62c42a84564137a3e7adece9e4efedc99d01d06",
+      "remote_bytes": 1250,
+      "status": "identical",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "runs/higgsfield/painted-reality-01/status.json",
+      "bytes": 711,
+      "sha256": "17fd89e7246f0adfa5be700b8b83caf0512aca02f34b921fdc44b28c7aa4d25a",
+      "git_blob_sha": "107ee8c805df47eee86bf108e26fd368b229b9ce",
+      "manifest_covered": true,
+      "remote_blob_sha": "5e8d0cb9931f7ce4759eacee3ad5fc599941afad",
+      "remote_bytes": 703,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "runs/higgsfield/the-awakening-01/prompt.txt",
+      "bytes": 1043,
+      "sha256": "27d7006173780657ccdd7c9e0bcda57c604c798ea4dbdeddcfdacad90e1631f9",
+      "git_blob_sha": "776eb15ffb076275976467b0ee4f272344dd3e0c",
+      "manifest_covered": true,
+      "remote_blob_sha": "776eb15ffb076275976467b0ee4f272344dd3e0c",
+      "remote_bytes": 1043,
+      "status": "identical",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "runs/higgsfield/the-awakening-01/request.json",
+      "bytes": 1181,
+      "sha256": "b07c150203bc71bb69d101cf84f5b3cbfe6d0fb58417e5bdd5f48e33f61a1ee3",
+      "git_blob_sha": "5d69f01f5aef01ef6533da25b6bc3f1b022d572d",
+      "manifest_covered": true,
+      "remote_blob_sha": "5d69f01f5aef01ef6533da25b6bc3f1b022d572d",
+      "remote_bytes": 1181,
+      "status": "identical",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "runs/higgsfield/the-awakening-01/status.json",
+      "bytes": 711,
+      "sha256": "89595c0168502e807e35967dfad11ac2179e964005b2ee9e27bd59070f2f9d78",
+      "git_blob_sha": "f74e7fbac2431cdcc34bd2a97366f7c0000ab6b9",
+      "manifest_covered": true,
+      "remote_blob_sha": "3c3a19aa10cb567de7f764d47faabf676d68f6f0",
+      "remote_bytes": 703,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "runs/remote-media.json",
+      "bytes": 697,
+      "sha256": "fa618e12fabe39f4a5823417c53b61283e0f491d67a4a3307fe87a60c20c229e",
+      "git_blob_sha": "c9962e33b10018f189be0c3913e5241ccccb9f94",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "security-scan.json",
+      "bytes": 203,
+      "sha256": "e1c840bd86cafb8a99d038152362086bb8f231f00f971edc2988efe4fb7339e1",
+      "git_blob_sha": "bbde7452d96a0cac6b6e51522a12877c08ac9874",
+      "manifest_covered": true,
+      "status": "absent_at_expected_path",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "tools/download_remote_media.py",
+      "bytes": 3162,
+      "sha256": "26a532d96b07285f339cebb7393fa1c2538e8a49a47032debdf8c496bfe3dd6e",
+      "git_blob_sha": "7a780efec35a63812a8706e4cc961bcc7f369bad",
+      "manifest_covered": true,
+      "remote_blob_sha": "9302dbd2e490af7627b8eba20d22f402f40119f7",
+      "remote_bytes": 2886,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    },
+    {
+      "path": "tools/verify_manifest.py",
+      "bytes": 1683,
+      "sha256": "ec6d34e88f0af06a6b1ff02c253e564e6027e31e31ce8fc32637d9c8cd15ff04",
+      "git_blob_sha": "b8bb1feee6c61f5fd1352027436b9744b1dda522",
+      "manifest_covered": true,
+      "remote_blob_sha": "4e377aa78869ee164c12d82c2b7d244da97509c1",
+      "remote_bytes": 1849,
+      "status": "different_version",
+      "whole_repository_coverage": {
+        "status": "present_according_to_matching_archive_recovery_report",
+        "evidence": "docs/evidence/recovery-resumption-2026-11-01.json",
+        "individual_archive_object_bytes_redownloaded_this_turn": false
+      }
+    }
+  ],
+  "reconciliation": {
+    "conclusion": "Archive identity matches the recovery report exactly; all 87 files are reported preserved on three confirmed archive branches. Main-path absences in the earlier comparison do not mean absence from the repository.",
+    "archive_identity_match": true,
+    "recorded_recovery_evidence": {
+      "evidence_commit": "3c288214539adf97381f6053b43225485a873b6a",
+      "evidence_path": "docs/evidence/recovery-resumption-2026-11-01.json",
+      "evidence_blob_sha": null,
+      "archive_sha256": "cf7465639afc7d903f2669a7ece914308593a82e3ec0e90d0064afeaa3e4a161",
+      "archive_bytes": 49329375,
+      "archive_files_verified": 87,
+      "all_archive_files_reported_present": true,
+      "collection_objects": 3340,
+      "collection_unique_bytes": 1089594390,
+      "sources": 219,
+      "occurrences": 6445,
+      "byte_for_byte_restoration_is_a_recorded_prior_result_not_reexecuted_in_this_audit": true,
+      "branches_confirmed_by_connector": [
+        {
+          "branch": "archive/recovery-2026-11-01-part-1",
+          "commit": "635116df515f7910c5bc854176b642e282efbfb3"
+        },
+        {
+          "branch": "recovery/partie-2-2026-11-01",
+          "commit": "2d2e01e3576e0a655729f6d273e9038e109f915a"
+        },
+        {
+          "branch": "archive/recovery-2026-11-01-part-3",
+          "commit": "6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967"
+        }
+      ]
+    },
+    "independent_checks_this_turn": [
+      "ZIP CRC read for all 87 entries",
+      "All 85 source-manifest size/SHA256 entries checked",
+      "6 files match main Git object hashes exactly",
+      "20 main archive chunks match local bytes through Git object hashes, covering 3 original files",
+      "Three recovery branch heads confirmed against recorded commits",
+      "Recovery report archive SHA256/size/count compared to local original"
+    ],
+    "not_repeated_this_turn": [
+      "Downloading and byte-for-byte restoration of the entire 1.09 GB recovery collection",
+      "Workshop-PC backup",
+      "Complete ChatGPT export",
+      "Artist approval and installation readiness"
+    ]
+  }
+}

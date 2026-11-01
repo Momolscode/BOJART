@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "scope": "Exact publication of the four-file report, not a new restoration of the 1.09 GB project collection.",
+  "archive": {
+    "path": "BOJART_VERIFICATION_SAUVEGARDE_2026-11-01.zip",
+    "bytes": 19824,
+    "sha256": "322626473beb2de1c69ae28bea1958d368ccb7bf34fb213c3829397fabf8efec",
+    "crc_ok": true
+  },
+  "members": [
+    {
+      "path": "BILAN_VERIFICATION.md",
+      "bytes": 3410,
+      "sha256": "6c4cccbbf9f04a49438ce9f241842aef5828f4d7a42ba1ca6b4ac20b2ecbf078"
+    },
+    {
+      "path": "comparison.json",
+      "bytes": 64555,
+      "sha256": "5973ec47e48a3c19cff2a11f640f0be9801deda30c12827cf2af8cba573429cb"
+    },
+    {
+      "path": "remote_selected_evidence.json",
+      "bytes": 3140,
+      "sha256": "7783009cf3aeb4eb0ef1ca9e0eb0ed00ff699c531ea9680feff53c22aa88597a"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 7369,
+      "sha256": "735d0525bb9b4e94c5481a75a80373a3732ccd733aaeff63d4b7a23b9e48aa13"
+    }
+  ],
+  "historical_audit_executed": false,
+  "main_branch_modified": false
+}

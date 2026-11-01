@@ -1,0 +1,97 @@
+{
+  "snapshot_commit": "3c288214539adf97381f6053b43225485a873b6a",
+  "canonical_paths": {
+    ".gitattributes": [
+      "5cda778c545dddb0de854fb0fe55abae953a5f93",
+      72
+    ],
+    ".gitignore": [
+      "fd63e61ce7e08e8277a92546541405ddbb20c30f",
+      596
+    ],
+    "README.md": [
+      "6ff86cd6ba375eff2a8f19f98b27718448918367",
+      4231
+    ],
+    "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf": [
+      "0c6b2ddf774e746bd6e4b0d0774bad42787eef13",
+      784472
+    ],
+    "docs/historical/BOJART_MANIFEST_V23.json": [
+      "43f2637ee57aa13e9e048b18b47420978fea2ee5",
+      1476
+    ],
+    "docs/historical/BOJART_V25_STORYBOARD.md": [
+      "da1226e8d6c05145db2cc47368e215a9897eb1d6",
+      2819
+    ],
+    "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf": [
+      "7bc136970627d04dd7f858ecd74b63b79c121734",
+      1014463
+    ],
+    "docs/historical/MARWIN_STUDIO_REGISTRE_R_D_2026-10-30.md": [
+      "840521027a23f0455b31d0d4801d317b715e32e3",
+      4156
+    ],
+    "runs/higgsfield/painted-reality-01/prompt.txt": [
+      "a891c07fe86bcea4fa57bbef9f5ab525d7d28e8a",
+      1112
+    ],
+    "runs/higgsfield/painted-reality-01/request.json": [
+      "e62c42a84564137a3e7adece9e4efedc99d01d06",
+      1250
+    ],
+    "runs/higgsfield/painted-reality-01/status.json": [
+      "5e8d0cb9931f7ce4759eacee3ad5fc599941afad",
+      703
+    ],
+    "runs/higgsfield/the-awakening-01/prompt.txt": [
+      "776eb15ffb076275976467b0ee4f272344dd3e0c",
+      1043
+    ],
+    "runs/higgsfield/the-awakening-01/request.json": [
+      "5d69f01f5aef01ef6533da25b6bc3f1b022d572d",
+      1181
+    ],
+    "runs/higgsfield/the-awakening-01/status.json": [
+      "3c3a19aa10cb567de7f764d47faabf676d68f6f0",
+      703
+    ],
+    "tools/download_remote_media.py": [
+      "9302dbd2e490af7627b8eba20d22f402f40119f7",
+      2886
+    ],
+    "tools/verify_manifest.py": [
+      "4e377aa78869ee164c12d82c2b7d244da97509c1",
+      1849
+    ]
+  },
+  "chunk_shas": {
+    "BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4": [
+      "d2515030ff8624959871a1882894632c777b7473",
+      "ab38a9cf06640308ca6da25e3aedd46d9f78e329",
+      "1bbe3d0def48b25e5751ad3e65cd5800baa1e1a2",
+      "0f2306e0b333add84eb113a71e182e7069205df9",
+      "9d0ed3904fb4462bf6da1672b3a73e3dbeafa19a"
+    ],
+    "BOJ_ART_Reaudit_Concept_2026-10-19.pdf": [
+      "e9d52a6d7c9e7fc68f48be111ab091bc386cf371",
+      "8640b2828062bdf025a6d70bb99d8e3ff371d687",
+      "eb865fd942f2a628bb126545b648f3f446eadf81"
+    ],
+    "MARWIN_Audit_Global_2026-10-25.pdf": [
+      "51fc3015961e86885692efa637ab54b3ab926bbc",
+      "70eeeb20832a835322dca673347c99905cb43f79",
+      "02c4180220be8fab31f423f358885e287c79ddd7",
+      "ad21e32f7522e36d051c8372a438d0a4b27eb5c9",
+      "31d127c56f0e53cf211b81cbdc4887cacd740bc5",
+      "34ec0eb98935558cf61ca0af0bc4d4014e29eeda",
+      "c9e0cdb136d97c694cffc90554b049b47b837d35",
+      "cec7ea50d79432e4a454b198787ea12cda3edb18",
+      "769bc207b5561fa6e1650ca6a893ec5745fcccc9",
+      "91dfbd9e57517a438411b0f94c22299401d11887",
+      "efd81d47308c88b6abf259b66ef4ce56fd185155",
+      "a3c50ae4ccd863dc662e592b1c9157dd89b3b6d8"
+    ]
+  }
+}
