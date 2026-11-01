@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from bojart_ops.audit import strict_json
 from bojart_ops.orchestration import markdown, plan
+from bojart_ops.qualification import load_qualification
 
 LIMIT = 16 * 1024 * 1024
 
@@ -43,6 +44,9 @@ def main():
         except (OSError, UnicodeError, ValueError):
             checkpoint_error = "Checkpoint unavailable or invalid; current coverage is unknown."
     report = plan(audit, config, checkpoint, checkpoint_error)
+    qualification = load_qualification(ROOT, audit, config)
+    if qualification is not None:
+        report["qualification"] = qualification
     report["input_sha256"] = {"audit": audit_sha, "configuration": config_sha,
                               "checkpoint": checkpoint_sha}
     output = args.output.resolve()
@@ -60,6 +64,8 @@ def main():
     targets[0].write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     targets[1].write_text(markdown(report), encoding="utf-8")
     print(json.dumps(report["summary"], ensure_ascii=False))
+    if qualification is not None:
+        print(json.dumps({"qualification_dependencies": qualification["summary"]}))
     print(json.dumps({"checkpoint_state": report["context_audit"]["state"],
                       "same_revision": report["context_audit"]["same_revision"],
                       "tasks_executed": 0}))

@@ -53,6 +53,12 @@
       "priority": 2
     },
     {
+      "id": "research",
+      "label": "Recherches et propositions",
+      "project": null,
+      "priority": 1
+    },
+    {
       "id": "unclassified",
       "label": "À classer explicitement",
       "project": null,
@@ -60,6 +66,13 @@
     }
   ],
   "rules": [
+    {
+      "domain": "research",
+      "patterns": [
+        "docs/research/*"
+      ],
+      "reason": "Propositions sourcées ; installation et qualification distinctes."
+    },
     {
       "domain": "history",
       "patterns": [
@@ -240,7 +253,10 @@
         "context/CURRENT.md",
         "INSTALLER_DEMAIN.md"
       ],
-      "acceptance": "Inventaire observé sur le poste ; choix de modèles fondé sur ses ressources."
+      "acceptance": "Inventaire observé sur le poste ; choix de modèles fondé sur ses ressources.",
+      "required_datasets": [
+        "target_hardware"
+      ]
     },
     {
       "id": "target-install",
@@ -257,7 +273,10 @@
         "INSTALLER_DEMAIN.md",
         "docs/DEMARRAGE_ET_REPRISE.md"
       ],
-      "acceptance": "Diagnostic réel, recherche citée, deux démarrages et restauration dans un dossier neuf."
+      "acceptance": "Diagnostic réel, recherche citée, deux démarrages et restauration dans un dossier neuf.",
+      "qualification_gates": [
+        "restore_drill"
+      ]
     },
     {
       "id": "voice-displays",
@@ -273,7 +292,13 @@
         "context/CURRENT.md",
         "jarvis/context/START_HERE.md"
       ],
-      "acceptance": "Essais réels en bruit, latence mesurée et reçus de chargement/rendu sur les moniteurs."
+      "acceptance": "Essais réels en bruit, latence mesurée et reçus de chargement/rendu sur les moniteurs.",
+      "qualification_gates": [
+        "speech_offline",
+        "llm_qualified",
+        "jev_contract",
+        "screen_physical"
+      ]
     },
     {
       "id": "printers",
@@ -290,7 +315,13 @@
       "evidence": [
         "context/CURRENT.md"
       ],
-      "acceptance": "Recettes d'atelier documentées ; les documents et transcriptions ne déclenchent aucune commande libre."
+      "acceptance": "Recettes d'atelier documentées ; les documents et transcriptions ne déclenchent aucune commande libre.",
+      "qualification_gates": [
+        "cad_runtime",
+        "printer_fdm",
+        "printer_resin",
+        "production_safety"
+      ]
     },
     {
       "id": "g2-source",
@@ -306,7 +337,10 @@
         "creative/CURRENT.md",
         "productions/le-dernier-geste/STATUT_G2.json"
       ],
-      "acceptance": "Source identifiée, provenance conservée et conformité au personnage vérifiée."
+      "acceptance": "Source identifiée, provenance conservée et conformité au personnage vérifiée.",
+      "required_datasets": [
+        "reference_assets"
+      ]
     },
     {
       "id": "master-review",
@@ -322,7 +356,10 @@
         "productions/le-dernier-geste/README.md",
         "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json"
       ],
-      "acceptance": "Validation artistique explicite et distincte du contrôle des frames ; R03 reste une coupe de travail."
+      "acceptance": "Validation artistique explicite et distincte du contrôle des frames ; R03 reste une coupe de travail.",
+      "qualification_gates": [
+        "studio_identity"
+      ]
     },
     {
       "id": "sites-contract",
@@ -336,7 +373,29 @@
         "sites/README.md",
         "context/CURRENT.md"
       ],
-      "acceptance": "Entités et champs communs documentés, migrations et parcours testés avant raccordement des publications."
+      "acceptance": "Entités et champs communs documentés, migrations et parcours testés avant raccordement des publications.",
+      "qualification_gates": [
+        "site_quotes"
+      ]
+    },
+    {
+      "id": "social-trial",
+      "title": "Qualifier un parcours de publication et de mesure",
+      "domain": "creative",
+      "priority": 2,
+      "status": "blocked",
+      "depends_on": [],
+      "blockers": [
+        "Compte propriétaire, contenu approuvé et accès aux statistiques à confirmer avant la recette."
+      ],
+      "evidence": [
+        "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+        "jarvis/knowledge/growth/PUBLISHING_CONTRACT.md"
+      ],
+      "qualification_gates": [
+        "social_publish"
+      ],
+      "acceptance": "Publication autorisée avec reçu et données datées ; un brouillon ne valide pas le parcours."
     }
   ],
   "context_audit": {
@@ -345,5 +404,11 @@
     "relay_pull_request": 1,
     "url": "https://github.com/Momolscode/BOJART/tree/audit/context-results/ops/context-monitor",
     "observation_note": "Le checkpoint est une observation datée ; comparer sa tête au SHA effectivement audité."
+  },
+  "qualification_sources": {
+    "tools": "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+    "data": "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+    "acceptance": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+    "runtime_gates": "jarvis/apps/jarvis/app/launch_readiness.py"
   }
 }

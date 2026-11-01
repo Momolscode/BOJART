@@ -198,6 +198,22 @@ def markdown(report):
         wait = "; ".join(t["waiting_for"] + t["blockers"]) or "—"
         lines.append("| " + " | ".join(safe(x) for x in
                      (t["title"], t["effective_status"], wait, t["acceptance"])) + " |")
+    qualification = report.get("qualification")
+    if qualification:
+        q = qualification["summary"]
+        lines += ["", "## Données à réunir pour les essais", "",
+                  f"{q['tool_records']} fiches d'outils, {q['data_requirements']} jeux de données, {q['runtime_gates']} critères reliés au runtime.",
+                  "Ce rapport ne qualifie aucune fonction sur la tour. Les dépendances ordonnent la collecte ; les prérequis des tâches restent applicables.", "",
+                  "| Donnée | Critères concernés | Outils P0 actifs | Outils actifs | État déclaré |",
+                  "|---|---|---|---|---|"]
+        for row in qualification["datasets"]:
+            lines.append("| " + " | ".join(safe(x) for x in
+                         (row["id"], row["gate_count"], row["p0_tool_count"], row["active_tool_count"], row["declared_status"])) + " |")
+        lines += ["", "Outils différés ou exclus conservés dans le JSON, sans augmenter la priorité de collecte.", "",
+                  "| Critère du runtime | Tâches | Données requises | État |", "|---|---|---|---|"]
+        for gate in qualification["gates"]:
+            lines.append("| " + " | ".join(safe(x) for x in
+                         (gate["label"], ", ".join(gate["task_ids"]), ", ".join(gate["required_datasets"]), gate["status"])) + " |")
     lines += ["", "## Premiers lots de lecture", "",
               "Tous les lots, chemins conservés et empreintes sont dans orchestration.json.", "",
               "| Lot | Unités | Chemins | Premier chemin |", "|---|---|---|---|"]
