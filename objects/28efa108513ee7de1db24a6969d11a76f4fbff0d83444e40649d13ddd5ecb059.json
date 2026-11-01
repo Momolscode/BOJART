@@ -1,0 +1,24 @@
+{
+  "parts": [
+    {
+      "filename": "BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip",
+      "bytes": 331492004,
+      "objects_verified": 1112,
+      "zip_crc": "passed"
+    },
+    {
+      "filename": "BOJART_RECUPERATION_2026-11-01_PARTIE_2_SUR_3.zip",
+      "bytes": 328554766,
+      "objects_verified": 1114,
+      "zip_crc": "passed"
+    },
+    {
+      "filename": "BOJART_RECUPERATION_2026-11-01_PARTIE_3_SUR_3.zip",
+      "bytes": 340986970,
+      "objects_verified": 1114,
+      "zip_crc": "passed"
+    }
+  ],
+  "all_objects_present_once": 3340,
+  "metadata_matches": true
+}
