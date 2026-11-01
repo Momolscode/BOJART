@@ -33,6 +33,7 @@ class DisplayProposals:
         self.store=store; self.path=store.root/'display-proposals.sqlite3';self.lock=threading.RLock()
         with self.db() as con:
             con.execute('CREATE TABLE IF NOT EXISTS proposals (request_id TEXT PRIMARY KEY,fingerprint TEXT NOT NULL,payload TEXT NOT NULL)')
+            con.execute('CREATE TABLE IF NOT EXISTS proposal_invalidations (request_id TEXT PRIMARY KEY,reason TEXT NOT NULL)')
     @contextmanager
     def db(self):
         # Transactions and resource lifetime are independent in sqlite3.
@@ -41,6 +42,11 @@ class DisplayProposals:
                 yield con
     def fingerprint(self,d): return hashlib.sha256(json.dumps(d,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
     def context_hash(self): return hashlib.sha256(self.store.context_path.read_bytes()).hexdigest()
+    def invalidate_all(self,reason):
+        # Keep original proposal bytes: dispatched receipts compare against them.
+        # A separate durable revocation also covers proposals never dispatched.
+        with self.lock,self.db() as db:
+            return db.execute('INSERT OR IGNORE INTO proposal_invalidations SELECT request_id,? FROM proposals',(reason,)).rowcount
     def prepare(self,d):
         required={'request_id','project_id','revision','turn_id','command','operation_id'}
         if not isinstance(d,dict) or set(d)!=required: raise Rejected('Champs inattendus ou manquants.')
@@ -80,6 +86,8 @@ class DisplayProposals:
             db.execute('INSERT INTO proposals VALUES (?,?,?)',(d['request_id'],fp,json.dumps(result,ensure_ascii=False)))
             return result
     def is_current(self,proposal):
+        with self.db() as db:
+            if db.execute('SELECT 1 FROM proposal_invalidations WHERE request_id=?',(proposal['request_id'],)).fetchone():return False
         try:self.store.require_project(proposal['project_id'])
         except Rejected:return False
         if proposal['revision']!=self.store.project_revision(proposal['project_id']) or proposal['context_sha256']!=self.context_hash():return False

@@ -12,6 +12,8 @@ La consolidation ajoute une mémoire documentaire locale : originaux préservés
 
 Le lanceur vérifie le schéma, la configuration explicite et les imports natifs ; `--check-only` ajoute le contrôle des objets. La reprise JSON conserve versions et empreintes des sources. Voir `docs/DEMARRAGE_ET_REPRISE.md` pour la recette logicielle ; la tour réelle reste à qualifier.
 
+Après restauration des cinq bases opérationnelles, une proposition antérieure d'affichage ou de création CAO ne peut plus déclencher de nouveau travail. Il faut préparer une nouvelle demande dans l'espace restauré. Les résultats déjà enregistrés et leurs reçus restent disponibles sans recalcul. Cette révocation persiste après redémarrage et nouvelle sauvegarde.
+
 ## Voix et Jev
 
 Jev intervient après transcription sur texte et contexte structuré ; l’application vérifie ensuite ses choix. L’adaptateur vise le service TypeSafe `jev-1.14.0`, facultatif. Jev n’est ni ASR, ni TTS, ni autorité machine. Les ordres connus restent locaux. Micro, poids multilingues, précision française et moniteurs demandent une recette sur place. Pipecat est étudié, sans service actif.

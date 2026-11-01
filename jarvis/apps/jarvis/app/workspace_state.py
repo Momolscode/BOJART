@@ -11,6 +11,7 @@ import hashlib, json, os, re, shutil, sqlite3, stat, threading, uuid, zipfile
 from core import Store, Rejected, IntegrityError, canonical, file_digest, now
 from dialogue import strict_json
 from context_guard import validate_context
+from display_contracts import DisplayProposals
 
 SCHEMA='bojart.workspace.snapshot.v1'
 DATABASES=('missions.sqlite3','display-proposals.sqlite3','control-tower.sqlite3','studio/media.sqlite','growth/growth.sqlite')
@@ -127,6 +128,7 @@ def restore_snapshot(archive, destination):
         for op,project,revision in ready:
             restored.get(op)
             if restored.project_revision(project)<revision+1:raise IntegrityError('Révision de dossier incohérente.')
+        invalidated_display=DisplayProposals(restored).invalidate_all('workspace_restored')
         with closing(sqlite3.connect(destination/'control-tower.sqlite3')) as db,db:
             db.execute('PRAGMA trusted_schema=OFF')
             db.execute('DELETE FROM screens')
@@ -134,11 +136,18 @@ def restore_snapshot(archive, destination):
         with closing(sqlite3.connect(destination/'missions.sqlite3')) as db,db:
             db.execute('PRAGMA trusted_schema=OFF')
             db.execute("UPDATE operations SET state='INTERRUPTED',error='Restauration : opération non terminée à examiner.' WHERE state='RUNNING'")
+            invalidated_cad=0
+            if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='dialogue_proposals'").fetchone():
+                invalidated_cad=db.execute("""UPDATE dialogue_proposals SET state='RESTORED',outcome=?
+                    WHERE state='PROPOSED' AND NOT EXISTS
+                    (SELECT 1 FROM operations WHERE id=dialogue_proposals.operation_id)""",
+                    (canonical({'state':'RESTORED','message':'Préparer une nouvelle demande après restauration.'}),)).rowcount
             if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='jarvis_turns'").fetchone():
                 db.execute("UPDATE jarvis_turns SET status='RESTORED',cancelled=1,approved=0,result=? WHERE status IN ('NEW','RUNNING','INTERRUPTED','AWAITING_CONFIRMATION')",
                            (canonical({'message':'Tour arrêté par la restauration. Émettre une nouvelle commande après relecture.'}),))
         receipt={'schema':'bojart.restore.receipt.v1','restored_at':now(),'snapshot_id':meta['snapshot_id'],
                  'archive_sha256':file_digest(archive),'verified_files':len(hashes),'databases':list(DATABASES),
+                 'invalidated_display_proposals':invalidated_display,'invalidated_cad_proposals':invalidated_cad,
                  'media_relocated':len(locations),'pending_display_commands':'cancelled_restore','physical_actions':False}
         (destination/'RESTORE_RECEIPT.json').write_text(canonical(receipt),encoding='utf8')
         (destination/'.restore-in-progress').unlink()
