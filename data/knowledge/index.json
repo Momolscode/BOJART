@@ -118,5 +118,20 @@
     "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
     "project": "bojart.jarvis",
     "provenance": "3340 unique objects restored from three pinned GitHub commits and compared byte-for-byte to source ZIPs; see docs/evidence/recovery-resumption-2026-11-01.json."
+  },
+  {
+    "path": "docs/ORCHESTRATION.md",
+    "project": "bojart.jarvis",
+    "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
+  },
+  {
+    "path": "docs/ORCHESTRATION.md",
+    "project": "bojart.creative",
+    "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
+  },
+  {
+    "path": "docs/ORCHESTRATION.md",
+    "project": "bojart.sites",
+    "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
   }
 ]

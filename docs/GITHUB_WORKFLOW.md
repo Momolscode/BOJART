@@ -13,4 +13,6 @@ Le workflow de CI n’a que des droits de lecture et un groupe de concurrence pa
 
 L’import initial garde le commit distant comme parent. Un arbre complet est préparé puis la référence est avancée avec tête attendue. Si elle change, relire et réconcilier avant de retenter.
 
-Les historiques M07/Sites restent dans le bundle et les dépôts d’origine. Les copies de sites ici ne se déploient pas automatiquement. Les archives et médias sont référencés, pas poussés en Git ordinaire. Un pointeur ne prouve pas le transfert des octets ; vérifier le téléchargement/restauration d’un futur remote média.
+Les historiques M07/Sites restent dans le bundle et les dépôts d’origine. Les copies de sites ici ne se déploient pas automatiquement. Les trois branches de récupération et la sélection binaire déjà publiée restent distinctes du runtime ; leur périmètre est décrit dans `docs/ETAT_ARCHIVES_2026-11-01.md`. Pour tout autre média, un pointeur ne prouve pas le transfert des octets ; vérifier son téléchargement et sa restauration.
+
+Le [plan d’orchestration](ORCHESTRATION.md) complète l’audit technique : classement, lots de revue et tâches avec dépendances. Il consulte le checkpoint contextuel sans le modifier. Une révision différente, un checkpoint bloqué ou absent laisse la couverture courante inconnue. Les fichiers `orchestration.json` et `orchestration.md` sont joints au même artefact d’audit, avec les empreintes de leurs entrées.
