@@ -3,13 +3,12 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2.json",
+      "head_sha": "0a7a08dd0a0bed445ef0dc5734be7c841b30467a",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/0a7a08dd0a0bed445ef0dc5734be7c841b30467a.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
         ".gitignore",
-        "INSTALLER_DEMAIN.md",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
@@ -634,9 +633,10 @@
         "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
         "241db66fcaf4ed602782d0fce1f6fb019c2e88b5",
         "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
-        "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2"
+        "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2",
+        "0a7a08dd0a0bed445ef0dc5734be7c841b30467a"
       ],
-      "updated_at": "2026-11-01T22:41:26.208Z"
+      "updated_at": "2026-11-01T22:57:50.471Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
