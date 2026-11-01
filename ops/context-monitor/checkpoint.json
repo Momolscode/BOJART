@@ -284,9 +284,6 @@
         "jarvis/research/readiness-2026-10-30/SOURCES.json",
         "jarvis/research/readiness-2026-10-30/TESTS_LOGICIELS.txt",
         "jarvis/research/readiness-2026-10-30/TESTS_REGRESSIONS.txt",
-        "jarvis/research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
-        "jarvis/research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
-        "jarvis/research/voice-jev/NOTE_DE_REFERENCE.md",
         "jarvis/research/voice-jev/PREUVES_LECTURE_M03.json",
         "jarvis/tests/test_connection_lifetime.py",
         "jarvis/tests/test_consolidated.py",
@@ -309,7 +306,6 @@
         "jarvis/tools/m06_smoke.py",
         "jarvis/tools/m07_browser.cjs",
         "jarvis/tools/m07_smoke.py",
-        "jarvis/tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json",
         "jarvis/tools/pc-audit-v1/MISSION_CLAUDE.md",
         "jarvis/tools/pc-audit-v1/README.md",
         "jarvis/tools/pc-audit-v1/TESTS_ACCEPTATION.md",
@@ -630,7 +626,7 @@
         "1d76c6876de54c7bc37b777ae66bf031207a140d",
         "4873567fad40d2033005ec0fd7af05a11b0bc2fe"
       ],
-      "updated_at": "2026-11-01T21:26:19Z"
+      "updated_at": "2026-11-01T21:33:38Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",

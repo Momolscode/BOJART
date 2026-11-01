@@ -2,7 +2,7 @@
   "schema_version": 1,
   "repository": "Momolscode/BOJART",
   "status": "partial",
-  "finished_at": "2026-11-01T21:26:19Z",
+  "finished_at": "2026-11-01T21:33:38Z",
   "limitations": [
     "Revue contextuelle ciblée ; les chemins pending_paths restent à examiner sémantiquement, même si l'audit technique est réussi.",
     "Les résultats des tests sont ceux des révisions et environnements cités ; les anciens 578 tests M07 et avis artistiques ne sont pas des validations nouvelles.",
@@ -15,6 +15,7 @@
     "4873567fad40d2033005ec0fd7af05a11b0bc2fe"
   ],
   "next_actions": [
+    "Rapprocher les contrats voix/Jev examinés des validateurs et reçus du runtime ; préserver la séparation transcription, décision, prévisualisation et exécution.",
     "Lire intégralement le document historique de reprise Jarvis 5 et rapprocher chaque affirmation avec CURRENT.md et claims.jsonl sans remplacer les originaux.",
     "Vérifier la couverture de récupération par partie et l'index documentaire ; une référence de provenance n'est pas la preuve d'une récupération de tous les chats.",
     "Conserver distincts tests logiciels, installation connectée et qualification sur le matériel."
@@ -27,21 +28,20 @@
   "base_sha": "cd71c6ba640f304248702d8a3e64c60f900f9d0b",
   "trigger_kind": "synchronize",
   "head_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
-  "compared_from_sha": "0455a98aa433aeebb2e1269fe81042a1f0313182",
-  "started_at": "2026-11-01T21:25:42Z",
-  "previous_receipt_path": "ops/context-monitor/receipts/pr-1/0455a98aa433aeebb2e1269fe81042a1f0313182.json",
-  "summary": "Référencement de la partie 3 vérifié contre son arbre Git : 1 114 objets logiques, 1 131 fichiers de données/fragments et quatre fichiers d'accompagnement. Portée documentaire et intégrité des métadonnées ; binaires non redécodés.",
-  "changed_paths": [
-    "README.md",
-    "data/catalog/repository_manifest.json",
-    "docs/RECUPERATION_PARTIE_3_2026-11-01.md",
-    "docs/evidence/recovery-part3-2026-11-01.json"
-  ],
+  "compared_from_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+  "started_at": "2026-11-01T21:32:30Z",
+  "previous_receipt_path": "ops/context-monitor/receipts/pr-1/5f8aa7f375b4e10cbffe4f65229eb4b22a04d790.v1.json",
+  "summary": "Tête inchangée ; reprise du reçu partiel et lecture intégrale de quatre documents voix/Jev et contrat de décision. Le reste à examiner passe de 618 à 614 chemins.",
+  "changed_paths": [],
   "reviewed_paths": [
     "README.md",
     "data/catalog/repository_manifest.json",
     "docs/RECUPERATION_PARTIE_3_2026-11-01.md",
-    "docs/evidence/recovery-part3-2026-11-01.json"
+    "docs/evidence/recovery-part3-2026-11-01.json",
+    "jarvis/research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
+    "jarvis/research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
+    "jarvis/research/voice-jev/NOTE_DE_REFERENCE.md",
+    "jarvis/tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json"
   ],
   "pending_paths": [
     ".gitattributes",
@@ -321,9 +321,6 @@
     "jarvis/research/readiness-2026-10-30/SOURCES.json",
     "jarvis/research/readiness-2026-10-30/TESTS_LOGICIELS.txt",
     "jarvis/research/readiness-2026-10-30/TESTS_REGRESSIONS.txt",
-    "jarvis/research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
-    "jarvis/research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
-    "jarvis/research/voice-jev/NOTE_DE_REFERENCE.md",
     "jarvis/research/voice-jev/PREUVES_LECTURE_M03.json",
     "jarvis/tests/test_connection_lifetime.py",
     "jarvis/tests/test_consolidated.py",
@@ -346,7 +343,6 @@
     "jarvis/tools/m06_smoke.py",
     "jarvis/tools/m07_browser.cjs",
     "jarvis/tools/m07_smoke.py",
-    "jarvis/tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json",
     "jarvis/tools/pc-audit-v1/MISSION_CLAUDE.md",
     "jarvis/tools/pc-audit-v1/README.md",
     "jarvis/tools/pc-audit-v1/TESTS_ACCEPTATION.md",
@@ -722,7 +718,11 @@
     "jarvis/context/START_HERE.md",
     "jarvis/docs/m07/INSTALLATION_ET_REPRISE.txt",
     "jarvis/docs/m07/RELEASE_M07.md",
+    "jarvis/research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
+    "jarvis/research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
+    "jarvis/research/voice-jev/NOTE_DE_REFERENCE.md",
     "jarvis/tests/memory_context.test.cjs",
+    "jarvis/tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json",
     "ops/context-monitor.json",
     "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/R03_QC.json",
     "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
@@ -814,6 +814,30 @@
       "sha": "6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967",
       "git_blob_sha": "01960d87319ff23efd78053630af5161967178cc",
       "url": "https://github.com/Momolscode/BOJART/blob/6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967/MANIFESTE_PARTIE_3.json"
+    },
+    {
+      "path": "jarvis/research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
+      "sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+      "git_blob_sha": "1729d6febc560ffc9a04651cdd27c369274ef79a",
+      "url": "https://github.com/Momolscode/BOJART/blob/5f8aa7f375b4e10cbffe4f65229eb4b22a04d790/jarvis/research/voice-jev/ARCHITECTURE_CORRIGEE.mmd"
+    },
+    {
+      "path": "jarvis/research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
+      "sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+      "git_blob_sha": "5180fa8513694364b3fe06091e466846b6cce103",
+      "url": "https://github.com/Momolscode/BOJART/blob/5f8aa7f375b4e10cbffe4f65229eb4b22a04d790/jarvis/research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json"
+    },
+    {
+      "path": "jarvis/research/voice-jev/NOTE_DE_REFERENCE.md",
+      "sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+      "git_blob_sha": "49e78122e35821cc9b07bd2bed6d99a5344cdc2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/5f8aa7f375b4e10cbffe4f65229eb4b22a04d790/jarvis/research/voice-jev/NOTE_DE_REFERENCE.md"
+    },
+    {
+      "path": "jarvis/tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json",
+      "sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+      "git_blob_sha": "d380d1d7bd928030abf8b708879a3acf16b057fd",
+      "url": "https://github.com/Momolscode/BOJART/blob/5f8aa7f375b4e10cbffe4f65229eb4b22a04d790/jarvis/tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json"
     }
   ],
   "checks": [
@@ -857,6 +881,21 @@
       "severity": "low",
       "evidence": "README décrit désormais les parties 1 et 3, tandis que le catalogue de provenance est distinct et ne certifie pas à lui seul la disponibilité de tous les médias ou des trois parties.",
       "action": "Rapprocher les preuves par partie avant de présenter une récupération complète ; mettre à jour l'index documentaire avec une synthèse sourcée lors d'un essai borné."
+    },
+    {
+      "severity": "info",
+      "evidence": "NOTE_DE_REFERENCE.md est explicitement datée du 30 octobre et limitée à M03 : absence de Jev/LangGraph dans les 16 modules examinés. CURRENT.md et jarvis/AGENTS.md décrivent les évolutions M06/M07 ultérieures.",
+      "action": "Conserver la chronologie ; ne pas appliquer le constat M03 au runtime M07 ni présenter les anciennes recherches comme une nouvelle qualification."
+    },
+    {
+      "severity": "info",
+      "evidence": "ARCHITECTURE_CORRIGEE.mmd sépare transcription, choix bornés, contrôles avant action, exécution, résultat observé, réconciliation UNKNOWN et accusé de chargement. L'exemple JSON porte proposed_contract_not_implemented, business_side_effect=false et une empreinte explicitement factice.",
+      "action": "Garder ces fichiers au statut de proposition documentaire ; aucun appel live, aucune autorité machine ou validation de schéma exécutable déduite."
+    },
+    {
+      "severity": "low",
+      "evidence": "DECISION_ENGINE_CONTRACT.json énumère intentions, champs et politiques ; il ne fournit pas à lui seul un validateur exécutable, une preuve d'idempotence ou un contrôle matériel.",
+      "action": "Prochaine revue bornée : rapprocher le contrat des validateurs et reçus réellement utilisés par le runtime, puis tester les entrées périmées/ambiguës en simulation si une lacune concrète est établie."
     }
   ],
   "correction_details": {
@@ -864,15 +903,17 @@
     "new_correction_published_for_this_delta": false
   },
   "coverage": {
-    "changed_path_inventory": "Comparaison paginée pages 1 et 2, un commit et quatre chemins, concordance avec la différence des arbres Git complets.",
+    "changed_path_inventory": "Comparaison de la tête avec le checkpoint identique, pages 1 et 2 : aucun commit ni chemin changé. Les quatre lectures proviennent du backlog conservé.",
     "semantic_exhaustive": false,
     "structural_only_paths": [
       "data/catalog/repository_manifest.json"
     ],
     "external_archive_review": "Structure du manifeste et cohérence avec l'arbre Git seulement ; 1 114 contenus non examinés sémantiquement.",
     "pending_includes_prior_backlog": true,
-    "required_context_blobs": "Les sept fichiers de contexte et consignes requis ont des blobs identiques à la tête précédente, déjà lus.",
-    "synthetic_merge_results_used_as_head_proof": false
+    "required_context_blobs": "Les sept fichiers obligatoires ont été relus au SHA figé. Recherche documentaire du 30 octobre lue comme donnée historique ; sources web non requalifiées dans cette reprise.",
+    "synthetic_merge_results_used_as_head_proof": false,
+    "newly_reviewed_count": 4,
+    "new_test_execution": false
   },
   "archive_verification": {
     "archive_commit": "6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967",
@@ -892,6 +933,23 @@
     "binaries_downloaded": false,
     "full_semantic_review": false
   },
-  "trigger_delivery_id": "b42fe140-d63a-11f1-867e-887c04a3b8ba",
-  "trigger_note": "Le payload ne contient pas de SHA ; état réel et tête figés par lecture GitHub."
+  "trigger_delivery_id": "fa5d9b60-d637-11f1-9c36-35f255e31c7f",
+  "trigger_note": "Événements retardés reçus ; SHA non fourni dans les payloads. Tête réelle toujours identique au checkpoint, reprise de l'attente sans rejouer un correctif.",
+  "receipt_revision": 2,
+  "prior_changed_paths": [
+    "README.md",
+    "data/catalog/repository_manifest.json",
+    "docs/RECUPERATION_PARTIE_3_2026-11-01.md",
+    "docs/evidence/recovery-part3-2026-11-01.json"
+  ],
+  "observed_delivery_ids": [
+    "631c6040-d639-11f1-9ff6-83cba57be6f0",
+    "fa5d9b60-d637-11f1-9c36-35f255e31c7f"
+  ],
+  "newly_reviewed_paths": [
+    "jarvis/research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
+    "jarvis/research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
+    "jarvis/research/voice-jev/NOTE_DE_REFERENCE.md",
+    "jarvis/tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json"
+  ]
 }
