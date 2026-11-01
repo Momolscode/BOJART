@@ -19,6 +19,8 @@ L’installeur prépare `.venv`, indexe les documents et vérifie Python/FTS5. L
 
 Le lanceur annonce les moteurs manquants. `Lancer_BOJART.cmd --check-only` ou `bash Lancer_BOJART.sh --check-only` effectue le contrôle avant ouverture. Voir [démarrage et reprise](docs/DEMARRAGE_ET_REPRISE.md) pour interpréter le rapport et télécharger un contexte sourcé.
 
+Les raccourcis `Lancer_Jarvis` présents dans `jarvis/` et `jarvis/apps/jarvis/` rejoignent aussi ce lanceur. Depuis `jarvis/`, `Ouvrir_un_dossier_Jarvis.cmd` ou `bash Ouvrir_un_dossier_Jarvis.sh` ouvre un dossier existant avec le même environnement et la même mémoire. `Restaurer_Jarvis` utilise également le Python installé à la racine pour restaurer dans un nouveau dossier.
+
 L’index est actualisé à chaque lancement. Aucune configuration du GPU n’est présumée. L’installateur peut être relancé sans effacer la mémoire.
 
 ## 2. Ce qui est disponible immédiatement

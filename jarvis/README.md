@@ -7,9 +7,9 @@ La reconnaissance réelle et Jev restent à configurer puis qualifier sur la tou
 
 M05 reste la base des dossiers distincts, sauvegardes globales et reprises d'interruption. Les données existantes restent dans leur dossier `mission05` ; ce nom conservé ne signifie pas que l'ancien code est utilisé.
 
-Le code est conservé dans Git localement et dans le bundle livré. Aucune publication GitHub n'est attestée. Les sources des sites Atelier et Studio ont été récupérées séparément ; elles ne sont ni intégrées ni déployées par ce paquet. L'ancien chat complet et les données du PC réel ne sont pas présents.
+Le code courant est publié dans [Momolscode/BOJART](https://github.com/Momolscode/BOJART). Le point d'entrée d'installation est [INSTALLER_DEMAIN.md](../INSTALLER_DEMAIN.md) à la racine du dépôt. Les sources des sites sont dans `../sites/` ; lancer Jarvis ne les déploie pas. Les paragraphes de livraison et de préservation ci-dessous décrivent les paquets historiques ; [l'état courant](../context/CURRENT.md) et [l'état des archives](../docs/ETAT_ARCHIVES_2026-11-01.md) précisent les récupérations vérifiées. L'intégralité des anciens chats et des données du PC réel n'est pas certifiée.
 
-Pour démarrer : `Lancer_Jarvis.cmd` ou `bash Lancer_Jarvis.sh`. Pour reprendre un espace existant/restauré : `Ouvrir_un_dossier_Jarvis`. Pour une restauration non destructive : `Restaurer_Jarvis`. Python et les dépendances doivent être disponibles ; rien n'est installé automatiquement.
+Après l'installation à la racine, `Lancer_Jarvis.cmd` ou `bash Lancer_Jarvis.sh` rejoint le même lanceur BOJART : environnement Python installé, diagnostic et actualisation de la mémoire. Le lanceur dans `apps/jarvis/` suit également ce parcours. Pour reprendre un espace existant/restauré : `Ouvrir_un_dossier_Jarvis.cmd` ou `bash Ouvrir_un_dossier_Jarvis.sh`. Pour une restauration non destructive : `Restaurer_Jarvis.cmd` ou `bash Restaurer_Jarvis.sh`, avec le Python installé à la racine. Un paquet historique extrait séparément conserve son repli local. Rien n'est installé par ces lanceurs.
 
 La CAO, le catalogue, les brouillons et les vues fonctionnent dans la recette locale. La voix, les modèles IA, les imprimantes et les moniteurs physiques restent à qualifier sur la tour. **Lancement physique non qualifié.**
 

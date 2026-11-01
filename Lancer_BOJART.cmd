@@ -7,4 +7,6 @@ if exist ".venv\Scripts\python.exe" (
 ) else (
   py -3.12 tools\start_jarvis.py %*
 )
-if errorlevel 1 pause
+set "BOJART_EXIT=%errorlevel%"
+if not "%BOJART_EXIT%"=="0" pause
+exit /b %BOJART_EXIT%
