@@ -304,8 +304,8 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 7684,
-      "sha256": "0d48185592c0deb4deef61a8b39b4f480e23d9b7482cd89c2648948589fc26a9"
+      "bytes": 7403,
+      "sha256": "b7e0293add7f47e93ee9bf5b0a9d6a28bdc163233d59e7e6e7235a931d29dd43"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
