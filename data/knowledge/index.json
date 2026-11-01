@@ -68,5 +68,10 @@
     "path": "productions/le-dernier-geste/STATUT_G2.json",
     "project": "bojart.creative",
     "provenance": "Reconciled GitHub source cd71c6ba640f304248702d8a3e64c60f900f9d0b; reported observations, not new provider verification"
+  },
+  {
+    "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
+    "project": "bojart.jarvis",
+    "provenance": "BOJART PR #1 webhook relay installed and opening event observed, 2026-11-01; acceptance and per-SHA receipts on audit/context-results"
   }
 ]

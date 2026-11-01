@@ -23,10 +23,10 @@ Le rapport décrit les fichiers suivis du répertoire de travail. Après des mod
 | Mécanisme | Déclencheur | Travail | Limite |
 |---|---|---|---|
 | GitHub Actions `BOJART data audit` | Push, pull request, lancement manuel | Tests et inventaire du dépôt ; rapport attaché au run pendant 14 jours | Contrôle technique ; délai de file GitHub possible ; aucune validation artistique |
-| Automatisation ChatGPT `Auditer les évolutions BOJART` | Événements de PR et nouvelles révisions de PR | Lecture du contexte, écarts, recherche ciblée, correctifs réversibles testés sur branche du même dépôt | Créée et activée le 1 novembre ; première exécution future non encore prouvée |
+| Automatisation ChatGPT `Auditer les évolutions BOJART` | PR ordinaires et mises à jour de `main` via la PR permanente n°1 | Lecture du contexte et des écarts ; reçus par SHA sur `audit/context-results` ; correctifs réversibles testés | Portée et état vérifiables dans les reçus ; délai de traitement possible ; médias externes non présumés lus |
 | Veille IA locale Jarvis existante | Vendredi | Nouveautés utiles aux modèles 3D et à la production | Cadence conservée ; aucune installation présumée |
 
-Les pushes directs déclenchent les contrôles techniques. Pour bénéficier aussi de l'analyse contextuelle, travailler sur une branche et ouvrir une PR. Le connecteur actuel ne propose pas d'événement ChatGPT pour chaque push direct. Aucune analyse intelligente permanente de toutes les données n'est revendiquée. Un contrôle en échec ne bloque pas à lui seul une fusion : aucune règle de protection de branche n'a été modifiée.
+Les pushes directs sur `main` actualisent désormais la [PR de surveillance n°1](https://github.com/Momolscode/BOJART/pull/1), qui doit rester ouverte et ne pas être fusionnée. Ce relais utilise l'événement PR pris en charge par le connecteur. La [procédure et les preuves de recette](SURVEILLANCE_CONTEXTUELLE.md) expliquent comment vérifier les lancements et les reçus. Un lancement en cours ou un reçu partiel ne vaut pas validation complète. Les branches sans PR restent couvertes par les contrôles techniques seulement. Un contrôle en échec ne bloque pas à lui seul une fusion : aucune règle de protection de branche n'a été modifiée.
 
 ## Relier les informations
 

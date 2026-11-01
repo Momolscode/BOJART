@@ -149,8 +149,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 2626,
-      "sha256": "fe6cf12ecd503eb52005bad21fe6db2b65fc1a956f2ff3162c6b6cc6fdd322bc"
+      "bytes": 2870,
+      "sha256": "c9b4a9afa74241b559a36df00ce05232f537e09f55141e55cb3845e47c43b50c"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -199,8 +199,8 @@
     },
     {
       "path": "docs/GITHUB_WORKFLOW.md",
-      "bytes": 1476,
-      "sha256": "98c550800cb94c183fb7ae5e79e74260b5a18e972e496b4ada715b202b0afaf5"
+      "bytes": 1668,
+      "sha256": "df254fd667ead6e50a3559db07276d1fe1d85ef0ff293002eb683350a81a2e8c"
     },
     {
       "path": "docs/INSTALLATION.md",
@@ -209,8 +209,8 @@
     },
     {
       "path": "docs/OPERATIONS.md",
-      "bytes": 7983,
-      "sha256": "6496a1d7da183b8f1ffe6af7c8f063fda1cb6de80cf84a621751a5200bfc304c"
+      "bytes": 8253,
+      "sha256": "d75bf56b9578e7259dba8a5e21f6586e74364a827ae6116dd15310382b4dab9c"
     },
     {
       "path": "docs/OUTILS_ET_ESSAIS.md",
@@ -241,6 +241,11 @@
       "path": "docs/RESEARCH_BACKLOG.md",
       "bytes": 1737,
       "sha256": "c66a97df9701e0c69b885a6e58b7c4b59af434ea16a9d9682b6c74beacdb12a1"
+    },
+    {
+      "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
+      "bytes": 4507,
+      "sha256": "73a8f52482fea648e077ed7e5cc52e4d180843169b4375fcfc14bbbbfd2fd40b"
     },
     {
       "path": "docs/creative/PAINTED_REALITY.md",
@@ -1781,6 +1786,11 @@
       "path": "jarvis/tools/verify_repository.py",
       "bytes": 279,
       "sha256": "d8808e5d9499f339c5be31c514b703499cc4c7dfc1fdb614662add2f0c6bda0e"
+    },
+    {
+      "path": "ops/context-monitor.json",
+      "bytes": 1484,
+      "sha256": "ae068ecea75f56c467f94b3c50bfce681e65b29fca2b0b7facc486996fc7aa92"
     },
     {
       "path": "ops/higgsfield-observations.json",

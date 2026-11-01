@@ -5,7 +5,7 @@ Destination actuelle : `Momolscode/BOJART`, publique. L’ancien `bojart-jarvis`
 1. Lire le contexte et actualiser la branche distante ; utiliser une branche par session.
 2. Importer les sources privées localement. Versionner seulement code, documents relus, références et empreintes utiles.
 3. Garder les contradictions visibles jusqu’à réconciliation ; mettre à jour la passation.
-4. Tester le composant, exécuter `tools/validate_repository.py` et relire `git diff --cached`.
+4. Tester le composant. Après les derniers changements de fichiers, actualiser le manifeste avec `python3 tools/validate_repository.py --write-manifest`, puis vérifier avec `python3 tools/validate_repository.py`. Inclure le manifeste dans le même commit et relire `git diff --cached`.
 5. Créer un commit cohérent et une PR si plusieurs sessions travaillent ensemble. Comparer à la nouvelle tête distante ; aucun force-push.
 6. Vérifier SHA distant et fichiers publiés.
 
