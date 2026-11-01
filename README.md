@@ -47,3 +47,11 @@ Leur statut de génération ne vaut pas validation artistique. Les références 
 Ce dépôt est **public** tant que sa visibilité n'a pas été modifiée. Les médias sources, archives complètes, notes privées, informations de clients et exports non validés ne doivent pas y être ajoutés.
 
 Voir [PRODUCTION.md](PRODUCTION.md) et [SECURITY.md](SECURITY.md).
+
+## Archives et continuité — mise à jour du 1er novembre 2026
+
+La mémoire historique disponible est progressivement versée dans `docs/historical/` : storyboard V25, registre R&D, manifeste V23, ancien bilan de consolidation et référence textuelle de la tour de contrôle. Les requêtes et résultats **Painted Reality** / **The Awakening** sont conservés dans `runs/higgsfield/`.
+
+**Portée de la sauvegarde :** les documents et métadonnées ont été publiés ; le ZIP de travail préparé localement, les 28 médias récupérés, les PDF originaux et les MP4 Higgsfield ne sont **pas tous stockés sur GitHub**. Une archive annoncée comme préparée ne signifie pas qu'elle a été poussée. Un inventaire indique explicitement les éléments non publiés et les vérifications nécessaires.
+
+Certaines images de la récupération historique montrent des personnes ou des captures de conversations non directement liées aux sculptures. Leur diffusion publique est suspendue tant que la provenance et les autorisations pertinentes ne sont pas vérifiées.
