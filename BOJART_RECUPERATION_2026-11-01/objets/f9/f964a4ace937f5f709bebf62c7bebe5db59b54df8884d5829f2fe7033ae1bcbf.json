@@ -1,0 +1,14 @@
+{
+  "atelier": {
+    "commit": "58309e61e2d70364b3a18223f706a478761da8b3",
+    "fsck_exit": 0,
+    "files": 1782,
+    "bundle_bytes": 21401501
+  },
+  "studio": {
+    "commit": "87306314a847c6d2f109bf5833345b3b80af22e1",
+    "fsck_exit": 0,
+    "files": 168,
+    "bundle_bytes": 8526818
+  }
+}

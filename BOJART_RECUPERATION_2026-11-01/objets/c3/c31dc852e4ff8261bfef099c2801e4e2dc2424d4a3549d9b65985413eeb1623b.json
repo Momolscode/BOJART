@@ -1,0 +1,114 @@
+[
+  {
+    "post_id": "7071144007094537477",
+    "source_sha256": "abefc2d030b2202652bd3e4cc44b0b749b0adf4b498e7084e633f1077718608f",
+    "preview_start": 1.8459013499999999,
+    "duration": 6,
+    "frames": 144,
+    "audio": false,
+    "new_sha256": "c1bb3756d657f407337cabc874f196c7d907f0ee54ba88934f77563d1f9f892c",
+    "new_bytes": 368220,
+    "path": "corrections_proposees/7071144007094537477.mp4",
+    "target_in_source": "dist/assets/archive/7071144007094537477.mp4",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 320,
+          "height": 568,
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "status": "proposition hors production, decodage controle"
+  },
+  {
+    "post_id": "7466163957854735638",
+    "source_sha256": "1cd9f46ce834e05de45d0803f3fc6fcf97d43f7d56450df429f731ddd5a8716d",
+    "preview_start": 2.26709865,
+    "duration": 6,
+    "frames": 144,
+    "audio": false,
+    "new_sha256": "412d4176aca81ec8fc451fde6c1f9acadb7e382cefc6f3003b486e4b124f347c",
+    "new_bytes": 557318,
+    "path": "corrections_proposees/7466163957854735638.mp4",
+    "target_in_source": "dist/assets/archive/7466163957854735638.mp4",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 320,
+          "height": 694,
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "status": "proposition hors production, decodage controle"
+  },
+  {
+    "post_id": "7376602431603346721",
+    "source_sha256": "b173142681b648663c39d813136bf7f08cbbfdc5026c6f81495740a0292911c1",
+    "preview_start": 2.7100000499999997,
+    "duration": 6,
+    "frames": 144,
+    "audio": false,
+    "new_sha256": "db8c835f2c40dd58e5454a78f1be7afee7a9602a932f100c83151856979d69e6",
+    "new_bytes": 544495,
+    "path": "corrections_proposees/7376602431603346721.mp4",
+    "target_in_source": "dist/assets/archive/7376602431603346721.mp4",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 320,
+          "height": 568,
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "status": "proposition hors production, decodage controle"
+  },
+  {
+    "post_id": "7228267566194609434",
+    "source_sha256": "e74faa6e33a2ce2c4af9737042e8a9b2e82e05302c93dd1014c956bcf5a8131e",
+    "preview_start": 4,
+    "duration": 6,
+    "frames": 144,
+    "audio": false,
+    "new_sha256": "158acb1834ee9619ff8a064e203a81a882caadaae8f8e6b2372abd0074f17462",
+    "new_bytes": 225072,
+    "path": "corrections_proposees/7228267566194609434.mp4",
+    "target_in_source": "dist/assets/archive/7228267566194609434.mp4",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 320,
+          "height": 568,
+          "r_frame_rate": "24/1"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "status": "proposition hors production, decodage controle"
+  }
+]

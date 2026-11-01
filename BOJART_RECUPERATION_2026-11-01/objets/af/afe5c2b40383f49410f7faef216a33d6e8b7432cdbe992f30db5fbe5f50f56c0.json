@@ -1,0 +1,18 @@
+{
+  "project": "BOJ.ART",
+  "date": "2026-11-01",
+  "shot": "G1 — Le dernier trait",
+  "status": "completed",
+  "params": {
+    "model": "seedance_2_5",
+    "mode": "t2v",
+    "duration": 4,
+    "aspect_ratio": "9:16",
+    "resolution": "720p",
+    "generate_audio": false,
+    "bitrate_mode": "high",
+    "count": 1,
+    "prompt": "Extreme macro cinematography of one fine artist paintbrush applying a single short stroke of deep burgundy acrylic paint onto a warm beige painted-resin test piece. The test piece is a simple non-anatomical curved material sample, with a faint hand-painted texture. No person or figurine is present. One continuous four-second take. At 0.0-0.6 seconds the brush hovers one millimetre above the surface. At 0.6-1.0 seconds its bristles touch and bend under light pressure. At 1.0-2.5 seconds it deposits one clean six-millimetre thin burgundy line from upper left to lower right. At 2.5-3.3 seconds the brush lifts and exits in the same direction. Hold the final line from 3.3 to 4.0 seconds. Preserve a fixed coherent surface and believable viscous paint transfer. Warm ivory raking studio light reveals the painted texture; charcoal background, restrained burgundy palette, shallow macro focus following the bristle contact, real optical reflections. Camera nearly locked. The line is a thin hand-painted acrylic mark on the resin sample. Keep the completed painted line clearly readable for a match cut. No text, no logos, no glass, no fragments, no smoke, no glowing effects, no cuts. Silent video."
+  },
+  "review": "Contact, tracé et retrait du pinceau observés ; trait plus large que les six millimètres fins visés. Utilisable comme insert matière ; raccord exact de forme avec la cicatrice non démontré."
+}

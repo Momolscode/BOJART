@@ -1,0 +1,10 @@
+{
+  "project": "marwin",
+  "checked_on": "2026-10-25",
+  "coherent_for_checked_fields": true,
+  "conflicts": [],
+  "expired": [],
+  "missing_sources": [],
+  "hypotheses_not_promoted": [],
+  "scope": "Contrôle des champs explicitement structurés ; pas vérification sémantique des sources ni preuve de qualité artistique."
+}

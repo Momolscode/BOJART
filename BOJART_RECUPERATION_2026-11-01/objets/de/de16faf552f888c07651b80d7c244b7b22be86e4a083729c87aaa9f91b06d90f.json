@@ -1,0 +1,15 @@
+{
+  "scope": "Working-container test environment; not user PC",
+  "python": "3.13.5",
+  "platform": "Linux x86_64",
+  "packages": {
+    "cadquery": "2.8.0",
+    "trimesh": "4.11.1",
+    "pytest": "9.0.2",
+    "numpy": "2.3.5",
+    "jsonschema": "4.26.0"
+  },
+  "git": "git version 2.47.3",
+  "gh": "not_available",
+  "network_effects": "No publication, machine command, new generation, or model download."
+}

@@ -1,0 +1,165 @@
+{
+  "status": "machine_transcription_completed",
+  "source": {
+    "name": "jfk.flac",
+    "sha256": "63a4b1e4c1dc655ac70961ffbf518acd249df237e5a0152faae9a4a836949715"
+  },
+  "model_directory": "/workspace/scratch/537238f8fe99/tools/models/faster-whisper-tiny",
+  "decoder": "ffmpeg_float32_mono_16khz",
+  "faster_whisper_version": "1.2.1",
+  "language": "en",
+  "language_probability": 1,
+  "audio_duration_s": 11.0,
+  "processing_s": 1.767,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.5,
+      "text_candidate": " And so, my fellow Americans, ask not what your country can do for you, ask what you can do for your country.",
+      "avg_logprob": -0.3066348495154545,
+      "no_speech_probability": 0.07977009564638138,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.74,
+          "word": " And",
+          "probability": 0.7030417323112488
+        },
+        {
+          "start": 0.74,
+          "end": 1.08,
+          "word": " so,",
+          "probability": 0.9106398820877075
+        },
+        {
+          "start": 1.12,
+          "end": 1.36,
+          "word": " my",
+          "probability": 0.9823122620582581
+        },
+        {
+          "start": 1.36,
+          "end": 1.68,
+          "word": " fellow",
+          "probability": 0.9982194304466248
+        },
+        {
+          "start": 1.68,
+          "end": 2.28,
+          "word": " Americans,",
+          "probability": 0.9647658467292786
+        },
+        {
+          "start": 3.4,
+          "end": 3.82,
+          "word": " ask",
+          "probability": 0.8834757804870605
+        },
+        {
+          "start": 3.82,
+          "end": 4.56,
+          "word": " not",
+          "probability": 0.6882575750350952
+        },
+        {
+          "start": 4.56,
+          "end": 5.7,
+          "word": " what",
+          "probability": 0.7291464805603027
+        },
+        {
+          "start": 5.7,
+          "end": 5.98,
+          "word": " your",
+          "probability": 0.9120555520057678
+        },
+        {
+          "start": 5.98,
+          "end": 6.42,
+          "word": " country",
+          "probability": 0.9935901165008545
+        },
+        {
+          "start": 6.42,
+          "end": 6.72,
+          "word": " can",
+          "probability": 0.9963765740394592
+        },
+        {
+          "start": 6.72,
+          "end": 6.96,
+          "word": " do",
+          "probability": 0.9977409839630127
+        },
+        {
+          "start": 6.96,
+          "end": 7.22,
+          "word": " for",
+          "probability": 0.9954871535301208
+        },
+        {
+          "start": 7.22,
+          "end": 8.24,
+          "word": " you,",
+          "probability": 0.9962034821510315
+        },
+        {
+          "start": 8.28,
+          "end": 8.62,
+          "word": " ask",
+          "probability": 0.9575495719909668
+        },
+        {
+          "start": 8.62,
+          "end": 8.98,
+          "word": " what",
+          "probability": 0.9783515334129333
+        },
+        {
+          "start": 8.98,
+          "end": 9.22,
+          "word": " you",
+          "probability": 0.9973154664039612
+        },
+        {
+          "start": 9.22,
+          "end": 9.42,
+          "word": " can",
+          "probability": 0.9975056052207947
+        },
+        {
+          "start": 9.42,
+          "end": 9.7,
+          "word": " do",
+          "probability": 0.9975137710571289
+        },
+        {
+          "start": 9.7,
+          "end": 9.88,
+          "word": " for",
+          "probability": 0.9976154565811157
+        },
+        {
+          "start": 9.88,
+          "end": 10.12,
+          "word": " your",
+          "probability": 0.9907882809638977
+        },
+        {
+          "start": 10.12,
+          "end": 10.5,
+          "word": " country.",
+          "probability": 0.9982477426528931
+        }
+      ]
+    }
+  ],
+  "direct_listening": false,
+  "human_corrected": false,
+  "song_identification": false,
+  "limits": [
+    "ASR hypotheses require listening and correction, especially on music or effects.",
+    "No voice identity or actual audience retention is inferred.",
+    "An empty transcript does not prove absence of speech."
+  ]
+}

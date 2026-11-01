@@ -1,0 +1,19 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Runtime and model weights
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+models/
+checkpoints/
+*.safetensors
+*.ckpt
+.cache/
+.DS_Store
+Thumbs.db

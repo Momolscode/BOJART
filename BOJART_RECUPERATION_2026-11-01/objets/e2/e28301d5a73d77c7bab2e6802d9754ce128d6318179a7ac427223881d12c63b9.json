@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checks": [
+    "One captured utterance ends on a pause and renders all three actual views",
+    "Jev proposal is confirmed by a scoped captured voice phrase",
+    "A spoken cancellation leaves the proposed action undistributed",
+    "Context captured before listening prevents a stale ASR result from acting",
+    "Cancelling ASR then starting again keeps the new microphone alive",
+    "Lost scene response and reload do not duplicate the three child commands",
+    "A second window cannot take an active microphone reservation",
+    "The three-view scene renders an explicitly selected actual CAD model",
+    "Mobile control panel remains within the viewport"
+  ],
+  "browser": "153.0.8010.0",
+  "browser_errors": [],
+  "schema": "bojart.acceptance.m07.v1",
+  "observed_at": "2026-11-01T18:31:20.394503+00:00",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "graph": "sqlite_ready",
+  "speech_fixture_calls": 5,
+  "live_jev": false,
+  "real_asr": false,
+  "physical_microphone": false,
+  "physical_monitor_mapping": false
+}

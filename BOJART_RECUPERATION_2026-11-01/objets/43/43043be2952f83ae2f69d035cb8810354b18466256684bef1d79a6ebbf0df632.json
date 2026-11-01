@@ -1,0 +1,17 @@
+{
+  "version": "M07",
+  "date": "2026-11-01",
+  "source_commit": "84aff373fe78db173e9601f285ce908f64587c55",
+  "branch": "improvement/m07-voice-scenes-2026-11-01",
+  "source_manifest_files": 437,
+  "bundle_sha256": "48dd5edcfe19767ff88797cfb629af6f5ef0a5f7f8e35760d1cbff6640d466d0",
+  "python_tests": 578,
+  "signal_tests": 7,
+  "browser_checks": 22,
+  "real_cad_models": 3,
+  "live_jev": false,
+  "physical_microphone": false,
+  "asr_weights_included": false,
+  "physical_qualification": false,
+  "internal_screenshots_included": false
+}

@@ -1,0 +1,10 @@
+BOJ.ART / STUDIO MARWIN — ANATOMY VIDEO EXPORTER
+Statut : prototype démontré sur une scène SVG synthétique, PAS sur une scène complète du dépôt Anatomy.
+Livrables : export.py, scene.html, MP4 de 7 s, rapport JSON ffprobe et log.
+Démarrage : python export.py scene.html sortie.mp4 --seconds 7 --fps 24
+Dépendances : Python, Playwright Chromium, FFmpeg. Le fichier HTML est injecté en mémoire via page.set_content car file:// est bloqué.
+Contrat pour brancher une vraie scène Anatomy : exposer window.renderAt(tSeconds), qui fixe intégralement l'état de l'animation au temps t sans attendre un timer, un RAF ni le réseau. Réutiliser scripts/drive.mjs et les composants Anatomy existants pour les interactions et le rendu; n'utiliser cet exporteur que pour le pilotage image-par-image et l'encodage FFmpeg.
+Vérifier : durée 7s, 540x960, 24fps, 168 images capturées, 80%+ images distinctes, zéro erreur JS, fichier H264 yuv420p.
+NE PAS présenter cet essai comme installation dans Studio Marwin, ni comme validation d'Anatomy sur scène complète.
+Avant intégration : cloner la révision Anatomy 1482e8469b0a9e0d8cc18ea2740a01423d29ae80; sélectionner une scène existante, écrire un adaptateur renderAt(t) sans modifier la logique métier, vérifier le résultat visuellement; exécuter les mêmes contrôles; intégrer au pipeline Studio après revue.
+Aucune publication, aucun crédit IA payant, aucune commande imprimante.

@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-31",
+  "unit_repo": 132,
+  "pytest_m01_m02_m03": 242,
+  "pytest_subtests": 5,
+  "knowledge_tests": 40,
+  "planning_tests": 22,
+  "total_unique_tests": 436,
+  "new_growth_tests": 55,
+  "browser_preview_checks": 18,
+  "browser_to_live_localhost": "blocked_by_administrator",
+  "provider_live_tested": false,
+  "model_used": false,
+  "published": false,
+  "spent": 0,
+  "notice": "Initial aggregated runner timed out; each suite was subsequently run separately with successful exit. No network-policy bypass."
+}

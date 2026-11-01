@@ -1,0 +1,45 @@
+{
+  "kind": "synthetic_dsp_demo_no_music_or_voice",
+  "duration_s": 3,
+  "sample_rate": 48000,
+  "channels": 2,
+  "frames": 144000,
+  "pcm_bits": 16,
+  "source_peak": 0.1998629534754601,
+  "filtered_peak": 0.10340715199708939,
+  "clipped_samples": 0,
+  "measured_tones": [
+    {
+      "channel": 0,
+      "frequency_hz": 200,
+      "source_amplitude": 0.09999999999999981,
+      "filtered_amplitude": 0.09996175291317219,
+      "amplitude_gain_db": -0.0033227352168471455
+    },
+    {
+      "channel": 0,
+      "frequency_hz": 6000,
+      "source_amplitude": 0.10000000000000059,
+      "filtered_amplitude": 0.00360775344517908,
+      "amplitude_gain_db": -28.855262998305836
+    },
+    {
+      "channel": 1,
+      "frequency_hz": 440,
+      "source_amplitude": 0.10000000000000019,
+      "filtered_amplitude": 0.09911455445785099,
+      "amplitude_gain_db": -0.07725133882894791
+    },
+    {
+      "channel": 1,
+      "frequency_hz": 8000,
+      "source_amplitude": 0.09999999999999959,
+      "filtered_amplitude": 0.0018578668999830134,
+      "amplitude_gain_db": -34.61970805306352
+    }
+  ],
+  "direct_listening": false,
+  "mobile_listening": false,
+  "film_modified": false,
+  "audience_effect_measured": false
+}

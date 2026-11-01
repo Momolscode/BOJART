@@ -1,0 +1,1925 @@
+{
+  "schema": "bojart.repository-integrity.v1",
+  "created_at": "2026-10-31",
+  "parent_commit": "d408b116e19c99e9cd79ea0114f73162dcc69715",
+  "parent_manifest_sha256": "15e5b955a45ac3075b64c023c65d38a81978a3d8a8736318d3b50018b58aedc3",
+  "scope": "M05 project isolation, global workspace snapshots, recovery and verified browser acceptance",
+  "note": "Tous les fichiers suivis sauf ce manifeste ; originaux conservés séparément. Les captures de contrôle navigateur ne sont pas livrées.",
+  "files": [
+    {
+      "path": ".agents/product-marketing.md",
+      "bytes": 480,
+      "sha256": "91dbb324dba5b83f03bfa06ee6dab991ba88572b5f96b3840f73090ba94e4296"
+    },
+    {
+      "path": ".agents/skills/bojart-creative-packaging/SKILL.md",
+      "bytes": 2558,
+      "sha256": "cedf004513ca254c391352fc3d2982c7496d44e8119d1bc95c4ea7049039acf7"
+    },
+    {
+      "path": ".agents/skills/bojart-growth-measurement/SKILL.md",
+      "bytes": 2618,
+      "sha256": "ae8919d832c0eb642410d0e31e3b028fdc146a09942e3af1131a2f3982228fca"
+    },
+    {
+      "path": ".agents/skills/bojart-knowledge-review/SKILL.md",
+      "bytes": 2559,
+      "sha256": "138aba2c6e96bdd81bc8d8bad709ae5be8fcb7be7fb85eac6ecade016f28e40c"
+    },
+    {
+      "path": ".agents/skills/bojart-publishing/SKILL.md",
+      "bytes": 2693,
+      "sha256": "4318d358cd0f458ba9c9c34770fdc1c86cc56f7e5ce76960a98be12edf84feb2"
+    },
+    {
+      "path": ".agents/skills/bojart-seo-site/SKILL.md",
+      "bytes": 2455,
+      "sha256": "0776b6702517334bec0e799ae472263c405c5ae6cdb1591ee02a3d4edfd5fab1"
+    },
+    {
+      "path": ".agents/skills/bojart-social-search/SKILL.md",
+      "bytes": 2499,
+      "sha256": "178ed9afa326f8fe9e72a06e4bcc627a242ac832295f7a76318bd3f43d9d9358"
+    },
+    {
+      "path": ".claude/product-marketing.md",
+      "bytes": 480,
+      "sha256": "91dbb324dba5b83f03bfa06ee6dab991ba88572b5f96b3840f73090ba94e4296"
+    },
+    {
+      "path": ".claude/skills/bojart-creative-packaging/SKILL.md",
+      "bytes": 2558,
+      "sha256": "cedf004513ca254c391352fc3d2982c7496d44e8119d1bc95c4ea7049039acf7"
+    },
+    {
+      "path": ".claude/skills/bojart-growth-measurement/SKILL.md",
+      "bytes": 2618,
+      "sha256": "ae8919d832c0eb642410d0e31e3b028fdc146a09942e3af1131a2f3982228fca"
+    },
+    {
+      "path": ".claude/skills/bojart-knowledge-review/SKILL.md",
+      "bytes": 2559,
+      "sha256": "138aba2c6e96bdd81bc8d8bad709ae5be8fcb7be7fb85eac6ecade016f28e40c"
+    },
+    {
+      "path": ".claude/skills/bojart-publishing/SKILL.md",
+      "bytes": 2693,
+      "sha256": "4318d358cd0f458ba9c9c34770fdc1c86cc56f7e5ce76960a98be12edf84feb2"
+    },
+    {
+      "path": ".claude/skills/bojart-seo-site/SKILL.md",
+      "bytes": 2455,
+      "sha256": "0776b6702517334bec0e799ae472263c405c5ae6cdb1591ee02a3d4edfd5fab1"
+    },
+    {
+      "path": ".claude/skills/bojart-social-search/SKILL.md",
+      "bytes": 2499,
+      "sha256": "178ed9afa326f8fe9e72a06e4bcc627a242ac832295f7a76318bd3f43d9d9358"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 72,
+      "sha256": "6d3f33c2d833222cfcca8ed90083797d7117c266eae72f41c3582e5f83abb7d0"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 246,
+      "sha256": "6506b290732d4a380ecd563b3f986998df2a7193e9627d4e851c6a330a331a9d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3288,
+      "sha256": "e9f78415365260114163d7a6c17f86f9fae2956fa5ba6c6d85739beabbe8747d"
+    },
+    {
+      "path": "BILAN_LIVRAISON.md",
+      "bytes": 3316,
+      "sha256": "1c2401d29edfec0c182e35c76735241b05064011ab8c7cf762a61298fac712d6"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 834,
+      "sha256": "a7528886692ccbffb00666888c76bc2579917ae529af2fcf86e4c3c55ebae3e6"
+    },
+    {
+      "path": "LICENSE_SCOPE.md",
+      "bytes": 473,
+      "sha256": "032fd765bbe9019e6a3c25853f297f69cc4f6c1ed70ff230466a76738f8f5944"
+    },
+    {
+      "path": "Lancer_Jarvis.cmd",
+      "bytes": 561,
+      "sha256": "ad8d151725a70d7b4e9ac71f5402ccb576d99492dd6f9988f92d784e2379a567"
+    },
+    {
+      "path": "Lancer_Jarvis.sh",
+      "bytes": 185,
+      "sha256": "cf9921b9f7d7e11f84d0521372ec73c9167d8480be76d8cf904cbb3d529d1356"
+    },
+    {
+      "path": "Ouvrir_un_dossier_Jarvis.cmd",
+      "bytes": 58,
+      "sha256": "1a9f9f6983eff4502e1f6071e417bdf0264d91e6c6ac995ee5437e5d8fbfcbe7"
+    },
+    {
+      "path": "Ouvrir_un_dossier_Jarvis.sh",
+      "bytes": 98,
+      "sha256": "e8b917c099aa6c05e57fff876c6a0b260bb46983b45195cbd2eeab2ca1487a9a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5123,
+      "sha256": "3776d04fd7e5e358a46c1759bb8590d4c3660423fd47a0a00f1a14d83a885a13"
+    },
+    {
+      "path": "Restaurer_Jarvis.cmd",
+      "bytes": 703,
+      "sha256": "d14a0caf05871bd381c176b9aadd35048b168606d899c35cec3398053241a1e2"
+    },
+    {
+      "path": "Restaurer_Jarvis.sh",
+      "bytes": 245,
+      "sha256": "0e2fae501f1f130df32521b382fb31e1963b7831428a05f8e3c189838411e983"
+    },
+    {
+      "path": "apps/jarvis/AGENTS.md",
+      "bytes": 1841,
+      "sha256": "892ad54bcf3ce1ae9940cd3ebbc5c104e83ec082c2d2a47d649591b8c134cc76"
+    },
+    {
+      "path": "apps/jarvis/APERCU_MISSION_02.html",
+      "bytes": 1287425,
+      "sha256": "bc37b02ea73292a66b26e05d4a7f95f96f0203b8d6ff2f8e6282d0e8f93b15ab"
+    },
+    {
+      "path": "apps/jarvis/APERCU_STUDIO_M03.html",
+      "bytes": 2698898,
+      "sha256": "485fd4f13992b3ad1f40bfe910058b8870f591709d2b68a8db8bb3c9444b4649"
+    },
+    {
+      "path": "apps/jarvis/CONTEXTE_LISIBLE.md",
+      "bytes": 6597,
+      "sha256": "756e9cfb0a980a7850c8daa30c515848b7dc1e7611f75fb2e751b97ef16b4722"
+    },
+    {
+      "path": "apps/jarvis/Lancer_Jarvis.cmd",
+      "bytes": 704,
+      "sha256": "2d9061e44a19196ad47d1c5d61693d624fa976f6592045ed0a3e0fbed0520896"
+    },
+    {
+      "path": "apps/jarvis/Lancer_Jarvis.sh",
+      "bytes": 330,
+      "sha256": "0649a15df73ad35fc41c4d6bcdc930f6b03062a5529ca63f75c0ed66b6e3c083"
+    },
+    {
+      "path": "apps/jarvis/README.md",
+      "bytes": 4260,
+      "sha256": "fa67abb7335c9ba8ac52038619ee8f0e133b97e87118bc95e1361f8ee763d982"
+    },
+    {
+      "path": "apps/jarvis/REPRISE_CLAUDE.txt",
+      "bytes": 1902,
+      "sha256": "06074065efdb7f4409e4536dd871ef4d4f238506655834cf6a72fc5153be184c"
+    },
+    {
+      "path": "apps/jarvis/app/audio_worklet.js",
+      "bytes": 392,
+      "sha256": "ac15a58a87fd2c41134c63fb8e1ba72446421f5a1e82acfd5eb7dbfb161fbb52"
+    },
+    {
+      "path": "apps/jarvis/app/capture.js",
+      "bytes": 2932,
+      "sha256": "89e378a06c87a907ee718074b836f6eb63622b87508980b2d5417509ac25803d"
+    },
+    {
+      "path": "apps/jarvis/app/console.html",
+      "bytes": 8327,
+      "sha256": "52388cc6acd75f65d317ff83d99d4e090e7ddf9a6e3e18d57d8615472f4eb70e"
+    },
+    {
+      "path": "apps/jarvis/app/consolidated_workbench.py",
+      "bytes": 13470,
+      "sha256": "f983a15a990a103d9841d2e119216280cd945a42909ebed24a95c916574c36ce"
+    },
+    {
+      "path": "apps/jarvis/app/context_guard.py",
+      "bytes": 2825,
+      "sha256": "b24369ca6a8dd7710b2e319e89d6ab751f3adb7c3c4cf7c2e40938a58d61d108"
+    },
+    {
+      "path": "apps/jarvis/app/control_tower.py",
+      "bytes": 11518,
+      "sha256": "efbdc6cb88de97853d8aeeffce198d26b931b4a49d7a01be93cb5582fd1343cf"
+    },
+    {
+      "path": "apps/jarvis/app/core.py",
+      "bytes": 23038,
+      "sha256": "ff79558a2a58f4321b54185783910f6dcfd874ec432d5ff49fe44611e8396eb1"
+    },
+    {
+      "path": "apps/jarvis/app/diagnostics.py",
+      "bytes": 3798,
+      "sha256": "37517a5eb5e09a0a8ebbbdab72632fc8956e17adfde1dcd852413abd3b3df659"
+    },
+    {
+      "path": "apps/jarvis/app/dialogue.py",
+      "bytes": 14157,
+      "sha256": "86deccfd1c8b3813709666bb31d7ddbaf93dd8d43b4faf6e8b6c4d4131ed3842"
+    },
+    {
+      "path": "apps/jarvis/app/display_contracts.py",
+      "bytes": 5967,
+      "sha256": "878ae59aac4be4fab391f459d1429c7db78c8059554f15e463fa65ae84d42c68"
+    },
+    {
+      "path": "apps/jarvis/app/growth.css",
+      "bytes": 3080,
+      "sha256": "ac0b6d2f6c0f077d5929da0ae74247c2eab89a9615cc09f0d2b369b4b2b0f7eb"
+    },
+    {
+      "path": "apps/jarvis/app/growth.html",
+      "bytes": 3019,
+      "sha256": "aed5baeae6361fb8cc93c8ec5e36a0fea8dbba38a6a00340ab63d022bbfe176e"
+    },
+    {
+      "path": "apps/jarvis/app/growth.js",
+      "bytes": 5471,
+      "sha256": "64a5da600fcd41cc87bbfd1bda89042b66aabd74475dd10ff6b091e3c14d2d21"
+    },
+    {
+      "path": "apps/jarvis/app/growth.py",
+      "bytes": 9710,
+      "sha256": "fae4e22d4cfd17510c8f13187d1eee23b91fc7a05e0cf458fb54107ff2345921"
+    },
+    {
+      "path": "apps/jarvis/app/index.html",
+      "bytes": 24012,
+      "sha256": "168c1e74e133be0cddb8678d2287722fb7fe0071592c2654d7c891d0a61918ce"
+    },
+    {
+      "path": "apps/jarvis/app/knowledge.html",
+      "bytes": 816,
+      "sha256": "75ffbf1ae5487c86374ea17e8f3933d118bb6a407570c80b3d341ba3f00fda00"
+    },
+    {
+      "path": "apps/jarvis/app/knowledge.js",
+      "bytes": 1174,
+      "sha256": "e2f66bbcf6b09b36a748aba609a6f3da29ba60fcaa199ac2406a0bf4dbcaaf3b"
+    },
+    {
+      "path": "apps/jarvis/app/launch_readiness.py",
+      "bytes": 4474,
+      "sha256": "c84a04ac74f3043178d47b83e2cdbf1cf5af27881c4a7c7b3406585c80c206b6"
+    },
+    {
+      "path": "apps/jarvis/app/media_library.py",
+      "bytes": 15103,
+      "sha256": "9afeff32fa7b03822f3c7addae8f648434210cf01552297d619402b44d639809"
+    },
+    {
+      "path": "apps/jarvis/app/proposals.py",
+      "bytes": 5630,
+      "sha256": "4740c3440c5cf81dac835c7ded773078349c85bec407a247dd3fc4d0a5bbd48b"
+    },
+    {
+      "path": "apps/jarvis/app/server.py",
+      "bytes": 8778,
+      "sha256": "7e471404672e347c0f21980a7420182497083eecbf2b82fe55205c71efded7c6"
+    },
+    {
+      "path": "apps/jarvis/app/studio.css",
+      "bytes": 7267,
+      "sha256": "9231f73b13a4f7a441d3eda16465c1535815526fc0275b252ffba8653888c4a2"
+    },
+    {
+      "path": "apps/jarvis/app/studio.html",
+      "bytes": 5358,
+      "sha256": "135f2b06601330e21c364319a89b9e5d7ce3f122fd44aa6a5babc34f17b7b07d"
+    },
+    {
+      "path": "apps/jarvis/app/studio.js",
+      "bytes": 6624,
+      "sha256": "96ab99ca55eefd688effc52dc1fff99f4afc0bc9d452c0d38bdc21be2c1c66c2"
+    },
+    {
+      "path": "apps/jarvis/app/studio_seed.py",
+      "bytes": 3374,
+      "sha256": "cee2a95cd9175a4b7945cd416a03a01b941ff327ae0d1ee80a6563c553166378"
+    },
+    {
+      "path": "apps/jarvis/app/studio_workbench.py",
+      "bytes": 5418,
+      "sha256": "a7194856a118a8e040d54db99962185ca87320a3dc6c4ecd7aab9bd2a16d995b"
+    },
+    {
+      "path": "apps/jarvis/app/tower.css",
+      "bytes": 6539,
+      "sha256": "c368d29ca300d6722f916ac16a80e025809aa36eb16c23efbf05034ce0439edf"
+    },
+    {
+      "path": "apps/jarvis/app/tower.html",
+      "bytes": 4558,
+      "sha256": "9db8e7b8b88ad6cca318ab08fc62f245a8c13dc0543a0e8d0e584069a54ba261"
+    },
+    {
+      "path": "apps/jarvis/app/tower.js",
+      "bytes": 5015,
+      "sha256": "8783d316d73f548836ac1dfce6cb74ad02aae1ed941f995e07477e7f7c6371dd"
+    },
+    {
+      "path": "apps/jarvis/app/tower_screen.html",
+      "bytes": 1203,
+      "sha256": "c49db689d83a693f64f72676a4afdc14e4301ca3154b9387d254c27a104150db"
+    },
+    {
+      "path": "apps/jarvis/app/tower_screen.js",
+      "bytes": 4457,
+      "sha256": "9f25286e3f024c140dfb6a357afc8b6ccc4595b59bfa0e4eefb230311c716d5d"
+    },
+    {
+      "path": "apps/jarvis/app/ui.css",
+      "bytes": 9705,
+      "sha256": "8aa63519edf2ada8575990d4c83d57dcf2e68e6730148d86049b1f618a8f51fd"
+    },
+    {
+      "path": "apps/jarvis/app/ui.js",
+      "bytes": 16655,
+      "sha256": "bfa390d29a22ad252d3ecaa415a6e0f363421bfda4cddc15e3154c786148ba7a"
+    },
+    {
+      "path": "apps/jarvis/app/viewer.js",
+      "bytes": 2696,
+      "sha256": "fee12dbeb1a65d4146b3e5d9c76723d58b1fe9090f434956c36ba631b1a3f0f6"
+    },
+    {
+      "path": "apps/jarvis/app/voice.py",
+      "bytes": 4112,
+      "sha256": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d"
+    },
+    {
+      "path": "apps/jarvis/app/workbench.py",
+      "bytes": 10690,
+      "sha256": "2e98a891449389abf7d3ce55771f618cbccb6f1740a2460358c021fd22bad8c4"
+    },
+    {
+      "path": "apps/jarvis/app/workspace.css",
+      "bytes": 1462,
+      "sha256": "7da21ca7c714db9e9a1140f6e42390374fdab69381d0aace005656246017279a"
+    },
+    {
+      "path": "apps/jarvis/app/workspace.html",
+      "bytes": 3930,
+      "sha256": "0dfd09724100df57718aca69d187eeb5441f1851e92dec1cbb0d785fb837bbe4"
+    },
+    {
+      "path": "apps/jarvis/app/workspace.js",
+      "bytes": 5337,
+      "sha256": "77801e888474257795c5b100db8e6a120457164db1534228c06d678efc824c58"
+    },
+    {
+      "path": "apps/jarvis/app/workspace_state.py",
+      "bytes": 21068,
+      "sha256": "008fd81ce3db5bd36ca3a659d560296693c04efc9e20be7af35ec76dfae9f088"
+    },
+    {
+      "path": "apps/jarvis/config.example.json",
+      "bytes": 245,
+      "sha256": "acad29728f08b5991677894b2fb40bb60f1a43890bfe101c2172e9d0f458ab0d"
+    },
+    {
+      "path": "apps/jarvis/context/CHARACTER_LOCK_ORIGINAL_V6.json",
+      "bytes": 1689,
+      "sha256": "a60c34510e3e986b148f50b21a647118a8c6f54589c399d5ad580872f72af1d9"
+    },
+    {
+      "path": "apps/jarvis/context/CONTEXTE_REFERENCE.json",
+      "bytes": 10059,
+      "sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+    },
+    {
+      "path": "apps/jarvis/context/CONTEXTE_STUDIO_M03.json",
+      "bytes": 1679,
+      "sha256": "ba1d5e336de8bddca1752e0d9fbefbc6d91c05f083f30d9afb0e974e6f10aa11"
+    },
+    {
+      "path": "apps/jarvis/docs/PROGRES_ET_LIMITES_M02.md",
+      "bytes": 3487,
+      "sha256": "b724a1306f9a9f6754d0ced3facc85c2eb2e84587c0d479e818700161f81c87b"
+    },
+    {
+      "path": "apps/jarvis/docs/PROGRES_ET_LIMITES_M03.md",
+      "bytes": 4975,
+      "sha256": "fa95e7ddb94538d4e903d265fe03c44c82dba25902d134b1b709481403f5c6d7"
+    },
+    {
+      "path": "apps/jarvis/docs/REPRISE_PC_CIBLE.md",
+      "bytes": 3945,
+      "sha256": "b5295b610a4f77bec345ab25557b7a856fee4e9f26bbe9c8a3c1c03971c36890"
+    },
+    {
+      "path": "apps/jarvis/docs/SOURCES_M02.md",
+      "bytes": 1619,
+      "sha256": "73ab434544b493d42e167b0e411fad036fce12fe9f00099f81ce52f9c0409331"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/manifeste.json",
+      "bytes": 2110,
+      "sha256": "3d52709bb2c9f8763aa22ff6b106c3e79ed129bd0cff57a890eedb28237bec63"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/modele.json",
+      "bytes": 616640,
+      "sha256": "9dfff398b3805e90b1a869acb0a9a242aefb0f2ab19bde85be81061ffb340003"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/parametres.json",
+      "bytes": 188,
+      "sha256": "6a6d336ebc094b33341d87d40a60982cb1d829f0b12b0fa4024f42d68e51568e"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/proposition.json",
+      "bytes": 11799,
+      "sha256": "66c7b1831330484582c07ac8595233c7d5f770661d1ba6db92ff22e8ff33e32a"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/recette_core.py",
+      "bytes": 18302,
+      "sha256": "1c2d75af2b04d16acd80ef405736081c7cdd1b388582eb3d3d0dafcdf40b75d1"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/socle.step",
+      "bytes": 36559,
+      "sha256": "4f11adec924db05b35ca5751475bf72291fd766c4be9d643c0801c23c88a5671"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/socle.stl",
+      "bytes": 237684,
+      "sha256": "22c366de185c1d54a538b9a0bcf5d46ecf04409c292e033b4eb6a9e08db16c20"
+    },
+    {
+      "path": "apps/jarvis/exemples/180mm/socle_metres.glb",
+      "bytes": 86484,
+      "sha256": "9f3a78b8dc3bbbf99b8e2124f28d8d753f2c3821ae6f6562a8480fb5fe40735f"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/manifeste.json",
+      "bytes": 2112,
+      "sha256": "7ca19d42e926675de2ca807e3e81dbf2136b33d23ad7a24a6cf59043f8baf390"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/modele.json",
+      "bytes": 620052,
+      "sha256": "8040fe03a039d257d2770df7ed4303c57ceacefbcb56132b47fe2214280eeae8"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/parametres.json",
+      "bytes": 189,
+      "sha256": "443591541340c61bc614853429f7870eb7697177f076fdda717dea8d09d9cc9f"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/proposition.json",
+      "bytes": 11800,
+      "sha256": "e56b04e21f3f58af6245e54aadcca2257c4437a249c05af9d667fcac7f08ab72"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/recette_core.py",
+      "bytes": 18302,
+      "sha256": "1c2d75af2b04d16acd80ef405736081c7cdd1b388582eb3d3d0dafcdf40b75d1"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/socle.step",
+      "bytes": 36586,
+      "sha256": "8e092e56a819d3c4bde7d8abddf78b1f64abeebb553ec89eebf780aef827f9de"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/socle.stl",
+      "bytes": 237684,
+      "sha256": "bece348eb6263933d2e3776821bdf60a35724587ab9283a3847a8cc43a36ba11"
+    },
+    {
+      "path": "apps/jarvis/exemples/240mm/socle_metres.glb",
+      "bytes": 86484,
+      "sha256": "2bccd8ee622502d38a5b9bd67bf8ab4ff79b378c7a0b83b6dacc107f91b262b8"
+    },
+    {
+      "path": "apps/jarvis/exemples/SAUVEGARDE_MISSION02.zip",
+      "bytes": 291429,
+      "sha256": "cdebe74cb59b8cb64cc59f99ccc2fe2a3db470a9549ac4e53ebf0b8d1d130cf2"
+    },
+    {
+      "path": "apps/jarvis/heritage/M01_AGENTS.md",
+      "bytes": 2766,
+      "sha256": "7ce70471959dfd79177c50692e7a45103af9641df0cf4c1983d435a910ca8f9f"
+    },
+    {
+      "path": "apps/jarvis/heritage/M01_README.md",
+      "bytes": 6725,
+      "sha256": "df80249792bb88f2f0c339da593fb6a7b520b94e8cc1831ea3d9aff4a78b7073"
+    },
+    {
+      "path": "apps/jarvis/heritage/M02_AGENTS.md",
+      "bytes": 1395,
+      "sha256": "52f17daa19bfd3593f2dff925b6ccc70d9e90445d1508cae5b49d2bb8ffc8573"
+    },
+    {
+      "path": "apps/jarvis/heritage/M02_README.md",
+      "bytes": 5999,
+      "sha256": "3e2cb4f0c7ae80a3385f8bae82e9c4cacfc446ea79c836913c3ce87008bfb973"
+    },
+    {
+      "path": "apps/jarvis/heritage/MANIFESTE_SOURCE_M03.json",
+      "bytes": 18302,
+      "sha256": "e31c50b48c0588be4559830a1b701e07b87acb053ad58206246b727c95457357"
+    },
+    {
+      "path": "apps/jarvis/heritage/SAUVEGARDE_DEMONSTRATION_M01.zip",
+      "bytes": 286685,
+      "sha256": "6b166c2c2629a78e6861e17fb26868a56a17791b91744528b6ced4099078e27c"
+    },
+    {
+      "path": "apps/jarvis/heritage/docs_m01/AMELIORATIONS_CONSOLIDEES.md",
+      "bytes": 11473,
+      "sha256": "433f8a3b6175e597845982d83655a8b7a413b37f3b49e80ee260e3198b5e88fb"
+    },
+    {
+      "path": "apps/jarvis/heritage/docs_m01/RECETTE_PC_CIBLE.md",
+      "bytes": 1817,
+      "sha256": "0241f5c43f586771fd9a1b3c97f5e85319e57948c15fbb4e0a1c11f9ca085b81"
+    },
+    {
+      "path": "apps/jarvis/heritage/docs_m01/SOURCES.md",
+      "bytes": 2902,
+      "sha256": "31fedee93d123a820d41fc3d1a28ba7140baa75aa625796258ec58d6658e037d"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/APERCU_MISSION01.png",
+      "bytes": 779303,
+      "sha256": "3e524cc346061bcc952a86f44e35b8cb1cf87651e8241e7cab2d9eebf92b0376"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/ETAT_LIVRAISON.json",
+      "bytes": 695,
+      "sha256": "dcc9a47b3639c519af34a4c0804a8ae11057358746924a1f821d20318347091b"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/INTEGRITE_PACK_ANTERIEUR.json",
+      "bytes": 2115,
+      "sha256": "9e6e2f713fd68f013d82c8f34f7e55936673167877b29fbe715d9af29dfb0326"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/LIMITE_TEST_NAVIGATEUR.txt",
+      "bytes": 432,
+      "sha256": "749ef9dbc67042d347c8600e249419ddab0de9c7eefce4287594df812706de5a"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/LOG_RECETTE_INTERFACE.txt",
+      "bytes": 1776,
+      "sha256": "00c4024b94daa9c84f104ab0ec33b186b0c3b7b8444409aa6549d4322b844c16"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/POSTE_MISSION01_DESKTOP.png",
+      "bytes": 792364,
+      "sha256": "c28b83c4d9b575627dafa5ba9347d77ad658a0820eefa28d237cd4239de05b91"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/POSTE_MISSION01_MOBILE.png",
+      "bytes": 613755,
+      "sha256": "fe5160cb885a243f833725d92065c50920774a112dfb922c6387c44a6249a10d"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/SAUVEGARDE_VERIFIEE.json",
+      "bytes": 40,
+      "sha256": "88c12a6141127fac2ac0835cf8e8c721bd830b3d6d24294c638ae906575acb33"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/TESTS_ANTERIEURS_REEXECUTES.txt",
+      "bytes": 1949,
+      "sha256": "5ab0ae30823901363a45721f821d82e0086e8813a51ec59d7e20f3891944d7d3"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/TESTS_INTERFACE.json",
+      "bytes": 1775,
+      "sha256": "3d9d09c059a58a77eca34e6f423d38e4782519f6a37bc5e5dde43f4e7d901285"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/TESTS_MISSION01.txt",
+      "bytes": 8280,
+      "sha256": "abbe6c48d930e4999e03e8fc4de518cf3432fffde94122acecba08cf52aa0fb8"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/inventaire_antecedents.json",
+      "bytes": 4364,
+      "sha256": "0a9c744a8b99761c57b2ac1663f3b84a5ac6d3b1e8a9c5363bfec94d20960f41"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/mission_180mm.json",
+      "bytes": 2110,
+      "sha256": "27fc2826088404febc123c607ec90c7d0ece4b970b598061ed06558a7c41ea44"
+    },
+    {
+      "path": "apps/jarvis/heritage/preuves_m01/mission_240mm.json",
+      "bytes": 2112,
+      "sha256": "0e132f31e6f47e7a5e02832b7515215587106f67de88aec9b51bdf5fd0b9374e"
+    },
+    {
+      "path": "apps/jarvis/preuves/APERCU_M02_DESKTOP.png",
+      "bytes": 809805,
+      "sha256": "8e46afc7f0782c4f76c77f13aea7a85f6c8d98c8f5f36f8c6909fa7dfbcb33a9"
+    },
+    {
+      "path": "apps/jarvis/preuves/APERCU_M02_MOBILE.png",
+      "bytes": 570861,
+      "sha256": "9624bde9ec1821ed247c45392ce4f9e991b41c1af267fc39549ab1510dee0157"
+    },
+    {
+      "path": "apps/jarvis/preuves/ENVIRONNEMENT_TEST.json",
+      "bytes": 238,
+      "sha256": "6d88468109f269ee1427b082b35456ec4a93cb303a572a3205e42e899627c283"
+    },
+    {
+      "path": "apps/jarvis/preuves/ETAT_LIVRAISON_M02.json",
+      "bytes": 841,
+      "sha256": "f37eda488aa7613625778b99f791ee73bb665c084fa0b7b401bf07e51cb765df"
+    },
+    {
+      "path": "apps/jarvis/preuves/LIMITES_RECETTE.txt",
+      "bytes": 1095,
+      "sha256": "332b92e7de5ff403f139313c344701455f77742620eaf228aa2157c9281a7856"
+    },
+    {
+      "path": "apps/jarvis/preuves/M02_DESKTOP_RESULTAT.png",
+      "bytes": 810121,
+      "sha256": "74763675a0909775a8dade75385e53808d7fab26941cfe55f096af039efe849b"
+    },
+    {
+      "path": "apps/jarvis/preuves/M02_MOBILE.png",
+      "bytes": 573489,
+      "sha256": "f23c0abe9980e125ff6605bbf829fa0c45267db7ead96563e3211fff3eb3ec6a"
+    },
+    {
+      "path": "apps/jarvis/preuves/M02_PROPOSITION_DESKTOP.png",
+      "bytes": 745010,
+      "sha256": "90a7a0442ba206e1ffa5fa5f18f6e0d6762a7a72176b827b4bb097e690577986"
+    },
+    {
+      "path": "apps/jarvis/preuves/SAUVEGARDE_M02.json",
+      "bytes": 185,
+      "sha256": "5df63d0d72d8f03525950a921c2dcc6eb84cabbd724469c56f506050ae5941dc"
+    },
+    {
+      "path": "apps/jarvis/preuves/TESTS_APERCU.json",
+      "bytes": 308,
+      "sha256": "b6295ae7c6a101e5fa7fbe84c050b6bd7e76b07ca2abd1ed4136086603a79e72"
+    },
+    {
+      "path": "apps/jarvis/preuves/TESTS_INTERFACE_M02.json",
+      "bytes": 4978,
+      "sha256": "76f782d44fb8b4e3f163189ed46874ae69dc099ee2c1a90e9ffa0875182675a0"
+    },
+    {
+      "path": "apps/jarvis/preuves/TESTS_INTERFACE_M02.txt",
+      "bytes": 1007,
+      "sha256": "7fdab4e48a25fe0742db50afd69083c9be44fc4d79714d3bf1cc6d51b6560477"
+    },
+    {
+      "path": "apps/jarvis/preuves/TESTS_M01_REEXECUTES.txt",
+      "bytes": 8280,
+      "sha256": "53b4eee8b427deaddb052dfba08fbc7fc8c1950830789c2806b51ed37fda9aa8"
+    },
+    {
+      "path": "apps/jarvis/preuves/TESTS_M02.txt",
+      "bytes": 181,
+      "sha256": "74c15a6f7b10a267e869d67feb65e5a47bc778f9db6c26cd6debdd96aff2a931"
+    },
+    {
+      "path": "apps/jarvis/preuves/mission_m02_180mm.json",
+      "bytes": 2110,
+      "sha256": "7f157871e3892e0c0ee19dd653bbf5ef9fa7e9e00bfd485fcc8ba8708629c233"
+    },
+    {
+      "path": "apps/jarvis/preuves/mission_m02_240mm.json",
+      "bytes": 2112,
+      "sha256": "f369b32d134ff95a46f990c0887cc1974435c61d41a004202b3d1f213b7cf84c"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/BRIEF_EXPORT_APERCU.json",
+      "bytes": 2589,
+      "sha256": "8c4ede3086301be7b75a05fefb7264b934ffe6cc8aa716704cb7bdc789c4fa14"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/BRIEF_PREPARE.json",
+      "bytes": 2593,
+      "sha256": "07ccf3304e562a325b656fded135a66c707e03a36dd37513f0c5594530df6bde"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/CATALOGUE_VERIFIE.json",
+      "bytes": 8927,
+      "sha256": "b09af3c817af7c007dfc4c60786f48604428726f81d1c6e520d78ee102467afd"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/ETAT_LIVRAISON_M03.json",
+      "bytes": 722,
+      "sha256": "6d784b3aac7158ef43e375bf3d0e9daad913332afaa306fe56cbe82cad92ab14"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/LIMITE_NAVIGATEUR_DIRECT.txt",
+      "bytes": 1890,
+      "sha256": "c4377ac571777821f3d0e42651f548c05df0a8a2e45d0a6e39f6554389e6105d"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/REGRESSIONS_M01_M02.txt",
+      "bytes": 261,
+      "sha256": "553d8b857b4d70fe0bc84e6a713b87071056ba34f6bc06fa9b099a5e50e1454c"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/STUDIO_DESKTOP.png",
+      "bytes": 895682,
+      "sha256": "60a6d2c3565ec9b15b3f51ba7315946e080acccf2007b2656549776814da40a6"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/STUDIO_MOBILE.png",
+      "bytes": 666146,
+      "sha256": "b2318aa08f1018935442f46b0d7a44b23e21896f60413d08ef53382c5b123781"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/TESTS_APERCU_M03.json",
+      "bytes": 1417,
+      "sha256": "9636c111c0e5cffa97701a2736641f38936b1bc791c4d07dfac6be41fcccd758"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/TESTS_APERCU_M03.txt",
+      "bytes": 43,
+      "sha256": "a4a4d5283c730fe313d95d6b98568b96125a8b169550c98e7b72ad149162a013"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/TESTS_BIBLIOTHEQUE.txt",
+      "bytes": 4265,
+      "sha256": "c56e968be2a83a9e0cad6f9b819b5650f326dfbc21fd07cdc1f9a95bb045fb04"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/TESTS_HTTP.txt",
+      "bytes": 1631,
+      "sha256": "979cc16495d89a12ba1e3fa9ecc73adcc70a89c5e39320931d74e6a035477c4c"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/VERIFICATION_ARCHIVE.json",
+      "bytes": 115,
+      "sha256": "b2336cfc7d686d854a7fef301db26a1162d88f041a4c9bda14ca32aca2e91331"
+    },
+    {
+      "path": "apps/jarvis/preuves_m03/VERIFICATION_BRIEF.json",
+      "bytes": 84,
+      "sha256": "e7f49dec5bbd87412527a39cc4fb0569ba9bdd90b94a239b6b22e227f1f85235"
+    },
+    {
+      "path": "apps/jarvis/requirements.txt",
+      "bytes": 208,
+      "sha256": "930b116ccd2b56f3631695bd45719bd907914af35c360a2d366277af94ce39a6"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/concept-v4.jpg",
+      "bytes": 24908,
+      "sha256": "036bb686a445e3a175427057e2acfdcc453bffd4da47ebd34189e3578026e4e2"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/ensemble.jpg",
+      "bytes": 33709,
+      "sha256": "73cf5b2b40f7aeabdb6673b0bccb0f177d1df2364a668f4411a440fa5995200c"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/intro.jpg",
+      "bytes": 25671,
+      "sha256": "10f8c0c8087a5c3df2f5397f4a07aa9e20df33e127e7968371c3b0a978cecfc9"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/outro.jpg",
+      "bytes": 27289,
+      "sha256": "b26596265f4894fbee74b88d8269f93ae54e2eeae2fe7a840af66f897e284e3a"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/profil.jpg",
+      "bytes": 32307,
+      "sha256": "6e47003f7281e409603de3665a9d3c5847296eb95d38efcff01946ee9b9b3c1e"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/troisquarts.jpg",
+      "bytes": 27211,
+      "sha256": "20c66c7bdcde19aa5e79bbb239215fe74fbcdd905de26f1c05f8c8c72627b3d2"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/vfx-2d.jpg",
+      "bytes": 32606,
+      "sha256": "e72ed2357aeb7542afc8af181be7c089b1eaf1f760061ae677894e3e1c151d2e"
+    },
+    {
+      "path": "apps/jarvis/studio_assets/visage.jpg",
+      "bytes": 25961,
+      "sha256": "648bd0b33158ae7027e0358ad24f885a92104e523829c8651a097f3663730966"
+    },
+    {
+      "path": "apps/jarvis/studio_media/animatique_v4.mp4",
+      "bytes": 763185,
+      "sha256": "6b4e373efa0d107abc9c16975fbe70b99db21f92615507d42b939ef24b61564a"
+    },
+    {
+      "path": "apps/jarvis/studio_media/essai_vfx_2d.mp4",
+      "bytes": 1314403,
+      "sha256": "4391a4af24f5e3ce7f08666bcc3ac687d3460d0373487cd3e5aaaf1e83387fe0"
+    },
+    {
+      "path": "apps/jarvis/studio_media/source_bojart.mp4",
+      "bytes": 9310485,
+      "sha256": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662"
+    },
+    {
+      "path": "apps/jarvis/tests/test_browser.py",
+      "bytes": 5124,
+      "sha256": "a66be3513d20c344735f19f0b956605a4124bbc48258002efdd866269d01df0b"
+    },
+    {
+      "path": "apps/jarvis/tests/test_browser_direct.py",
+      "bytes": 1283,
+      "sha256": "a0e7c5420cc3b1b064b7afff87b8600b8694a133da7a6fe35eda631017973d52"
+    },
+    {
+      "path": "apps/jarvis/tests/test_browser_m02.py",
+      "bytes": 9362,
+      "sha256": "7b2443a99d0d83b01de039f72f2fe278e5330d5b5d573775f2c38629195bd98f"
+    },
+    {
+      "path": "apps/jarvis/tests/test_m02.py",
+      "bytes": 15737,
+      "sha256": "b54579d21efddcc470bd331fff7f298e7c8bef993cf573aeaabdbdabbb985c85"
+    },
+    {
+      "path": "apps/jarvis/tests/test_mission01.py",
+      "bytes": 16220,
+      "sha256": "f509e526bb09056a4ed8460cf9c9da3a1f42ae353826b57a71d72b57c8e4ad9f"
+    },
+    {
+      "path": "apps/jarvis/tests/test_preview.py",
+      "bytes": 2313,
+      "sha256": "67a58ce1c006b27531256aa9e38fb2cc42b065f45603e52bb65f0d0631c17c71"
+    },
+    {
+      "path": "apps/jarvis/tests/test_ui.py",
+      "bytes": 8034,
+      "sha256": "2ec5513f6f6b06a8e46d343485f254ed99720ff1af4298727a68bd8fe001d9e5"
+    },
+    {
+      "path": "apps/jarvis/tests_m03/test_media_library.py",
+      "bytes": 9568,
+      "sha256": "bb4deae6e65965c0a15250f9cc4c705afa6285bf97f344ea3c5cefe58464d9a9"
+    },
+    {
+      "path": "apps/jarvis/tests_m03/test_preview_m03.py",
+      "bytes": 3724,
+      "sha256": "93ea56a68f1876d27745752dd176cfa097498575250d6e8303ef03821cbaa148"
+    },
+    {
+      "path": "apps/jarvis/tests_m03/test_studio_browser.py",
+      "bytes": 4242,
+      "sha256": "06efd5bb1d018b97de33811f04db5f2bb7a72ef575769bd62ea302704b866262"
+    },
+    {
+      "path": "apps/jarvis/tests_m03/test_studio_http.py",
+      "bytes": 4622,
+      "sha256": "74f40552cc122acda6f3ffad07358396d05d06e7319f4ba94a615960e3ec92d3"
+    },
+    {
+      "path": "apps/jarvis/tools/build_studio_preview.py",
+      "bytes": 2374,
+      "sha256": "355f27d80009b70b4a6286a351fc1085c1aee0f728a08fb93dcc23cf0b7b7408"
+    },
+    {
+      "path": "config/M04_INVENTAIRE_A_REMPLIR.json",
+      "bytes": 1017,
+      "sha256": "9a763deedc8dc219a850a7cd1906c1fd9fb7cdeb3bdba36ba4bf9d6da07ee261"
+    },
+    {
+      "path": "context/CONTRADICTIONS_RESOLUES.md",
+      "bytes": 1411,
+      "sha256": "50c6876ad38e71ce8e0da50af93e81e53a4e6df5e897ec0957758c3e2d3df359"
+    },
+    {
+      "path": "context/DECISIONS.json",
+      "bytes": 4700,
+      "sha256": "fcdb41b84b63d73fb7c26ec3863ad69df03678a746164724beeafbdf7dde1f62"
+    },
+    {
+      "path": "context/HANDOFF_CLAUDE.md",
+      "bytes": 1418,
+      "sha256": "dd03ccbcc0272150f0054d9fc0d3ec34948a9eb58886cb1f578488b94faa76c6"
+    },
+    {
+      "path": "context/PERIMETRE_ET_FEUILLE_DE_ROUTE.md",
+      "bytes": 4097,
+      "sha256": "5ee25c5d35288e998cf40c3289cec70a0af056d17f200351d0cb667409c7b086"
+    },
+    {
+      "path": "context/START_HERE.md",
+      "bytes": 4774,
+      "sha256": "ce783612d8d956f595340b716d1ab0c8f0d9f1285aa8b9540f019c9e80c67a94"
+    },
+    {
+      "path": "creative/character-lock-v6/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+      "bytes": 784472,
+      "sha256": "714fdc7cade14207669cf62d739f430df69e6eb1ceea51f731857286fa92e8bd"
+    },
+    {
+      "path": "creative/character-lock-v6/BOJART_CHARACTER_LOCK_V6.json",
+      "bytes": 1689,
+      "sha256": "a60c34510e3e986b148f50b21a647118a8c6f54589c399d5ad580872f72af1d9"
+    },
+    {
+      "path": "creative/character-lock-v6/BOJART_V6_GENERATION_PROMPTS.txt",
+      "bytes": 2010,
+      "sha256": "ee8331d9f5cb5e14e4913801bc7a8c15a64993033c9b1ea90bf2bda238ac111f"
+    },
+    {
+      "path": "creative/character-lock-v6/BOJART_V6_SHOT_LIST.csv",
+      "bytes": 861,
+      "sha256": "06fafc30b80066673404925a48e6ecd319ead97cee615870b9af641728ec4d2d"
+    },
+    {
+      "path": "creative/character-lock-v6/BOJART_V6_STORYBOARD_CONCEPT.png",
+      "bytes": 2626028,
+      "sha256": "5fa03c6b57dda674532f45529effcd34ea623e60ae3932608cddbb42577fbdce"
+    },
+    {
+      "path": "creative/character-lock-v6/orig_10.2.png",
+      "bytes": 790688,
+      "sha256": "dc9fff355bdf0ead2a759c910d42117f3d3665daffc43b3e20c159479681e941"
+    },
+    {
+      "path": "creative/character-lock-v6/orig_8.5.png",
+      "bytes": 769259,
+      "sha256": "63c8153482e53553bb24341453b2813cef604b7330a73b9be42aafda31fd8b0d"
+    },
+    {
+      "path": "creative/generations/REGISTRY.json",
+      "bytes": 10612,
+      "sha256": "e10ff95d080f1c270dd65515e9dcb033bab63bd2e6d3713317572ed4831fa317"
+    },
+    {
+      "path": "docs/ARCHITECTURE.mmd",
+      "bytes": 759,
+      "sha256": "aac8db428acfe8855e6e9a27b977a20effd755fb0f884609896f5360d559b65f"
+    },
+    {
+      "path": "docs/CONSOLIDATION.md",
+      "bytes": 3570,
+      "sha256": "7d7ce307dd2e71bca72d373bce44ef5378f1b76f7d219f1829b5188f946226d8"
+    },
+    {
+      "path": "docs/SEO_PUBLICATION_2026-10-31.md",
+      "bytes": 16586,
+      "sha256": "1f05715b85cfedcbacce79a32b4cb15f16965a933d55b9a59d61d0e239d5b94a"
+    },
+    {
+      "path": "docs/SOURCES_CONSOLIDATION.md",
+      "bytes": 859,
+      "sha256": "d6f1878e24670a6ef82984f621b6ca4d3c9614f88410dfc07f2e08161da58657"
+    },
+    {
+      "path": "docs/TRANSFER_GITHUB.md",
+      "bytes": 4067,
+      "sha256": "cf9f37ed3130f8019d489d06c6e01e9b26406988efa1d1ee517723dbdd5b83ef"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/EXEMPLE_BROUILLON_VERIFIE.json",
+      "bytes": 3809,
+      "sha256": "d627af8d640af1ed8fe993d313edf02538a78fc5ed3624d0b47d640c7ed7334d"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/GROWTH_TESTS.txt",
+      "bytes": 4202,
+      "sha256": "0494ddba7a082ba3ab9b4ea4c125c6d9583a7983ca309e27ae0cf65036ea2970"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/METIER_TESTS.txt",
+      "bytes": 3559,
+      "sha256": "b1fe840ef1f07c03a33e8a3886cbe4e066e6ade85389a4bc28e11ff3b0fee195"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/PLANNING_TESTS.txt",
+      "bytes": 1913,
+      "sha256": "c9cb1ee6ab9eb5b46ecc34593c7930e7d0241a5d1914e4e28d43bd67f5895758"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/PYTEST_RECHECK.txt",
+      "bytes": 355,
+      "sha256": "ed001dc1fd469646f473e79fe0281b549c3d162a220730cd3f077840334c4217"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/TESTS_BROWSER_LOCAL.json",
+      "bytes": 500,
+      "sha256": "477970e74a002ed85b8f532f507a29c81c78a6b965da942c58ef73b3524db261"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/TESTS_INTERFACE.json",
+      "bytes": 859,
+      "sha256": "6c227ec890b1793e33ed577914f30380f68022261603370b122ce96ef4c6c693"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/TESTS_SUMMARY.json",
+      "bytes": 530,
+      "sha256": "4c330419ec73e25b1763dc083f09421cfcc915cbcd2a4bc648dfb24cb95ef89a"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/UNITTEST_FINAL.txt",
+      "bytes": 11075,
+      "sha256": "3fe3ce570577791217effb785f63fb886f59b808dd05bee385b0a8afc65dc87c"
+    },
+    {
+      "path": "docs/evidence/growth-2026-10-31/recipe_browser_preview.py",
+      "bytes": 3752,
+      "sha256": "f33412b734a472b31fcc2ccdcb9ca2b1d9a7335fb17fd9707892611c7965a530"
+    },
+    {
+      "path": "docs/evidence/m05-2026-10-31/ACCEPTANCE_M05.json",
+      "bytes": 10173,
+      "sha256": "e3db49b6c2937ae2c7ea7f18dd7d25868b0c13e7b85e29113fa50eaee80a5f1c"
+    },
+    {
+      "path": "docs/evidence/m05-2026-10-31/CLI_M05.json",
+      "bytes": 469,
+      "sha256": "cfeebcc385c9d272b1b4b2c908270ada6389b516a3f2e929dd40701066714db8"
+    },
+    {
+      "path": "docs/evidence/m05-2026-10-31/TESTS_FINAL.log",
+      "bytes": 25173,
+      "sha256": "c223b87deb3df4b9e6273494562748cbfd2b498e8677bd0f3da8befaa6ba3571"
+    },
+    {
+      "path": "docs/evidence/m05-2026-10-31/TESTS_SUMMARY.json",
+      "bytes": 6373,
+      "sha256": "3d6e2c2809000e6de307fcc167adce747bad6eea36e795f6eaf553238704d8ec"
+    },
+    {
+      "path": "docs/guides/BOJART_3_Fiches_Terrain_A_Imprimer.pdf",
+      "bytes": 64940,
+      "sha256": "ef73860e92f1b5338432d41ebb248fab1a3a7ceadbd48982f7ae755cd7f539dc"
+    },
+    {
+      "path": "docs/guides/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+      "bytes": 784472,
+      "sha256": "714fdc7cade14207669cf62d739f430df69e6eb1ceea51f731857286fa92e8bd"
+    },
+    {
+      "path": "docs/guides/BOJART_Fiches_Terrain_A_Imprimer.pdf",
+      "bytes": 48739,
+      "sha256": "8fe1deb4dbaeab1707e06730e05bc99246318569413ac629f607530340d7b59a"
+    },
+    {
+      "path": "docs/guides/BOJART_Guide_Illustre_Atelier_Tournage_Jarvis.pdf",
+      "bytes": 1154213,
+      "sha256": "1acafe915aec4b060615dc50ba6a9152b8197d29a41ed2e148846a8f70f43ba5"
+    },
+    {
+      "path": "docs/guides/BOJART_Guide_Terrain_Gestes_Tournage_Jarvis.pdf",
+      "bytes": 88381,
+      "sha256": "5b8cbaa4131a6660b3247f0da56bb7b72c30d00c21286ce2bb1569fb50ca0542"
+    },
+    {
+      "path": "docs/guides/BOJ_ART_JARVIS_Dossier_Associes_2026.pdf",
+      "bytes": 87650,
+      "sha256": "0141f59afb3b6920243ed2c18776d75d25a4d7084bcff3c54093af234c1fd482"
+    },
+    {
+      "path": "docs/guides/BOJ_ART_JARVIS_Dossier_Lancement_Associes_20-10-2026.pdf",
+      "bytes": 5690191,
+      "sha256": "2707fb31452d3eb48c431a17eb202f2dd373d9d01513de5932b0c34fc9512f7f"
+    },
+    {
+      "path": "docs/m04/PIPELINE_M04.mmd",
+      "bytes": 919,
+      "sha256": "f7435cf464e7f0772501942c0af6bf59ae467c92bad1bfce04b5367b63e76919"
+    },
+    {
+      "path": "docs/m04/RELEASE_GATE_M04.md",
+      "bytes": 4393,
+      "sha256": "88a4c0201f6238ee883ffa731e08018621b6898c8c5f15cb3d1133589d104603"
+    },
+    {
+      "path": "docs/m04/REPRISE_CLAUDE_M04.txt",
+      "bytes": 1727,
+      "sha256": "a94ed88da62f13de82fcf87b1e549dfe49be9d6fcf01612d2c69b886580cb20b"
+    },
+    {
+      "path": "docs/m05/RELEASE_M05.md",
+      "bytes": 7792,
+      "sha256": "9cf76955958c0b8f5af9455e994f6fa9e5d78485e4fc3a0f8f400987ca8358e9"
+    },
+    {
+      "path": "docs/m05/REPRISE_M05.txt",
+      "bytes": 2899,
+      "sha256": "6e46c482bef3b92684c99cab432fa2c7abc66f1fb24e4a97cd7dca48e68676c9"
+    },
+    {
+      "path": "history/ai-design-2026-10-20/CONTRAT_DEPLOIEMENT.json",
+      "bytes": 2412,
+      "sha256": "f0886cc3fefe94cebacdbe6ed7e109bf347f68df64edd30c0f8da4c3c145c894"
+    },
+    {
+      "path": "history/ai-design-2026-10-20/PLAN_INTEGRATION.md",
+      "bytes": 13491,
+      "sha256": "28a21df045795bdd45875da141fef4f759fba4556bfdfa040a105b5eaf5cc179"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/APERCU_DEMONSTRATION.png",
+      "bytes": 679582,
+      "sha256": "6a7ca90b001380a8cae4ab9abe267fe9f620f85391c66ace29e7b5159a97f060"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/DEMONSTRATION_BOJART.html",
+      "bytes": 789488,
+      "sha256": "92f4e20c36f226bab0a192bfd8ea65373ad055f99da73dba7bb187fef4cd63c0"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/PREUVE_GEOMETRIE.json",
+      "bytes": 1797,
+      "sha256": "681ad7e778e906273559da1b75e585ec51b6d6fa8eca939d55a04b8c0492b591"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/RENDU_DU_STL.png",
+      "bytes": 32600,
+      "sha256": "6c8791e9d78f0f19ab6ba9e3bc26e967ea78ef6af35c27c36edd483ea473193d"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/generer_socle.py",
+      "bytes": 1448,
+      "sha256": "b1fb234471b710cdd3028851c5c6239bada73a700523096f59064e46dc5df4f2"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm.step",
+      "bytes": 36559,
+      "sha256": "55bf278416a2c6917f689b7a7f796da676065a691be4e2cea76613fca2a5a57e"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm.stl",
+      "bytes": 237684,
+      "sha256": "22c366de185c1d54a538b9a0bcf5d46ecf04409c292e033b4eb6a9e08db16c20"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm.svg",
+      "bytes": 178634,
+      "sha256": "cf109c81a8b6a96706502d86fcde628c3246e8324e3fb5b7401e75f4556ce931"
+    },
+    {
+      "path": "history/launch-2026-10-20/01_Demonstration/socle_180mm_metres.glb",
+      "bytes": 86508,
+      "sha256": "35e3a5a6463db6276fee732ddc3dc82fb6344808ee5c7becf6a00674eb9f195a"
+    },
+    {
+      "path": "history/launch-2026-10-20/02_Audit_PC/Audit_Windows.ps1",
+      "bytes": 2861,
+      "sha256": "567efc9524eb62521e172c12b4e4712f2b9fed20f374d730e7761b6568cdc54a"
+    },
+    {
+      "path": "history/launch-2026-10-20/02_Audit_PC/Demarrer_Audit_Linux.sh",
+      "bytes": 326,
+      "sha256": "7ca4326c8ad6c5fbbf79ab7439d4314a393288fe857f8d92a583a0d92401ffa5"
+    },
+    {
+      "path": "history/launch-2026-10-20/02_Audit_PC/Demarrer_Audit_Windows.cmd",
+      "bytes": 216,
+      "sha256": "571b41801fe9bfce9be34fca92866153d83f363f8fbc450f8f0571d7b211d539"
+    },
+    {
+      "path": "history/launch-2026-10-20/02_Audit_PC/audit_pc_v2.py",
+      "bytes": 5620,
+      "sha256": "eec316ae1e6df94fcdfceabc6bcbbd390607275ded327cd7b2c2e3db8465d6c8"
+    },
+    {
+      "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/CONTROLE_PDF.json",
+      "bytes": 246,
+      "sha256": "e77768e8add26b879bfa945a76a6f19d92552a161160cef2fb1b22afaad6e088"
+    },
+    {
+      "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/RESULTATS_TESTS.json",
+      "bytes": 188,
+      "sha256": "02620a344256ffb57c676931adf01fc31cdc7791244d25b0f3ade6a62aca083b"
+    },
+    {
+      "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/RESULTATS_VISUALISEUR.json",
+      "bytes": 664,
+      "sha256": "5d15569648fd0763a910a3f9cf9db53971f71a59d298bde0008aeb6c57efb3da"
+    },
+    {
+      "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/TESTS_EXECUTES.txt",
+      "bytes": 1949,
+      "sha256": "48a773d5e5a53e8f5f40612c23fab7a6e2d95e343aa03e798c1853bd1ef1849f"
+    },
+    {
+      "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/decision_gate_demo.py",
+      "bytes": 2971,
+      "sha256": "5525a7a1c52ed1ddd294ce596f0242098c392e63647cc9ab5dc653f5ce605c23"
+    },
+    {
+      "path": "history/launch-2026-10-20/03_Preuve_Et_Tests/test_proof.py",
+      "bytes": 5062,
+      "sha256": "445eaa05340972b742a0f31f6de017dea2260f885cc26d1978ea97ab737915e2"
+    },
+    {
+      "path": "history/launch-2026-10-20/04_Documents/CONTRAT_LANCEMENT.json",
+      "bytes": 3046,
+      "sha256": "251e1d9e05a4505ac09b0646eec63f7c0e9f63839471e5f94eb24da16bc086e3"
+    },
+    {
+      "path": "history/launch-2026-10-20/04_Documents/Dossier_Associes.pdf",
+      "bytes": 5690191,
+      "sha256": "2707fb31452d3eb48c431a17eb202f2dd373d9d01513de5932b0c34fc9512f7f"
+    },
+    {
+      "path": "history/launch-2026-10-20/04_Documents/MISSION_REPRISE_CLAUDE.md",
+      "bytes": 3961,
+      "sha256": "f52e255755188dce2b98bfcaf5ce79eedd8a3fd2f8756a3f70805d6590f2dfd5"
+    },
+    {
+      "path": "history/launch-2026-10-20/04_Documents/REGISTRE_PREUVES.md",
+      "bytes": 3656,
+      "sha256": "8aeb843938ef91d22b92d3a837b28ebf6d0a5bfaabea79a3fc96ed884608d43e"
+    },
+    {
+      "path": "history/launch-2026-10-20/04_Documents/SOURCES.md",
+      "bytes": 1251,
+      "sha256": "1c8d355cce76ad9309405f97b68448d6619f68f9d37219b34eeed77c24cdf2da"
+    },
+    {
+      "path": "history/launch-2026-10-20/MANIFESTE_SHA256.json",
+      "bytes": 4027,
+      "sha256": "71cd89063c655d103724797d7a0b22829e27158762aab0cfd3136271d045f0c2"
+    },
+    {
+      "path": "history/launch-2026-10-20/README_COMMENCER_ICI.md",
+      "bytes": 3875,
+      "sha256": "302f405d726abc66e317b043509883f9ab77dfd12833816f1cdc50866917cedf"
+    },
+    {
+      "path": "knowledge/growth/AUDIT_SKILLS.md",
+      "bytes": 1515,
+      "sha256": "f41ec8042032da92ea456af07dbf1e5be4297a0c234dabad665e6d9bd37e8f5c"
+    },
+    {
+      "path": "knowledge/growth/BRAND_CONTEXT.json",
+      "bytes": 2539,
+      "sha256": "cd99903d3afdf0bb82b00c212840df2cd545bc7d45e15ed6e174854ac8a11262"
+    },
+    {
+      "path": "knowledge/growth/PLATFORM_RULES.json",
+      "bytes": 944,
+      "sha256": "f655fa720a7918d2a087bdf82224d5d7f820ffb2ff5cfeb5ed650aa60dbf947a"
+    },
+    {
+      "path": "knowledge/growth/PUBLISHING_CONTRACT.md",
+      "bytes": 2706,
+      "sha256": "2baf2c120776d58a7a69d9d1a42687842be55f7b2317c97cb70ea61d70ced42c"
+    },
+    {
+      "path": "knowledge/growth/SKILLS_INSTALLED.json",
+      "bytes": 2791,
+      "sha256": "34ce7704ff4db869d77791c17c5cda77023c01e53126bb97c41c81fa9e42ab7c"
+    },
+    {
+      "path": "knowledge/growth/SOURCES.json",
+      "bytes": 7288,
+      "sha256": "14c2b62984e0a3458b5189b849a6a8950ded82031c3454aa7d4ae0deebbb0529"
+    },
+    {
+      "path": "knowledge/growth/TOPICS.json",
+      "bytes": 2876,
+      "sha256": "51b889c5f9ab69553d502bf771ab0f5dec59b997e01a069499ac58fb50270f3a"
+    },
+    {
+      "path": "knowledge/metier/BASE_METIER.html",
+      "bytes": 96518,
+      "sha256": "60e8bb14c0ef834f6a7345e0fcbe1f012c7117bc3530821f61a5bd89926dd211"
+    },
+    {
+      "path": "knowledge/metier/BASE_METIER.md",
+      "bytes": 63204,
+      "sha256": "3251eed479d3365878ccd715d7eff8d38508da8498b8e3a2a315e11843580e69"
+    },
+    {
+      "path": "knowledge/metier/MANIFESTE_SHA256.json",
+      "bytes": 3920,
+      "sha256": "afbd57b4f7e9aa580bfb98b0854d927a5171954f8fb03f9cde452e39a2d9b454"
+    },
+    {
+      "path": "knowledge/metier/README.md",
+      "bytes": 2500,
+      "sha256": "383166b58c21eaf3373bc4d368cc33f2cad3a50f71693ca4b4f44d8fd13fb0f7"
+    },
+    {
+      "path": "knowledge/metier/app/base_metier.py",
+      "bytes": 10444,
+      "sha256": "6c83c4a7bcfdd5dff5e73580d7047b4e0a3d7d66cd9b160e39f83733ce3e3469"
+    },
+    {
+      "path": "knowledge/metier/data/contexte.json",
+      "bytes": 1596,
+      "sha256": "246b114e9d6a5bcae149bcdad709b0d48841c8c61a99672806edf7d4ded04b02"
+    },
+    {
+      "path": "knowledge/metier/data/fiches.json",
+      "bytes": 52631,
+      "sha256": "8ac541863087ba8d3e2e4cd565216532d9c1c3b938e550bcdfc17fbbc3246f9c"
+    },
+    {
+      "path": "knowledge/metier/data/index_metier.sqlite",
+      "bytes": 77824,
+      "sha256": "8db24a26e0b021bcaee48430622d7ea67686c490a947be9d2f8ee1a959ab588c"
+    },
+    {
+      "path": "knowledge/metier/data/procedures.json",
+      "bytes": 11399,
+      "sha256": "03ec24a2da2a63e51064ec613698d6a7064017cf1838f6e9cd1d26d6df8ae5ed"
+    },
+    {
+      "path": "knowledge/metier/data/registres_a_renseigner.json",
+      "bytes": 2898,
+      "sha256": "b8e582ac33de59787603c434443dd7277115ba0c76e40d88f32a7cb43eae7d18"
+    },
+    {
+      "path": "knowledge/metier/data/sources.json",
+      "bytes": 27453,
+      "sha256": "4a96a7fc4707d39d108a828943e772010e2811f53b2959a356fe2a1ce42d09d4"
+    },
+    {
+      "path": "knowledge/metier/docs/BILAN_LIVRAISON.md",
+      "bytes": 1908,
+      "sha256": "5b048e7c9645bf1fc38dcf11cb93fc2fb2603557a48857b2acc90a648758c254"
+    },
+    {
+      "path": "knowledge/metier/docs/EXEMPLES_JARVIS.md",
+      "bytes": 2205,
+      "sha256": "9fe448e872ba3f374ec811e9a3be631b9a0719a7e5a06f55dfbe6dc0f62ffa72"
+    },
+    {
+      "path": "knowledge/metier/docs/INTEGRATION_M03.md",
+      "bytes": 2206,
+      "sha256": "aeec781a68af32624172464479e7cab9fa01bd48da4e3ab29393ee96c301d852"
+    },
+    {
+      "path": "knowledge/metier/preuves/BIBLIOTHEQUE_DESKTOP.png",
+      "bytes": 233527,
+      "sha256": "ef31e0352047018f09b003b3265e64b89bbd1299319014111386d70ad207f263"
+    },
+    {
+      "path": "knowledge/metier/preuves/BIBLIOTHEQUE_MOBILE.png",
+      "bytes": 183378,
+      "sha256": "ae0e5554612c52695e50cbfe137cbcfcbb03f4736ab174da1bbf4f0fff69dc61"
+    },
+    {
+      "path": "knowledge/metier/preuves/ETAT_LIVRAISON.json",
+      "bytes": 1454,
+      "sha256": "8d48a26439b42f574e2ea7a0bcce9c49acd5e495e7b678597c100e0e7167ff3e"
+    },
+    {
+      "path": "knowledge/metier/preuves/PROVENANCE_REPRISE.json",
+      "bytes": 480,
+      "sha256": "56853bf7e92f04d5e42c8509473b78533da3e9459dbb59c122731736812cfd70"
+    },
+    {
+      "path": "knowledge/metier/preuves/RECHERCHES_TESTEES.json",
+      "bytes": 51315,
+      "sha256": "b9f2c1d2070bf4057f3f067947551e3b693acd1579ffd0593c2dfa2b9f6f1036"
+    },
+    {
+      "path": "knowledge/metier/preuves/TESTS_INTERFACE.json",
+      "bytes": 1616,
+      "sha256": "292970d57fb5d7b44cc36eeba28e34f5b09a3cb8e686efa2879948d2670a37d0"
+    },
+    {
+      "path": "knowledge/metier/preuves/TESTS_UNITAIRES.txt",
+      "bytes": 3559,
+      "sha256": "22584f6e2cda26dc2a9cce4bdcc128c859f74b0c82184cb9543aeb43371643d5"
+    },
+    {
+      "path": "knowledge/metier/preuves/exemple_recherche_resine.json",
+      "bytes": 5682,
+      "sha256": "aaf8f7f2a5325c326488e420c9d9aece598c1be715863d8bf72fa25cc9c83fe7"
+    },
+    {
+      "path": "knowledge/metier/skills/bojart-base-metier/SKILL.md",
+      "bytes": 1858,
+      "sha256": "b650802db744c164bbe76e09fef7ced22113afae5477dd5c2afef39c90826980"
+    },
+    {
+      "path": "knowledge/metier/tests/check_interface.py",
+      "bytes": 4015,
+      "sha256": "adf8fdfb2c39e23ca16b9336a842acf69429aed3bd7161868a16c8d5fca2c5c8"
+    },
+    {
+      "path": "knowledge/metier/tests/test_base_metier.py",
+      "bytes": 6894,
+      "sha256": "ce269d85a2edfe9d38a9c0dd13e9fbbe50983e4d16f4854c312a286057205e89"
+    },
+    {
+      "path": "labs/planning/APERCU_PLANNING.html",
+      "bytes": 64360,
+      "sha256": "30ba2eaa44dc8fc7ce479dd33060f43edab62130d35aa49dc7ac4005ff712b68"
+    },
+    {
+      "path": "labs/planning/INNOVATIONS.json",
+      "bytes": 3031,
+      "sha256": "340c3e2b64489cf0db775d11df0d96c03503326ca5836e56300e4f969aeec6a3"
+    },
+    {
+      "path": "labs/planning/MANIFESTE_SHA256.json",
+      "bytes": 4799,
+      "sha256": "1e5cffa58b26df6f76b6b7785505cfb422982132fb2cf5a292cbd77e71ec0382"
+    },
+    {
+      "path": "labs/planning/README.md",
+      "bytes": 2377,
+      "sha256": "478f01adc83d6885088295b8d7fbf150dcc4aa91ba4b2d220e0ff0fe6fd43702"
+    },
+    {
+      "path": "labs/planning/REPRISE_CLAUDE.txt",
+      "bytes": 1821,
+      "sha256": "a0c0c99513ccd06ec686bdf2405b411e77b694729ab27f9f0f0ba4255fdabe6a"
+    },
+    {
+      "path": "labs/planning/build_dashboard.py",
+      "bytes": 10044,
+      "sha256": "301e41631fd520186d8bcc391ae3acbe19cd93bba910458e835ea126d88cc40d"
+    },
+    {
+      "path": "labs/planning/docs/INNOVATIONS_JARVIS.md",
+      "bytes": 13222,
+      "sha256": "213b6ef849f7952d69f4435c0632629249e70ecb936f2ebd7581aa4d867c057a"
+    },
+    {
+      "path": "labs/planning/docs/SOURCES.md",
+      "bytes": 2556,
+      "sha256": "3f9adf5d091ef29f9894d2a6bd5776aec03356092df4cab5d216429a9e65e777"
+    },
+    {
+      "path": "labs/planning/exemples/base.json",
+      "bytes": 2180,
+      "sha256": "450d6cfe73128b34b33883227e7de4956b59ab1a4d93bf16d7882b6abae5d1ff"
+    },
+    {
+      "path": "labs/planning/exemples/compatibilite_manquante.json",
+      "bytes": 2128,
+      "sha256": "daf7ffbd5c27a9d15d5cd9d22d2a9657145bd881355a26e901210a7d66fdd498"
+    },
+    {
+      "path": "labs/planning/exemples/echeance_courte.json",
+      "bytes": 2170,
+      "sha256": "e36723b03993cc033d59f36a9318509331b79a12db7795ff04948dbf5e431e43"
+    },
+    {
+      "path": "labs/planning/exemples/finition_plus_longue.json",
+      "bytes": 2167,
+      "sha256": "e74e203fcacb309c8008522e021bb463f7f037a8c75b19cb173a8ff73c7e50ed"
+    },
+    {
+      "path": "labs/planning/exemples/machine_absente.json",
+      "bytes": 2240,
+      "sha256": "863578ba9985a0d985deb716d4ca8fee220ea2b05f512be64db307f774b722c4"
+    },
+    {
+      "path": "labs/planning/preuves/APERCU_DESKTOP.png",
+      "bytes": 200471,
+      "sha256": "b43f3f34e2825940dc4b61d6a54ca9b8d008782e4e4aefdeb62ecc54e3c0a7f9"
+    },
+    {
+      "path": "labs/planning/preuves/APERCU_MOBILE.png",
+      "bytes": 189594,
+      "sha256": "941ab7788c9e9f0f951dd28352ce3387c5a240451c73b8a20673ffeef714af0d"
+    },
+    {
+      "path": "labs/planning/preuves/ETAT_LIVRAISON.json",
+      "bytes": 672,
+      "sha256": "e36e2b58ae09d52e112ce6cabd15661f4429c905df451661a0933f440b066228"
+    },
+    {
+      "path": "labs/planning/preuves/ORTOOLS_INSTALLATION_NON_REALISEE.txt",
+      "bytes": 2017,
+      "sha256": "fffb1ce2805cf702c90d699ea0d1ef939efe396d90379854e7e1bee6916fcfa5"
+    },
+    {
+      "path": "labs/planning/preuves/PROVENANCE.json",
+      "bytes": 431,
+      "sha256": "40ac1b5b146fc8ddb0b166d87148a583e2ed005465a008e7517eeb5347a5ce37"
+    },
+    {
+      "path": "labs/planning/preuves/TESTS_INTERFACE.json",
+      "bytes": 1203,
+      "sha256": "25959cac3426b6664cd422d7e09216054bebebacbcb2697e6ac20edef2e99e76"
+    },
+    {
+      "path": "labs/planning/preuves/TESTS_PLANNING.txt",
+      "bytes": 1913,
+      "sha256": "1bb8b302a5d72238f48942c971ebe49fc6f125d62356608f933765ab6a9e76de"
+    },
+    {
+      "path": "labs/planning/preuves/planning_base.json",
+      "bytes": 12111,
+      "sha256": "a255abbfc18cb5957f14f62f49d2d29c3f28bda642ed1f511b2f5a8577866092"
+    },
+    {
+      "path": "labs/planning/preuves/planning_compatibilite_manquante.json",
+      "bytes": 853,
+      "sha256": "edb847ccce185beb7cfc67f559e943d8aeeffdcf375b4e27cfb96ee11f52913f"
+    },
+    {
+      "path": "labs/planning/preuves/planning_echeance_courte.json",
+      "bytes": 12107,
+      "sha256": "998d87a1a83b13f9211744cedf4dedadbd2a2a5d700dc1bb44722918a7a2ddb8"
+    },
+    {
+      "path": "labs/planning/preuves/planning_finition_plus_longue.json",
+      "bytes": 12097,
+      "sha256": "b624182951ae0c71d58da15c7e23a9bc8031663e65a8658b3abb8a10a1924e3a"
+    },
+    {
+      "path": "labs/planning/preuves/planning_machine_absente.json",
+      "bytes": 12322,
+      "sha256": "84d09cc191f866c6225a028e70e1c7fde97f1414548b7a90af89df3ea7159794"
+    },
+    {
+      "path": "labs/planning/preuves/resultats.json",
+      "bytes": 54585,
+      "sha256": "45c2d557110cc5e783946b7f9ffb7fe27f95f3bd56479796d3ffd2d02309b379"
+    },
+    {
+      "path": "labs/planning/prototype/build_examples.py",
+      "bytes": 2923,
+      "sha256": "6a284ddae0d8c8fcf300763bf2632173dea5fe727797aaa04c069dbe737ea032"
+    },
+    {
+      "path": "labs/planning/prototype/planner.py",
+      "bytes": 11234,
+      "sha256": "5ecdc4b5224ea57d79155e012869b3c9211edfff9729c582704c7b43b28c7f5f"
+    },
+    {
+      "path": "labs/planning/prototype/test_dashboard.py",
+      "bytes": 3057,
+      "sha256": "bd4dab6c866abae7c851c7cc23e4e1df44ca4b1f09646b773b915ab01ec73755"
+    },
+    {
+      "path": "labs/planning/prototype/test_planner.py",
+      "bytes": 4333,
+      "sha256": "19667899f5a7b3a5ff2146d062157ceed919429dafcb51d0c8d470f83f1dda97"
+    },
+    {
+      "path": "marketing/coherence-v3/APERCU_DASHBOARD.png",
+      "bytes": 329565,
+      "sha256": "7b282dbfe1aa78c2d309f0bd1ae24672af9b9fdf1fccaf98b6c56e11758d8989"
+    },
+    {
+      "path": "marketing/coherence-v3/AUDIT_COHERENCE.md",
+      "bytes": 12513,
+      "sha256": "fcd7ca86b8a17dc3fb401cf0d5290851c116574caacc8e581a2eab4bfbcd5480"
+    },
+    {
+      "path": "marketing/coherence-v3/CALENDRIER.md",
+      "bytes": 2845,
+      "sha256": "b1b9725dbdd6d5e4dc8d0a63fd754519011b8d8ad692f8ef0eda15a129098cf4"
+    },
+    {
+      "path": "marketing/coherence-v3/DASHBOARD_COHERENCE.html",
+      "bytes": 16499,
+      "sha256": "9e10b92162f554200e5a9c169488a8b6f3b9904f545b9aa2c0aa3c6bb5f2ae1c"
+    },
+    {
+      "path": "marketing/coherence-v3/MANIFESTE_SHA256.json",
+      "bytes": 1902,
+      "sha256": "34e6a860f236d4613db2e56409f0d3b8d82e1eae3c9d07741f60a6046c0ace03"
+    },
+    {
+      "path": "marketing/coherence-v3/README.md",
+      "bytes": 876,
+      "sha256": "a050b8d4165801d33f0c72f8d433c9a23e29fd8167d8a6071e82eeaed98bcf0a"
+    },
+    {
+      "path": "marketing/coherence-v3/REGLES_INTEGRATION.json",
+      "bytes": 1472,
+      "sha256": "0b7d818a8e2d3b33a07fdcffd7494de3459ccfaa7af55f3e1bd6ff1ab8b74e31"
+    },
+    {
+      "path": "marketing/coherence-v3/SOURCES.json",
+      "bytes": 1377,
+      "sha256": "6c318a5312e2e21525087d44f05f14cfe9f4154003333c9bae8e5297295ad767"
+    },
+    {
+      "path": "marketing/coherence-v3/campagne_18_concepts.json",
+      "bytes": 20111,
+      "sha256": "3754012380cdc2f9abb68c61dbd0208f9f89a4ea0fa408482bcc2f808e80e85e"
+    },
+    {
+      "path": "marketing/coherence-v3/preuves/APERCU_MOBILE.png",
+      "bytes": 326870,
+      "sha256": "7b5d3351996324e4c927e1cf6e72a08949db689bc75e140c9ac9e0813101d240"
+    },
+    {
+      "path": "marketing/coherence-v3/preuves/constats_livrables.json",
+      "bytes": 1414,
+      "sha256": "ee9fd9ab1c3932301788dc5e684458cd6b9ae6bf2c9d3bc3dde6b4246f6d296e"
+    },
+    {
+      "path": "marketing/coherence-v3/preuves/controle_geometrie.json",
+      "bytes": 336,
+      "sha256": "65a8d3ad049541c3ef19ead5c44a3d94aa6a1ecb509e03bfbb487b469bbcd595"
+    },
+    {
+      "path": "marketing/coherence-v3/preuves/tests_pack_v3.json",
+      "bytes": 2012,
+      "sha256": "8c3d595352b713a19fc94317c42d7ebcf3f94381555b6dcadfa716c12ee663cb"
+    },
+    {
+      "path": "marketing/coherence-v3/preuves/tests_simulateur.json",
+      "bytes": 188,
+      "sha256": "02620a344256ffb57c676931adf01fc31cdc7791244d25b0f3ade6a62aca083b"
+    },
+    {
+      "path": "marketing/coherence-v3/preuves/tests_simulateur.txt",
+      "bytes": 1949,
+      "sha256": "415dee5692a5d3fe3997d4b0c274401cbc51a858b8ad8ab3b2eb96cd296e86eb"
+    },
+    {
+      "path": "marketing/growth-v2/README.md",
+      "bytes": 1988,
+      "sha256": "ee092ca59013908d7c10925be4d9ae83e1e9b7a339013c5063e20ac2e63b6936"
+    },
+    {
+      "path": "marketing/growth-v2/calendrier_30_jours.csv",
+      "bytes": 3569,
+      "sha256": "2768d7be163488a0d5357837edf199522bc74a36f70522a21e99f46591794128"
+    },
+    {
+      "path": "marketing/growth-v2/spec_growth_dashboard.md",
+      "bytes": 1417,
+      "sha256": "82abfef3387fa6bd92595c80e99d063dfcb62cf0c01d075c5290936cb3648055"
+    },
+    {
+      "path": "preservation/COVERAGE.md",
+      "bytes": 2321,
+      "sha256": "367a38b038aa4820e751fcbeddee07a3817e7571b34f3ed2d66e27e749ad0632"
+    },
+    {
+      "path": "preservation/MANIFESTES_HISTORIQUES.md",
+      "bytes": 705,
+      "sha256": "1f86c1e389c5fad4ef2815b9e583171f3d7260943ccfcbd81c95498dcbb5833f"
+    },
+    {
+      "path": "preservation/extraction-provenance.json",
+      "bytes": 72207,
+      "sha256": "fed1a6f6528dc815fd5c1dc00b6f516e9a1def192a49df1d68a31573caed04a9"
+    },
+    {
+      "path": "preservation/history/REPOSITORY_MANIFEST_M04.json",
+      "bytes": 64356,
+      "sha256": "15e5b955a45ac3075b64c023c65d38a81978a3d8a8736318d3b50018b58aedc3"
+    },
+    {
+      "path": "preservation/import-baseline.json",
+      "bytes": 45873,
+      "sha256": "831eb1828b47093c9059a52e4c343ef3712a6ffbf4ce4ab5b15e42fe22cd589a"
+    },
+    {
+      "path": "preservation/mounted-inventory.json",
+      "bytes": 30565,
+      "sha256": "b90081987c19e74bb5733d8f4787533ae2bc01c48166539fca32411e1c79d057"
+    },
+    {
+      "path": "proofs/current/CONSOLIDATION_AND_PRESERVATION.txt",
+      "bytes": 13320,
+      "sha256": "c955837f0234c72cf918b057361032383fa0a5c434a9f5bc820c54f6fbd03d68"
+    },
+    {
+      "path": "proofs/current/CONSOLIDATION_TESTS.txt",
+      "bytes": 12011,
+      "sha256": "5ecb0582b66fceee046853f4d3abb752e43980e8c4c02c55bc318fba0c36344c"
+    },
+    {
+      "path": "proofs/current/ENVIRONMENT.json",
+      "bytes": 407,
+      "sha256": "de16faf552f888c07651b80d7c244b7b22be86e4a083729c87aaa9f91b06d90f"
+    },
+    {
+      "path": "proofs/current/HISTORICAL_MANIFEST_CHECKS.json",
+      "bytes": 1100,
+      "sha256": "6c0967ad8ddb457eb1438021180b94af1750fcc5dfdbe95ae7db37b8287053ae"
+    },
+    {
+      "path": "proofs/current/INPUTS_AND_SECRET_SCAN.json",
+      "bytes": 2864,
+      "sha256": "c6d57ccc2912751ddf98c6364daf9828f2d94acec43b7c5ad939c3a8da6bade0"
+    },
+    {
+      "path": "proofs/current/KNOWLEDGE_TESTS.txt",
+      "bytes": 3559,
+      "sha256": "b1fe840ef1f07c03a33e8a3886cbe4e066e6ade85389a4bc28e11ff3b0fee195"
+    },
+    {
+      "path": "proofs/current/PLANNING_TESTS.txt",
+      "bytes": 1913,
+      "sha256": "b61c0e3d586795cf2479de41c2da2f27a40d36defea058d431e7d3487d6deba3"
+    },
+    {
+      "path": "proofs/current/REGRESSION_M01_M02_M03.txt",
+      "bytes": 355,
+      "sha256": "b924d04b0f2a920a3bc041b9ffb49f3fb7900a838d39997b5ace33899416852e"
+    },
+    {
+      "path": "proofs/current/RESTORE_NORMALIZATION_FIX.json",
+      "bytes": 576,
+      "sha256": "7c84dcce98d9e5fc6ab1ddc2675000d375ecfbe9595dd9c15f889b3039e01c07"
+    },
+    {
+      "path": "proofs/current/RESULTS.json",
+      "bytes": 1373,
+      "sha256": "4db953ba595555f3efbee325cd4e1a063998932cebe7104ee746a088a0085bba"
+    },
+    {
+      "path": "proofs/current/VAULT_RESTORATION.json",
+      "bytes": 312,
+      "sha256": "e5fa69619ee9ff46aa0c46a1b5044927db3c08dbe71422d7aefbff1f5dc84f32"
+    },
+    {
+      "path": "requirements-tests.txt",
+      "bytes": 34,
+      "sha256": "ebc319f05921f7d8d196fb93e7e47ffabc2cdda3dbd7e261d76a8fbc5ea099c8"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 112,
+      "sha256": "62677209aea2d9fe9f32e78c1964c46d6e77d8d5ad44bcf71ca7b3c08051bae7"
+    },
+    {
+      "path": "research/readiness-2026-10-30/CAPACITES_A_QUALIFIER.json",
+      "bytes": 1567,
+      "sha256": "1fe28f5eb0c999fc86772c7d125e799878f81048237533bf922a814ac27dd3d5"
+    },
+    {
+      "path": "research/readiness-2026-10-30/FICHES_ENRICHISSEMENT.json",
+      "bytes": 8876,
+      "sha256": "c4bba506ba9cae63a43e8b8d4cdad1c022315b864dfd779561b72f47e217d379"
+    },
+    {
+      "path": "research/readiness-2026-10-30/PREUVES_LOCALES.json",
+      "bytes": 1267,
+      "sha256": "94a0b5220de9c91ae1316d3299768e3988a53fe1e33a58b4518d53a096fc9849"
+    },
+    {
+      "path": "research/readiness-2026-10-30/README.md",
+      "bytes": 698,
+      "sha256": "31b8bca9b8e81e12136c3623b46476108f05cba7b85549cbed5454ea219467e2"
+    },
+    {
+      "path": "research/readiness-2026-10-30/RECETTE_FR_36_CAS.json",
+      "bytes": 19916,
+      "sha256": "16b38d3e824365209a27f9bc14cc67e53eaf9a9237c52a4be0fd9a036a307f22"
+    },
+    {
+      "path": "research/readiness-2026-10-30/RECHERCHE_ET_DECISIONS.md",
+      "bytes": 11033,
+      "sha256": "a7df9aa50070d17599a203144d649e9c08c838ee574a548df494a05d1861be04"
+    },
+    {
+      "path": "research/readiness-2026-10-30/SOURCES.json",
+      "bytes": 5384,
+      "sha256": "689030c5f38583c0ef41c0cd40a2413b5a789c5a3e4083e267b237775d6cd05d"
+    },
+    {
+      "path": "research/readiness-2026-10-30/TESTS_LOGICIELS.txt",
+      "bytes": 6971,
+      "sha256": "7c73e2bc3758246f0b87dd0c4e56eb78d20fad559d563022538b7a484a3bc1eb"
+    },
+    {
+      "path": "research/readiness-2026-10-30/TESTS_REGRESSIONS.txt",
+      "bytes": 12890,
+      "sha256": "dd245978bfbe4f1e714e3a2419c3f80963a1450b0771e54a625749638ca75d39"
+    },
+    {
+      "path": "research/voice-jev/ARCHITECTURE_CORRIGEE.mmd",
+      "bytes": 1689,
+      "sha256": "ca58072efb8e6dbbb18b88205993e208e4cc8f204e0ce5d5b5a22e799cb95934"
+    },
+    {
+      "path": "research/voice-jev/EXEMPLE_COMMANDE_AFFICHAGE.json",
+      "bytes": 946,
+      "sha256": "c93a4afa0ebdac0983af750d2cd009297eefca48c9ee66ee8f4bffd97b4b81ac"
+    },
+    {
+      "path": "research/voice-jev/NOTE_DE_REFERENCE.md",
+      "bytes": 10643,
+      "sha256": "bca88af40d57825957d646903606db26753aa084f874e81a53e17725f1bf20ad"
+    },
+    {
+      "path": "research/voice-jev/PREUVES_LECTURE_M03.json",
+      "bytes": 3711,
+      "sha256": "76dab182f56e1cbad83103f0c0404a3fb1388a4d5897cf87e914b50f668be36d"
+    },
+    {
+      "path": "tests/test_connection_lifetime.py",
+      "bytes": 2479,
+      "sha256": "95f2cc849f178547b0b074a1b949bad2864c107dec4a62503f28cbd56c729b28"
+    },
+    {
+      "path": "tests/test_consolidated.py",
+      "bytes": 7353,
+      "sha256": "33db8db35e6d57a3454b6961c7a5f7eb675a2a1b941ea97cbcd9294feebf318b"
+    },
+    {
+      "path": "tests/test_growth.py",
+      "bytes": 11751,
+      "sha256": "48b0e327834a18da614223d98c8006053bead2b1e4d13590f61eec38c1598f71"
+    },
+    {
+      "path": "tests/test_preservation.py",
+      "bytes": 5094,
+      "sha256": "ea1b1b8dd08a9545244b774270a8f0bdc0a08352aa40a5653b9ae1a6b9fff072"
+    },
+    {
+      "path": "tests/test_readiness_research.py",
+      "bytes": 2205,
+      "sha256": "18d34ac0eb713fc772c20a39d3aee070616d6d59d131cf6dc30b1ed110bb432c"
+    },
+    {
+      "path": "tests/test_tower_m04.py",
+      "bytes": 10026,
+      "sha256": "ccfe4c5608f70b0381403ac1b9c5191eefe43a381d177a5ec801a018fef21cda"
+    },
+    {
+      "path": "tests/test_workspace_m05.py",
+      "bytes": 21814,
+      "sha256": "735b59df29a13466d28308d616c6c25c37911a4a5709c10cea6be3c03a33c17a"
+    },
+    {
+      "path": "tools/m04_pc_audit.py",
+      "bytes": 945,
+      "sha256": "00f9a4508cd44b0706cb09521f7c6f1936d2dd88bd0228e4b81c6851a5dc2981"
+    },
+    {
+      "path": "tools/m04_smoke.py",
+      "bytes": 4073,
+      "sha256": "e68ace411c8ec3a0ec9a79348b4c4131f00ee88a7caae65852bc9521a00d9ddf"
+    },
+    {
+      "path": "tools/m05_browser.cjs",
+      "bytes": 8684,
+      "sha256": "13e466ba99e49b96c17c847e82baf4dbe7c070075d3559ad29d14318621d1564"
+    },
+    {
+      "path": "tools/m05_smoke.py",
+      "bytes": 4041,
+      "sha256": "e2d09fa90f316a2233692eda7f2045e1c1bd39811e3a47f0b4a3423e3120381c"
+    },
+    {
+      "path": "tools/pc-audit-v1/DECISION_ENGINE_CONTRACT.json",
+      "bytes": 704,
+      "sha256": "02a8654f93b054add152961b3fb90d0b33cf49df13878eff316ec0ba0a0e6239"
+    },
+    {
+      "path": "tools/pc-audit-v1/MISSION_CLAUDE.md",
+      "bytes": 2741,
+      "sha256": "e4dab3f3cf60cfa28e5ba806de5b38ef8ec027c7f2e26b41208b938b3ca89edb"
+    },
+    {
+      "path": "tools/pc-audit-v1/README.md",
+      "bytes": 1305,
+      "sha256": "97caa3de7d80ca1184a59174d71ee68e5dcb40f510f9804dca4312c6f73fd8f7"
+    },
+    {
+      "path": "tools/pc-audit-v1/TESTS_ACCEPTATION.md",
+      "bytes": 786,
+      "sha256": "ba8b06e310853743434f2c00b47780d599e0813c51f4988cf74e1fd9fe3e2dc5"
+    },
+    {
+      "path": "tools/pc-audit-v1/audit_pc.py",
+      "bytes": 1582,
+      "sha256": "98dfc27ec12fcff19688f807aa2e8f3eac5516482464159be0eaecb87a381721"
+    },
+    {
+      "path": "tools/preservation.py",
+      "bytes": 3780,
+      "sha256": "c506f133b1a639b9cac0517e27819147cb166b0e956b1592799c82815a90354f"
+    },
+    {
+      "path": "tools/publish_github.py",
+      "bytes": 7002,
+      "sha256": "1ba8ff8682c4da6c3924d5d9a38bc4dfd0af0afd6b46933c90e2b2b84fd05e2f"
+    },
+    {
+      "path": "tools/restore_workspace.py",
+      "bytes": 2385,
+      "sha256": "39002ca5a48704b7630e7065344db1cba157a96834955f08ebd142ce11d7f2ce"
+    },
+    {
+      "path": "tools/run_checks.py",
+      "bytes": 728,
+      "sha256": "db813197bd7a4823878a1fe1d91dcb1de04d63a772eda248289f11914dc7bec3"
+    },
+    {
+      "path": "tools/verify_repository.py",
+      "bytes": 1026,
+      "sha256": "5884621dc23f6f98d3c7064c99043f9ee2392969258f73fe77bb3b0edcbda34f"
+    }
+  ]
+}

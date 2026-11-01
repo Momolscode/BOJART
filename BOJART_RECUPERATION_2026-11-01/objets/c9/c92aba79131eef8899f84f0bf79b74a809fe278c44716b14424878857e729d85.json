@@ -1,0 +1,61 @@
+{
+  "id": "MAR05-MEMOIRE-COUVERTURE-20261031",
+  "date": "2026-10-31T08:53:55.754252+01:00",
+  "owner": "Pilotage Marwin",
+  "source": {
+    "library_file_id": "libfile_95f036a54d5c8191beebf1102f3281f9",
+    "native_version": 80,
+    "sha256": "c76c4f6166e23ec35e6cbfac6bfc7c9cbe4c6124cd4cc983c1d2537332436627"
+  },
+  "problem": "Empreinte valide sur 12 chemins mais trois fiches sources du résumé non couvertes.",
+  "before": {
+    "ok": false,
+    "errors": [
+      "source_coverage_incomplete"
+    ],
+    "uncovered_paths": [
+      "reference_learning.identity_review_support_latest",
+      "reference_learning.reverse_api_integration_latest",
+      "reference_learning.toolchain_integration_latest"
+    ],
+    "missing_paths": [],
+    "dependency_count": 12,
+    "computed_sha256": "d935f12bafd6cef392d7f311018553c97d6423f328c71b6bc64887ee324a3cb5",
+    "scope": "Declared source coverage and hash only; no semantic, artistic, permission or live-service validation."
+  },
+  "after": {
+    "ok": true,
+    "errors": [],
+    "uncovered_paths": [],
+    "missing_paths": [],
+    "dependency_count": 15,
+    "computed_sha256": "9a0fe17063d45bdb4ed600292a752aabfc30251b5e7646b1c735deb6e8b8e11e",
+    "scope": "Declared source coverage and hash only; no semantic, artistic, permission or live-service validation."
+  },
+  "unit_tests": {
+    "passed": 11,
+    "failed": 0,
+    "fixtures": "synthetic"
+  },
+  "checks": {
+    "before_hash_matched_declared_sources": true,
+    "missing_coverage_reproduced": true,
+    "after_coverage_and_hash_valid": true,
+    "reverse_api_change_invalidates_resume": true,
+    "toolchain_change_invalidates_resume": true,
+    "review_change_invalidates_resume": true,
+    "status_preserved": true,
+    "delivered_film_preserved": true,
+    "current_production_preserved": true,
+    "active_production_preserved": true,
+    "next_creative_brief_preserved": true,
+    "creative_control_latest_preserved": true,
+    "feedback_preserved": true,
+    "episodes_preserved": true,
+    "production_history_preserved": true,
+    "context_governance_preserved": true
+  },
+  "new_paid_calls": 0,
+  "scope": "Dépendances déclarées et empreinte seulement ; ne valide pas prose, médias, droits, budget, qualité ni services distants.",
+  "next_action": "Reprendre le premier raccord de service autorisé dans MAR-05 ; conserver le débrief R02 sans relance."
+}

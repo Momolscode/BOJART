@@ -1,0 +1,38 @@
+{
+  "otio_version": "0.18.1",
+  "video_clips": 5,
+  "audio_track": true,
+  "frames": 451,
+  "source_ranges": [
+    [
+      0,
+      26
+    ],
+    [
+      26,
+      206
+    ],
+    [
+      206,
+      244
+    ],
+    [
+      244,
+      426
+    ],
+    [
+      426,
+      451
+    ]
+  ],
+  "roundtrip_duration_verified": true,
+  "target_media": "MORGAN_Une_Lumiere_Pour_Plus_Tard_Story.mp4",
+  "relink_required_if_media_not_next_to_project": true,
+  "editor_import_tested": false,
+  "original_vfx_layers_recovered": false,
+  "limits": [
+    "The source is a flat export, not recovered project layers.",
+    "No edit decisions or audience effects are inferred.",
+    "Editor import and media relinking remain to be tested."
+  ]
+}

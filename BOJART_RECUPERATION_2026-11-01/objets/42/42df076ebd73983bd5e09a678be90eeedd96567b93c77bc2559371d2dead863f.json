@@ -1,0 +1,10 @@
+{
+  "platform": "Linux",
+  "pid_api": 6,
+  "pid_proc_self": 16159,
+  "pid_namespaces_consistent": false,
+  "ps_exit_code": 0,
+  "ps_stderr": "",
+  "ps_lists_api_pid": true,
+  "static_js_preflight": "blocked_inconsistent_process_namespace"
+}

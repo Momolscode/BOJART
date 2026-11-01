@@ -1,0 +1,17 @@
+{
+  "name": "hyperframes-a",
+  "resolution": "portrait",
+  "width": 540,
+  "height": 960,
+  "duration": 6,
+  "elements": 2,
+  "tracks": 2,
+  "types": {
+    "text": 2
+  },
+  "size": 7211209,
+  "_meta": {
+    "version": "0.8.210",
+    "updateAvailable": false
+  }
+}

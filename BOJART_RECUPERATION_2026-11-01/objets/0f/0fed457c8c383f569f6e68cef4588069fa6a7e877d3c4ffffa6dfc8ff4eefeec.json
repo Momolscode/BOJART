@@ -1,0 +1,10 @@
+{
+  "observed_on": "2026-10-25",
+  "command": "python3 -m unittest discover -s tests -v",
+  "observed_exit_code": 0,
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.12.14",
+  "scope": "Cas déterministes du journal local ; pas benchmark de modèle, audit complet ni validation d’audience."
+}

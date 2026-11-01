@@ -1,0 +1,205 @@
+{
+  "schema": "marwin.context-snapshot/v1",
+  "as_of": "2026-10-25",
+  "source_version": "projection rapprochée du 25 octobre 2026",
+  "source_page_block_hash": "7b224c2d64b5a319fcfb0a2809c31d4aa1664a80e85a59adde11100c0a0d0b0f",
+  "normalization": "Exemple de rapprochement explicite des champs observés ; la vérité des sources et la qualité du film ne sont pas évaluées par ce module.",
+  "entities": [
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "identity-morgan",
+      "revision": 1,
+      "data": {
+        "subject": "personnes",
+        "predicate": "utilisateur",
+        "value": "Morgan",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / people"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": true
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "identity-eaglemic",
+      "revision": 1,
+      "data": {
+        "subject": "personnes",
+        "predicate": "associe",
+        "value": "Eaglemic / Michael Bach ; @mtek_france",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / people"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": true
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "research-role",
+      "revision": 1,
+      "data": {
+        "subject": "sessions",
+        "predicate": "recherche",
+        "value": "Instagram et méthodes artistiques",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/space/page_4ec13488958481919ac2e098f3e4b42a / Répartir le travail"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": true
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "scenario-role",
+      "revision": 1,
+      "data": {
+        "subject": "sessions",
+        "predicate": "contexte",
+        "value": "Contexte général et scénario suivant",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/space/page_4ec13488958481919ac2e098f3e4b42a / Répartir le travail"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": true
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "jarvis-scope",
+      "revision": 1,
+      "data": {
+        "subject": "projets",
+        "predicate": "jarvis_atelier_3d",
+        "value": "Atelier distinct, matériel non fusionné avec UNUM",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / context_governance"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": true
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "pont-current-production",
+      "revision": 1,
+      "data": {
+        "subject": "film_pont",
+        "predicate": "production_state",
+        "value": "done",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / current_production"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": false
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "pont-legacy-brief",
+      "revision": 1,
+      "data": {
+        "subject": "film_pont",
+        "predicate": "production_state",
+        "value": "done",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / next_creative_brief"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": false,
+        "resolution_note": "Rapproché du film terminé enregistré dans current_production ; notes de préparation conservées dans l’historique."
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "pont-page-summary",
+      "revision": 1,
+      "data": {
+        "subject": "film_pont",
+        "predicate": "production_state",
+        "value": "done",
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/space/page_4ec13488958481919ac2e098f3e4b42a / 729c80f7-6013-4bbd-8853-b74287cd8a5d"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": false,
+        "normalization_note": "Formulation préparé avec média et budget manquants, rapprochée manuellement du statut non produit.",
+        "resolution_note": "Rapproché du film terminé enregistré dans current_production ; notes de préparation conservées dans l’historique."
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "films-root-count",
+      "revision": 1,
+      "data": {
+        "subject": "productions_morgan",
+        "predicate": "completed_count",
+        "value": 3,
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / status"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": false,
+        "resolution_note": "Filtre, Ombre et Pont enregistrés comme terminés dans les entrées consultées."
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "films-inventory-count",
+      "revision": 1,
+      "data": {
+        "subject": "productions_morgan",
+        "predicate": "completed_count",
+        "value": 3,
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/library?file_id=libfile_95f036a54d5c8191beebf1102f3281f9&account_id=personal / production_history + delivered_film + current_production"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": false,
+        "normalization_note": "Filtre et Ombre déjà conservés, plus Pont dans current_production ; contrôle des entrées documentaires, pas nouveau contrôle des vidéos."
+      }
+    },
+    {
+      "project": "marwin",
+      "kind": "claim",
+      "entity_id": "editorial-exclusions",
+      "revision": 1,
+      "data": {
+        "subject": "périmètre",
+        "predicate": "exclusions",
+        "value": [
+          "CBD",
+          "cannabis",
+          "locaux et campagnes associés"
+        ],
+        "status": "reported",
+        "evidence_refs": [
+          "https://chatgpt.com/space/page_4ec13488958481919ac2e098f3e4b42a / Reprendre en une minute"
+        ],
+        "observed_on": "2026-10-25",
+        "critical": true
+      }
+    }
+  ]
+}

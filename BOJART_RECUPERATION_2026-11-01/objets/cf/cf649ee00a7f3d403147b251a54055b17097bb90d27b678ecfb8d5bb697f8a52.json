@@ -1,0 +1,18 @@
+{
+  "pass": "solutions_2",
+  "timeline_tests_passed": 4,
+  "metrics_tests_passed": 4,
+  "metrics_test_data": "synthetic only, no actual account connected",
+  "locked_rea_installation": {
+    "version": "6.8.0",
+    "packages": 176,
+    "fresh_directory": true,
+    "configuration_changed": false,
+    "dependency_lock_sha256": "a1cc357c87420609c80d3a9c69739dcbaa6c53fb9ef2b20a53b411091309664f",
+    "installed_lock_sha256": "a1cc357c87420609c80d3a9c69739dcbaa6c53fb9ef2b20a53b411091309664f"
+  },
+  "new_paid_media_jobs": 0,
+  "editor_import_verified": false,
+  "automatic_tracking_installed": false,
+  "machine_ownership_guard_fixed": false
+}

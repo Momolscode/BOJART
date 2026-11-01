@@ -1,0 +1,1 @@
+{"project_id":"appgprj_6ad609f64b3c819184daedd11273e8d6","binding_name":"DB","table_name":"inquiry_rate_limits","columns":["key","count","expires_at"],"rows":[],"limit":25,"offset":0,"has_more":false,"model_projection":{"truncated":false,"truncated_values":0,"omitted_columns":0,"omitted_rows":0,"next_offset":null}}

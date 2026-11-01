@@ -1,0 +1,22 @@
+{
+  "version": "V26",
+  "status": "Candidate — not approved final",
+  "video": "BOJART_V26_EYES_ALIVE_1080P.mp4",
+  "duration_seconds": 10.958333,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": "24/1",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "size_bytes": 7541600,
+  "sha256": "885ff28048df455de00d359377975a1af3d9290a3c2ba8b57e5aec67816093b7",
+  "one_glass_impact": true,
+  "original_audio": true,
+  "contains_third_party_anime_audio": false,
+  "limitations": [
+    "2.5D motion manga",
+    "Concept poster not validated physical sculpture"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "url": "https://www.tiktok.com/@boj.art",
+  "observed_at_utc": "2026-10-18T15:41:26+00:00",
+  "detail": {
+    "userInfo": {
+      "user": {
+        "id": "6593375005073211397",
+        "shortId": "",
+        "uniqueId": "boj.art",
+        "nickname": "boj.Art",
+        "avatarLarger": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=041efeb5&x-expires=1792508400&x-signature=FxUDw4YyqLCEg7hVtp37secijzk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+        "avatarMedium": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:720:720.jpeg?dr=10399&refresh_token=23a422de&x-expires=1792508400&x-signature=tjhol64LA%2F1plKU0cT%2BBNj%2B91Yc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+        "avatarThumb": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=3f095fe5&x-expires=1792508400&x-signature=tzMNnpxkLt2ll3OmxUlEsNNG3QQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+        "signature": "Rejoins-moi et regarde tes idées devenir des œuvres d’art uniques 🎨",
+        "createTime": 1535112972,
+        "verified": false,
+        "secUid": "MS4wLjABAAAAfrnDm3LlZg6Q6FbOQYZIV4B8U1M2DFZRJ_R4X_UjLWzG1XZDpADIeEqk6tq04TWj",
+        "ftc": false,
+        "relation": 0,
+        "openFavorite": false,
+        "bioLink": {
+          "link": "@boj.art.logo",
+          "risk": 3
+        },
+        "commentSetting": 0,
+        "commerceUserInfo": {
+          "commerceUser": false
+        },
+        "duetSetting": 0,
+        "stitchSetting": 0,
+        "privateAccount": false,
+        "secret": false,
+        "isADVirtual": false,
+        "roomId": "",
+        "uniqueIdModifyTime": 0,
+        "ttSeller": false,
+        "downloadSetting": 0,
+        "profileTab": {
+          "showMusicTab": false,
+          "showQuestionTab": false,
+          "showPlayListTab": true
+        },
+        "followingVisibility": 2,
+        "recommendReason": "",
+        "nowInvitationCardUrl": "",
+        "nickNameModifyTime": 1742723557,
+        "isEmbedBanned": false,
+        "canExpPlaylist": true,
+        "profileEmbedPermission": 1,
+        "language": "fr",
+        "eventList": [],
+        "suggestAccountBind": false,
+        "isOrganization": 0,
+        "UserStoryStatus": 0,
+        "shortDramaCreator": {}
+      },
+      "stats": {
+        "followerCount": 13500,
+        "followingCount": 1649,
+        "heart": 13600,
+        "heartCount": 13600,
+        "videoCount": 31,
+        "diggCount": 0,
+        "friendCount": 742
+      },
+      "statsV2": {
+        "followerCount": "13490",
+        "followingCount": "1649",
+        "heart": "13637",
+        "heartCount": "13637",
+        "videoCount": "31",
+        "diggCount": "0",
+        "friendCount": "742"
+      },
+      "itemList": []
+    },
+    "shareMeta": {
+      "title": "boj.Art on TikTok",
+      "desc": "@boj.art 13.5k Followers, 1649 Following, 13.6k Likes - Watch awesome short videos created by boj.Art"
+    },
+    "statusCode": 0,
+    "statusMsg": "",
+    "needFix": false
+  }
+}

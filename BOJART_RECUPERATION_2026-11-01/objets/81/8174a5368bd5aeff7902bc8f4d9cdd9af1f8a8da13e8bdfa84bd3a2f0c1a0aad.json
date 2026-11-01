@@ -1,0 +1,45 @@
+{
+  "scene": {
+    "ok": true,
+    "exists": true,
+    "project": {
+      "projectId": "3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+      "revision": 2,
+      "sceneSequence": 0,
+      "appliedSceneSequence": 0,
+      "activeOperationId": null,
+      "artifacts": {
+        "projectId": "3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+        "revision": 2,
+        "blend": {
+          "size": 1565549,
+          "etag": "cb0a76dfca551b73702aeca3f0208e6c"
+        },
+        "glb": {
+          "size": 538564,
+          "etag": "9df19bbe049b8ad25ab0f61ec3e1bbc2"
+        },
+        "generated": [
+          {
+            "size": 257859,
+            "etag": "eb6758a3d4a0e309d37640c20f559590",
+            "id": "0c40d9c9dbcde59f9191360f873980b1",
+            "name": "V35_3D_depth_fixed_frame33.png",
+            "mediaType": "image/png",
+            "width": 360,
+            "height": 640
+          }
+        ]
+      },
+      "createdAt": "2026-10-30T17:34:58.958Z",
+      "updatedAt": "2026-10-30T17:44:43.953Z"
+    },
+    "projectUrl": "https://higgsfield.ai/3d-jutsu/3a59ace3-5c77-4a60-9d99-626bd4a1c884"
+  },
+  "generations": {
+    "ok": true,
+    "generations": [],
+    "nextCursor": null,
+    "projectUrl": "https://higgsfield.ai/3d-jutsu/3a59ace3-5c77-4a60-9d99-626bd4a1c884"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "6.8.0",
+  "node": "24.22.1",
+  "npm": "11.9.0",
+  "install_scope": "accessible cloud workspace only, not Morgan personal computer",
+  "package_integrity": "sha512-9QDeRnGqEDzABZyr04eLnBXBv/c6I9/TWu/6M0MD4pEfkySI/BIgwTODIbAReX3C1x6hjw9+Jlx4A2yUSPZ9ww==",
+  "setup_status": "ready",
+  "registration_applied": [
+    "configured_codex"
+  ],
+  "selected_client_doctor_healthy": true,
+  "global_environment_healthy": false,
+  "existing_cua_registration_preserved": true,
+  "configuration_backup_exists": true,
+  "running_chatgpt_registry_dynamically_mounted": false,
+  "native_engines_installed": false,
+  "personal_skills_modified": false
+}

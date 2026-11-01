@@ -1,0 +1,28 @@
+BOJ.ART — JARVIS 5 / MISSION 04 — 31 OCTOBRE 2026
+
+CONTENU
+- BOJART_JARVIS_M04_SOURCES.zip : sources complètes du dépôt local, dont les missions précédentes et le Studio.
+- BOJART_JARVIS_M04_COMPLET.bundle : historique Git local complet, vérifié par clonage.
+- BOJART_JARVIS_M04_CUMULATIF.patch : modifications depuis la consolidation initiale b2c46db.
+- APERCU_TOUR_M04.html : aperçu interactif HORS LIGNE, sans exécution réelle.
+- Captures PNG : régie desktop/mobile et maillage 3D réellement affiché dans Chromium.
+- RAPPORT_M04.md : résultats et limites exacts.
+- REPRISE_CLAUDE_M04.txt : instructions de reprise sur la future tour.
+- VERIFICATION_CLONE.json, TESTS_*.txt : preuves de vérification.
+
+REPRISE SUR PC BOJ.ART
+1. Conserver les archives précédentes ; le coffre des 81 fichiers originaux n'est PAS inclus dans ce complément.
+2. Décompresser SOURCES.zip dans un nouveau dossier, sans écraser un dossier existant.
+3. Lire context/START_HERE.md et docs/m04/RELEASE_GATE_M04.md.
+4. Exécuter : python tools/m04_pc_audit.py --output RAPPORT_PC.json
+5. Tester la CAO et les trois rôles : python tools/m04_smoke.py
+6. Tester les suites : python -m pytest -q tests
+7. Lancer apps/jarvis/Lancer_Jarvis.cmd (Windows) ou .sh (Linux) dans un environnement Python préparé.
+8. Ouvrir /tower dans la session locale et tester les trois vues navigateur.
+9. Ne raccorder une FDM et une résine qu'après qualification et accord humain.
+
+DÉCISIONS IMPORTANTES
+- Destination GitHub : Momolscode/bojart-jarvis, PRIVÉ. Aucun push effectué dans cette livraison.
+- Voix locale, Jev, LangGraph, machines et publication non connectés ; ne pas déclarer le système prêt production.
+- Le PC BOJ.ART n'est pas le PC UNUM.
+- Aucun secret ou token à coller dans la conversation.

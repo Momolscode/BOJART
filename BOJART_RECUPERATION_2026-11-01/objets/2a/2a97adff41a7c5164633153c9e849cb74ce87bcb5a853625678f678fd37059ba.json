@@ -1,0 +1,75 @@
+{
+  "schema": "bojart.research-delivery.v1",
+  "base_commit": "b2c46db5b7408ddeb537ec096ce0583e1536adc4",
+  "new_commit": "f72dcd30d0e5d90faf524ad9064ea1ffe9bafcba",
+  "repository_files": 312,
+  "github_push_performed": false,
+  "files": [
+    {
+      "name": "0001-BOJART-recherche-et-fiabilite.patch",
+      "bytes": 99661,
+      "sha256": "5a93443276d1bb2b3260adff1560b340b6042cde67c1e3c17ee2a43eeca692cb"
+    },
+    {
+      "name": "BOJART_Mise_A_Jour.bundle",
+      "bytes": 25375,
+      "sha256": "d4c022b0f2fd999187fbb2f5b947f7d87aacd82a19951dd7bf4e79fcd671a58b"
+    },
+    {
+      "name": "CAPACITES_A_QUALIFIER.json",
+      "bytes": 1567,
+      "sha256": "1fe28f5eb0c999fc86772c7d125e799878f81048237533bf922a814ac27dd3d5"
+    },
+    {
+      "name": "FICHES_ENRICHISSEMENT.json",
+      "bytes": 8876,
+      "sha256": "c4bba506ba9cae63a43e8b8d4cdad1c022315b864dfd779561b72f47e217d379"
+    },
+    {
+      "name": "LIRE_AVANT.md",
+      "bytes": 2729,
+      "sha256": "37f99534c96e23240ccf804622f7b10342ac41e2a2f43a2bf6b137a4cddd0ddc"
+    },
+    {
+      "name": "PREUVES_LOCALES.json",
+      "bytes": 1267,
+      "sha256": "94a0b5220de9c91ae1316d3299768e3988a53fe1e33a58b4518d53a096fc9849"
+    },
+    {
+      "name": "README.md",
+      "bytes": 698,
+      "sha256": "31b8bca9b8e81e12136c3623b46476108f05cba7b85549cbed5454ea219467e2"
+    },
+    {
+      "name": "RECETTE_FR_36_CAS.json",
+      "bytes": 19916,
+      "sha256": "16b38d3e824365209a27f9bc14cc67e53eaf9a9237c52a4be0fd9a036a307f22"
+    },
+    {
+      "name": "RECHERCHE_ET_DECISIONS.md",
+      "bytes": 11033,
+      "sha256": "a7df9aa50070d17599a203144d649e9c08c838ee574a548df494a05d1861be04"
+    },
+    {
+      "name": "SOURCES.json",
+      "bytes": 5384,
+      "sha256": "689030c5f38583c0ef41c0cd40a2413b5a789c5a3e4083e267b237775d6cd05d"
+    },
+    {
+      "name": "TESTS_LOGICIELS.txt",
+      "bytes": 6971,
+      "sha256": "7c73e2bc3758246f0b87dd0c4e56eb78d20fad559d563022538b7a484a3bc1eb"
+    },
+    {
+      "name": "TESTS_REGRESSIONS.txt",
+      "bytes": 12890,
+      "sha256": "dd245978bfbe4f1e714e3a2419c3f80963a1450b0771e54a625749638ca75d39"
+    },
+    {
+      "name": "VERIFICATION_APPLICATION.json",
+      "bytes": 137,
+      "sha256": "17b8e2dcfd74d64e7d425e64ea662b26fc8ed8de709d7128107a2aae6dcf526a"
+    }
+  ],
+  "patch_tested_on_fresh_base": true
+}

@@ -1,0 +1,9 @@
+{
+  "path": "/workspace/scratch/537238f8fe99/work/hyperframes_hypit_20261028/browser/chrome-local",
+  "binary": "/workspace/scratch/537238f8fe99/work/hyperframes_hypit_20261028/browser/chromium",
+  "version": "Chromium 153.0.8010.0",
+  "sha256": "53a15d6c3a3d27dfb54c4ba60278b1683136f70cf1e67e989da7dfbd3d451ef0",
+  "size": 209022176,
+  "source": "@sparticuz/chromium@153.0.0",
+  "extraction": "Node Brotli, fsync, checksum and tar without archive ownership restoration"
+}

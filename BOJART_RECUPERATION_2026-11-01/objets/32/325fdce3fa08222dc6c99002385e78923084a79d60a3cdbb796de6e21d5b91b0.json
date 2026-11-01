@@ -1,0 +1,135 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 2
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 6,
+    "samples": [
+      0.333,
+      1,
+      1.667,
+      2.333,
+      3,
+      3.667,
+      4.333,
+      5,
+      5.667
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      0.333,
+      1.667,
+      3,
+      4.333,
+      5.667
+    ],
+    "checked": 20,
+    "passed": 20
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 48
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      ".hyperframes/artifacts/snapshots/dded1ab3-9073-4e69-9486-dfafe0b17bf0/frame-00-at-0.3s.png",
+      ".hyperframes/artifacts/snapshots/dded1ab3-9073-4e69-9486-dfafe0b17bf0/frame-01-at-1.7s.png",
+      ".hyperframes/artifacts/snapshots/dded1ab3-9073-4e69-9486-dfafe0b17bf0/frame-02-at-3.0s.png",
+      ".hyperframes/artifacts/snapshots/dded1ab3-9073-4e69-9486-dfafe0b17bf0/frame-03-at-4.3s.png",
+      ".hyperframes/artifacts/snapshots/dded1ab3-9073-4e69-9486-dfafe0b17bf0/frame-04-at-5.7s.png"
+    ],
+    "times": [
+      0.333,
+      1.667,
+      3,
+      4.333,
+      5.667
+    ],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "d2edfb86-6973-4e01-a93e-afdb8ed74f63",
+    "revision": null,
+    "report": "/workspace/scratch/537238f8fe99/work/hyperframes_hypit_20261028/toolchain/hyperframes-a/.hyperframes/artifacts/checks/d2edfb86-6973-4e01-a93e-afdb8ed74f63.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.8.210",
+    "updateAvailable": false
+  }
+}

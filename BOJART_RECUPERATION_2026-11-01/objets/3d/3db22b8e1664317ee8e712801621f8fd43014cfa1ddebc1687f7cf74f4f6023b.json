@@ -1,0 +1,89 @@
+{
+  "shot_id": "S03_HERO_BREAK",
+  "branch": "A_PHYSICAL_SCULPTURE",
+  "status": "BLOCKED_WAITING_FOR_SOURCES",
+  "creative_intent": "Poing / caméra / traversée du cadre ; identité sculpture conservée",
+  "duration_target_seconds": 2.0,
+  "timeline_fps": 24,
+  "source_media": [
+    {
+      "asset_id": "REQUIRED_SOURCE_ID",
+      "sha256": null,
+      "path_or_url": null,
+      "rights_status": "UNKNOWN",
+      "source_in_frame": null,
+      "source_out_frame": null,
+      "handles_before": 12,
+      "handles_after": 12
+    }
+  ],
+  "truth_references": {
+    "front_photo_sha256": null,
+    "side_photo_sha256": null,
+    "face_crop_sha256": null,
+    "scars_crop_sha256": null
+  },
+  "frames": {
+    "start_frame": null,
+    "contact_frame": null,
+    "end_frame": null,
+    "start_keyframe_path": null,
+    "end_keyframe_path": null
+  },
+  "camera": {
+    "lens_mm": null,
+    "camera_move": null,
+    "axis_direction": null,
+    "depth_cues": null
+  },
+  "lighting": {
+    "key_direction": null,
+    "color_temperature": null,
+    "material_response": null
+  },
+  "character": {
+    "rigid_sculpture_or_animated": "RIGID_PHYSICAL_SCULPTURE",
+    "face_locked": false,
+    "scars_locked": false,
+    "clothes_locked": false
+  },
+  "vfx": {
+    "technique": null,
+    "tracking_method": null,
+    "occlusion_method": null,
+    "depth_pass": null,
+    "motion_blur": null,
+    "one_glass_event_max": true
+  },
+  "audio": {
+    "contact_timecode": null,
+    "attack_stem": null,
+    "body_stem": null,
+    "debris_stem": null,
+    "music_license_ref": null
+  },
+  "quality": {
+    "identity_30": null,
+    "temporal_25": null,
+    "depth_20": null,
+    "emotion_15": null,
+    "editability_10": null,
+    "veto_reasons": [],
+    "user_approved": false
+  },
+  "generation": {
+    "model": null,
+    "mode": null,
+    "prompt_version": null,
+    "params": null,
+    "job_id": null,
+    "status": null,
+    "cost_preflight": null,
+    "cost_actual": null
+  },
+  "decision": {
+    "keep_or_revise_or_reject": "UNDECIDED",
+    "timecoded_defects": [],
+    "next_hypothesis": null
+  }
+}

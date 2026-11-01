@@ -1,0 +1,24 @@
+{
+  "id": "brief_2026-10-25",
+  "date": "2026-10-25",
+  "idea_id": "F01",
+  "pillar": "Humour personnel",
+  "state": "story humoristique corrigée et livrée",
+  "decision": "Rotation éditoriale sans supposer des performances.",
+  "brief": {
+    "id": "F01",
+    "pillar": "Humour personnel",
+    "title": "Ce soir, je reste sage",
+    "hook": "Moi, en début de soirée : « Ce soir, je reste sage. »",
+    "script": "0–2,3 s : « Ce soir, je reste sage. » / 2,3–7,1 s : « 20 minutes plus tard » et révélation du texte Babylone du rush / 7,1–10 s : fausse notification Babylone : « Frérot, je t’ai même pas cherché. »",
+    "shots": [
+      "Portrait et texte Babylone du rush conservés."
+    ],
+    "source_status": "Story humoristique exportée et vérifiée ; première version manifeste rejetée.",
+    "experiment": "Préserver le ton personnel du rush avant de décider de son habillage."
+  },
+  "media_ids": [
+    "media_07e5683c5787"
+  ],
+  "feedback": null
+}

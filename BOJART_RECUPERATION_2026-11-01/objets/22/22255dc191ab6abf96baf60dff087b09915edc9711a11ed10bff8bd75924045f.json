@@ -1,0 +1,13 @@
+{
+  "pdf_pages": 7,
+  "rendered_pages": 7,
+  "visual_review": "Contact des sept pages regardé : titres, tables, planche et pieds de page sans débordement constaté.",
+  "unittest_count": 37,
+  "unittest_pass": true,
+  "photo_render_cli_expected_exit": 3,
+  "photo_render_cli_actual_exit": 3,
+  "media_hashes_match_current_memory": 3,
+  "direct_audio_listening": false,
+  "new_media_generation_calls": 0,
+  "new_publications": 0
+}

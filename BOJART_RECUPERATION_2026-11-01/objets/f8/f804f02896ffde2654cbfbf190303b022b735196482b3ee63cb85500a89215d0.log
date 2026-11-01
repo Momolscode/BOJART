@@ -1,0 +1,42 @@
+test_automatic_audio_not_direct_listening (test_controle.EvidenceTests.test_automatic_audio_not_direct_listening) ... ok
+test_blocked_video_can_remain_unknown (test_controle.EvidenceTests.test_blocked_video_can_remain_unknown) ... ok
+test_carousel_excerpt_valid (test_controle.EvidenceTests.test_carousel_excerpt_valid) ... ok
+test_carousel_rejects_fabricated_video_duration (test_controle.EvidenceTests.test_carousel_rejects_fabricated_video_duration) ... ok
+test_cuts_cannot_be_promoted_from_samples (test_controle.EvidenceTests.test_cuts_cannot_be_promoted_from_samples) ... ok
+test_duplicate_reference_ids (test_controle.EvidenceTests.test_duplicate_reference_ids) ... ok
+test_nan_duration (test_controle.EvidenceTests.test_nan_duration) ... ok
+test_no_causal_retention_without_study (test_controle.EvidenceTests.test_no_causal_retention_without_study) ... ok
+test_pipeline_attribution_requires_source (test_controle.EvidenceTests.test_pipeline_attribution_requires_source) ... ok
+test_sampled_video (test_controle.EvidenceTests.test_sampled_video) ... ok
+test_stills_do_not_need_video_time (test_controle.EvidenceTests.test_stills_do_not_need_video_time) ... ok
+test_thumbnail_is_not_motion (test_controle.EvidenceTests.test_thumbnail_is_not_motion) ... ok
+test_time_overflow (test_controle.EvidenceTests.test_time_overflow) ... ok
+test_two_carousel_cards_do_not_become_whole_post (test_controle.EvidenceTests.test_two_carousel_cards_do_not_become_whole_post) ... ok
+test_wrong_media_fingerprint (test_controle.EvidenceTests.test_wrong_media_fingerprint) ... ok
+test_bad_cost_not_accepted (test_controle.GateTests.test_bad_cost_not_accepted) ... ok
+test_candidate_method_is_not_tested_method (test_controle.GateTests.test_candidate_method_is_not_tested_method) ... ok
+test_completed_job_not_counted_as_running (test_controle.GateTests.test_completed_job_not_counted_as_running) ... ok
+test_deferred_video_still_can_develop (test_controle.GateTests.test_deferred_video_still_can_develop) ... ok
+test_face_portrait_approval_does_not_approve_film (test_controle.GateTests.test_face_portrait_approval_does_not_approve_film) ... ok
+test_failed_readability_cannot_be_overridden_by_export (test_controle.GateTests.test_failed_readability_cannot_be_overridden_by_export) ... ok
+test_only_one_exploration (test_controle.GateTests.test_only_one_exploration) ... ok
+test_publishing_requires_explicit_authorization (test_controle.GateTests.test_publishing_requires_explicit_authorization) ... ok
+test_rejected_film_stays_blocked (test_controle.GateTests.test_rejected_film_stays_blocked) ... ok
+test_reserve_is_not_active_work (test_controle.GateTests.test_reserve_is_not_active_work) ... ok
+test_synthetic_ready_case (test_controle.GateTests.test_synthetic_ready_case) ... ok
+test_technical_pass_cannot_approve_art (test_controle.GateTests.test_technical_pass_cannot_approve_art) ... ok
+test_unauthorized_free_call_blocked (test_controle.GateTests.test_unauthorized_free_call_blocked) ... ok
+test_unknown_job_cannot_be_retried (test_controle.GateTests.test_unknown_job_cannot_be_retried) ... ok
+test_wrong_approval_dimension (test_controle.GateTests.test_wrong_approval_dimension) ... ok
+test_zero_budget_does_not_mean_unlimited (test_controle.GateTests.test_zero_budget_does_not_mean_unlimited) ... ok
+test_audience_result_requires_publication (test_controle.MetricsTests.test_audience_result_requires_publication) ... ok
+test_average_portion_not_completion (test_controle.MetricsTests.test_average_portion_not_completion) ... ok
+test_native_completion_required (test_controle.MetricsTests.test_native_completion_required) ... ok
+test_no_invented_negative_counts (test_controle.MetricsTests.test_no_invented_negative_counts) ... ok
+test_null_does_not_become_zero (test_controle.MetricsTests.test_null_does_not_become_zero) ... ok
+test_zero_denominator_does_not_divide (test_controle.MetricsTests.test_zero_denominator_does_not_divide) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.001s
+
+OK

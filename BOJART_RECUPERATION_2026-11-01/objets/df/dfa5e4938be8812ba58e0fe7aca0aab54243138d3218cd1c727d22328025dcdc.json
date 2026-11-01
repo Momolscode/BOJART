@@ -1,0 +1,43 @@
+{
+  "duration": 10.941176470588236,
+  "frames": 263,
+  "fps": 24,
+  "scenes": [
+    "eyes",
+    "back",
+    "ink",
+    "gallery",
+    "details",
+    "logo"
+  ],
+  "beats": [
+    5,
+    5,
+    4,
+    7,
+    4,
+    6
+  ],
+  "scene_start_seconds": [
+    0.0,
+    1.7647058823529413,
+    3.5294117647058827,
+    4.9411764705882355,
+    7.411764705882353,
+    8.823529411764707
+  ],
+  "source": "a_dramatic_cinematic_high_detail_promotional_col.png",
+  "changes": [
+    "animated single eye blink and hair sway",
+    "subtle back/shoulder breathing warp",
+    "one glass impact",
+    "two-layer ink manga motion",
+    "gallery parallax light sweep",
+    "3 editorial detail cuts",
+    "original BOJ.ART artwork logo"
+  ],
+  "limitations": [
+    "motion manga 2.5D, not hand-drawn full animation",
+    "concept poster character is not verified physical sculpture"
+  ]
+}

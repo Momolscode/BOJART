@@ -1,0 +1,119 @@
+{
+  "format": "hypit.cli-plan@1",
+  "ok": true,
+  "run": "hypit-check/timing-a.svrun",
+  "targetCount": 1,
+  "targets": [
+    "final.video"
+  ],
+  "requestCount": 3,
+  "requestIssueCount": 0,
+  "producerFailureCount": 0,
+  "producerFailures": [],
+  "providerRequestCount": 0,
+  "localRequestCount": 3,
+  "unresolvedRequestCount": 0,
+  "unsupportedRequestCount": 0,
+  "choiceCount": 0,
+  "providers": [
+    {
+      "request": "need:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-audio-render",
+      "capability": "@hypit/media-operations@1#render-timeline-audio",
+      "status": "resolved",
+      "endpoint": "media.local",
+      "use": "@hypit/media-local",
+      "pricing": {
+        "kind": "local"
+      }
+    },
+    {
+      "request": "need:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-mux",
+      "capability": "@hypit/media-operations@1#mux-program-media",
+      "status": "resolved",
+      "endpoint": "media.local",
+      "use": "@hypit/media-local",
+      "pricing": {
+        "kind": "local"
+      }
+    },
+    {
+      "request": "need:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-visual",
+      "capability": "@hypit/html-program@1#rasterize-visual",
+      "status": "resolved",
+      "endpoint": "html.local",
+      "use": "@hypit/provider-html-local",
+      "pricing": {
+        "kind": "local"
+      }
+    }
+  ],
+  "needs": [
+    {
+      "request": "need:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-audio-render",
+      "step": "operation:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-audio-render",
+      "port": "audio",
+      "capability": "@hypit/media-operations@1#render-timeline-audio",
+      "endpoint": "media.local",
+      "summary": {
+        "fields": {
+          "startFrame": 0,
+          "endFrameExclusive": 240,
+          "frameRate": "30/1",
+          "sampleRate": 48000
+        },
+        "references": {}
+      },
+      "pending": []
+    },
+    {
+      "request": "need:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-mux",
+      "step": "operation:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-mux",
+      "port": "media",
+      "capability": "@hypit/media-operations@1#mux-program-media",
+      "endpoint": "media.local",
+      "summary": {
+        "fields": {},
+        "references": {
+          "audio": 1,
+          "video": 1
+        }
+      },
+      "pending": [
+        {
+          "input": "audio",
+          "record": "record:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-audio-render",
+          "kind": "audio"
+        },
+        {
+          "input": "visual",
+          "record": "record:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-visual",
+          "kind": "video"
+        }
+      ]
+    },
+    {
+      "request": "need:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-visual",
+      "step": "operation:author%3A%2Fworkspace%2Fscratch%2F537238f8fe99%2Fwork%2Fhyperframes_hypit_20261028%2Ftoolchain%2Fhypit-check%2Ftiming-a.svml%3A%3Acomponent%3A%3Afinal:request-visual",
+      "port": "visual",
+      "capability": "@hypit/html-program@1#rasterize-visual",
+      "endpoint": "html.local",
+      "summary": {
+        "fields": {
+          "width": 540,
+          "height": 960,
+          "startFrame": 0,
+          "endFrameExclusive": 240,
+          "frameRate": "30/1"
+        },
+        "references": {}
+      },
+      "pending": []
+    }
+  ],
+  "preflight": {
+    "ok": true,
+    "capabilityCount": 3,
+    "diagnosticCount": 0,
+    "diagnostics": []
+  }
+}

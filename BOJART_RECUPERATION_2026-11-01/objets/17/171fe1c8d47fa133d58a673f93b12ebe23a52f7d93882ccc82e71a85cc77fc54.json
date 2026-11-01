@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Free text UI -> LangGraph -> pushed browser view -> rendered ACK",
+    "Connected visual module: studio",
+    "Connected visual module: growth",
+    "Connected visual module: knowledge",
+    "Connected visual module: cad",
+    "Local latency sample: twelve complete text-to-view receipts",
+    "Lost HTTP response + reload reuses one immutable turn",
+    "Synthetic microphone -> WAV -> ASR fixture -> same graph and actual display",
+    "Second browser cannot take the microphone lease",
+    "Cancel during transcription drops the late ASR result",
+    "Polling fallback survives an unavailable event stream",
+    "Mobile layout stays within the viewport"
+  ],
+  "browser": "153.0.8010.0",
+  "latency_ms": {
+    "samples": [
+      63.3,
+      67,
+      67,
+      72.2,
+      74,
+      74.7,
+      74.9,
+      79.5,
+      80.7,
+      86.6,
+      87.4,
+      88.1
+    ],
+    "p50": 74.9,
+    "p95": 88.1,
+    "max": 88.1,
+    "scope": "final text submitted -> actual browser rendered ACK; one local Linux session; excludes ASR/Jev"
+  },
+  "real_asr": false,
+  "real_microphone": false,
+  "real_jev": false,
+  "physical_screens": false,
+  "browser_errors": [],
+  "schema": "bojart.acceptance.m06.v1",
+  "observed_at": "2026-10-31T02:28:41.537861+00:00",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "graph": "sqlite_ready"
+}

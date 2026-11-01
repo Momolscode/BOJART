@@ -14,7 +14,11 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate source policy and provenance
+        if: github.ref != 'refs/heads/recovery/partie-2-2026-11-01'
         run: python tools/validate_repository.py
+      - name: Verify every recovered file against the original archive
+        if: github.ref == 'refs/heads/recovery/partie-2-2026-11-01'
+        run: python recovery/2026-11-01/part02/restore.py --verify-only
       - name: Memory and HTTP integration tests
         run: python -m unittest discover -s tests -v
       - name: Cited retrieval regression cases

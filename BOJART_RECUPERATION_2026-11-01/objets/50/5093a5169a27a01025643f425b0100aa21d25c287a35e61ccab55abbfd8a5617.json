@@ -1,0 +1,38 @@
+{
+  "unique_items": 307,
+  "references": 357,
+  "types": {
+    "screen": 54,
+    "image": 136,
+    "video": 81,
+    "model": 5,
+    "document": 10,
+    "html": 21
+  },
+  "categories": {
+    "Atelier V11": 13,
+    "Vitrine publique": 2,
+    "Jarvis M07": 10,
+    "Versions publiees": 13,
+    "Prototypes historiques": 16,
+    "Preuves historiques": 30,
+    "Creation R02": 11,
+    "Archive TikTok": 68,
+    "Identite et sites": 71,
+    "Creation historique": 13,
+    "Creation et sources": 20,
+    "Modeles parametriques": 5,
+    "Corrections proposees": 4,
+    "Documents et maquettes": 31
+  },
+  "distinct_video_contents": 81,
+  "videos_decode_ok": 80,
+  "invalid_paths": [
+    "sources/atelier/dist/assets/archive/7071144007094537477.mp4",
+    "sources/atelier/dist/assets/archive/7466163957854735638.mp4",
+    "sources/atelier/dist/assets/archive/7376602431603346721.mp4",
+    "sources/atelier/dist/assets/archive/7228267566194609434.mp4"
+  ],
+  "repair_previews": 4,
+  "source_media_bytes": 244718057
+}

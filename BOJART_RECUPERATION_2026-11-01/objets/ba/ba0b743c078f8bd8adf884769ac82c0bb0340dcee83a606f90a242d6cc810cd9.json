@@ -1,0 +1,15 @@
+{
+  "version": "M06",
+  "source_commit": "d6a1ddb3f823717df71c85fcd44b583fe05b9e84",
+  "source_manifest_files": 411,
+  "branch": "improvement/m06-voice-orchestration-2026-10-31",
+  "git_bundle_sha256": "36ad281ad2d36b486b72b67bca1011f4cfd42b94c61d251cedd5563eb4a662b0",
+  "tests_passed": 556,
+  "new_tests": 42,
+  "browser_checks_m06": 13,
+  "browser_checks_m05_regression": 13,
+  "physical_qualification": false,
+  "live_jev_tested": false,
+  "asr_weights_included": false,
+  "screenshots_included": false
+}

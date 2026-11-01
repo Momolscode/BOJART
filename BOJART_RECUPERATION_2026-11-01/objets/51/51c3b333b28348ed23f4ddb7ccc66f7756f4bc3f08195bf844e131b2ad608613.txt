@@ -1,0 +1,75 @@
+MARWIN — HYPERFRAMES ET HYPIT
+Essai local du 28 octobre 2026
+
+RÉSULTAT
+
+HyperFrames 0.8.210 et Hypit 0.3.1 sont installés dans l’environnement de travail de cette conversation. Quatre exports ont été produits : deux montages de la planche « La photo de famille » dans HyperFrames et deux compositions de contrôle dans Hypit. Ce sont des maquettes techniques ; la fabrication du film reste différée.
+
+Le changement testé est un retard de 0,5 seconde. Les mêmes médias et le même contenu restent disponibles dans des projets modifiables. Aucun modèle génératif, aucune transcription payante et aucun crédit Higgsfield n’ont été utilisés dans ce passage.
+
+CE QUI A ÉTÉ MESURÉ
+
+HyperFrames :
+- Deux MP4 de 6 secondes, 540 × 960, 30 images/seconde, 180 images chacun, sans audio.
+- Variante A : coupes constatées aux images 60 et 120, soit 2,0 et 4,0 secondes.
+- Variante B : coupes constatées aux images 75 et 120, soit 2,5 et 4,0 secondes.
+- La première coupe est donc retardée de 15 images ; la deuxième conserve sa position.
+- Empreinte de la planche identique à l’original dans les deux projets.
+- Deux contrôles HyperFrames réussis : compilation, exécution navigateur, mise en page et contraste ; aucune erreur ni avertissement relevé.
+
+Hypit :
+- Deux MP4 de 8 secondes, 540 × 960, 30 images/seconde, 240 images chacun.
+- Une composition de messages, adaptée de l’exemple officiel livré avec la version 0.3.1, sert à contrôler l’horloge et la mise en page ; elle ne constitue pas une conversation réelle.
+- L’instant écrit passe de l’image 105 à l’image 120. L’entrée progressive devient mesurable aux images 106 et 121 : même décalage de 15 images.
+- Les deux sources passent « check », le plan est résolu uniquement vers les traitements locaux, et les deux résultats sont confirmés terminés par leur propre statut.
+- La piste audio exportée est du silence numérique : pic décodé mesuré à 0. Aucun jugement d’écoute artistique n’est annoncé.
+
+Les quatre fichiers passent le décodage complet. Les planches de neuf prélèvements par fichier ont été regardées ; les coupes HyperFrames et les entrées Hypit ont aussi été recherchées dans les images décodées. Cette vérification ne valide pas une performance d’acteur, une ressemblance animée ou une rétention d’audience.
+
+UNE NUANCE QUI CHANGE LE CHOIX DES OUTILS
+
+L’ancienne documentation de Hypit décrit un raccord HyperFrames. La version installée 0.3.1 utilise désormais @hypit/html-video et @hypit/provider-html-local. Le README de ce dernier indique un rendu HTML local propre, sans dépendance à un moteur vidéo HTML externe ; ses fichiers publiés ont été examinés.
+
+Les essais de ce passage établissent donc deux chemins de production autonomes. Une liaison directe entre leurs versions courantes n’a pas été éprouvée. Il n’est pas nécessaire de les empiler pour bénéficier d’un montage modifiable.
+
+CHOIX PROPOSÉ POUR MARWIN
+
+HyperFrames peut servir aux maquettes, à la composition de médias et aux éléments graphiques dont les états et le rythme doivent rester contrôlables.
+
+Hypit fournit une autre façon d’exprimer les éléments, les repères temporels et leurs relations dans un projet. L’essai montre le rendu d’une animation écrite ; il ne teste pas la reconstruction automatique d’un Reel ni le remplacement d’un visage.
+
+Pour les scènes Marwin, conserver les images et prises choisies, nommer intention, bascule, réaction et chute, puis modifier un repère à la fois. Le timing doit servir le geste et la compréhension. Le choix artistique reste à juger sur une vraie scène.
+
+PRÉPARATION ET LIMITES RENCONTRÉES
+
+Le téléchargement Chrome habituel a échoué sur le réseau. Le navigateur fourni par @sparticuz/chromium 153.0.0 a permis le rendu. Une extraction initiale était incomplète ; elle a été remplacée par une écriture synchronisée avec vérification d’empreinte. La recette de préparation conserve ce contrôle.
+
+Le premier adaptateur Fontsource 0.1.0 référençait un ancien export. La version 0.2.0, dont le manifeste exige Hypit ^0.3.1, a corrigé le contrôle de composition.
+
+L’aperçu HyperFrames en arrière-plan n’a pas démarré. Le mode au premier plan a annoncé être prêt, mais son URL n’a pas été accessible depuis une autre session de commande. Aucun lien local n’est livré comme éditeur accessible à Morgan. Les captures de contrôle et les MP4 sont réels.
+
+Le statut global du Runtime Hypit est resté incohérent : worker arrêté et compteur d’une activité, alors que chacun des deux résultats est terminé et exporté. Ne pas relancer une production sur ce seul compteur. La reprise et l’arrêt d’un service durable restent à fiabiliser ; cet essai n’établit pas un service permanent.
+
+PÉRIMÈTRE
+
+Installation dans l’environnement de travail, pas sur le PC personnel de Morgan. Aucun compte de génération ajouté à ce profil, aucune publication et aucun changement de routine. « À un fil » et « La photo de famille » gardent leurs statuts artistiques ; le brief de Contexte et scénario reste préservé.
+
+HyperFrames porte la licence Apache 2.0. Hypit porte sa propre licence Apache modifiée, dont les conditions pour un service hébergé ou une redistribution diffèrent. Les textes lus sont conservés avec le projet ; ce passage n’engage aucune mise à disposition commerciale du logiciel.
+
+CONTENU DU PROJET
+
+Le projet enregistré contient les sources HTML et SVML, le composant adapté, les versions verrouillées, les scripts de préparation et de vérification, les rapports utiles, les quatre exports et ce compte rendu. Les dépendances installées et le navigateur binaire ne sont pas inclus.
+
+Le comparatif « MARWIN_Comparatif_Montage.mp4 » montre côte à côte les deux montages HyperFrames, avec leurs temps de bascule. Il dure 6 secondes, sans son.
+
+SOURCES EXAMINÉES
+
+- HyperFrames, paquet npm hyperframes@0.8.210, documentation et instructions livrées ; dépôt officiel https://github.com/heygen-com/hyperframes
+- Hypit, paquet npm @hypit/hypit@0.3.1 et exemples semantic-composition ; dépôt officiel https://github.com/hypit-ai/hypit
+- @hypit/provider-html-local@0.2.0, README et contrats publiés dans l’installation.
+- @hypit/fontsource@0.2.0, manifeste et compatibilité annoncée.
+- @sparticuz/chromium@153.0.0 ; https://github.com/Sparticuz/chromium
+- Planche originale Marwin « La photo de famille », produite le 28 octobre 2026 : trois images fixes de fiction. Aucune nouvelle génération d’image dans cet essai.
+
+Les slogans commerciaux et les compteurs publics ne sont pas des mesures de performance de Marwin.
+

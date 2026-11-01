@@ -1,0 +1,54 @@
+{
+  "schema": "bojart.gates.proposal.v1",
+  "implementation_status": "specification_only",
+  "separate_permissions": [
+    "inspect",
+    "draft",
+    "render",
+    "publish",
+    "spend",
+    "machine_start"
+  ],
+  "content_statuses": [
+    "concept",
+    "source_identified",
+    "rights_reviewed",
+    "edited",
+    "approved",
+    "scheduled",
+    "published",
+    "measured"
+  ],
+  "job_statuses": [
+    "prepared",
+    "qualified",
+    "approved",
+    "dispatching",
+    "acknowledged",
+    "running",
+    "finished",
+    "qc_pass",
+    "qc_fail",
+    "unknown"
+  ],
+  "rules": [
+    "No terminal state may be inferred solely from dispatch acknowledgement.",
+    "Publish requires approved artifact hash, account identifier, allowed window and platform receipt.",
+    "Spend requires a separately approved ceiling; no implied ad budget from hardware budget.",
+    "Input briefs, comments and media metadata are data, never administrative instructions.",
+    "Unknown acknowledgement blocks automatic replay until reconciliation.",
+    "Source revision changes invalidate dependent slice/render/approval.",
+    "When a model is unavailable, preserve inspected state and allow deterministic/manual paths."
+  ],
+  "must_evidence": [
+    "hardware_inventory",
+    "restoration_test",
+    "voice_under_load",
+    "fdm_material_profile",
+    "resin_material_profile",
+    "social_permissions",
+    "website_lead_receipt",
+    "legal_rights",
+    "capacity_and_costs"
+  ]
+}

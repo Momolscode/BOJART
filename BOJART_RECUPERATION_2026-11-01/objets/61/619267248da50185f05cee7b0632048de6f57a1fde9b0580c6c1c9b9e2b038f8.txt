@@ -1,0 +1,26 @@
+MARWIN — PROJET D’ESSAI HYPERFRAMES / HYPIT
+
+Cette archive contient des essais techniques. Les personnages et les images de La photo de famille proviennent d’une planche de conception antérieure ; aucune nouvelle scène animée n’a été générée.
+
+Organisation :
+- toolchain/ : manifeste npm, versions verrouillées, deux projets HyperFrames et deux sources Hypit avec le composant adapté.
+- evidence/ : résultats de contrôles, mesures, statuts et licences.
+- exports/ : les quatre exports d’origine et le comparatif de 6 secondes.
+- verify_exports.py : mesure des coupes et entrées ; utilise Python, NumPy et FFmpeg.
+- create_hyperframes_checks.py : recette initiale, dépend du chemin de la planche originale dans l’environnement de création.
+- MARWIN_HyperFrames_Hypit_Essai.txt : résultat, limites et décisions.
+
+Reprise sous Linux x64 avec Node 24 et FFmpeg/FFprobe :
+1. Ouvrir toolchain et installer les dépendances verrouillées avec npm ci --ignore-scripts.
+2. Exécuter node prepare-browser.mjs. Ce script prépare le navigateur du paquet, vérifie son empreinte et réécrit son chemin dans le profil local. Les exécutables FFmpeg/FFprobe du profil peuvent nécessiter une adaptation sur une autre machine.
+3. Exécuter npm exec --no -- tsc -p hypit-check/packages/montage-check/tsconfig.json si le composant est modifié.
+4. HyperFrames : node run-hyperframes.mjs check hyperframes-a --json ; puis render avec un chemin de sortie neuf.
+5. Hypit : npm exec --no -- hypit check hypit-check/timing-a.svml --project . ; consulter le plan avant de lancer un Build.
+6. Conserver les identifiants des Builds et les sorties déjà produites. Les sources B changent un seul instant de la version A.
+
+Les chemins de sortie du script de vérification sont ceux de la session d’origine : adapter sa variable outputs pour vérifier les fichiers exports de cette archive sur une autre machine. Les métadonnées d’exécution conservent leur provenance historique.
+
+La fiabilité d’un Runtime durable et l’éditeur à distance ne sont pas validés par cet essai. Aucun service de génération payant n’est configuré dans le profil fourni.
+
+Le composant de messages est adapté de l’exemple officiel @hypit/hypit 0.3.1 (semantic-composition/packages/chat-scene). Ses styles, textes, nom de paquet et une position temporelle ont été adaptés pour ce contrôle Marwin. La licence Hypit correspondante est conservée dans evidence/hypit-LICENSE. Le code GSAP embarqué dans les projets HyperFrames conserve son en-tête d’origine.
+

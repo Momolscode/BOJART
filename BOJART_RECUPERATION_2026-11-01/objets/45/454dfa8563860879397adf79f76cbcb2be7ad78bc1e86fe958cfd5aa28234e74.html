@@ -1,0 +1,13 @@
+<template><style>
+#root{position:absolute;inset:0;background:#17231f;font-family:Inter;color:#f5f0e5}
+.brand{position:absolute;left:36px;top:38px;font-size:20px;font-weight:700;letter-spacing:4px;margin:0}
+.intro{position:absolute;left:36px;top:74px;font-size:29px;line-height:1.2;font-weight:700;margin:0}
+.legend{position:absolute;left:36px;top:126px;margin:0;font-size:18px;line-height:1.2;font-weight:700;letter-spacing:1px}
+.picture{position:absolute;left:36px;top:170px;width:468px;height:702px;background-image:url('assets/planche.png');background-repeat:no-repeat;background-size:1404px 702px;border-radius:8px}
+.note{position:absolute;left:36px;top:893px;margin:0;font-size:15px;font-weight:400;letter-spacing:1.3px}
+.rail{position:absolute;left:36px;top:929px;width:468px;height:3px;background:#3d4b40}
+#clock{height:3px;width:468px;background:#d4a866;transform-origin:left center}
+</style><div id="root" data-composition-id="board" data-width="540" data-height="960">
+<p class="brand">MARWIN</p><h1 class="intro">Maquette de montage</h1><div id="moment-0" class="clip moment" data-start="0" data-duration="2.5" data-track-index="2"><p class="legend">01 · LE SELFIE</p><div class="picture" style="background-position:0px 0"></div></div><div id="moment-1" class="clip moment" data-start="2.5" data-duration="1.5" data-track-index="3"><p class="legend">02 · LA PLACE S’INVITE</p><div class="picture" style="background-position:-468px 0"></div></div><div id="moment-2" class="clip moment" data-start="4" data-duration="2" data-track-index="4"><p class="legend">03 · LE PHOTOGRAPHE</p><div class="picture" style="background-position:-936px 0"></div></div>
+<p class="note">IMAGES FIXES · ESSAI LOCAL</p><div class="rail" data-layout-ignore><div id="clock"></div></div>
+</div><script>const tl=gsap.timeline({paused:true});tl.fromTo('#clock',{scaleX:0},{scaleX:1,duration:6,ease:'none'},0);window.__timelines.board=tl;</script></template>

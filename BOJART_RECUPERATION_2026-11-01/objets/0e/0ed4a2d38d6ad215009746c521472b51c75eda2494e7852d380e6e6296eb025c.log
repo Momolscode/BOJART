@@ -1,0 +1,36 @@
+test_auth_scope_and_same_durable_gate (test_integration.Api.test_auth_scope_and_same_durable_gate) ... ok
+test_same_audit_after_process_restart_executes_once (test_integration.DurableProcess.test_same_audit_after_process_restart_executes_once) ... ok
+test_completed_rejected_work_remains_closed (test_integration.Gates.test_completed_rejected_work_remains_closed) ... ok
+test_deferred_scene_blocks_render (test_integration.Gates.test_deferred_scene_blocks_render) ... ok
+test_development_available_but_media_not_authorized (test_integration.Gates.test_development_available_but_media_not_authorized) ... ok
+test_no_audience_invention (test_integration.Gates.test_no_audience_invention) ... ok
+test_unknown_stage_rejected (test_integration.Gates.test_unknown_stage_rejected) ... ok
+test_stdio_tools_roundtrip (test_integration.Mcp.test_stdio_tools_roundtrip) ... ok
+test_cobalt_explicit_authority_required (test_integration.Services.test_cobalt_explicit_authority_required) ... ok
+test_cobalt_prepares_without_download (test_integration.Services.test_cobalt_prepares_without_download) ... ok
+test_cobalt_unknown_response_not_success (test_integration.Services.test_cobalt_unknown_response_not_success) ... ok
+test_missing_instance_is_not_defaulted (test_integration.Services.test_missing_instance_is_not_defaulted) ... ok
+test_searxng_json_contract (test_integration.Services.test_searxng_json_contract) ... ok
+test_api_auth_and_inspection (test_reverse_api.HarContract.test_api_auth_and_inspection) ... ok
+test_default_tls_port_same_origin (test_reverse_api.HarContract.test_default_tls_port_same_origin) ... ok
+test_embedded_credentials_rejected (test_reverse_api.HarContract.test_embedded_credentials_rejected) ... ok
+test_empty_or_wrong_shape_rejected (test_reverse_api.HarContract.test_empty_or_wrong_shape_rejected) ... ok
+test_get_does_not_become_execution_permission (test_reverse_api.HarContract.test_get_does_not_become_execution_permission) ... ok
+test_http_only_explicit_loopback (test_reverse_api.HarContract.test_http_only_explicit_loopback) ... ok
+test_ids_and_email_path_segments_generalized (test_reverse_api.HarContract.test_ids_and_email_path_segments_generalized) ... ok
+test_journal_repeat_after_reopen_is_duplicate (test_reverse_api.HarContract.test_journal_repeat_after_reopen_is_duplicate) ... ok
+test_mcp_real_stdio_inspection (test_reverse_api.HarContract.test_mcp_real_stdio_inspection) ... ok
+test_missing_binary_has_prepared_command_only (test_reverse_api.HarContract.test_missing_binary_has_prepared_command_only) ... ok
+test_other_origin_is_excluded (test_reverse_api.HarContract.test_other_origin_is_excluded) ... ok
+test_oversized_rejected (test_reverse_api.HarContract.test_oversized_rejected) ... ok
+test_port_is_part_of_origin (test_reverse_api.HarContract.test_port_is_part_of_origin) ... ok
+test_query_values_do_not_create_distinct_contracts (test_reverse_api.HarContract.test_query_values_do_not_create_distinct_contracts) ... ok
+test_scope_requires_authority_reference (test_reverse_api.HarContract.test_scope_requires_authority_reference) ... ok
+test_secret_values_and_bodies_are_absent (test_reverse_api.HarContract.test_secret_values_and_bodies_are_absent) ... ok
+test_unknown_project_rejected (test_reverse_api.HarContract.test_unknown_project_rejected) ... ok
+test_write_endpoints_remain_disabled (test_reverse_api.HarContract.test_write_endpoints_remain_disabled) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 15.288s
+
+OK

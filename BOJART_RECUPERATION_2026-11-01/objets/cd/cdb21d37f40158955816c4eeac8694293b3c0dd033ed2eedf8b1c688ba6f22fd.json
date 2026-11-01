@@ -1,0 +1,48 @@
+{
+  "schema": "marwin.documentary-handoff-trial/v1",
+  "observed_on": "2026-10-25",
+  "source_continuity": {
+    "library_file_id": "libfile_95f036a54d5c8191beebf1102f3281f9",
+    "library_version": 17,
+    "bytes_sha256": "53ef3a91c658f4f3111c04c0d63dab0c3fef10de80191bdf2931f81307f60d74"
+  },
+  "source_audit": {
+    "library_file_id": "libfile_5ecf6f4a3f6081918b4e3d7bcf4f9b69",
+    "canonical_json_sha256": "f126947064f187e5fd7711a97fb7ee83d4c03b57d079486bfe52faf6145d33a2"
+  },
+  "origins": {
+    "research-latest": "authored_documentary_handoff",
+    "context-latest": "structured_report_projection"
+  },
+  "ingested": 2,
+  "repeated_documents_ignored": 2,
+  "restart_preserves_state": true,
+  "active_test_id": "AUDIT-MOTIVATION-01",
+  "active_test_titles_agree": true,
+  "active_variable": "Lisibilité de l’objectif de Morgan avant son geste",
+  "reserved_research_test": {
+    "variable": "Durée de maintien de la réaction finale",
+    "variants_seconds": [
+      0.8,
+      1.6
+    ],
+    "constants": "Même plan, même effet, même action ; contrôler les raccords.",
+    "success_criterion": "Lecture correcte de l’action, de sa conséquence et du choix du personnage lors d’un retour qualitatif situé.",
+    "status": "Proposé, non exécuté",
+    "audience_causality_proven": false
+  },
+  "coordination_decision": "Conserver AUDIT-MOTIVATION-01 comme essai actif. Maintien de la réaction à 0,8 / 1,6 s en réserve ; ne pas ajouter cette variable au même essai.",
+  "next_owner": "Session Contexte et scénario",
+  "next_action": "Clarifier les deux découpages du même gag, puis recueillir un retour de compréhension situé et conserver les réponses avant de décider des nouveaux plans.",
+  "scope": "Une passation documentaire rédigée, plus une capsule adaptée du rapport structuré. Import local, pas lecture directe des conversations ni envoi de message.",
+  "cycle_coverage": [
+    "source documentaire",
+    "adaptation avec provenance",
+    "journal local",
+    "réception répétée",
+    "reprise"
+  ],
+  "full_creative_cycle_completed": false,
+  "new_video_generation": false,
+  "public_or_human_test_executed_by_this_trial": false
+}

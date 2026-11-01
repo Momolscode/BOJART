@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-26T22:15:59+01:00",
+  "scope": "Marwin creative tooling and identified blockers; no guarantee of solving unknown future problems",
+  "items": [
+    {
+      "id": "S01",
+      "priority": 1,
+      "problem": "Analyse JavaScript REA refusée dans cet environnement Linux",
+      "state": "blocked_environment",
+      "now": "CLI, serveur MCP et inspection CPython vérifiés ; conservation des diagnostics.",
+      "later": "Employer le package verrouillé dans un environnement où les processus et /proc partagent le même espace ; lancer le précontrôle puis la vraie sonde JS.",
+      "trigger": "Poste ou hôte autorisé joignable, Node compatible et précontrôle cohérent.",
+      "acceptance": "Sonde JavaScript réussie sur notre artefact original ; garde de propriété des processus maintenue.",
+      "cost": "Installation logicielle sans abonnement supplémentaire ; capacité et coût d’un éventuel autre hôte non chiffrés."
+    },
+    {
+      "id": "S02",
+      "priority": 1,
+      "problem": "Installation sur le poste personnel et chargement dans un client",
+      "state": "ready_waiting_device",
+      "now": "Poste Olsen constaté hors ligne ; installateur npm ci épinglé testé dans un dossier distinct.",
+      "later": "Inventorier OS, Node et clients depuis le poste joignable ; installer dans un dossier utilisateur isolé ; conserver les sauvegardes puis recharger le client choisi.",
+      "trigger": "Olsen joignable et chemin autorisé identifié ; ne pas déduire son matériel des anciens projets.",
+      "acceptance": "Version, inscription du bon client et analyse réelle réussies sur le poste ; aucune autre configuration perdue.",
+      "cost": "Pas d’achat engagé ; hébergement permanent éventuel à étudier."
+    },
+    {
+      "id": "S03",
+      "priority": 1,
+      "problem": "Médias Instagram incomplets ou restreints",
+      "state": "ready_waiting_media",
+      "now": "Analyse locale gratuite prête ; références observées, métadonnées et blocages distingués.",
+      "later": "Chercher version publique, making-of officiel ou fichier auteur autorisé, puis analyser vidéo et son complets ; sinon conserver explicitement la lacune.",
+      "trigger": "Média complet effectivement accessible par une voie permise.",
+      "acceptance": "Empreinte du fichier, portée de lecture/écoute et fiche mise à jour ; aucun contenu non vu décrit comme vu.",
+      "cost": "Outils locaux sans crédits vidIQ ; transfert et calcul non mesurés."
+    },
+    {
+      "id": "S04",
+      "priority": 1,
+      "problem": "Aucune statistique Instagram propriétaire accessible",
+      "state": "deferred_until_publishable_content_and_account",
+      "now": "Zéro compte relié confirmé ; adaptateur local de statistiques testé sur quatre cas fictifs.",
+      "later": "Relier le compte choisi par Morgan, vérifier accès propriétaire et disponibilité, lire les seules métriques nécessaires ; alternative export manuel avec mapping explicite.",
+      "trigger": "Contenu publiable, puis compte Marwin Studio créé par Morgan et relié officiellement, ou export autorisé ultérieur. L’absence actuelle de compte ne bloque pas la fabrication.",
+      "acceptance": "Vraies mesures conservées avec source, fenêtre, unités, pagination et nulls ; aucune donnée de tiers prétendue accessible.",
+      "cost": "Contrôle de comptes actuel à zéro crédit ; coût de la lecture de données à vérifier avant appel."
+    },
+    {
+      "id": "S05",
+      "priority": 2,
+      "problem": "Rétention et viralité non démontrées",
+      "state": "protocol_prepared",
+      "now": "Durée moyenne regardée séparée de la complétion ; zéro résultat d’audience inventé.",
+      "later": "Éprouver une seule hypothèse sur un film approuvé, lire la compréhension réelle puis les métriques disponibles ; comparer des durées et contextes proches.",
+      "trigger": "Film jugé utilisable et données/participants réels disponibles ; publication distincte de sa préparation.",
+      "acceptance": "Critère fixé avant essai, dénominateur documenté, résultat directionnel conservé, décision garder/adapter/abandonner.",
+      "cost": "Aucun nouveau test public ni achat de trafic engagé."
+    },
+    {
+      "id": "S06",
+      "priority": 2,
+      "problem": "Masque fixe limité et dérive de visage",
+      "state": "documented_candidate",
+      "now": "Sujet protégé sur 120 images avec masque conservateur ; aucun corps ou geste nouveau validé.",
+      "later": "Commencer par masques corrigés manuellement ; comparer un suivi assisté SAM 3.1 lorsque matériel et accès aux poids le permettent, puis raccorder les masques au compositing.",
+      "trigger": "Prise adaptée, GPU CUDA requis par le projet vérifié, accès aux poids et conditions SAM examinés.",
+      "acceptance": "Contrôle de cheveux, mains et occultations sur la séquence ; pixels protégés identiques avant compression ; jugement de Morgan distinct.",
+      "cost": "Pas de téléchargement ou location GPU engagé ; ressources et licence à examiner avant inférence."
+    },
+    {
+      "id": "S07",
+      "priority": 1,
+      "problem": "Geste causal absent ou scène sans espace commun",
+      "state": "delivered_pilot_feedback_pending",
+      "now": "Le pilote colis météo est désormais déclaré livré : 7 s, 168 images, un job terminé. Ressemblance en mouvement et avis de Morgan restent inconnus. Aucun rendu supplémentaire lancé ici.",
+      "later": "Réutiliser les contrôles et le film livré ; recueillir le retour artistique réel, puis cibler un défaut éventuel de visage, regard, contact main/pot, pluie ou résolution.",
+      "trigger": "Retour de Morgan ou défaut contrôlé sur la sortie existante ; ne pas remettre le job terminé en attente.",
+      "acceptance": "Morgan reconnaissable et action compréhensible dans le même espace ; un défaut ciblé avant toute nouvelle génération.",
+      "cost": "Aucune dépense supplémentaire ; devis 128 / plafond 160 seulement rapportés par le pilotage, pas un coût débité vérifié ici."
+    },
+    {
+      "id": "S08",
+      "priority": 2,
+      "problem": "Parole française, musique et sens sonore encore incertains",
+      "state": "partial_tested",
+      "now": "ASR local calibré sur 22 mots anglais ; WAV et énergie prêts ; zéro segment Lumière sans verdict d’absence de voix.",
+      "later": "Calibrer sur court extrait français autorisé avec vérité de transcription ; comparer modèle local plus précis si utile ; vérifier ensuite mix et contacts par écoute, dont téléphone.",
+      "trigger": "Extrait et transcription de référence vérifiés ; sortie audio écoutable.",
+      "acceptance": "Erreurs consignées, mots incertains marqués, synchro et niveau appréciés séparément ; aucun titre de musique deviné.",
+      "cost": "Aucun service de transcription payant ; mémoire et temps d’un modèle plus grand à mesurer."
+    },
+    {
+      "id": "S09",
+      "priority": 2,
+      "problem": "Pas de projet de montage récupérable depuis un rendu",
+      "state": "tested_cut_timeline",
+      "now": "Export OTIO réalisé : cinq segments, audio parallèle, 451 images ; quatre tests et relecture SDK réussis.",
+      "later": "Relier le média dans l’éditeur choisi et vérifier import, images de coupe et audio ; fabriquer nos calques VFX séparément.",
+      "trigger": "Logiciel cible et média local disponibles.",
+      "acceptance": "Durée et points d’entrée/sortie identiques dans l’éditeur ; effets éditables originaux conservés ; aucune récupération de calques prétendue.",
+      "cost": "OTIO installé sans abonnement ; éditeur et éventuels adaptateurs non installés ni chiffrés ici."
+    },
+    {
+      "id": "S10",
+      "priority": 1,
+      "problem": "Relances payantes et jobs d’état inconnu",
+      "state": "coordination_rule",
+      "now": "Le pilotage confirme un seul job colis météo terminé ; aucun job média créé par cette passe.",
+      "later": "Garder identifiant, paramètres, devis et état final ; reprendre le job existant avant toute soumission. Corriger une entrée ou un plan précis.",
+      "trigger": "Résultat ou erreur explicite du job suivi ; plafond consigné pour tout appel supplémentaire.",
+      "acceptance": "Aucun doublon ; dépense attribuée à un seul job ; statut inconnu conservé comme inconnu.",
+      "cost": "Zéro crédit média supplémentaire autorisé par cette seule feuille de route."
+    },
+    {
+      "id": "S11",
+      "priority": 2,
+      "problem": "Mémoire fragmentée et absence de service permanent",
+      "state": "documentary_loop_active",
+      "now": "Continuité et pilotage versionnés ; même kit enrichi ; routine existante réutilisée.",
+      "later": "Raccorder la brique de journal déjà testée à une entrée réelle et à un worker stable ; contrôler déduplication, reprise et conservation des apports concurrents.",
+      "trigger": "Hôte et périmètre d’exécution vérifiés ; utiliser le pilote existant plutôt que créer un second journal.",
+      "acceptance": "Événement réel traité une fois, reprise après interruption, version concurrente préservée, état visible.",
+      "cost": "Pas de nouveau service, d’hébergement ni de machine engagés ; Jarvis et UNUM restent distincts."
+    },
+    {
+      "id": "S12",
+      "priority": 1,
+      "problem": "Diffusion Instagram après un contenu publiable",
+      "state": "instagram_selected_account_deferred",
+      "now": "Morgan choisit Instagram et prévoit de créer Marwin Studio lorsque du contenu sera publiable. Spotlight sort de la stratégie.",
+      "later": "Préparer le profil et le lancement du compte dédié après un contenu réellement utilisable ; connecter ensuite les données utiles.",
+      "trigger": "Contenu publiable puis compte créé par Morgan ; aucune date ou publication automatique.",
+      "acceptance": "Qualité artistique et identité vérifiées, compte exact confirmé, données et publication non présumées.",
+      "cost": "Aucune création de compte, publicité ou publication engagée."
+    },
+    {
+      "id": "S13",
+      "priority": 2,
+      "problem": "Crédits artistiques, droits et provenance incomplets",
+      "state": "process_prepared",
+      "now": "Médias des artistes non redistribués ; effet et sons du kit qualifiés selon leur origine.",
+      "later": "Tenir par asset auteur, source, licence/autorisation, modifications, usage et date ; séparer crédits déclarés d’un créateur et pistes réellement utilisées.",
+      "trigger": "Choix d’un asset pour une production ou publication.",
+      "acceptance": "Chaque élément utilisé possède une provenance exploitable ; statut manquant explicite avant diffusion.",
+      "cost": "Aucune licence ni prise de contact achetée ou envoyée."
+    },
+    {
+      "id": "S14",
+      "priority": 3,
+      "problem": "État de l’art affirmé sans comparaison et outils nouveaux coûteux",
+      "state": "benchmark_prepared",
+      "now": "Pistes techniques récentes vérifiées sans déclarer de vainqueur global ni installer les modèles lourds.",
+      "later": "Comparer une méthode à la référence sur trois cas stables : visage/geste, transformation d’espace, contact objet. Mesurer qualité, échecs, temps, coût et intégration.",
+      "trigger": "Défaut prioritaire, entrées stables et ressources compatibles vérifiées.",
+      "acceptance": "Résultats et échecs conservés ; adoption seulement si amélioration utile observée sur les cas choisis.",
+      "cost": "Essais payants éventuels à devis/plafond distincts ; aucune chaîne automatique engagée."
+    },
+    {
+      "id": "S15",
+      "priority": 2,
+      "problem": "Influence peu reliée à une signature et apprentissage discontinu",
+      "state": "routine_extended",
+      "now": "Caleb et Sayantan restent prioritaires ; références et propositions déjà étudiées réutilisées.",
+      "later": "À chaque passage utile, approfondir une preuve, traduire un mécanisme en action personnelle, livrer une contribution au film engagé, puis conserver le retour réel.",
+      "trigger": "Exécution de la routine Studio Marwin à cadence actuelle et sources disponibles.",
+      "acceptance": "Une avancée concrète et son statut ; pas d’accumulation de promesses ni de travail permanent prétendu.",
+      "cost": "Routine existante réutilisée ; aucune nouvelle dépense récurrente."
+    }
+  ],
+  "source_urls": [
+    "https://github.com/morluto/rea/blob/main/docs/installation.md",
+    "https://opentimelineio.readthedocs.io/en/latest/tutorials/otio-file-format-specification.html",
+    "https://github.com/AcademySoftwareFoundation/OpenTimelineIO/blob/main/LICENSE.txt",
+    "https://github.com/facebookresearch/sam3",
+    "https://github.com/facebookresearch/sam3/blob/main/LICENSE",
+    "https://newsroom.snap.com/rewarding-authentic-creativity-on-spotlight"
+  ],
+  "additional_paid_media_calls": 0,
+  "distribution_decision_latest": {
+    "date": "2026-10-26T22:15:59+01:00",
+    "source": "direct_user_instruction",
+    "user_words": "Spotlight ont s’en fou insta c’est bien. Je ferais un insta Marwin Studio quand du contenu seras publiable",
+    "primary_platform": "Instagram",
+    "account_name_intent": "Marwin Studio",
+    "account_status": "planned_not_created_by_this_work",
+    "account_creation_owner": "Morgan",
+    "account_creation_trigger": "When publishable content exists; Morgan will create it",
+    "spotlight_scope": "excluded_from_current_strategy",
+    "current_priority": "Produce and assess publishable content before account setup, statistics connection or launch dates",
+    "quality_criteria": [
+      "Morgan recognizable and motion identity assessed",
+      "Scene and consequence readable",
+      "Editing and sound judged usable"
+    ],
+    "handle_verified": false,
+    "account_created": false,
+    "published": false
+  }
+}

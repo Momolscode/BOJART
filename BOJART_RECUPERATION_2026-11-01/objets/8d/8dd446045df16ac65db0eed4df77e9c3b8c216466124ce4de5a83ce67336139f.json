@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-01",
+  "request": "Récupérer les données de « Reprise vérifiée Jarvis 5 », puis tout le périmètre BOJ.ART/Jarvis accessible.",
+  "library": {
+    "inventory_files": 652,
+    "selected_files": 168,
+    "selection": "Noms BOJ.ART/Jarvis, références documentées et dépendances créatives identifiées.",
+    "size_checks": "168/168 conformes"
+  },
+  "sites": {
+    "atelier_versions": 11,
+    "studio_versions": 3,
+    "source_and_git_history": true,
+    "studio_database_tables": {
+      "inquiries": 0,
+      "inquiry_rate_limits": 0,
+      "inquiry_tombstones": 0
+    }
+  },
+  "github": {
+    "repository": "Momolscode/BOJART",
+    "snapshot_commit": "ee9458c0a2184f1da8bcfd1b1a2a62763b9e5736",
+    "files": 35,
+    "blob_sha1_checks": "35/35 conformes",
+    "history_downloaded": false
+  },
+  "higgsfield": {
+    "documented_media_downloaded": 29,
+    "scene_files_downloaded": 3,
+    "project": "3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+    "revision": 2,
+    "new_generation": false
+  },
+  "drive": {
+    "queries": [
+      "BOJART / BOJ.ART / JARVIS",
+      "BOJ"
+    ],
+    "results": 0
+  },
+  "notion": {
+    "queries": [
+      "BOJART",
+      "Jarvis"
+    ],
+    "results": 0,
+    "cross_connector_search": "Non exécutée : accès Business requis. Les recherches directes Drive et GitHub ont été utilisées."
+  },
+  "conversations": {
+    "status": "Points de reprise et contexte retrouvés ; aucune exportation intégrale des conversations privées."
+  },
+  "limits": [
+    "Le PC de l’atelier et ses fichiers locaux n’ont pas été inspectés.",
+    "La présence des sources ne prouve pas le fonctionnement réel de la voix, des trois écrans ou des imprimantes.",
+    "L’archive TikTok documentée contient 29 vidéos sur 30 ; la vidéo 7099716894994730246 reste manquante dans cette archive.",
+    "Les fichiers créatifs incluent des essais, versions rejetées et projets intermédiaires ; leur récupération n’est pas une validation artistique.",
+    "Les originaux ZIP sont conservés à leurs liens d’origine ; la collection rassemble les contenus dédoublonnés et conserve aussi les ZIP imbriqués.",
+    "Les autres projets personnels sans lien documenté avec BOJ.ART/Jarvis ne font pas partie de cette collecte.",
+    "Aucun envoi GitHub, déploiement ou message externe n’a été effectué pendant cette récupération."
+  ]
+}

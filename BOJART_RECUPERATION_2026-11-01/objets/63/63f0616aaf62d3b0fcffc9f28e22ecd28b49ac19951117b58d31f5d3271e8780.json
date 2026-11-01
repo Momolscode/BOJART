@@ -1,0 +1,76 @@
+{
+  "schema": "bojart.tests.m06.v1",
+  "status": "PASS",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "versions": {
+    "langgraph": "1.2.18",
+    "langgraph-checkpoint": "4.3.1",
+    "langgraph-checkpoint-sqlite": "3.1.3",
+    "langchain-core": "1.7.3",
+    "langsmith": "0.14.16",
+    "pydantic": "2.14.2",
+    "cadquery": "2.8.0",
+    "trimesh": "4.11.1",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.4",
+    "av": "19.0.2",
+    "onnxruntime": "1.31.1",
+    "pytest": "9.0.2"
+  },
+  "suites": [
+    {
+      "name": "repository",
+      "passed": 252
+    },
+    {
+      "name": "mission01_02_03",
+      "passed": 242,
+      "subtests_passed": 5
+    },
+    {
+      "name": "knowledge",
+      "passed": 40
+    },
+    {
+      "name": "planning",
+      "passed": 22
+    }
+  ],
+  "total_tests": 556,
+  "new_m06_tests": 42,
+  "initial_browser_checks_m06": 12,
+  "browser_checks_m05_regression": 13,
+  "no_live_jev": true,
+  "no_real_microphone": true,
+  "voice_runtime_imported": true,
+  "weights_present": false,
+  "no_physical_qualification": true,
+  "final_browser_checks_m06": 13,
+  "real_cad_models_in_browser_recipes": 3,
+  "load_test": "load/ACCEPTANCE_M06.json",
+  "latency_outlier_retained": "final/ACCEPTANCE_M06.json",
+  "runtime_source_sha256": {
+    "proposals.py": "4740c3440c5cf81dac835c7ded773078349c85bec407a247dd3fc4d0a5bbd48b",
+    "consolidated_workbench.py": "a29e099c7b2b9a1df17e309cffb681d2fc750efba22ed96976475299f612d8da",
+    "jev_decider.py": "fe162bc6cd5f61576fec83e1bc1214ce9da1bec8c6ebc8d7a25b68ed0671136a",
+    "tower_events.py": "b5977eee110051c8b9ad7a0534286c966c27fb093c84b4d40163848a312e6ae8",
+    "launch_readiness.py": "c84a04ac74f3043178d47b83e2cdbf1cf5af27881c4a7c7b3406585c80c206b6",
+    "dialogue.py": "86deccfd1c8b3813709666bb31d7ddbaf93dd8d43b4faf6e8b6c4d4131ed3842",
+    "workbench.py": "2e98a891449389abf7d3ce55771f618cbccb6f1740a2460358c021fd22bad8c4",
+    "server.py": "7e471404672e347c0f21980a7420182497083eecbf2b82fe55205c71efded7c6",
+    "jarvis_http.py": "a9dc14409f18cdc5aced58d1a2dd8df408b9cff98fd84562fd6745a7d699be4f",
+    "growth.py": "fae4e22d4cfd17510c8f13187d1eee23b91fc7a05e0cf458fb54107ff2345921",
+    "diagnostics.py": "37517a5eb5e09a0a8ebbbdab72632fc8956e17adfde1dcd852413abd3b3df659",
+    "context_guard.py": "b24369ca6a8dd7710b2e319e89d6ab751f3adb7c3c4cf7c2e40938a58d61d108",
+    "jarvis_runtime.py": "21d60a4d25665cdbe459954d458cce674c6975c81359fd5a1a49686950ff28f6",
+    "studio_seed.py": "cee2a95cd9175a4b7945cd416a03a01b941ff327ae0d1ee80a6563c553166378",
+    "media_library.py": "9afeff32fa7b03822f3c7addae8f648434210cf01552297d619402b44d639809",
+    "workspace_state.py": "a3291a92f6e8b991106b9a3cc77a2a2092487d865d2c8e6e6a454e56f0a80068",
+    "control_tower.py": "f610deef425543abdbccb8a4a072b41799d324a2107c04ddbb1139f4098ed16d",
+    "voice.py": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d",
+    "studio_workbench.py": "a7194856a118a8e040d54db99962185ca87320a3dc6c4ecd7aab9bd2a16d995b",
+    "display_contracts.py": "f8bd1d9d4156f0125d958dbd13fe942c710447342532f4195ee67a5eb2ca6e36",
+    "core.py": "ff79558a2a58f4321b54185783910f6dcfd874ec432d5ff49fe44611e8396eb1"
+  }
+}

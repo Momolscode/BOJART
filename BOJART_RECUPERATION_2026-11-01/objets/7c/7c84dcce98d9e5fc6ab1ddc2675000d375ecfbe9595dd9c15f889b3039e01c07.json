@@ -1,0 +1,15 @@
+{
+  "detected_on_actual_restore": true,
+  "prior_commit": "1a61d12f68fbc6f11e7c39fe12ae389a509a0edb",
+  "differences": [
+    {
+      "path": "creative/character-lock-v6/BOJART_V6_SHOT_LIST.csv",
+      "working_sha256": "06fafc30b80066673404925a48e6ecd319ead97cee615870b9af641728ec4d2d",
+      "prior_git_sha256": "2bfaef5507851d5bf8b53d66a203fc6f460a3d7bd6075d8fe1ab007fe8bfdbcc",
+      "working_bytes": 861,
+      "prior_git_bytes": 854,
+      "remedy": "git add --renormalize after * -text, then fresh clone byte verification"
+    }
+  ],
+  "original_vault_untouched": true
+}

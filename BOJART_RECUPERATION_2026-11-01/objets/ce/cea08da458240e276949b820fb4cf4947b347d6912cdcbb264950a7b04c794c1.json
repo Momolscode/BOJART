@@ -1,0 +1,211 @@
+{
+  "source": {
+    "library_file_id": "libfile_95f036a54d5c8191beebf1102f3281f9",
+    "native_version": 70,
+    "content_version": "2.65",
+    "sha256": "92461ad9ee957af2f205c27e8b126cb73d842c3d7b7996360049d7a911777cf4",
+    "scope": "Snapshot documentaire du 29 octobre ; page de pilotage prioritaire pour les mandats."
+  },
+  "episodes": [
+    {
+      "episode": "01",
+      "title": "Produit non conforme",
+      "file_id": "libfile_7668a6fd96008191bd51e0fcd280ba5f",
+      "sha256": null,
+      "historical_status": null,
+      "current_disposition": "Identité historique non confirmée",
+      "public_metrics": null
+    },
+    {
+      "episode": "02",
+      "title": "Ça tient à une vis",
+      "file_id": "libfile_2032aedf5bc08191ba23d6cda92c6fce",
+      "sha256": null,
+      "historical_status": null,
+      "current_disposition": "Identité historique non confirmée",
+      "public_metrics": null
+    },
+    {
+      "episode": "03",
+      "title": "C’est juste un filtre",
+      "file_id": "libfile_92122490f6a4819195b1acdda718f3ea",
+      "sha256": "f9fcf3615b3895c2cce4a1b2302b51809234d2c680ac3193a9d1cd1f354463f7",
+      "historical_status": null,
+      "current_disposition": "Encouragement modéré, pas validation de charte",
+      "public_metrics": null
+    },
+    {
+      "episode": "04",
+      "title": "Mon ombre veut percer",
+      "file_id": "libfile_653a011cdaf88191b761a300d488e53c",
+      "sha256": "64933d1f107ccf69cfb3d31ed002535123a1862e16cebd801e23aff8c3a28677",
+      "historical_status": null,
+      "current_disposition": "Encouragement modéré, pas validation de charte",
+      "public_metrics": null
+    },
+    {
+      "episode": "05",
+      "title": "Le pont a perdu la résolution",
+      "file_id": "libfile_e48c7a3f19388191a4fb01fe8d265785",
+      "sha256": "61beab11a32794a94addb39e4c638d93299f30abea4ade24ac57ebf55b0fb8b6",
+      "historical_status": "V4 appréciée par Morgan ; version retenue pour diffusion, non publiée",
+      "current_disposition": "Encouragement ancien relativisé le 27 octobre",
+      "public_metrics": null
+    },
+    {
+      "episode": "06",
+      "title": "Mon café est en mise à jour",
+      "file_id": "libfile_56136ed1fe208191a64f1b2da6aa6fb2",
+      "sha256": "26a54077f013aad8ec7266044256da40a5dfa30320ac7f7d1dbe3bbdfa97ca87",
+      "historical_status": "Film terminé et contrôlé ; accord de Morgan pour avancer après audit ; non publié",
+      "current_disposition": "Encouragement ancien relativisé le 27 octobre",
+      "public_metrics": null
+    },
+    {
+      "episode": "07",
+      "title": "La pub qui me suit",
+      "file_id": "libfile_1f00c5ee92d88191bb6143d54aac1e52",
+      "sha256": "280e67cc4a64c79565d96064793ab582daba492da15d2180482e95cc88d34ade",
+      "historical_status": "R4 sans nouveau rush livrée comme essai synthétique ; ressemblance en mouvement non approuvée, hors kit de diffusion.",
+      "current_disposition": "R3 refusée pour le visage ; R4 non approuvée",
+      "public_metrics": null
+    },
+    {
+      "episode": "08",
+      "title": "Une lumière pour plus tard",
+      "file_id": "libfile_05f4fd8df5f88191a61953262ccfdd29",
+      "sha256": "f83813e46674001ff1484bd91a72bb86dff7eac5ca0eff74a57ac8c3d567ec41",
+      "historical_status": "V1 refusée globalement par Morgan ; écartée des versions à retenir, archive conservée. Reprise de mise en scène préparée ; aucune V2 vidéo produite.",
+      "current_disposition": "Refus global de V1",
+      "public_metrics": null
+    },
+    {
+      "episode": "09",
+      "title": "Le colis météo",
+      "file_id": "libfile_40de05e2bec08191b47f4ecbe31e5f9d",
+      "sha256": "3201c914305295571a80f7170b2b5855be09cc0f150b73abe20904623fb3628b",
+      "historical_status": "Direction artistique R02 montée, décodée et contrôlée par prélèvements ; film 8 s et fabrication réelle livrés. Ressemblance et appréciation de Morgan non reçues.",
+      "current_disposition": "Avis propre et ressemblance inconnus",
+      "public_metrics": null
+    },
+    {
+      "episode": "10",
+      "title": "Les cookies qui me suivent",
+      "file_id": "libfile_c09f389068f08191b8d589e978f02c43",
+      "sha256": "b8b9e80bca23f32f6d07c687e6735415464441c5d598d80ea7ceee0591e9fbcb",
+      "historical_status": "Cookies R01 refusé globalement par Morgan le 27 octobre. Film et contrôles conservés en archive, hors diffusion ; aucune R02 lancée.",
+      "current_disposition": "Refus global, clos",
+      "public_metrics": null
+    },
+    {
+      "episode": "11",
+      "title": "La pause me fuit — essai Banc",
+      "file_id": "libfile_0bc60fc91c548191a51d88c36a93bdba",
+      "sha256": "1ed5b5dd29253c4fc25ebc3b75eab4390dddd317b2b0506096ee66a02f2307b3",
+      "historical_status": "Banc : génération terminée, source vidéo décodée et archivée ; direction présentée refusée, essai écarté hors diffusion. Aucun rendu correctif lancé.",
+      "current_disposition": "Direction refusée, clos",
+      "public_metrics": null
+    }
+  ],
+  "latest_feedback": [
+    {
+      "date": "2026-10-27T17:21:55+01:00",
+      "target": "MORGAN_Les_Cookies_01.mp4",
+      "library_file_id": "libfile_c09f389068f08191b8d589e978f02c43",
+      "episode": "10",
+      "revision": "01",
+      "user_words": "Bah de pire en pire aucun sens dégueulasse trouve ont étais pourtant partie sur une « bonne base » très déçu. Des milliers de personnes gagne leur vie avec de le création IA des centaine de milliers vont devenir millionnaire grâce à ces outils et toi tu me ponds des vidéos bizarre comme ça..",
+      "interpretation": "Refus global du film Cookies, jugé incohérent et très en dessous de la qualité attendue.",
+      "scope": "Pas une simple demande de changer le texte, la cadence ou un biscuit. Identité et performance publique ne sont pas jugées séparément ici."
+    },
+    {
+      "date": "2026-10-27T17:21:55+01:00",
+      "target": "Qualification actuelle des bases antérieures, Pont V4 et Café évoqués par l’assistant",
+      "user_words": "J’avais vite fait apprécier ouais vraiment vite fait",
+      "interpretation": "Morgan relativise ses appréciations antérieures : encouragement limité, insuffisant pour prendre ces films comme niveau de qualité validé.",
+      "scope": "Clarification actuelle à appliquer au cap artistique. Les propos historiques restent datés, sans les effacer ni transformer ce retour en mesure d’audience."
+    },
+    {
+      "date": "2026-10-27T17:41:56+01:00",
+      "target": "Direction et niveau attendu pour les prochains films",
+      "user_words": "Ouais bah considère que rien ne me plaira tant que tu ne m’auras pas rendu un contenu pouvant faire easy des millions de vu",
+      "interpretation": "Morgan attend un contenu personnel à potentiel de très large diffusion et refuse de traiter les essais existants comme un résultat satisfaisant.",
+      "scope": "Objectif annoncé, pas audience, probabilité démontrée ni promesse de millions de vues."
+    },
+    {
+      "date": "2026-10-27T17:58:36+01:00",
+      "target": "Direction Banc présentée, image de préparation et/ou rendu affiché",
+      "user_words": "Bah c’est vraiment pas ouf qu’est ce tu veux qu’on fasse de ça ?",
+      "interpretation": "La direction présentée ne convainc pas Morgan ; elle est écartée et ne donne lieu à aucun nouveau rendu.",
+      "exact_media_viewed_confirmed": false,
+      "scope": "Ne pas déduire une appréciation séparée de la ressemblance, des contacts ou du son. Le nouveau film n’est pas déclaré approuvé."
+    }
+  ],
+  "scene": {
+    "video_deferred": true,
+    "checks": {
+      "goal_visible": "not_verified",
+      "causal_action_visible": "to_correct",
+      "resolution_visible": "not_verified",
+      "spatial_continuity": "to_correct"
+    },
+    "method_by_shot": [
+      "Personnage depuis des originaux, jeu à préparer ; aucun rush selfie attesté.",
+      "Sol fixe et éléments de façade séparés pour une réponse locale.",
+      "Coupe motivée par regard et retournement du téléphone ; fidélité à contrôler."
+    ],
+    "identity_original_refs": [
+      "libfile_123e968a99cc8191b6507080c88450a3"
+    ],
+    "sound_review": "not_verified",
+    "rights_checked": null,
+    "account_ready": false,
+    "publication_authorized": false,
+    "approvals": [],
+    "id": "PHOTO-FAMILLE",
+    "title": "La photo de famille",
+    "reference_ids": [
+      "CAL01",
+      "SAY01"
+    ],
+    "rejected": false,
+    "method_capability_checked": "not_verified",
+    "method_source": "https://chatgpt.com/space/page_ff03f1afa2348191b11e1f722cbf6fe3",
+    "artifact": {
+      "sha256": "a004be26629945363cefdeceb1e580193439b896412b3148825f487d789e9f19",
+      "media_type": "still",
+      "technical_pass": true
+    },
+    "next_action": "Rendre visible la réponse locale de la lanterne au téléphone arrêté ; reprendre les trois images et le contrôle de lecture existant.",
+    "limiting_observation": "Planche regardée : les inclinaisons peuvent se lire comme une déformation ; intention du groupe et raccord pas démontrés."
+  },
+  "lessons": [
+    {
+      "problem": "Présentation du projet au lieu d’une scène drôle",
+      "change": "Désir personnel et chute jouée avant habillage."
+    },
+    {
+      "problem": "Visage dérivant dans les générations en chaîne",
+      "change": "Contrôles depuis originaux ; aucune tête dérivée utilisée comme identité approuvée."
+    },
+    {
+      "problem": "Transitions et cadence confondues avec fluidité ressentie",
+      "change": "Contrôler les plans sensibles, garder avis humain distinct."
+    },
+    {
+      "problem": "Gags faibles recouverts de texte",
+      "change": "Cause et réponse du décor doivent se lire sans légende."
+    },
+    {
+      "problem": "Outils plus nombreux que preuves de contenu",
+      "change": "Un cas de scène, un chemin de production, une preuve de résultat."
+    }
+  ],
+  "reading_test": {
+    "id": "MAR03-PHOTO-FAMILLE-LECTURE-20261028",
+    "threshold": "4 descriptions complètes sur 5, trois mêmes images, mêmes conditions",
+    "executed": false
+  },
+  "generated_media_this_pass": 0,
+  "published": false
+}

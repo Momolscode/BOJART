@@ -1,0 +1,1594 @@
+[
+  {
+    "name": "3209de2c-cfcf-4d3f-8e10-1f85d2eeb858.mp3",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+        "path": "PILOTAGE_20261101/BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      },
+      {
+        "source_id": "libfile_49221f165bc88191a0249a9efec97a7f",
+        "path": "BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/3209de2c-cfcf-4d3f-8e10-1f85d2eeb858.mp3",
+    "http_status": 200,
+    "content_type": "audio/mpeg",
+    "status": "recovered",
+    "bytes": 485805,
+    "sha256": "5aea3d23f8ca873d19efd440bb1eaa51884191b598c7caf509a1df2dabfe0562",
+    "local_name": "3209de2c-cfcf-4d3f-8e10-1f85d2eeb858.mp3"
+  },
+  {
+    "name": "34c4399a-036f-464c-9b46-ceb34cdd6809.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_d2790adba8648191be66dd309c444eea",
+        "path": "BOJ_ART_V7_Continuite_et_storyboard.txt"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/34c4399a-036f-464c-9b46-ceb34cdd6809.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 1675261,
+    "sha256": "c9355e896bea140136ca7ee0989c18547d084b319a88446a056213faa2bfdb8b",
+    "local_name": "34c4399a-036f-464c-9b46-ceb34cdd6809.mp4"
+  },
+  {
+    "name": "4aa8f4fd-36c9-44d9-87cb-16ab963fda41.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_c664f68eb564819186892d382d028d96",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+        "path": "PILOTAGE_20261101/BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      },
+      {
+        "source_id": "libfile_49221f165bc88191a0249a9efec97a7f",
+        "path": "BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/4aa8f4fd-36c9-44d9-87cb-16ab963fda41.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 12828724,
+    "sha256": "b734fc9e7b398f54a9517eaae9cf01c1ba1ae26f2e1e2484430d8466bbf6f1af",
+    "local_name": "4aa8f4fd-36c9-44d9-87cb-16ab963fda41.mp4"
+  },
+  {
+    "name": "9f85f40d-ea6a-4fd7-a6f0-92c5f3d6120d.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+        "path": "PILOTAGE_20261101/BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      },
+      {
+        "source_id": "libfile_49221f165bc88191a0249a9efec97a7f",
+        "path": "BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/9f85f40d-ea6a-4fd7-a6f0-92c5f3d6120d.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 14334300,
+    "sha256": "557e019db772556e57d0e05705eb5e1a3d25788b621b08a0f386bd85f281fe10",
+    "local_name": "9f85f40d-ea6a-4fd7-a6f0-92c5f3d6120d.mp4"
+  },
+  {
+    "method": "GET",
+    "expiresAt": "2026-11-01T20:52:33.275Z",
+    "name": "BOJART_V35_revision2.blend",
+    "expected_bytes": 1565549,
+    "signed": true,
+    "project_url": "https://higgsfield.ai/3d-jutsu/3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+    "artifact": {
+      "projectId": "3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+      "revision": 2,
+      "size": 1565549,
+      "etag": "cb0a76dfca551b73702aeca3f0208e6c",
+      "type": "blend"
+    },
+    "http_status": 200,
+    "content_type": "application/x-blender",
+    "status": "recovered",
+    "bytes": 1565549,
+    "sha256": "f159d1e705b70ad1795550ae2195fda9675bec344bf1e2da54729bac999c1f3e",
+    "local_name": "BOJART_V35_revision2.blend"
+  },
+  {
+    "method": "GET",
+    "expiresAt": "2026-11-01T20:52:33.667Z",
+    "name": "BOJART_V35_revision2.glb",
+    "expected_bytes": 538564,
+    "signed": true,
+    "project_url": "https://higgsfield.ai/3d-jutsu/3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+    "artifact": {
+      "projectId": "3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+      "revision": 2,
+      "size": 538564,
+      "etag": "9df19bbe049b8ad25ab0f61ec3e1bbc2",
+      "type": "glb"
+    },
+    "http_status": 200,
+    "content_type": "model/gltf-binary",
+    "status": "recovered",
+    "bytes": 538564,
+    "sha256": "70cde315f6a01b7f78fcc8f0e44467ddc1322149da371a4ee591252572e6a638",
+    "local_name": "BOJART_V35_revision2.glb"
+  },
+  {
+    "method": "GET",
+    "expiresAt": "2026-11-01T20:52:33.366Z",
+    "name": "V35_3D_depth_fixed_frame33.png",
+    "expected_bytes": 257859,
+    "signed": true,
+    "project_url": "https://higgsfield.ai/3d-jutsu/3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+    "artifact": {
+      "projectId": "3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+      "revision": 2,
+      "size": 257859,
+      "etag": "eb6758a3d4a0e309d37640c20f559590",
+      "id": "0c40d9c9dbcde59f9191360f873980b1",
+      "name": "V35_3D_depth_fixed_frame33.png",
+      "mediaType": "image/png",
+      "operationId": "improve-v35-real-3d-depth-01",
+      "width": 360,
+      "height": 640
+    },
+    "http_status": 200,
+    "content_type": "image/png",
+    "status": "recovered",
+    "bytes": 257859,
+    "sha256": "6aef2f5b6f3395ca0860321d857ef5423d800bb4e7e6cadbd6014bad2eeb6bb7",
+    "local_name": "V35_3D_depth_fixed_frame33.png"
+  },
+  {
+    "name": "ac08d8fa-56a9-4fad-9939-3f5cfa55d150.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/ac08d8fa-56a9-4fad-9939-3f5cfa55d150.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 13634362,
+    "sha256": "0974501641a2027f77b6766108bd5af7d78606e4fe900f079e7e725ac547ff65",
+    "local_name": "ac08d8fa-56a9-4fad-9939-3f5cfa55d150.mp4"
+  },
+  {
+    "name": "c38bd51a-83db-4120-9f20-6bc0d7e9ef9e.png",
+    "sources": [
+      {
+        "source_id": "libfile_d2790adba8648191be66dd309c444eea",
+        "path": "BOJ_ART_V7_Continuite_et_storyboard.txt"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/c38bd51a-83db-4120-9f20-6bc0d7e9ef9e.png",
+    "http_status": 200,
+    "content_type": "image/png",
+    "status": "recovered",
+    "bytes": 487867,
+    "sha256": "b8a84e08a4e44d4aa4118051f61b7eeb620a5f3e272ad0b90307eef60774b22f",
+    "local_name": "c38bd51a-83db-4120-9f20-6bc0d7e9ef9e.png"
+  },
+  {
+    "name": "d6881e1d-fc06-490a-b3c6-c73ca2bd0a83.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/d6881e1d-fc06-490a-b3c6-c73ca2bd0a83.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 13599006,
+    "sha256": "1202ba560df8e76d45a6fda8375987c9cc4501c162f235778dea54a8042ad1ce",
+    "local_name": "d6881e1d-fc06-490a-b3c6-c73ca2bd0a83.mp4"
+  },
+  {
+    "name": "e2bee7c7-9e03-4b56-ae6f-24d17a66b3f4.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_c664f68eb564819186892d382d028d96",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/e2bee7c7-9e03-4b56-ae6f-24d17a66b3f4.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 11774161,
+    "sha256": "98efcd4de5b96fcce97fb3c94f9d8e961a8aacb62ec39a3436b0ca952edef672",
+    "local_name": "e2bee7c7-9e03-4b56-ae6f-24d17a66b3f4.mp4"
+  },
+  {
+    "name": "f761a0fa-44ca-4b80-9285-919db1ffe831.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_c664f68eb564819186892d382d028d96",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+        "path": "PILOTAGE_20261101/BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      },
+      {
+        "source_id": "libfile_49221f165bc88191a0249a9efec97a7f",
+        "path": "BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/f761a0fa-44ca-4b80-9285-919db1ffe831.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 10452846,
+    "sha256": "769440115fb87bdd8790f950ab18f77f9d0449fd604133bc5b446c9c3a87196d",
+    "local_name": "f761a0fa-44ca-4b80-9285-919db1ffe831.mp4"
+  },
+  {
+    "name": "f8731113-df23-4c14-a15e-2aeccc8fa79a.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+        "path": "PILOTAGE_20261101/BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      },
+      {
+        "source_id": "libfile_49221f165bc88191a0249a9efec97a7f",
+        "path": "BOJART_REPRISE_RENDUS_2026-11-01.txt"
+      }
+    ],
+    "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/f8731113-df23-4c14-a15e-2aeccc8fa79a.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 9915459,
+    "sha256": "f4e1638e4ab8a10a009bbce749985c383de473e585107bd124f120073ae739b5",
+    "local_name": "f8731113-df23-4c14-a15e-2aeccc8fa79a.mp4"
+  },
+  {
+    "name": "hf_20261027_192427_61c9c506-4fb4-475c-a9d9-47accc977933.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261027_192427_61c9c506-4fb4-475c-a9d9-47accc977933.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 9393878,
+    "sha256": "c6cf6af68bc13663b437dabb6b2bbc095dc4ded3d800e3bcecd463c3c9c1c62c",
+    "local_name": "hf_20261027_192427_61c9c506-4fb4-475c-a9d9-47accc977933.mp4"
+  },
+  {
+    "name": "hf_20261028_050150_bea49764-0877-498b-ab35-55f6744d5883.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_050150_bea49764-0877-498b-ab35-55f6744d5883.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 10410371,
+    "sha256": "34eb5c0076da99d4dd9be793a65dd3458dc69c6b8ae6d2df1eec19b5a8120c62",
+    "local_name": "hf_20261028_050150_bea49764-0877-498b-ab35-55f6744d5883.mp4"
+  },
+  {
+    "name": "hf_20261028_091259_2ecbb9b4-616c-4414-8ecb-847088d2a948.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_091259_2ecbb9b4-616c-4414-8ecb-847088d2a948.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 4988544,
+    "sha256": "62adea756e9eb0d8a9bcf6fcc3a46994d46290d3be45aae6772384ca0b0b2235",
+    "local_name": "hf_20261028_091259_2ecbb9b4-616c-4414-8ecb-847088d2a948.mp4"
+  },
+  {
+    "name": "hf_20261028_092825_8a731690-c8fb-4fb2-adf1-197330320c83.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_092825_8a731690-c8fb-4fb2-adf1-197330320c83.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 12321183,
+    "sha256": "f0d18d8fd84e65c0638aa45988851efd8f39fecc6656069629a32c94f47663ec",
+    "local_name": "hf_20261028_092825_8a731690-c8fb-4fb2-adf1-197330320c83.mp4"
+  },
+  {
+    "name": "hf_20261028_100607_26fc3201-9201-4bcf-8eac-5e0b16507a5d.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_100607_26fc3201-9201-4bcf-8eac-5e0b16507a5d.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 2240762,
+    "sha256": "bd5854586bf85033f0224a2d96d5dfc4bf1672dc1b5a9793bcb2d2ffdf066b82",
+    "local_name": "hf_20261028_100607_26fc3201-9201-4bcf-8eac-5e0b16507a5d.mp4"
+  },
+  {
+    "name": "hf_20261028_101457_4190b100-c5ae-4ce8-b05c-decac166a60a.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_101457_4190b100-c5ae-4ce8-b05c-decac166a60a.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 3280625,
+    "sha256": "cfeb90edc3b5d33ff412889d6b8b2693b958cb8346569df6fcae2282393985b6",
+    "local_name": "hf_20261028_101457_4190b100-c5ae-4ce8-b05c-decac166a60a.mp4"
+  },
+  {
+    "name": "hf_20261028_110537_84138259-383f-4f64-b9d9-152d77472efd.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_110537_84138259-383f-4f64-b9d9-152d77472efd.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 5171799,
+    "sha256": "4960bda7e435e4168eee0f491449b8e49ba9dae7a784a13ab21cc60e7af8ddf0",
+    "local_name": "hf_20261028_110537_84138259-383f-4f64-b9d9-152d77472efd.mp4"
+  },
+  {
+    "name": "hf_20261028_110537_97139b96-d9d3-45b4-aedd-a2d8881258a7.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_110537_97139b96-d9d3-45b4-aedd-a2d8881258a7.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 3121370,
+    "sha256": "29b645d06ed65176cb7baf61d9c4106e074e41957fafcb0f1555015b05bdd458",
+    "local_name": "hf_20261028_110537_97139b96-d9d3-45b4-aedd-a2d8881258a7.mp4"
+  },
+  {
+    "name": "hf_20261028_110537_bfd89227-943b-4a8b-b641-db1e9630a8dc.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_110537_bfd89227-943b-4a8b-b641-db1e9630a8dc.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 2755144,
+    "sha256": "98f42e20ea4c74ef31ffa3f90aaf1c5382e648f8723d569a2207d0efe72e14e6",
+    "local_name": "hf_20261028_110537_bfd89227-943b-4a8b-b641-db1e9630a8dc.mp4"
+  },
+  {
+    "name": "hf_20261028_113746_b51304bb-e84a-435e-a21d-3ac0eaab12e6.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+        "path": "BOJART_JARVIS_M07/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+        "path": "BOJART_JARVIS_M06/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+        "path": "BOJART_JARVIS_M05/source/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_4c3908c20004819192495d824fa648d2",
+        "path": "BOJART_JARVIS_M04/BOJART_JARVIS_M04_SOURCES.zip!/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      },
+      {
+        "source_id": "libfile_e1b3d73f40588191982f85943797a65f",
+        "path": "BOJART_TRANSMISSION/BOJART_SOURCES_2026-10-30.zip!/bojart-jarvis/creative/generations/REGISTRY.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_113746_b51304bb-e84a-435e-a21d-3ac0eaab12e6.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 2239592,
+    "sha256": "13698fbda04306d087275d7105a6d2a9a33a7ff2cd83608e09bef50450b33779",
+    "local_name": "hf_20261028_113746_b51304bb-e84a-435e-a21d-3ac0eaab12e6.mp4"
+  },
+  {
+    "name": "hf_20261028_114941_2d467c5d-b572-4459-b3a2-09030f680a50.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_d2790adba8648191be66dd309c444eea",
+        "path": "BOJ_ART_V7_Continuite_et_storyboard.txt"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261028_114941_2d467c5d-b572-4459-b3a2-09030f680a50.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 1878254,
+    "sha256": "ba26ef98cbd2dd4f8d1734ecce7a8deff507f8726912507d76c5214453ae6601",
+    "local_name": "hf_20261028_114941_2d467c5d-b572-4459-b3a2-09030f680a50.mp4"
+  },
+  {
+    "name": "hf_20261029_174207_2180eb7c-a472-4577-a532-7c89bdfe5d55.png",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261029_174207_2180eb7c-a472-4577-a532-7c89bdfe5d55.png",
+    "http_status": 200,
+    "content_type": "image/png",
+    "status": "recovered",
+    "bytes": 5186872,
+    "sha256": "d5d777eb50a9c4e2cc40912da687d951ed296153a478c938ba372a8b78fbde29",
+    "local_name": "hf_20261029_174207_2180eb7c-a472-4577-a532-7c89bdfe5d55.png"
+  },
+  {
+    "name": "hf_20261029_174209_87446809-12a1-4bf8-b588-f82ebc0814f9.png",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261029_174209_87446809-12a1-4bf8-b588-f82ebc0814f9.png",
+    "http_status": 200,
+    "content_type": "image/png",
+    "status": "recovered",
+    "bytes": 4998320,
+    "sha256": "023c9fd25d41029a62df793038313d1ca30c2d783683466f023ba27fff69b18c",
+    "local_name": "hf_20261029_174209_87446809-12a1-4bf8-b588-f82ebc0814f9.png"
+  },
+  {
+    "name": "hf_20261029_174405_cf0d5c4a-9f5d-452b-859b-2051bdd97a46.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_c664f68eb564819186892d382d028d96",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261029_174405_cf0d5c4a-9f5d-452b-859b-2051bdd97a46.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 8504330,
+    "sha256": "364726b9065d69f755ef5dd96644c6c70a17d135b9f324c2e38319f9973c6cce",
+    "local_name": "hf_20261029_174405_cf0d5c4a-9f5d-452b-859b-2051bdd97a46.mp4"
+  },
+  {
+    "name": "hf_20261029_174405_d400962b-2aec-468d-8129-3b00108052bf.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_c664f68eb564819186892d382d028d96",
+        "path": "BOJART_MANIFEST_V23.json"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_5546365105108191a55e2c0a48080986",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+        "path": "BOJART_MEMOIRE_DA_V22(1).md"
+      },
+      {
+        "source_id": "libfile_2f2429ca97a08191ad23787334937a15",
+        "path": "BOJART_MEMOIRE_DA_V22.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+        "path": "BOJART_MEMOIRE_DA_V23.md"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/docs/historical/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_d56374ccc65c81919653e750828eb58b",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_efbf33c24f0c81918128820033a3d301",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_dfa56861a3888191abca850f8f448e38",
+        "path": "sources/BOJART_MEMOIRE_DA_V24.md"
+      },
+      {
+        "source_id": "libfile_e5487a91080c8191abc3096208701458",
+        "path": "BOJART_MEMOIRE_DA_V24.md"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261029_174405_d400962b-2aec-468d-8129-3b00108052bf.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 4672808,
+    "sha256": "54c1174f97a77bceb825fa6959d2eac3e3deb044646ca17fc1576991b1749101",
+    "local_name": "hf_20261029_174405_d400962b-2aec-468d-8129-3b00108052bf.mp4"
+  },
+  {
+    "name": "hf_20261030_223039_38729645-1659-463f-874b-22bbf447cee2.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/runs/higgsfield/the-awakening-01/status.json"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/runs/remote-media.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261030_223039_38729645-1659-463f-874b-22bbf447cee2.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 1592556,
+    "sha256": "afcb9479fb69022f5f5c9a79f8a2e45f9eb53eee570ae7c4c7b00fc704e3bd87",
+    "local_name": "hf_20261030_223039_38729645-1659-463f-874b-22bbf447cee2.mp4"
+  },
+  {
+    "name": "hf_20261030_223437_9d7c949b-e456-407f-ae43-8efa0b4cbe89.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/runs/higgsfield/painted-reality-01/status.json"
+      },
+      {
+        "source_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+        "path": "BOJART_MARWIN_GITHUB_2026-11-01/runs/remote-media.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261030_223437_9d7c949b-e456-407f-ae43-8efa0b4cbe89.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 1227110,
+    "sha256": "c91556e46fbe5a88cea5321f85870cfa46e6be61d138e1ecaf3955fc2f1991fd",
+    "local_name": "hf_20261030_223437_9d7c949b-e456-407f-ae43-8efa0b4cbe89.mp4"
+  },
+  {
+    "name": "hf_20261101_184232_0a942e6f-541c-4f00-ba65-f9f921671f3f.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+        "path": "GENERATION_INSERT_MATIERE.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261101_184232_0a942e6f-541c-4f00-ba65-f9f921671f3f.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 3260882,
+    "sha256": "de21ed8d12f717ee308a3fc60f2e2f16c1c741368f4277d8802029ee1ac91201",
+    "local_name": "hf_20261101_184232_0a942e6f-541c-4f00-ba65-f9f921671f3f.mp4"
+  },
+  {
+    "name": "hf_20261101_191003_e81c8ed0-5535-4216-ad7e-e88c2a4d8da3.mp4",
+    "sources": [
+      {
+        "source_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+        "path": "R02_LE_DERNIER_GESTE/G1_DERNIER_TRAIT.json"
+      }
+    ],
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261101_191003_e81c8ed0-5535-4216-ad7e-e88c2a4d8da3.mp4",
+    "http_status": 200,
+    "content_type": "video/mp4",
+    "status": "recovered",
+    "bytes": 2077736,
+    "sha256": "0c59fa55389e199765b1eb64fe50a95421714c84b3bbcddfefba15a29f8a45fd",
+    "local_name": "hf_20261101_191003_e81c8ed0-5535-4216-ad7e-e88c2a4d8da3.mp4"
+  }
+]

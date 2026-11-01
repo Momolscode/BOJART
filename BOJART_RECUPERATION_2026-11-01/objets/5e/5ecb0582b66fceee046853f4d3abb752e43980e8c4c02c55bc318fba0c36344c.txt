@@ -1,0 +1,139 @@
+test_ambiguous_stop (test_consolidated.ContractTests.test_ambiguous_stop) ... ok
+test_bool_revision (test_consolidated.ContractTests.test_bool_revision) ... ok
+test_context_change_after_request (test_consolidated.ContractTests.test_context_change_after_request) ... ok
+test_extra_key (test_consolidated.ContractTests.test_extra_key) ... ok
+test_id_conflict (test_consolidated.ContractTests.test_id_conflict) ... ok
+test_known_command_local (test_consolidated.ContractTests.test_known_command_local) ... ok
+test_long_command (test_consolidated.ContractTests.test_long_command) ... ok
+test_no_delete (test_consolidated.ContractTests.test_no_delete) ... ok
+test_no_printer (test_consolidated.ContractTests.test_no_printer) ... ok
+test_parallel_retries (test_consolidated.ContractTests.test_parallel_retries) ... /usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac220>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac310>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac400>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac4f0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac5e0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac6d0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac7c0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac8b0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ac9a0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960aca90>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960acb80>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960acc70>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960acd60>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ace50>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960acf40>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad030>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad120>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad210>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad300>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad3f0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad4e0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad5d0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad6c0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad7b0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad8a0>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ad990>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ada80>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960adb70>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960adc60>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960add50>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960ade40>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.13/concurrent/futures/_base.py:608: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7fcd960adf30>
+  fs = [self.submit(fn, *args) for args in zip(*iterables)]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_planning_explicit_demo (test_consolidated.ContractTests.test_planning_explicit_demo) ... ok
+test_reopen_preserves_receipt (test_consolidated.ContractTests.test_reopen_preserves_receipt) ... ok
+test_replay_no_duplicate (test_consolidated.ContractTests.test_replay_no_duplicate) ... ok
+test_revision_after_request (test_consolidated.ContractTests.test_revision_after_request) ... ok
+test_selection_required (test_consolidated.ContractTests.test_selection_required) ... ok
+test_speech_interrupt_not_machine_stop (test_consolidated.ContractTests.test_speech_interrupt_not_machine_stop) ... ok
+test_unicode (test_consolidated.ContractTests.test_unicode) ... ok
+test_unknown_selection (test_consolidated.ContractTests.test_unknown_selection) ... ok
+test_wrong_project (test_consolidated.ContractTests.test_wrong_project) ... ok
+test_wrong_revision (test_consolidated.ContractTests.test_wrong_revision) ... ok
+test_capabilities_honest (test_consolidated.HTTPTests.test_capabilities_honest) ... ok
+test_context (test_consolidated.HTTPTests.test_context) ... ok
+test_duplicate_query (test_consolidated.HTTPTests.test_duplicate_query) ... ok
+test_empty_search (test_consolidated.HTTPTests.test_empty_search) ... ok
+test_knowledge_page (test_consolidated.HTTPTests.test_knowledge_page) ... ok
+test_knowledge_real_results (test_consolidated.HTTPTests.test_knowledge_real_results) ... ok
+test_limit_validation (test_consolidated.HTTPTests.test_limit_validation) ... ok
+test_no_auth_context (test_consolidated.HTTPTests.test_no_auth_context) ... ok
+test_no_auth_knowledge (test_consolidated.HTTPTests.test_no_auth_knowledge) ... ok
+test_origin_rejected (test_consolidated.HTTPTests.test_origin_rejected) ... ok
+test_original_cad_retained (test_consolidated.HTTPTests.test_original_cad_retained) ... ok
+test_original_console_link (test_consolidated.HTTPTests.test_original_console_link) ... ok
+test_original_studio_retained (test_consolidated.HTTPTests.test_original_studio_retained) ... ok
+test_propose (test_consolidated.HTTPTests.test_propose) ... ok
+test_unauth_write_rejected (test_consolidated.HTTPTests.test_unauth_write_rejected) ... ok
+test_unbounded_actions_absent (test_consolidated.HTTPTests.test_unbounded_actions_absent) ... ok
+test_unknown_query_parameter (test_consolidated.HTTPTests.test_unknown_query_parameter) ... ok
+test_wrong_host (test_consolidated.HTTPTests.test_wrong_host) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 1.424s
+
+OK

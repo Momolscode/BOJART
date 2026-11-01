@@ -1,0 +1,42 @@
+[
+  {
+    "id": "S1",
+    "title": "TypeSafe — modèles, entrées et limites",
+    "url": "https://docs.typesafe.ai/models"
+  },
+  {
+    "id": "S2",
+    "title": "TypeSafe — décisions typées",
+    "url": "https://docs.typesafe.ai/introduction"
+  },
+  {
+    "id": "S3",
+    "title": "TikTok — Content Sharing Guidelines",
+    "url": "https://developers.tiktok.com/docs/en/content-sharing-guidelines"
+  },
+  {
+    "id": "S4",
+    "title": "TikTok — utilisation commerciale de la musique",
+    "url": "https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/commercial-use-of-music-on-tiktok?lang=en"
+  },
+  {
+    "id": "S5",
+    "title": "TikTok — droits musicaux, réutilisation hors plateforme",
+    "url": "https://ads.tiktok.com/resources/help/article/about-music-copyright-for-tiktok-one-creator-collaborations"
+  },
+  {
+    "id": "S6",
+    "title": "CNIL — cookies et autres traceurs",
+    "url": "https://www.cnil.fr/fr/cookies-et-autres-traceurs/que-dit-la-loi"
+  },
+  {
+    "id": "S7",
+    "title": "Code de la propriété intellectuelle — droits patrimoniaux",
+    "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006161637"
+  },
+  {
+    "id": "S8",
+    "title": "OWASP — risques des applications de modèles de langage",
+    "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+  }
+]

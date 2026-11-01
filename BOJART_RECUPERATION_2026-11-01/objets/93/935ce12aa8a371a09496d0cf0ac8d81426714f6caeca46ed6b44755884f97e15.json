@@ -1,0 +1,218 @@
+{
+  "version": "1.1",
+  "created_local": "2026-10-25",
+  "identity": "EAGLEMIC",
+  "status": "Correction utilisateur : la story personnelle doit être drôle. Le manifeste de projet a été rejeté pour ce contenu ; sa charte reste une proposition distincte.",
+  "mission": "Faire évoluer une présence personnelle et collective qui donne forme aux idées, crée du lien et apporte de l’âme au quotidien.",
+  "signature": "Créer avec de l’âme.",
+  "tone": [
+    "sincère",
+    "inventif",
+    "chaleureux",
+    "précis",
+    "sans grandiloquence automatique"
+  ],
+  "visual_system": {
+    "background": "#0B120F",
+    "ivory": "#F2ECDD",
+    "sage": "#B0CAA3",
+    "muted": "#99A39A",
+    "motion": "Glissements lents et fondus ; geste ou détail comme point d’entrée ; laisser respirer les plans.",
+    "person": "Préserver les traits et le mouvement du portrait ; habillage graphique séparé du sujet.",
+    "formats": [
+      "Story 9:16 · 10–15 s",
+      "Microfilm 9:16 · 15–30 s",
+      "Coulisses en trois écrans"
+    ]
+  },
+  "identity_scope": {
+    "personal": "Eaglemic : idées, gestes, liens et transmission.",
+    "BOJ.ART": "Identité de projet distincte. La charte personnelle proposée ici ne remplace pas celle de BOJ.ART.",
+    "other_projects": "Ne pas fusionner UNUM, Jarvis, M-Tek et BOJ.ART dans une seule marque ; nommer un projet seulement lorsque le contenu le concerne réellement."
+  },
+  "source": {
+    "filename": "D785579E-D122-491D-83DD-518F749E7A88.mp4",
+    "library_file_id": "libfile_308f493642608191bba903da12439ffc",
+    "resolution": [
+      512,
+      910
+    ],
+    "duration_seconds": 10.033333,
+    "audio": "Musique présente dans le fichier fourni, avec étiquette Sun Is Shining — Bob Marley & The Wailers. Aucun autre extrait ajouté."
+  },
+  "delivered_film": {
+    "filename": "EAGLEMIC_Story_Snap_Babylone.mp4",
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 30,
+    "codec": "H.264 / AAC",
+    "upscale_note": "Export HD à partir d’une source de définition inférieure ; pas de récupération de détail absent.",
+    "treatment": [
+      "Mise en place : « Ce soir, je reste sage. »",
+      "Révélation du texte Babylone original après 2,3 secondes",
+      "Petit saut de cadrage comique",
+      "Fausse notification Babylone : « Frérot, je t’ai même pas cherché. »",
+      "Reggae fourni conservé ; deux bips de notification synthétisés"
+    ],
+    "genre": "story humoristique"
+  },
+  "pipeline": [
+    {
+      "stage": "Recevoir",
+      "output": "Rush original conservé, empreinte SHA-256, durée et dimensions relevées."
+    },
+    {
+      "stage": "Choisir",
+      "output": "Une intention, une émotion, un détail réel et un format."
+    },
+    {
+      "stage": "Écrire",
+      "output": "Accroche, scénario minuté, plans, phrase finale ; distinguer disponible et à filmer."
+    },
+    {
+      "stage": "Monter",
+      "output": "Master vertical et version sans musique ; gabarit actuel spécifique au portrait fourni."
+    },
+    {
+      "stage": "Vérifier",
+      "output": "Lire l’export et contrôler les textes, le visage, le son, la durée et l’absence d’image cassée."
+    },
+    {
+      "stage": "Livrer",
+      "output": "Fichier prêt à publier et légende courte."
+    },
+    {
+      "stage": "Apprendre",
+      "output": "Consigner seulement des retours constatés ; conserver ce qui crée des échanges utiles ; tester une seule évolution à la fois."
+    }
+  ],
+  "recurring_work": {
+    "desired": "Un rendez-vous créatif chaque matin, vers 8 h Europe/Paris.",
+    "per_run": "Trois concepts inédits, un scénario complet prêt à tourner ou monter, une story en trois écrans et un essai concret.",
+    "weekly": "Le dimanche, faire le point sur les sept éditions et les retours effectivement disponibles, puis renouveler la série.",
+    "limits": "La préparation récurrente est une tâche ChatGPT planifiée. Ce kit n’installe pas de service sur le PC, ne dispose pas d’accès aux statistiques des comptes et ne publie pas sur Snapchat. Un montage automatique nouveau dépend de rushes réellement accessibles et du gabarit approprié."
+  },
+  "feedback": {
+    "available_now": false,
+    "rule": "Pas de statistiques inventées. Rotation des familles au départ ; première priorité locale seulement après trois publications mesurées par famille. Les réponses par 100 vues servent de signal, sans prouver une causalité.",
+    "fields": [
+      "date",
+      "content_id",
+      "views",
+      "responses",
+      "completion_optional",
+      "useful_comments",
+      "next_change"
+    ]
+  },
+  "ideas": [
+    {
+      "id": "F01",
+      "pillar": "Humour personnel",
+      "title": "Ce soir, je reste sage",
+      "hook": "Moi, en début de soirée : « Ce soir, je reste sage. »",
+      "script": "0–2,3 s : « Ce soir, je reste sage. » / 2,3–7,1 s : « 20 minutes plus tard » et révélation du texte Babylone du rush / 7,1–10 s : fausse notification Babylone : « Frérot, je t’ai même pas cherché. »",
+      "shots": [
+        "Portrait et texte Babylone du rush conservés."
+      ],
+      "source_status": "Story humoristique exportée et vérifiée ; première version manifeste rejetée.",
+      "experiment": "Préserver le ton personnel du rush avant de décider de son habillage."
+    },
+    {
+      "id": "F02",
+      "pillar": "Geste",
+      "title": "L’étincelle invisible",
+      "hook": "Avant l’objet, il y a ce petit déclic.",
+      "script": "0–2 s : « Ça commence presque toujours comme ça. » / 2–6 s : trait sur un carnet. / 6–11 s : geste qui teste l’idée. / 11–15 s : « Une idée minuscule. Une envie immense de lui donner vie. »",
+      "shots": [
+        "Très gros plan d’un trait.",
+        "Main qui essaie une matière ou un outil.",
+        "Plan plus large du début du projet."
+      ],
+      "source_status": "À filmer : trois plans de téléphone ; utiliser seulement un projet réel.",
+      "experiment": "Comparer une ouverture par le geste à une ouverture par une phrase ; une seule variable change."
+    },
+    {
+      "id": "F03",
+      "pillar": "Collectif",
+      "title": "Le moment où nos idées se rencontrent",
+      "hook": "Le meilleur moment ? Quand l’idée ne vient plus d’une seule personne.",
+      "script": "0–3 s : « Une idée, ça se partage. » / 3–9 s : deux gestes se répondent sur un même projet. / 9–15 s : « Et parfois, quelqu’un lui donne la pièce qui manquait. »",
+      "shots": [
+        "Détail d’un projet commun réel.",
+        "Deux mains ou deux outils qui se passent le relais.",
+        "Plan du résultat ou de son état actuel."
+      ],
+      "source_status": "À filmer avec les collaborateurs concernés ; aucun nom ou rôle supposé.",
+      "experiment": "Tester un plan sans visage où les gestes suffisent à raconter la collaboration."
+    },
+    {
+      "id": "F04",
+      "pillar": "Processus",
+      "title": "La tentative qu’on ne montre jamais",
+      "hook": "Ce plan-là, on le coupe souvent. Cette fois, on le garde.",
+      "script": "0–3 s : une tentative ratée réelle. / 3–8 s : montrer le détail qui bloque. / 8–12 s : un nouvel essai. / 12–15 s : « Ça aussi, c’est créer. »",
+      "shots": [
+        "Essai réel, sans erreur mise en scène.",
+        "Détail précis du problème visible.",
+        "Réponse trouvée, ou tentative encore en cours."
+      ],
+      "source_status": "À filmer ou à extraire de rushes existants ; ne pas annoncer une réussite non constatée.",
+      "experiment": "Comparer une fin ouverte à un résultat terminé lorsque les deux existent réellement."
+    },
+    {
+      "id": "F05",
+      "pillar": "Matière",
+      "title": "De l’idée à la matière",
+      "hook": "Le jour où l’idée devient quelque chose qu’on peut toucher.",
+      "script": "0–3 s : croquis ou modèle réel. / 3–8 s : fabrication, impression ou assemblage. / 8–12 s : objet en main, son de matière. / 12–15 s : « Le numérique prend du sens quand il rejoint le vivant. »",
+      "shots": [
+        "Écran avec le projet, sans données privées.",
+        "Geste de fabrication.",
+        "Même objet dans la main."
+      ],
+      "source_status": "À filmer : un objet précis dont les étapes sont disponibles ; aucune attribution BOJ.ART automatique.",
+      "experiment": "Tester un raccord de forme entre le dessin et l’objet."
+    },
+    {
+      "id": "F06",
+      "pillar": "Transmission",
+      "title": "Donner une seconde vie",
+      "hook": "Parfois, créer, c’est redonner une chance.",
+      "script": "0–3 s : détail d’un objet réellement à réparer. / 3–9 s : un geste compréhensible. / 9–13 s : résultat vérifié, ou prochaine étape. / 13–15 s : « Il restait encore une histoire à vivre. »",
+      "shots": [
+        "Objet identifié.",
+        "Geste de diagnostic ou réparation.",
+        "Résultat observable."
+      ],
+      "source_status": "À filmer à l’atelier seulement sur un cas documenté et communicable.",
+      "experiment": "Mesurer les questions utiles reçues, plutôt que de conclure à partir des seules vues."
+    },
+    {
+      "id": "F07",
+      "pillar": "Intention",
+      "title": "Ce qu’on veut laisser",
+      "hook": "Pas seulement des images. Quelque chose qui reste.",
+      "script": "Story en trois écrans : 1. « Donner forme aux idées. » 2. « Faire se rencontrer les talents. » 3. « Et remettre un peu d’âme dans le quotidien. » Signature finale : « On continue de créer. »",
+      "shots": [
+        "Trois écrans typographiques sur fond sombre, ou trois détails d’un même lieu."
+      ],
+      "source_status": "Réalisable sans nouveau tournage en typographie ; script prêt, film non exporté.",
+      "experiment": "Garder le dernier écran plus longtemps et observer les réponses de fond."
+    }
+  ],
+  "ready_caption": "J’avais pourtant dit que je restais sage 😭",
+  "creative_checks": [
+    "Le propos correspond à quelque chose de réel.",
+    "Le détail choisi porte l’émotion.",
+    "Les textes restent lisibles et la fin respire.",
+    "Le prochain essai est simple à distinguer du précédent."
+  ],
+  "editorial_routing": {
+    "personal_story": "Humour, spontanéité et contexte du rush. Aucun habillage de projet automatique.",
+    "project_content": "Les propositions de signature et de charte ne concernent que des contenus de projet appropriés.",
+    "correction_date": "2026-10-25"
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "input_manifest": "apps/jarvis/MANIFESTE_SHA256.json",
+    "checked_files": 130,
+    "mismatches": [],
+    "not_hash_entries": [],
+    "comparison": "immutable recovery import tag, not current source"
+  },
+  {
+    "input_manifest": "history/launch-2026-10-20/MANIFESTE_SHA256.json",
+    "checked_files": 25,
+    "mismatches": [],
+    "not_hash_entries": [],
+    "comparison": "immutable recovery import tag, not current source"
+  },
+  {
+    "input_manifest": "knowledge/metier/MANIFESTE_SHA256.json",
+    "checked_files": 24,
+    "mismatches": [],
+    "not_hash_entries": [],
+    "comparison": "immutable recovery import tag, not current source"
+  },
+  {
+    "input_manifest": "labs/planning/MANIFESTE_SHA256.json",
+    "checked_files": 29,
+    "mismatches": [],
+    "not_hash_entries": [],
+    "comparison": "immutable recovery import tag, not current source"
+  },
+  {
+    "input_manifest": "marketing/coherence-v3/MANIFESTE_SHA256.json",
+    "checked_files": 14,
+    "mismatches": [],
+    "not_hash_entries": [],
+    "comparison": "immutable recovery import tag, not current source"
+  }
+]

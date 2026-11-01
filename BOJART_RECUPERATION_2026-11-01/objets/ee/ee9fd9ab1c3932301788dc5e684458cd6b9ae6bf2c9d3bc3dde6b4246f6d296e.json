@@ -1,0 +1,49 @@
+{
+  "examined_on": "2026-10-21",
+  "old_calendar_count": 18,
+  "old_calendar_range": [
+    "J+0",
+    "J+28"
+  ],
+  "old_consecutive_repeated_concepts": [
+    {
+      "jours": [
+        "J+6",
+        "J+7"
+      ],
+      "format": "Préparation 3D"
+    },
+    {
+      "jours": [
+        "J+14",
+        "J+15"
+      ],
+      "format": "Prototype technique"
+    },
+    {
+      "jours": [
+        "J+22",
+        "J+23"
+      ],
+      "format": "Peinture à la main"
+    }
+  ],
+  "old_no_media_identified_count": 18,
+  "old_no_rights_verified_count": 18,
+  "dashboard_legacy_exact_total": "14 017",
+  "source_screenshot": "13,5 K et 517 : première valeur arrondie, audiences non dédupliquées",
+  "board_visual_observations": [
+    "J−5 apparaît deux fois",
+    "J−6 placé après une vignette J−5",
+    "plus de vignettes que les 18 concepts du CSV",
+    "emblème redessiné et textes synthétiques, pas fichiers de marque authentifiés",
+    "pictogrammes Instagram associés à des comptes seulement établis ici sur TikTok",
+    "réactions et emballages illustrés : concepts, pas preuves clients"
+  ],
+  "live_access": {
+    "sites_connector_available": false,
+    "public_fetch_succeeded": false,
+    "meaning": "Accès impossible depuis cet environnement, pas preuve de panne."
+  },
+  "source_code_scope": "Source applicative publiée V11 non disponible; seul document V10 et kits joints relus."
+}

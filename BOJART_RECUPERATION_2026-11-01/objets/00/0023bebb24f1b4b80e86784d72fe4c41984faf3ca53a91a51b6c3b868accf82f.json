@@ -1,0 +1,307 @@
+{
+  "schema": "bojart.acceptance.m05.v1",
+  "status": "PASS",
+  "observed_at": "2026-11-01T17:59:11.625497+00:00",
+  "python": "3.12.14",
+  "os": "Linux",
+  "browser": {
+    "status": "PASS",
+    "browser": "153.0.8010.0",
+    "checks": [
+      "Launcher opens the workspace after private-session bootstrap",
+      "Create a named project using the workspace form",
+      "Create and render actual CAD 180 mm in project revision 1",
+      "Create and render actual CAD 240 mm in project revision 2",
+      "Studio creates and revalidates a brief from authentic source segments",
+      "Growth creates a source-linked draft and validates it without publishing",
+      "Actual browser view pilotage renders and acknowledges its command",
+      "Actual browser view atelier renders and acknowledges its command",
+      "Actual browser view creation renders and acknowledges its command",
+      "Lost dispatch response survives reload and retries the same request without duplicate",
+      "Workspace verifies both CAD revisions, all databases and all three media files",
+      "Global snapshot is created, verified and available for authenticated download",
+      "Narrow workspace has no horizontal overflow and keeps project actions visible"
+    ],
+    "project": "BOJ-CC84AE0249AE44B5",
+    "operation_ids": [
+      "99b50c850c044c849721e0c42f5423ec",
+      "4b06e90d98824fee922def41dfe56c09"
+    ],
+    "studio_brief": "brief-cee92132-25d7-46cc-b462-d70d2442bdf6",
+    "growth_packet": "post_218cb5f466de4a8b802021dfc92a3ae3",
+    "backup": {
+      "schema": "bojart.workspace.snapshot.v1",
+      "ok": true,
+      "snapshot_id": "0f881134df0a41e18767fdc51d5da615",
+      "files": 25,
+      "created_at": "2026-11-01T17:59:08.460270+00:00",
+      "sha256": "b14d4c7b8d71d1dc3efa862b7db9e92905091f411f820dda51e7ce82c9cac93d",
+      "scope": [
+        "CAO et propositions",
+        "dossiers et révisions",
+        "Studio et médias exacts",
+        "brouillons Growth",
+        "régie et reçus",
+        "contexte",
+        "fichiers incomplets conservés"
+      ],
+      "url": "/backups/bojart-global-0f881134df0a41e18767fdc51d5da615.zip",
+      "replayed": false
+    },
+    "roles": [
+      "atelier",
+      "pilotage",
+      "creation"
+    ],
+    "browser_errors": [],
+    "physical_qualification": false
+  },
+  "cad": [
+    {
+      "operation_id": "99b50c850c044c849721e0c42f5423ec",
+      "revision": 2,
+      "parameters": {
+        "chamfer_mm": 1.0,
+        "diameter_mm": 240.0,
+        "height_mm": 24.0,
+        "hole_diameter_mm": 6.0,
+        "pitch_mm": 128.0,
+        "upper_diameter_mm": 200.0,
+        "upper_height_mm": 4.0
+      },
+      "proof": {
+        "bounds_mm": [
+          240.0,
+          239.9525604248047,
+          24.0
+        ],
+        "cad_brep_valid": true,
+        "cadquery": "2.8.0",
+        "geometric_volume_cm3": 1026.392,
+        "not_validated": [
+          "résistance / stabilité",
+          "ajustements réels",
+          "matière et profil",
+          "slicing",
+          "impression physique"
+        ],
+        "numerical_tolerance_mm": 0.15,
+        "solid_count": 1,
+        "stl_watertight": true,
+        "stl_winding_consistent": true,
+        "triangles": 4752,
+        "trimesh": "4.11.1",
+        "units": {
+          "glb": "m",
+          "step": "mm",
+          "stl": "mm : convention du manifeste"
+        }
+      },
+      "files": {
+        "modele.json": {
+          "bytes": 620052,
+          "sha256": "8040fe03a039d257d2770df7ed4303c57ceacefbcb56132b47fe2214280eeae8"
+        },
+        "parametres.json": {
+          "bytes": 189,
+          "sha256": "443591541340c61bc614853429f7870eb7697177f076fdda717dea8d09d9cc9f"
+        },
+        "recette_core.py": {
+          "bytes": 23038,
+          "sha256": "ff79558a2a58f4321b54185783910f6dcfd874ec432d5ff49fe44611e8396eb1"
+        },
+        "socle.step": {
+          "bytes": 36586,
+          "sha256": "60d09f4766969ad77060e5cea27654f0adbc87ed7d652cdf252fc401452bdc57"
+        },
+        "socle.stl": {
+          "bytes": 237684,
+          "sha256": "bece348eb6263933d2e3776821bdf60a35724587ab9283a3847a8cc43a36ba11"
+        },
+        "socle_metres.glb": {
+          "bytes": 86484,
+          "sha256": "2bccd8ee622502d38a5b9bd67bf8ab4ff79b378c7a0b83b6dacc107f91b262b8"
+        }
+      }
+    },
+    {
+      "operation_id": "4b06e90d98824fee922def41dfe56c09",
+      "revision": 1,
+      "parameters": {
+        "chamfer_mm": 1.0,
+        "diameter_mm": 180.0,
+        "height_mm": 24.0,
+        "hole_diameter_mm": 6.0,
+        "pitch_mm": 96.0,
+        "upper_diameter_mm": 150.0,
+        "upper_height_mm": 4.0
+      },
+      "proof": {
+        "bounds_mm": [
+          180.0,
+          179.96441650390625,
+          24.0
+        ],
+        "cad_brep_valid": true,
+        "cadquery": "2.8.0",
+        "geometric_volume_cm3": 575.96,
+        "not_validated": [
+          "résistance / stabilité",
+          "ajustements réels",
+          "matière et profil",
+          "slicing",
+          "impression physique"
+        ],
+        "numerical_tolerance_mm": 0.15,
+        "solid_count": 1,
+        "stl_watertight": true,
+        "stl_winding_consistent": true,
+        "triangles": 4752,
+        "trimesh": "4.11.1",
+        "units": {
+          "glb": "m",
+          "step": "mm",
+          "stl": "mm : convention du manifeste"
+        }
+      },
+      "files": {
+        "modele.json": {
+          "bytes": 616640,
+          "sha256": "9dfff398b3805e90b1a869acb0a9a242aefb0f2ab19bde85be81061ffb340003"
+        },
+        "parametres.json": {
+          "bytes": 188,
+          "sha256": "6a6d336ebc094b33341d87d40a60982cb1d829f0b12b0fa4024f42d68e51568e"
+        },
+        "recette_core.py": {
+          "bytes": 23038,
+          "sha256": "ff79558a2a58f4321b54185783910f6dcfd874ec432d5ff49fe44611e8396eb1"
+        },
+        "socle.step": {
+          "bytes": 36559,
+          "sha256": "bb5a4313018cad19575c66f97d25fcd0048802f9ff49b32a612949f6ed0b7502"
+        },
+        "socle.stl": {
+          "bytes": 237684,
+          "sha256": "22c366de185c1d54a538b9a0bcf5d46ecf04409c292e033b4eb6a9e08db16c20"
+        },
+        "socle_metres.glb": {
+          "bytes": 86484,
+          "sha256": "9f3a78b8dc3bbbf99b8e2124f28d8d753f2c3821ae6f6562a8480fb5fe40735f"
+        }
+      }
+    }
+  ],
+  "restoration": {
+    "original_workspace_removed": true,
+    "receipt": {
+      "schema": "bojart.restore.receipt.v1",
+      "restored_at": "2026-11-01T17:59:10.900029+00:00",
+      "snapshot_id": "0f881134df0a41e18767fdc51d5da615",
+      "archive_sha256": "b14d4c7b8d71d1dc3efa862b7db9e92905091f411f820dda51e7ce82c9cac93d",
+      "verified_files": 25,
+      "databases": [
+        "missions.sqlite3",
+        "display-proposals.sqlite3",
+        "control-tower.sqlite3",
+        "studio/media.sqlite",
+        "growth/growth.sqlite"
+      ],
+      "media_relocated": 3,
+      "pending_display_commands": "cancelled_restore",
+      "physical_actions": false
+    },
+    "snapshot_sha256": "b14d4c7b8d71d1dc3efa862b7db9e92905091f411f820dda51e7ce82c9cac93d",
+    "second_generation_restored": true,
+    "integrity": {
+      "schema": "bojart.integrity.v1",
+      "observed_at": "2026-11-01T17:59:11.165494+00:00",
+      "ok": true,
+      "databases": 5,
+      "verified_operations": 2,
+      "verified_media": 3,
+      "issues": [],
+      "scope": "Intégrité numérique ; pas de qualification matérielle."
+    },
+    "overview": {
+      "schema": "bojart.workspace.state.v1",
+      "observed_at": "2026-11-01T17:59:11.625110+00:00",
+      "projects": [
+        {
+          "id": "BOJ-CC84AE0249AE44B5",
+          "name": "Socle — recette M05",
+          "revision": 2
+        },
+        {
+          "id": "BOJ-PILOTE-001",
+          "name": "BOJ-PILOTE-001",
+          "revision": 0
+        }
+      ],
+      "operations": {
+        "READY": 2
+      },
+      "interrupted": [],
+      "dialogue_proposals": 2,
+      "media": 3,
+      "segments": 8,
+      "studio_briefs": 1,
+      "growth_drafts": 1,
+      "recent_snapshots": [
+        {
+          "name": "bojart-global-eecda6c5386a4ed3855a3727dd3ca053.zip",
+          "url": "/backups/bojart-global-eecda6c5386a4ed3855a3727dd3ca053.zip",
+          "bytes": 11683995,
+          "modified_at_unix": 1793555951.5145347
+        }
+      ],
+      "last_integrity_check": {
+        "databases": 5,
+        "issues": [],
+        "observed_at": "2026-11-01T17:59:11.165494+00:00",
+        "ok": true,
+        "schema": "bojart.integrity.v1",
+        "scope": "Intégrité numérique ; pas de qualification matérielle.",
+        "verified_media": 3,
+        "verified_operations": 2
+      },
+      "shared_catalogue": true,
+      "backup_scope": [
+        "missions.sqlite3",
+        "display-proposals.sqlite3",
+        "control-tower.sqlite3",
+        "studio/media.sqlite",
+        "growth/growth.sqlite"
+      ],
+      "production_ready": false,
+      "restore_receipt": {
+        "archive_sha256": "b14d4c7b8d71d1dc3efa862b7db9e92905091f411f820dda51e7ce82c9cac93d",
+        "databases": [
+          "missions.sqlite3",
+          "display-proposals.sqlite3",
+          "control-tower.sqlite3",
+          "studio/media.sqlite",
+          "growth/growth.sqlite"
+        ],
+        "media_relocated": 3,
+        "pending_display_commands": "cancelled_restore",
+        "physical_actions": false,
+        "restored_at": "2026-11-01T17:59:10.900029+00:00",
+        "schema": "bojart.restore.receipt.v1",
+        "snapshot_id": "0f881134df0a41e18767fdc51d5da615",
+        "verified_files": 25
+      }
+    }
+  },
+  "limits": [
+    "Chromium headless, not physical monitors",
+    "Linux acceptance; Windows launchers not executed here",
+    "No microphone, local LLM, external account or printer qualification"
+  ],
+  "screenshots": {
+    "DOSSIERS_M05.png": "b277c508ff05ca6667b716b871e0407d488b7fedf6220c69ab46f7f8dc774e85",
+    "CAO_M05.png": "baad909fb6a8db9410e0db467177dc5f55ce7d8f4305b2306f15911ce2461d27",
+    "VUE_3D_M05.png": "c7884b0142958abd86d16a273ec8c725059faf35bf6cb45347e12578bfbad4e1",
+    "DOSSIERS_M05_MOBILE.png": "f07d33d0329f6f2ef29870d7ec12b5f097e724c0a23a8bf445ba41be2448e221"
+  }
+}

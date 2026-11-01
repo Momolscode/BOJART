@@ -1,0 +1,3 @@
+BOJ.ART — Qualification G2, 1 novembre 2026
+
+V35 : inventaire réel lu, décor seul. TEST62 : rush historique rejeté après inspection, non intégré. TEST19 : ancien rush utilisé dans R03 avec raccord sur le poing, sans nouvelle génération. G2 définitif reste dépendant d’une source exacte animable. Voir AUDIT_G2_20261101.json et V35_INVENTAIRE_LECTURE_SEULE.json.

@@ -1,0 +1,702 @@
+{
+  "AIGCDescription": "",
+  "CategoryType": 120,
+  "IsHDBitrate": false,
+  "ShowAIGC": true,
+  "author": {
+    "avatarLarger": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=041efeb5&x-expires=1792508400&x-signature=FxUDw4YyqLCEg7hVtp37secijzk%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "avatarMedium": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:720:720.jpeg?dr=10399&refresh_token=23a422de&x-expires=1792508400&x-signature=tjhol64LA%2F1plKU0cT%2BBNj%2B91Yc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "avatarThumb": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=3f095fe5&x-expires=1792508400&x-signature=tzMNnpxkLt2ll3OmxUlEsNNG3QQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "commentSetting": 0,
+    "downloadSetting": 0,
+    "duetSetting": 0,
+    "ftc": false,
+    "id": "6593375005073211397",
+    "isADVirtual": false,
+    "isEmbedBanned": false,
+    "nickname": "boj.Art",
+    "openFavorite": false,
+    "privateAccount": false,
+    "relation": 0,
+    "secUid": "MS4wLjABAAAAfrnDm3LlZg6Q6FbOQYZIV4B8U1M2DFZRJ_R4X_UjLWzG1XZDpADIeEqk6tq04TWj",
+    "secret": false,
+    "shortDramaCreator": {},
+    "signature": "Rejoins-moi et regarde tes idées devenir des œuvres d’art uniques 🎨",
+    "stitchSetting": 0,
+    "uniqueId": "boj.art",
+    "verified": false
+  },
+  "authorStats": {
+    "diggCount": 13200,
+    "followerCount": 13500,
+    "followingCount": 1649,
+    "friendCount": 0,
+    "heart": 13600,
+    "heartCount": 13600,
+    "videoCount": 31
+  },
+  "authorStatsV2": {
+    "diggCount": "13200",
+    "followerCount": "13500",
+    "followingCount": "1649",
+    "friendCount": "0",
+    "heart": "13600",
+    "heartCount": "13600",
+    "videoCount": "31"
+  },
+  "backendSourceEventTracking": "",
+  "challenges": [
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1695931978012673",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakihanma💪"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1196485",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "baki"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1626882859295746",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "bakihanma"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "4366143",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "figurines"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "All things #Manga",
+      "id": "146080",
+      "profileLarger": "https://p16-common-sign.tiktokcdn-eu.com/musically-maliva-obj/8e5537a7ac76103b7cbf816310f30873.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=w4wR5fFYTcVP59b83plgnTB5veo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "profileMedium": "https://p16-common-sign.tiktokcdn-eu.com/musically-maliva-obj/8e5537a7ac76103b7cbf816310f30873.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=w4wR5fFYTcVP59b83plgnTB5veo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "profileThumb": "https://p16-common-sign.tiktokcdn-eu.com/musically-maliva-obj/8e5537a7ac76103b7cbf816310f30873.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=w4wR5fFYTcVP59b83plgnTB5veo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "title": "manga"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1616592751567877",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "impresion3d"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "22953114",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "sukuna"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1682044531400710",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "jjkmanga"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "1676470939348997",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "sukunaryomen"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "7027479438526775302",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "peintureimpression3d"
+    },
+    {
+      "coverLarger": "https://p16-common-sign.tiktokcdn-eu.com/tiktok-obj/7e9c404e319f997d3616e7bfd620f50f.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=rlmz2T5Wl3j87GpSlZCaMFXEB1s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "coverMedium": "https://p16-common-sign.tiktokcdn-eu.com/tiktok-obj/7e9c404e319f997d3616e7bfd620f50f.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=rlmz2T5Wl3j87GpSlZCaMFXEB1s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "coverThumb": "https://p16-common-sign.tiktokcdn-eu.com/tiktok-obj/7e9c404e319f997d3616e7bfd620f50f.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=rlmz2T5Wl3j87GpSlZCaMFXEB1s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "desc": "",
+      "id": "1647568131749893",
+      "profileLarger": "https://p16-common-sign.tiktokcdn-eu.com/tiktok-obj/05d23935f5b4d97f82f48653cf9115db.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=K0PxMoR7nuBNEpFZH7IKGTjN5JE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "profileMedium": "https://p16-common-sign.tiktokcdn-eu.com/tiktok-obj/05d23935f5b4d97f82f48653cf9115db.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=K0PxMoR7nuBNEpFZH7IKGTjN5JE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "profileThumb": "https://p16-common-sign.tiktokcdn-eu.com/tiktok-obj/05d23935f5b4d97f82f48653cf9115db.png~tplv-tiktokx-origin.image?dr=10386&x-expires=1792357200&x-signature=K0PxMoR7nuBNEpFZH7IKGTjN5JE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a",
+      "title": "jujutsukaisen"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "18031080",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "dbsuper"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "216854",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "dragonball"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "156521",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "goku"
+    },
+    {
+      "coverLarger": "",
+      "coverMedium": "",
+      "coverThumb": "",
+      "desc": "",
+      "id": "6890548",
+      "profileLarger": "",
+      "profileMedium": "",
+      "profileThumb": "",
+      "title": "frezzer"
+    }
+  ],
+  "collected": false,
+  "contents": [
+    {
+      "desc": "#bakihanma💪 #baki #bakihanma #figurines #manga #impresion3d #sukuna #jjkmanga #sukunaryomen #peintureimpression3d #jujutsukaisen #dbsuper #dragonball #dragonball #goku #frezzer ",
+      "textExtra": [
+        {
+          "awemeId": "",
+          "end": 12,
+          "hashtagName": "bakihanma💪",
+          "isCommerce": false,
+          "start": 0,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 18,
+          "hashtagName": "baki",
+          "isCommerce": false,
+          "start": 13,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 29,
+          "hashtagName": "bakihanma",
+          "isCommerce": false,
+          "start": 19,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 40,
+          "hashtagName": "figurines",
+          "isCommerce": false,
+          "start": 30,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 47,
+          "hashtagName": "manga",
+          "isCommerce": false,
+          "start": 41,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 60,
+          "hashtagName": "impresion3d",
+          "isCommerce": false,
+          "start": 48,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 68,
+          "hashtagName": "sukuna",
+          "isCommerce": false,
+          "start": 61,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 78,
+          "hashtagName": "jjkmanga",
+          "isCommerce": false,
+          "start": 69,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 92,
+          "hashtagName": "sukunaryomen",
+          "isCommerce": false,
+          "start": 79,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 114,
+          "hashtagName": "peintureimpression3d",
+          "isCommerce": false,
+          "start": 93,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 129,
+          "hashtagName": "jujutsukaisen",
+          "isCommerce": false,
+          "start": 115,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 138,
+          "hashtagName": "dbsuper",
+          "isCommerce": false,
+          "start": 130,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 150,
+          "hashtagName": "dragonball",
+          "isCommerce": false,
+          "start": 139,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 162,
+          "hashtagName": "dragonball",
+          "isCommerce": false,
+          "start": 151,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 168,
+          "hashtagName": "goku",
+          "isCommerce": false,
+          "start": 163,
+          "subType": 0,
+          "type": 1
+        },
+        {
+          "awemeId": "",
+          "end": 177,
+          "hashtagName": "frezzer",
+          "isCommerce": false,
+          "start": 169,
+          "subType": 0,
+          "type": 1
+        }
+      ]
+    }
+  ],
+  "createTime": 1720565326,
+  "desc": "#bakihanma💪 #baki #bakihanma #figurines #manga #impresion3d #sukuna #jjkmanga #sukunaryomen #peintureimpression3d #jujutsukaisen #dbsuper #dragonball #dragonball #goku #frezzer ",
+  "digged": false,
+  "duetDisplay": 0,
+  "effectStickers": [
+    {
+      "ID": "16721656",
+      "name": "Blue Soda",
+      "stickerStats": {
+        "useCount": 0
+      }
+    }
+  ],
+  "forFriend": false,
+  "id": "7389771662532594977",
+  "imagePost": {
+    "cover": {
+      "imageHeight": 1440,
+      "imageURL": {
+        "urlList": [
+          "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=stkKDRw4NdROcf7H7KoCfgX3Wd4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+          "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=KQo1xLJSBzy%2Bi%2F0kcG4EPOdVC04%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+        ]
+      },
+      "imageWidth": 1080
+    },
+    "images": [
+      {
+        "imageHeight": 1440,
+        "imageURL": {
+          "urlList": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=stkKDRw4NdROcf7H7KoCfgX3Wd4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=KQo1xLJSBzy%2Bi%2F0kcG4EPOdVC04%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+          ]
+        },
+        "imageWidth": 1080
+      },
+      {
+        "imageHeight": 1440,
+        "imageURL": {
+          "urlList": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/37f1807a55a34574b9502a81233f71cc~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=e1us0ccGnNNcfb%2FQraDs2n0FEkU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/37f1807a55a34574b9502a81233f71cc~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=Wn5FVqk%2B7S%2ByxhMLbJxwqZD0A7s%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+          ]
+        },
+        "imageWidth": 1080
+      },
+      {
+        "imageHeight": 1440,
+        "imageURL": {
+          "urlList": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/7d6d13f636224539941f98949afa955f~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=douekVLvjOfpJnLzbKMK0AVnuHk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/7d6d13f636224539941f98949afa955f~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=fxB5UCDaH7UgGDJki38H%2Fthk%2Fxk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+          ]
+        },
+        "imageWidth": 1080
+      },
+      {
+        "imageHeight": 1440,
+        "imageURL": {
+          "urlList": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/40b144b07a664d838cc6ffa1ebb7a39c~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=St9PdsXtv%2BiPwSnklaGLjDkee4I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/40b144b07a664d838cc6ffa1ebb7a39c~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=vO7KfIgOMhFFrVXxHN7wH8%2F53xs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+          ]
+        },
+        "imageWidth": 1080
+      },
+      {
+        "imageHeight": 1440,
+        "imageURL": {
+          "urlList": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/de6d1483d73e40a89be68aed79c3ccbf~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=aMyHBgjadjvB05VopDWx%2FeWk2P0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/de6d1483d73e40a89be68aed79c3ccbf~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=GUPWYn9JYgNj7ZzrqIwS3k8PKxs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+          ]
+        },
+        "imageWidth": 1080
+      },
+      {
+        "imageHeight": 1440,
+        "imageURL": {
+          "urlList": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/5b0ca544db594f28a3f15ec14570d349~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=jPiH7%2F6diWtRbvpz%2B%2FviD9144eE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/5b0ca544db594f28a3f15ec14570d349~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=wvG64Eg4jS66XeY%2FSM3Qr7F7UAg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+          ]
+        },
+        "imageWidth": 1080
+      },
+      {
+        "imageHeight": 1440,
+        "imageURL": {
+          "urlList": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/a98cfdaba9f84935ac4206dc249ccc27~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=0x8YTorXgbwoOwuJvZGO5MfzudI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/a98cfdaba9f84935ac4206dc249ccc27~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=62nhvJ%2BOcvMpK181agjbZMeKPoo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+          ]
+        },
+        "imageWidth": 1080
+      }
+    ],
+    "shareCover": {
+      "imageHeight": 1440,
+      "imageURL": {
+        "urlList": [
+          "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=stkKDRw4NdROcf7H7KoCfgX3Wd4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+          "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=KQo1xLJSBzy%2Bi%2F0kcG4EPOdVC04%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1"
+        ]
+      },
+      "imageWidth": 1080
+    },
+    "title": ""
+  },
+  "isAd": false,
+  "isProhibited": false,
+  "isReviewing": false,
+  "itemCommentStatus": 0,
+  "item_control": {
+    "can_repost": true
+  },
+  "music": {
+    "authorName": "Pollen Fabrics",
+    "coverLarge": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/76bf992c7774a014facf3835418aa4bc~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=10399&refresh_token=ada4f6f1&x-expires=1792508400&x-signature=bqrP7ARUMZGxenfXofPXaJ5xNCE%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "coverMedium": "https://p19-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/76bf992c7774a014facf3835418aa4bc~tplv-tiktokx-cropcenter:720:720.jpeg?dr=10399&refresh_token=678fae26&x-expires=1792508400&x-signature=McAvolKurfvKtZAmBLCkWWxsPRI%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "coverThumb": "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/76bf992c7774a014facf3835418aa4bc~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=71dbeb58&x-expires=1792508400&x-signature=bTMkgl6dzNgA0cFxlE54FOaoyLM%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+    "duration": 7,
+    "id": "7176352538522209029",
+    "isCopyrighted": false,
+    "is_commerce_music": true,
+    "is_unlimited_music": false,
+    "original": true,
+    "playUrl": "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-v-27dcd7/oIIs4KNh8RIdyv0xBWBMERkfLNWWwcKkgzQAoK/?a=1988&bti=ODszNWYuMDE6&&bt=125&ft=GNDpcInz7ThDnBeGXq8Zmo&mime_type=audio_mpeg&rc=NjVmNjM1ZThmZWY6OGQ3NkBpM3dqPDs6ZjtyaDMzNzU8M0BfYzE0NDMzNWExLzAwXjIvYSM1aDJfcjRnYV9gLS1kMTZzcw%3D%3D&expire=1792341490&l=20261018153803E37ACD29ED836B9D9096&ply_type=3&policy=3&signature=e9b872f2e6ae5a09179d31a6130f9b72&tk=0&btag=e00070000",
+    "private": false,
+    "shoot_duration": 7,
+    "title": "Viral small buisness",
+    "tt2dsp": {}
+  },
+  "officalItem": false,
+  "originalItem": false,
+  "poi": {
+    "address": "France",
+    "category": "Place and Address",
+    "city": "",
+    "cityCode": "2972444",
+    "country": "",
+    "countryCode": "3017382",
+    "fatherPoiId": "",
+    "fatherPoiName": "",
+    "id": "22535865213222309",
+    "name": "Île-de-France",
+    "province": "",
+    "ttTypeCode": "19a3a3",
+    "ttTypeCodeL1": "190000",
+    "ttTypeNameMedium": "Places",
+    "ttTypeNameSuper": "Place and Address",
+    "ttTypeNameTiny": "Province",
+    "type": 0,
+    "typeCode": ""
+  },
+  "privateItem": false,
+  "secret": false,
+  "shareEnabled": true,
+  "stats": {
+    "collectCount": 11,
+    "commentCount": 16,
+    "diggCount": 135,
+    "playCount": 1146,
+    "shareCount": 0
+  },
+  "statsV2": {
+    "collectCount": "11",
+    "commentCount": "16",
+    "diggCount": "135",
+    "playCount": "1146",
+    "repostCount": "0",
+    "shareCount": "0"
+  },
+  "stitchDisplay": 0,
+  "textExtra": [
+    {
+      "awemeId": "",
+      "end": 12,
+      "hashtagName": "bakihanma💪",
+      "isCommerce": false,
+      "start": 0,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 18,
+      "hashtagName": "baki",
+      "isCommerce": false,
+      "start": 13,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 29,
+      "hashtagName": "bakihanma",
+      "isCommerce": false,
+      "start": 19,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 40,
+      "hashtagName": "figurines",
+      "isCommerce": false,
+      "start": 30,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 47,
+      "hashtagName": "manga",
+      "isCommerce": false,
+      "start": 41,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 60,
+      "hashtagName": "impresion3d",
+      "isCommerce": false,
+      "start": 48,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 68,
+      "hashtagName": "sukuna",
+      "isCommerce": false,
+      "start": 61,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 78,
+      "hashtagName": "jjkmanga",
+      "isCommerce": false,
+      "start": 69,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 92,
+      "hashtagName": "sukunaryomen",
+      "isCommerce": false,
+      "start": 79,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 114,
+      "hashtagName": "peintureimpression3d",
+      "isCommerce": false,
+      "start": 93,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 129,
+      "hashtagName": "jujutsukaisen",
+      "isCommerce": false,
+      "start": 115,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 138,
+      "hashtagName": "dbsuper",
+      "isCommerce": false,
+      "start": 130,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 150,
+      "hashtagName": "dragonball",
+      "isCommerce": false,
+      "start": 139,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 162,
+      "hashtagName": "dragonball",
+      "isCommerce": false,
+      "start": 151,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 168,
+      "hashtagName": "goku",
+      "isCommerce": false,
+      "start": 163,
+      "subType": 0,
+      "type": 1
+    },
+    {
+      "awemeId": "",
+      "end": 177,
+      "hashtagName": "frezzer",
+      "isCommerce": false,
+      "start": 169,
+      "subType": 0,
+      "type": 1
+    }
+  ],
+  "textLanguage": "un",
+  "textTranslatable": false,
+  "titleLanguage": "un",
+  "titleTranslatable": false,
+  "video": {
+    "cover": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=stkKDRw4NdROcf7H7KoCfgX3Wd4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+    "duration": 0,
+    "height": 0,
+    "id": "7389771662532594977",
+    "originCover": "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-i-photomode-euttp/b3ecb5092527428e995674b6f0d392ac~tplv-photomode-image.jpeg?dr=10375&x-expires=1792508400&x-signature=stkKDRw4NdROcf7H7KoCfgX3Wd4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=9b759fb9&idc=no1a&ftpl=1",
+    "ratio": "",
+    "volumeInfo": {},
+    "width": 0
+  }
+}

@@ -1,0 +1,6 @@
+candidate,start_frame,end_frame_exclusive,duration_frames
+1,0,26,26
+2,26,206,180
+3,206,244,38
+4,244,426,182
+5,426,451,25

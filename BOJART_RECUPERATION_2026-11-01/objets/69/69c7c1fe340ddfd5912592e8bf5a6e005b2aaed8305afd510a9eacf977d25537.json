@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-10-25",
+  "events_applied": 13,
+  "duplicate_events_ignored": 13,
+  "restart_via_new_process": true,
+  "replay_matches_original": true,
+  "audit_before_conflicts": 2,
+  "audit_reconciled_conflicts": 0,
+  "normalized_claims_checked": 11,
+  "brief_words": 247,
+  "network_or_generation_calls": 0,
+  "scope": "Essai local sur instantanés documentaires et passations reconstituées ; conversations non connectées."
+}

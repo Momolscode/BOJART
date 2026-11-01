@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "count": 18,
+  "checks": [
+    "Comptes TikTok exacts et autres profils inconnus",
+    "Huit passages du vrai catalogue M03",
+    "Passage rejeté désactivé",
+    "Sélection ensemble et visage",
+    "Légende du brouillon réel",
+    "Quatre hashtags explicables",
+    "Aucune prétendue publication",
+    "Contrôle de droits visible",
+    "État précalculé et absence connecteur",
+    "Export JSON non publié",
+    "Raisons accessibles",
+    "Combinaison non précalculée signalée",
+    "Pas de vieux brouillon après changement",
+    "Validation au clavier",
+    "Pas de dépassement horizontal mobile",
+    "Bouton mobile accessible",
+    "Aucun appel HTTP externe",
+    "Aucune erreur JavaScript"
+  ],
+  "mode": "Chromium, HTML autonome chargé avec set_content ; pas de connexion à localhost ou aux réseaux sociaux"
+}

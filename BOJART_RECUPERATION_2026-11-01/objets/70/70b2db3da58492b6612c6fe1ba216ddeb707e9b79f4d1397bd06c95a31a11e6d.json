@@ -1,0 +1,313 @@
+{
+  "id": "MAR05-INTEGRATION-AUDIT-20261029",
+  "date": "2026-10-29",
+  "owner": "Pilotage Marwin",
+  "request": "Intégrer les outils proposés dont Anatomy ; réauditer depuis le début et choisir la suite.",
+  "source": {
+    "library_file_id": "libfile_95f036a54d5c8191beebf1102f3281f9",
+    "native_version": 70,
+    "content_version": "2.65",
+    "sha256": "92461ad9ee957af2f205c27e8b126cb73d842c3d7b7996360049d7a911777cf4",
+    "scope": "Snapshot documentaire du 29 octobre ; page de pilotage prioritaire pour les mandats."
+  },
+  "history_coverage": {
+    "initial_rejected_directions": 2,
+    "episodes": 11,
+    "reference_registry_prior_audit": 33,
+    "scope": "Rapprochement documentaire. Reprise des contrôles datés du 28 octobre ; aucun nouveau visionnage complet, écoute ou témoignage."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "domain": "écriture et réalisation",
+      "fact": "Les premiers retours réclamaient une scène drôle et personnelle ; plusieurs effets suivants ont été jugés incohérents.",
+      "evidence": "Historique des refus et audit MAR01 du 28 octobre.",
+      "judgment": "Le désir, le geste causal et la résolution doivent être lisibles avant l’habillage.",
+      "next": "Conserver la scène Photo de famille et traiter seulement la réponse intentionnelle de la lanterne."
+    },
+    {
+      "id": "F2",
+      "domain": "identité",
+      "fact": "Morgan a refusé le visage de Pub R3 et donné 1,65 m, 85 kg et veste olive.",
+      "evidence": "identity_reference_policy_latest, feedback, originaux conservés.",
+      "judgment": "La génération répétée d’un visage dérivé ne résout pas le problème.",
+      "next": "Partir des originaux et contrôler séparément visage, corps et jeu ; pas nouvelle tête synthétique."
+    },
+    {
+      "id": "F3",
+      "domain": "montage et son",
+      "fact": "Les remarques sur les transitions et la fluidité puis les encouragements ont été relativisés ; le son mobile reste peu vérifié.",
+      "evidence": "Feedback V3/V4 puis correction de portée du 27 octobre.",
+      "judgment": "Cadence, décodage et bonne lumière sont des contrôles distincts de la qualité ressentie.",
+      "next": "Vérifier les moments sensibles et écouter le média final au moment d’une reprise autorisée."
+    },
+    {
+      "id": "F4",
+      "domain": "orchestration",
+      "fact": "Les modules de journal et contrôle existaient ; l’API et l’exécution durable restaient proposées.",
+      "evidence": "Architecture du 28 octobre et code embarqué.",
+      "judgment": "Le premier écart technique utile est la continuité entre entrée, décision et trace.",
+      "next": "Raccord local exécuté ici ; prouver ensuite l’aller-retour sur le poste/client cible et la console existante."
+    },
+    {
+      "id": "F5",
+      "domain": "diffusion",
+      "fact": "Aucun compte Marwin Studio ou résultat public attesté ; vidéo différée par Morgan.",
+      "evidence": "Pilotage lu le 29 octobre, séquence 74.",
+      "judgment": "Les vues et la viralité restent inconnues.",
+      "next": "Qualité puis compte créé par Morgan ; aucune publication préparatoire implicite."
+    }
+  ],
+  "local_integration": {
+    "path": [
+      "FastAPI ou MCP",
+      "LangGraph",
+      "contrôle existant",
+      "DBOS SQLite",
+      "journal pilote 0.2"
+    ],
+    "new_tests_passed": 13,
+    "existing_pilot_tests_reexecuted": 38,
+    "existing_control_tests_reexecuted": 37,
+    "total_tests_passed": 88,
+    "restart": "Même audit dans deux processus successifs : une exécution de l’étape et un événement dans le journal.",
+    "not_proven": [
+      "interruption au milieu d’un paiement ou rendu",
+      "cluster Postgres",
+      "connexion automatique aux conversations",
+      "liaison réelle UNUM",
+      "déploiement sur poste de Morgan"
+    ]
+  },
+  "capabilities": {
+    "as_of": "2026-10-29",
+    "scope": "Intégration locale et inventaire des réserves, pas déploiement de tous les services",
+    "tools": [
+      {
+        "name": "Anatomy",
+        "version": "1482e8469b0a",
+        "level": "tested",
+        "label": "Intégré",
+        "role": "Schémas SVG interactifs et explications.",
+        "limit": "Bibliothèque embarquée pour ce projet, pas compétence globale installée.",
+        "source": "https://github.com/wheresryan22/anatomy"
+      },
+      {
+        "name": "FastAPI",
+        "version": "0.162.0",
+        "level": "tested",
+        "label": "Testé localement",
+        "role": "Interface authentifiée pour consulter le même audit.",
+        "limit": "Aucun déploiement ni accès distant validé.",
+        "source": "https://github.com/fastapi/fastapi"
+      },
+      {
+        "name": "LangGraph",
+        "version": "1.2.18",
+        "level": "tested",
+        "label": "Testé localement",
+        "role": "Relie audit et décision par un graphe déterministe.",
+        "limit": "Aucun LLM ou modèle appelé.",
+        "source": "https://github.com/langchain-ai/langgraph"
+      },
+      {
+        "name": "DBOS",
+        "version": "3.4.0",
+        "level": "tested",
+        "label": "Reprise testée",
+        "role": "Conserve le résultat d’audit après redémarrage.",
+        "limit": "SQLite local ; pas cluster ou Postgres testé.",
+        "source": "https://github.com/dbos-inc/dbos-transact-py"
+      },
+      {
+        "name": "MCP Python",
+        "version": "2.3.0",
+        "level": "tested",
+        "label": "Échange testé",
+        "role": "Deux outils locaux lisent le statut et auditent la scène.",
+        "limit": "Client stdio de test ; pas inscription dans le client personnel.",
+        "source": "https://github.com/modelcontextprotocol/python-sdk"
+      },
+      {
+        "name": "Pilote Marwin",
+        "version": "0.2",
+        "level": "tested",
+        "label": "Raccordé",
+        "role": "Journal existant, événements et commandes sans doublon.",
+        "limit": "La file reste sans exécuteur de génération externe.",
+        "source": "https://chatgpt.com/library?file_id=libfile_a4439b3e46948191b5ab081ab6cc5002&account_id=personal"
+      },
+      {
+        "name": "Contrôles Marwin",
+        "version": "1.0.0",
+        "level": "tested",
+        "label": "Réutilisés",
+        "role": "Différencie préparer, fabriquer et publier.",
+        "limit": "Vérifie des déclarations et preuves référencées, pas la beauté d’un film.",
+        "source": "https://chatgpt.com/library?file_id=libfile_1ed948cff5a48191b314c680a2cae737&account_id=personal"
+      },
+      {
+        "name": "HyperFrames",
+        "version": "0.8.210",
+        "level": "installed",
+        "label": "Installé",
+        "role": "Moteur principal proposé pour un montage HTML déterministe.",
+        "limit": "CLI vérifiée ici ; quatre exports HF/Hypit restent des preuves du 28 octobre.",
+        "source": "https://github.com/heygen-com/hyperframes"
+      },
+      {
+        "name": "Hypit",
+        "version": "0.3.1",
+        "level": "installed",
+        "label": "Alternative installée",
+        "role": "Compile et orchestre ses propres compositions.",
+        "limit": "Moteur distinct ; licence modifiée à réexaminer avant un service à plusieurs clients.",
+        "source": "https://github.com/hypit-ai/hypit"
+      },
+      {
+        "name": "Temporal Python",
+        "version": "1.35.0",
+        "level": "installed",
+        "label": "Alternative installée",
+        "role": "SDK de remplacement si une infrastructure Temporal devient utile.",
+        "limit": "Aucun serveur Temporal connecté ; pas second moteur lancé.",
+        "source": "https://github.com/temporalio/sdk-python"
+      },
+      {
+        "name": "Cobalt",
+        "version": null,
+        "level": "prepared",
+        "label": "Adaptateur préparé",
+        "role": "Prépare un transfert de média autorisé.",
+        "limit": "Aucune instance fournie ; aucune requête média effectuée.",
+        "source": "https://github.com/imputnet/cobalt"
+      },
+      {
+        "name": "SearXNG",
+        "version": null,
+        "level": "prepared",
+        "label": "Adaptateur préparé",
+        "role": "Prépare une recherche JSON sur une instance autorisée.",
+        "limit": "Service absent ; JSON doit être activé sur l’instance.",
+        "source": "https://github.com/searxng/searxng"
+      },
+      {
+        "name": "REA",
+        "version": "6.8.0 historique",
+        "level": "historical",
+        "label": "Diagnostic conservé",
+        "role": "Analyse locale d’artefacts et aide à l’inspection.",
+        "limit": "Sonde JS historiquement bloquée ; garde inchangée, pas nouvelle sonde.",
+        "source": "https://github.com/morluto/rea"
+      },
+      {
+        "name": "OpenTimelineIO",
+        "version": null,
+        "level": "historical",
+        "label": "Export antérieur",
+        "role": "Échange de montage éditable.",
+        "limit": "Import dans l’éditeur réel encore à éprouver ; pas installé dans ce paquet.",
+        "source": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO"
+      },
+      {
+        "name": "SAM / suivi de masques",
+        "version": null,
+        "level": "candidate",
+        "label": "Candidat",
+        "role": "Aider à préserver le sujet et suivre des masques.",
+        "limit": "Modèle, droits, matériel et cas filmé requis ; pas de poids téléchargés.",
+        "source": "https://github.com/facebookresearch/sam3"
+      },
+      {
+        "name": "Remotion",
+        "version": null,
+        "level": "candidate",
+        "label": "Réserve",
+        "role": "Autre moteur de montage programmatique.",
+        "limit": "N’apporte pas de preuve manquante au cas actuel ; non installé.",
+        "source": "https://github.com/remotion-dev/remotion"
+      },
+      {
+        "name": "LTX-2 / Wan / Shotcraft",
+        "version": null,
+        "level": "candidate",
+        "label": "Réserve",
+        "role": "Pistes de fabrication et de contrôle de plans.",
+        "limit": "Pas de capacité locale ni de qualité d’identité établie ; aucun rendu lancé.",
+        "source": "https://github.com/Vincentwei1021/video-shotcraft"
+      },
+      {
+        "name": "UNUM / Teldrassil",
+        "version": null,
+        "level": "prepared",
+        "label": "Contrat documentaire",
+        "role": "Recevra une projection limitée de l’état d’un projet.",
+        "limit": "Aucun échange logiciel réel démontré ; Jarvis atelier reste distinct.",
+        "source": "https://chatgpt.com/space/page_11478f0f039c8191a990da3ff12cfffa"
+      }
+    ]
+  },
+  "interface_qa": {
+    "date": "2026-10-29",
+    "browser": "153.0.8010.0",
+    "viewportDesktop": [
+      1440,
+      1100
+    ],
+    "viewportMobile": [
+      390,
+      1000
+    ],
+    "errors": [],
+    "externalRequests": [],
+    "initial": "ATTENDRE",
+    "prepare": "PRÉPARER",
+    "publish": "ATTENDRE",
+    "moved": "translate(177.87 88.93)",
+    "mobileHorizontalOverflow": false,
+    "partCount": 52,
+    "anchors": 3,
+    "scope": "Interface et comportement local ; pas mesure d’audience ni jugement de film."
+  },
+  "reading_test": {
+    "id": "MAR03-PHOTO-FAMILLE-LECTURE-20261028",
+    "threshold": "4 descriptions complètes sur 5, trois mêmes images, mêmes conditions",
+    "executed": false
+  },
+  "next_priorities": [
+    {
+      "owner": "Pilotage",
+      "work": "Relier le paquet au poste/client choisi puis à la console existante.",
+      "end_condition": "Lecture MCP réelle, même état visible, source récente et trace conservée ; pas seulement lancement de serveur."
+    },
+    {
+      "owner": "Contexte et scénario",
+      "work": "Continuer les images clés Photo de famille avec la réponse locale de la lanterne.",
+      "end_condition": "Preuve visuelle puis contrôle de lecture déjà préparé, sans changer son critère ni reprendre la vidéo automatiquement."
+    },
+    {
+      "owner": "Pilotage avec réalisation",
+      "work": "Après réouverture du mandat vidéo, relier un moteur de rendu à la file existante.",
+      "end_condition": "Devis, plafond, identifiant, état et média inspecté ; inconnue rapprochée avant relance."
+    }
+  ],
+  "budget": {
+    "new_media_credits": 0,
+    "new_paid_analysis_calls": 0,
+    "new_generation_jobs": 0,
+    "new_publications": 0
+  },
+  "audience_metrics": null,
+  "provenance": {
+    "anatomy_commit": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+    "page_sequence": 74,
+    "legacy_zip_sha256": "039eeaf8ff1434be289d30ff279115064493609d4b240ad56cc46eb63375151b"
+  },
+  "known_limitations": [
+    "Cobalt et SearXNG : contrats seulement ; instances non fournies.",
+    "Hypit : licence modifiée ; restrictions de service tiers à vérifier avant commercialisation.",
+    "Temporal : SDK installé, aucun serveur ni workflow distant testé.",
+    "HyperFrames/Hypit : export réel du 28 octobre réutilisé comme preuve historique ; aucun nouvel export le 29.",
+    "Matrice et HTML : projection datée, pas une lecture en direct."
+  ]
+}

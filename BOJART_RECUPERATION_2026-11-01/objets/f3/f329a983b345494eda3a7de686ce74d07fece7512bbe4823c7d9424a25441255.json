@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-26T20:26:42.019422+00:00",
+  "source": {
+    "path": "/workspace/scratch/537238f8fe99/work/rea_install_20261026/media/MORGAN_Une_Lumiere_Pour_Plus_Tard_Story.mp4",
+    "name": "MORGAN_Une_Lumiere_Pour_Plus_Tard_Story.mp4",
+    "bytes": 14273295,
+    "sha256": "f83813e46674001ff1484bd91a72bb86dff7eac5ca0eff74a57ac8c3d567ec41"
+  },
+  "media": {
+    "duration_s": 18.791667,
+    "duration_source": "video_stream",
+    "width": 1080,
+    "height": 1920,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "average_fps": 24.0,
+    "average_fps_rational": "24/1",
+    "nominal_fps_rational": "24/1",
+    "declared_frames": 451,
+    "audio_present": true,
+    "audio_codec": "aac",
+    "audio_channels": 2,
+    "rotation_side_data": []
+  },
+  "scene_detection": {
+    "status": "completed",
+    "method": "FFmpeg scene score with short-event heuristic",
+    "threshold": 0.25,
+    "flash_pair_max_s": 0.25,
+    "video_full_decode_during_scan": true,
+    "candidates": [
+      {
+        "time_s": 1.08333,
+        "scene_score": 0.491005,
+        "kind": "cut_or_transition_candidate",
+        "paired_time_s": null
+      },
+      {
+        "time_s": 8.58333,
+        "scene_score": 0.543398,
+        "kind": "cut_or_transition_candidate",
+        "paired_time_s": null
+      },
+      {
+        "time_s": 10.1667,
+        "scene_score": 0.478562,
+        "kind": "cut_or_transition_candidate",
+        "paired_time_s": null
+      },
+      {
+        "time_s": 17.75,
+        "scene_score": 0.526207,
+        "kind": "cut_or_transition_candidate",
+        "paired_time_s": null
+      }
+    ],
+    "short_event_pairs": [],
+    "limits": [
+      "Un score de changement détecte une différence visuelle, pas une coupe certifiée.",
+      "Flash, bref insert et occultation peuvent rester indiscernables.",
+      "Fondus lents, coupes peu contrastées ou mouvements rapides peuvent être manqués ou mal classés.",
+      "Ce module ne vérifie ni boucle parfaite, ni geste, ni identité, ni qualité artistique."
+    ]
+  },
+  "sampled_frames": [
+    {
+      "time_s": 0.1,
+      "path": "frames/frame_00_00000.100s.png"
+    },
+    {
+      "time_s": 1.13333,
+      "path": "frames/frame_01_00001.133s.png"
+    },
+    {
+      "time_s": 1.339444,
+      "path": "frames/frame_02_00001.339s.png"
+    },
+    {
+      "time_s": 3.818333,
+      "path": "frames/frame_03_00003.818s.png"
+    },
+    {
+      "time_s": 5.057778,
+      "path": "frames/frame_04_00005.058s.png"
+    },
+    {
+      "time_s": 7.536667,
+      "path": "frames/frame_05_00007.537s.png"
+    },
+    {
+      "time_s": 8.53333,
+      "path": "frames/frame_06_00008.533s.png"
+    },
+    {
+      "time_s": 8.776111,
+      "path": "frames/frame_07_00008.776s.png"
+    },
+    {
+      "time_s": 10.015556,
+      "path": "frames/frame_08_00010.016s.png"
+    },
+    {
+      "time_s": 10.2167,
+      "path": "frames/frame_09_00010.217s.png"
+    },
+    {
+      "time_s": 11.255,
+      "path": "frames/frame_10_00011.255s.png"
+    },
+    {
+      "time_s": 13.733889,
+      "path": "frames/frame_11_00013.734s.png"
+    },
+    {
+      "time_s": 14.973334,
+      "path": "frames/frame_12_00014.973s.png"
+    },
+    {
+      "time_s": 17.452223,
+      "path": "frames/frame_13_00017.452s.png"
+    },
+    {
+      "time_s": 17.7,
+      "path": "frames/frame_14_00017.700s.png"
+    },
+    {
+      "time_s": 18.691667,
+      "path": "frames/frame_15_00018.692s.png"
+    }
+  ],
+  "contact_sheet": "contact.jpg",
+  "audio": {
+    "status": "completed",
+    "wav": "audio.wav",
+    "energy_json": "audio_energy.json",
+    "sample_peak_dbfs": -2.0651655943629756,
+    "overall_rms_dbfs": -24.506587883485945,
+    "energy_event_candidates": [
+      {
+        "time_s": 2.15,
+        "rms_dbfs": -10.905
+      },
+      {
+        "time_s": 6.325,
+        "rms_dbfs": -22.649
+      },
+      {
+        "time_s": 6.575,
+        "rms_dbfs": -21.719
+      },
+      {
+        "time_s": 6.95,
+        "rms_dbfs": -22.413
+      },
+      {
+        "time_s": 13.0,
+        "rms_dbfs": -22.285
+      },
+      {
+        "time_s": 13.35,
+        "rms_dbfs": -10.978
+      },
+      {
+        "time_s": 15.575,
+        "rms_dbfs": -17.139
+      }
+    ],
+    "transcription": {
+      "status": "not_performed",
+      "reason": "Aucun moteur ASR configuré ; aucun texte inféré depuis l’énergie."
+    },
+    "song_identification": {
+      "status": "not_performed"
+    },
+    "direct_listening": false,
+    "mobile_listening": false
+  },
+  "ocr": {
+    "status": "completed",
+    "language": "eng",
+    "sampled_frames": [
+      {
+        "time_s": 0.1,
+        "frame": "frames/frame_00_00000.100s.png",
+        "text_candidate": "yl“"
+      },
+      {
+        "time_s": 5.057778,
+        "frame": "frames/frame_04_00005.058s.png",
+        "text_candidate": "a\nwi"
+      },
+      {
+        "time_s": 10.015556,
+        "frame": "frames/frame_08_00010.016s.png",
+        "text_candidate": "Ay"
+      },
+      {
+        "time_s": 13.733889,
+        "frame": "frames/frame_11_00013.734s.png",
+        "text_candidate": ""
+      },
+      {
+        "time_s": 18.691667,
+        "frame": "frames/frame_15_00018.692s.png",
+        "text_candidate": "¢\nW.\n“Ss\nae\ne»*\nWw"
+      }
+    ],
+    "limits": [
+      "Texte visible seulement ; erreurs et omissions possibles.",
+      "Aucune transcription de voix et aucune identité de personne déduite."
+    ]
+  },
+  "evidence_scope": {
+    "visual": "sampled_frames_and_automated_scan",
+    "human_visual_review": "not_performed_by_script",
+    "audio": "decoded_pcm_energy_only",
+    "transcript": "not_performed",
+    "rights_verified": false,
+    "private_retention_metrics": null,
+    "viral_effect_proven": false,
+    "limits": [
+      "Le fichier local est fourni explicitement ; aucun accès réseau ou téléchargement Instagram.",
+      "Le scan intégral de décodage ne remplace pas le visionnage ni l’écoute.",
+      "Le programme ne récupère ni projet de montage, ni calques, ni prompts d’origine.",
+      "Les décisions de ressemblance, de continuité spatiale et de sens restent à vérifier sur les images."
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"evidence_id\":\"ev_ce6827f217c205dc030524e52c6dae84fbd3bb49d277a04ee7780d35f35ea7cc\",\"subject\":{\"name\":\"fixture_light_renderer.pyc\",\"digest\":{\"sha256\":\"add476348236c9bb84adc75ac212b087f733669cddcb6a444584629e9433e24c\"},\"local_path\":\"/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc\",\"format\":\"file\",\"architecture\":null},\"provider\":{\"id\":\"rea-analysis-view\",\"name\":\"REA analysis view projection\",\"version\":\"1\"},\"analysis_profile\":null,\"predicate_type\":\"rea.analysis-view\",\"operation\":\"inspect_analysis_view\",\"parameters\":{\"parent_evidence_id\":\"ev_948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260\",\"view\":{\"kind\":\"summary\"}},\"raw_result\":null,\"normalized_result\":{\"kind\":\"summary\",\"view\":{\"kind\":\"summary\"},\"parent_evidence_id\":\"ev_948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260\",\"parent_operation\":\"inspect_python_pyc\",\"parent_digest\":\"948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260\",\"view_digest\":\"30d8f440c6a421073e4fc78dd2d3c95ff07840fb5f08e30638ba51a6ac30d53e\",\"artifact\":{\"path\":\"/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc\",\"sha256\":\"add476348236c9bb84adc75ac212b087f733669cddcb6a444584629e9433e24c\"},\"coverage\":{\"status\":\"complete-within-view\",\"examined\":8,\"total\":8,\"next_offset\":null,\"exhausted\":true},\"limitations\":[\"Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.\",\"The selected file is not executed and CPython is not invoked.\",\"python_version is the pinned CPython magic table for this header, not a runtime interpreter.\",\"source_hash_hex is the PEP 552 header field; the original .py is not read.\"],\"unknowns\":[],\"summary\":{\"artifact\":{\"path\":\"/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc\",\"sha256\":\"add476348236c9bb84adc75ac212b087f733669cddcb6a444584629e9433e24c\",\"bytes\":12209},\"header\":{\"magic\":3531,\"python_version\":\"3.12\",\"code_layout\":\"py311\",\"flags\":3,\"hash_based\":true,\"check_source\":true,\"source_hash_hex\":\"5cebd771c31ced55\",\"source_mtime\":null,\"source_size\":null},\"coverage\":{\"status\":\"complete\",\"objects\":453,\"code_objects\":8,\"marshal_bytes\":12193,\"marshal_depth\":6},\"limitation_count\":4}},\"confidence\":\"derived\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.\",\"The selected file is not executed and CPython is not invoked.\",\"python_version is the pinned CPython magic table for this header, not a runtime interpreter.\",\"source_hash_hex is the PEP 552 header field; the original .py is not read.\"],\"relationship_coverage\":null,\"locations\":[{\"kind\":\"artifact-path\",\"path\":\"/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc\"}],\"evidence_links\":[\"ev_948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260\"]}"
+    }
+  ],
+  "structuredContent": {
+    "evidence_id": "ev_ce6827f217c205dc030524e52c6dae84fbd3bb49d277a04ee7780d35f35ea7cc",
+    "subject": {
+      "name": "fixture_light_renderer.pyc",
+      "digest": {
+        "sha256": "add476348236c9bb84adc75ac212b087f733669cddcb6a444584629e9433e24c"
+      },
+      "local_path": "/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc",
+      "format": "file",
+      "architecture": null
+    },
+    "provider": {
+      "id": "rea-analysis-view",
+      "name": "REA analysis view projection",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis-view",
+    "operation": "inspect_analysis_view",
+    "parameters": {
+      "parent_evidence_id": "ev_948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260",
+      "view": {
+        "kind": "summary"
+      }
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "kind": "summary",
+      "view": {
+        "kind": "summary"
+      },
+      "parent_evidence_id": "ev_948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260",
+      "parent_operation": "inspect_python_pyc",
+      "parent_digest": "948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260",
+      "view_digest": "30d8f440c6a421073e4fc78dd2d3c95ff07840fb5f08e30638ba51a6ac30d53e",
+      "artifact": {
+        "path": "/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc",
+        "sha256": "add476348236c9bb84adc75ac212b087f733669cddcb6a444584629e9433e24c"
+      },
+      "coverage": {
+        "status": "complete-within-view",
+        "examined": 8,
+        "total": 8,
+        "next_offset": null,
+        "exhausted": true
+      },
+      "limitations": [
+        "Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.",
+        "The selected file is not executed and CPython is not invoked.",
+        "python_version is the pinned CPython magic table for this header, not a runtime interpreter.",
+        "source_hash_hex is the PEP 552 header field; the original .py is not read."
+      ],
+      "unknowns": [],
+      "summary": {
+        "artifact": {
+          "path": "/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc",
+          "sha256": "add476348236c9bb84adc75ac212b087f733669cddcb6a444584629e9433e24c",
+          "bytes": 12209
+        },
+        "header": {
+          "magic": 3531,
+          "python_version": "3.12",
+          "code_layout": "py311",
+          "flags": 3,
+          "hash_based": true,
+          "check_source": true,
+          "source_hash_hex": "5cebd771c31ced55",
+          "source_mtime": null,
+          "source_size": null
+        },
+        "coverage": {
+          "status": "complete",
+          "objects": 453,
+          "code_objects": 8,
+          "marshal_bytes": 12193,
+          "marshal_depth": 6
+        },
+        "limitation_count": 4
+      }
+    },
+    "confidence": "derived",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.",
+      "The selected file is not executed and CPython is not invoked.",
+      "python_version is the pinned CPython magic table for this header, not a runtime interpreter.",
+      "source_hash_hex is the PEP 552 header field; the original .py is not read."
+    ],
+    "relationship_coverage": null,
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "/workspace/scratch/537238f8fe99/work/rea_install_20261026/inputs/fixture_light_renderer.pyc"
+      }
+    ],
+    "evidence_links": [
+      "ev_948ad2568b2e28509ff469c18763186a338b9920458df6494db023b15c178260"
+    ]
+  }
+}

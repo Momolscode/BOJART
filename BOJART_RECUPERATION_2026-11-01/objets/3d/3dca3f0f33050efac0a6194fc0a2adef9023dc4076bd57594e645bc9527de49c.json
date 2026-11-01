@@ -1,0 +1,17 @@
+{
+  "asset_id": "REQUIRED_ASSET_ID",
+  "asset_type": "physical_sculpture_or_character_or_music_or_sfx_or_video",
+  "creator": null,
+  "copyright_holder": null,
+  "permission_document": null,
+  "permitted_uses": [],
+  "territory": null,
+  "term": null,
+  "platforms": [],
+  "paid_ads_allowed": null,
+  "commercial_product_promotion_allowed": null,
+  "modification_allowed": null,
+  "attribution_required": null,
+  "reviewed_by": null,
+  "status": "UNKNOWN_BLOCKS_COMMERCIAL_USE"
+}

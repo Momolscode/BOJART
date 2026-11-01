@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "document_date": "2026-10-20",
+  "status": "design_contract_not_installer",
+  "project": "BOJ.ART",
+  "target_hardware": {
+    "os": null,
+    "gpu": null,
+    "vram_gib": null,
+    "ram_gib": null,
+    "audited": false
+  },
+  "mode": "local_only_by_default",
+  "remote_ai_enabled": false,
+  "auto_cloud_fallback": false,
+  "architecture": {
+    "decision_protocol": "systemone_with_provider_specific_contract_tests",
+    "decision_endpoint_candidate": "http://127.0.0.1:11434/v1/systemone",
+    "generative_candidates": [
+      "Qwen/Qwen3.5-4B",
+      "Qwen/Qwen3.5-9B",
+      "Qwen/Qwen3.5-27B"
+    ],
+    "decision_candidates": [
+      {
+        "id": "bespokelabs/Bespoke-Nimble-9B-v2",
+        "reported_license": "Apache-2.0",
+        "artifact_sha256": null,
+        "runtime_compatibility": "to_test",
+        "french_evaluation": "pending"
+      },
+      {
+        "id": "togethercomputer/Tev1-4B-experimental",
+        "reported_license": "requires_upstream_verification",
+        "production_eligible": false
+      }
+    ],
+    "decision_excluded_without_separate_permission": [
+      "bespokelabs/Bespoke-Nimble-9B-v3"
+    ],
+    "embedding_candidate": "Qwen/Qwen3-Embedding-0.6B",
+    "reranker_candidate": "Qwen/Qwen3-Reranker-0.6B",
+    "retrieval": [
+      "exact_identifiers",
+      "semantic_text",
+      "project_revision_filters",
+      "optional_reranking"
+    ],
+    "live_state_source": "authoritative_database_and_machine_connectors_not_vector_index",
+    "rea": {
+      "candidate": "morluto/rea",
+      "user_term_match": "unconfirmed",
+      "scope": "development_and_diagnostics",
+      "production_control": false
+    }
+  },
+  "safety_and_reliability": {
+    "approved_paths_only": true,
+    "delete_originals": false,
+    "physical_commands_enabled": false,
+    "provider_confidence_thresholds_shared": false,
+    "revision_and_asset_hash_required": true,
+    "exact_artifact_pinning_required": true,
+    "license_check_required": true,
+    "restoration_test_required": true,
+    "physical_qualification_required": true,
+    "skill_script_review_required": true,
+    "untrusted_documents_are_instructions": false
+  },
+  "verification_in_this_delivery": {
+    "references_read": true,
+    "manifest_json_validated": true,
+    "pc_inspected": false,
+    "models_executed": false,
+    "websites_modified": false,
+    "installation_executed": false
+  }
+}

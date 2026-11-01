@@ -1,0 +1,95 @@
+{
+  "schema": "bojart.delivery.v1",
+  "created_at": "2026-10-30",
+  "owner": "Momolscode",
+  "github_status": "not_published",
+  "branch": "recovery/2026-10-30-b2c46db5",
+  "tag": "preservation-2026-10-30-v2",
+  "commit": "b2c46db5b7408ddeb537ec096ce0583e1536adc4",
+  "bundle": "BOJART_JARVIS_2026-10-30.bundle",
+  "files": [
+    {
+      "name": "BOJART_JARVIS_2026-10-30.bundle",
+      "bytes": 34775527,
+      "sha256": "270edf98e7f7d2122513fdca4e8744f9747c7f1c75b87db77117eb6c8e7cc1a1"
+    },
+    {
+      "name": "BOJART_ORIGINAUX_2026-10-30.zip",
+      "bytes": 103953780,
+      "sha256": "b6466d50bd779cbfe161d7a35ecd784c3a215dedc877180c8e6db0e7b5d4451e"
+    },
+    {
+      "name": "BOJART_SOURCES_2026-10-30.zip",
+      "bytes": 40558461,
+      "sha256": "f6d228b71ccf5ba12c17d3698b904eef7847fb94ee202c8fa3239baf6ee1b35f"
+    },
+    {
+      "name": "BUNDLE_VERIFY.txt",
+      "bytes": 605,
+      "sha256": "80942f566ce9d39c25c26066a6f899ff8c67873ef0f7e8cbaf2cb8d8b4d7aa7f"
+    },
+    {
+      "name": "CLONE_TEST.txt",
+      "bytes": 551,
+      "sha256": "ccf4ac958419d87945a02dd2ee279a2fc9b4f6b6f1c40a253938a80b0da3d918"
+    },
+    {
+      "name": "DESTINATION_LIRE_AVANT.md",
+      "bytes": 2864,
+      "sha256": "e19d36ebc8975585da1ce7bb51537fb819679b55e257b87c1e437c0c028c2cc5"
+    },
+    {
+      "name": "DESTINATION_MOMOLSCODE.json",
+      "bytes": 908,
+      "sha256": "38230f006d4bad5212d6f27936d3b0268e853f004ed6c3f6ac621f368180b240"
+    },
+    {
+      "name": "FRESH_CLONE_TESTS.txt",
+      "bytes": 16788,
+      "sha256": "08d91d8eb034f1c70eace4fd96ae41e7d6714c0f21ed48e5fb84c5c4e2840b6f"
+    },
+    {
+      "name": "LIRE_AVANT.md",
+      "bytes": 3347,
+      "sha256": "64b4927347dea1888a5aa5a0cf23f6491fece74f5ba6592c4df4e0eebd0b3d34"
+    },
+    {
+      "name": "PUBLIER_GITHUB.py",
+      "bytes": 7230,
+      "sha256": "77ef329e1d2c57d1ad0cb92c992b0eb8c4aa724584805f06533ebeb115ab5cd3"
+    },
+    {
+      "name": "PUBLIER_MOMOLSCODE_LINUX_MAC.sh",
+      "bytes": 290,
+      "sha256": "0168799519870495122cc8cdddd6029a9200feb13a917f1275d7ed230fff65f1"
+    },
+    {
+      "name": "PUBLIER_MOMOLSCODE_WINDOWS.cmd",
+      "bytes": 586,
+      "sha256": "6a30df2ddf48b8b52c17e5e74a8258f1ad8f6758f38f6f0269585ab769e1887f"
+    },
+    {
+      "name": "RESTAURER_ORIGINAUX.py",
+      "bytes": 3780,
+      "sha256": "c506f133b1a639b9cac0517e27819147cb166b0e956b1592799c82815a90354f"
+    },
+    {
+      "name": "RESTORATION_REPORT.json",
+      "bytes": 1461,
+      "sha256": "fbbb40168033853354941d63af63df555652be36bc5838f02a746d9d384d667c"
+    },
+    {
+      "name": "SOURCE_RESTORE_CHECK.json",
+      "bytes": 137,
+      "sha256": "2732651297c74039ca556680f2d1cd5cdce4d366d558cfc06aba092d2bd7e969"
+    },
+    {
+      "name": "VERIFICATION_CIBLE.json",
+      "bytes": 2102,
+      "sha256": "8e30621ae6bb78ceb4f69237047ebddf63eda9b2b09ffc0e3be38032eb736f73"
+    }
+  ],
+  "scope": "Recovered mounted BOJART inputs and consolidated source only; missing assets explicit in COVERAGE.md. Manifest itself is uploaded and verified separately by publication tool.",
+  "repository_full_name": "Momolscode/bojart-jarvis",
+  "visibility": "private"
+}

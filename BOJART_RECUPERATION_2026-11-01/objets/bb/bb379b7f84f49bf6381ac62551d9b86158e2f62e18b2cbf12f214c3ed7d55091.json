@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-27",
+  "scope": "first selected set of shipped software mechanisms for Marwin Studio; not an exhaustive reverse engineering of every potential tool",
+  "software": "REA 6.8.0 via real MCP stdio calls",
+  "targets": {
+    "motion": {
+      "package": "Avalonia",
+      "package_version": "12.1.4",
+      "assembly": "Avalonia.Base.dll",
+      "assembly_version": "12.1.4.0",
+      "sha256": "ffaf5263f964ea313ed29361c0dc86ed20fa7fda1473aefa687fde3a90622f8d",
+      "mvid": "6b8c048b-6062-4c98-bbb3-ddb072211ea2",
+      "upstream_commit": "2d79ba55fae1b1e71c69f93a668080c9029e6a31"
+    },
+    "audio": {
+      "package": "NAudio.Core",
+      "version": "3.3.0",
+      "sha256": "693ce5d8c68645e64745a3001de52019e20108b7d1a21704404228ea3dea79f7",
+      "mvid": "709a502f-0363-452c-9aba-e20ff9d9567c"
+    }
+  },
+  "questions": [
+    {
+      "id": "R01",
+      "question": "How can timing curves be reproduced deterministically?",
+      "status": "answered_within_tested_scope",
+      "artifact": "Avalonia.Base.dll",
+      "answer": "Three reconstructed curves: cubic in/out, sine in/out and the observed four-branch bounce. Raw progress is not clamped by the original functions.",
+      "evidence_ids": [
+        "ev_2a0403d54f2b2689462f04115f18f2327df1a0875dcf92e368cd0448efb57504",
+        "ev_18449a2db936b4854c8aec96989e58d7aa93b90fc8d5e047c008a09d4b6c5a27"
+      ],
+      "runtime_case_count": 30093,
+      "max_abs_error": 0,
+      "code": "motion/motion_primitives.py"
+    },
+    {
+      "id": "R02",
+      "question": "How do 2D coordinate transforms compose without changing the intended anchor?",
+      "status": "answered_affine_only",
+      "artifact": "Avalonia.Base.dll",
+      "answer": "Row-vector convention; append and prepend have different order. Reconstruction covers affine transforms and pivot rotation.",
+      "evidence_ids": [
+        "ev_2a0403d54f2b2689462f04115f18f2327df1a0875dcf92e368cd0448efb57504"
+      ],
+      "runtime_cases": 1000,
+      "coordinate_comparisons": 8000,
+      "max_abs_error": 0,
+      "remaining": [
+        "perspective",
+        "tracking",
+        "matrix inversion",
+        "full renderer behavior"
+      ]
+    },
+    {
+      "id": "R03",
+      "question": "How can a sound become muffled while preserving the intended filter state?",
+      "status": "answered_lowpass_scalar_path",
+      "artifact": "NAudio.Core.dll",
+      "answer": "Double coefficients and float32 histories; Set resets state, Update preserves it. State retention alone is not a click-free automation guarantee.",
+      "evidence_ids": [
+        "ev_99e36a06eec59b6af6c1bb6283bc8c126de8ad03d5f23d93ad9fb11fc27d1235"
+      ],
+      "runtime_output_samples": 47104,
+      "float32_bytes_matched": true,
+      "max_abs_error": 0,
+      "code": "audio/biquad.py"
+    },
+    {
+      "id": "R04",
+      "question": "Can the existing local journal reject a repeated or stale documentary update?",
+      "status": "runtime_replay_verified_but_REA_database_inspection_blocked",
+      "source": "existing Marwin pilot 0.1, Library libfile_a4439b3e46948191b5ab081ab6cc5002",
+      "answer": "Two documentary inputs applied, their two repeats ignored, conflicting identity and stale revision refused, state preserved after reopening.",
+      "rea_status": "failed",
+      "remaining": [
+        "REA SQLite inspection under coherent process namespace",
+        "live input connection",
+        "external service idempotence contract"
+      ]
+    },
+    {
+      "id": "R05",
+      "question": "Can original editing projects or creators private prompts be recovered from the supplied Reels?",
+      "status": "unresolved_no_suitable_input",
+      "answer": "No such project or prompt was obtained. These software reconstructions concern the explicitly selected public binaries, not the artists workflows."
+    },
+    {
+      "id": "R06",
+      "question": "Does numerical agreement establish resemblance, artistic quality or audience retention?",
+      "status": "not_established",
+      "answer": "The tests establish selected numeric behavior only; artistic review and audience data remain separate."
+    },
+    {
+      "id": "R07",
+      "question": "Which larger integrations remain conditional?",
+      "status": "prepared_not_executed",
+      "answer": "Perspective and dynamic masks, JavaScript editors, live storage coordination and private Instagram metrics require their own artifacts, host capabilities or authorized account. Content quality still precedes creation of Marwin Studio Instagram."
+    }
+  ],
+  "new_paid_media_jobs": 0,
+  "publications": 0,
+  "current_film_changed": false,
+  "complete_rea_evidence_retained": true,
+  "numeric_agreement_is_not_global_equivalence": true
+}

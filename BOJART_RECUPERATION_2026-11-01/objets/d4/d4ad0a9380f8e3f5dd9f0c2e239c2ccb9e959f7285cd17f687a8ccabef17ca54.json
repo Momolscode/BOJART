@@ -1,0 +1,188 @@
+{
+  "url": "https://www.tiktok.com/player/api/v1/items?item_ids=7376602431603346721&language=fr-FR&aid=1459&data_source=web_core",
+  "page_url": "https://www.tiktok.com/player/v1/7376602431603346721",
+  "observed_at_utc": "2026-10-18T15:51:32+00:00",
+  "response": {
+    "extra": {
+      "fatal_item_ids": [],
+      "logid": "20261018155131D90DEDE8EBCCC69D5780",
+      "now": 1792338692000
+    },
+    "items": [
+      {
+        "author_info": {
+          "avatar_url_list": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=3f095fe5&x-expires=1792508400&x-signature=tzMNnpxkLt2ll3OmxUlEsNNG3QQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=0df81934&x-expires=1792508400&x-signature=AKQGmPQQQ8vQTFPyx6Z1Rk1TGxA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a"
+          ],
+          "nickname": "boj.Art",
+          "secret_id": "MS4wLjABAAAAfrnDm3LlZg6Q6FbOQYZIV4B8U1M2DFZRJ_R4X_UjLWzG1XZDpADIeEqk6tq04TWj",
+          "unique_id": "boj.art"
+        },
+        "aweme_type": 0,
+        "brand_organic_type": 0,
+        "desc": "#figurines #ender #manga #elegoosaturn #ender5pro #faitmain #montmorency #peintureimpression3d #impresion3d #jujutsukaisen #jjk #jjkmanga #sukunaryomen #sukuna ",
+        "id": 7376602431603346721,
+        "id_str": "7376602431603346721",
+        "is_ec_video": 0,
+        "location_created": "FR",
+        "marker_info": {
+          "is_ads": false
+        },
+        "music_info": {
+          "author": "boj.Art",
+          "id": 7376602450574330657,
+          "id_str": "7376602450574330657",
+          "title": "son original"
+        },
+        "other_info": {
+          "is_tiktok_story": false
+        },
+        "region": "FR",
+        "statistics_info": {
+          "comment_count": 5,
+          "digg_count": 43,
+          "share_count": 2
+        },
+        "video_info": {
+          "cover": {
+            "url_list": [
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-p-0037-euttp/okuD4RmGC9RjE1xEFvAKHIQDeQSPXyqB0tftN8~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=D%2FH%2FzekiP%2FunZ%2FnsvtJAFFl7m8o%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-p-0037-euttp/okuD4RmGC9RjE1xEFvAKHIQDeQSPXyqB0tftN8~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=l%2FQ%2B6LWhU0YZexsd%2Fg%2BneUqoTh0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-p-0037-euttp/okuD4RmGC9RjE1xEFvAKHIQDeQSPXyqB0tftN8~tplv-tiktokx-origin.jpeg?dr=10395&x-expires=1792508400&x-signature=bPJaXach7Ubm3iiV0pHdGJaiuzY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a"
+            ]
+          },
+          "meta": {
+            "bitrate": 1855639,
+            "duration": 18,
+            "format": "mp4",
+            "height": 1024,
+            "ratio": 540,
+            "width": 576
+          },
+          "origin_cover": {
+            "url_list": [
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-p-0037-euttp/9c58365beb1343bda8a2fe0485ccf31d_1717499102~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=0q0ZLcTv%2FiaUN1XR4%2BmD%2BHJovmc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p19-common-sign.tiktokcdn-eu.com/tos-useast2a-p-0037-euttp/9c58365beb1343bda8a2fe0485ccf31d_1717499102~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=B%2FA7TMG4ij86N%2Bd5XG0e5cE2N5I%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-useast2a-p-0037-euttp/9c58365beb1343bda8a2fe0485ccf31d_1717499102~tplv-tiktokx-origin.jpeg?dr=10395&x-expires=1792508400&x-signature=YvBvZHjgL9hGPMPtJJ50A3Nv30Y%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a"
+            ]
+          },
+          "profiles": [
+            {
+              "bitrate": 1855639,
+              "codec_type": "h264",
+              "fps": 30,
+              "gear_name": "normal_540_0",
+              "play_addr": {
+                "data_size": 4190730,
+                "file_cs": "c:0-16166-e365",
+                "file_hash": "041317221a68c8367eb3e5a32391e497",
+                "height": 1024,
+                "uri": "v0f044gc0000cpff8tfog65uc8rhaht0",
+                "url_key": "v0f044gc0000cpff8tfog65uc8rhaht0_h264_540p_1855639",
+                "url_list": [
+                  "https://v16-webapp-prime.tiktok.com/video/tos/no1a/tos-no1a-ve-68c710-no/oMfx9eZiGRiOoe5jAVLA4PMrHJexyPagIkANie/?a=1988&bti=ODszNWYuMDE6&&bt=1812&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=aDo8ZTZoPDRpMzxpaWVkZ0BpM2trO3g5cndpczMzZjczM0A2MC9jNC5fXzAxX2IwNGFgYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=b231f45e6d65fd63c553daeba3793703&tk=tt_chain_token&btag=e00078000",
+                  "https://v19-webapp-prime.tiktok.com/video/tos/no1a/tos-no1a-ve-68c710-no/oMfx9eZiGRiOoe5jAVLA4PMrHJexyPagIkANie/?a=1988&bti=ODszNWYuMDE6&&bt=1812&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=aDo8ZTZoPDRpMzxpaWVkZ0BpM2trO3g5cndpczMzZjczM0A2MC9jNC5fXzAxX2IwNGFgYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=b231f45e6d65fd63c553daeba3793703&tk=tt_chain_token&btag=e00078000",
+                  "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=cdda7b3fefb9403fb1b91e73fb29379e&is_play_url=1&item_id=7376602431603346721&line=0&ply_type=2&pt=dHQ0ZC5wbGF5ZXIuYXBpJi9wbGF5ZXIvYXBpL3YxL2l0ZW1zJjIwMjYxMDE4MTU1MTMxRDkwREVERThFQkNDQzY5RDU3ODAmMTc5MjMzODY5MiYyMTg1MDA0YjRlOGQ&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjdjOGYxNDJmNGZjYjVlMWNhZTVmZWNmOTQ5NDA5OTNl&tk=tt_chain_token&video_id=v0f044gc0000cpff8tfog65uc8rhaht0"
+                ],
+                "width": 576
+              },
+              "quality_type": 20,
+              "video_extra": "{\"PktOffsetMap\":\"[{\\\"time\\\": 1, \\\"offset\\\": 233484}, {\\\"time\\\": 2, \\\"offset\\\": 421825}, {\\\"time\\\": 3, \\\"offset\\\": 745534}, {\\\"time\\\": 4, \\\"offset\\\": 1060243}, {\\\"time\\\": 5, \\\"offset\\\": 1371515}, {\\\"time\\\": 10, \\\"offset\\\": 2760088}]\",\"mvmaf\":\"\",\"ufq\":\"\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"5ec63939750549e79a31eb386fafda76\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":32329}"
+            },
+            {
+              "bitrate": 1576750,
+              "codec_type": "h265",
+              "fps": 30,
+              "gear_name": "adapt_lowest_1080_1",
+              "play_addr": {
+                "data_size": 3560893,
+                "file_cs": "c:0-16653-5635",
+                "file_hash": "896aca65625e30aa27528103bd0c439a",
+                "height": 1920,
+                "uri": "v0f044gc0000cpff8tfog65uc8rhaht0",
+                "url_key": "v0f044gc0000cpff8tfog65uc8rhaht0_bytevc1_1080p_1576750",
+                "url_list": [
+                  "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/o8cRQP0x1DAj9GGcyvF8DRmgqEqQjB1XI4fUeE/?a=1988&bti=ODszNWYuMDE6&&bt=1539&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=cnF8b2hsc2d3SkBwaHIxaDFybndmNjQ2NWc7ZzlmNzw2ZWk2Z0BpM2trO3g5cndpczMzZjczM0BjRl5Nc3FePmJKYSNvYF90aHFmOiMyNjNhNjFgNS0xNjE2LmNfYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=771c2ecf9d6e5276fd65fd3ea75dc44b&tk=tt_chain_token&btag=e000b8000",
+                  "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/o8cRQP0x1DAj9GGcyvF8DRmgqEqQjB1XI4fUeE/?a=1988&bti=ODszNWYuMDE6&&bt=1539&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=cnF8b2hsc2d3SkBwaHIxaDFybndmNjQ2NWc7ZzlmNzw2ZWk2Z0BpM2trO3g5cndpczMzZjczM0BjRl5Nc3FePmJKYSNvYF90aHFmOiMyNjNhNjFgNS0xNjE2LmNfYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=771c2ecf9d6e5276fd65fd3ea75dc44b&tk=tt_chain_token&btag=e000b8000",
+                  "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=bdf31f9b4399440c86cd489dd2639153&is_play_url=1&item_id=7376602431603346721&line=0&ply_type=2&pt=dHQ0ZC5wbGF5ZXIuYXBpJi9wbGF5ZXIvYXBpL3YxL2l0ZW1zJjIwMjYxMDE4MTU1MTMxRDkwREVERThFQkNDQzY5RDU3ODAmMTc5MjMzODY5MiYyMTg1MDA0YjRlOGQ&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjFmZGJjMmU5NzMwNmU1YWQzNWYyYjE1MTMwZDdiZGYw&tk=tt_chain_token&video_id=v0f044gc0000cpff8tfog65uc8rhaht0"
+                ],
+                "width": 1080
+              },
+              "quality_type": 2,
+              "video_extra": "{\"PktOffsetMap\":\"[{\\\"time\\\": 1, \\\"offset\\\": 218656}, {\\\"time\\\": 2, \\\"offset\\\": 352827}, {\\\"time\\\": 3, \\\"offset\\\": 634829}, {\\\"time\\\": 4, \\\"offset\\\": 927327}, {\\\"time\\\": 5, \\\"offset\\\": 1223130}, {\\\"time\\\": 10, \\\"offset\\\": 2424342}]\",\"mvmaf\":\"{\\\"v2.0\\\": {\\\"ori\\\": {\\\"v1080\\\": 90.96, \\\"v960\\\": 92.607, \\\"v864\\\": 93.748, \\\"v720\\\": 95.332}, \\\"srv1\\\": {\\\"v1080\\\": -1, \\\"v960\\\": -1, \\\"v864\\\": -1, \\\"v720\\\": -1}}}\",\"ufq\":\"\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"a8614cfa91dde98b963562598b4e1c88\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":64658}"
+            },
+            {
+              "bitrate": 982281,
+              "codec_type": "h265",
+              "fps": 30,
+              "gear_name": "adapt_lower_720_1",
+              "play_addr": {
+                "data_size": 2218360,
+                "file_cs": "c:0-16653-2b8c",
+                "file_hash": "ecef3d896b4d03cc2ca9289b82b50f82",
+                "height": 1280,
+                "uri": "v0f044gc0000cpff8tfog65uc8rhaht0",
+                "url_key": "v0f044gc0000cpff8tfog65uc8rhaht0_bytevc1_720p_982281",
+                "url_list": [
+                  "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/o0QeIgDOR94XAYDmxFyGfjyG0R8E1EEQPqvbBJ/?a=1988&bti=ODszNWYuMDE6&&bt=959&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=cnF8b2hsc2d3SkBwaHIxaDFybndmOzs8NGU2ODc0ZWQ5NjgzaEBpM2trO3g5cndpczMzZjczM0BjRl5Nc3FePmJKYSNvYF90aHFmOiM2YzMuYTQxXy4xYi5hYDE1YSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=f75c46c4ad3352db0369e2d2eefc0255&tk=tt_chain_token&btag=e000b8000",
+                  "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/o0QeIgDOR94XAYDmxFyGfjyG0R8E1EEQPqvbBJ/?a=1988&bti=ODszNWYuMDE6&&bt=959&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=cnF8b2hsc2d3SkBwaHIxaDFybndmOzs8NGU2ODc0ZWQ5NjgzaEBpM2trO3g5cndpczMzZjczM0BjRl5Nc3FePmJKYSNvYF90aHFmOiM2YzMuYTQxXy4xYi5hYDE1YSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=f75c46c4ad3352db0369e2d2eefc0255&tk=tt_chain_token&btag=e000b8000",
+                  "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=8e40c5d316ea4b11b44573db1169f898&is_play_url=1&item_id=7376602431603346721&line=0&ply_type=2&pt=dHQ0ZC5wbGF5ZXIuYXBpJi9wbGF5ZXIvYXBpL3YxL2l0ZW1zJjIwMjYxMDE4MTU1MTMxRDkwREVERThFQkNDQzY5RDU3ODAmMTc5MjMzODY5MiYyMTg1MDA0YjRlOGQ&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjM5YmE3ZDAxMDNiYjQ3YzEyYTYyNzk4OWY4MzAzMGZi&tk=tt_chain_token&video_id=v0f044gc0000cpff8tfog65uc8rhaht0"
+                ],
+                "width": 720
+              },
+              "quality_type": 14,
+              "video_extra": "{\"PktOffsetMap\":\"[{\\\"time\\\": 1, \\\"offset\\\": 136688}, {\\\"time\\\": 2, \\\"offset\\\": 219253}, {\\\"time\\\": 3, \\\"offset\\\": 389746}, {\\\"time\\\": 4, \\\"offset\\\": 589543}, {\\\"time\\\": 5, \\\"offset\\\": 769186}, {\\\"time\\\": 10, \\\"offset\\\": 1482966}]\",\"mvmaf\":\"{\\\"v2.0\\\": {\\\"ori\\\": {\\\"v1080\\\": 82.557, \\\"v960\\\": 85.915, \\\"v864\\\": 87.574, \\\"v720\\\": 91.595}, \\\"srv1\\\": {\\\"v1080\\\": 91.206, \\\"v960\\\": 94.118, \\\"v864\\\": 95.444, \\\"v720\\\": 96.96}}}\",\"ufq\":\"\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"a8614cfa91dde98b963562598b4e1c88\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":64658}"
+            },
+            {
+              "bitrate": 759111,
+              "codec_type": "h265",
+              "fps": 30,
+              "gear_name": "adapt_540_1",
+              "play_addr": {
+                "data_size": 1714359,
+                "file_cs": "c:0-16653-3fed",
+                "file_hash": "d3031066d808d655a48fbca6eea82f5c",
+                "height": 1024,
+                "uri": "v0f044gc0000cpff8tfog65uc8rhaht0",
+                "url_key": "v0f044gc0000cpff8tfog65uc8rhaht0_bytevc1_540p_759111",
+                "url_list": [
+                  "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/okQRemqEBBvDnQRG84IASFEDR9DojXg9xf01SP/?a=1988&bti=ODszNWYuMDE6&&bt=741&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=MztkOzU4Z2loNTc1PGVnPEBpM2trO3g5cndpczMzZjczM0BfYDAzL2MuXzUxYGJhXi5iYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=69fd64cbbf6e0795673d0365852ad7be&tk=tt_chain_token&btag=e000b8000",
+                  "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-68c810-euttp/okQRemqEBBvDnQRG84IASFEDR9DojXg9xf01SP/?a=1988&bti=ODszNWYuMDE6&&bt=741&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=MztkOzU4Z2loNTc1PGVnPEBpM2trO3g5cndpczMzZjczM0BfYDAzL2MuXzUxYGJhXi5iYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=69fd64cbbf6e0795673d0365852ad7be&tk=tt_chain_token&btag=e000b8000",
+                  "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=e91dabd9e2c4428ebf1df522683ac8b0&is_play_url=1&item_id=7376602431603346721&line=0&ply_type=2&pt=dHQ0ZC5wbGF5ZXIuYXBpJi9wbGF5ZXIvYXBpL3YxL2l0ZW1zJjIwMjYxMDE4MTU1MTMxRDkwREVERThFQkNDQzY5RDU3ODAmMTc5MjMzODY5MiYyMTg1MDA0YjRlOGQ&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjU0YTcxZjI5ZjY3MmU5MjFmZDRkNDEzNmVkOTRhYzdj&tk=tt_chain_token&video_id=v0f044gc0000cpff8tfog65uc8rhaht0"
+                ],
+                "width": 576
+              },
+              "quality_type": 28,
+              "video_extra": "{\"PktOffsetMap\":\"[{\\\"time\\\": 1, \\\"offset\\\": 109639}, {\\\"time\\\": 2, \\\"offset\\\": 174219}, {\\\"time\\\": 3, \\\"offset\\\": 303092}, {\\\"time\\\": 4, \\\"offset\\\": 432131}, {\\\"time\\\": 5, \\\"offset\\\": 567991}, {\\\"time\\\": 10, \\\"offset\\\": 1122037}]\",\"mvmaf\":\"{\\\"v2.0\\\": {\\\"ori\\\": {\\\"v1080\\\": 77.446, \\\"v960\\\": 80.577, \\\"v864\\\": 83.34, \\\"v720\\\": 87.32}, \\\"srv1\\\": {\\\"v1080\\\": 87.936, \\\"v960\\\": 90.893, \\\"v864\\\": 92.655, \\\"v720\\\": 95.33}}}\",\"ufq\":\"\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"d2855c583ab7dd2f69b34dc4f402cebc\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":32329}"
+            }
+          ],
+          "uri": "v0f044gc0000cpff8tfog65uc8rhaht0",
+          "url_list": [
+            "https://v16-webapp-prime.tiktok.com/video/tos/no1a/tos-no1a-ve-68c710-no/oMfx9eZiGRiOoe5jAVLA4PMrHJexyPagIkANie/?a=1988&bti=ODszNWYuMDE6&&bt=1812&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=aDo8ZTZoPDRpMzxpaWVkZ0BpM2trO3g5cndpczMzZjczM0A2MC9jNC5fXzAxX2IwNGFgYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=b231f45e6d65fd63c553daeba3793703&tk=tt_chain_token&btag=e00078000",
+            "https://v19-webapp-prime.tiktok.com/video/tos/no1a/tos-no1a-ve-68c710-no/oMfx9eZiGRiOoe5jAVLA4PMrHJexyPagIkANie/?a=1988&bti=ODszNWYuMDE6&&bt=1812&ft=-Csk_mH1PD12NS1Q6n-UxN4FSY3W3wv251cAp&mime_type=video_mp4&rc=aDo8ZTZoPDRpMzxpaWVkZ0BpM2trO3g5cndpczMzZjczM0A2MC9jNC5fXzAxX2IwNGFgYSNxXm9gMmRjNWNgLS1kMWNzcw%3D%3D&expire=1792511510&l=20261018155131D90DEDE8EBCCC69D5780&ply_type=2&policy=2&signature=b231f45e6d65fd63c553daeba3793703&tk=tt_chain_token&btag=e00078000",
+            "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=cdda7b3fefb9403fb1b91e73fb29379e&is_play_url=1&item_id=7376602431603346721&line=0&ply_type=2&pt=dHQ0ZC5wbGF5ZXIuYXBpJi9wbGF5ZXIvYXBpL3YxL2l0ZW1zJjIwMjYxMDE4MTU1MTMxRDkwREVERThFQkNDQzY5RDU3ODAmMTc5MjMzODY5MiYyMTg1MDA0YjRlOGQ&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjdjOGYxNDJmNGZjYjVlMWNhZTVmZWNmOTQ5NDA5OTNl&tk=tt_chain_token&video_id=v0f044gc0000cpff8tfog65uc8rhaht0"
+          ],
+          "volumn_info": [
+            {
+              "loudness": "-21",
+              "peak": "0.51286"
+            }
+          ]
+        }
+      }
+    ],
+    "log_pb": {
+      "impr_id": "20261018155131D90DEDE8EBCCC69D5780"
+    },
+    "results": [
+      {
+        "code": "ok",
+        "id": 7376602431603346721,
+        "id_str": "7376602431603346721"
+      }
+    ],
+    "status_code": 0,
+    "status_msg": ""
+  }
+}

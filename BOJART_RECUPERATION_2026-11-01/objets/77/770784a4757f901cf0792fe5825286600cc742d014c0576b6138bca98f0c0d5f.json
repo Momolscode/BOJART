@@ -1,0 +1,122 @@
+{
+  "url": "https://www.tiktok.com/player/api/v1/items?item_ids=7171832154769427718&language=fr-FR&aid=1459&data_source=web_core",
+  "page_url": "https://www.tiktok.com/player/v1/7171832154769427718",
+  "observed_at_utc": "2026-10-18T15:51:40+00:00",
+  "response": {
+    "extra": {
+      "fatal_item_ids": [],
+      "logid": "202610181551396C31998CCD8D65A264F1",
+      "now": 1792338700000
+    },
+    "items": [
+      {
+        "author_info": {
+          "avatar_url_list": [
+            "https://p16-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=3f095fe5&x-expires=1792508400&x-signature=tzMNnpxkLt2ll3OmxUlEsNNG3QQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a",
+            "https://p19-common-sign.tiktokcdn-eu.com/tos-no1a-avt-0068c001-no/5949e6e01fc512bdad42b91ab0c0014f~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=0df81934&x-expires=1792508400&x-signature=AKQGmPQQQ8vQTFPyx6Z1Rk1TGxA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=no1a"
+          ],
+          "nickname": "boj.Art",
+          "secret_id": "MS4wLjABAAAAfrnDm3LlZg6Q6FbOQYZIV4B8U1M2DFZRJ_R4X_UjLWzG1XZDpADIeEqk6tq04TWj",
+          "unique_id": "boj.art"
+        },
+        "aweme_type": 0,
+        "brand_organic_type": 0,
+        "desc": "",
+        "id": 7171832154769427718,
+        "id_str": "7171832154769427718",
+        "is_ec_video": 0,
+        "location_created": "FR",
+        "marker_info": {
+          "is_ads": false
+        },
+        "music_info": {
+          "author": "Dreiks",
+          "id": 7104739073880754177,
+          "id_str": "7104739073880754177",
+          "title": "Dragão Sórdido (Draken Tokyo Revengers)"
+        },
+        "other_info": {
+          "is_tiktok_story": false
+        },
+        "region": "FR",
+        "statistics_info": {
+          "comment_count": 0,
+          "digg_count": 18,
+          "share_count": 0
+        },
+        "video_info": {
+          "cover": {
+            "url_list": [
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-maliva-p-0068/oQDeQJsb31WIYEERUdhjXAeWEqvn3aQBAsS1HB~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=QmC30CNwqCRY4J4K%2F41LIW6OlvY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p19-common-sign.tiktokcdn-eu.com/tos-maliva-p-0068/oQDeQJsb31WIYEERUdhjXAeWEqvn3aQBAsS1HB~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=4%2FtUVKAivqv2l58CscdSKuhdg9U%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-maliva-p-0068/oQDeQJsb31WIYEERUdhjXAeWEqvn3aQBAsS1HB~tplv-tiktokx-origin.jpeg?dr=10395&x-expires=1792508400&x-signature=Cqqlxt%2Bgzg5e74Ivd2M%2BPJMXw44%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a"
+            ]
+          },
+          "meta": {
+            "bitrate": 665693,
+            "duration": 18,
+            "format": "mp4",
+            "height": 1024,
+            "ratio": 540,
+            "width": 576
+          },
+          "origin_cover": {
+            "url_list": [
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-maliva-p-0068/414b6506ef934ae3bb30c048a8df0b65_1669822303~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=QmSKrogrX%2FMEfmwDeZknMAnIsM4%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p19-common-sign.tiktokcdn-eu.com/tos-maliva-p-0068/414b6506ef934ae3bb30c048a8df0b65_1669822303~tplv-tiktokx-origin.image?dr=10395&x-expires=1792508400&x-signature=jz9iB1e187TFkO2gTLE49LFvaQE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a",
+              "https://p16-common-sign.tiktokcdn-eu.com/tos-maliva-p-0068/414b6506ef934ae3bb30c048a8df0b65_1669822303~tplv-tiktokx-origin.jpeg?dr=10395&x-expires=1792508400&x-signature=KnKsR404OtbRbVPTqfdj6UfHrDs%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=a70a8312&idc=no1a"
+            ]
+          },
+          "profiles": [
+            {
+              "bitrate": 665693,
+              "codec_type": "h264",
+              "fps": 27,
+              "gear_name": "normal_540_0",
+              "play_addr": {
+                "data_size": 1538084,
+                "file_cs": "c:0-15944-34e3",
+                "file_hash": "034154b095e74e54613b932900e687c2",
+                "height": 1024,
+                "uri": "v09044g40000ce3nb53c77u95uthcb10",
+                "url_key": "v09044g40000ce3nb53c77u95uthcb10_h264_540p_665693",
+                "url_list": [
+                  "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c003/ogwACAh75GzBIboLrLdWfzHgNJkQ6xUCdsIK7l/?a=1988&bti=ODszNWYuMDE6&&bt=650&ft=I~da4o62D12Nva29BzIxRR1_Yl-H-UjNS8opiX&mime_type=video_mp4&rc=aTY4Mzk2PGloODc8ZGY2OEBpM2VreDw6ZjhxaDMzNzczM0AtYTI2NTAwXi4xLS0uXjNfYSMuYHEycjQwXzBgLS1kMTZzcw%3D%3D&expire=1792511518&l=202610181551396C31998CCD8D65A264F1&ply_type=2&policy=2&signature=489eca4bb797a57711207abcca9ee792&tk=tt_chain_token&btag=e00078000",
+                  "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c003/ogwACAh75GzBIboLrLdWfzHgNJkQ6xUCdsIK7l/?a=1988&bti=ODszNWYuMDE6&&bt=650&ft=I~da4o62D12Nva29BzIxRR1_Yl-H-UjNS8opiX&mime_type=video_mp4&rc=aTY4Mzk2PGloODc8ZGY2OEBpM2VreDw6ZjhxaDMzNzczM0AtYTI2NTAwXi4xLS0uXjNfYSMuYHEycjQwXzBgLS1kMTZzcw%3D%3D&expire=1792511518&l=202610181551396C31998CCD8D65A264F1&ply_type=2&policy=2&signature=489eca4bb797a57711207abcca9ee792&tk=tt_chain_token&btag=e00078000",
+                  "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=b563ac1a0904451eaf3933869055d30f&is_play_url=1&item_id=7171832154769427718&line=0&ply_type=2&pt=dHQ0ZC5wbGF5ZXIuYXBpJi9wbGF5ZXIvYXBpL3YxL2l0ZW1zJjIwMjYxMDE4MTU1MTM5NkMzMTk5OENDRDhENjVBMjY0RjEmMTc5MjMzODcwMCZmOWU3NTRjYWM5Mjg&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmUxYmIzYTA5ZTQyOTlmYjE0ZDkwN2Q3MWIxNDdmN2I3&tk=tt_chain_token&video_id=v09044g40000ce3nb53c77u95uthcb10"
+                ],
+                "width": 576
+              },
+              "quality_type": 20,
+              "video_extra": "{\"PktOffsetMap\":\"\",\"mvmaf\":\"\",\"ufq\":\"\",\"volume_info_json\":\"\",\"transcode_feature_id\":\"\",\"dec_info\":\"\",\"gearvqm\":\"\",\"audio_bit_rate\":32421}"
+            }
+          ],
+          "uri": "v09044g40000ce3nb53c77u95uthcb10",
+          "url_list": [
+            "https://v16-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c003/ogwACAh75GzBIboLrLdWfzHgNJkQ6xUCdsIK7l/?a=1988&bti=ODszNWYuMDE6&&bt=650&ft=I~da4o62D12Nva29BzIxRR1_Yl-H-UjNS8opiX&mime_type=video_mp4&rc=aTY4Mzk2PGloODc8ZGY2OEBpM2VreDw6ZjhxaDMzNzczM0AtYTI2NTAwXi4xLS0uXjNfYSMuYHEycjQwXzBgLS1kMTZzcw%3D%3D&expire=1792511518&l=202610181551396C31998CCD8D65A264F1&ply_type=2&policy=2&signature=489eca4bb797a57711207abcca9ee792&tk=tt_chain_token&btag=e00078000",
+            "https://v19-webapp-prime.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c003/ogwACAh75GzBIboLrLdWfzHgNJkQ6xUCdsIK7l/?a=1988&bti=ODszNWYuMDE6&&bt=650&ft=I~da4o62D12Nva29BzIxRR1_Yl-H-UjNS8opiX&mime_type=video_mp4&rc=aTY4Mzk2PGloODc8ZGY2OEBpM2VreDw6ZjhxaDMzNzczM0AtYTI2NTAwXi4xLS0uXjNfYSMuYHEycjQwXzBgLS1kMTZzcw%3D%3D&expire=1792511518&l=202610181551396C31998CCD8D65A264F1&ply_type=2&policy=2&signature=489eca4bb797a57711207abcca9ee792&tk=tt_chain_token&btag=e00078000",
+            "https://www.tiktok.com/aweme/v1/play/?faid=1988&file_id=b563ac1a0904451eaf3933869055d30f&is_play_url=1&item_id=7171832154769427718&line=0&ply_type=2&pt=dHQ0ZC5wbGF5ZXIuYXBpJi9wbGF5ZXIvYXBpL3YxL2l0ZW1zJjIwMjYxMDE4MTU1MTM5NkMzMTk5OENDRDhENjVBMjY0RjEmMTc5MjMzODcwMCZmOWU3NTRjYWM5Mjg&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLmUxYmIzYTA5ZTQyOTlmYjE0ZDkwN2Q3MWIxNDdmN2I3&tk=tt_chain_token&video_id=v09044g40000ce3nb53c77u95uthcb10"
+          ],
+          "volumn_info": [
+            {
+              "loudness": "-10.6",
+              "peak": "0.95499"
+            }
+          ]
+        }
+      }
+    ],
+    "log_pb": {
+      "impr_id": "202610181551396C31998CCD8D65A264F1"
+    },
+    "results": [
+      {
+        "code": "ok",
+        "id": 7171832154769427718,
+        "id_str": "7171832154769427718"
+      }
+    ],
+    "status_code": 0,
+    "status_msg": ""
+  }
+}

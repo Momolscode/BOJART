@@ -1,0 +1,12 @@
+{
+  "version": "10.0.14",
+  "source_metadata": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json",
+  "download_url": "https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.14/dotnet-runtime-10.0.14-linux-x64.tar.gz",
+  "sha512_verified": true,
+  "runtime_path": "/workspace/scratch/537238f8fe99/tools/dotnet_runtime10",
+  "runtime_config": "/workspace/scratch/537238f8fe99/work/rea_reverse_20261027/oracle.runtimeconfig.json",
+  "python": "/workspace/scratch/537238f8fe99/tools/rea_oracle_venv/bin/python",
+  "purpose": "separate original-DLL runtime oracle, distinct from canonical REA static inspection",
+  "earlier_apphost_download_not_used": true,
+  "sha512": "634326028645f38731c8c4e71a68356e4ca0d6b6607139a234ab760687f742063edaf33a1f20dda615742d2dc8300ca2ff857619d51fbb38090383b71334af89"
+}

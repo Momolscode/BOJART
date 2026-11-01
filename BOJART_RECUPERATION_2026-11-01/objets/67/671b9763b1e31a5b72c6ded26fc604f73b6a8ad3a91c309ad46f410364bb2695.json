@@ -1,0 +1,23 @@
+[
+  {
+    "name": "atelier",
+    "head": "58309e61e2d70364b3a18223f706a478761da8b3",
+    "tracked_files": 1782,
+    "fsck_exit": 0,
+    "clean": true
+  },
+  {
+    "name": "studio",
+    "head": "87306314a847c6d2f109bf5833345b3b80af22e1",
+    "tracked_files": 168,
+    "fsck_exit": 0,
+    "clean": true
+  },
+  {
+    "name": "marwin",
+    "head": "43537fbefa6ce4994c7e0a152350eb7b18912b34",
+    "tracked_files": 33,
+    "fsck_exit": 0,
+    "clean": true
+  }
+]

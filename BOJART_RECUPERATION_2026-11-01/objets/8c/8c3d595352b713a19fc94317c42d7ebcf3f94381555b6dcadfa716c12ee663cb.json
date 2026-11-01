@@ -1,0 +1,103 @@
+{
+  "scope": "Validation du pack V3 et rendu HTML injecte dans Chromium headless; aucun compte, PC cible ou equipement utilise",
+  "count": 24,
+  "failures": 0,
+  "tests": [
+    {
+      "test": "18 concepts",
+      "result": "passed"
+    },
+    {
+      "test": "Jours uniques",
+      "result": "passed"
+    },
+    {
+      "test": "Chronologie ordonnee",
+      "result": "passed"
+    },
+    {
+      "test": "Fenetre 30 jours",
+      "result": "passed"
+    },
+    {
+      "test": "Titres distincts",
+      "result": "passed"
+    },
+    {
+      "test": "Comptes connus seulement",
+      "result": "passed"
+    },
+    {
+      "test": "Date ouverture non inventee",
+      "result": "passed"
+    },
+    {
+      "test": "Budget non autorise",
+      "result": "passed"
+    },
+    {
+      "test": "Aucune publication autorisee",
+      "result": "passed"
+    },
+    {
+      "test": "Aucune fausse source",
+      "result": "passed"
+    },
+    {
+      "test": "ID et UTM uniques",
+      "result": "passed"
+    },
+    {
+      "test": "Pas de fausse audience cumulee",
+      "result": "passed"
+    },
+    {
+      "test": "Ecran initial correct",
+      "result": "passed"
+    },
+    {
+      "test": "Pas de debordement desktop",
+      "result": "passed"
+    },
+    {
+      "test": "Navigation calendar",
+      "result": "passed"
+    },
+    {
+      "test": "Navigation gates",
+      "result": "passed"
+    },
+    {
+      "test": "Navigation ideas",
+      "result": "passed"
+    },
+    {
+      "test": "Navigation overview",
+      "result": "passed"
+    },
+    {
+      "test": "18 lignes calendrier",
+      "result": "passed"
+    },
+    {
+      "test": "Navigation clavier",
+      "result": "passed"
+    },
+    {
+      "test": "Pas de debordement mobile",
+      "result": "passed"
+    },
+    {
+      "test": "Reduction animation",
+      "result": "passed"
+    },
+    {
+      "test": "Aucune erreur JavaScript",
+      "result": "passed"
+    },
+    {
+      "test": "Aucun appel reseau externe",
+      "result": "passed"
+    }
+  ]
+}

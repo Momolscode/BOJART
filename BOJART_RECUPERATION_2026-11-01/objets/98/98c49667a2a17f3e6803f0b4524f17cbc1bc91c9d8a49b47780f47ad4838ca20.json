@@ -1,0 +1,20 @@
+{
+  "pilotage": {
+    "proposal": "show_sources",
+    "dispatch": "queued",
+    "ack": "rendered",
+    "asset_verified": false
+  },
+  "atelier": {
+    "proposal": "show_planning_demo",
+    "dispatch": "queued",
+    "ack": "rendered",
+    "asset_verified": false
+  },
+  "creation": {
+    "proposal": "show_model",
+    "dispatch": "queued",
+    "ack": "rendered",
+    "asset_verified": true
+  }
+}

@@ -1,0 +1,804 @@
+{
+  "ok": true,
+  "operation": {
+    "id": "bojart-g2-inspect-v35-20261101-01",
+    "projectId": "3a59ace3-5c77-4a60-9d99-626bd4a1c884",
+    "access": "query",
+    "status": "succeeded",
+    "baseRevision": 2,
+    "headRevision": 2,
+    "headSceneSequence": 0,
+    "stale": false,
+    "sceneSequenceBefore": 0,
+    "sceneSequenceAfter": 0,
+    "revisionBefore": 2,
+    "revisionAfter": null,
+    "createdAt": "2026-11-01T19:29:20.354Z",
+    "startedAt": "2026-11-01T19:29:20.390Z",
+    "finishedAt": "2026-11-01T19:29:35.408Z",
+    "result": {
+      "objects": [
+        {
+          "name": "CAM_delivery",
+          "type": "CAMERA",
+          "dimensions": [
+            0,
+            0,
+            0
+          ],
+          "parent": null,
+          "materials": []
+        },
+        {
+          "name": "ENV_floor",
+          "type": "MESH",
+          "dimensions": [
+            14,
+            17,
+            0.3
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_floor"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_floor_race_-1",
+          "type": "MESH",
+          "dimensions": [
+            0.025,
+            9,
+            0.018
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_deep_red_rim"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_floor_race_1",
+          "type": "MESH",
+          "dimensions": [
+            0.025,
+            9,
+            0.018
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_deep_red_rim"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_pillar_-1",
+          "type": "MESH",
+          "dimensions": [
+            0.5,
+            1.2,
+            5
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_arch"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_pillar_1",
+          "type": "MESH",
+          "dimensions": [
+            0.5,
+            1.2,
+            5
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_arch"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_trim_-1",
+          "type": "MESH",
+          "dimensions": [
+            0.14,
+            0.12,
+            4.4
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_bronze"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_trim_1",
+          "type": "MESH",
+          "dimensions": [
+            0.14,
+            0.12,
+            4.4
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_bronze"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_tunnel_pillar_3.4_-1",
+          "type": "MESH",
+          "dimensions": [
+            0.32,
+            0.5,
+            5.1
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_tunnel_dark"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_tunnel_pillar_3.4_1",
+          "type": "MESH",
+          "dimensions": [
+            0.32,
+            0.5,
+            5.1
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_tunnel_dark"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_tunnel_pillar_5.7_-1",
+          "type": "MESH",
+          "dimensions": [
+            0.32,
+            0.5,
+            5.1
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_tunnel_dark"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_tunnel_pillar_5.7_1",
+          "type": "MESH",
+          "dimensions": [
+            0.32,
+            0.5,
+            5.1
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_tunnel_dark"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_tunnel_pillar_8.0_-1",
+          "type": "MESH",
+          "dimensions": [
+            0.32,
+            0.5,
+            5.1
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_tunnel_dark"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "ENV_tunnel_pillar_8.0_1",
+          "type": "MESH",
+          "dimensions": [
+            0.32,
+            0.5,
+            5.1
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_tunnel_dark"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "LGT_fill",
+          "type": "LIGHT",
+          "dimensions": [
+            0,
+            0,
+            0
+          ],
+          "parent": null,
+          "materials": []
+        },
+        {
+          "name": "LGT_key",
+          "type": "LIGHT",
+          "dimensions": [
+            0,
+            0,
+            0
+          ],
+          "parent": null,
+          "materials": []
+        },
+        {
+          "name": "LGT_portal",
+          "type": "LIGHT",
+          "dimensions": [
+            0,
+            0,
+            0
+          ],
+          "parent": null,
+          "materials": []
+        },
+        {
+          "name": "PORTAL_depth_3.2",
+          "type": "MESH",
+          "dimensions": [
+            4.09,
+            4.09,
+            0.09
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_deep_red_rim"
+          ],
+          "vertices": 512,
+          "polygons": 512,
+          "armature": false
+        },
+        {
+          "name": "PORTAL_depth_5.4",
+          "type": "MESH",
+          "dimensions": [
+            3.79,
+            3.79,
+            0.09
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_distant_ember"
+          ],
+          "vertices": 512,
+          "polygons": 512,
+          "armature": false
+        },
+        {
+          "name": "PORTAL_depth_7.8",
+          "type": "MESH",
+          "dimensions": [
+            3.33,
+            3.33,
+            0.09
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_distant_ember"
+          ],
+          "vertices": 512,
+          "polygons": 512,
+          "armature": false
+        },
+        {
+          "name": "PORTAL_main",
+          "type": "MESH",
+          "dimensions": [
+            4.46,
+            4.46,
+            0.26
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_ring"
+          ],
+          "vertices": 512,
+          "polygons": 512,
+          "armature": false
+        },
+        {
+          "name": "PORTAL_outer",
+          "type": "MESH",
+          "dimensions": [
+            4.81,
+            4.81,
+            0.09
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_ring"
+          ],
+          "vertices": 512,
+          "polygons": 512,
+          "armature": false
+        },
+        {
+          "name": "PORTAL_red_disc",
+          "type": "MESH",
+          "dimensions": [
+            2,
+            2,
+            2
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_sun"
+          ],
+          "vertices": 1106,
+          "polygons": 1152,
+          "armature": false
+        },
+        {
+          "name": "SHARD_00",
+          "type": "MESH",
+          "dimensions": [
+            1.11398,
+            0.24,
+            1.33915
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "SHARD_01",
+          "type": "MESH",
+          "dimensions": [
+            0.97438,
+            0.24,
+            1.28522
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 10,
+          "polygons": 7,
+          "armature": false
+        },
+        {
+          "name": "SHARD_02",
+          "type": "MESH",
+          "dimensions": [
+            0.97506,
+            0.24,
+            1.3931
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 10,
+          "polygons": 7,
+          "armature": false
+        },
+        {
+          "name": "SHARD_03",
+          "type": "MESH",
+          "dimensions": [
+            1.16332,
+            0.24,
+            1.29213
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_04",
+          "type": "MESH",
+          "dimensions": [
+            1.02073,
+            0.24,
+            1.4295
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 10,
+          "polygons": 7,
+          "armature": false
+        },
+        {
+          "name": "SHARD_05",
+          "type": "MESH",
+          "dimensions": [
+            1.18433,
+            0.24,
+            1.25006
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "SHARD_06",
+          "type": "MESH",
+          "dimensions": [
+            1.14408,
+            0.24,
+            1.03572
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_07",
+          "type": "MESH",
+          "dimensions": [
+            1.10087,
+            0.24,
+            1.03501
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_08",
+          "type": "MESH",
+          "dimensions": [
+            1.04542,
+            0.24,
+            1.05975
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_09",
+          "type": "MESH",
+          "dimensions": [
+            0.9141,
+            0.24,
+            1.05024
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "SHARD_10",
+          "type": "MESH",
+          "dimensions": [
+            0.96701,
+            0.24,
+            1.23933
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_11",
+          "type": "MESH",
+          "dimensions": [
+            1.25117,
+            0.24,
+            1.20097
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_12",
+          "type": "MESH",
+          "dimensions": [
+            0.94377,
+            0.24,
+            1.12277
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "SHARD_13",
+          "type": "MESH",
+          "dimensions": [
+            1.09368,
+            0.24,
+            1.13489
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_14",
+          "type": "MESH",
+          "dimensions": [
+            0.98304,
+            0.24,
+            1.2174
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 14,
+          "polygons": 9,
+          "armature": false
+        },
+        {
+          "name": "SHARD_15",
+          "type": "MESH",
+          "dimensions": [
+            1.02295,
+            0.24,
+            1.21891
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_16",
+          "type": "MESH",
+          "dimensions": [
+            1.2272,
+            0.24,
+            1.18577
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 14,
+          "polygons": 9,
+          "armature": false
+        },
+        {
+          "name": "SHARD_17",
+          "type": "MESH",
+          "dimensions": [
+            0.94852,
+            0.24,
+            1.23798
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "SHARD_18",
+          "type": "MESH",
+          "dimensions": [
+            1.04684,
+            0.24,
+            1.53877
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 10,
+          "polygons": 7,
+          "armature": false
+        },
+        {
+          "name": "SHARD_19",
+          "type": "MESH",
+          "dimensions": [
+            1.13107,
+            0.24,
+            1.59024
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 10,
+          "polygons": 7,
+          "armature": false
+        },
+        {
+          "name": "SHARD_20",
+          "type": "MESH",
+          "dimensions": [
+            1.2284,
+            0.24,
+            1.47442
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "SHARD_21",
+          "type": "MESH",
+          "dimensions": [
+            1.08621,
+            0.24,
+            1.52645
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 12,
+          "polygons": 8,
+          "armature": false
+        },
+        {
+          "name": "SHARD_22",
+          "type": "MESH",
+          "dimensions": [
+            1.10956,
+            0.24,
+            1.39559
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 8,
+          "polygons": 6,
+          "armature": false
+        },
+        {
+          "name": "SHARD_23",
+          "type": "MESH",
+          "dimensions": [
+            0.96666,
+            0.24,
+            1.40299
+          ],
+          "parent": null,
+          "materials": [
+            "MAT_obsidian",
+            "MAT_hot_fracture_edges"
+          ],
+          "vertices": 10,
+          "polygons": 7,
+          "armature": false
+        }
+      ],
+      "object_count": 47,
+      "armatures": [],
+      "images": [],
+      "camera": "CAM_delivery",
+      "frame_range": [
+        1,
+        48
+      ],
+      "fps": 24,
+      "render": [
+        360,
+        640
+      ],
+      "engine": "BLENDER_EEVEE"
+    },
+    "output": {
+      "stdoutTail": "",
+      "stderrTail": "",
+      "truncated": false
+    },
+    "error": null,
+    "artifacts": null,
+    "generatedArtifacts": []
+  },
+  "terminal": true,
+  "projectUrl": "https://higgsfield.ai/3d-jutsu/3a59ace3-5c77-4a60-9d99-626bd4a1c884"
+}

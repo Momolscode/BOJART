@@ -1,0 +1,46 @@
+BOJ.ART - AUDIT GLOBAL ET POINT DE REPRISE
+1 novembre 2026 - Europe/Paris
+
+VERDICT
+Le projet a des sources, des interfaces et un moteur local concrets. Il reste a reunir ses applications et a qualifier le vrai atelier. La recuperation integrale du chat, des donnees du PC et de tous les fichiers externes n est pas certifiee.
+
+LIRE EN PREMIER
+- BOJART_AUDIT_GLOBAL_2026-11-01.pdf : 28 pages, bilan et atlas.
+- BOJART_GALERIE_AUDIT_2026-11-01.html : galerie autonome, recherche et filtres.
+- BOJART_ATLAS_DASHBOARDS_2026-11-01.jpg : vue generale des principaux ecrans.
+- INVENTAIRE_VISUELS.csv et .json : sources, statuts, empreintes et chemins.
+- SCHEMA_JARVIS_M07.html : pipeline interactive ; les deux .mmd precisent le graphe execute et la vue globale.
+
+CHIFFRES DU PERIMETRE
+307 contenus distincts, 357 chemins conserves : 54 captures uniques, 136 images, 81 contenus video, 5 fichiers de modeles, 10 PDF, 21 HTML. Les captures couvrent plusieurs versions des memes interfaces. Parmi les 81 contenus video, 80 sont decodes integralement, dont 4 nouveaux apercus proposes par cet audit. Un contenu de 48 octets est invalide et correspond a quatre chemins de la V11.
+
+SOURCE RECUPEREE ET CONTROLEE
+- Atelier : 11 versions, commit courant 58309e61e2d70364b3a18223f706a478761da8b3.
+- Vitrine Studio : 3 versions, commit courant 87306314a847c6d2f109bf5833345b3b80af22e1.
+- Les 14 commits sont presents ; git fsck ne signale pas d erreur sur les deux depots. Les publications V11 et V3 sont confirmees reussies. Les depots restent distincts.
+- Jarvis M07 : commit 84aff373fe78db173e9601f285ce908f64587c55. Les 437 fichiers du manifeste concordent.
+- Recette M07 conservee : 578 tests Python, 7 tests de signal, 22 controles navigateur, trois modeles CAO. Cette recette utilise une capture synthetique et des doubles ASR/Jev ; elle ne qualifie pas la voix reelle ou les machines. L ensemble des 578 tests n a pas ete reexecute pendant cet audit de lecture.
+- Momolscode/bojart-jarvis repond 404 avec le compte connecte retenu. Aucun push n est atteste ; ce resultat ne prouve pas que le depot est definitivement absent.
+
+DONNEES
+- Archive publique @boj.art du 18 octobre : 29 videos sur 30, un carrousel de 7 photos, 31 couvertures et 171 empreintes concordantes. Video 7099716894994730246 manquante. Ce sont des versions de diffusion, pas tous les rushes.
+- D1 Studio : inquiries, inquiry_rate_limits et inquiry_tombstones ont chacune retourne zero ligne, sans page suivante. Aucune base D1 declaree pour Atelier. Cela ne sauvegarde pas le navigateur ou le PC du proprietaire.
+- Le catalogue initial M07 comporte 3 medias et 8 passages ; les archives retrouvees ne sont pas toutes indexees automatiquement.
+- Derniere coupe creative relue : R02 Le dernier geste, 10,5 s, 720 x 1280, 24 i/s. Nouveau G1 pinceau, ancien TEST19 pour le personnage, prises authentiques. Le modele exact et le rig G2 manquent encore ; aucun master final approuve n est atteste.
+
+QUATRE CORRECTIONS PROPOSEES
+IDs : 7071144007094537477, 7466163957854735638, 7376602431603346721, 7228267566194609434.
+Les fichiers sources de 48 octets restent conserves. Le dossier corrections_proposees contient des apercus reconstruits selon les points de depart du catalogue : 6 s, 24 i/s, largeur 320 px, H.264, sans audio. Decodage et absence d audio controles. Relire les extraits avant application ; aucune publication n a ete effectuee.
+
+LIMITES DE L AUDIT VISUEL
+La vitrine publique et le premier ecran du brief ont ete observes directement, sans soumission. L Atelier prive demande une connexion dans le navigateur ; ses sources V11 sont utilisees pour les captures, avec un etat neuf de demonstration. M07 a ete ouvert dans un nouveau dossier, sa recherche metier exercee et trois vues appairees. WebGL2 est indisponible dans ce navigateur cloud. La commande de scene est bloquee sur l origine HTTP de previsualisation par crypto.randomUUID ; le localhost 127.0.0.1 de la recette precedente constitue un environnement distinct. Aucun succes complet sur cette previsualisation n est revendique.
+
+PROCHAIN TRAVAIL
+P0 : definir les contrats et donnees communs entre V11 et M07, conserver les historiques et tester la restauration ; inventorier la vraie tour, qualifier voix et moniteurs, puis une FDM et une resine avec operateur.
+P1 : examiner et publier les quatre correctifs avec le processus adapte, indexer les sources, harmoniser navigation et labels, completer la vitrine et le parcours de devis, relier les comptes autorises.
+P2 : etendre les machines et la conversation continue selon les resultats du pilote.
+Jev garde sa place apres transcription et avant les gardes, avec choix bornes. Il ne remplace pas ASR, rendu, slicer ou autorite physique. Pipecat est etudie, sans service actif.
+
+UTILISATION DU PACK
+Decompresser le ZIP puis ouvrir la galerie HTML. Les apercus sont embarques ; les videos et originaux se lisent depuis medias/. Chaque contenu est conserve une fois par empreinte, avec tous ses chemins dans l inventaire. Un HTML dependant de ses scripts ou de son serveur reste un fichier source : sa copie isolee ne demarre pas l application. Les versions originales et historiques restent accessibles par leurs liens source.
+Aucun secret, profil de navigateur ou base client n est ajoute. Aucune commande physique, publication sociale, depense publicitaire ou generation payante n a ete engagee pendant cet audit.

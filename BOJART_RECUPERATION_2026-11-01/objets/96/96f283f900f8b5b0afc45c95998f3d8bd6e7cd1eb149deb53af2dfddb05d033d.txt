@@ -1,0 +1,45 @@
+test_all_sources_primary (test_base_metier.CorpusTests.test_all_sources_primary) ... ok
+test_budget_preserved (test_base_metier.CorpusTests.test_budget_preserved) ... ok
+test_counts (test_base_metier.CorpusTests.test_counts) ... ok
+test_current_not_overdue (test_base_metier.CorpusTests.test_current_not_overdue) ... ok
+test_documented_have_sources (test_base_metier.CorpusTests.test_documented_have_sources) ... ok
+test_domain_filter (test_base_metier.CorpusTests.test_domain_filter) ... ok
+test_empty_browse (test_base_metier.CorpusTests.test_empty_browse) ... ok
+test_every_card_is_nonexecuting (test_base_metier.CorpusTests.test_every_card_is_nonexecuting) ... ok
+test_fts_injection (test_base_metier.CorpusTests.test_fts_injection) ... ok
+test_index_exports_and_no_overwrite (test_base_metier.CorpusTests.test_index_exports_and_no_overwrite) ... ok
+test_invalid_domain (test_base_metier.CorpusTests.test_invalid_domain) ... ok
+test_invalid_limit (test_base_metier.CorpusTests.test_invalid_limit) ... ok
+test_invalid_price (test_base_metier.CorpusTests.test_invalid_price) ... ok
+test_long_query (test_base_metier.CorpusTests.test_long_query) ... ok
+test_missing_cost_not_zero (test_base_metier.CorpusTests.test_missing_cost_not_zero) ... ok
+test_no_automatic_execution_from_search (test_base_metier.CorpusTests.test_no_automatic_execution_from_search) ... ok
+test_no_invention_on_no_match (test_base_metier.CorpusTests.test_no_invention_on_no_match) ... ok
+test_no_universal_settings (test_base_metier.CorpusTests.test_no_universal_settings) ... ok
+test_overdue_warning (test_base_metier.CorpusTests.test_overdue_warning) ... ok
+test_price (test_base_metier.CorpusTests.test_price) ... ok
+test_procedures_nonautomatic (test_base_metier.CorpusTests.test_procedures_nonautomatic) ... ok
+test_proposed_are_explicit (test_base_metier.CorpusTests.test_proposed_are_explicit) ... ok
+test_recipe_bad_hash (test_base_metier.CorpusTests.test_recipe_bad_hash) ... ok
+test_recipe_bad_layer (test_base_metier.CorpusTests.test_recipe_bad_layer) ... ok
+test_recipe_empty (test_base_metier.CorpusTests.test_recipe_empty) ... ok
+test_recipe_matching_not_authorized (test_base_metier.CorpusTests.test_recipe_matching_not_authorized) ... ok
+test_recipe_revision_change (test_base_metier.CorpusTests.test_recipe_revision_change) ... ok
+test_reject_duplicate_source (test_base_metier.CorpusTests.test_reject_duplicate_source) ... ok
+test_reject_missing_source (test_base_metier.CorpusTests.test_reject_missing_source) ... ok
+test_reject_qualified_corpus (test_base_metier.CorpusTests.test_reject_qualified_corpus) ... ok
+test_scopes_present (test_base_metier.CorpusTests.test_scopes_present) ... ok
+test_search_cost (test_base_metier.CorpusTests.test_search_cost) ... ok
+test_search_hollow (test_base_metier.CorpusTests.test_search_hollow) ... ok
+test_search_identity (test_base_metier.CorpusTests.test_search_identity) ... ok
+test_search_maintenance (test_base_metier.CorpusTests.test_search_maintenance) ... ok
+test_search_tol (test_base_metier.CorpusTests.test_search_tol) ... ok
+test_templates_not_actual_data (test_base_metier.CorpusTests.test_templates_not_actual_data) ... ok
+test_unknown_hardware (test_base_metier.CorpusTests.test_unknown_hardware) ... ok
+test_unknown_nozzle_not_completed (test_base_metier.CorpusTests.test_unknown_nozzle_not_completed) ... ok
+test_warning_local_qualification (test_base_metier.CorpusTests.test_warning_local_qualification) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.022s
+
+OK

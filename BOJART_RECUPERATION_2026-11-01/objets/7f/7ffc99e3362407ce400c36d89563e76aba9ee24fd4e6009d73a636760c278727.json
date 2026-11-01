@@ -1,0 +1,129 @@
+{
+  "schema": "bojart.m04-delivery.v1",
+  "created_at": "2026-10-31",
+  "commit": "d408b116e19c99e9cd79ea0114f73162dcc69715",
+  "scope": "code, tests, captures et autotest; coffre des originaux conservé séparément",
+  "github_pushed": false,
+  "files": [
+    {
+      "name": "BOJART_JARVIS_M04_SOURCES.zip",
+      "bytes": 40665872,
+      "sha256": "94a549874086c86128a680099e964613074cf77c5541194d6f4b719c33e128c7"
+    },
+    {
+      "name": "BOJART_JARVIS_M04_COMPLET.bundle",
+      "bytes": 34891929,
+      "sha256": "02228cafb1b1266740610274de4c923d7296d51bedc5c4f80d13f573bb0001f3"
+    },
+    {
+      "name": "BOJART_JARVIS_M04_CUMULATIF.patch",
+      "bytes": 352822,
+      "sha256": "02e503177a0558db22f56ae9885d61e81899cdd241ac2ea4bf194ad2605fe2bd"
+    },
+    {
+      "name": "APERCU_TOUR_M04.html",
+      "bytes": 16588,
+      "sha256": "e2c0cdc7d43af9a285dc91c675e05922f40710f0389a3fa8384745885328feef"
+    },
+    {
+      "name": "BOJART_M04_COCKPIT_DESKTOP.png",
+      "bytes": 878115,
+      "sha256": "60f053d8c248905a8b63b3712ceb26ae46c888a3b45e2def233ff08f1ad50b8c"
+    },
+    {
+      "name": "BOJART_M04_COCKPIT_MOBILE.png",
+      "bytes": 591994,
+      "sha256": "ad25803212a6b51e2da0449dfeda1965abe2461f52d72081a7be5aec5f22ea45"
+    },
+    {
+      "name": "BOJART_M04_COCKPIT_INTERACTION.png",
+      "bytes": 881859,
+      "sha256": "a0b72aaa10c4b0a20bb02986a5f09d73a05cde50ff90b78902c337b535e0c2eb"
+    },
+    {
+      "name": "BOJART_M04_VUE_CREATION_MODELE.png",
+      "bytes": 432040,
+      "sha256": "6feab9dffd25773035304d503e246a08388221d0ef269db912569bb08bcc6f16"
+    },
+    {
+      "name": "RAPPORT_M04.md",
+      "bytes": 4720,
+      "sha256": "afae8e4f1a267cfb47e6e1bca62aa0efbf0c30c99f143caf823e2f450c558ae2"
+    },
+    {
+      "name": "LIRE_AVANT.txt",
+      "bytes": 1797,
+      "sha256": "47ee2300cb1dab1cf8f53f18de33c44e697d9f76a906ffebb841a46ad37f25f7"
+    },
+    {
+      "name": "REPRISE_CLAUDE_M04.txt",
+      "bytes": 1727,
+      "sha256": "a94ed88da62f13de82fcf87b1e549dfe49be9d6fcf01612d2c69b886580cb20b"
+    },
+    {
+      "name": "HTTP_E2E_REPORT.json",
+      "bytes": 394,
+      "sha256": "98c49667a2a17f3e6803f0b4524f17cbc1bc91c9d8a49b47780f47ad4838ca20"
+    },
+    {
+      "name": "BROWSER_REPORT.json",
+      "bytes": 297,
+      "sha256": "9b36fe54fc9d35cc29652b35d9311807cc00c3e0d03daf8a729346c8e022e437"
+    },
+    {
+      "name": "VIEWER_REPORT.json",
+      "bytes": 125,
+      "sha256": "c25a37f234f09c627ef06daedc73aa4982b238ae0fc9fa2a0258bc247fbe396c"
+    },
+    {
+      "name": "VERIFICATION_CLONE.json",
+      "bytes": 137,
+      "sha256": "4994bea3ae806c6b46c9ea1611b62b5921dd12980245a75167279a45c300843b"
+    },
+    {
+      "name": "VERIFICATION_CLONE_TESTS.txt",
+      "bytes": 99,
+      "sha256": "a64fe57632ba829888fa2a91f8eae9acf69e5b7f9c17b066aba448a3fd04bf3d"
+    },
+    {
+      "name": "VERIFICATION_CLONE_SMOKE.json",
+      "bytes": 468,
+      "sha256": "fb751cf80902eedc81097cc1afc0256698287b6090b331f1c5dbed29a4679e6f"
+    },
+    {
+      "name": "SMOKE_M04.json",
+      "bytes": 468,
+      "sha256": "fb751cf80902eedc81097cc1afc0256698287b6090b331f1c5dbed29a4679e6f"
+    },
+    {
+      "name": "TESTS_SELECTION_480.txt",
+      "bytes": 588,
+      "sha256": "e4fcddc21d11cbd8efb7811726e946256c6fda86cf5d309207f1a30ca17c7242"
+    },
+    {
+      "name": "TESTS_NOYAU_176.txt",
+      "bytes": 260,
+      "sha256": "c8b6b9d01dd7a4129df0c4e3478c02330012077e5d5b46c893fe05f01b5341f4"
+    },
+    {
+      "name": "TESTS_APPLICATION_242.txt",
+      "bytes": 355,
+      "sha256": "090631073cdd61fd61e05cbc849bc1976bd03da2fcd2b10c289575acc9644f9a"
+    },
+    {
+      "name": "TESTS_METIER_40.txt",
+      "bytes": 3559,
+      "sha256": "96f283f900f8b5b0afc45c95998f3d8bd6e7cd1eb149deb53af2dfddb05d033d"
+    },
+    {
+      "name": "TESTS_PLANNING_22.txt",
+      "bytes": 1913,
+      "sha256": "3517a4e633c1851b444e8fb686d25c3d554455cdae6ff567324d979c2a37ca23"
+    },
+    {
+      "name": "DIAGNOSTIC_HOTE_EXECUTION.json",
+      "bytes": 1445,
+      "sha256": "3deb227a3187076f730e38cf2fd8b2a1f1b685c3316a379ff0bd8fc060136a4f"
+    }
+  ]
+}
