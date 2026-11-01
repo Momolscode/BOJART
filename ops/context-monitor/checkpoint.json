@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "9c2a0fb47baf1b610e31d2deb800a5323bb9495e",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/9c2a0fb47baf1b610e31d2deb800a5323bb9495e.continuation-restore.json",
+      "head_sha": "54f245ba852a8d1c611d96d818ee36d1aa5adba9",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/54f245ba852a8d1c611d96d818ee36d1aa5adba9.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
@@ -210,7 +210,6 @@
         "jarvis/docs/m07/SCHEMA_M07.html",
         "jarvis/docs/m07/SOURCES.json",
         "jarvis/knowledge/growth/AUDIT_SKILLS.md",
-        "jarvis/knowledge/growth/BRAND_CONTEXT.json",
         "jarvis/knowledge/growth/PLATFORM_RULES.json",
         "jarvis/knowledge/growth/PUBLISHING_CONTRACT.md",
         "jarvis/knowledge/growth/SKILLS_INSTALLED.json",
@@ -622,9 +621,10 @@
         "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
         "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2",
         "0a7a08dd0a0bed445ef0dc5734be7c841b30467a",
-        "9c2a0fb47baf1b610e31d2deb800a5323bb9495e"
+        "9c2a0fb47baf1b610e31d2deb800a5323bb9495e",
+        "54f245ba852a8d1c611d96d818ee36d1aa5adba9"
       ],
-      "updated_at": "2026-11-01T23:00:18.678Z"
+      "updated_at": "2026-11-01T23:06:56Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
