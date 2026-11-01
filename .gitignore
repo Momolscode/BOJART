@@ -1,0 +1,22 @@
+# Secrets et environnements locaux
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+__pycache__/
+.venv/
+venv/
+node_modules/
+.cache/
+
+# Rendus et sources non revus avant publication
+private/
+internal/
+media/raw/
+media/clients/
+renders/unreviewed/
+archives/private/
+*.zip
+*.7z
+*.rar
