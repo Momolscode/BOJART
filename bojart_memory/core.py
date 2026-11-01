@@ -63,6 +63,26 @@ def chunks(text, max_chars=2800):
         yield start, len(text.splitlines()), '\n'.join(buf)
 
 
+def distinct_sources(rows, limit):
+    """Select verified sources before repeats, retaining at most 2*limit rows.
+
+    Consume rankings until enough distinct sources are found or they end.
+    A passage cutoff before this step can hide a shorter relevant document.
+    """
+    first, repeated, seen = [], [], set()
+    for row in rows:
+        source = (row['project'], row['collection'], row['source_path'])
+        if source in seen:
+            if len(repeated) < limit:
+                repeated.append(row)
+        else:
+            first.append(row)
+            seen.add(source)
+            if len(first) == limit:
+                break
+    return (first + repeated)[:limit]
+
+
 def project_ok(project):
     if project not in PROJECTS:
         raise MemoryError('Projet obligatoire : bojart.jarvis, bojart.creative ou bojart.sites.')
@@ -231,29 +251,22 @@ class Memory:
             JOIN sources s ON s.source_id=v.source_id
             WHERE search MATCH ? AND s.project=? {current}
             ORDER BY CASE WHEN s.collection='canonical' THEN 0 ELSE 1 END,
-                     rank,v.observed_at DESC,c.start_line LIMIT ?
-        ''', (match, project, max(30, limit * 5))).fetchall()
-        # First expose distinct sources; repeated chunks from one long document
-        # can otherwise occupy the entire result window. Keep their relative
-        # BM25 order, then complete the window with the remaining passages.
-        first, repeated, sources_seen = [], [], set()
-        for row in rows:
-            source = (row['project'], row['collection'], row['source_path'])
-            if source in sources_seen:
-                repeated.append(row)
-            else:
-                first.append(row)
-                sources_seen.add(source)
-        verified, results, warnings = {}, [], []
-        for row in first + repeated:
-            sha = row['sha256']
-            if sha not in verified:
-                obj = self._object(sha)
-                verified[sha] = obj.is_file() and not obj.is_symlink() and file_sha(obj) == sha
-                if not verified[sha]:warnings.append({'sha256':sha,'reason':'source_missing_or_changed'})
-            if verified[sha]:results.append({**dict(row),'source_bytes_verified':True})
-            if len(results) >= limit:
-                break
+                     rank,v.observed_at DESC,c.start_line,c.id
+        ''', (match, project))
+        verified, warnings = {}, []
+
+        def verified_rows():
+            for row in rows:
+                sha = row['sha256']
+                if sha not in verified:
+                    obj = self._object(sha)
+                    verified[sha] = obj.is_file() and not obj.is_symlink() and file_sha(obj) == sha
+                    if not verified[sha]:
+                        warnings.append({'sha256':sha,'reason':'source_missing_or_changed'})
+                if verified[sha]:
+                    yield {**dict(row),'source_bytes_verified':True}
+
+        results = distinct_sources(verified_rows(), limit)
         return {'project':project, 'query':query, 'retrieval':'sqlite_fts5_bm25', 'trusted_instructions':False,
                 'selection':'distinct_sources_before_repeated_chunks',
                 'facts_automatically_validated':False, 'results':results, 'warnings':warnings}

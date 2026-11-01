@@ -199,8 +199,8 @@
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 16797,
-      "sha256": "80b278667e83d45f406acab74368628f4c357929a34c838b3a288a2a6e89b028"
+      "bytes": 17382,
+      "sha256": "9199fd574105d52d2b59c41a98463042de840a0030701051bd0f972f9cc8512d"
     },
     {
       "path": "bojart_memory/agent_cli.py",
@@ -209,8 +209,8 @@
     },
     {
       "path": "bojart_memory/core.py",
-      "bytes": 18244,
-      "sha256": "890f5276d1d0b261bcefd432610949e4315de855c2e34ec3dc43e77478a21053"
+      "bytes": 18403,
+      "sha256": "c6bfa72a4d2c0a452feb8fb1f4c86bc7fbbea72ec41931fc0b3fb52b3c3e21c1"
     },
     {
       "path": "bojart_memory/http_api.py",
@@ -414,8 +414,8 @@
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
-      "bytes": 4481,
-      "sha256": "cb64a45a233bf0c4d724554cd050d6b2bc9fbec7533e4a09fc685678ad8af23d"
+      "bytes": 5135,
+      "sha256": "33654f2640f0d837e2cc33537083069cb4417fe7b8e5a8ac05078305c0859d71"
     },
     {
       "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
@@ -944,8 +944,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.js",
-      "bytes": 5930,
-      "sha256": "6145c39ae61d181e4962608cf9525916b49ec3b39bb2d7a1a3eac502f7668c22"
+      "bytes": 6384,
+      "sha256": "24b3463eb8d275b99fa945359b2f55659709d2203c7360364d8ed28ea8d27276"
     },
     {
       "path": "jarvis/apps/jarvis/app/proposals.py",
@@ -1974,8 +1974,8 @@
     },
     {
       "path": "jarvis/tests/memory_context.test.cjs",
-      "bytes": 4841,
-      "sha256": "f224eb7598a49f21330ba9bdfb431a611f281b4f79b7a7906ee0084e40ad57e4"
+      "bytes": 6235,
+      "sha256": "5f25d6b470133b62ede23d3f9f831f9ec0bbbe88afc6f2394ce15fc9a4ffd794"
     },
     {
       "path": "jarvis/tests/test_connection_lifetime.py",
@@ -3791,6 +3791,11 @@
       "path": "tests_agent/test_http_agent.py",
       "bytes": 3156,
       "sha256": "0fce26ac9126272b47db0a7393c8a8d00e1d78555da5adcd433cde7cd6c29e5e"
+    },
+    {
+      "path": "tests_agent/test_retrieval_diversity.py",
+      "bytes": 4682,
+      "sha256": "8062a3c9fab47d4fea41aaac0542586a98c5408c440444b433281b055374f2ac"
     },
     {
       "path": "tests_ops/test_archive_restore.py",

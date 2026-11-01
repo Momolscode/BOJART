@@ -96,3 +96,34 @@ test("a late model answer cannot reappear after switching domain", async () => {
   await answer;
   assert.doesNotMatch(h.get("results").textContent, /OLD_ANSWER/);
 });
+
+
+test("excluded memory sources remain visible as a search warning", async () => {
+  const h = await harness();
+  const pending = h.get("search").onclick();
+  h.reply("/api/memory/recall", {...search("INTACT"), warnings: [{reason: "source_missing_or_changed"}]});
+  await pending;
+  assert.match(h.get("results").textContent, /INTACT/);
+  assert.match(h.get("results").textContent, /sources sont absentes ou modifiées/);
+});
+
+test("context export keeps the source-integrity warning visible", async () => {
+  const h = await harness();
+  const pending = h.get("context").onclick();
+  h.reply("/api/memory/context", {text: "PACK", characters: 4, citations: [], omitted: 0,
+    warnings: [{reason: "source_missing_or_changed"}]});
+  await pending;
+  assert.match(h.get("results").textContent, /PACK/);
+  assert.match(h.get("results").textContent, /sources sont absentes ou modifiées/);
+});
+
+test("a generated answer without recognized citations is identified", async () => {
+  const h = await harness();
+  const pending = h.get("ask").onclick();
+  h.reply("/api/memory/ask", {answer: "UNVERIFIED", context_sha256: "test",
+    citation_warnings: [], has_recognized_citation: false});
+  await tick();
+  h.reply("/api/memory/status", status); await tick();
+  h.reply("/api/memory/facts", {facts: []}); await pending;
+  assert.match(h.get("results").textContent, /aucune référence reconnue/);
+});
