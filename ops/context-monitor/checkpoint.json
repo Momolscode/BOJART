@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "5268e7e7b70fa25efee7d186f27cd3716a49c4c1",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/5268e7e7b70fa25efee7d186f27cd3716a49c4c1.json",
+      "head_sha": "461d46ff39caaf142ce37a3e0b78f22dfcc2e842",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/461d46ff39caaf142ce37a3e0b78f22dfcc2e842.continuation-memory.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
@@ -31,10 +31,7 @@
         "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
         "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
         "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
-        "bojart_memory/__init__.py",
-        "bojart_memory/__main__.py",
         "bojart_ops/audit.py",
-        "data/catalog/derivatives.json",
         "data/catalog/library_inventory.json",
         "data/catalog/recovery-2026-11-01/contents-part-01.jsonl",
         "data/catalog/recovery-2026-11-01/contents-part-02.jsonl",
@@ -46,11 +43,7 @@
         "data/catalog/recovery-2026-11-01/locations-05.jsonl",
         "data/catalog/recovery-2026-11-01/locations-06.jsonl",
         "data/catalog/recovery-2026-11-01/sources.json",
-        "data/knowledge/index.json",
-        "data/knowledge/retrieval_cases.json",
-        "data/knowledge/sources.json",
         "docs/CREATIVE_PIPELINE_HISTORIQUE.md",
-        "docs/DATA_GOVERNANCE.md",
         "docs/ETAT_SAUVEGARDE.md",
         "docs/INSTALLATION.md",
         "docs/RESEARCH_2026-11-01.md",
@@ -59,12 +52,6 @@
         "docs/evidence/memory-tests-final.log",
         "docs/evidence/ops-consolidated-tests.log",
         "docs/evidence/retrieval-2026-11-01.json",
-        "docs/evidence/startup-final-agent-tests.log",
-        "docs/evidence/startup-final-m07-scenes-tests.log",
-        "docs/evidence/startup-final-m07-workbench-tests.log",
-        "docs/evidence/startup-final-ops-tests.log",
-        "docs/evidence/startup-final-root-tests.log",
-        "docs/evidence/startup-retrieval-2026-11-01.json",
         "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
         "docs/historical/BOJART_MANIFEST_V23.json",
         "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf",
@@ -637,17 +624,16 @@
         "sites/studio/vendor/shadcn-tailwind-4.13.0.LICENSE.md",
         "sites/studio/vendor/shadcn-tailwind-4.13.0.css",
         "sites/studio/vite.config.ts",
-        "tests/test_memory_http.py",
-        "tests_ops/test_ops.py",
-        "tools/evaluate_memory.py"
+        "tests_ops/test_ops.py"
       ],
       "processed_correction_shas": [
         "1d76c6876de54c7bc37b777ae66bf031207a140d",
         "4873567fad40d2033005ec0fd7af05a11b0bc2fe",
         "a820f7a5d9bc21b9619746502f2adb9d578f7c3b",
-        "3c288214539adf97381f6053b43225485a873b6a"
+        "3c288214539adf97381f6053b43225485a873b6a",
+        "461d46ff39caaf142ce37a3e0b78f22dfcc2e842"
       ],
-      "updated_at": "2026-11-01T22:20:19.307Z"
+      "updated_at": "2026-11-01T22:28:32.139Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
