@@ -44,8 +44,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 5213,
-      "sha256": "ef8b1e3384fcdf0ddbc2d783dcd989ff236c7816f3d0699192faddb296b7e000"
+      "bytes": 5379,
+      "sha256": "62369704cac60d78dc48719b535b9880837874cd402ad10808fe51e0c8e70078"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -204,13 +204,18 @@
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 17940,
-      "sha256": "2a421f6fbaafa248c2c423da89a8d48fd1ef8f103c0a38e02dc03f45ef0e0944"
+      "bytes": 18914,
+      "sha256": "59dfbd7f75e37da8f40deb77a77d5f6995ebde8c3d40bf7526e01f30c1951d80"
     },
     {
       "path": "bojart_memory/agent_cli.py",
       "bytes": 1753,
       "sha256": "175ced2af55e72e725b599bf778aa727a2e2725061a6a45bd2fdb55a4e6907b2"
+    },
+    {
+      "path": "bojart_memory/conversation.py",
+      "bytes": 5856,
+      "sha256": "3a8b41f6efcd11635bdb350e7c75a32cc3dbcacb994015b0166e5a81d9ceeaf7"
     },
     {
       "path": "bojart_memory/core.py",
@@ -229,8 +234,8 @@
     },
     {
       "path": "bojart_memory/ollama.py",
-      "bytes": 4059,
-      "sha256": "497ea6682ef3808680c8fcb1ac03a677176275de800e1f078013660475317a86"
+      "bytes": 4367,
+      "sha256": "392368e7a87e4349c2cabc7174d1daff6eb86c277fcf0816505048ee0e5c4d3c"
     },
     {
       "path": "bojart_memory/paths.py",
@@ -279,8 +284,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 12649,
-      "sha256": "e0e3bb4706dc3d4785c483183cf8144aad83386db23c4cd6db4ff2f926e46e8b"
+      "bytes": 13895,
+      "sha256": "be0064a6831543fd3b75da4d91b89f437cc317683d6693cd7442f05bb727f398"
     },
     {
       "path": "creative/CURRENT.md",
@@ -379,8 +384,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 5931,
-      "sha256": "9728c67cae08ac6507d044da524d24f6490a8c34048d340e00db3a2c4d2109d0"
+      "bytes": 6254,
+      "sha256": "3f510b8f3319d5a27991310a89527c3686ef39c819adfdb3ae0d635a87fae566"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -736,6 +741,11 @@
       "path": "docs/historical/recovery-2026-11-01/README.md",
       "bytes": 1271,
       "sha256": "9e778d3d588ebbd51260e54acb408d98c8ee1555ef6c20ccce68960a059b9374"
+    },
+    {
+      "path": "docs/memory/CONVERSATIONS.md",
+      "bytes": 3746,
+      "sha256": "e9a77b143a9dc17fe8d8d016cce6d76a0460cef9aa13a50a6d5a44120f983b79"
     },
     {
       "path": "docs/memory/MCP.md",
@@ -3901,6 +3911,11 @@
       "path": "tests_agent/test_context_export.py",
       "bytes": 4467,
       "sha256": "506d343668104721b65b4b4b3c3bb1f2352f60843b30606bd5a2f7ccfab460f0"
+    },
+    {
+      "path": "tests_agent/test_conversation_context.py",
+      "bytes": 11884,
+      "sha256": "da36efb63fd51977b19faa936baa4b08cf16575f983d466920919fefb3d11d21"
     },
     {
       "path": "tests_agent/test_http_agent.py",

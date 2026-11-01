@@ -75,3 +75,11 @@ Validation : les contrôles du commit `d57330052b32cb5f638e841bdc086804cd65ede1`
 Demande : retrouver tous les éléments BOJ.ART/Jarvis encore accessibles. Inventaire de 722 fichiers, contexte des anciens échanges, historique Higgsfield, Pages et recherches Drive/Notion/Gmail. Résultat : 62 originaux supplémentaires dédoublonnés, conservés sur `archive/deep-recovery-2026-11-01` au commit `81d43e7910f17ebb85fdccab244b3f53bf360f9d`. Les 76 fiches fournisseur sont conservées avec leurs paramètres ; aucun rendu nouveau lancé. Une notice déjà présente dans main est référencée sans copie.
 
 Validation : 62 fichiers, 390 425 092 octets restaurés depuis GitHub, comparaison octet par octet et SHA-256, aucun recouvrement avec les 3 340 objets initiaux ; contrôles de format et 11 gardes du restaurateur réussis. L’environnement initial est tombé en panne pendant la collecte ; tous les médias du complément ont été récupérés à nouveau avant la vérification distante. Les synthèses de recherche restent explicitement distinctes des transcriptions originales. État et limites : `docs/RECUPERATION_APPROFONDIE_2026-11-01.md` ; preuve : `docs/evidence/deep-recovery-2026-11-01.json`.
+
+## Continuité des réponses et fraîcheur de l’historique
+
+Demande : poursuivre la préparation de la mémoire Jarvis avant l’installation. Base examinée : `7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2`, contrôles GitHub réussis. Les 62 originaux de récupération récemment ajoutés et leurs preuves sont conservés.
+
+Constat : le client Ollama transmettait les 6 000 derniers caractères du JSON des épisodes, avec un risque de couper une question et de réutiliser une ancienne réponse après modification de ses sources. Le nouveau paquet conserve des champs complets, contrôle versions et originaux, écarte les réponses aux preuves périmées ou contradictoires et partage l’instantané du contexte courant. Les journaux originaux restent disponibles, ainsi que le paquet exact de chaque nouvelle inférence. Guide indexé : `docs/memory/CONVERSATIONS.md`.
+
+Vérifications locales : 17 scénarios ciblés réussis avec client Ollama simulé, plus les tests sélectionnés de mémoire, contexte, transactions, diversité et MCP. Le workflow mémoire exécute les suites complètes et la reprise du lanceur sous Windows et Linux sur la révision publiée. La qualité d’un modèle réel et la tour BOJ.ART restent à qualifier.

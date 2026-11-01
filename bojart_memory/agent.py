@@ -12,6 +12,7 @@ from contextlib import nullcontext
 
 from .core import Memory, MemoryError, PROJECTS, canonical, distinct_sources, file_sha, now, project_ok
 from .paths import default_state
+from .conversation import bounded_history, encoded_history, select_exchanges
 from .ollama import Ollama
 from .vectors import cosine, validate_vector
 
@@ -192,13 +193,14 @@ class AgentMemory:
         return {**lexical, 'results': hits, 'warnings': warnings, 'semantic_status': semantic_status,
                 'retrieval': 'bm25+rrf' if semantic_rows else 'sqlite_fts5_bm25'}
 
-    def context(self, query, project, max_chars=14000):
+    def context(self, query, project, max_chars=14000, *, _memory=None):
         if type(max_chars) is not int or not 3000 <= max_chars <= 32000:
             raise MemoryError('Budget de contexte hors limites.')
         # Both facts and passages observe one committed SQLite snapshot,
         # even if another process publishes a new index between these reads.
-        with Memory(self.state, readonly=True) as memory:
-            memory.db.execute('BEGIN')
+        with (nullcontext(_memory) if _memory is not None else Memory(self.state, readonly=True)) as memory:
+            if _memory is None:
+                memory.db.execute('BEGIN')
             facts = self.facts(project, _memory=memory)
             retrieved = self.search(query, project, _memory=memory)
         words = set(re.findall(r'\w+', query.lower()))
@@ -275,11 +277,24 @@ class AgentMemory:
         cfg = self.config()
         if not cfg.get('chat_model'):
             raise MemoryError('Conversation désactivée. Configurer un modèle Ollama local ; la recherche reste disponible.')
-        pack = self.context(text, project)
-        result = Ollama(cfg['chat_model'], cfg.get('ollama_url', 'http://127.0.0.1:11434'), timeout=90).chat(text, pack['text'], self.history(session, project))
+        with Memory(self.state, readonly=True) as memory:
+            memory.db.execute('BEGIN')
+            pack = self.context(text, project, _memory=memory)
+            conversation = bounded_history(select_exchanges(
+                memory, session=session, project=project,
+                facts=self.facts(project, _memory=memory)))
+        history_text = encoded_history(conversation)
+        result = Ollama(cfg['chat_model'], cfg.get('ollama_url', 'http://127.0.0.1:11434'), timeout=90).chat(text, pack['text'], conversation)
+        result['history_usage'] = {
+            'sha256': sha(history_text), 'characters': len(history_text),
+            'max_characters': conversation['max_characters'],
+            'included_exchanges': len(conversation['exchanges']),
+            'omitted_exchanges': conversation['omitted_exchanges'],
+            'withheld_answers': sum('answer' not in item for item in conversation['exchanges'])}
         result.update(context_sha256=pack['sha256'], sources=pack['citations'])
         cited = set(re.findall(r'\[([^\[\]\n]{1,180})\]', result['answer']))
         result['citation_warnings'] = sorted(cited - set(pack['citations']))
         result['has_recognized_citation'] = bool(cited & set(pack['citations']))
-        self.episode('chat-' + request_id, session, project, {'question': text, 'context': pack, 'response': result})
+        self.episode('chat-' + request_id, session, project, {'question': text, 'context': pack,
+                     'conversation_context': conversation, 'response': result})
         return result

@@ -143,5 +143,10 @@
     "path": "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
     "project": "bojart.creative",
     "provenance": "Recovery from identified sources, SHA-256 deduplication and remote Git restoration; see recovery-deep-20261101"
+  },
+  {
+    "path": "docs/memory/CONVERSATIONS.md",
+    "project": "bojart.jarvis",
+    "provenance": "Conversation context implementation with source freshness checks and bounded complete JSON; model output quality remains unqualified. See tests_agent/test_conversation_context.py and per-commit GitHub Actions results."
   }
 ]
