@@ -94,5 +94,12 @@
     "path": "data/catalog/recovery-2026-11-01/verification.json",
     "evidence": "sha256_and_crc_executed_this_session",
     "scope": "recovery_archive_integrity_only"
+  },
+  {
+    "source_id": "recovery-github-resumption-20261101",
+    "path": "docs/evidence/recovery-resumption-2026-11-01.json",
+    "sha256": "eab2d2cc6e7dde3335a570e94fb40c1e95451feb6a7cb09ffc45599f61d37237",
+    "evidence": "remote_git_bytes_restored_and_compared_to_original_zips",
+    "scope": "3340 unique objects in the identified recovery collection; not all original conversations"
   }
 ]

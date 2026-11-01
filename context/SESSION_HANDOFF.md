@@ -10,6 +10,14 @@ Chaque prochaine passation contient : objectif, sources datées, faits nouveaux,
 
 Le runtime local n’accède pas automatiquement aux anciens chats ni à leurs pièces jointes. Importer les exports autorisés ou intégrer un connecteur documenté dont on teste la couverture.
 
+## Reprise du transfert interrompu — 1 novembre 2026
+
+Les observations historiques ci-dessous sur des octets « externes » sont remplacées, pour la collecte de récupération, par `docs/ETAT_ARCHIVES_2026-11-01.md`. Les trois branches d'archive ont été téléchargées par Git à leurs commits épinglés, puis 3 340 contenus uniques et les fichiers du catalogue ont été restaurés. Comparaison octet par octet avec les trois ZIP d'origine : aucune divergence. Les 87 fichiers du paquet créatif et les 22 textes en attente sont tous déjà dans cette collection ; aucun nouveau doublon de leurs contenus n'a été ajouté.
+
+Ajouts : restaurateur commun `tools/restore_recovery_2026_11_01.py`, état des archives, preuve `docs/evidence/recovery-resumption-2026-11-01.json`, entrée dans la mémoire et affirmation sourcée. Correction du validateur : la sélection binaire déjà fusionnée par la PR #3 est contrôlée contre son manifeste épinglé et ses empreintes, sans autorisation générale de nouveaux médias. Le manifeste général est régénéré dans le même changement.
+
+Vérifications locales : restauration des 3 parties depuis GitHub, comparaison des 3 348 entrées des ZIP, 37 tests mémoire/restauration, 25 tests agents, 36 tests opérations, 11 tests JavaScript et 10 cas de recherche citée réussis. Les nouveaux tests refusent les chemins dangereux, les destinations existantes, la corruption et les modifications de la liste d'exceptions. La restauration de la sélection binaire de 5 fichiers est également vérifiée. Ces contrôles ne qualifient ni la voix réelle, ni les machines, ni la qualité artistique.
+
 Concurrence détectée : la branche a avancé vers `1ca60c3571c78f9303b8b4d54e82e34ae3e439f7`. Les 23 nouveaux chemins distants et les évolutions README/PRODUCTION ont été récupérés et rapprochés. `productions/` reste la racine des recettes exécutables ; `creative/` conserve la direction.
 
 Deux avances supplémentaires ont été rapprochées : `b68878fc5040a15dcee9a89ca415a94cbc946880` et `0c72455bec644dafffc142b5d72fcf81b8d9b1ac`. Leurs neuf nouveaux fichiers historiques et de génération sont conservés, ainsi que la clarification de couverture du README dans `docs/CREATIVE_PIPELINE_HISTORIQUE.md`. Les liens directs vers des médias personnels ont été retirés de la version publique courante ; cela ne modifie pas les anciens commits.
