@@ -42,12 +42,13 @@
   {
     "source_id": "jarvis-recovery",
     "filename": "JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
+    "path": "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
     "library_file_id": "libfile_fa730c2f64d48191b596c4942400dac7",
     "version_id": "7",
     "sha256": "63958516bfd92fe89ced167a126d6789a40e194ba662896c7b6583218d9a2a69",
-    "evidence": "current_file_read",
+    "evidence": "original_bytes_read_and_preserved",
     "scope": "BOJART",
-    "raw_content_in_git": false
+    "raw_content_in_git": true
   },
   {
     "source_id": "current-task",
