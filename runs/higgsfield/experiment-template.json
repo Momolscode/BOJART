@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "source": "Higgsfield",
+  "model": "seedance_2_5",
+  "duration_sec": 5,
+  "aspect_ratio": "9:16",
+  "resolution": "720p",
+  "generate_audio": true,
+  "mode": "t2v",
+  "source_media_used": false,
+  "render_status": "completed",
+  "artistic_review": "not_reviewed",
+  "notes": "Template of the two original runs. Job identifiers and unlisted output URLs are held in the private handoff package."
+}
