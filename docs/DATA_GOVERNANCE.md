@@ -24,7 +24,9 @@ Une affirmation garde sujet, propriété, valeur, validité, observation, statut
 
 L’import ne promeut pas automatiquement une phrase dans le contexte courant : revue explicite nécessaire. Préserver aussi refus et limites artistiques.
 
-## Sauvegarder
+## Sauvegarde et restauration
+
+La sauvegarde documentaire conserve les sources et leurs versions, les propositions, les épisodes de conversation, les vecteurs et le contexte exact des réponses. La restauration restitue aussi le paquet d’historique transmis à chaque nouvelle inférence. Une ancienne réponse reste un échange non vérifié ; sa présence dans la sauvegarde ne la transforme pas en fait de référence. Voir [continuité des conversations](memory/CONVERSATIONS.md).
 
 ```bash
 python3 -m bojart_memory verify
