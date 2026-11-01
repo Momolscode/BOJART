@@ -14,7 +14,7 @@ Point d’entrée consolidé : [contexte courant](context/CURRENT.md), [installa
 | `data/catalog/` | Empreintes et provenance | 1 060 emplacements, 1016 contenus distincts |
 | `data/knowledge/` | Affirmations, sources et contradictions | Distillation révisable |
 
-Dans `main`, les médias, bases actives, conversations brutes et archives restent externes ; le catalogue en conserve les références. **Sauvegarde explicitement demandée : [la partie 1 du ZIP de récupération est intégralement conservée sur une branche dédiée](docs/RECUPERATION_PARTIE_1_2026-11-01.md)**, avec reconstruction et empreintes vérifiées. Les parties 2 et 3 ne sont pas incluses dans cet envoi. Les autres originaux restent dans leurs sources d’origine.
+Dans `main`, les médias, bases actives, conversations brutes et archives restent externes ; le catalogue en conserve les références. **Sauvegardes explicitement demandées : [partie 1](docs/RECUPERATION_PARTIE_1_2026-11-01.md) et [partie 3](docs/RECUPERATION_PARTIE_3_2026-11-01.md)**, conservées sur leurs branches de récupération dédiées, avec restauration et empreintes vérifiées. Les autres originaux restent dans leurs sources d’origine.
 
 ## Démarrer
 

@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4151,
-      "sha256": "3082e3c4cbebf7c6f996eacfd8c98ae9dc638917b955dd901eebd2b52bf73c4e"
+      "bytes": 4128,
+      "sha256": "a6709d941881fd04c433b14df600437a19daf0d69665ac04fe0443d5da846757"
     },
     {
       "path": "SECURITY.md",
@@ -343,6 +343,11 @@
       "sha256": "b9de469bfe65279404954eda9aea10f96739aa198b3e6d42ac25921c48a5428e"
     },
     {
+      "path": "docs/RECUPERATION_PARTIE_3_2026-11-01.md",
+      "bytes": 2897,
+      "sha256": "eb188a18a56f88b182dc1e00559fdaaca6c42ba136ac7d3610d900b6608f52f4"
+    },
+    {
       "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
       "bytes": 3693,
       "sha256": "ace7bf6d8886f88dbfdea83d32342ad2e2cacf34a6c3c6c9fe81b02948bb84d6"
@@ -401,6 +406,11 @@
       "path": "docs/evidence/recovery-part-1-2026-11-01.json",
       "bytes": 623,
       "sha256": "07ee5aa7eae07f8762da84438d858a99d57fbc17154aed7252f51e758fabe8dd"
+    },
+    {
+      "path": "docs/evidence/recovery-part3-2026-11-01.json",
+      "bytes": 2393,
+      "sha256": "631fe059202f5d9176340c5c1e1863c90d445d5b56d2e1b3cb8c5a22c110e31e"
     },
     {
       "path": "docs/evidence/retrieval-2026-11-01.json",
