@@ -2,6 +2,7 @@ import json
 import sqlite3
 import tempfile
 import unittest
+from contextlib import closing
 from pathlib import Path
 
 from bojart_memory import Memory, MemoryError
@@ -132,7 +133,8 @@ class MemoryTests(unittest.TestCase):
 
     def test_schema_mismatch_is_not_implicitly_migrated(self):
         path=self.root/'future';path.mkdir()
-        with sqlite3.connect(path/'memory.sqlite') as db:db.execute('PRAGMA user_version=999')
+        # A SQLite transaction context does not close its file handle on Windows.
+        with closing(sqlite3.connect(path/'memory.sqlite')) as db:db.execute('PRAGMA user_version=999')
         with self.assertRaises(MemoryError):Memory(path)
 
     def test_missing_memory_read_does_not_create_state(self):

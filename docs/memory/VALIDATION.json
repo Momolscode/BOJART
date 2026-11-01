@@ -56,7 +56,7 @@
     "unmodified_blobs_compared_by_git_sha1": true
   },
   "scope_limits": [
-    "Windows workflow added; Windows not executed in this local session.",
+    "Windows memory exercised in GitHub Actions; target workstation and optional engine packages remain unqualified.",
     "Ollama adapter tested with doubles; no actual embedding/chat model benchmark.",
     "HTTP assets and JavaScript syntax checked; browser visual rendering not executed.",
     "Selected M07 regression suites rerun; complete historic 578-test suite not rerun by this change.",
@@ -67,5 +67,13 @@
   "concurrent_changes_preserved": [
     "Contextual monitoring documentation and index entry",
     "Original historical recovery guide"
-  ]
+  ],
+  "github_actions_initial": {
+    "commit": "13b3b0027f68f0eaa9f14015e3fa1dd56d9b057e",
+    "run_url": "https://github.com/Momolscode/BOJART/actions/runs/41350180125",
+    "ubuntu_memory_55": "passed",
+    "windows_agent_memory_25": "passed",
+    "windows_existing_memory_30": "29 passed; one test cleanup failed because its SQLite fixture stayed open",
+    "correction": "Close the test fixture with contextlib.closing; retain the schema-rejection assertion. Final status is recorded by Actions on the correction commit."
+  }
 }

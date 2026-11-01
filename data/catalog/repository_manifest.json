@@ -379,8 +379,8 @@
     },
     {
       "path": "docs/memory/VALIDATION.json",
-      "bytes": 2250,
-      "sha256": "cf7f3ff7bc7b860c088cd4ebd9705693ea6deb35f356c54d7c541af2aa78a95f"
+      "bytes": 2822,
+      "sha256": "abf7809a9a684d6393a3e26f3d8fd554a3acdab68f65ebb3064918e45bf08e49"
     },
     {
       "path": "docs/validation/SHOT_REVIEW_TEMPLATE.md",
@@ -3484,8 +3484,8 @@
     },
     {
       "path": "tests/test_memory.py",
-      "bytes": 7971,
-      "sha256": "7d0ef1dad130e439d11aa84698355636032ff6e23b565320d31fb4422ea10d01"
+      "bytes": 8093,
+      "sha256": "743f163d347e424532c2976fb1634e0af753a268afbdb8377470e20eadfb997f"
     },
     {
       "path": "tests/test_memory_http.py",
