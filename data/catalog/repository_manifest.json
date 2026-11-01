@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/agent-memory.yml",
-      "bytes": 572,
-      "sha256": "00aadd4a13129eab572438236c6d9a1aec4922558cbd554be80d603f2114b7bf"
+      "bytes": 941,
+      "sha256": "9626c538562e8bce0e9ba77bff89758084391767db44aae4445646c2369b1c8d"
     },
     {
       "path": ".github/workflows/audit.yml",
@@ -194,13 +194,13 @@
     },
     {
       "path": "bojart_memory/__main__.py",
-      "bytes": 3211,
-      "sha256": "f6be0cb948509b2eb95444177d85643c31cf87ef7da26fd57963115c9684b02d"
+      "bytes": 3299,
+      "sha256": "cee8344d6c7fa25eb1b4119478ede8797cb3bf72e24c05bbd5c445375a990fe5"
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 16797,
-      "sha256": "80b278667e83d45f406acab74368628f4c357929a34c838b3a288a2a6e89b028"
+      "bytes": 17355,
+      "sha256": "cc895a24160009b2acea38c38556d86564ff1a6e73d36147129e23981a130582"
     },
     {
       "path": "bojart_memory/agent_cli.py",
@@ -209,8 +209,8 @@
     },
     {
       "path": "bojart_memory/core.py",
-      "bytes": 18244,
-      "sha256": "890f5276d1d0b261bcefd432610949e4315de855c2e34ec3dc43e77478a21053"
+      "bytes": 19446,
+      "sha256": "48b7f504ce1151a7652bb575226b2dede84dc8f7f31bef0bc80f8926f1284626"
     },
     {
       "path": "bojart_memory/http_api.py",
@@ -269,8 +269,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 7309,
-      "sha256": "04b3ac2ea6be58d0d1b2bea995c90e65d2bc0ef5ddadd5ad50f26e2d5317e871"
+      "bytes": 8152,
+      "sha256": "3b51fd2270eb68f10185d581fb4eb366bc700a97b1fcb493e5ddf1aa2ffdb353"
     },
     {
       "path": "creative/CURRENT.md",
@@ -414,8 +414,8 @@
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
-      "bytes": 4481,
-      "sha256": "cb64a45a233bf0c4d724554cd050d6b2bc9fbec7533e4a09fc685678ad8af23d"
+      "bytes": 4966,
+      "sha256": "6a39c4f148e5fe5470486ed74226701365c9b2eb5381ca844a1f068441c9064c"
     },
     {
       "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
@@ -646,6 +646,11 @@
       "path": "docs/memory/OUTILS_ET_ARCHITECTURE.md",
       "bytes": 6784,
       "sha256": "a57177a51eb8e647d4c11553eadcac6800fa4e2bec1e9900bf848f73607eae23"
+    },
+    {
+      "path": "docs/memory/RESILIENCE.md",
+      "bytes": 3392,
+      "sha256": "f0f38210e9f60b5560d58fcda6257e5810b7d17e17362d587e7664415a5db991"
     },
     {
       "path": "docs/memory/VALIDATION.json",
@@ -3783,6 +3788,11 @@
       "sha256": "986498c2232c27ed44d8158c4a58b5c0d254c5aa53d6e74072abbc9ee31446dc"
     },
     {
+      "path": "tests_agent/test_atomic_memory.py",
+      "bytes": 10983,
+      "sha256": "c954ea5fe7e76dfbad208ade99935b87080c61edec9f276f7925338dbbf9530c"
+    },
+    {
       "path": "tests_agent/test_context_export.py",
       "bytes": 4467,
       "sha256": "506d343668104721b65b4b4b3c3bb1f2352f60843b30606bd5a2f7ccfab460f0"
@@ -3809,8 +3819,8 @@
     },
     {
       "path": "tools/check_startup.py",
-      "bytes": 7584,
-      "sha256": "569fe0ae78be89b64eb57941917398b6ca9be0c5b40000299e90aab272b3be1f"
+      "bytes": 7980,
+      "sha256": "4a47dbc7735a7ab74fb4a486e8c500dded78ee1328a565bfa6520299995b87e1"
     },
     {
       "path": "tools/doctor.py",

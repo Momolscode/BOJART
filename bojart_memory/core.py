@@ -8,7 +8,8 @@ import re
 import shutil
 import sqlite3
 import tempfile
-from contextlib import closing
+from contextlib import closing, contextmanager
+from uuid import uuid4
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
@@ -131,6 +132,39 @@ class Memory:
     def __exit__(self, *args):
         self.close()
 
+    @contextmanager
+    def transaction(self):
+        """Publish a whole write batch, with savepoints for nested operations.
+
+        Object files are immutable and may be staged before a rollback. They
+        become queryable only when their database references commit.
+        """
+        if self.readonly:
+            raise MemoryError('Mémoire ouverte en lecture seule.')
+        nested = self.db.in_transaction
+        savepoint = 'memory_' + uuid4().hex if nested else None
+        self.db.execute('SAVEPOINT ' + savepoint if nested else 'BEGIN IMMEDIATE')
+        try:
+            yield self
+        except BaseException:
+            if self.db.in_transaction:
+                if nested:
+                    self.db.execute('ROLLBACK TO SAVEPOINT ' + savepoint)
+                    self.db.execute('RELEASE SAVEPOINT ' + savepoint)
+                else:
+                    self.db.rollback()
+            raise
+        else:
+            try:
+                if nested:
+                    self.db.execute('RELEASE SAVEPOINT ' + savepoint)
+                else:
+                    self.db.commit()
+            except BaseException:
+                if not nested:
+                    self.db.rollback()
+                raise
+
     def _object(self, sha):
         if not re.fullmatch('[0-9a-f]{64}', sha):
             raise MemoryError('Empreinte invalide.')
@@ -194,8 +228,7 @@ class Memory:
             finally:
                 if os.path.exists(tmp):
                     os.unlink(tmp)
-        with self.db:
-            self.db.execute('BEGIN IMMEDIATE')
+        with self.transaction():
             previous = self.db.execute('SELECT current_version FROM sources WHERE source_id=?', (source_id,)).fetchone()
             if previous and previous[0] == version_id:
                 return {'status':'unchanged', 'source_id':source_id, 'version_id':version_id, 'sha256':sha}
@@ -269,8 +302,7 @@ class Memory:
         if self.readonly:raise MemoryError('Mémoire en lecture seule.')
         keep={safe_relative(p).as_posix() for p in source_paths}
         retired=[]
-        with self.db:
-            self.db.execute('BEGIN IMMEDIATE')
+        with self.transaction():
             rows=self.db.execute('SELECT source_id,source_path,current_version FROM sources WHERE project=? AND collection=? AND current_version IS NOT NULL',(project,collection)).fetchall()
             for row in rows:
                 if row['source_path'] in keep:continue

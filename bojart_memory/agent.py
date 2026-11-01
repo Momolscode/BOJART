@@ -8,6 +8,7 @@ import json
 import os
 import re
 from pathlib import Path
+from contextlib import nullcontext
 
 from .core import Memory, MemoryError, PROJECTS, canonical, file_sha, now, project_ok
 from .paths import default_state
@@ -51,11 +52,11 @@ class AgentMemory:
     def index(self):
         records = json.loads((self.repo / 'data/knowledge/index.json').read_text('utf-8'))
         results = []
-        with Memory(self.state) as m:
+        with Memory(self.state) as m, m.transaction():
             for r in records:
                 results.append(m.ingest_file(self.repo / r['path'], root=self.repo, project=r['project'], collection='canonical', provenance=r['provenance'], kind='project_document'))
             retired = {p: m.reconcile_collection(project=p, collection='canonical', source_paths=[r['path'] for r in records if r['project'] == p]) for p in PROJECTS}
-        return {'indexed_paths': len(results), 'new_versions': sum(r['status'] != 'unchanged' for r in results), 'retired': retired}
+        return {'atomic': True, 'indexed_paths': len(results), 'new_versions': sum(r['status'] != 'unchanged' for r in results), 'retired': retired}
 
     def config(self):
         path = self.state / 'models.json'
@@ -89,9 +90,9 @@ class AgentMemory:
             m.db.execute('INSERT OR IGNORE INTO agent_notes VALUES(?,?,?,?,?,?)', (nid, project, key, value, source, now()))
         return {'id': nid, 'status': 'proposal'}
 
-    def facts(self, project):
+    def facts(self, project, *, _memory=None):
         project_ok(project)
-        with Memory(self.state, readonly=True) as m:
+        with (nullcontext(_memory) if _memory is not None else Memory(self.state, readonly=True)) as m:
             row = m.db.execute('''SELECT v.sha256,v.version_id FROM versions v JOIN sources s ON s.current_version=v.version_id
                 WHERE s.project=? AND s.collection='canonical' AND s.source_path='data/knowledge/claims.jsonl' ''', (project,)).fetchone()
             claims = []
@@ -138,11 +139,11 @@ class AgentMemory:
             rows = m.db.execute('SELECT payload FROM agent_episodes WHERE session=? AND project=? ORDER BY created_at DESC LIMIT ?', (session, project, max(1, min(limit, 20)))).fetchall()
         return [json.loads(r[0]) for r in reversed(rows)]
 
-    def search(self, query, project, limit=6, embedder=None):
+    def search(self, query, project, limit=6, embedder=None, *, _memory=None):
         project_ok(project)
         if not isinstance(query, str) or not query.strip() or len(query) > 2000 or not 1 <= limit <= 30:
             raise MemoryError('Recherche hors limites.')
-        with Memory(self.state, readonly=True) as m:
+        with (nullcontext(_memory) if _memory is not None else Memory(self.state, readonly=True)) as m:
             lexical = m.search(query, project=project, limit=30)
             lexical_rows = [r for r in lexical['results'] if r['source_path'] != 'data/knowledge/claims.jsonl']
             semantic_rows, semantic_status = [], 'disabled'
@@ -185,10 +186,14 @@ class AgentMemory:
     def context(self, query, project, max_chars=14000):
         if type(max_chars) is not int or not 3000 <= max_chars <= 32000:
             raise MemoryError('Budget de contexte hors limites.')
-        facts = self.facts(project)
+        # Both facts and passages observe one committed SQLite snapshot,
+        # even if another process publishes a new index between these reads.
+        with Memory(self.state, readonly=True) as memory:
+            memory.db.execute('BEGIN')
+            facts = self.facts(project, _memory=memory)
+            retrieved = self.search(query, project, _memory=memory)
         words = set(re.findall(r'\w+', query.lower()))
         facts.sort(key=lambda f: (not f['conflict'], -len(words & set(re.findall(r'\w+', canonical(f).lower()))), f['id']))
-        retrieved = self.search(query, project)
         body = POLICY + '\nFAITS ET DÉCISIONS DATÉS\n'
         refs, omitted, selected_facts, evidence = [], 0, [], []
         for f in facts:
@@ -207,6 +212,7 @@ class AgentMemory:
             evidence.append({key: h[key] for key in ('citation', 'project', 'source_path', 'version_id',
                             'sha256', 'start_line', 'end_line', 'provenance', 'source_bytes_verified')})
         return {'schema': 'bojart.agent-context.v2', 'project': project, 'query': query,
+                'consistency': 'single_committed_sqlite_snapshot',
                 'created_at': now(), 'text': body, 'sha256': sha(body),
                 'characters': len(body), 'max_characters': max_chars,
                 'budget_unit': 'unicode_characters_of_text_only',

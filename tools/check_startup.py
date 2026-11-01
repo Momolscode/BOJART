@@ -48,9 +48,12 @@ def start(root, environment, number):
     raise RuntimeError('Launcher startup timeout.')
 
 
-def stop(process):
+def stop(process, *, abrupt=False):
     if process.poll() is None:
-        process.send_signal(signal.SIGINT) if os.name != 'nt' else process.terminate()
+        if abrupt:
+            process.kill()
+        else:
+            process.send_signal(signal.SIGINT) if os.name != 'nt' else process.terminate()
         try: process.wait(timeout=15)
         except subprocess.TimeoutExpired:
             process.kill(); process.wait(timeout=5)
@@ -61,7 +64,7 @@ def get(opener, origin, route):
         return json.load(response)
 
 
-def acceptance(*, browser=False, chromium=None, screenshots=None):
+def acceptance(*, browser=False, chromium=None, screenshots=None, abrupt=False):
     with tempfile.TemporaryDirectory(prefix='bojart-startup-') as directory:
         root = Path(directory)
         environment = dict(os.environ, BOJART_MEMORY_STATE=str(root/'memory'), BOJ_JEV_ENABLED='0',
@@ -92,7 +95,7 @@ def acceptance(*, browser=False, chromium=None, screenshots=None):
                 if run.returncode: raise RuntimeError('Browser check failed: '+run.stderr[-2000:])
                 browser_report = json.loads(run.stdout)
             before = AgentMemory(agent.state).status()
-            stop(process)
+            stop(process, abrupt=abrupt)
             process, opener, origin, _ = start(root, environment, 2)
             second = get(opener, origin, route)
             after = AgentMemory(agent.state).status()
@@ -116,6 +119,8 @@ def acceptance(*, browser=False, chromium=None, screenshots=None):
             return {'schema': 'bojart.startup-acceptance.v1', 'observed_at': datetime.now(timezone.utc).isoformat(),
                     'python': sys.version.split()[0], 'platform': sys.platform,
                     'launcher_started_twice': True, 'context_survives_restart': True,
+                    'unclean_shutdown_tested': abrupt,
+                    'restart_method': 'forced_process_kill' if abrupt else 'graceful_stop',
                     'no_duplicate_versions_or_notes': True, 'backup_restore_verified': True,
                     'restored_without_source_repo': True,
                     'browser': browser_report, 'provider_calls': 0,
@@ -130,10 +135,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--browser', action='store_true')
+    parser.add_argument('--abrupt', action='store_true', help='Force-stop the first launcher process before restart.')
     parser.add_argument('--chromium', type=Path)
     parser.add_argument('--screenshots', type=Path)
     args = parser.parse_args()
-    result = acceptance(browser=args.browser, chromium=args.chromium, screenshots=args.screenshots)
+    result = acceptance(browser=args.browser, chromium=args.chromium, screenshots=args.screenshots, abrupt=args.abrupt)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print(json.dumps({'ok': True, 'browser_checks': len(result['browser']['checks']) if result['browser'] else 0}))
