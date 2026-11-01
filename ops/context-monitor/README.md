@@ -13,3 +13,5 @@ La PR permanente dont la branche source est `main` et la base `audit/context-bas
 Un reçu initial « pending » ne prouve aucune analyse. Seul un reçu terminé avec sources vérifiables et un lancement enregistré de l'automatisation prouve que ce déclenchement a été traité. L'absence d'alerte ne vaut pas validation. Aucun délai instantané ni exhaustivité sémantique n'est garanti.
 
 Les écritures se font après relecture de la tête distante, sans force-push. Ne pas faire régresser le point de reprise si un lancement plus récent a déjà terminé. Conserver les reçus existants. Une analyse de grande ampleur doit expliciter les chemins non lus et poursuivre ce travail au lancement suivant, même si la révision n'a pas changé.
+
+Chaque commit de reçus actualise aussi `data/catalog/repository_manifest.json` : tailles UTF-8 et SHA-256 des fichiers ajoutés ou modifiés, entrées inchangées préservées, manifeste exclu de lui-même. Cela conserve la CI de continuité sur cette branche.
