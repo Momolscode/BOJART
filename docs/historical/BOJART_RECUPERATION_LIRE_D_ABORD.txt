@@ -1,0 +1,65 @@
+BOJ.ART / JARVIS — RÉCUPÉRATION ÉTENDUE
+Collecte arrêtée au 1 novembre 2026. Demande : « Reprise vérifiée Jarvis 5 », puis « récupère-moi tout ».
+
+COMMENCER
+1. Télécharger les trois fichiers PARTIE_1_SUR_3, PARTIE_2_SUR_3 et PARTIE_3_SUR_3.
+2. Extraire les trois ZIP au même endroit. Ils complètent le même dossier BOJART_RECUPERATION_2026-11-01.
+3. Ouvrir CATALOGUE.html dans un navigateur. La recherche et les fichiers récupérés fonctionnent hors ligne.
+Les boutons « Original sauvegardé » ouvrent le fichier source conservé dans ChatGPT et nécessitent le compte correspondant.
+Il n'est pas nécessaire de lancer Python pour consulter le catalogue ou télécharger les originaux.
+
+RÉSULTAT
+219 sources collectées, dont 168 fichiers sauvegardés sélectionnés.
+3340 fichiers distincts conservés, 6445 emplacements documentés avant dédoublonnage.
+1,089,594,390 octets de contenus uniques, soit environ 1.09 Go.
+50 archives ZIP contrôlées ; aucune erreur CRC, aucun chemin dangereux détecté.
+Les fichiers identiques ne sont stockés qu'une fois. INDEX.json relie chaque contenu à ses noms et sources.
+
+CE QUI EST PRÉSENT
+— Jarvis M01 à M07 : sources, sauvegardes, dossiers de reprise, documentation, tests historiques, bundles Git.
+— Site Atelier : 11 versions, historique Git et export des sources ; tête 58309e61e2d70364b3a18223f706a478761da8b3.
+— Site Studio : 3 versions, historique Git et export des sources ; tête 87306314a847c6d2f109bf5833345b3b80af22e1.
+— Audit du 1 novembre : rapport 28 pages, galerie, atlas, inventaires et livrables visuels.
+— Archives TikTok, sources créatives, storyboards, notes de direction artistique, rendus V25/V26, reprise et dernier geste.
+— 29 médias téléchargés depuis les URL documentées Higgsfield ; aucune génération nouvelle lancée.
+— Scène BOJ.ART V35, révision 2 : fichier Blender, GLB et aperçu existant.
+— GitHub Momolscode/BOJART : 35 fichiers au commit ee9458c0a2184f1da8bcfd1b1a2a62763b9e5736, vérifiés par empreinte Git.
+— Points de reprise et éléments de contexte des conversations, ainsi que les pages Marwin directement liées au projet.
+— Dépendances créatives explicitement référencées : pipeline, outils HyperFrames et corpus de référence.
+
+ÉTAT À REPRENDRE
+M07 et Atelier V11 restent des applications à réunir et à qualifier sur l'atelier réel.
+La priorité documentée est une commande orale réelle sur trois écrans, puis un cycle supervisé FDM et résine.
+Jev est documenté après la transcription, pour choisir une intention structurée ; son usage réel reste à tester.
+Les trois tables commerciales du Studio (inquiries, inquiry_rate_limits, inquiry_tombstones) ont été relues : 0 ligne chacune.
+Le dépôt GitHub observé contient les fichiers créatifs listés dans son instantané ; cet instantané ne constitue pas un envoi du dossier complet M07.
+
+VÉRIFICATION
+Toutes les empreintes SHA-256 de la collection ont été recalculées.
+M07 a été restauré depuis la collection et comparé octet par octet aux entrées de son ZIP d'origine.
+Le manifeste M07 valide 437 fichiers et son bundle Git est lisible.
+Les historiques Git des deux sites ont passé git fsck ; les 14 versions annoncées sont présentes.
+VALIDATION_RESTAURATION.json conserve les résultats ; CONTROLE_INTEGRITE.json décrit les archives et le dédoublonnage.
+Ces contrôles portent sur les données récupérées, pas sur le fonctionnement des applications ni sur la qualification des machines.
+
+RESTAURER UNE ARBORESCENCE (OPTIONNEL)
+Python 3.9 ou plus, sans module supplémentaire ni réseau :
+  python RESTAURER.py --list
+  python RESTAURER.py --verify
+  python RESTAURER.py --source libfile_875f76c239cc8191a4c147a11293c9ff --destination JARVIS_M07_RESTAURE
+Le dossier destination ne doit pas exister. Les fichiers existants ne sont jamais écrasés.
+  python RESTAURER.py --all --destination BOJART_TOUT_RESTAURE
+Pour déplier aussi les archives imbriquées, ajouter --unpack-nested. Les ZIP imbriqués originaux sont eux aussi conservés.
+Les liens symboliques sont restitués comme fichiers texte .symlink.txt ; les caractères de noms incompatibles avec Windows sont échappés et documentés.
+Le programme ne lance aucun script récupéré. Les originaux ZIP de premier niveau restent accessibles à leur lien source ; le programme restaure leur contenu, sans prétendre recréer un ZIP binaire identique.
+
+LIMITES EXPLICITES
+— Cette collecte ne constitue pas un export intégral des conversations ChatGPT : le point de reprise et le contexte retrouvés sont conservés.
+— Aucun accès au PC de l'atelier n'a été réalisé ; les fichiers présents seulement sur ce PC ne sont pas inclus.
+— L'archive TikTok documentée contient 29 vidéos sur 30. La vidéo 7099716894994730246 y est manquante.
+— Les versions créatives rejetées et les essais restent des archives ; leur présence ne vaut pas approbation.
+— Les recherches Drive et Notion BOJART/Jarvis n'ont renvoyé aucun document supplémentaire. La recherche transversale de Notion exige un accès Business et n'a pas pu être exécutée ; les connecteurs directs ont servi pour Drive et GitHub.
+— Les autres projets personnels sans lien documenté avec BOJ.ART/Jarvis ne font pas partie de cette collecte.
+— Aucun envoi GitHub, déploiement ou message externe n'a été effectué pendant cette récupération.
+
+Le dossier conserve des archives historiques qui peuvent se contredire. Pour l'état opérationnel, commencer par le point de reprise Jarvis 5, la reprise M07 et l'audit du 1 novembre, puis confronter les données au matériel réel.
