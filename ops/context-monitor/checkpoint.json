@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "1d76c6876de54c7bc37b777ae66bf031207a140d",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/1d76c6876de54c7bc37b777ae66bf031207a140d.json",
+      "head_sha": "5f8aa7f375b4e10cbffe4f65229eb4b22a04d790",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/5f8aa7f375b4e10cbffe4f65229eb4b22a04d790.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
@@ -12,6 +12,16 @@
         "bojart_memory/__init__.py",
         "bojart_ops/audit.py",
         "data/catalog/library_inventory.json",
+        "data/catalog/recovery-2026-11-01/contents-part-01.jsonl",
+        "data/catalog/recovery-2026-11-01/contents-part-02.jsonl",
+        "data/catalog/recovery-2026-11-01/contents-part-03.jsonl",
+        "data/catalog/recovery-2026-11-01/locations-01.jsonl",
+        "data/catalog/recovery-2026-11-01/locations-02.jsonl",
+        "data/catalog/recovery-2026-11-01/locations-03.jsonl",
+        "data/catalog/recovery-2026-11-01/locations-04.jsonl",
+        "data/catalog/recovery-2026-11-01/locations-05.jsonl",
+        "data/catalog/recovery-2026-11-01/locations-06.jsonl",
+        "data/catalog/recovery-2026-11-01/sources.json",
         "data/knowledge/retrieval_cases.json",
         "docs/CREATIVE_PIPELINE_HISTORIQUE.md",
         "docs/ETAT_SAUVEGARDE.md",
@@ -22,6 +32,7 @@
         "docs/evidence/ops-consolidated-tests.log",
         "docs/evidence/retrieval-2026-11-01.json",
         "docs/historical/BOJART_MANIFEST_V23.json",
+        "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
         "jarvis/.agents/product-marketing.md",
         "jarvis/.agents/skills/bojart-creative-packaging/SKILL.md",
         "jarvis/.agents/skills/bojart-growth-measurement/SKILL.md",
@@ -75,7 +86,6 @@
         "jarvis/apps/jarvis/app/knowledge.js",
         "jarvis/apps/jarvis/app/launch_readiness.py",
         "jarvis/apps/jarvis/app/media_library.py",
-        "jarvis/apps/jarvis/app/memory.html",
         "jarvis/apps/jarvis/app/proposals.py",
         "jarvis/apps/jarvis/app/server.py",
         "jarvis/apps/jarvis/app/studio.css",
@@ -611,16 +621,26 @@
         "sites/studio/vendor/shadcn-tailwind-4.13.0.LICENSE.md",
         "sites/studio/vendor/shadcn-tailwind-4.13.0.css",
         "sites/studio/vite.config.ts",
-        "tests/test_memory.py",
         "tests/test_memory_http.py",
         "tests_ops/test_ops.py",
         "tools/doctor.py",
         "tools/evaluate_memory.py"
       ],
       "processed_correction_shas": [
-        "1d76c6876de54c7bc37b777ae66bf031207a140d"
+        "1d76c6876de54c7bc37b777ae66bf031207a140d",
+        "4873567fad40d2033005ec0fd7af05a11b0bc2fe"
       ],
-      "updated_at": "2026-11-01T21:01:45Z"
+      "updated_at": "2026-11-01T21:26:19Z"
+    },
+    "2": {
+      "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
+      "receipt_path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.json",
+      "status": "partial",
+      "pending_paths": [
+        "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt"
+      ],
+      "processed_correction_shas": [],
+      "updated_at": "2026-11-01T21:26:19Z"
     }
   }
 }
