@@ -154,8 +154,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 4231,
-      "sha256": "405a9d1dd00133999b2f6579ad896457412610c6eb84ef96e1498e51ec18f283"
+      "bytes": 5127,
+      "sha256": "81ad4013fc6198014a48cd09d53cb2d4abf08e828e37c5fc17c4d4ce3d933fbc"
     },
     {
       "path": "creative/CURRENT.md",
@@ -264,8 +264,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 3691,
-      "sha256": "6d600c84be62e8c08844fa60e6f93a43781b0350248cbeffb7b354b0b16c4bae"
+      "bytes": 3797,
+      "sha256": "71830da1bb66cd7578f2e407b7b36112641bc545090cddef601c93d681b96ccc"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -443,9 +443,14 @@
       "sha256": "410b97a7ddd73808bb05da158f35772c861564199258122d3b9a46ad88d49a9f"
     },
     {
+      "path": "docs/historical/recovery-2026-11-01/JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
+      "bytes": 117992,
+      "sha256": "63958516bfd92fe89ced167a126d6789a40e194ba662896c7b6583218d9a2a69"
+    },
+    {
       "path": "docs/historical/recovery-2026-11-01/README.md",
-      "bytes": 866,
-      "sha256": "4ddaaa1e212fbdef40bbcd548878be56efdf21e712e38f568bca38e28e4006f0"
+      "bytes": 1271,
+      "sha256": "9e778d3d588ebbd51260e54acb408d98c8ee1555ef6c20ccce68960a059b9374"
     },
     {
       "path": "docs/memory/MCP.md",
