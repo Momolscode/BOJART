@@ -1,7 +1,7 @@
 {
   "schema": "bojart.production-recovery-acceptance.v1",
-  "observed_at": "2026-11-02T00:41:11.892657+01:00",
-  "base_commit": "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
+  "observed_at": "2026-11-02T00:44:48.648398+01:00",
+  "base_commit": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
   "environment": {
     "python": "3.12.14",
     "platform": "linux"
@@ -310,19 +310,19 @@
       "name": "core",
       "command": "python -m unittest discover -s tests -v",
       "passed": 85,
-      "log_sha256": "ef277d0de4f92751dfb26da3b94c37a5a2dcf7a5f7887810686b463c4b09f2d1"
+      "log_sha256": "954b1d655d2fcf7722ee23dabcbffbdecce97c5c43785b7970abd04d4e6410d5"
     },
     {
       "name": "agent",
       "command": "python -m unittest discover -s tests_agent -v",
-      "passed": 123,
-      "log_sha256": "70b7db0204dfcb435a4c46c1519a9dd402d0d1870b39fa69389f33ca0bf4c428"
+      "passed": 128,
+      "log_sha256": "c8cf1b28c81461cff01ad09805a70c5e07ddbb57c7721372b468d7cdb86b2dbd"
     },
     {
       "name": "operations",
       "command": "python -m unittest discover -s tests_ops -v",
       "passed": 83,
-      "log_sha256": "95feb26b97684c0a8d55c3c8ff1f09ff78d742b6fb0d6695a6968780305060b0"
+      "log_sha256": "af462998d6ecd5deecc929bbc66a81ebf3aa927e264604b6b22f47835d6c3f10"
     }
   ],
   "new_integrity_tests": 19,
@@ -340,8 +340,8 @@
           "docs/INSTALLATION.md",
           "context/CURRENT.md",
           "docs/ARCHITECTURE.md",
-          "INSTALLER_DEMAIN.md",
-          "docs/DATA_GOVERNANCE.md"
+          "docs/DATA_GOVERNANCE.md",
+          "docs/RESEARCH_2026-11-01.md"
         ],
         "all_citations_verified": true
       },
@@ -394,8 +394,8 @@
         "hit_at_5": true,
         "returned_sources": [
           "docs/INSTALLATION.md",
-          "docs/ORCHESTRATION.md",
           "INSTALLER_DEMAIN.md",
+          "docs/ORCHESTRATION.md",
           "docs/DEMARRAGE_ET_REPRISE.md",
           "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
         ],
@@ -432,24 +432,24 @@
         "hit_at_5": true,
         "returned_sources": [
           "docs/ETAT_ARCHIVES_2026-11-01.md",
-          "data/knowledge/claims.jsonl",
           "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
-          "docs/DATA_GOVERNANCE.md",
-          "docs/GITHUB_WORKFLOW.md"
+          "data/knowledge/claims.jsonl",
+          "docs/GITHUB_WORKFLOW.md",
+          "docs/DATA_GOVERNANCE.md"
         ],
         "all_citations_verified": true
       },
       {
         "question": "GPU imprimantes",
         "project": "bojart.jarvis",
-        "expected_source": "context/CURRENT.md",
+        "expected_source": "docs/memory/POSTE_RTX4060TI.md",
         "hit_at_5": true,
         "returned_sources": [
           "docs/memory/RESILIENCE.md",
+          "docs/memory/POSTE_RTX4060TI.md",
           "INSTALLER_DEMAIN.md",
-          "context/CURRENT.md",
-          "docs/DEMARRAGE_ET_REPRISE.md",
-          "docs/memory/INSTALLATION_MODELES.md"
+          "docs/memory/INSTALLATION_MODELES.md",
+          "docs/DEMARRAGE_ET_REPRISE.md"
         ],
         "all_citations_verified": true
       },
@@ -523,19 +523,25 @@
   "tested_inputs_sha256": {
     "bojart_ops/orchestration.py": "691c3542bf52a4eee0402acf683e790f098d310bba04eea307bd17913813e41e",
     "bojart_ops/production_recovery.py": "43b9c5c650735150277c31a10d98139ac9a6fb1a0f6275663c2b14eba362ae52",
-    "context/SESSION_HANDOFF.md": "85e7ff0327b2ec98aef81f08f846875b91e31caf37473f0d4a75507d5c5a9d9f",
+    "context/SESSION_HANDOFF.md": "008949b54aa1b58fedd19dd77aa37fa64f5d42a02e6206989b43b162a4858102",
     "creative/CURRENT.md": "625b0d81507f0c9d744cec5869d4fbb703af59021ee5fcce146ae76c33822329",
-    "data/knowledge/index.json": "d592e416cfc66b6195d33d0000f161256388e625e48e900fd5181b1aa03eb4cb",
+    "data/knowledge/index.json": "dacf9144151c06a364c9ad6b957846d2e854b9b772c8fd4bfb89e7b0fbcd0731",
     "docs/ORCHESTRATION.md": "b2fdf9bc6ec991c694774fcb730dcb7b9f237b5ee40d9091fc3a0534705d0691",
     "docs/creative/RECUPERATION_PRODUCTION.md": "abd60255f4c5fb83339ccfafc0bd81d4415cb45afcc23804b57e9e8f9290cfae",
-    "ops/orchestration.json": "03c6397c9f8cf0d57dd4017140192c352703ce5920054725e0c68080ad8f9766",
+    "ops/orchestration.json": "153c2577338b699a16dfd301cf6c5f93d4f51cb746dd03c56a56e3bb17c11036",
     "productions/le-dernier-geste/ASSETS.json": "b7d4ded2cf522b326ab99a919b20030be0394bc02715ca93b8fc5cae6fe313e7",
     "productions/le-dernier-geste/README.md": "d6d474bbaf75e414ed07cb9e9a7632c86ebab66d4b660ce4242d779518a913f6",
     "productions/le-dernier-geste/verify_assets.py": "36abc093afd1ce1a14d1bb8dfcc03b3b0977e4f46e508dab077cef8627a58a8a",
     "tests/test_production_recovery.py": "0b1aac2277a1f3b9a882f2bc1d091a2fad16380bb8f25e920ff5ffafc5f19029",
     "tools/orchestrate.py": "012d83cd6bf812b05a0a97b4f9dcc3ffa464a5ae027dbdbc5d88b6308b2269a3",
     "tools/prepare_production.py": "bd6c187ae2bdadf379f8b010b4e2714f5e1f99db5af02d2839de002821fa7c0c",
-    "tools/restore_recovery_2026_11_01.py": "dc18931255977dcb336138562fb4282e9c23b6b1268e40ed34f732b5ed729c73"
+    "tools/restore_recovery_2026_11_01.py": "dc18931255977dcb336138562fb4282e9c23b6b1268e40ed34f732b5ed729c73",
+    "bojart_memory/agent.py": "faf7dd4acd339fab9fa703b4584ff8325a75b7524345a972c99361c91c951f4b",
+    "bojart_memory/ollama.py": "74cdf365803a4bef3711ca6cd469751bcf8e3c0d62c3080ab933667fec8d492c",
+    "bojart_memory/model_setup.py": "1d77d2f95a5e976f2c85d63a9e2982abf4a1b11789122d151cc32487fb5840e8",
+    "tests_agent/test_compact_context.py": "c704f854da3c0e1becf5856c6069efc53fa7d09a046d0f1f2f8b747c2fd15a75",
+    "context/CURRENT.md": "6795fe5bb272732735ba98d609d8993600a0bb95bf1314502e448bc4807b9ecf",
+    "data/knowledge/claims.jsonl": "6e744a5912934942df9e0dafa5052e4d9197bb74bd2500bd66aa6b76df36fcea"
   },
   "limitations": [
     "Archive provenance and intact media do not qualify final G2 or artistic quality.",
@@ -544,7 +550,7 @@
     "Technical classification is not an exhaustive semantic review of every repository file."
   ],
   "preparation_base_commit": "20283c3136c66fbfca78a9e733b5c74bd5dfcf03",
-  "python_tests_passed": 291,
+  "python_tests_passed": 296,
   "orchestration": {
     "commands": [
       "python tools/audit_repository.py --output .bojart-audit",
@@ -559,11 +565,14 @@
     "complete": true,
     "tasks_executed": 0,
     "task_records": 12,
-    "unclassified_paths": 0
+    "unclassified_paths": 0,
+    "audited_paths": 838,
+    "unique_contents": 824
   },
   "reconciled_commits": [
     "a0500b39ddf5a6154c701c225c5b2ad80767cc70",
-    "d5855c1e8c10f6ab57d7b362eb1d954c722b340b"
+    "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
+    "2025ac1c8f376341532fbd2df8a176b0b8fc3de4"
   ],
   "platform_corrections": [
     {
@@ -571,7 +580,13 @@
       "scope": "test_fixture",
       "failed_run": 41363074885,
       "change": "Compare resolved destination paths and assert that the simulated concurrent creation was actually injected.",
-      "application_behavior_changed": false
+      "application_behavior_changed": false,
+      "verified_run": 41363328451,
+      "verified_commit": "0d853787285142292a70850a1e38c49ce45b385e",
+      "verified_platforms": [
+        "ubuntu-latest",
+        "windows-latest"
+      ]
     }
   ]
 }

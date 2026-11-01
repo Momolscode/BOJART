@@ -1,6 +1,6 @@
 # Modèles locaux pour Jarvis — sélection du 2 novembre 2026
 
-Statut : sélection technique à essayer sur la tour BOJ.ART. Les sources ci-dessous ont été consultées le 2 novembre 2026, heure de Paris. Aucun poids n'a été téléchargé pendant cette préparation ; la carte graphique, sa mémoire disponible, le système et les performances de la tour ne sont pas confirmés. Les tailles publiées concernent les fichiers de poids, pas toute la mémoire nécessaire en fonctionnement.
+Statut : sélection technique à essayer sur la tour BOJ.ART. Les sources ci-dessous ont été consultées le 2 novembre 2026, heure de Paris. La sélection initiale précédait l'information sur le matériel. Depuis, l'utilisateur indique une RTX 4060 Ti et sa photo montre 8 Go de mémoire graphique, 16 Go de RAM, un Ryzen 5 5600G et Windows 11. Le [profil du poste](../memory/POSTE_RTX4060TI.md) retient `speed`. Aucun poids n'a été téléchargé pendant cette préparation ; la mémoire actuellement disponible et les performances réelles restent inconnues. Les tailles publiées concernent les fichiers de poids, pas toute la mémoire nécessaire en fonctionnement.
 
 ## Choix pour le premier lancement
 
@@ -47,7 +47,7 @@ Critères créatifs BOJ.ART : fidélité aux photos authentiques de l'œuvre, pr
 - Les commandes d'affichage connues du catalogue M07 sont résolues localement. Le statut « envoyé » reste distinct du reçu de la vue et de l'affichage réel sur un moniteur.
 - Le modèle de conversation reçoit un contexte sélectionné et des références datées, pas toutes les archives. Les anciennes réponses aux sources périmées restent écartées.
 - Une limite de contexte explicite et un garde en octets évitent l'envoi d'un paquet hors de l'enveloppe prévue. Ce garde conservateur n'est pas un tokenizer exact ni une preuve que le serveur respecte ses paramètres.
-- Le profil demande `think=false`, 768 tokens de sortie au maximum et cinq minutes de maintien en mémoire. Ce réglage vise la conversation courante ; il n'est pas un mode de raisonnement approfondi ni une garantie de vitesse.
+- Les profils demandent `think=false` et cinq minutes de maintien en mémoire. `speed` limite la sortie à 512 tokens et le contexte demandé à 16384 ; les deux autres profils conservent 768 et 32768. Ce réglage vise la conversation courante ; il n'est pas un mode de raisonnement approfondi ni une garantie de vitesse.
 - Garder un seul calcul GPU lourd à la fois pendant la première recette. Le maintien en mémoire est une demande à Ollama, pas une réservation garantie ; un générateur d'images peut provoquer un déchargement/rechargement.
 - Mesurer séparément le premier appel, les appels suivants, les temps de chargement, de génération et le temps observé par le client. L'interface actuelle affiche la réponse complète ; le temps au premier token n'est pas mesuré par ce parcours.
 

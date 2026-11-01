@@ -6,6 +6,8 @@ Ce parcours active la conversation textuelle du panneau **Mémoire du projet** e
 
 Ouvrir Jarvis et consulter son diagnostic matériel, ou relever le modèle de GPU, sa VRAM et la RAM du poste. Lire la [sélection datée](../research/MODELES_LOCAUX_2026-11-02.md). Les trois profils disponibles sont `speed`, `balanced` et `quality`. Aucun profil n'est choisi à partir du prix de l'ordinateur.
 
+Pour le poste RTX 4060 Ti **8 Go** / RAM **16 Go** rapporté le 2 novembre, utiliser **`speed`**, ou double-cliquer `Installer_BOJART_4060Ti.cmd` après installation de Python 3.12 et Ollama. Le [guide de ce poste](POSTE_RTX4060TI.md) distingue matériel rapporté, réglages préparés et essais encore nécessaires. Les exemples `balanced` ci-dessous concernent une autre configuration suffisamment équipée.
+
 Pour afficher les profils sans réseau, sans création de mémoire et sans téléchargement :
 
 ```bash
@@ -72,4 +74,4 @@ La deuxième commande mesure la recherche lexicale sur les documents du dépôt 
 
 Un `models.json` invalide doit être conservé puis renommé avant une nouvelle préparation ; ne pas déplacer `memory.sqlite` ou `objects` pour réparer les réglages. Une seule préparation de modèles à la fois. Conserver séparément `models.json` et les rapports avec les sauvegardes privées : ils ne sont pas inclus automatiquement dans la sauvegarde documentaire.
 
-Réglages : `chat_options` accepte `num_ctx` de 8192 à 65536, `num_predict` de 128 à 2048, `think` booléen et `keep_alive` de 0 à 1800 secondes. Les profils demandent 32768, 768, faux et 300. Modifier un réglage impose de remesurer la configuration ; le résultat précédent ne prouve pas la nouvelle vitesse. Le garde de taille peut refuser un long paquet au lieu de laisser le serveur le tronquer silencieusement. Le temps au premier token et la diffusion progressive à l'écran restent non mesurés/non raccordés par ce parcours.
+Réglages : `chat_options` accepte `num_ctx` de 8192 à 65536, `num_predict` de 128 à 2048, `think` booléen et `keep_alive` de 0 à 1800 secondes. `speed` demande 16384, 512, faux et 300 ; `balanced` et `quality` demandent 32768, 768, faux et 300. Modifier un réglage impose de remesurer la configuration ; le résultat précédent ne prouve pas la nouvelle vitesse. Le contexte envoyé sélectionne des faits et passages complets selon la place restante après les instructions, la question et un historique borné. L'historique peut écarter des champs entiers, sans modifier les épisodes originaux. Le garde UTF-8 conservateur peut refuser une question qui ne laisse plus de place aux sources ; ce n'est pas un tokenizer exact. Le temps au premier token et la diffusion progressive à l'écran restent non mesurés/non raccordés par ce parcours.

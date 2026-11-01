@@ -164,3 +164,17 @@ Validation locale : dix tests exécutent les vrais scripts contre des programmes
 Réconciliation avant publication : les profils de modèles et le contrôle d’identité pendant l’inférence du commit `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont conservés. Les documents communs ont été fusionnés ; le manifeste repart de cette nouvelle tête.
 
 Raccordement des médias : les lanceurs unifiés et les contrôles de téléchargement de sauvegarde, rapprochés jusqu’à `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Les essais des deux contributions sont relancés ensemble.
+
+## Adaptation au poste RTX 4060 Ti — 2 novembre 2026
+
+L'utilisateur nomme une RTX 4060 Ti ; la photo fournie affiche 8 Go de mémoire graphique, 16 Go de RAM, un Ryzen 5 5600G et Windows 11 Professionnel Insider Preview 25H2. Le registre conserve les statuts `source_reported`, remplace l'ancienne inconnue de système par une affirmation sourcée et ne conserve ni photo ni identifiants Windows dans Git. Les 932 GB affichés ne sont pas l'espace libre. Cette information ne constitue pas un diagnostic exécuté sur le poste.
+
+Base examinée : `a0500b39ddf5a6154c701c225c5b2ad80767cc70`. Profil d'essai retenu : `speed`, Qwen3.5 4B Q4_K_M + Qwen3 Embedding 0.6B ; contexte demandé 16384, sortie 512, think faux, keep_alive 300 secondes. L'installeur Windows dédié lance la préparation et les mesures existantes après installation de Python 3.12 et Ollama. Les autres profils restent disponibles pour d'autres matériels.
+
+Le contexte de conversation réserve la place de la question, des instructions et de l'historique selon l'enveloppe UTF-8. Il sélectionne ensuite des faits et passages entiers, en une seule recherche, et conserve les originaux historiques. Les cinq nouvelles régressions couvrent les caractères multioctets, les longues conversations, le nombre d'appels, le plus petit contexte accepté et le refus avant réseau d'une question trop grande. Les tests de serveur simulé ne prouvent pas la qualité ou la vitesse d'un modèle réel. Les résultats exacts Windows/Linux sont à consulter dans les workflows du commit publié ; la tour reste à qualifier.
+
+Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `POSTE_RTX4060TI.md`, qui rassemble le GPU rapporté et les inconnues du parc. Son ancienne source attendue, le résumé `CURRENT.md`, a reculé au classement après l'ajout de ce guide ; la question et le seuil de cinq résultats restent inchangés. Le journal historique conserve les anciennes inconnues à leur date ; seul l'état courant est actualisé.
+
+Réconciliation avant publication : les corrections des lanceurs historiques et leurs quatorze tests, publiés sur `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Le guide d'installation et le journal ont été réunis ; le manifeste repart de cette tête.
+
+Réconciliation du dossier de production : les informations matérielles sourcées, l’installeur RTX 4060 Ti et les contrôles de contexte compact du commit `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` sont conservés avec la reconstruction des cinq médias R03. Le correctif de simulation de collision de dossiers est passé sous Windows et Linux au commit `0d853787285142292a70850a1e38c49ce45b385e`. Les contrôles de l’ensemble réuni sont consignés dans la preuve de récupération.

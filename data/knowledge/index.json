@@ -195,5 +195,11 @@
     "project": "bojart.creative",
     "collection": "research",
     "provenance": "Local model selection and setup, 2026-11-02; primary sources linked in the guide. Profiles are candidates; target hardware, real inference and creative output remain unqualified."
+  },
+  {
+    "path": "docs/memory/POSTE_RTX4060TI.md",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Hardware reported by user and supplied photograph, 2026-11-02; sanitized facts with source IDs; proposed compact profile, no target inference or performance qualification."
   }
 ]

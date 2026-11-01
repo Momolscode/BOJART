@@ -44,8 +44,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 6703,
-      "sha256": "d2691dd54fbc83a23608e192d6db7c2853ab97fe7a8c6e1e31dafedd8dfc7b5d"
+      "bytes": 7210,
+      "sha256": "9c3ecb584a27b6e85273a18d26236b0be3d424f683ff59562772184b8dd07267"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -56,6 +56,11 @@
       "path": "Installer_BOJART.sh",
       "bytes": 214,
       "sha256": "6660e27fc251ca00318f17cdcfdaac702720647647eded66fe402e61224da42c"
+    },
+    {
+      "path": "Installer_BOJART_4060Ti.cmd",
+      "bytes": 510,
+      "sha256": "d1421a61341a57bc3b409f402ee71daab12eec495e5325b51e8450e04da5038e"
     },
     {
       "path": "Lancer_BOJART.cmd",
@@ -204,8 +209,8 @@
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 19346,
-      "sha256": "d9ff3db24437f0d94e539061a4bbc431cebad88a4539f96bc3a1de106f5002e2"
+      "bytes": 21135,
+      "sha256": "faf7dd4acd339fab9fa703b4584ff8325a75b7524345a972c99361c91c951f4b"
     },
     {
       "path": "bojart_memory/agent_cli.py",
@@ -249,13 +254,13 @@
     },
     {
       "path": "bojart_memory/model_setup.py",
-      "bytes": 10151,
-      "sha256": "81a768554da3fd436e351e81804711f96f31a3793c50e640220726ac745c45e2"
+      "bytes": 10276,
+      "sha256": "1d77d2f95a5e976f2c85d63a9e2982abf4a1b11789122d151cc32487fb5840e8"
     },
     {
       "path": "bojart_memory/ollama.py",
-      "bytes": 7789,
-      "sha256": "eae8ce33c17010d3d1501c41041fd877a96f613639e2e17fd48f6a62af483b47"
+      "bytes": 7971,
+      "sha256": "74cdf365803a4bef3711ca6cd469751bcf8e3c0d62c3080ab933667fec8d492c"
     },
     {
       "path": "bojart_memory/paths.py",
@@ -309,13 +314,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 7403,
-      "sha256": "b7e0293add7f47e93ee9bf5b0a9d6a28bdc163233d59e7e6e7235a931d29dd43"
+      "bytes": 8389,
+      "sha256": "6795fe5bb272732735ba98d609d8993600a0bb95bf1314502e448bc4807b9ecf"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 27953,
-      "sha256": "85e7ff0327b2ec98aef81f08f846875b91e31caf37473f0d4a75507d5c5a9d9f"
+      "bytes": 30741,
+      "sha256": "008949b54aa1b58fedd19dd77aa37fa64f5d42a02e6206989b43b162a4858102"
     },
     {
       "path": "creative/CURRENT.md",
@@ -404,8 +409,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 7255,
-      "sha256": "1a25d50ab9b68969660e997684951da843904fa4dab0ec65e71b009d73f5c1fd"
+      "bytes": 8878,
+      "sha256": "6e744a5912934942df9e0dafa5052e4d9197bb74bd2500bd66aa6b76df36fcea"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -414,18 +419,18 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 9093,
-      "sha256": "d592e416cfc66b6195d33d0000f161256388e625e48e900fd5181b1aa03eb4cb"
+      "bytes": 9403,
+      "sha256": "dacf9144151c06a364c9ad6b957846d2e854b9b772c8fd4bfb89e7b0fbcd0731"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
-      "bytes": 1923,
-      "sha256": "10d0172b8f74b22c59b1cc1f0e72d9944b44528fb5c76fb5d6e562d3bd24b273"
+      "bytes": 1935,
+      "sha256": "a2eed8025aa2a161ca93ab9e03fa23518d420f1f1cada94cbfb5bd3d6995a244"
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 4807,
-      "sha256": "7bf436240c99c2d6898b3cbbd4087d4468a48ac93db98e70b6f5e527cf9e0fb5"
+      "bytes": 5719,
+      "sha256": "d48296842f8f3e6f2dd2821226d574e46addb7dcd15525e808ed55b6695fe886"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -674,8 +679,8 @@
     },
     {
       "path": "docs/evidence/production-recovery-2026-11-02.json",
-      "bytes": 20219,
-      "sha256": "c849b7f45893734a870bb1ef93d5464673e836d8db0ddf4ee4f58a16dd34e944"
+      "bytes": 21155,
+      "sha256": "156b1ac32b187d062f8616be42051cd3633a94a17204bc87dcfbe71ba656c83c"
     },
     {
       "path": "docs/evidence/recovery-part-1-2026-11-01.json",
@@ -794,8 +799,8 @@
     },
     {
       "path": "docs/memory/INSTALLATION_MODELES.md",
-      "bytes": 6122,
-      "sha256": "0e860a4526558414191ea3e1849ccedd0c129763fda8d800f74d2fe2738805c8"
+      "bytes": 6848,
+      "sha256": "c492099f43dc9c657e9f42157d696b6799877682e631c7f30d834b451ce3878e"
     },
     {
       "path": "docs/memory/MCP.md",
@@ -813,6 +818,11 @@
       "sha256": "a57177a51eb8e647d4c11553eadcac6800fa4e2bec1e9900bf848f73607eae23"
     },
     {
+      "path": "docs/memory/POSTE_RTX4060TI.md",
+      "bytes": 5351,
+      "sha256": "6cc770114460e433f260d6e7204c63898caffc8b1aa08e345ce6e87bda48b827"
+    },
+    {
       "path": "docs/memory/RESILIENCE.md",
       "bytes": 3677,
       "sha256": "701428ed57672214a71da33b61453a0cedf74ee2ef1f269bcd97dbc161d4628f"
@@ -824,8 +834,8 @@
     },
     {
       "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
-      "bytes": 10042,
-      "sha256": "1b145301969b16af223d8b1e0116d5168360f0810b6b4417303acd863d491f3c"
+      "bytes": 10383,
+      "sha256": "f94482196d90e4deec1e7e00c29e9de34ff8c36eac7bebef59bd259329b41a7d"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -2359,8 +2369,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 12881,
-      "sha256": "03c6397c9f8cf0d57dd4017140192c352703ce5920054725e0c68080ad8f9766"
+      "bytes": 13024,
+      "sha256": "153c2577338b699a16dfd301cf6c5f93d4f51cb746dd03c56a56e3bb17c11036"
     },
     {
       "path": "ops/request-example.json",
@@ -4023,6 +4033,11 @@
       "sha256": "c954ea5fe7e76dfbad208ade99935b87080c61edec9f276f7925338dbbf9530c"
     },
     {
+      "path": "tests_agent/test_compact_context.py",
+      "bytes": 6729,
+      "sha256": "c704f854da3c0e1becf5856c6069efc53fa7d09a046d0f1f2f8b747c2fd15a75"
+    },
+    {
       "path": "tests_agent/test_context_export.py",
       "bytes": 4467,
       "sha256": "506d343668104721b65b4b4b3c3bb1f2352f60843b30606bd5a2f7ccfab460f0"
@@ -4039,8 +4054,8 @@
     },
     {
       "path": "tests_agent/test_model_qualification.py",
-      "bytes": 16120,
-      "sha256": "48113579b2a10ecf6087058219d23a8a35dbd30e1712faa981b1e228007b05c9"
+      "bytes": 16256,
+      "sha256": "04fcd40a299c7b9d89c950f15a271a3a694e5576728fdd0c2cbcb8088e01def3"
     },
     {
       "path": "tests_agent/test_model_setup.py",
