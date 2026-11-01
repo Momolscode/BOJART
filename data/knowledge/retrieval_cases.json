@@ -42,7 +42,7 @@
   {
     "question": "GPU imprimantes",
     "project": "bojart.jarvis",
-    "expected_source": "context/CURRENT.md"
+    "expected_source": "docs/memory/POSTE_RTX4060TI.md"
   },
   {
     "question": "contacts profondeur sound design",

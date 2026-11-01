@@ -24,7 +24,8 @@ from .vectors import cosine
 EMBEDDING = 'qwen3-embedding:0.6b'
 PROFILES = {
     'speed': {'chat_model': 'qwen3.5:4b-q4_K_M', 'weights_gb_approx': 3.3,
-              'vram_trial_gib': 8, 'max_followup_ms': 8000},
+              'vram_trial_gib': 8, 'max_followup_ms': 8000,
+              'chat_options': {'num_ctx': 16384, 'num_predict': 512}},
     'balanced': {'chat_model': 'gemma4:12b-it-q4_K_M', 'weights_gb_approx': 8.0,
                  'vram_trial_gib': 16, 'max_followup_ms': 10000},
     'quality': {'chat_model': 'qwen3.8:27b-q4_K_M', 'weights_gb_approx': 18.0,
@@ -52,7 +53,8 @@ def plan(profile):
     if profile not in PROFILES:
         raise ValueError('Profil local inconnu.')
     return {'profile': profile, **PROFILES[profile], 'embedding_model': EMBEDDING,
-            'chat_options': dict(DEFAULTS), 'reviewed_on': '2026-11-02',
+            'chat_options': {**DEFAULTS, **PROFILES[profile].get('chat_options', {})},
+            'reviewed_on': '2026-11-02',
             'hardware_qualified': False, 'weight_size_is_not_vram_requirement': True,
             'sources': ['https://ollama.com/library/' + PROFILES[profile]['chat_model'],
                         'https://ollama.com/library/' + EMBEDDING]}

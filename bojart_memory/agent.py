@@ -15,7 +15,8 @@ from .core import Memory, MemoryError, PROJECTS, canonical, distinct_sources, fi
 from .paths import default_state
 from .model_config import DEFAULT_URL, inspect_models, load_config, save_config
 from .conversation import bounded_history, encoded_history, select_exchanges
-from .ollama import Ollama
+from .ollama import Ollama, chat_messages
+from .inference_settings import chat_settings, prompt_budget
 from .vectors import cosine, validate_vector
 from .indexing import index_repository
 
@@ -196,9 +197,12 @@ class AgentMemory:
         return {**lexical, 'results': hits, 'warnings': warnings, 'semantic_status': semantic_status,
                 'retrieval': 'bm25+rrf' if semantic_rows else 'sqlite_fts5_bm25'}
 
-    def context(self, query, project, max_chars=14000, *, _memory=None):
+    def context(self, query, project, max_chars=14000, *, _memory=None, _max_utf8_bytes=None):
         if type(max_chars) is not int or not 3000 <= max_chars <= 32000:
             raise MemoryError('Budget de contexte hors limites.')
+        if _max_utf8_bytes is not None and (type(_max_utf8_bytes) is not int
+                                          or not 3000 <= _max_utf8_bytes <= 65536):
+            raise MemoryError('Budget UTF-8 de contexte hors limites.')
         # Both facts and passages observe one committed SQLite snapshot,
         # even if another process publishes a new index between these reads.
         with (nullcontext(_memory) if _memory is not None else Memory(self.state, readonly=True)) as memory:
@@ -209,10 +213,14 @@ class AgentMemory:
         words = set(re.findall(r'\w+', query.lower()))
         facts.sort(key=lambda f: (not f['conflict'], -len(words & set(re.findall(r'\w+', canonical(f).lower()))), f['id']))
         body = POLICY + '\nFAITS ET DÉCISIONS DATÉS\n'
+        def fits(addition, fraction=1):
+            return (len(body) + len(addition) <= max_chars // fraction
+                    and (_max_utf8_bytes is None or
+                         len((body + addition).encode('utf-8')) <= _max_utf8_bytes // fraction))
         refs, omitted, selected_facts, evidence = [], 0, [], []
         for f in facts:
             line = f"[{f['id']}] {f['key']} | {f['status']} | {f['observed_at']}" + (' | CONFLIT' if f['conflict'] else '') + '\n' + canonical(f['value']) + '\nSource: ' + f['source'] + '\n'
-            if len(body) + len(line) > max_chars // 2:
+            if not fits(line, fraction=2):
                 omitted += 1
                 continue
             body += line; refs.append(f['id']); selected_facts.append(f)
@@ -221,7 +229,7 @@ class AgentMemory:
             label = {'research': 'PROPOSITION DE RECHERCHE',
                      'session_log': 'JOURNAL DE SESSION : HISTORIQUE, PAS ÉTAT COURANT'}.get(h['collection'], 'SOURCE DOCUMENTAIRE')
             passage = f"[{h['citation']}] {label} | {h['source_path']} lignes {h['start_line']}-{h['end_line']} SHA256={h['sha256']}\n{h['text']}\nFIN EXTRAIT\n"
-            if len(body) + len(passage) > max_chars:
+            if not fits(passage):
                 omitted += 1
                 continue
             body += passage; refs.append(h['citation'])
@@ -231,6 +239,7 @@ class AgentMemory:
                 'consistency': 'single_committed_sqlite_snapshot',
                 'created_at': now(), 'text': body, 'sha256': sha(body),
                 'characters': len(body), 'max_characters': max_chars,
+                'utf8_bytes': len(body.encode('utf-8')), 'max_utf8_bytes': _max_utf8_bytes,
                 'budget_unit': 'unicode_characters_of_text_only',
                 'reference_facts': selected_facts, 'evidence': evidence,
                 'trusted_instructions': False, 'facts_automatically_validated': False,
@@ -284,18 +293,36 @@ class AgentMemory:
         cfg = self.config()
         if not cfg.get('chat_model'):
             raise MemoryError('Conversation désactivée. Configurer un modèle Ollama local ; la recherche reste disponible.')
+        options = chat_settings(cfg.get('chat_options'))
         with Memory(self.state, readonly=True) as memory:
             memory.db.execute('BEGIN')
-            pack = self.context(text, project, _memory=memory)
-            conversation = bounded_history(select_exchanges(
+            exchanges = select_exchanges(
                 memory, session=session, project=project,
-                facts=self.facts(project, _memory=memory)))
+                facts=self.facts(project, _memory=memory))
+            document_bytes = None
+            # Reduce whole history fields first, keeping room for current evidence.
+            # This is a conservative byte envelope, not a tokenizer or GPU estimate.
+            for history_limit in (6000, 3000, 1500, 500):
+                conversation = bounded_history(exchanges, max_chars=history_limit)
+                try:
+                    overhead = prompt_budget(chat_messages(text, '', conversation), options)
+                except ValueError:
+                    continue
+                document_bytes = overhead['conservative_envelope'] - overhead['utf8_content_bytes']
+                if document_bytes >= 6000:
+                    break
+            if document_bytes is None or document_bytes < 3000:
+                raise MemoryError('Question trop volumineuse pour conserver les sources ; raccourcir la question.')
+            # One retrieval only, including at most one semantic query.
+            pack = self.context(text, project, _memory=memory, _max_utf8_bytes=document_bytes)
+        prompt_budget(chat_messages(text, pack['text'], conversation), options)
         history_text = encoded_history(conversation)
         result = Ollama(cfg['chat_model'], cfg.get('ollama_url', 'http://127.0.0.1:11434'), timeout=90,
                         expected_key=cfg.get('model_keys', {}).get('chat_model')).chat(
-                            text, pack['text'], conversation, settings=cfg.get('chat_options'))
+                            text, pack['text'], conversation, settings=options)
         result['history_usage'] = {
             'sha256': sha(history_text), 'characters': len(history_text),
+            'utf8_bytes': len(history_text.encode('utf-8')),
             'max_characters': conversation['max_characters'],
             'included_exchanges': len(conversation['exchanges']),
             'omitted_exchanges': conversation['omitted_exchanges'],
