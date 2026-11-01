@@ -1394,8 +1394,8 @@
     },
     {
       "path": "jarvis/context/CONTRADICTIONS_RESOLUES.md",
-      "bytes": 1411,
-      "sha256": "50c6876ad38e71ce8e0da50af93e81e53a4e6df5e897ec0957758c3e2d3df359"
+      "bytes": 1744,
+      "sha256": "2eac04d22a418d77d2433b6ade5c397b60aad35aed16fda7e41b9dfc07f1e7e2"
     },
     {
       "path": "jarvis/context/DECISIONS.json",
@@ -1404,13 +1404,13 @@
     },
     {
       "path": "jarvis/context/HANDOFF_CLAUDE.md",
-      "bytes": 1418,
-      "sha256": "dd03ccbcc0272150f0054d9fc0d3ec34948a9eb58886cb1f578488b94faa76c6"
+      "bytes": 2102,
+      "sha256": "796975364d0d49cbb6af2e0812461cb36a68b3be5fae555b691cf7afd39ed42f"
     },
     {
       "path": "jarvis/context/PERIMETRE_ET_FEUILLE_DE_ROUTE.md",
-      "bytes": 4097,
-      "sha256": "5ee25c5d35288e998cf40c3289cec70a0af056d17f200351d0cb667409c7b086"
+      "bytes": 4261,
+      "sha256": "dbea9a2514929ac2929d1af92b2c745c0ff0651c93262e371c91ee03a04bb0d2"
     },
     {
       "path": "jarvis/context/START_HERE.md",
@@ -3738,6 +3738,11 @@
       "sha256": "0fce26ac9126272b47db0a7393c8a8d00e1d78555da5adcd433cde7cd6c29e5e"
     },
     {
+      "path": "tests_ops/test_archive_restore.py",
+      "bytes": 4695,
+      "sha256": "0e8e3f261211deece391ff017c2fc29c05cb8436fd03fbfa1a0daf0952e6785f"
+    },
+    {
       "path": "tests_ops/test_ops.py",
       "bytes": 12018,
       "sha256": "7ccfeeab302fe4fa2ddf5e1d61a11d4d40c9395fbe817be33bc09f4a2aaeaf80"
@@ -3784,8 +3789,8 @@
     },
     {
       "path": "tools/restore_archive_2026_11_01.py",
-      "bytes": 2378,
-      "sha256": "f0a1f8685cbb24f97c133ac49a0a7110bcea9b8057dbd40bc93ab1811d89612e"
+      "bytes": 4351,
+      "sha256": "bc5e95546521b9e7a43bec73ec48a5886fd27788666194df7d25195bd18b2189"
     },
     {
       "path": "tools/restore_recovery_2026_11_01.py",
