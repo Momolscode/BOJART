@@ -637,6 +637,40 @@
       ],
       "processed_correction_shas": [],
       "updated_at": "2026-11-01T21:26:19Z"
+    },
+    "3": {
+      "head_sha": "34fa29b7aaf955bca17e298fcbf9306108e85cef",
+      "receipt_path": "ops/context-monitor/receipts/pr-3/34fa29b7aaf955bca17e298fcbf9306108e85cef.json",
+      "status": "partial",
+      "pending_paths": [
+        "README.md",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part001",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part002",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part003",
+        "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part004",
+        "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part000",
+        "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part001",
+        "archive/2026-11-01/chunks/BOJ_ART_Reaudit_Concept_2026-10-19.pdf.part002",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part000",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part001",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part002",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part003",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part004",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part005",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part006",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part007",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part008",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part009",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part010",
+        "archive/2026-11-01/chunks/MARWIN_Audit_Global_2026-10-25.pdf.part011",
+        "data/catalog/repository_manifest.json",
+        "docs/RECUPERATION_PARTIE_3_2026-11-01.md",
+        "docs/evidence/recovery-part3-2026-11-01.json",
+        "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+        "docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf"
+      ],
+      "updated_at": "2026-11-01T21:44:58Z"
     }
   }
 }

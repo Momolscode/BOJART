@@ -1789,8 +1789,8 @@
     },
     {
       "path": "ops/context-monitor/checkpoint.json",
-      "bytes": 33042,
-      "sha256": "3fa6719b1bbf05471acea377dd2808081c9d2e8009890844ab0b32e292abffb2"
+      "bytes": 35292,
+      "sha256": "72d21286eb04b978227e34b31285e8cb2ddd548358f247db15558e3c9d29f7c5"
     },
     {
       "path": "ops/context-monitor/probes/activation-2026-11-01.json",
@@ -1936,6 +1936,16 @@
       "path": "ops/context-monitor/receipts/pr-2/3493092348fc39b95602bf294e66ca0c6adb6c75.md",
       "bytes": 4311,
       "sha256": "52a7d7e4f66a3451c0de9f8bff3e3c8b8f38b8e7b155330377fc63d8bd4d8bfb"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-3/34fa29b7aaf955bca17e298fcbf9306108e85cef.json",
+      "bytes": 14879,
+      "sha256": "0ecd16a09155a3f9185993e4ca6c1b564b1685a88eefa55405dac3b54839a2a8"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-3/34fa29b7aaf955bca17e298fcbf9306108e85cef.md",
+      "bytes": 5044,
+      "sha256": "df6dfb7d001a86bdb2e083a1970166018a3d90e9e54f741703e1dd14d59c47e0"
     },
     {
       "path": "ops/higgsfield-observations.json",
