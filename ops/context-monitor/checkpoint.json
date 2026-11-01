@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "a0500b39ddf5a6154c701c225c5b2ad80767cc70",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/a0500b39ddf5a6154c701c225c5b2ad80767cc70.json",
+      "head_sha": "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/d5855c1e8c10f6ab57d7b362eb1d954c722b340b.continuation-launchers.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
@@ -72,25 +72,14 @@
         "jarvis/BILAN_LIVRAISON.md",
         "jarvis/CLAUDE.md",
         "jarvis/LICENSE_SCOPE.md",
-        "jarvis/Lancer_Jarvis.cmd",
-        "jarvis/Lancer_Jarvis.sh",
-        "jarvis/Ouvrir_un_dossier_Jarvis.cmd",
-        "jarvis/Ouvrir_un_dossier_Jarvis.sh",
-        "jarvis/README.md",
-        "jarvis/Restaurer_Jarvis.cmd",
-        "jarvis/Restaurer_Jarvis.sh",
         "jarvis/apps/jarvis/CONTEXTE_LISIBLE.md",
-        "jarvis/apps/jarvis/Lancer_Jarvis.cmd",
-        "jarvis/apps/jarvis/Lancer_Jarvis.sh",
         "jarvis/apps/jarvis/REPRISE_CLAUDE.txt",
         "jarvis/apps/jarvis/app/audio_worklet.js",
         "jarvis/apps/jarvis/app/console.html",
-        "jarvis/apps/jarvis/app/diagnostics.py",
         "jarvis/apps/jarvis/app/dialogue.py",
         "jarvis/apps/jarvis/app/index.html",
         "jarvis/apps/jarvis/app/knowledge.html",
         "jarvis/apps/jarvis/app/knowledge.js",
-        "jarvis/apps/jarvis/app/launch_readiness.py",
         "jarvis/apps/jarvis/app/server.py",
         "jarvis/apps/jarvis/app/tower.css",
         "jarvis/apps/jarvis/app/tower.html",
@@ -610,9 +599,11 @@
         "9c2a0fb47baf1b610e31d2deb800a5323bb9495e",
         "54f245ba852a8d1c611d96d818ee36d1aa5adba9",
         "4be8480b653d98b4744b5a59ca89d2ee1d732d6e",
-        "20283c3136c66fbfca78a9e733b5c74bd5dfcf03"
+        "20283c3136c66fbfca78a9e733b5c74bd5dfcf03",
+        "1f46b0780f9bae831425924588a5926971e23f7a",
+        "d5855c1e8c10f6ab57d7b362eb1d954c722b340b"
       ],
-      "updated_at": "2026-11-01T23:29:38Z"
+      "updated_at": "2026-11-01T23:37:08.840Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
