@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": {
+    "number": 10,
+    "url": "https://github.com/Momolscode/BOJART/pull/10",
+    "state": "closed",
+    "draft": false,
+    "merged": true,
+    "base_ref": "main",
+    "base_sha": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+    "head_ref": "orchestrate/production-recovery-2026-11-02",
+    "head_sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3",
+    "merged_at": "2026-11-01T23:47:39Z",
+    "merge_commit_sha": "70848b97dd59de037801628f6ec67c34b63e56d7"
+  },
+  "trigger_kind": "closed",
+  "delivery_id": "9f669790-d64e-11f1-8f82-30828f8a2be3",
+  "head_sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3",
+  "compared_from_sha": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+  "started_at": "2026-11-01T23:46:03Z",
+  "finished_at": "2026-11-01T23:48:07Z",
+  "status": "complete",
+  "changed_paths": [
+    "bojart_ops/orchestration.py",
+    "bojart_ops/production_recovery.py",
+    "context/SESSION_HANDOFF.md",
+    "creative/CURRENT.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/ORCHESTRATION.md",
+    "docs/creative/RECUPERATION_PRODUCTION.md",
+    "docs/evidence/production-recovery-2026-11-02.json",
+    "ops/orchestration.json",
+    "productions/le-dernier-geste/README.md",
+    "tests/test_production_recovery.py",
+    "tools/orchestrate.py",
+    "tools/prepare_production.py"
+  ],
+  "reviewed_paths": [
+    "bojart_ops/orchestration.py",
+    "bojart_ops/production_recovery.py",
+    "context/SESSION_HANDOFF.md",
+    "creative/CURRENT.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/ORCHESTRATION.md",
+    "docs/creative/RECUPERATION_PRODUCTION.md",
+    "docs/evidence/production-recovery-2026-11-02.json",
+    "ops/orchestration.json",
+    "productions/le-dernier-geste/README.md",
+    "tests/test_production_recovery.py",
+    "tools/orchestrate.py",
+    "tools/prepare_production.py"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "bojart_ops/orchestration.py",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "bojart_ops/production_recovery.py",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "creative/CURRENT.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "data/knowledge/index.json",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "docs/ORCHESTRATION.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "docs/creative/RECUPERATION_PRODUCTION.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "docs/evidence/production-recovery-2026-11-02.json",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "ops/orchestration.json",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "productions/le-dernier-geste/README.md",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "tests/test_production_recovery.py",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "tools/orchestrate.py",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "path": "tools/prepare_production.py",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/pull/10",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/compare/2025ac1c8f376341532fbd2df8a176b0b8fc3de4...16226bdfc7e36a662a488398a8a00f4d3cc9d7c3",
+      "sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3"
+    }
+  ],
+  "checks": [
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363620373",
+      "name": "BOJART data audit",
+      "conclusion": "success",
+      "scope": "Tests d'invariants de récupération, inventaire des fichiers suivis, lecture du checkpoint et classement structurel; pas une revue artistique."
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363620396",
+      "name": "BOJART continuity",
+      "conclusion": "success",
+      "scope": "Politique de provenance, mémoire/HTTP, 14 cas de recherche citée, redémarrage/restauration temporaire et tests d'interface; pas le matériel réel."
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363620383",
+      "name": "BOJART quality schema",
+      "conclusion": "success",
+      "scope": "Validation de la configuration qualité et rejet attendu de l'exemple en attente; pas une approbation artistique."
+    },
+    {
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41363620367",
+      "name": "Jarvis agent memory",
+      "conclusion": "success",
+      "scope": "Suites mémoire sous windows-latest et ubuntu-latest, compatibilité, arrêt forcé et reprise sur états temporaires; pas la tour BOJ.ART."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Les 5 médias de productions/le-dernier-geste/ASSETS.json sont reliés au catalogue par taille et SHA-256; 14 276 962 octets ont été copiés et reverifiés dans la preuve datée. TEST19 reste explicitement provisoire.",
+      "action": "Conserver copied_verified comme preuve d'intégrité seulement; ne pas l'assimiler à G2 final ni à une approbation artistique."
+    },
+    {
+      "severity": "info",
+      "evidence": "bojart_ops/production_recovery.py refuse écrasement, liens symboliques, collisions et chemins non portables; il copie dans un nouveau dossier externe et enregistre scripts_executed=0, renders_created=0 et provider_calls=0.",
+      "action": "Utiliser la préparation sur une collecte restaurée autorisée; lancer séparément toute recette de rendu après décision explicite."
+    },
+    {
+      "severity": "info",
+      "evidence": "creative/CURRENT.md, le README R03 et RECUPERATION_PRODUCTION.md concordent: R03 est une coupe de travail, G2 fidèle manque, TEST19 est historique, aucune audience ni validation finale n'est revendiquée.",
+      "action": "Retrouver ou produire la source/rig G2, puis effectuer une nouvelle revue perceptuelle et artistique."
+    },
+    {
+      "severity": "info",
+      "evidence": "Le manifeste contient exactement 837 blobs hors manifeste; aucun chemin manquant/supplémentaire, aucune divergence de taille UTF-8 ou SHA-256 sur les 13 fichiers modifiés hors manifeste, aucun nouveau doublon par empreinte.",
+      "action": "Aucune correction de manifeste requise."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "L'intégrité des médias et leur décodage ne constituent pas une validation artistique de R03 ou de G2.",
+    "TEST19 reste une prévisualisation historique; le modèle, le rig et le geste G2 fidèles ne sont pas fournis.",
+    "Aucun rendu nouveau, modèle IA réel, crédit Higgsfield, publication, imprimante ou matériel d'atelier n'a été exécuté ou qualifié.",
+    "La revue est exhaustive pour les 14 chemins modifiés de cette PR, pas pour chaque fichier historique du dépôt."
+  ],
+  "next_actions": [
+    "Restaurer la collecte épinglée et préparer le dossier privé R03 sur le poste autorisé, puis conserver RECOVERY_RECEIPT.json.",
+    "Vérifier artistiquement le montage seulement après récupération/production du G2 fidèle et écoute casque/téléphone.",
+    "Ne pas confondre succès CI, copied_verified, completed fournisseur et approbation artistique."
+  ]
+}

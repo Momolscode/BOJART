@@ -702,6 +702,13 @@
       "pending_paths": [],
       "processed_correction_shas": [],
       "updated_at": "2026-11-01T23:03:54Z"
+    },
+    "10": {
+      "head_sha": "16226bdfc7e36a662a488398a8a00f4d3cc9d7c3",
+      "receipt_path": "ops/context-monitor/receipts/pr-10/16226bdfc7e36a662a488398a8a00f4d3cc9d7c3.json",
+      "status": "complete",
+      "pending_paths": [],
+      "updated_at": "2026-11-01T23:48:07Z"
     }
   }
 }
