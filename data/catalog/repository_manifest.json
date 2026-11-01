@@ -74,8 +74,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4969,
-      "sha256": "a90ea20d2facd412bfc398fc544e5e91a262e0f4741ecd4456cba760b6a90968"
+      "bytes": 5293,
+      "sha256": "82c1ab849bb56e65b9ccc63debeb73735869740e3e01d21cd583e05c01343374"
     },
     {
       "path": "SECURITY.md",
@@ -274,13 +274,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 4779,
-      "sha256": "27943460bafefe444d42fa08219dd4c2d8e2d30d0f2147662833ee734ad344bd"
+      "bytes": 5397,
+      "sha256": "eafc5b94150b3558f11052f32fd15d11e1bc7432b1eb0d1f07d8b1169a51081f"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 11464,
-      "sha256": "718d7aa2d4b4eb8b1548b7353204daa3c4466db8916d9bbad19c253c7f50a18a"
+      "bytes": 12649,
+      "sha256": "e0e3bb4706dc3d4785c483183cf8144aad83386db23c4cd6db4ff2f926e46e8b"
     },
     {
       "path": "creative/CURRENT.md",
@@ -369,8 +369,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 6858,
-      "sha256": "86934369a2d6d7915603c19ec188c03cfafccf5eecc8437955167ec2714393ff"
+      "bytes": 7255,
+      "sha256": "1a25d50ab9b68969660e997684951da843904fa4dab0ec65e71b009d73f5c1fd"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -379,8 +379,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 5698,
-      "sha256": "d9eddd0371c2383043f282912b78a829b491ff7fa8fce24cffd78d8acfd75793"
+      "bytes": 5931,
+      "sha256": "9728c67cae08ac6507d044da524d24f6490a8c34048d340e00db3a2c4d2109d0"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -389,8 +389,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 4441,
-      "sha256": "97408bf8b134dafa4ebc3cb92cdf4cad257861ab5ad28a664e2d6cfcb515810c"
+      "bytes": 4807,
+      "sha256": "7bf436240c99c2d6898b3cbbd4087d4468a48ac93db98e70b6f5e527cf9e0fb5"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -476,6 +476,11 @@
       "path": "docs/RECHERCHE_ARTISTES.md",
       "bytes": 1337,
       "sha256": "f2bbc1c8329af615d4b4f3a33990c94777c47042e15969d196968f09ff7f4c9e"
+    },
+    {
+      "path": "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+      "bytes": 4512,
+      "sha256": "01f3f5f73688b2fd2cfd1be5d3a812c92e2a1ee153e726c319ae094d84caa37d"
     },
     {
       "path": "docs/RECUPERATION_PARTIE_1_2026-11-01.md",
@@ -596,6 +601,11 @@
       "path": "docs/evidence/consolidation-2026-11-01.json",
       "bytes": 4037,
       "sha256": "0c84f14b115c2d9bec3798f1868add0cd6e63b25d47d605c0683ba8a0bd4899a"
+    },
+    {
+      "path": "docs/evidence/deep-recovery-2026-11-01.json",
+      "bytes": 1502,
+      "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee"
     },
     {
       "path": "docs/evidence/m07-baseline-tests.log",
