@@ -53,3 +53,7 @@ Le registre `ops/orchestration.json` ordonne les domaines, les tâches et leurs 
 ## Récupération approfondie
 
 Le complément du 1 novembre ajoute 62 originaux distincts : 57 médias, quatre captures de conversations et un document de transport. Les 60 résultats et 41 URL de référence Higgsfield ont été téléchargés et comparés. Total avec la collecte initiale : 3 402 originaux indexés. Restauration des nouveaux octets depuis GitHub et comparaison aux téléchargements : réussies. Voir `docs/RECUPERATION_APPROFONDIE_2026-11-01.md`. Les conversations intégrales, les fichiers uniquement sur le PC, le modèle/rig G2 et une vidéo TikTok restent non récupérés ou non certifiés.
+
+## Préparation des modèles — 2 novembre 2026
+
+Trois profils locaux sont préparés : `speed`, `balanced`, `quality`. Voir `docs/research/MODELES_LOCAUX_2026-11-02.md` pour les candidats datés et `docs/memory/INSTALLATION_MODELES.md` pour le parcours exécutable. Celui-ci contrôle des réponses synthétiques, les temps et les vecteurs avant d'activer les réglages. La mémoire épingle les empreintes des modèles et refuse les changements observés pendant une inférence. Le contexte, la limite de sortie et le maintien en mémoire sont explicites. Ces ajouts ne constituent pas une installation ni une qualification de la tour, de la création ou de la voix.

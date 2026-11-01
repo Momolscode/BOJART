@@ -71,15 +71,17 @@ class AgentMemory:
         for key, value, capability in [('embedding_model', embedding_model, 'embedding'),
                                        ('chat_model', chat_model, 'completion')]:
             if value is not None:
-                Ollama(value, url, timeout=4).inspect(capability)
+                metadata = Ollama(value, url, timeout=4).inspect(capability)
                 cfg[key] = value
+                cfg.setdefault('model_keys', {})[key] = metadata['model_key']
         cfg['ollama_url'] = url
         save_config(self.state, cfg)
         return cfg
 
     def embedder(self):
         cfg = self.config()
-        return Ollama(cfg['embedding_model'], cfg.get('ollama_url', 'http://127.0.0.1:11434'), timeout=4) if cfg.get('embedding_model') else None
+        return Ollama(cfg['embedding_model'], cfg.get('ollama_url', 'http://127.0.0.1:11434'), timeout=4,
+                      expected_key=cfg.get('model_keys', {}).get('embedding_model')) if cfg.get('embedding_model') else None
 
     def note(self, key, value, source, project):
         project_ok(project)
@@ -289,7 +291,9 @@ class AgentMemory:
                 memory, session=session, project=project,
                 facts=self.facts(project, _memory=memory)))
         history_text = encoded_history(conversation)
-        result = Ollama(cfg['chat_model'], cfg.get('ollama_url', 'http://127.0.0.1:11434'), timeout=90).chat(text, pack['text'], conversation)
+        result = Ollama(cfg['chat_model'], cfg.get('ollama_url', 'http://127.0.0.1:11434'), timeout=90,
+                        expected_key=cfg.get('model_keys', {}).get('chat_model')).chat(
+                            text, pack['text'], conversation, settings=cfg.get('chat_options'))
         result['history_usage'] = {
             'sha256': sha(history_text), 'characters': len(history_text),
             'max_characters': conversation['max_characters'],

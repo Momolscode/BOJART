@@ -1,12 +1,14 @@
 """Read and diagnose optional local models without initializing memory or inference."""
 import json
 import os
+import re
 import tempfile
 from http.client import HTTPException
 from pathlib import Path
 
 from .core import MemoryError
 from .ollama import ModelError, Ollama
+from .inference_settings import chat_settings
 
 DEFAULT_URL = 'http://127.0.0.1:11434'
 ROLES = {'embedding_model': 'embedding', 'chat_model': 'completion'}
@@ -27,10 +29,19 @@ def _unique(pairs):
 
 
 def validate_config(config):
-    if not isinstance(config, dict) or set(config) - {*ROLES, 'ollama_url'}:
+    if not isinstance(config, dict) or set(config) - {*ROLES, 'ollama_url', 'chat_options', 'model_keys'}:
         raise ModelConfigurationError('Configuration modèles invalide.')
     url = config.get('ollama_url', DEFAULT_URL)
     try:
+        chat_settings(config.get('chat_options'))
+        keys = config.get('model_keys', {})
+        if not isinstance(keys, dict) or set(keys) - set(ROLES):
+            raise ValueError('Empreintes invalides.')
+        for role, key in keys.items():
+            if (role not in config or not isinstance(key, str)
+                    or not re.fullmatch(r'.+@[0-9a-f]{64}', key)
+                    or key.rsplit('@', 1)[0] not in (config[role], config[role] + ':latest')):
+                raise ValueError('Empreinte incohérente avec le modèle.')
         Ollama('configuration-check', url)  # Constructor only; no request.
         for field in ROLES:
             if field in config:
@@ -95,7 +106,8 @@ def inspect_models(state, *, probe=False):
         if model:
             entry.update(model=model, status='not_probed')
             if probe:
-                client = Ollama(model, config.get('ollama_url', DEFAULT_URL), timeout=2)
+                client = Ollama(model, config.get('ollama_url', DEFAULT_URL), timeout=2,
+                                expected_key=config.get('model_keys', {}).get(role))
                 try:
                     entry.update(client.inspect(capability))
                 except ModelError as exc:

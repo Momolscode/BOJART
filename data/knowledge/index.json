@@ -172,5 +172,23 @@
     "path": "docs/memory/MODELES_LOCAUX.md",
     "project": "bojart.jarvis",
     "provenance": "Local model configuration, metadata-only diagnostics and lexical fallback implementation; official Ollama API checked 2026-11-01. No inference or target-hardware qualification."
+  },
+  {
+    "path": "docs/memory/INSTALLATION_MODELES.md",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Local model selection and setup, 2026-11-02; primary sources linked in the guide. Profiles are candidates; target hardware, real inference and creative output remain unqualified."
+  },
+  {
+    "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Local model selection and setup, 2026-11-02; primary sources linked in the guide. Profiles are candidates; target hardware, real inference and creative output remain unqualified."
+  },
+  {
+    "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
+    "project": "bojart.creative",
+    "collection": "research",
+    "provenance": "Local model selection and setup, 2026-11-02; primary sources linked in the guide. Profiles are candidates; target hardware, real inference and creative output remain unqualified."
   }
 ]

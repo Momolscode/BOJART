@@ -37,25 +37,23 @@ py -3.12 tools/prepare_installation.py --engines
 
 Linux : remplacer `py -3.12` par `python3.12`. Ajouter `--voice` pour les bibliothèques voix ; les poids, FFmpeg, le micro et la configuration restent à préparer selon [INSTALLATION.md](docs/INSTALLATION.md). Les versions M07 sont fixées ; leur installation Windows n’a pas encore été essayée sur le poste.
 
-## 3. Activer la recherche sémantique locale
+## 3. Installer les modèles locaux choisis
 
-Installer [Ollama](https://ollama.com/download), le démarrer, puis télécharger explicitement le modèle :
+La [sélection du 2 novembre](docs/research/MODELES_LOCAUX_2026-11-02.md) propose trois profils : `speed` (Qwen3.5 4B), `balanced` (Gemma 4 12B) et `quality` (Qwen3.8 27B). Tous utilisent Qwen3 Embedding 0.6B. Choisir après inventaire de la carte graphique ; les tailles de poids ne sont pas toute la VRAM nécessaire.
 
-```bash
-ollama pull embeddinggemma
+Installer et démarrer [Ollama](https://ollama.com/download). Exemple Windows pour le profil intermédiaire :
+
+```powershell
+py -3.12 tools/prepare_installation.py --model-profile balanced --download-models
 ```
 
-Depuis le dépôt avec le Python de `.venv` :
+Linux : remplacer `py -3.12` par `python3.12`. Cette commande prépare aussi l'environnement Python, télécharge seulement les modèles manquants du profil, mesure quatre réponses synthétiques, contrôle les embeddings et indexe la mémoire. Les nouveaux réglages sont activés seulement après réussite. Sans `--download-models`, les modèles doivent déjà être installés. Une seule préparation à la fois.
 
-```bash
-python -m bojart_memory.agent_cli configure --embedding-model embeddinggemma
-python -m bojart_memory.agent_cli models
-python -m bojart_memory.agent_cli embed
-```
+Le [guide des modèles](docs/memory/INSTALLATION_MODELES.md) explique les profils, seuils, rapports privés et réparations. Les poids téléchargés restent locaux ; aucun service d'inférence payant n'est appelé. Les empreintes sont conservées et contrôlées avant/après les inférences pour éviter le mélange de modèles après une mise à jour. Une panne du modèle laisse la recherche par mots disponible.
 
-Dans ces commandes, utiliser `.venv\Scripts\python.exe` sous Windows ou `.venv/bin/python` sous Linux. Relancer `embed` après l’ajout de documents. Le modèle doit être présent localement. Le diagnostic `models` vérifie sa présence et sa capacité déclarée sans lancer de génération. Si Ollama est arrêté ou si la configuration est invalide, la recherche par mots continue. Voir [modèles locaux](docs/memory/MODELES_LOCAUX.md) pour lire les statuts et réparer la configuration. Les vecteurs sont associés à l’empreinte exacte du modèle ; changer de modèle nécessite sa propre indexation.
+Pour **Parler à Jarvis**, ouvrir **Mémoire du projet** après activation. Les échanges et leur contexte exact sont conservés ; les réponses restent à vérifier. L'historique écarte les anciennes réponses dont les preuves ont changé : voir [continuité des conversations](docs/memory/CONVERSATIONS.md). Le panneau n'exécute pas de commandes d'atelier. Les générateurs d'images, la voix et les imprimantes ne sont pas activés par ces profils.
 
-Pour **Parler à Jarvis**, choisir un modèle de conversation adapté à la RAM/VRAM, le télécharger dans Ollama, puis exécuter `python -m bojart_memory.agent_cli configure --chat-model NOM_LOCAL`. Aucun modèle de conversation universel n’est présélectionné. Les échanges de ce panneau et leur contexte exact sont conservés ; les réponses restent à vérifier. L’historique transmis au modèle écarte les anciennes réponses dont les preuves ont changé ; voir [continuité des conversations](docs/memory/CONVERSATIONS.md). Le panneau n’exécute pas de commandes d’atelier.
+Si un modèle local est déjà choisi hors de ces profils, les commandes `python -m bojart_memory.agent_cli configure --chat-model NOM_LOCAL` et `--embedding-model NOM_LOCAL` restent disponibles. Cette configuration manuelle vérifie seulement les métadonnées ; elle ne remplace pas les essais. Exécuter `python -m bojart_memory.agent_cli embed` après ajout de documents pour actualiser les vecteurs.
 
 ## 4. Contrôle avant travail réel
 

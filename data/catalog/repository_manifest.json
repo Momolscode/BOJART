@@ -44,8 +44,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 5663,
-      "sha256": "696a7d63d006663c1a483da2849f0e042eabf30fb6788f8deb60acb93219959e"
+      "bytes": 6318,
+      "sha256": "78891c69befa47d83406868b090a2b4a82e7e9a6519ea5da5809190c4e558f0f"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -204,8 +204,8 @@
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 19027,
-      "sha256": "67b54950e86080633410abab16d457b73411c6585b09fdae753deb908493f443"
+      "bytes": 19346,
+      "sha256": "d9ff3db24437f0d94e539061a4bbc431cebad88a4539f96bc3a1de106f5002e2"
     },
     {
       "path": "bojart_memory/agent_cli.py",
@@ -233,19 +233,29 @@
       "sha256": "be4f6f87638f91a515fd8fe34331ef5be3f3b1a95a12d6956c28e5df85b2283b"
     },
     {
+      "path": "bojart_memory/inference_settings.py",
+      "bytes": 2055,
+      "sha256": "30b1e7efce342b076b3bc2ac74a71568af830fe0f0268136a2923155297a7cf4"
+    },
+    {
       "path": "bojart_memory/mcp.py",
       "bytes": 5830,
       "sha256": "133e958c34c73aa814443aad4e2c747a793c5974ec7d616075bba907afcf8251"
     },
     {
       "path": "bojart_memory/model_config.py",
-      "bytes": 4361,
-      "sha256": "cdcd5e9312dd999ee59ba234f11dbcd60a00f34e3fa4ae9b39eed466d0db479d"
+      "bytes": 5083,
+      "sha256": "67188fe6f304e15823a91deaf840a1bbaf1ecde38095f21b51ec10f93f9092d2"
+    },
+    {
+      "path": "bojart_memory/model_setup.py",
+      "bytes": 10151,
+      "sha256": "81a768554da3fd436e351e81804711f96f31a3793c50e640220726ac745c45e2"
     },
     {
       "path": "bojart_memory/ollama.py",
-      "bytes": 6450,
-      "sha256": "aa8dce5ee8e3103a9105c419d1db93ba7a75f9a90e889183610c2da103a87c3a"
+      "bytes": 7789,
+      "sha256": "eae8ce33c17010d3d1501c41041fd877a96f613639e2e17fd48f6a62af483b47"
     },
     {
       "path": "bojart_memory/paths.py",
@@ -294,13 +304,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 6732,
-      "sha256": "3b32d680b35ba39cab27e385d98138cdbeb8b27a265affb9112427d26b13968a"
+      "bytes": 7403,
+      "sha256": "b7e0293add7f47e93ee9bf5b0a9d6a28bdc163233d59e7e6e7235a931d29dd43"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 22663,
-      "sha256": "8e6f7a4475f73f2fe47e4b1c99a521cce09e3709e667c430e7b02f6fec117d13"
+      "bytes": 24428,
+      "sha256": "11a011ded139ee46b60d21b4f0a6fe0e02fc5a44b93069c6779d2184200baee7"
     },
     {
       "path": "creative/CURRENT.md",
@@ -399,8 +409,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 7817,
-      "sha256": "99f7d3bcee3262742979defc8bb06b1f29ce4c483507a5d6334baba34a3205f3"
+      "bytes": 8797,
+      "sha256": "b24de4ccc7df581e08e5a734b63c39b1168aa1ac03f6c5998ebe7ae28d1d2344"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -768,14 +778,19 @@
       "sha256": "e9a77b143a9dc17fe8d8d016cce6d76a0460cef9aa13a50a6d5a44120f983b79"
     },
     {
+      "path": "docs/memory/INSTALLATION_MODELES.md",
+      "bytes": 6122,
+      "sha256": "0e860a4526558414191ea3e1849ccedd0c129763fda8d800f74d2fe2738805c8"
+    },
+    {
       "path": "docs/memory/MCP.md",
       "bytes": 2225,
       "sha256": "ade32c9c0b63ede8eede87cc2350c46cdde2b314c5c0a31907adffe777fb98d3"
     },
     {
       "path": "docs/memory/MODELES_LOCAUX.md",
-      "bytes": 3945,
-      "sha256": "3765064bd82589c8c36841d33d120df92e9a3999844992be4488cb16d9cf6f95"
+      "bytes": 4601,
+      "sha256": "5d6c7c0e55ea9d33c9cba8a339ba3a8b617cfbc166560420e9ac3b96ec59fc80"
     },
     {
       "path": "docs/memory/OUTILS_ET_ARCHITECTURE.md",
@@ -791,6 +806,11 @@
       "path": "docs/memory/VALIDATION.json",
       "bytes": 2822,
       "sha256": "abf7809a9a684d6393a3e26f3d8fd554a3acdab68f65ebb3064918e45bf08e49"
+    },
+    {
+      "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
+      "bytes": 10042,
+      "sha256": "1b145301969b16af223d8b1e0116d5168360f0810b6b4417303acd863d491f3c"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -3988,6 +4008,11 @@
       "sha256": "b75321abf69245e4bbe444d376c3fbc7a5cf80543b6537bd819b8cd1b9ad8d90"
     },
     {
+      "path": "tests_agent/test_model_qualification.py",
+      "bytes": 16120,
+      "sha256": "48113579b2a10ecf6087058219d23a8a35dbd30e1712faa981b1e228007b05c9"
+    },
+    {
       "path": "tests_agent/test_model_setup.py",
       "bytes": 15594,
       "sha256": "edba5af4753b8e65429d39c335846509aefba22d19d8508484302a3ede09d02a"
@@ -4074,8 +4099,8 @@
     },
     {
       "path": "tools/prepare_installation.py",
-      "bytes": 2509,
-      "sha256": "49cc0b0b3a6785a390e5e4f12e6a815c3139d1969ae04a79e096e6acb57aad06"
+      "bytes": 3148,
+      "sha256": "04da8d52217b050c2731b933d8e42520955cdd4a82e238e53205f57bf8d78622"
     },
     {
       "path": "tools/quality_gate.py",
@@ -4091,6 +4116,11 @@
       "path": "tools/restore_recovery_2026_11_01.py",
       "bytes": 9523,
       "sha256": "dc18931255977dcb336138562fb4282e9c23b6b1268e40ed34f732b5ed729c73"
+    },
+    {
+      "path": "tools/setup_local_models.py",
+      "bytes": 2464,
+      "sha256": "8cc5082063f43562a67cba76a64777aa3a30a2e4cb745593bf6b700360d9e45d"
     },
     {
       "path": "tools/start_jarvis.py",

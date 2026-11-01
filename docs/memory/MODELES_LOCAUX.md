@@ -51,3 +51,7 @@ Après un changement de modèle d’embeddings, exécuter `python -m bojart_memo
 Contrat consulté le 1 novembre 2026 : [API officielle Ollama](https://github.com/ollama/ollama/blob/main/docs/openapi.yaml), [liste des modèles](https://docs.ollama.com/api/tags) et [embeddings](https://docs.ollama.com/capabilities/embeddings). Le diagnostic utilise `GET /api/tags` puis `POST /api/show`, sans fournir de texte à traiter.
 
 Les tests utilisent un serveur local de métadonnées simulé, avec modèles absents, réponses invalides, capacités incompatibles et service arrêté. Ils contrôlent aussi la recherche, la conservation des fichiers et l’absence de création de base par le diagnostic. Ils ne qualifient aucun modèle réel ni le matériel de BOJ.ART.
+
+## Profils et mesures du 2 novembre
+
+Le parcours [installation des modèles](INSTALLATION_MODELES.md) prépare trois profils explicites et un rapport d'essai. La configuration peut maintenant conserver `chat_options` et `model_keys`. `model_changed` signale une empreinte différente de celle enregistrée : refaire la préparation après revue du modèle. La recherche lexicale reste disponible. Le diagnostic `models` reste sans inférence ; le programme `setup_local_models.py --apply` lance, lui, des inférences synthétiques et l'indexation demandée. Les commandes manuelles `configure` épinglent les métadonnées sans qualification de qualité.
