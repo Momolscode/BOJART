@@ -14,8 +14,8 @@
     },
     {
       "path": ".github/workflows/audit.yml",
-      "bytes": 1238,
-      "sha256": "889ea857ae3b003d98857fab7db6e9a7475e9295199c132a3bddb16d63dd7d5f"
+      "bytes": 2146,
+      "sha256": "c15d9f7b15132cdcdb601e975a50dd93fcf97b6625549496340653c0cde9f213"
     },
     {
       "path": ".github/workflows/continuity.yml",
@@ -69,8 +69,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4429,
-      "sha256": "85ca0c66c9baea80543705356a48bb6795b20ba31f789f99fafe66c264108c25"
+      "bytes": 4582,
+      "sha256": "a31de13d7a2916c620fbbd767fa06ab87ddf6bdd57f7477bee83ed73f06b52a9"
     },
     {
       "path": "SECURITY.md",
@@ -258,19 +258,24 @@
       "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31"
     },
     {
+      "path": "bojart_ops/orchestration.py",
+      "bytes": 11963,
+      "sha256": "1255d490a9f081a59c12d905d22115d6bfb13b36fa86f6a6d28ff46a122bcdfb"
+    },
+    {
       "path": "configs/quality_gates.json",
       "bytes": 848,
       "sha256": "03b5d2e1a39f953a4e38a8bbaaadb79923b1be7244fe7ce6a5a3973708d267c7"
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 4328,
-      "sha256": "26ed9877ca2e1da4c00a06b13fe587e5480c692102d9e310c90a8bfa09c8b546"
+      "bytes": 4779,
+      "sha256": "27943460bafefe444d42fa08219dd4c2d8e2d30d0f2147662833ee734ad344bd"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 7309,
-      "sha256": "04b3ac2ea6be58d0d1b2bea995c90e65d2bc0ef5ddadd5ad50f26e2d5317e871"
+      "bytes": 8771,
+      "sha256": "0ad340502345ee982782c7e9ebfc8cbbbac3c8b3bc30ea4d7b9e489259907c94"
     },
     {
       "path": "creative/CURRENT.md",
@@ -285,7 +290,7 @@
     {
       "path": "data/catalog/derivatives.json",
       "bytes": 11287,
-      "sha256": "b770d8256111330eab51104187c96ee61e24f52dfa7b72f08c5d3536bf6fc61b"
+      "sha256": "6cb6245556bc8cb5659c9e22a69e8b19778ace9745975775f605ee6337acaa99"
     },
     {
       "path": "data/catalog/imports.json",
@@ -369,8 +374,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 4704,
-      "sha256": "886a58c53c24c0d3aa7e18818882bd57b625c57e5509a874cf2d141e8c2ca0e8"
+      "bytes": 5365,
+      "sha256": "22edf1e7c6b7941cacd89bf2ade94605123da93342a186db3f512dcab2e26045"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -429,8 +434,8 @@
     },
     {
       "path": "docs/GITHUB_WORKFLOW.md",
-      "bytes": 1668,
-      "sha256": "df254fd667ead6e50a3559db07276d1fe1d85ef0ff293002eb683350a81a2e8c"
+      "bytes": 2202,
+      "sha256": "a6417c71e14f5369175939d939e24b7d5443bd3c87c1ebb6fcedcd032f6c7de0"
     },
     {
       "path": "docs/INSTALLATION.md",
@@ -441,6 +446,11 @@
       "path": "docs/OPERATIONS.md",
       "bytes": 8253,
       "sha256": "d75bf56b9578e7259dba8a5e21f6586e74364a827ae6116dd15310382b4dab9c"
+    },
+    {
+      "path": "docs/ORCHESTRATION.md",
+      "bytes": 6962,
+      "sha256": "b483b50780151badb4f55f58e2c2370683191825ea563f535f4d61acfa753ed1"
     },
     {
       "path": "docs/OUTILS_ET_ESSAIS.md",
@@ -2148,6 +2158,11 @@
       "sha256": "1ce6600d97e0f74baecd674103f56db290b2e467428e62a615eb09c4dcd510f5"
     },
     {
+      "path": "ops/orchestration.json",
+      "bytes": 10071,
+      "sha256": "4dde90ad471abe539098a95d7576237f27e74eb597c5c1fb3071e6b9a36c8f1a"
+    },
+    {
       "path": "ops/request-example.json",
       "bytes": 289,
       "sha256": "70d1ce8280676c0419aabb1dc7c022f7ac3cbeb10963af846b24e29d219f18be"
@@ -3808,6 +3823,11 @@
       "sha256": "7ccfeeab302fe4fa2ddf5e1d61a11d4d40c9395fbe817be33bc09f4a2aaeaf80"
     },
     {
+      "path": "tests_ops/test_orchestration.py",
+      "bytes": 10595,
+      "sha256": "5a292657ed783c74a90a4980aaa6979bd883b0f9b2c4636aa69adf1306671926"
+    },
+    {
       "path": "tools/audit_repository.py",
       "bytes": 937,
       "sha256": "c17763734617bb272b412bb94913aeb31dde88325bec57a419e9994846dda118"
@@ -3846,6 +3866,11 @@
       "path": "tools/memory_mcp.py",
       "bytes": 264,
       "sha256": "a79cf5573525f0de37f22d1a2e861cb693f733131bb5a3c0295dddff512a79a4"
+    },
+    {
+      "path": "tools/orchestrate.py",
+      "bytes": 3507,
+      "sha256": "b1a7865fb36f6eab46029f10bd158201286ee618991fad9ecbe2f19b09dbfa32"
     },
     {
       "path": "tools/prepare_installation.py",

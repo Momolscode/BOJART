@@ -43,3 +43,13 @@ Demande explicite : pousser le fichier joint `JARVIS5_REPRISE_VERIFIEE_2026-10-3
 ## Suite : démarrage et reprise
 
 Base rapprochée : `e5cd9f3f18f744b800aa8bb655a70fa643c634a1` (PR #4). La reprise commune des archives et les contrôles du manifeste binaire sont réutilisés. Diagnostic de lancement, chemin mémoire partagé, export sourcé, invalidation des réponses périmées et diversification des sources sont ajoutés. Voir `docs/DEMARRAGE_ET_REPRISE.md` et les preuves de démarrage/restauration dans `docs/evidence/startup-2026-11-01.json`. Les modèles et périphériques réels restent à qualifier.
+
+## Suite : orchestration des domaines et des revues
+
+Base observée : `5268e7e7b70fa25efee7d186f27cd3716a49c4c1`, 776 fichiers. Reçu de surveillance relu sur `audit/context-results` à `cfdca9fc47d71dd8b2bce6ff324994f089d88d34` : 633 chemins en attente à cette observation. La PR de surveillance n°1 reste ouverte ; les branches de récupération restent séparées.
+
+Ajouts : registre des domaines et de dix tâches sourcées, planificateur en lecture seule, lots de 20 contenus maximum et tests de non-régression. Le workflow d’audit existant publie le classement et ses dépendances avec ses artefacts. Les doublons conservent tous leurs chemins ; un checkpoint périmé ou bloqué ne réduit pas la revue de la révision courante. Guide : `docs/ORCHESTRATION.md`, indexé pour les trois domaines mémoire.
+
+L’environnement local était indisponible pendant cette préparation ; la validation de ce changement passe par les contrôles GitHub de sa révision. Aucun nouveau test de modèle, navigateur, micro, écran ou imprimante n’est revendiqué. Les prochaines preuves restent l’inventaire de la tour, l’installation réelle et la source fidèle G2.
+
+Réconciliation avant publication : le correctif concurrent `461d46ff39caaf142ce37a3e0b78f22dfcc2e842` est conservé, notamment la diversification avant limite, les avertissements de sources absentes et ses tests de mémoire/interface. Il devient le parent du changement d’orchestration.
