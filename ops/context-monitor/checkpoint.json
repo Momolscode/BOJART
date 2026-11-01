@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "4be8480b653d98b4744b5a59ca89d2ee1d732d6e",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/4be8480b653d98b4744b5a59ca89d2ee1d732d6e.json",
+      "head_sha": "20283c3136c66fbfca78a9e733b5c74bd5dfcf03",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/20283c3136c66fbfca78a9e733b5c74bd5dfcf03.continuation-studio.json",
       "status": "partial",
       "pending_paths": [
         ".gitattributes",
@@ -87,19 +87,11 @@
         "jarvis/apps/jarvis/app/console.html",
         "jarvis/apps/jarvis/app/diagnostics.py",
         "jarvis/apps/jarvis/app/dialogue.py",
-        "jarvis/apps/jarvis/app/growth.css",
-        "jarvis/apps/jarvis/app/growth.html",
-        "jarvis/apps/jarvis/app/growth.js",
-        "jarvis/apps/jarvis/app/growth.py",
         "jarvis/apps/jarvis/app/index.html",
         "jarvis/apps/jarvis/app/knowledge.html",
         "jarvis/apps/jarvis/app/knowledge.js",
         "jarvis/apps/jarvis/app/launch_readiness.py",
-        "jarvis/apps/jarvis/app/media_library.py",
         "jarvis/apps/jarvis/app/server.py",
-        "jarvis/apps/jarvis/app/studio.css",
-        "jarvis/apps/jarvis/app/studio.html",
-        "jarvis/apps/jarvis/app/studio.js",
         "jarvis/apps/jarvis/app/tower.css",
         "jarvis/apps/jarvis/app/tower.html",
         "jarvis/apps/jarvis/app/tower.js",
@@ -180,9 +172,7 @@
         "jarvis/apps/jarvis/tests/test_mission01.py",
         "jarvis/apps/jarvis/tests/test_preview.py",
         "jarvis/apps/jarvis/tests/test_ui.py",
-        "jarvis/apps/jarvis/tests_m03/test_media_library.py",
         "jarvis/apps/jarvis/tests_m03/test_preview_m03.py",
-        "jarvis/apps/jarvis/tests_m03/test_studio_browser.py",
         "jarvis/apps/jarvis/tests_m03/test_studio_http.py",
         "jarvis/apps/jarvis/tools/build_studio_preview.py",
         "jarvis/config/M04_INVENTAIRE_A_REMPLIR.json",
@@ -210,11 +200,8 @@
         "jarvis/docs/m07/SCHEMA_M07.html",
         "jarvis/docs/m07/SOURCES.json",
         "jarvis/knowledge/growth/AUDIT_SKILLS.md",
-        "jarvis/knowledge/growth/PLATFORM_RULES.json",
         "jarvis/knowledge/growth/PUBLISHING_CONTRACT.md",
         "jarvis/knowledge/growth/SKILLS_INSTALLED.json",
-        "jarvis/knowledge/growth/SOURCES.json",
-        "jarvis/knowledge/growth/TOPICS.json",
         "jarvis/knowledge/metier/BASE_METIER.html",
         "jarvis/knowledge/metier/BASE_METIER.md",
         "jarvis/knowledge/metier/MANIFESTE_SHA256.json",
@@ -280,7 +267,6 @@
         "jarvis/research/readiness-2026-10-30/TESTS_REGRESSIONS.txt",
         "jarvis/research/voice-jev/PREUVES_LECTURE_M03.json",
         "jarvis/tests/test_consolidated.py",
-        "jarvis/tests/test_growth.py",
         "jarvis/tests/test_jarvis_m06.py",
         "jarvis/tests/test_jarvis_m07.py",
         "jarvis/tests/test_preservation.py",
@@ -623,9 +609,10 @@
         "0a7a08dd0a0bed445ef0dc5734be7c841b30467a",
         "9c2a0fb47baf1b610e31d2deb800a5323bb9495e",
         "54f245ba852a8d1c611d96d818ee36d1aa5adba9",
-        "4be8480b653d98b4744b5a59ca89d2ee1d732d6e"
+        "4be8480b653d98b4744b5a59ca89d2ee1d732d6e",
+        "20283c3136c66fbfca78a9e733b5c74bd5dfcf03"
       ],
-      "updated_at": "2026-11-01T23:10:01Z"
+      "updated_at": "2026-11-01T23:20:57.574Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
