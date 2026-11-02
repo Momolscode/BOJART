@@ -258,3 +258,20 @@ Tests exécutés (conteneur Linux) : `test_atelier` 35/35 ; `tests` 102, `tests_
 Limites : aucun prix, régime de TVA ni émetteur réels ; mentions du devis non relues sur source officielle ; aucun connecteur ; parc réel inconnu ; captures d'écran hors dépôt.
 
 Prochaine preuve : grille et TVA déclarées puis devis à blanc relu ; inventaire du parc sur la tour ; une machine en lecture d'état avec opérateur.
+
+## Atelier : relecture et améliorations — 2 novembre 2026 (soir)
+
+Demande d'Olsen : « Prête, continue d'améliorer tout ça ». La PR #18 est passée en « prête ». Une relecture a trouvé quatre défauts, chacun couvert par un test qui échouait avant la correction :
+- l'entonnoir ne comptait que les 200 demandes affichées ;
+- les dates d'envoi et d'accord prenaient le jour de saisie ;
+- un devis expiré restait déclarable envoyé ;
+- la comparaison prévu / réel n'était pas chiffrée.
+
+Ajouts :
+- devis imprimable A4, avec lignes client au prorata exact du total HT et filigranes ;
+- bloc commandes avec mesures opérateur nominatives, écarts par pièce et dérive par procédé ;
+- délais de réponse en jours.
+
+Tests : `test_atelier` 42/42 ; `jarvis/tests` 322 avec les 3 mêmes échecs que `main` ; `tests` 102, `tests_agent` 236, `tests_ops` 98, `tests_workflows` 20, Node 30. Parcours Chromium sans erreur console, PDF A4 d'une page. Détail : `docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json` (section `ameliorations_soir`).
+
+Limites inchangées : aucun prix, régime de TVA ni émetteur réels ; mentions légales non relues ; aucun connecteur d'imprimante.

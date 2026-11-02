@@ -15,7 +15,7 @@ Le même cookie de session, le contrôle d'origine, la limite de 8 Kio par requ�
 ### Demandes clients
 - Origine obligatoire : vitrine, e-mail, téléphone, atelier, réseau social, salon, autre ou démonstration. Une demande garde la référence de sa source ; son résumé technique refuse les adresses e-mail et numéros de téléphone (ils restent dans la boîte d'origine).
 - États : `recue` → `qualifiee` → `devis_envoye` → `acceptee` → `en_production` → `livree`, avec sorties `doublon`, `spam`, `non_realisable`, `abandonnee`, `refusee`. Chaque changement porte la révision lue ; une révision périmée est refusée.
-- Entonnoir : compte les jalons réellement atteints (reçues, qualifiées, devis envoyés, acceptées, livrées). Démonstration, doublons et spam sont exclus. Les rapports s'affichent en « n/m », sans taux extrapolé.
+- Entonnoir : compte les jalons réellement atteints (reçues, qualifiées, devis envoyés, acceptées, livrées) sur **toutes** les demandes, pas seulement les 200 affichées. Démonstration, doublons et spam sont exclus. Les rapports s'affichent en « n/m », sans taux extrapolé.
 
 ### Devis
 - Formule : prix HT = coût de revient / (1 − marge − commission). C'est la formule de `calculateQuote` du site Atelier V11 (`sites/atelier/dist/lib/workshop.js`). Un test compare les deux moteurs au centime.
@@ -24,8 +24,18 @@ Le même cookie de session, le contrôle d'origine, la limite de 8 Kio par requ�
 - TVA : `assujetti` (avec taux), `franchise_293B` (mention « TVA non applicable, art. 293 B du CGI ») ou `a_definir`. Sans régime, le TTC n'est pas calculé. Une valeur manquante n'est jamais remplacée par zéro.
 - Émission impossible tant que : grille d'exemple, régime de TVA inconnu, émetteur absent (raison sociale, adresse, SIRET), délai absent, estimation de simulation. La liste des bloquants s'affiche sur le devis.
 - Versions : numérotation `DV-AAAA-NNNN`. Un devis émis est figé : document, grille, entrée et calcul ont chacun leur SHA-256. Une modification produit la version suivante et remplace la précédente. Un document altéré en base est signalé « altéré » et refusé.
+- Envoi déclaré : refusé si la date d'envoi dépasse la validité. Un devis émis passé sa validité s'affiche « expiré », envoyé ou non.
 - Accord client : seulement sur la version émise courante, déclarée envoyée, dans sa durée de validité, avec l'empreinte affichée. Il crée une commande `CMD-…` dont `production_autorisee` vaut `false`. Le relevé réel (temps, matière) se compare ensuite au devis.
 - Démonstration : coût de revient 147,38 €, total HT 210,54 €, TTC non calculé, 5 bloquants d'émission.
+- **Devis imprimable** : « Version imprimable (PDF) » sur le détail d'un devis ouvre une page A4 ; le bouton lance l'impression du navigateur (« Enregistrer au format PDF »). Le client voit émetteur, destinataire, objet, délai, une ligne par pièce, opération et frais, les totaux HT/TVA/TTC, la mention de TVA et un cadre « Bon pour accord ». Coût de revient, marge et taux internes n'y figurent pas : chaque ligne reçoit le total HT au prorata de ses coûts, arrondi au centime par la méthode du plus fort reste, et la somme des lignes égale exactement le total HT. Un brouillon porte « DOCUMENT DE TRAVAIL — NON ÉMIS », une grille d'exemple « EXEMPLE — NE PAS ENVOYER », une version remplacée ou expirée son propre bandeau.
+
+### Commandes : prévu / réel
+- Un relevé correspond à une pièce imprimée. Une mesure opérateur exige le nom de la personne qui a mesuré ; un résultat simulé n'en a pas.
+- Pour chaque pièce : prévu unitaire (temps, matière en g ou ml), nombre de mesures, écart en % de la médiane des mesures. Les résultats simulés sont listés à part et n'entrent jamais dans l'écart.
+- Dérive par procédé, sur toutes les commandes intactes : rapport médian réel / prévu pour le temps et la matière, avec le nombre de pièces mesurées. La grille n'est jamais recalée automatiquement.
+
+### Délais de réponse
+L'entonnoir affiche, en jours et sur les dates déclarées : réception → premier devis envoyé, puis envoi → réponse (accord ou refus), avec médiane, maximum et effectif. Les dates d'envoi et d'accord saisies font foi, même si elles sont enregistrées plus tard.
 
 ### Parc d'imprimantes
 - Fiche machine : identifiant, origine (`simulee` ou `declaree`), fabricant, modèle, procédé (FDM ou résine), volume utile et sa source, matières, interface (simulation, moonraker, octoprint, prusalink, bambu_lan, elegoo_sdcp, manuelle, inconnue), limites de température. L'adresse refuse tout identifiant ou secret.
