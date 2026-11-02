@@ -354,5 +354,16 @@
     "project": "bojart.jarvis",
     "collection": "session_log",
     "provenance": "Réception datée du paquet V5 le 2 novembre 2026 : octets vérifiés, rejeu exact et tests exécutés sur conteneur Linux ; ne qualifie pas la tour."
+  },
+  {
+    "path": "docs/BANC_VOIX.md",
+    "project": "bojart.jarvis",
+    "provenance": "Banc de la chaîne vocale, 2 novembre 2026 : tools/banc_voix.py rejoue un corpus de prises (voix Piper, bruit synthétique) de l’audio au reçu d’affichage ; rapport daté dans docs/evidence/voix-2026-11-02. Ne qualifie ni le micro de la tour, ni une voix humaine, ni le bruit réel de l’atelier, ni les moniteurs."
+  },
+  {
+    "path": "docs/evidence/voix-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "session_log",
+    "provenance": "Mesures datées de la chaîne vocale simulée sur un conteneur Linux le 2 novembre 2026 (small, base, large-v3-turbo, avec et sans vocabulaire, LangGraph et repli règles) ; ne qualifie pas la tour."
   }
 ]
