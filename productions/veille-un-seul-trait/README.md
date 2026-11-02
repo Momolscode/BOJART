@@ -1,4 +1,4 @@
-# Veille — « Un seul trait » (V1, proposition)
+# Veille — « Un seul trait » (V1.1 prête à poster)
 
 **Coupe de travail du 2 novembre 2026 : 13,67 s, 328 images, 24 i/s, 1080 × 1920.** Premier film de la direction V.02 : un pinceau pose un trait carmin sur le visage d'une sculpture, puis la pièce ouvre les yeux. Signature : « Chaque pièce porte un geste. »
 
@@ -30,6 +30,20 @@ Prérequis : Python 3 avec Pillow et NumPy, FFmpeg avec libx264, polices Barlow 
 3. `bash build/edit.sh W [chemin_voix]`
 
 Le script écrit `build/BOJART_Veille_UnSeulTrait_V1.mp4`.
+
+## V1.1 prête à poster
+
+**12,67 s, 304 images.** Mêmes plans et même son que la V1, habillage refait pour la publication en Reel, TikTok et Short :
+
+- tous les textes dans la zone visible commune aux trois réseaux (x 120–888, y 288–1248, x ≤ 780 sous y 840) ;
+- mention « Généré par IA » incrustée de la première à la dernière image (AI Act, art. 50(4), applicable depuis le 2 août 2026) ;
+- accroche « Un seul trait. » dès la première image, carton ramené à 2 s avec le pied « Veille · concept original / pas encore sculptée » ;
+- calques convertis en BT.709 et fichier étiqueté BT.709 (le carmin du carton V1 virait à l'orange sur téléphone) ;
+- intermédiaires sans perte, GOP fermé de 12 images, moov en tête.
+
+Reproduire : `python3 build/cards_v11.py W/fonts W/build`, puis `bash build/edit_v11.sh W [chemin_voix]`. Le script écrit `build/BOJART_Veille_UnSeulTrait_V1-1.mp4` et `cards_v11.py` écrit `v11_layout.json`, qui sert à vérifier que chaque texte reste dans la zone visible.
+
+Contrôles : décodage intégral OK, −14,5 LUFS, −1,4 dBTP, LRA 7,2 LU ; transcription fr 0,99, phrases exactes ; aucun texte hors zone ; contraste au pire sur les 10 % de fond les plus clairs : mention 6,4:1, accroche 3,1:1, phrase 2 13,6:1. Les obligations de publication (réglages IA par plateforme, première ligne de légende) sont dans [RECETTE.json](RECETTE.json), clé `v1_1.publication`.
 
 ## Contrôles et limites
 

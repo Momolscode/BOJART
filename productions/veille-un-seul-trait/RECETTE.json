@@ -1,7 +1,7 @@
 {
  "projet": "BOJ.ART — Veille, « Un seul trait » V1",
  "date": "2026-11-02",
- "statut": "Proposition non validée par l'artiste ; rien publié",
+ "statut": "V1.1 prête à poster, rien publié ; retour d'Olsen le 2026-11-02 : « on se rapproche de quelque chose de très premium », voix A conservée pour l'instant",
  "personnage": "Veille — personnage original BOJ.ART (aucun emprunt à un personnage existant)",
  "credits_depenses": 37.4,
  "images": [
@@ -73,5 +73,56 @@
   "loudness_lufs": -14.5,
   "true_peak_dbtp": -1.5,
   "lra_lu": 7.1
+ },
+ "v1_1": {
+  "date": "2026-11-02",
+  "scripts": [
+   "cards_v11.py",
+   "edit_v11.sh"
+  ],
+  "credits_depenses": 0,
+  "changements": [
+   "Textes dans la zone visible commune Reels/TikTok/Shorts : x 120–888, y 288–1248, x ≤ 780 sous y 840 (V1 : sous-titres à y 1560 et pied du carton à y 1640, sous l'interface)",
+   "Mention « Généré par IA » incrustée de la première à la dernière image, en haut à gauche, libellé court pour ne pas couvrir la tête dans le plan B (tête à x ≥ 443)",
+   "Accroche « Un seul trait. » dès la première image ; halo charbon serré pour la lisibilité sur peau claire",
+   "Carton ramené de 3 s à 2 s ; pied « VEILLE · CONCEPT ORIGINAL / PAS ENCORE SCULPTÉE »",
+   "Calques convertis en BT.709 et fichier étiqueté BT.709 : le carmin du carton V1 décodait en 255/73/81 sur téléphone au lieu de 241/58/84",
+   "Intermédiaires sans perte (qp 0) ; encodage final H.264 High 4.1, CRF 16, GOP fermé de 12 images, 2 images B, moov en tête, AAC 48 kHz 256 kb/s",
+   "Couverture 9:16 : image 4:5 centrée dans la bande 1080x1350 (survit aux recadrages 3:4 et 4:5), mention « Image générée par IA »"
+  ],
+  "controles_master": {
+   "format": "1080x1920 H.264 High 4.1 24 i/s BT.709 + AAC 48 kHz stéréo",
+   "duree_s": 12.667,
+   "images": 304,
+   "decodage": "OK",
+   "loudness_lufs": -14.5,
+   "true_peak_dbtp": -1.4,
+   "lra_lu": 7.2,
+   "transcription": "Whisper small : fr 0,99, « Un seul trait. » puis « Et la pièce devient quelqu’un. »",
+   "textes_hors_zone_visible": 0,
+   "contraste_pire_10_pourcent": {
+    "mention": 6.4,
+    "accroche": 3.1,
+    "phrase_2": 13.6
+   },
+   "carmin_carton_decode_bt709": [
+    245,
+    55,
+    83
+   ],
+   "sha256_fichier_livre": "65611054310be44b8170adf30d8f695e9740c52ac84d677c8a88b367b86d7bc3",
+   "note_sha256": "Empreinte du fichier du dossier projet, qui ajoute un manifeste C2PA signé par Anthropic (boîte uuid) ; la sortie brute de edit_v11.sh a une autre empreinte"
+  },
+  "publication": {
+   "obligations": [
+    "AI Act art. 50(4) (depuis le 2026-08-02) : mention incrustée + réglage IA de chaque plateforme",
+    "Instagram : « Ajouter une mention IA » dans l'app mobile",
+    "TikTok : contenu généré par l'IA + divulgation commerciale « Votre marque »",
+    "YouTube : Attributs > Utilisation de l'IA = Oui ; pas conçu pour les enfants",
+    "Légende : première ligne « Film réalisé avec l'IA : Veille est une pièce imaginée par BOJ.ART, pas encore sculptée. »",
+    "Pas de prix, de disponibilité, de lien d'achat ni de précommande tant que la pièce n'existe pas (C. conso L121-2, L121-3)"
+   ],
+   "statut": "Non publié ; publication soumise à l’accord d’Olsen (fichier, compte, texte, date, mentions)"
+  }
  }
 }
