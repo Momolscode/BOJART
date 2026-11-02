@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "c71628cf20426dd8b4bdedbab2dcf403f5135667",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/c71628cf20426dd8b4bdedbab2dcf403f5135667.json",
+      "head_sha": "b49101e3acad6257e2d1a610dac5fb95ec0a8bfb",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/b49101e3acad6257e2d1a610dac5fb95ec0a8bfb.continuation-http.json",
       "status": "partial",
       "pending_paths": [
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
@@ -62,17 +62,6 @@
         "jarvis/CLAUDE.md",
         "jarvis/apps/jarvis/CONTEXTE_LISIBLE.md",
         "jarvis/apps/jarvis/REPRISE_CLAUDE.txt",
-        "jarvis/apps/jarvis/app/console.html",
-        "jarvis/apps/jarvis/app/dialogue.py",
-        "jarvis/apps/jarvis/app/index.html",
-        "jarvis/apps/jarvis/app/knowledge.html",
-        "jarvis/apps/jarvis/app/knowledge.js",
-        "jarvis/apps/jarvis/app/tower.css",
-        "jarvis/apps/jarvis/app/ui.css",
-        "jarvis/apps/jarvis/app/ui.js",
-        "jarvis/apps/jarvis/app/workspace.css",
-        "jarvis/apps/jarvis/app/workspace.html",
-        "jarvis/apps/jarvis/app/workspace.js",
         "jarvis/apps/jarvis/context/CHARACTER_LOCK_ORIGINAL_V6.json",
         "jarvis/apps/jarvis/context/CONTEXTE_REFERENCE.json",
         "jarvis/apps/jarvis/context/CONTEXTE_STUDIO_M03.json",
@@ -573,9 +562,10 @@
         "4be8480b653d98b4744b5a59ca89d2ee1d732d6e",
         "20283c3136c66fbfca78a9e733b5c74bd5dfcf03",
         "1f46b0780f9bae831425924588a5926971e23f7a",
-        "d5855c1e8c10f6ab57d7b362eb1d954c722b340b"
+        "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
+        "b49101e3acad6257e2d1a610dac5fb95ec0a8bfb"
       ],
-      "updated_at": "2026-11-02T00:23:03Z"
+      "updated_at": "2026-11-02T00:33:22.724Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
