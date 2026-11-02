@@ -344,8 +344,8 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 28505,
-      "sha256": "5961580c49d53bdcb59633e8233ea37ba94e95981d714586bea48c25c51ad74b"
+      "bytes": 28630,
+      "sha256": "5515256ec3a53e6e1ff7e217e591dc951ec7b879a975a96c92eb35e559d20e27"
     },
     {
       "path": "bojart_ops/banc_statique.py",

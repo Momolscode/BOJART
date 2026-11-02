@@ -217,10 +217,12 @@ def cp1252_environment(workdir):
         return None, 'localedef absent : émulation cp1252 impossible sur cet hôte.'
     target = Path(workdir) / 'locale'
     target.mkdir(parents=True, exist_ok=True)
-    proc = subprocess.run([localedef, '-i', 'fr_FR', '-f', 'CP1252', str(target / 'fr_FR.CP1252')], capture_output=True, text=True)
+    proc = subprocess.run([localedef, '-i', 'fr_FR', '-f', 'CP1252', str(target / 'fr_FR.CP1252')],
+                          capture_output=True, text=True, encoding='utf-8', errors='replace')
     env = {'LOCPATH': str(target), 'LC_ALL': 'fr_FR.CP1252', 'PYTHONUTF8': '0'}
     probe = subprocess.run([sys.executable, '-c', 'import locale;print(locale.getencoding())'],
-                           env={**os.environ, **env}, capture_output=True, text=True)
+                           env={**os.environ, **env}, capture_output=True, text=True,
+                           encoding='utf-8', errors='replace')
     if probe.stdout.strip().lower() != 'cp1252':
         return None, 'Locale cp1252 non disponible : ' + (proc.stderr or probe.stderr).strip()[-200:]
     return env, None
