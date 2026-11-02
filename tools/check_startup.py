@@ -91,7 +91,7 @@ def acceptance(*, browser=False, chromium=None, screenshots=None, abrupt=False):
                 if chromium: env['BOJ_TEST_CHROMIUM'] = str(chromium)
                 payload = {'origin': origin, 'token': token, 'screenshots': str(screenshots) if screenshots else None}
                 run = subprocess.run(['node', str(ROOT/'tools/memory_browser.cjs')], input=json.dumps(payload),
-                                     cwd=ROOT, env=env, capture_output=True, text=True, timeout=60)
+                                     cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=60)
                 if run.returncode: raise RuntimeError('Browser check failed: '+run.stderr[-2000:])
                 browser_report = json.loads(run.stdout)
             before = AgentMemory(agent.state).status()

@@ -6,7 +6,9 @@ Le dépôt contient le code M07 et son contexte de départ. La mémoire fonction
 
 Installer Python **3.12** depuis [python.org](https://www.python.org/downloads/). Sous Linux, prévoir le paquet `venv` correspondant si le système le sépare. Récupérer ce dépôt avec Git ou **Code → Download ZIP**, puis extraire entièrement le ZIP dans un dossier utilisateur accessible en écriture.
 
-Windows, sur le poste **RTX 4060 Ti 8 Go / RAM 16 Go** indiqué par l'utilisateur : installer et démarrer aussi [Ollama](https://ollama.com/download/windows), puis double-cliquer **Installer_BOJART_4060Ti.cmd**. Après réussite, ouvrir **Lancer_BOJART.cmd**. Voir le [guide dédié au poste](docs/memory/POSTE_RTX4060TI.md) pour les réglages et la recette.
+Windows, sur le poste **RTX 4060 Ti 8 Go / RAM 16 Go** indiqué par l'utilisateur : double-cliquer **Installer_Tout_BOJART.cmd**. Il détecte ce qui manque, affiche le plan et demande **un seul accord**, puis enchaîne seul : Python 3.12 (s'il manque, avec une question à part), Ollama et FFmpeg avec winget, démarrage d'Ollama, Jarvis complet depuis le verrou Windows (mémoire, CAO, orchestration, voix), modèles du profil `speed` testés avant activation, puis le banc de contrôle. Chaque étape est écrite dans `%USERPROFILE%\BOJART\installation\` ; une étape en échec n'arrête que celles qui en dépendent, et une relance reprend sans effacer la mémoire. `python tools/installer_tout.py --simulation` montre le plan sans rien installer. Ce parcours est simulé par le banc et la CI Windows, pas encore exécuté sur la tour. Après réussite, ouvrir **Lancer_BOJART.cmd**. Voir le [guide dédié au poste](docs/memory/POSTE_RTX4060TI.md) pour les réglages et la recette.
+
+**Installer_BOJART_4060Ti.cmd** reste disponible pour la mémoire et les modèles seuls (Ollama déjà installé et démarré), sans CAO, orchestration ni voix.
 
 Pour préparer uniquement la mémoire, sans télécharger de modèles : **Installer_BOJART.cmd**, puis **Lancer_BOJART.cmd**.
 
@@ -39,7 +41,7 @@ Les moteurs CAO/LangGraph, la voix et les modèles Ollama sont des installations
 py -3.12 tools/prepare_installation.py --engines
 ```
 
-Linux : remplacer `py -3.12` par `python3.12`. Ajouter `--voice` pour les bibliothèques voix ; les poids, FFmpeg, le micro et la configuration restent à préparer selon [INSTALLATION.md](docs/INSTALLATION.md). Les versions M07 sont fixées ; leur installation Windows n’a pas encore été essayée sur le poste.
+Linux : remplacer `py -3.12` par `python3.12`. Ajouter `--voice` pour les bibliothèques voix ; les poids, FFmpeg, le micro et la configuration restent à préparer selon [INSTALLATION.md](docs/INSTALLATION.md). Sous Windows, l’installateur installe le **verrou** `jarvis/locks/windows-cp312-<profil>.txt` : toutes les versions, dépendances indirectes comprises, avec l’empreinte SHA-256 de chaque roue (`pip install --require-hashes --no-deps`, puis `pip check`). C’est l’environnement installé et testé par la CI Windows du banc. Si le verrou manque ou ne correspond plus aux requirements, l’installateur le dit et revient aux versions principales épinglées. L’installation n’a pas encore été essayée sur le poste lui-même.
 
 ## 3. Installer les modèles locaux choisis
 
@@ -74,7 +76,13 @@ python -m bojart_memory --state CHEMIN_NOUVELLE_MEMOIRE verify
 
 La mémoire privée est dans `~/BOJART/memory` (`%USERPROFILE%\BOJART\memory` sous Windows). `BOJART_MEMORY_STATE` permet un autre emplacement. Les sauvegardes du panneau vont dans le dossier voisin `memory-backups`. Elles incluent la base et ses originaux ; la configuration Ollama et le rapport d’installation sont à recopier séparément. Les sauvegardes des dossiers M07 restent distinctes.
 
-Les conversations ChatGPT antérieures ne se synchronisent pas automatiquement. Pour importer un export choisi :
+## 5. Rapatrier vidéos, photos et documents
+
+Double-cliquer **Collecter_BOJART.cmd**. Désigner chaque dossier une fois (disque externe, ancien PC, dossier Google Drive synchronisé, export téléchargé) : ils sont mémorisés pour les passages suivants. Le programme montre ce qu'il va lire et l'espace libre, demande un accord, puis copie chaque nouveau fichier dans `%USERPROFILE%\BOJART\collecte\originaux`, sous son empreinte SHA-256, en relisant la copie ; un contenu déjà présent n'est ni recopié ni écrasé, et la copie passe en lecture seule. Les sources ne sont jamais modifiées, déplacées ni supprimées. Les textes (`.md`, `.txt`, `.json`, sous-titres…) entrent dans la mémoire comme documents non vérifiés ; dans un export ChatGPT `.zip`, seul `conversations.json` est lu et rangé dans `sessions`. Fichiers cachés, `.env`, liens et formats inconnus sont ignorés et comptés. Les vidéos reçoivent leur durée et leur format par ffprobe quand FFmpeg est installé. Un rapport daté va dans `collecte\rapports`, et `python tools/collecte_guidee.py verifier` relit tous les originaux. Rien n'est publié ni envoyé.
+
+Les exports TikTok ou Instagram sont conservés comme archives, sans être ouverts : leur dépouillement reste à faire. La collecte est simulée de bout en bout par le banc ; elle n'a pas encore tourné sur les vrais dossiers de la tour.
+
+Les conversations ChatGPT antérieures ne se synchronisent pas automatiquement. Pour importer un export déjà décompressé à la main :
 
 ```bash
 python -m bojart_memory ingest CHEMIN_EXPORT --project bojart.jarvis --collection sessions --provenance "Export sélectionné, origine et date"

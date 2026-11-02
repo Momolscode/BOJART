@@ -63,7 +63,7 @@ python -m unittest discover -s tests_workflows -v
 python tools/simulate_jarvis_workflows.py --repeats 30 --output rapport-workflows.json
 ```
 
-Choisir un chemin neuf : les rapports existants ne sont pas écrasés. Les bases de travail sont créées puis supprimées dans un répertoire temporaire. Aucune donnée de l'atelier n'est consultée.
+Choisir un chemin neuf : les rapports existants ne sont pas écrasés. Pour rejouer toutes les actions de Jarvis (suites, HTTP bout en bout, contrôles Windows), voir [le banc de pré-installation](BANC_SIMULATION_PREINSTALLATION.md). Les bases de travail sont créées puis supprimées dans un répertoire temporaire. Aucune donnée de l'atelier n'est consultée.
 
 Le moteur utilisé est inscrit dans le rapport : `missing_dependency` signifie le repli en règles locales, `sqlite_ready` signifie LangGraph avec checkpoint SQLite. La CI exécute les deux modes sur Linux et Windows. Ses mesures restent séparées des mesures locales et de celles à réaliser sur le PC RTX 4060 Ti.
 

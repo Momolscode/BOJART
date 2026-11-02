@@ -22,6 +22,8 @@ def checksum(path):
     return h.hexdigest()
 
 def ensure_inside(root, relative):
+    # Compare canonical paths: a Windows short name (RUNNER~1) or a junction must not look like an escape.
+    root = root.resolve()
     target = (root / relative).resolve()
     if not target.is_relative_to(root):
         raise ValueError("Unsafe archive path")

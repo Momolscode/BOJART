@@ -76,8 +76,8 @@ def validate(write_manifest=False):
         if any(pattern.search(text) for pattern in SECRET):issues.append({'path':name,'error':'possible_secret'})
         if re.search(r'https://[a-zA-Z0-9.-]+\.cloudfront\.net/user_[^\s"<>]+',text):issues.append({'path':name,'error':'direct_private_media_locator'})
         if name!=MANIFEST:files.append({'path':name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
-    claims=[json.loads(x) for x in (ROOT/'data/knowledge/claims.jsonl').read_text().splitlines()]
-    sources=json.loads((ROOT/'data/knowledge/sources.json').read_text())
+    claims=[json.loads(x) for x in (ROOT/'data/knowledge/claims.jsonl').read_text(encoding='utf-8').splitlines()]
+    sources=json.loads((ROOT/'data/knowledge/sources.json').read_text(encoding='utf-8'))
     source_ids={s['source_id'] for s in sources};claim_ids={c['claim_id'] for c in claims}
     for source in sources:
         if 'path' in source:
@@ -96,14 +96,14 @@ def validate(write_manifest=False):
     try:
         for c in graph:visit(c,set())
     except (ValueError,KeyError):issues.append({'error':'invalid_claim_graph'})
-    for r in json.loads((ROOT/'data/knowledge/index.json').read_text()):
+    for r in json.loads((ROOT/'data/knowledge/index.json').read_text(encoding='utf-8')):
         p=ROOT/r['path']
         if not p.resolve().is_relative_to(ROOT) or not p.is_file():issues.append({'path':r['path'],'error':'missing_canonical_document'})
     if write_manifest and not issues:
-        (ROOT/MANIFEST).write_text(json.dumps({'schema_version':1,'scope':'public monorepo files except this manifest; external originals separately inventoried','files':files},ensure_ascii=False,indent=2)+'\n')
+        (ROOT/MANIFEST).write_text(json.dumps({'schema_version':1,'scope':'public monorepo files except this manifest; external originals separately inventoried','files':files},ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     elif not (ROOT/MANIFEST).is_file():issues.append({'error':'manifest_missing'})
     else:
-        expected=json.loads((ROOT/MANIFEST).read_text())['files']
+        expected=json.loads((ROOT/MANIFEST).read_text(encoding='utf-8'))['files']
         actual={f['path']:f for f in files};expected_map={f['path']:f for f in expected}
         for path in actual.keys()|expected_map.keys():
             if actual.get(path)!=expected_map.get(path):issues.append({'path':path,'error':'manifest_mismatch'})

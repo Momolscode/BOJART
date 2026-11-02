@@ -76,9 +76,9 @@ def main():
     if not result['models']['ok']:
         print('Modèles IA indisponibles ou mal configurés : la recherche par mots reste disponible. '
               'Diagnostic : python -m bojart_memory.agent_cli models', flush=True)
-    env = dict(os.environ, BOJART_MEMORY_STATE=str(memory))
+    env = dict(os.environ, BOJART_MEMORY_STATE=str(memory), PYTHONUTF8='1')
     command = [sys.executable, '-m', 'bojart_memory.agent_cli', '--state', str(memory), 'index']
-    completed = subprocess.run(command, cwd=ROOT, env=env, capture_output=True, text=True)
+    completed = subprocess.run(command, cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8')
     if completed.returncode:
         print('Indexation interrompue. Les sources et versions antérieures sont conservées.', file=sys.stderr)
         print(completed.stderr.strip(), file=sys.stderr)

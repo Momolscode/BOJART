@@ -35,7 +35,7 @@ def main():
     config, config_sha = read_json(args.config)
     # Prevent an old report from masquerading as the checked-out revision.
     revision = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"],
-                                       text=True).strip()
+                                       text=True, encoding="utf-8").strip()
     if audit.get("revision") != revision:
         raise ValueError("Audit revision differs from checkout; regenerate the audit.")
     checkpoint, checkpoint_sha, checkpoint_error = None, None, None

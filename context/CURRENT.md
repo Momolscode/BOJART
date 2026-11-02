@@ -1,5 +1,9 @@
 # État courant — 2 novembre 2026
 
+## Banc de simulation pré-installation — 2 novembre 2026
+
+`tools/banc_preinstallation.py` (ou `Banc_BOJART.cmd`) rejoue les 38 actions de Jarvis cataloguées dans `data/preinstallation/actions-jarvis.json` : toutes les suites (dont les suites Jarvis M02–M07, absentes de la CI jusque-là), 16 scénarios HTTP contre le vrai serveur avec trois écrans simulés, arrêt brutal et base corrompue, contrôles de corruption et pièges Windows, encodage cp1252 et roues Windows cp312. Corrigés : lanceurs `.cmd` en CRLF, `PYTHONUTF8` manquant, E/S texte sans UTF-8 explicite, message de base corrompue, chemins Windows non canoniques (noms courts 8.3) dans la restauration d'archive. Restent : médias M07, logo et polices du site hors dépôt, dépendances transitives non épinglées (traité depuis par les verrous Windows `jarvis/locks/`, générés par la CI Windows), reprise manuelle d'un tour reçu pendant un autre. Non codé dans `main` : figurine/découpe/tranchage (PR #15), inventaire et pilotage des imprimantes, devis. Simulation uniquement : aucune qualification de la tour, de la voix, des moniteurs ou des machines. Voir `docs/BANC_SIMULATION_PREINSTALLATION.md`.
+
 ## Audit transversal local V5 — 2 novembre 2026
 
 La copie de passation intègre le distant c71628cf20426dd8b4bdedbab2dcf403f5135667 et les corrections locales antérieures. Les anciens comptes de fichiers/tests ci-dessous restent rattachés à leurs recettes ; le manifeste et les preuves V5 décrivent la livraison actuelle. Elle est publiée par rejeu exact de ses 926 fichiers puis réconciliée avec `b49101e`. Voir `docs/evidence/handoff-v5-2026-11-02/README.md`. Les rapports détaillés et les recettes du paquet restent hors du dépôt public.
