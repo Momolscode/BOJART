@@ -186,3 +186,22 @@ qualification sur la tour.
   avant-bras ; remplacées par des anneaux `details.ring`).
 - **Réexamen** : comparaison avec une génération image → 3D d'un dessin original d'Ardoise sur la tour
   (backlog, tâche 2) et revue par Olsen ou un sculpteur.
+
+## D14. Végéta depuis un fichier sous licence (choix d'Olsen, 2 novembre 2026, 12:26 UTC)
+
+- **Contexte** : sur la carte de la fiche D13, Olsen a choisi « Végéta depuis un fichier sous licence » :
+  il fournit un modèle 3D et une licence écrite qui autorise la vente ; Jarvis contrôle le fichier,
+  ajoute le socle et le tranche, sans sculpter le personnage.
+- **Condition** : la licence doit venir des ayants droit de Dragon Ball (Bird Studio/Shueisha, Toei
+  Animation) ou d'un licencié officiel, et couvrir la fabrication et la vente de figurines (objet,
+  territoire, durée). Une licence « commerciale » vendue avec un STL de fan ne suffit pas : le
+  sculpteur ne peut pas céder des droits sur un personnage qui n'est pas à lui. Jarvis vérifie le
+  contenu du document et le garde comme fiche de provenance (`--provenance`) ; il ne peut pas en
+  attester la validité juridique.
+- **Décision** : pour un personnage sous droits de tiers, la chaîne ne produit aucune image de sa
+  ressemblance, même depuis un fichier sous licence : rendus marqués SKIPPED, pas d'aperçu des couches
+  (`FigurineRun._no_images`), contrôle de la visionneuse refusé sans capture (code 3). Contrôles,
+  réparation surveillée, socle lisse à tenons, export 3MF et tranchage restent faits. Test :
+  `test_licensed_third_party_mesh_is_processed_without_any_image`.
+- **État** : en attente du fichier et de la licence d'Olsen.
+

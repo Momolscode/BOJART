@@ -1294,8 +1294,8 @@
     },
     {
       "path": "jarvis/AGENTS.md",
-      "bytes": 6894,
-      "sha256": "84842f0593b3069ed3655ef68233b47de560618a10f391c109cc8499b7bf06dd"
+      "bytes": 7055,
+      "sha256": "9f2bc9ed80ea5ef6f2d1f196000897ae5854b2213b7fb6d63d749f2ee3c2d3b3"
     },
     {
       "path": "jarvis/BILAN_LIVRAISON.md",
@@ -1459,8 +1459,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/pipeline.py",
-      "bytes": 27100,
-      "sha256": "6d02123e16767d396c83af28fc0a5b67794adb4732bcd136c13899ac9e4b9bb6"
+      "bytes": 27919,
+      "sha256": "b6a543bea71a75c05565157f77fca92a4daf6501ead2ab6a34c8b9904b4447bf"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/sculpt.py",
@@ -2249,8 +2249,8 @@
     },
     {
       "path": "jarvis/docs/m08/BACKLOG_ET_REPRISE_M08.md",
-      "bytes": 6383,
-      "sha256": "835f4770985ae0d354708cace16017ddcedbfb48fa278a2224498ac8025977a0"
+      "bytes": 6650,
+      "sha256": "78a0e1ac5dfab23774614a5d52890be9e77a24a86e414c32fa192d1698fea876"
     },
     {
       "path": "jarvis/docs/m08/GRILLE_CONCEPTION_FIGURINE.md",
@@ -2259,8 +2259,8 @@
     },
     {
       "path": "jarvis/docs/m08/REGISTRE_DECISIONS_M08.md",
-      "bytes": 15289,
-      "sha256": "43ca86cdd604e88ade746838e344fa76dd89eecaecfeaf7c09caa127568e291d"
+      "bytes": 16722,
+      "sha256": "3f574d013ef99b285674d84676e8d9690a6095b762a1433bd75199358ac68327"
     },
     {
       "path": "jarvis/docs/m08/RELEASE_M08.md",
@@ -2889,8 +2889,8 @@
     },
     {
       "path": "jarvis/tests/test_figurine_m08.py",
-      "bytes": 19935,
-      "sha256": "361714e71c3a415c581749fc0606dcf600b3c5e5a2d8b769329e8378dd23a54b"
+      "bytes": 21287,
+      "sha256": "d6a9f3f39f78a1ad80142bdf0c513782feb7d7f6e973d7ab92095d42bf1478b3"
     },
     {
       "path": "jarvis/tests/test_growth.py",
@@ -2954,8 +2954,8 @@
     },
     {
       "path": "jarvis/tools/figurine_viewer_check.cjs",
-      "bytes": 7193,
-      "sha256": "9df627cec67279644521b1737f4b4fd294995592d1287f1f59f4ee5f645d2517"
+      "bytes": 7776,
+      "sha256": "a6c97c5533fb8999880fc5b6aceca63794541480ebf71e95cd55ca8e2af33c3a"
     },
     {
       "path": "jarvis/tools/legacy_publish_github.py",

@@ -10,6 +10,14 @@ const outDir = path.resolve(process.argv[3] || path.join(runDir, 'visionneuse'))
 const repo = path.resolve(__dirname, '..', '..');
 const viewerDir = path.join(repo, 'jarvis/apps/jarvis/app/figurine/viewer');
 const vendorDir = path.join(viewerDir, 'vendor');  // three 0.180.0 complet (voir VENDOR.json)
+// Personnage sous droits de tiers : aucune capture de sa ressemblance, même depuis un fichier sous
+// licence (fiche D14). Le fichier s'ouvre dans la visionneuse, mais ce contrôle n'en produit pas d'image.
+const specPath = path.join(runDir, 'spec.json');
+const rights = fs.existsSync(specPath) ? ((JSON.parse(fs.readFileSync(specPath, 'utf8')).character || {}).rights) : null;
+if (rights !== 'bojart_original') {
+  console.error(`Contrôle non lancé : personnage ${rights ? 'sous droits de tiers' : 'inconnu (spec.json absent)'}, aucune capture produite.`);
+  process.exit(3);
+}
 fs.mkdirSync(outDir, { recursive: true });
 const routes = {
   '/index.html': path.join(viewerDir, 'index.html'),

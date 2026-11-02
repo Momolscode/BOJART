@@ -395,7 +395,16 @@ class FigurineRun:
             raise RuntimeError('Contrôles éliminatoires : ' + '; '.join(elim))
         return {'_outputs': ['checks.json'], 'verdict': report['verdict']}
 
+    def _no_images(self):
+        """Personnage sous droits de tiers : aucune image de sa ressemblance (rendus, aperçu des couches),
+        même depuis un fichier fourni avec sa licence (fiche D14). Le contrôle, le socle et le tranchage
+        restent faits ; Olsen regarde son fichier lui-même."""
+        return self.spec['character']['rights'] != 'bojart_original'
+
     def _s_renders(self):
+        if self._no_images():
+            return {'_status': 'SKIPPED', 'reason': 'personnage sous droits de tiers : Jarvis ne produit aucune image '
+                                                     'de sa ressemblance, même depuis un fichier sous licence'}
         blender = shutil.which('blender')
         if 'no_blender' in self.faults or not blender:
             raise Blocked('Blender absent : rendus non produits (aucune image substituée). Étape BLOQUÉE.')
@@ -445,8 +454,12 @@ class FigurineRun:
                 (sd / f'{part}_echec.json').write_text(json.dumps(r, ensure_ascii=False, indent=1), encoding='utf8')
                 raise RuntimeError(f'Tranchage {part} en échec (code {r["returncode"]}) ; aucun chiffre substitué.')
             results[part] = r; outs.append(f'tranchage/{r["gcode"]}')
-        prev = slicing.layer_previews(sd / results['figurine']['gcode'], sd / 'apercu_couches_figurine.png')
-        outs += ['tranchage/apercu_couches_figurine.png', 'tranchage/profil_simulation.ini']
+        if self._no_images():
+            prev = {'status': 'SKIPPED', 'reason': 'aucune image d’un personnage sous droits de tiers'}
+        else:
+            prev = slicing.layer_previews(sd / results['figurine']['gcode'], sd / 'apercu_couches_figurine.png')
+            outs.append('tranchage/apercu_couches_figurine.png')
+        outs.append('tranchage/profil_simulation.ini')
         (sd / 'tranchage.json').write_text(json.dumps({'parts': results, 'preview': prev, 'profile': slicing.PROFILE,
                                                        'bed_hypothesis_mm': slicing.SIM_BED_MM}, ensure_ascii=False, indent=1), encoding='utf8')
         outs.append('tranchage/tranchage.json')

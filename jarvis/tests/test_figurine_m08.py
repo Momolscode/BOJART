@@ -233,6 +233,27 @@ class PipelineFaultTests(unittest.TestCase):
         self.assertEqual(res['status'], 'BLOCKED')
         self.assertIn('provenance', self.state(res)['steps']['geometry']['reason'])
 
+    def test_licensed_third_party_mesh_is_processed_without_any_image(self):
+        # Fichier fourni : un maillage abstrait de substitution (géométrie de la Sentinelle), jamais une
+        # ressemblance. Le personnage demandé reste sous droits de tiers : contrôle, socle et tranchage
+        # oui, aucune image (rendus, aperçu des couches).
+        from figurine import sculpt
+        nominal, _ = sculpt.sculpt_figure('repos_fier', voxel=2.0, smooth_iterations=2)
+        mesh, licence = self.out / 'fourni.stl', self.out / 'licence.txt'
+        nominal.export(mesh)
+        licence.write_text('Fiche de provenance de test : aucune licence réelle.', encoding='utf8')
+        res = self.run_(VEGETA, mesh=mesh, provenance=licence)
+        st = self.state(res)
+        self.assertEqual(st['steps']['geometry']['status'], 'DONE')
+        self.assertEqual(st['steps']['checks']['status'], 'DONE')
+        self.assertEqual(st['steps']['renders']['status'], 'SKIPPED')
+        self.assertEqual(list(Path(res['dir']).rglob('*.png')), [])
+        self.assertFalse((Path(res['dir']) / 'rendus').exists())
+        if SLICER:
+            self.assertEqual(res['status'], 'DONE', res)
+            sl = json.loads((Path(res['dir']) / 'tranchage/tranchage.json').read_text(encoding='utf8'))
+            self.assertEqual(sl['preview']['status'], 'SKIPPED')
+
     def test_rejections_happen_before_any_task(self):
         for text, status in (("Jarvis, crée-moi une figurine", 'CLARIFY'), ("Jarvis, imprime la Sentinelle 3D", 'REFUSED'),
                              ("Crée un socle de 180 mm", 'NOT_FIGURINE')):
