@@ -34,7 +34,7 @@ def probe(path):
  args=['ffprobe','-v','error','-max_alloc','67108864','-protocol_whitelist','file','-format_whitelist','mov,matroska,webm','-probesize','10000000',
        '-analyzeduration','3000000','-of','json','-show_entries',
        'format=duration,size:stream=codec_type,codec_name,width,height,avg_frame_rate',str(path)]
- try:p=subprocess.run(args,stdin=subprocess.DEVNULL,capture_output=True,text=True,timeout=15,check=False)
+ try:p=subprocess.run(args,stdin=subprocess.DEVNULL,capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=15,check=False)
  except (OSError,subprocess.TimeoutExpired) as e:raise Rejected('FFprobe absent ou délai dépassé.') from e
  if p.returncode or len(p.stdout)>200000:raise Rejected('Média illisible : aucun état prêt enregistré.')
  try:

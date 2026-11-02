@@ -205,6 +205,8 @@
         "bojart_ops/*",
         "tests_ops/*",
         "data/preinstallation/target-inventory.template.json",
+        "data/preinstallation/actions-jarvis.json",
+        "Banc_BOJART.cmd",
         "skills/bojart-context-reconstruction/*",
         "skills/bojart-evidence-audit/*",
         "skills/bojart-tool-qualification/*",

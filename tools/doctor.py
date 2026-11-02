@@ -39,10 +39,10 @@ for name in ('cadquery', 'trimesh', 'langgraph.graph', 'langgraph.checkpoint.sql
 print('BOJART_PROBE:' + json.dumps(result))
 """
     env = dict(os.environ, LANGSMITH_TRACING='false', LANGCHAIN_TRACING_V2='false',
-               HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1')
+               HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1', PYTHONUTF8='1')
     try:
         result = subprocess.run([sys.executable, '-c', code], cwd=ROOT, env=env,
-                                capture_output=True, text=True, timeout=30)
+                                capture_output=True, text=True, encoding='utf-8', timeout=30)
         lines = [s for s in result.stdout.splitlines() if s.startswith('BOJART_PROBE:')]
         if result.returncode or not lines:
             return {'status': 'failed', 'error_type': 'RuntimeImportFailed'}

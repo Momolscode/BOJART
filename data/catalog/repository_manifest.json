@@ -28,6 +28,11 @@
       "sha256": "d2a08acafd45e0860898926c1fbd812616dcc07defe0133d6981bb764adc3ca8"
     },
     {
+      "path": ".github/workflows/preinstall-bench.yml",
+      "bytes": 1667,
+      "sha256": "bd79c04a11dd66e70d1a5dcdd1d5a5c44f3cd06fa1650d678ce6f1430ea413a4"
+    },
+    {
       "path": ".github/workflows/quality.yml",
       "bytes": 819,
       "sha256": "b360eea50d81efd1da8344e28019e7d59d4899d75d458c6f41232319106428f5"
@@ -53,14 +58,19 @@
       "sha256": "fd8e85189b4eccfde8b654fed82d23586f2860b15fab9551fc8c5745aebe8591"
     },
     {
+      "path": "Banc_BOJART.cmd",
+      "bytes": 801,
+      "sha256": "89a6873fbda9a7480e5fa386b2abfce20fdc1183694c598742360cdfd919b6bb"
+    },
+    {
       "path": "INSTALLER_DEMAIN.md",
       "bytes": 7210,
       "sha256": "9c3ecb584a27b6e85273a18d26236b0be3d424f683ff59562772184b8dd07267"
     },
     {
       "path": "Installer_BOJART.cmd",
-      "bytes": 248,
-      "sha256": "2a9801ecba1d92a75a72aceb4de757ba5de345465e168bc1be73cc75cce1d3b1"
+      "bytes": 259,
+      "sha256": "0af89a0aaccac45de4776e2b1a2cd4682a03fd480d82e9c616a99fce160fac9a"
     },
     {
       "path": "Installer_BOJART.sh",
@@ -69,13 +79,13 @@
     },
     {
       "path": "Installer_BOJART_4060Ti.cmd",
-      "bytes": 510,
-      "sha256": "d1421a61341a57bc3b409f402ee71daab12eec495e5325b51e8450e04da5038e"
+      "bytes": 526,
+      "sha256": "bd6298dd19ce4d9addf2f4b52178b2693ef0163582bc231ce7c58e4854f6036e"
     },
     {
       "path": "Lancer_BOJART.cmd",
-      "bytes": 276,
-      "sha256": "67b7a95a30bb4b49cf5d7416fac78241a5d632c1428d2dcf933460458f15132b"
+      "bytes": 288,
+      "sha256": "3b432423e23b4dd7b72b5d0149f7adbe9e6a25f3ba28c72b1f22f98bdf9fc416"
     },
     {
       "path": "Lancer_BOJART.sh",
@@ -84,8 +94,8 @@
     },
     {
       "path": "Mesurer_BOJART.cmd",
-      "bytes": 685,
-      "sha256": "94ef2a0ad13a717facc7d29bc73066f116818e9a99c859839f81b43fb16e9652"
+      "bytes": 709,
+      "sha256": "ae0afe485bb36ee2170f182ac1bd2cf4e380a9ed12cc46f6d8f0e45b54c9d472"
     },
     {
       "path": "PRODUCTION.md",
@@ -104,8 +114,8 @@
     },
     {
       "path": "Simuler_BOJART.cmd",
-      "bytes": 455,
-      "sha256": "7c7c843c1d463bd382173afb40a6762fc05e75cae6e8f22dd220384b9c1e7e25"
+      "bytes": 486,
+      "sha256": "b4ec218965672779621b8ad4fb86c36b1cc71b3a9097de99ed25ad1bd2825219"
     },
     {
       "path": "archive/2026-11-01/MANIFEST.json",
@@ -244,8 +254,8 @@
     },
     {
       "path": "bojart_memory/benchmarks.py",
-      "bytes": 22718,
-      "sha256": "190623bf26eb1ad262bff84e57014c13936f9a237c3056e79ac0aeff9722dd15"
+      "bytes": 22788,
+      "sha256": "893c21e471805f61bd23f46be7890ecd70a48a2d13c0a2f194a34e7af8338649"
     },
     {
       "path": "bojart_memory/context_selection.py",
@@ -328,6 +338,21 @@
       "sha256": "22a376039be51e51d959a0239b85348d4a31b5d005f543427790a1bdeb00628f"
     },
     {
+      "path": "bojart_ops/banc_http.py",
+      "bytes": 29890,
+      "sha256": "1414b457fa4f4e9b51a1347da781e747c9631974d2fa6e5864d32b4579e793f7"
+    },
+    {
+      "path": "bojart_ops/banc_simulation.py",
+      "bytes": 28505,
+      "sha256": "5961580c49d53bdcb59633e8233ea37ba94e95981d714586bea48c25c51ad74b"
+    },
+    {
+      "path": "bojart_ops/banc_statique.py",
+      "bytes": 19320,
+      "sha256": "ed03d558bef54b7d446249844fe05c44728090e3e9a80a350b14840748755b44"
+    },
+    {
       "path": "bojart_ops/ledger.py",
       "bytes": 10884,
       "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31"
@@ -339,8 +364,8 @@
     },
     {
       "path": "bojart_ops/preinstallation.py",
-      "bytes": 13463,
-      "sha256": "2aad092a42e89794d7412eb0f9c6b88d084b9ae5d40db8e01cf6ef4c53220894"
+      "bytes": 13499,
+      "sha256": "123fc2f17eb3ba2351e0723092ff241bc7a9949b8e2348c6bdda2249be4d635b"
     },
     {
       "path": "bojart_ops/production_recovery.py",
@@ -359,13 +384,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 12419,
+      "sha256": "8a161d9515b8c39f96063846820a35c5833326e69130ac13497bde9006add438"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 43173,
+      "sha256": "a282872194fb3c685b2b0b3f6cdad329614cdb56c32a5664762f5c3733665dfb"
     },
     {
       "path": "creative/CURRENT.md",
@@ -464,8 +489,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 17977,
-      "sha256": "fc9c6ea6d92b3b1772be12863a6314513140ca73038a2d98966f684cdacd911b"
+      "bytes": 18011,
+      "sha256": "e2eaefc537ca0fdeec365db9a6de9f6a293ec92f43142d1c953302bb54c7c18d"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -476,6 +501,11 @@
       "path": "data/knowledge/sources.json",
       "bytes": 8314,
       "sha256": "24ea61ea661b3b6fd5357692a1993701b81ce834493d63c4d81f722d68c576b9"
+    },
+    {
+      "path": "data/preinstallation/actions-jarvis.json",
+      "bytes": 18867,
+      "sha256": "c61ec4660c6cfae2f81945a0f596b02dc0999670c16bba3b796295baed3cbdc9"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -536,6 +566,11 @@
       "path": "docs/AUDIT_TRANSVERSAL_V5.txt",
       "bytes": 2786,
       "sha256": "ccee73322e33d39e4bafcacb5b568fe4030f7b677f9fca9eb8aaa533cc300872"
+    },
+    {
+      "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
+      "bytes": 6842,
+      "sha256": "57e74486c6a8330217983ee07689d641c8c96a20b43d72ec566026fbee6ecc43"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -639,8 +674,8 @@
     },
     {
       "path": "docs/SIMULATIONS_ATELIER.md",
-      "bytes": 7775,
-      "sha256": "9d6341f1bff4e5d089c956ceebb86c0a42fe7e1416a2cc1d12f795807e12d10b"
+      "bytes": 7939,
+      "sha256": "469f93124350e5bda2736a179070daf416908f935987f3b97882f3bdc0bf2139"
     },
     {
       "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
@@ -1314,8 +1349,8 @@
     },
     {
       "path": "jarvis/Lancer_Jarvis.cmd",
-      "bytes": 789,
-      "sha256": "4bdc5131b87c59ff6b33f249ca73c92480efcf3622fd9e1635eac4e2b8b11668"
+      "bytes": 819,
+      "sha256": "811138bf4340d1726b1e2aae92e21698ecbb0ff4ce0e278e6730c9f8dd3944f8"
     },
     {
       "path": "jarvis/Lancer_Jarvis.sh",
@@ -1324,8 +1359,8 @@
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.cmd",
-      "bytes": 58,
-      "sha256": "1a9f9f6983eff4502e1f6071e417bdf0264d91e6c6ac995ee5437e5d8fbfcbe7"
+      "bytes": 60,
+      "sha256": "2adec82db3ce960b98d362eda7940f53aedd2fbc19448c01de954959e7ad180a"
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.sh",
@@ -1339,8 +1374,8 @@
     },
     {
       "path": "jarvis/Restaurer_Jarvis.cmd",
-      "bytes": 1049,
-      "sha256": "d7bc70e5b0e097cf97c3a334f29877278e401a9401dc6cfca86f3c9d5f58d0d4"
+      "bytes": 1093,
+      "sha256": "7ed76514d1a6df65312f1dfe2013364b0b38866bc8e5a9a5265247c5bedcbace"
     },
     {
       "path": "jarvis/Restaurer_Jarvis.sh",
@@ -1359,8 +1394,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.cmd",
-      "bytes": 928,
-      "sha256": "13504208cf7ef851cbec2eae3b99ce7c6cba2ffa4a6d663bba8d2299b5c61889"
+      "bytes": 963,
+      "sha256": "5fff1a9dacc84ec7d46b6ea4ef0fc00e428468640b267b6ad76b0020a2399a02"
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.sh",
@@ -1394,8 +1429,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/consolidated_workbench.py",
-      "bytes": 19092,
-      "sha256": "025b098a9b27692b6e7dacb5e011b50bfeb5dbc06648507734522c7a50389172"
+      "bytes": 19559,
+      "sha256": "9c8e32b464aa94639c51e325869cda80bef015724f8c2222606f1ea923c18a0e"
     },
     {
       "path": "jarvis/apps/jarvis/app/context_guard.py",
@@ -1489,8 +1524,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/media_library.py",
-      "bytes": 15103,
-      "sha256": "9afeff32fa7b03822f3c7addae8f648434210cf01552297d619402b44d639809"
+      "bytes": 15137,
+      "sha256": "03505a441fcc30c604dbee6a0c6221693c54e0c0f935971c5bda85c87836b8f7"
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.css",
@@ -1514,8 +1549,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/server.py",
-      "bytes": 9452,
-      "sha256": "e2643bf42a36b481371a1c44c688e8f0a4185943914f509521a60cf81f54b0a8"
+      "bytes": 9468,
+      "sha256": "f3691449334145f19830b1d3272dbd28c16c07b550231603359800b74744451f"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
@@ -2739,8 +2774,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 14650,
+      "sha256": "d31667b774673e78c0fa35eb98c4917846c7089e4108b55fcaac570b247c3647"
     },
     {
       "path": "ops/request-example.json",
@@ -4414,8 +4449,8 @@
     },
     {
       "path": "tests/test_memory_http.py",
-      "bytes": 3186,
-      "sha256": "bf8ddde9cdbc954d5b7cb33387d937a3fb087673732d96c9983ee34c1602a6c1"
+      "bytes": 3204,
+      "sha256": "5f611e413c7846fb5b1d794e7fd2ff0ea165387b34046c32dd51bdbccf1afdbe"
     },
     {
       "path": "tests/test_production_recovery.py",
@@ -4533,6 +4568,11 @@
       "sha256": "1c85859de6aa7145a6632313d792ebb72aefdec91dc6cf8949730dd4928d49cc"
     },
     {
+      "path": "tests_ops/test_banc_simulation.py",
+      "bytes": 11349,
+      "sha256": "1dd5c6d4cd8c42b8362550b11e0a93723cba7ca9d76d74c73ca54cb5f89c4cbb"
+    },
+    {
       "path": "tests_ops/test_ops.py",
       "bytes": 12230,
       "sha256": "f5c732d06da11646227993948fdb7249b2e9ebe82403253d1fad7932c1918dc0"
@@ -4563,19 +4603,24 @@
       "sha256": "c17763734617bb272b412bb94913aeb31dde88325bec57a419e9994846dda118"
     },
     {
+      "path": "tools/banc_preinstallation.py",
+      "bytes": 2895,
+      "sha256": "80bf51132b0714b928bec7f15be31530ace7b205e5f2a15a5050bc1bcffb629d"
+    },
+    {
       "path": "tools/benchmark_jarvis.py",
       "bytes": 1990,
       "sha256": "fddb1f1277bf0ee974bbf60562dd8f6d016a8316a5cb6df26024d1a680bd7647"
     },
     {
       "path": "tools/check_startup.py",
-      "bytes": 8047,
-      "sha256": "d94d64ed1d71455d694ec06f75f688e6f57b3cb5f49d151324bea6fc504bb6a6"
+      "bytes": 8065,
+      "sha256": "6042f0e33bdcf149696245819784e7c815bd481b92e5d36a342e4c7550cf0050"
     },
     {
       "path": "tools/doctor.py",
-      "bytes": 8262,
-      "sha256": "f7d0ef37cd00d5a141fee14af4a766d8f073a7ff507291188501c03588037353"
+      "bytes": 8296,
+      "sha256": "22c0873fb6d4edb06f115be4e1f8be12eed889f994272769aac1c22a71203805"
     },
     {
       "path": "tools/download_remote_media.py",
@@ -4584,13 +4629,13 @@
     },
     {
       "path": "tools/evaluate_memory.py",
-      "bytes": 1270,
-      "sha256": "04e157a5843f21b6a4adf24a30883bfcdb2be000c2a21b1378adebf20b924480"
+      "bytes": 1286,
+      "sha256": "f6cff7b23600bb8f2eefabac98d27febba55b7ef4b61099ca3b6d71ee9cbeeb0"
     },
     {
       "path": "tools/hydrate_m07_media.py",
-      "bytes": 1982,
-      "sha256": "a94ea8ed0bd0a01046d7b6d5a79dcb3a2c0da549cbd4dcad8ae94d0118b85502"
+      "bytes": 1998,
+      "sha256": "4d3cfb982dcdb616199a093713ccca19f4391a8cff66a08bcd2c29c33575d53a"
     },
     {
       "path": "tools/memory_browser.cjs",
@@ -4604,13 +4649,13 @@
     },
     {
       "path": "tools/orchestrate.py",
-      "bytes": 4123,
-      "sha256": "012d83cd6bf812b05a0a97b4f9dcc3ffa464a5ae027dbdbc5d88b6308b2269a3"
+      "bytes": 4141,
+      "sha256": "23dd0137b420e4a44ce242d64559d08a47f79078fe90e27f2d0e812becd1e6dc"
     },
     {
       "path": "tools/prepare_installation.py",
-      "bytes": 3148,
-      "sha256": "04da8d52217b050c2731b933d8e42520955cdd4a82e238e53205f57bf8d78622"
+      "bytes": 3232,
+      "sha256": "70fe327ca5b4afbe7e9fa19d35726e35722f294f427d28317c76e41c8288d271"
     },
     {
       "path": "tools/prepare_jarvis.py",
@@ -4649,13 +4694,13 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 5335,
-      "sha256": "abd80dab005b96defe67ad81d5357d2cf1584db216c4016060a5ed558befc194"
+      "bytes": 5369,
+      "sha256": "ef7427c3d5c47b962d69c64589ecfd8b684dc4ea1663ccefb2588b676fff7a4d"
     },
     {
       "path": "tools/validate_repository.py",
-      "bytes": 7610,
-      "sha256": "2ee6670d17ecfe7ae50441997d749c8cd0d62a159b16fa9cb405c2f17b08d9ca"
+      "bytes": 7704,
+      "sha256": "5a2521d0652eb82062742bce32718eaacd0e98de0c52a6b590ad5bb23c1d587b"
     },
     {
       "path": "tools/verify_manifest.py",

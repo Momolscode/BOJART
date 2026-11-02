@@ -1,0 +1,573 @@
+{
+  "schema": "bojart.banc-actions.v1",
+  "observed_on": "2026-11-02",
+  "scope": "Catalogue des actions que Jarvis devra exécuter sur la tour, avec les vérifications du banc qui les simulent. Un statut « simulé » ne qualifie ni le matériel, ni la voix réelle, ni la qualité artistique.",
+  "sources": [
+    "context/CURRENT.md",
+    "jarvis/AGENTS.md",
+    "jarvis/apps/jarvis/app/launch_readiness.py",
+    "docs/SIMULATIONS_ATELIER.md",
+    "docs/COMMANDES_DASHBOARD.md"
+  ],
+  "actions": [
+    {
+      "id": "installation.dependances_windows",
+      "domaine": "Installation",
+      "action": "Installer les dépendances épinglées sur Windows 11 / Python 3.12",
+      "exemple": "Installer_BOJART.cmd",
+      "etat_code": "code",
+      "verifications": [
+        "reseau:roues_windows",
+        "statique:dependances_epinglees",
+        "suite:tests"
+      ],
+      "hors_simulation": [
+        "Installation réelle sur la tour",
+        "Pilote NVIDIA et VRAM libre",
+        "Espace disque libre"
+      ],
+      "porte_reelle": "restore_drill"
+    },
+    {
+      "id": "installation.lanceurs",
+      "domaine": "Installation",
+      "action": "Lancer, mesurer, simuler et restaurer par double-clic",
+      "exemple": "Lancer_BOJART.cmd, Restaurer_Jarvis.cmd",
+      "etat_code": "code",
+      "verifications": [
+        "statique:scripts_cmd",
+        "statique:chemins_windows",
+        "suite:tests"
+      ],
+      "hors_simulation": [
+        "Exécution cmd.exe réelle sur la tour (la CI Windows couvre trois lanceurs)"
+      ],
+      "porte_reelle": "restore_drill"
+    },
+    {
+      "id": "installation.encodage",
+      "domaine": "Installation",
+      "action": "Lire et écrire les textes français sans corruption sous Windows",
+      "exemple": "Accents, apostrophes typographiques, chemins « Dossier épreuve »",
+      "etat_code": "code",
+      "verifications": [
+        "statique:python_encodage",
+        "encodage:cp1252"
+      ],
+      "hors_simulation": [
+        "Console et page de code réelles de la tour"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "demarrage.securite_locale",
+      "domaine": "Démarrage",
+      "action": "Démarrer le serveur local, ouvrir la session et refuser les accès étrangers",
+      "exemple": "http://127.0.0.1:8767/?session=…",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_demarrage_securite",
+        "suite:tests",
+        "outil:check_startup_abrupt"
+      ],
+      "hors_simulation": [
+        "Pare-feu Windows et antivirus de la tour"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "voix.ecoute",
+      "domaine": "Voix",
+      "action": "Réserver le micro pour une seule fenêtre et refuser l'audio non réservé",
+      "exemple": "Bouton Parler de la tour de contrôle",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_voix_sans_moteur",
+        "suite:node_jarvis",
+        "suite:jarvis_tests"
+      ],
+      "hors_simulation": [
+        "Micro réel, bruit d'atelier, permission navigateur"
+      ],
+      "porte_reelle": "speech_offline"
+    },
+    {
+      "id": "voix.transcription",
+      "domaine": "Voix",
+      "action": "Transcrire la parole en français, hors ligne",
+      "exemple": "« Jarvis, affiche le dashboard atelier ! » prononcé",
+      "etat_code": "partiel",
+      "verifications": [
+        "http:http_voix_sans_moteur",
+        "suite:jarvis_tests",
+        "reseau:roues_windows"
+      ],
+      "hors_simulation": [
+        "Poids faster-whisper non livrés",
+        "Précision française et latence non mesurées"
+      ],
+      "porte_reelle": "speech_offline"
+    },
+    {
+      "id": "voix.synthese",
+      "domaine": "Voix",
+      "action": "Répondre à voix haute",
+      "exemple": "Voix française locale du navigateur",
+      "etat_code": "partiel",
+      "verifications": [
+        "suite:node_jarvis"
+      ],
+      "hors_simulation": [
+        "Voix françaises installées sous Windows",
+        "Haut-parleurs",
+        "Interruption pendant la parole"
+      ],
+      "porte_reelle": "speech_offline"
+    },
+    {
+      "id": "voix.confirmation_parlee",
+      "domaine": "Voix",
+      "action": "Confirmer à voix haute une proposition visuelle précise",
+      "exemple": "« Oui, affiche-le » après une proposition de Jev",
+      "etat_code": "code",
+      "verifications": [
+        "suite:jarvis_tests",
+        "suite:node_jarvis"
+      ],
+      "hors_simulation": [
+        "Phrase réellement prononcée et transcrite"
+      ],
+      "porte_reelle": "speech_offline"
+    },
+    {
+      "id": "orchestration.tour_langgraph",
+      "domaine": "Orchestration",
+      "action": "Interpréter un tour, le garder, le distribuer et produire un reçu (LangGraph + checkpoint SQLite)",
+      "exemple": "Tour QUEUED → accusé → rendered",
+      "etat_code": "code",
+      "verifications": [
+        "suite:tests_workflows",
+        "outil:simulation_workflows",
+        "http:http_dashboard_atelier"
+      ],
+      "hors_simulation": [
+        "Latence sur la tour (la CI Windows a montré un p95 de 740 ms)"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "orchestration.idempotence",
+      "domaine": "Orchestration",
+      "action": "Rejouer une même référence sans dupliquer, refuser une référence réutilisée",
+      "exemple": "Double envoi réseau du même tour",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_rejeu_idempotent",
+        "suite:jarvis_tests"
+      ],
+      "hors_simulation": [],
+      "porte_reelle": null
+    },
+    {
+      "id": "orchestration.annulation",
+      "domaine": "Orchestration",
+      "action": "Annuler un tour et ignorer un accusé tardif",
+      "exemple": "« Annule » juste après l'envoi",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_annulation_recu_tardif",
+        "suite:jarvis_tests"
+      ],
+      "hors_simulation": [
+        "Écran physique qui a déjà commencé l'affichage"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "orchestration.coupure",
+      "domaine": "Orchestration",
+      "action": "Reprendre après arrêt brutal sans perdre ni répéter une commande",
+      "exemple": "Processus tué entre l'envoi et l'accusé",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_coupure_reprise",
+        "outil:check_startup_abrupt",
+        "suite:jarvis_tests"
+      ],
+      "hors_simulation": [
+        "Coupure électrique réelle et cache disque Windows"
+      ],
+      "porte_reelle": "restore_drill"
+    },
+    {
+      "id": "orchestration.charge",
+      "domaine": "Orchestration",
+      "action": "Recevoir plusieurs demandes simultanées sans perte ni doublon",
+      "exemple": "Console + trois écrans + voix en même temps",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_concurrence"
+      ],
+      "hors_simulation": [
+        "Charge réelle de la tour avec CAO et modèle local actifs"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "orchestration.integrite_base",
+      "domaine": "Orchestration",
+      "action": "Refuser de démarrer sur une base de travail corrompue, sans la réinitialiser",
+      "exemple": "Fichier missions.sqlite3 endommagé",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_base_corrompue",
+        "suite:jarvis_tests"
+      ],
+      "hors_simulation": [
+        "Disque réel défaillant"
+      ],
+      "porte_reelle": "restore_drill"
+    },
+    {
+      "id": "ecrans.dashboard_atelier",
+      "domaine": "Écrans",
+      "action": "Afficher le dashboard atelier sur l'écran gauche",
+      "exemple": "« Jarvis, affiche le dashboard atelier ! »",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_dashboard_atelier",
+        "suite:tests_workflows",
+        "outil:simulation_workflows"
+      ],
+      "hors_simulation": [
+        "Rendu visible sur le moniteur physique",
+        "Le planning reste démonstratif"
+      ],
+      "porte_reelle": "screen_physical"
+    },
+    {
+      "id": "ecrans.dashboards_nommes",
+      "domaine": "Écrans",
+      "action": "Afficher les dashboards dossiers, Studio, contenus, conception, base métier",
+      "exemple": "« Ouvre le dashboard base métier »",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_dashboards_nommes",
+        "suite:tests_workflows"
+      ],
+      "hors_simulation": [
+        "Rendu visible sur les moniteurs physiques"
+      ],
+      "porte_reelle": "screen_physical"
+    },
+    {
+      "id": "ecrans.trois_vues",
+      "domaine": "Écrans",
+      "action": "Composer les trois écrans et n'annoncer le succès qu'avec trois accusés",
+      "exemple": "« Affiche les trois dashboards »",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_ecrans_appairage",
+        "http:http_trois_dashboards",
+        "suite:jarvis_tests"
+      ],
+      "hors_simulation": [
+        "Appairage des trois moniteurs réels",
+        "Déconnexion d'un écran"
+      ],
+      "porte_reelle": "screen_physical"
+    },
+    {
+      "id": "ecrans.clarification_et_refus",
+      "domaine": "Écrans",
+      "action": "Demander une précision ou refuser une phrase ambiguë, niée ou physique",
+      "exemple": "« Affiche un des dashboards », « Lance l'impression »",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_clarification",
+        "http:http_refus_physique_negation",
+        "suite:tests_workflows"
+      ],
+      "hors_simulation": [
+        "Transcriptions réelles imparfaites"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "memoire.recherche_citee",
+      "domaine": "Mémoire",
+      "action": "Retrouver une information avec sa source et sa ligne",
+      "exemple": "Recherche « Jev et voix »",
+      "etat_code": "code",
+      "verifications": [
+        "suite:tests",
+        "suite:tests_agent",
+        "outil:evaluate_memory",
+        "http:http_memoire_non_initialisee"
+      ],
+      "hors_simulation": [
+        "Exports réels des conversations et documents de l'atelier"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "memoire.mcp",
+      "domaine": "Mémoire",
+      "action": "Exposer la mémoire aux assistants compatibles MCP",
+      "exemple": "tools/memory_mcp.py en stdio",
+      "etat_code": "code",
+      "verifications": [
+        "suite:tests_agent"
+      ],
+      "hors_simulation": [
+        "Client MCP réel configuré sur la tour"
+      ],
+      "porte_reelle": null
+    },
+    {
+      "id": "memoire.sauvegarde_restauration",
+      "domaine": "Mémoire",
+      "action": "Sauvegarder puis restaurer la mémoire et les cinq bases dans un dossier neuf",
+      "exemple": "Restaurer_Jarvis.cmd",
+      "etat_code": "code",
+      "verifications": [
+        "suite:tests",
+        "suite:jarvis_tests",
+        "outil:check_startup_abrupt"
+      ],
+      "hors_simulation": [
+        "Restauration complète sur la tour",
+        "Médias réels de l'atelier"
+      ],
+      "porte_reelle": "restore_drill"
+    },
+    {
+      "id": "memoire.llm_local",
+      "domaine": "Mémoire",
+      "action": "Répondre avec le modèle local (Ollama, profil speed)",
+      "exemple": "Question libre dans le panneau /memory",
+      "etat_code": "partiel",
+      "verifications": [
+        "suite:tests_agent"
+      ],
+      "hors_simulation": [
+        "Ollama et Qwen3.5 4B non installés ici",
+        "VRAM réelle de la RTX 4060 Ti"
+      ],
+      "porte_reelle": "llm_qualified"
+    },
+    {
+      "id": "jev.decision",
+      "domaine": "Jev",
+      "action": "Proposer une intention visuelle quand la phrase n'est pas un ordre connu, avec confirmation",
+      "exemple": "Formulation libre interprétée par Jev",
+      "etat_code": "partiel",
+      "verifications": [
+        "suite:jarvis_tests",
+        "http:http_demarrage_securite"
+      ],
+      "hors_simulation": [
+        "Service Jev réel, clé, panne réseau et réponse lente"
+      ],
+      "porte_reelle": "jev_contract"
+    },
+    {
+      "id": "studio.reference_authentique",
+      "domaine": "Studio",
+      "action": "Choisir une référence authentique et des passages du brief",
+      "exemple": "Catalogue Studio",
+      "etat_code": "code",
+      "verifications": [
+        "suite:jarvis_app_tests_m03",
+        "suite:jarvis_tests",
+        "suite:node_jarvis"
+      ],
+      "hors_simulation": [
+        "Médias M07 d'exemple non hydratés dans le dépôt public",
+        "Vrais rushes de l'atelier"
+      ],
+      "porte_reelle": "studio_identity"
+    },
+    {
+      "id": "growth.brouillon",
+      "domaine": "Contenus",
+      "action": "Préparer un brouillon de publication relié aux médias, sans publier",
+      "exemple": "Dashboard contenus",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_growth_sans_publication",
+        "suite:jarvis_tests"
+      ],
+      "hors_simulation": [
+        "Comptes réels, droits, statistiques"
+      ],
+      "porte_reelle": "social_publish"
+    },
+    {
+      "id": "contenu.montage_export",
+      "domaine": "Contenus",
+      "action": "Monter et exporter une vidéo vérifiée (son, durée, format)",
+      "exemple": "Recette R03 « Le dernier geste »",
+      "etat_code": "partiel",
+      "verifications": [
+        "suite:tests"
+      ],
+      "hors_simulation": [
+        "FFmpeg sur la tour",
+        "Médias sources hors dépôt",
+        "Jugement artistique"
+      ],
+      "porte_reelle": "studio_identity"
+    },
+    {
+      "id": "cao.socle_parametrique",
+      "domaine": "Conception 3D",
+      "action": "Créer un socle paramétrique confirmé et exporter STL/STEP/GLB",
+      "exemple": "« Crée un socle de 180 mm »",
+      "etat_code": "code",
+      "verifications": [
+        "http:http_cao_socle",
+        "suite:jarvis_app_tests"
+      ],
+      "hors_simulation": [
+        "CadQuery sur la tour (roues Windows à installer)",
+        "Charge CAO pendant la voix"
+      ],
+      "porte_reelle": "cad_runtime"
+    },
+    {
+      "id": "cao.figurine",
+      "domaine": "Conception 3D",
+      "action": "Préparer une figurine originale : maillage, contrôles, socle, rendus, visionneuse",
+      "exemple": "Chaîne M08",
+      "etat_code": "absent",
+      "note": "Code présent uniquement sur la PR #15 (non fusionnée) ; non simulé par ce banc sur main.",
+      "verifications": [],
+      "hors_simulation": [
+        "Modèle génératif local (TripoSG à essayer)",
+        "Droits des personnages tiers"
+      ],
+      "porte_reelle": "cad_runtime"
+    },
+    {
+      "id": "fabrication.decoupe_assemblage",
+      "domaine": "Fabrication",
+      "action": "Découper une sculpture d'un mètre en pièces imprimables avec assemblages",
+      "exemple": "« Prépare une sculpture d'un mètre pour le parc »",
+      "etat_code": "absent",
+      "note": "Étude de découpe présente sur la PR #15 ; main ne contient que des boîtes synthétiques.",
+      "verifications": [],
+      "hors_simulation": [
+        "Géométrie réelle",
+        "Profils machines"
+      ],
+      "porte_reelle": "printer_fdm"
+    },
+    {
+      "id": "fabrication.planification_flotte",
+      "domaine": "Imprimantes",
+      "action": "Répartir des pièces sur le parc (procédé, matière, volume, disponibilité)",
+      "exemple": "24 pièces sur 8 machines fictives",
+      "etat_code": "code",
+      "verifications": [
+        "suite:tests_workflows",
+        "outil:simulation_workflows"
+      ],
+      "hors_simulation": [
+        "Inventaire réel des imprimantes",
+        "Durées issues d'un trancheur"
+      ],
+      "porte_reelle": "printer_fdm"
+    },
+    {
+      "id": "fabrication.tranchage",
+      "domaine": "Imprimantes",
+      "action": "Trancher une pièce avec le profil réel de la machine",
+      "exemple": "PrusaSlicer hors ligne",
+      "etat_code": "absent",
+      "note": "Tranchage d'hypothèse sur la PR #15 uniquement.",
+      "verifications": [],
+      "hors_simulation": [
+        "Profils réels du parc"
+      ],
+      "porte_reelle": "printer_fdm"
+    },
+    {
+      "id": "imprimantes.inventaire",
+      "domaine": "Imprimantes",
+      "action": "Inventorier modèle, procédé, volume, matière, état et interface de chaque machine",
+      "exemple": "Gabarit jarvis/config/M04_INVENTAIRE_A_REMPLIR.json",
+      "etat_code": "absent",
+      "note": "Gabarit seulement ; le nombre exact de machines reste inconnu.",
+      "verifications": [],
+      "hors_simulation": [
+        "Toutes les machines réelles"
+      ],
+      "porte_reelle": "printer_fdm"
+    },
+    {
+      "id": "imprimantes.pilotage",
+      "domaine": "Imprimantes",
+      "action": "Lire l'état puis, avec autorisation propre, chauffer, téléverser, démarrer",
+      "exemple": "Connecteur machine qualifié",
+      "etat_code": "absent",
+      "note": "Volontairement non codé : aucune commande physique tant qu'une machine n'est pas inventoriée et autorisée. Le banc vérifie seulement le refus.",
+      "verifications": [
+        "http:http_refus_physique_negation"
+      ],
+      "hors_simulation": [
+        "Connecteur, arrêt d'urgence, supervision humaine"
+      ],
+      "porte_reelle": "production_safety"
+    },
+    {
+      "id": "devis.calcul",
+      "domaine": "Devis",
+      "action": "Préparer un devis (matière, temps machine, finition, marge, TVA)",
+      "exemple": "Devis d'une figurine de 30 cm",
+      "etat_code": "absent",
+      "note": "Seul un calcul pédagogique existe dans la base métier (statut calcul_pedagogique_non_devis).",
+      "verifications": [
+        "suite:metier"
+      ],
+      "hors_simulation": [
+        "Tarifs réels, temps trancheur, règles HT/TTC"
+      ],
+      "porte_reelle": "site_quotes"
+    },
+    {
+      "id": "sites.atelier_3d",
+      "domaine": "Sites",
+      "action": "Charger la visionneuse 3D et l'identité visuelle du site Atelier",
+      "exemple": "sites/atelier/dist/index.html",
+      "etat_code": "code",
+      "verifications": [
+        "statique:web_references",
+        "statique:provenance_vendor",
+        "statique:js_syntaxe"
+      ],
+      "hors_simulation": [
+        "Polices et logo exclus du dépôt",
+        "Rendu navigateur réel"
+      ],
+      "porte_reelle": "site_quotes"
+    },
+    {
+      "id": "donnees.integrite_depot",
+      "domaine": "Données",
+      "action": "Garantir que les fichiers du dépôt ne sont ni corrompus ni altérés",
+      "exemple": "Manifeste SHA-256, JSON, syntaxe",
+      "etat_code": "code",
+      "verifications": [
+        "outil:validate_repository",
+        "statique:json",
+        "statique:python_syntaxe",
+        "statique:js_syntaxe"
+      ],
+      "hors_simulation": [
+        "Bases actives et médias hors dépôt"
+      ],
+      "porte_reelle": null
+    }
+  ]
+}

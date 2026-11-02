@@ -43,7 +43,8 @@ def main():
         if a.download_models:
             command.append('--download')
         subprocess.run(command, cwd=ROOT, check=True)
-    report = subprocess.run([str(executable), str(ROOT / 'tools/doctor.py')], cwd=ROOT, check=True, capture_output=True, text=True)
+    report = subprocess.run([str(executable), str(ROOT / 'tools/doctor.py')], cwd=ROOT, check=True, capture_output=True, text=True,
+                            encoding='utf-8', env=dict(os.environ, PYTHONUTF8='1'))
     state = Path(os.environ.get('BOJART_MEMORY_STATE', str(Path.home() / 'BOJART/memory'))).expanduser()
     state.mkdir(parents=True, exist_ok=True)
     (state / 'installation-report.json').write_text(report.stdout, encoding='utf-8')

@@ -1,5 +1,13 @@
 # Passation — consolidation du 1 novembre 2026
 
+## Banc de simulation pré-installation — 2 novembre 2026
+
+Demande d'Olsen : simuler chaque action que Jarvis devra passer et trouver erreurs, corruptions et améliorations avant l'installation sur la tour. Base `3436f5352659554e4bac5af492b94af6c522ed2d` ; PR #15 (M08) et #16 (contenu) examinées, non modifiées. Le défaut `three.core.js` signalé par la PR #15 est déjà corrigé sur `main` (empreinte conforme à la provenance r180).
+
+Ajouts : catalogue de 36 actions, banc `bojart_ops/banc_*.py` et `tools/banc_preinstallation.py`, lanceur `Banc_BOJART.cmd`, workflow Linux/Windows `preinstall-bench.yml`, 13 tests du banc. Corrections : 9 `.cmd` en CRLF (4 avec étiquettes), `PYTHONUTF8` dans `Simuler_BOJART.cmd`, encodage UTF-8 explicite dans le serveur, la médiathèque, les mesures, la préinstallation et les outils de lancement/validation (manifeste en LF), fixture de test mémoire, message clair quand une base de travail est illisible. Les suites Jarvis passent avec les mêmes exclusions explicites qu'avant (médias M07).
+
+Vérifications et limites : voir `docs/evidence/banc-preinstallation-2026-11-02/`. Aucun micro, moniteur physique, imprimante, modèle local, service distant ou publication. Prochaine preuve : exécuter `Banc_BOJART.cmd` sur la tour après installation et comparer au rapport CI Windows.
+
 ## Recherche des outils et qualification — 1 novembre 2026
 
 Demande : enrichir BOJ.ART/Jarvis pour la 3D, la voix, le studio VFX, l'identité et le marketing. Revue de 18 dépôts à références épinglées et de documentations officielles ; 26 fiches, 14 besoins de données et 12 portes de recette dans `docs/research/launch-toolchain-2026-11-01/`. Aucun outil tiers installé ni génération payante ou publication lancée. La tour n'est pas accessible pour une qualification. Metricool n'est pas retenu dans cette demande ; repli proposé par données natives/exportées, sans prétendre les avoir collectées.

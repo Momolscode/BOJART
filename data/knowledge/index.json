@@ -327,6 +327,11 @@
     "provenance": "Current bounded display command catalogue, 2026-11-02; implementation jarvis/apps/jarvis/app/jarvis_runtime.py. Separate dated simulations do not qualify audio, physical displays, slicing or printers."
   },
   {
+    "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
+    "project": "bojart.jarvis",
+    "provenance": "Pre-installation simulation bench, 2026-11-02; catalogue data/preinstallation/actions-jarvis.json, dated report in docs/evidence/banc-preinstallation-2026-11-02. Software simulation only: no microphone, physical monitor, printer, local model or remote service qualified."
+  },
+  {
     "path": "docs/evidence/workflows-2026-11-02/README.md",
     "project": "bojart.jarvis",
     "collection": "session_log",

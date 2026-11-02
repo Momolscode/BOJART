@@ -34,7 +34,7 @@ class MemoryHttpTests(unittest.TestCase):
         return status,data
 
     def seed(self):
-        (self.root/'note.md').write_text('Jev est un décideur textuel facultatif.')
+        (self.root/'note.md').write_text('Jev est un décideur textuel facultatif.', encoding='utf-8')
         with Memory(self.root/'memory') as m:m.ingest_file(self.root/'note.md',root=self.root,project='bojart.jarvis',collection='test',provenance='integration fixture')
 
     def test_session_required(self):

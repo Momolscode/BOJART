@@ -190,8 +190,8 @@ def build(destination, *, root=ROOT):
         }
         (payload / 'commands.json').write_text(json.dumps(commands, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
         try:
-            revision = subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True, stderr=subprocess.DEVNULL).strip()
-            dirty = bool(subprocess.check_output(['git', '-C', str(root), 'status', '--porcelain'], text=True, stderr=subprocess.DEVNULL).strip())
+            revision = subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True, encoding='utf-8', stderr=subprocess.DEVNULL).strip()
+            dirty = bool(subprocess.check_output(['git', '-C', str(root), 'status', '--porcelain'], text=True, encoding='utf-8', stderr=subprocess.DEVNULL).strip())
         except (OSError, subprocess.CalledProcessError):
             revision, dirty = None, None
         report = {'schema': 'bojart.preinstallation.bundle.v1', 'created_at': now(),
