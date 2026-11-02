@@ -29,8 +29,8 @@
     },
     {
       "path": ".github/workflows/preinstall-bench.yml",
-      "bytes": 2849,
-      "sha256": "51a4991caa55c192c0fb8200cf1288ede1f60acfd90019d4bf21e77c1a2ac8a6"
+      "bytes": 2923,
+      "sha256": "83d5ac81d5571a8d84bdcca96f683c61532c086fb0f7cd8d5a3434f0250f4082"
     },
     {
       "path": ".github/workflows/quality.yml",
@@ -63,9 +63,14 @@
       "sha256": "89a6873fbda9a7480e5fa386b2abfce20fdc1183694c598742360cdfd919b6bb"
     },
     {
+      "path": "Collecter_BOJART.cmd",
+      "bytes": 426,
+      "sha256": "10924269e304c31a69d212545cf6ab09e7c286eddf95b08ad2d50666d62b6981"
+    },
+    {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 8431,
-      "sha256": "96f9ddc1e046c1388cef07ef25112c64bfdb1ecb61f28c36d7419605e2f87533"
+      "bytes": 9842,
+      "sha256": "5f84042aa1bd2719955e6eda42aea0fbfadab0a2832efd7fd0f21dfb1069f9aa"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -349,13 +354,18 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 32597,
-      "sha256": "9d8e3ac57739a08b9b904da996053f2bd1fd755603f59a7e35bca8f2d1867977"
+      "bytes": 33061,
+      "sha256": "7e81237ac7f548ab2427a94fb51430c5f5f2d1b46e9a9575aebb05263acdace4"
     },
     {
       "path": "bojart_ops/banc_statique.py",
       "bytes": 19936,
       "sha256": "a91a824016a022e154d54162fef4bb86211ff07c424e39d97ddc76707e9adcb8"
+    },
+    {
+      "path": "bojart_ops/collecte.py",
+      "bytes": 18371,
+      "sha256": "6650814c47dfdc7dc3e2a3cd383314abe7f9bb360503b03487e13ad97b3d7a66"
     },
     {
       "path": "bojart_ops/installation_tout.py",
@@ -400,12 +410,12 @@
     {
       "path": "context/CURRENT.md",
       "bytes": 12587,
-      "sha256": "df244e40c7f1c6645c898a3c33a18a05d21b9906c2fdd6d3bf6249f59d0febe7"
+      "sha256": "778af37839b7f096cbaa60348569412526da8cc2b95fd0340d4085c2af1a8ce4"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 44378,
-      "sha256": "175471fa137997ddf3ea87c7c004b87bbb7c46f8fdb5be875cbe439c6c47206a"
+      "bytes": 44879,
+      "sha256": "c0f7a5faa919dc89e851166b4bbea8c350c7339cbed176ace801cbe38a9a4c88"
     },
     {
       "path": "creative/CURRENT.md",
@@ -519,8 +529,8 @@
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
-      "bytes": 19813,
-      "sha256": "c2a69124121f84be897d682d50014a7a07f686bd53e94993f3d3e3fc00afd0ff"
+      "bytes": 20669,
+      "sha256": "516c748957752799c99fc9cb089d6817726fea056e1cad268a4ade0bf361c676"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -584,8 +594,8 @@
     },
     {
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
-      "bytes": 9867,
-      "sha256": "dbae82d25f7b6a38fbafdca694b3811dde1247dd5e52aacf580b1d8e85faa6cb"
+      "bytes": 10954,
+      "sha256": "16dac7d50b6733201253a0a241ed037615a02971bcc9f14d5da7b7a6cb40eb3a"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -2824,8 +2834,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14722,
-      "sha256": "9efad66c34f0e1b4542453236d661b773417e75c7fde574303869f6286e91456"
+      "bytes": 14790,
+      "sha256": "a6a156ae83d821bd13bf82af7b878f03845e7fd890a0f240f347b568f1044aec"
     },
     {
       "path": "ops/request-example.json",
@@ -4619,8 +4629,13 @@
     },
     {
       "path": "tests_ops/test_banc_simulation.py",
-      "bytes": 13148,
-      "sha256": "d5cdbbaf1f39f8c179b41e324b0a150e3199ed1b881964e973b33bb835341c71"
+      "bytes": 13171,
+      "sha256": "b7bafa6f99d8ca79e0ad5190d50539425cf88d29d8debcbb4f6996ce992ff53a"
+    },
+    {
+      "path": "tests_ops/test_collecte.py",
+      "bytes": 7937,
+      "sha256": "220b1a3c1d0882aa69c3d8e1e03182acb6a41d8ef7af5be004c00083bbca21c2"
     },
     {
       "path": "tests_ops/test_installation_tout.py",
@@ -4678,6 +4693,11 @@
       "sha256": "6042f0e33bdcf149696245819784e7c815bd481b92e5d36a342e4c7550cf0050"
     },
     {
+      "path": "tools/collecte_guidee.py",
+      "bytes": 13339,
+      "sha256": "cc4a50d26f7a01d6064a36443eeaff4d140eb2f72939b5a43a6badddbcdfbdde"
+    },
+    {
       "path": "tools/doctor.py",
       "bytes": 8296,
       "sha256": "22c0873fb6d4edb06f115be4e1f8be12eed889f994272769aac1c22a71203805"
@@ -4699,8 +4719,8 @@
     },
     {
       "path": "tools/installer_tout.py",
-      "bytes": 5001,
-      "sha256": "499866c2d101d262b441121e2500ed9808b57bbea93583e7a3c179d4f14c6a04"
+      "bytes": 5086,
+      "sha256": "6983163d3bbe07dc8f1b9b9cf4db87508a3744c09f1dcabefda68e0d35d325b2"
     },
     {
       "path": "tools/memory_browser.cjs",

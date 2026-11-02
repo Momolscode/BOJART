@@ -82,6 +82,7 @@ def main(argv=None):
     print('\n================ Résultat ================')
     if journal.data['synthese']['termine']:
         print('Tout est installé. Ouvrir Lancer_BOJART.cmd.')
+        print('Pour rapatrier vidéos, photos et documents : Collecter_BOJART.cmd.')
     else:
         print('Reste à faire :')
         for line in journal.data['synthese']['reste_a_faire']:

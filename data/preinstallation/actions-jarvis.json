@@ -49,6 +49,25 @@
       "porte_reelle": null
     },
     {
+      "id": "collecte.guidee",
+      "domaine": "Installation",
+      "action": "Rapatrier vidéos, photos, sons, documents et exports ChatGPT depuis des dossiers désignés une fois : copie vérifiée par empreinte, sans écraser ni modifier les sources, textes importés en mémoire comme données non vérifiées",
+      "exemple": "Collecter_BOJART.cmd",
+      "etat_code": "code",
+      "verifications": [
+        "outil:collecte_simulation",
+        "suite:tests_ops",
+        "statique:scripts_cmd"
+      ],
+      "hors_simulation": [
+        "Vrais dossiers de la tour (disque externe, ancien PC, Drive synchronisé)",
+        "Volume réel des vidéos et espace disque",
+        "Métadonnées ffprobe sur de vraies vidéos",
+        "Exports TikTok/Instagram : archives conservées, non ouvertes"
+      ],
+      "porte_reelle": null
+    },
+    {
       "id": "installation.lanceurs",
       "domaine": "Installation",
       "action": "Lancer, mesurer, simuler et restaurer par double-clic",

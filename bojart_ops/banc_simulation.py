@@ -232,6 +232,13 @@ def run_tools(python, workdir):
                 'status': 'ok' if data['simulation'] is True and any(s['id'] == 'jarvis' for s in plan) else 'echec'}
     out.append(run_tool('installation_tout_simulation', ['tools/installer_tout.py', '--simulation'], python, timeout=120,
                         check_json=install_plan))
+
+    def collection(stdout):
+        data = json.loads(stdout)
+        failed = sorted(k for k, ok in data['controles'].items() if not ok)
+        return {'controles': len(data['controles']), 'echecs': failed, 'premier_passage': data['premier_passage'],
+                'status': 'ok' if data['ok'] and not failed else 'echec'}
+    out.append(run_tool('collecte_simulation', ['tools/collecte_guidee.py', 'simulation'], python, timeout=300, check_json=collection))
     return out
 
 

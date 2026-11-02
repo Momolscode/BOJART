@@ -154,6 +154,8 @@
         "Installer_BOJART_4060Ti.cmd",
         "Installer_Tout_BOJART.cmd",
         "tools/installer_tout.py",
+        "Collecter_BOJART.cmd",
+        "tools/collecte_guidee.py",
         "Mesurer_BOJART.cmd",
         "tools/benchmark_jarvis.py"
       ],

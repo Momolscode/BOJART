@@ -53,6 +53,7 @@ jobs:
           python -m unittest discover -s tests_ops -p test_banc_simulation.py -v
           python -m unittest discover -s tests_ops -p test_verrou_dependances.py -v
           python -m unittest discover -s tests_ops -p test_installation_tout.py -v
+          python -m unittest discover -s tests_ops -p test_collecte.py -v
       - name: Run every simulated Jarvis action
         run: python tools/banc_preinstallation.py --reseau --output .bojart-audit/banc.json --markdown .bojart-audit/banc.md
       - name: Install the Windows voice lock on top, then check the environment

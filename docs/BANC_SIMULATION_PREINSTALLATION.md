@@ -29,7 +29,7 @@ Un rapport existant n'est jamais écrasé. Code de sortie 1 si un constat est **
 | Encodage Windows | Suites et scénarios HTTP avec l'encodage par défaut de Windows (cp1252 émulé sous Linux, natif sous Windows) | Accents et apostrophes non corrompus sans `PYTHONUTF8=1`. |
 | Roues Windows (`--reseau`) | Résolution `pip --dry-run` pour `win_amd64` / CPython 3.12 de `jarvis/requirements.txt` et `requirements-voice.txt` | Chaque dépendance s'installe sans compilation sur la tour. Pas une installation réelle. |
 
-Le catalogue `data/preinstallation/actions-jarvis.json` relie chaque action (37) à ses vérifications et à sa porte de recette réelle. Statuts : **Simulé OK**, **Partiel** (une vérification non exécutée ou une précondition absente), **ÉCHEC**, **Non codé**. Une précondition absente (médias M07, Playwright) n'est jamais comptée comme réussite ; si elle devient disponible, l'échec redevient une régression.
+Le catalogue `data/preinstallation/actions-jarvis.json` relie chaque action (38) à ses vérifications et à sa porte de recette réelle. Statuts : **Simulé OK**, **Partiel** (une vérification non exécutée ou une précondition absente), **ÉCHEC**, **Non codé**. Une précondition absente (médias M07, Playwright) n'est jamais comptée comme réussite ; si elle devient disponible, l'échec redevient une régression.
 
 ## Résultats du 2 novembre 2026
 
@@ -67,6 +67,10 @@ Constats **conservés pour décision ou recette** :
 ## Installation complète en une fois
 
 `Installer_Tout_BOJART.cmd` trouve ou installe Python 3.12, puis lance `tools/installer_tout.py` : détection (winget, Ollama, FFmpeg, réponse d'Ollama, espace disque, verrous), plan affiché, **un seul accord**, puis Ollama et FFmpeg par winget, démarrage d'Ollama, Jarvis complet depuis le verrou, modèles du profil `speed` et banc. Une étape en échec n'arrête que ses dépendantes (sans Ollama, Jarvis et le banc s'installent quand même ; seuls les modèles attendent). Les outils que winget vient d'installer sont ajoutés au `PATH` des étapes suivantes, la console courante ne les voyant pas encore. Le journal `~/BOJART/installation/installation-<date>.json` est un fichier neuf, réécrit après chaque étape. `--simulation` produit le plan en JSON sans rien lancer ; le banc l'exécute (`outil:installation_tout_simulation`) et `tests_ops/test_installation_tout.py` couvre l'enchaînement, les échecs partiels et l'absence d'accord. Non simulé : winget réel, droits Windows, téléchargements et VRAM.
+
+## Collecte guidée
+
+`Collecter_BOJART.cmd` → `tools/collecte_guidee.py` (`bojart_ops/collecte.py`). Les dossiers sont désignés une fois (table `sources` de `~/BOJART/collecte/collecte.sqlite`). Chaque passage ne relit que les fichiers nouveaux ou changés (chemin, taille, date), copie chacun dans un magasin adressé par SHA-256 sans jamais écraser (lien dur exclusif, sinon renommage après contrôle), relit la copie, la passe en lecture seule, et abandonne une copie dont la source a bougé pendant la lecture. Les textes vont en mémoire comme documents non vérifiés ; d'un export ChatGPT, seul `conversations.json` est extrait. `collecte_guidee.py simulation` rejoue tout sur des dossiers synthétiques temporaires (doublon, texte non UTF-8, `.env`, dossier caché, lien, export ChatGPT, second passage, altération d'un original) : 13 contrôles, exécutés par le banc (`outil:collecte_simulation`) ; `tests_ops/test_collecte.py` ajoute 14 tests. Non simulé : vrais dossiers, volume réel, ffprobe sur de vraies vidéos, dépouillement des exports TikTok et Instagram.
 
 ## Limites
 

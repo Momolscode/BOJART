@@ -76,7 +76,13 @@ python -m bojart_memory --state CHEMIN_NOUVELLE_MEMOIRE verify
 
 La mémoire privée est dans `~/BOJART/memory` (`%USERPROFILE%\BOJART\memory` sous Windows). `BOJART_MEMORY_STATE` permet un autre emplacement. Les sauvegardes du panneau vont dans le dossier voisin `memory-backups`. Elles incluent la base et ses originaux ; la configuration Ollama et le rapport d’installation sont à recopier séparément. Les sauvegardes des dossiers M07 restent distinctes.
 
-Les conversations ChatGPT antérieures ne se synchronisent pas automatiquement. Pour importer un export choisi :
+## 5. Rapatrier vidéos, photos et documents
+
+Double-cliquer **Collecter_BOJART.cmd**. Désigner chaque dossier une fois (disque externe, ancien PC, dossier Google Drive synchronisé, export téléchargé) : ils sont mémorisés pour les passages suivants. Le programme montre ce qu'il va lire et l'espace libre, demande un accord, puis copie chaque nouveau fichier dans `%USERPROFILE%\BOJART\collecte\originaux`, sous son empreinte SHA-256, en relisant la copie ; un contenu déjà présent n'est ni recopié ni écrasé, et la copie passe en lecture seule. Les sources ne sont jamais modifiées, déplacées ni supprimées. Les textes (`.md`, `.txt`, `.json`, sous-titres…) entrent dans la mémoire comme documents non vérifiés ; dans un export ChatGPT `.zip`, seul `conversations.json` est lu et rangé dans `sessions`. Fichiers cachés, `.env`, liens et formats inconnus sont ignorés et comptés. Les vidéos reçoivent leur durée et leur format par ffprobe quand FFmpeg est installé. Un rapport daté va dans `collecte\rapports`, et `python tools/collecte_guidee.py verifier` relit tous les originaux. Rien n'est publié ni envoyé.
+
+Les exports TikTok ou Instagram sont conservés comme archives, sans être ouverts : leur dépouillement reste à faire. La collecte est simulée de bout en bout par le banc ; elle n'a pas encore tourné sur les vrais dossiers de la tour.
+
+Les conversations ChatGPT antérieures ne se synchronisent pas automatiquement. Pour importer un export déjà décompressé à la main :
 
 ```bash
 python -m bojart_memory ingest CHEMIN_EXPORT --project bojart.jarvis --collection sessions --provenance "Export sélectionné, origine et date"
