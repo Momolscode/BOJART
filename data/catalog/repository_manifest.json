@@ -344,8 +344,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 35414,
-      "sha256": "42e33f212fd43bb48c77e6195f56cbde0790fe1547af08cb1ad6a54dc8324e39"
+      "bytes": 37275,
+      "sha256": "de0fe6e20ad76aa58a0c2ce781b4528e810d8907588b9c0c19236977ad337165"
     },
     {
       "path": "creative/CURRENT.md",
@@ -1189,8 +1189,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/consolidated_workbench.py",
-      "bytes": 17050,
-      "sha256": "6bb4d4162b658a9441b09969dfede320c9bd7f07b44ea2c7403775119e80bde4"
+      "bytes": 19092,
+      "sha256": "025b098a9b27692b6e7dacb5e011b50bfeb5dbc06648507734522c7a50389172"
     },
     {
       "path": "jarvis/apps/jarvis/app/context_guard.py",
@@ -1309,8 +1309,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/server.py",
-      "bytes": 8778,
-      "sha256": "7e471404672e347c0f21980a7420182497083eecbf2b82fe55205c71efded7c6"
+      "bytes": 9188,
+      "sha256": "8c677cdf53a95282567a965f498bec154c57d0fbf81b1fc8ef252327db4b9ca2"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
@@ -1334,8 +1334,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/studio_workbench.py",
-      "bytes": 5794,
-      "sha256": "8bc8b3183907f01003fcc22131a0c53f69e1b88f0dd85e165ad0863e1d0ec9e7"
+      "bytes": 5801,
+      "sha256": "2236dd52ec03e3f7a2b0752e7aabe8c4d7befc5904e2688639b3645c8ee08933"
     },
     {
       "path": "jarvis/apps/jarvis/app/tower.css",
@@ -1399,8 +1399,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workbench.py",
-      "bytes": 10821,
-      "sha256": "f9ec8f6c0652c2b38602a8ba7402aa0f6844b8a0b6f5d21b21c1ba547c69b929"
+      "bytes": 10828,
+      "sha256": "8970379af9436a38ed8fcf26c2a12d89fb43ee8a11acb27e01f6ce4421ffa1ab"
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.css",
@@ -2384,8 +2384,8 @@
     },
     {
       "path": "jarvis/tests/test_workspace_m05.py",
-      "bytes": 21814,
-      "sha256": "735b59df29a13466d28308d616c6c25c37911a4a5709c10cea6be3c03a33c17a"
+      "bytes": 21894,
+      "sha256": "985a040823ee2766298f5a48a04af3af5e031eae229a1d159fe137cb81d98a35"
     },
     {
       "path": "jarvis/tests/voice_endpoint.test.cjs",
@@ -4131,6 +4131,11 @@
       "path": "tests/test_archive_recovery.py",
       "bytes": 3467,
       "sha256": "659388f705ed8987b90e8eb14cbb04b546a8437123712056376e1da6d781b437"
+    },
+    {
+      "path": "tests/test_http_boundaries.py",
+      "bytes": 10236,
+      "sha256": "d13f8c7f2446050a9fe16f92d1f048cf05afc37926cd49f8e3472d2892c60c96"
     },
     {
       "path": "tests/test_installation.py",

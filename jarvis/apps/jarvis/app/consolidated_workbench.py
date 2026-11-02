@@ -159,8 +159,10 @@ class ConsolidatedHandler(StudioHandler):
         except (ValueError,Rejected,IntegrityError,UnicodeDecodeError) as e:return self.j({'error':str(e)},400)
         except OSError:return self.j({'error':'Source locale indisponible.'},500)
     def do_POST(self):
+        self._buffered_request_body=None
         if self.path in memory_http.POSTS:return memory_http.post(self)
         if self.path in jarvis_http.POSTS:return jarvis_http.post(self)
+        if not self.buffer_workspace_body():return
         if self.path in {'/api/tower/poll','/api/tower/ack','/api/tower/pair'}:
             # These short SQLite-only writes take the tower lock and participate
             # in snapshot DB reservations, without waiting for a long CAD job.
@@ -172,6 +174,42 @@ class ConsolidatedHandler(StudioHandler):
             if self.server.workspace.closing:return self.j({'error':'Fermeture en cours ; reprendre depuis le lanceur.'},503)
             return self.workspace_post()
 
+    def buffer_workspace_body(self):
+        # Receive at most 16 KiB outside the mutation lock. Slow or disconnected
+        # clients cannot stall another window or a global snapshot. Route-specific
+        # contracts and their smaller limits are still enforced by each handler.
+        if not self.check_host():return False
+        if not self.authorized():self.j({'error':'Session requise.'},401);return False
+        if self.headers.get('Origin')!=self.server.origin:
+            self.j({'error':'Origine refusée.'},403);return False
+        if self.headers.get('Transfer-Encoding'):
+            self.j({'error':'Encodage refusé.'},400);return False
+        if self.headers.get_content_type()!='application/json':
+            self.j({'error':'JSON requis.'},415);return False
+        if self.server.workspace.closing:
+            self.j({'error':'Fermeture en cours.'},503);return False
+        lengths=self.headers.get_all('Content-Length',[])
+        try:
+            if len(lengths)!=1 or not re.fullmatch('[0-9]+',lengths[0].strip()):
+                raise ValueError('Unique decimal length required')
+            n=int(lengths[0])
+        except ValueError:
+            self.j({'error':'Taille de requête invalide ou ambiguë.'},400);return False
+        if not 0<n<=16384:
+            self.j({'error':'Requête hors limites.'},413);return False
+        if not self.server.requests_gate.acquire(blocking=False):
+            self.j({'error':'Trop de requêtes. Réessayez.'},429);return False
+        try:
+            raw=self.read_request_body(n)
+            if len(raw)!=n:
+                self.j({'error':'Requête incomplète.'},400);return False
+            self._buffered_request_body=raw
+            return True
+        except (TimeoutError,OSError):
+            self.j({'error':'Délai de réception dépassé. Aucune action commencée.'},408)
+            return False
+        finally:self.server.requests_gate.release()
+
     def workspace_post(self):
         if self.path not in {'/api/backup','/api/workspace/backup','/api/workspace/check','/api/workspace/recover','/api/projects/create','/api/control/prepare','/api/growth/prepare','/api/growth/validate','/api/tower/pair','/api/tower/poll','/api/tower/dispatch','/api/tower/ack'}:return super().do_POST()
         if not self.check_host():return
@@ -182,7 +220,7 @@ class ConsolidatedHandler(StudioHandler):
         try:
             n=int(self.headers.get('Content-Length','-1'))
             if not 0<n<=8192:return self.j({'error':'Requête hors limites.'},413)
-            raw=self.rfile.read(n)
+            raw=self.read_request_body(n)
             if len(raw)!=n:raise Rejected('Requête incomplète.')
             data=strict_json(raw)
             if not isinstance(data,dict):raise Rejected('Objet JSON requis.')
