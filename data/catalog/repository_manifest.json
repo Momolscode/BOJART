@@ -774,8 +774,8 @@
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
-      "bytes": 7140,
-      "sha256": "d89ce7df4642646a1d79a2f146b43ef69496300e5d82c31c5330ee64079bb0c5"
+      "bytes": 7277,
+      "sha256": "0b71b07d1b50178d40ac1620355e89d4391c3d7bf3633a48d8c502bf0432cdf1"
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",

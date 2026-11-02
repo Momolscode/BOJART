@@ -53,7 +53,7 @@ Appels locaux sur l'hôte de test, sans rendu ni micro. Ce ne sont ni des latenc
 - Site Atelier et vitrine Studio : `logo.webp`, `body.ttf`, `display.ttf` exclus du dépôt.
 - 37 fichiers de tests et d'outils hérités lisent ou écrivent du texte sans encodage : mineur tant que les lanceurs gardent `PYTHONUTF8=1`.
 - 83 dépendances transitives non épinglées pour Windows.
-- La PR #15 épingle `trimesh==5.2.0`, `main` épingle `trimesh==4.11.1` : installation conjointe impossible en l'état.
+- La PR #15 épinglait `trimesh==5.2.0` contre `trimesh==4.11.1` sur `main` : installation conjointe impossible. Corrigé sur la PR #15 (`f42e3e2`, alignement sur 4.11.1) ; le contrôle `dependances_epinglees` du banc ne trouve plus de conflit sur sa tête.
 
 ## CI
 
