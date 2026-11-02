@@ -1,0 +1,23 @@
+{
+  "schema": "bojart.tarifs.v1",
+  "version": "exemple-2026-11-02",
+  "origine": "exemple",
+  "note": "Valeurs d'exemple pour essayer le calcul. Aucune n'est un prix, un coût ou un statut fiscal de BOJ.ART. Le moteur refuse d'émettre un devis avec cette grille.",
+  "devise": "EUR",
+  "matieres": {
+    "PLA": {"procede": "FDM", "unite": "kg", "prix_ht": "25.00", "source": "valeur d'exemple, non relevée"},
+    "PETG": {"procede": "FDM", "unite": "kg", "prix_ht": "28.00", "source": "valeur d'exemple, non relevée"},
+    "Résine standard": {"procede": "RESINE", "unite": "litre", "prix_ht": "40.00", "source": "valeur d'exemple, non relevée"}
+  },
+  "machines": {
+    "FDM": {"cout_horaire_ht": "0.60", "detail": "exemple : amortissement, énergie et entretien non mesurés"},
+    "RESINE": {"cout_horaire_ht": "1.00", "detail": "exemple : amortissement, écran LCD, FEP et énergie non mesurés"}
+  },
+  "main_oeuvre": {"taux_horaire_ht": "35.00"},
+  "pertes_matiere": {"FDM": "0.05", "RESINE": "0.10"},
+  "provision_reprise": {"FDM": "0.10", "RESINE": "0.15"},
+  "marge": "0.30",
+  "commission": "0",
+  "tva": {"regime": "a_definir"},
+  "validite_jours": 30
+}

@@ -1,0 +1,49 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOJ.ART — Atelier : demandes, devis, parc</title><link rel="stylesheet" href="/tower.css"><link rel="stylesheet" href="/workspace.css"><link rel="stylesheet" href="/atelier.css"></head><body>
+<header><a class="logo" href="/workspace">BOJ<span>.</span>ART <small>JARVIS / ATELIER</small></a><div class="status"><span class="liveDot"></span>PARC SIMULÉ · AUCUNE MACHINE RÉELLE</div></header>
+<main>
+<section class="intro"><div><p class="eyebrow">DEMANDES / DEVIS / PARC</p><h1>De la demande<br><em>à la machine.</em></h1><p>Chaque devis est calculé depuis le temps du trancheur, la matière et ta grille, puis figé à l’émission. Chaque ordre machine demande une autorisation propre et laisse un reçu.</p></div>
+<aside><div class="tiny">CE QUI EST RÉEL ICI</div><strong>Calculs et reçus</strong><span>Les imprimantes sont simulées. Aucun devis n’est envoyé par Jarvis : l’envoi et l’accord se déclarent avec leur preuve.</span><button id="demo" class="secondary" type="button">Charger la démonstration</button></aside></section>
+<section class="overview"><article><span>PARC</span><strong id="statMachines">—</strong><small id="statMachinesNote">Machines déclarées</small></article><article><span>DEMANDES OUVERTES</span><strong id="statDemandes">—</strong><small>Reçues, qualifiées ou en attente de réponse</small></article><article><span>DEVIS</span><strong id="statDevis">—</strong><small>Brouillons / émis</small></article><article><span>À RAPPROCHER</span><strong id="statRappro">—</strong><small>Ordres au résultat inconnu</small></article></section>
+<div id="feedback" class="feedback" role="status" aria-live="polite">Lecture de l’atelier…</div>
+
+<section class="panel"><p class="eyebrow">01 / DEMANDES CLIENTS</p><h2>Qualifier avant<br><em>de chiffrer.</em></h2>
+<p class="help">Le résumé est technique : nom, e-mail et téléphone restent dans la boîte source. Les demandes de démonstration sont exclues des comptes.</p>
+<div id="funnel" class="funnel"></div><div id="demandes" class="list"></div>
+<details><summary>Enregistrer une demande</summary><form id="newDemande" class="grid">
+<label>Dossier<select id="dDossier" required></select></label>
+<label>Origine<select id="dOrigine"><option>vitrine</option><option>email</option><option>telephone</option><option>atelier</option><option>reseau_social</option><option>salon</option><option>autre</option></select></label>
+<label>Référence source<input id="dRef" required maxlength="120" placeholder="ex. export vitrine INQ-…"></label>
+<label>Reçue le<input id="dDate" type="date" required></label>
+<label class="wide">Résumé technique<textarea id="dResume" required maxlength="2000" rows="3" placeholder="Objet, dimensions, matière, quantité, échéance souhaitée"></textarea></label>
+<button class="primary" type="submit">Enregistrer la demande</button></form></details></section>
+
+<section class="panel"><p class="eyebrow">02 / DEVIS</p><h2>Un calcul expliqué,<br><em>une version figée.</em></h2>
+<p class="help">Prix HT = coût de revient / (1 − marge − commission), comme le chiffrage de l’Atelier V11. Une valeur manquante n’est jamais comptée zéro.</p>
+<div id="devis" class="list"></div><div id="devisDetail"></div>
+<details id="newDevisBox"><summary>Chiffrer un dossier</summary><form id="newDevis" class="grid">
+<label>Dossier<select id="qDossier" required></select></label>
+<label>Demande liée<select id="qDemande"><option value="">aucune</option></select></label>
+<label class="wide">Titre<input id="qTitre" required maxlength="160"></label>
+<label>Exemplaires<input id="qCopies" type="number" min="1" max="10000" value="1" required></label>
+<label>Délai (jours)<input id="qDelai" type="number" min="1" max="365" placeholder="à indiquer"></label>
+<fieldset class="wide"><legend>Pièces</legend><div id="pieces"></div><button id="addPiece" class="secondary" type="button">Ajouter une pièce</button></fieldset>
+<fieldset class="wide"><legend>Main-d’œuvre</legend><div id="ops"></div><button id="addOp" class="secondary" type="button">Ajouter une opération</button></fieldset>
+<fieldset class="wide"><legend>Frais</legend><div id="fees"></div><button id="addFee" class="secondary" type="button">Ajouter un frais</button></fieldset>
+<label class="wide">Grille tarifaire (JSON bojart.tarifs.v1)<textarea id="qGrille" rows="6" spellcheck="false"></textarea><small>Chargée avec la grille d’exemple : elle permet le calcul, jamais l’émission. Remplace-la par ta grille déclarée.</small></label>
+<button class="primary" type="submit">Calculer le brouillon</button></form></details></section>
+
+<section class="panel"><p class="eyebrow">03 / PARC D’IMPRIMANTES</p><h2>Autoriser par machine,<br><em>action par action.</em></h2>
+<p class="help">Lire l’état n’autorise ni chauffe, ni téléversement, ni départ. Une réponse perdue bloque la machine jusqu’à une nouvelle lecture d’état. L’arrêt logiciel ne remplace pas l’arrêt d’urgence matériel.</p>
+<div id="machines" class="machines"></div>
+<details><summary>Déclarer une machine du parc réel</summary><form id="newMachine" class="grid">
+<label>Identifiant<input id="mId" required pattern="[A-Z0-9][A-Z0-9-]{1,23}" placeholder="ex. FDM-01"></label>
+<label>Procédé<select id="mProc"><option>FDM</option><option>RESINE</option></select></label>
+<label>Fabricant<input id="mFab" required maxlength="120"></label><label>Modèle<input id="mModele" required maxlength="160"></label>
+<label>Volume utile X×Y×Z (mm)<input id="mVol" placeholder="ex. 250x210x220 ou vide si inconnu"></label>
+<label>Source du volume<input id="mSource" required maxlength="300" placeholder="fiche constructeur, mesure…"></label>
+<label>Matières<input id="mMat" required placeholder="PLA, PETG"></label>
+<label>Interface<select id="mIf"><option>inconnue</option><option>moonraker</option><option>octoprint</option><option>prusalink</option><option>bambu_lan</option><option>elegoo_sdcp</option><option>manuelle</option></select></label>
+<label class="wide">Adresse (sans identifiant ni secret)<input id="mAdr" placeholder="http://192.168.1.20"></label>
+<button class="primary" type="submit">Enregistrer la fiche</button><small class="wide">Une fiche réelle n’active aucun connecteur : seule la machine simulée reçoit des ordres dans cette version.</small></form></details></section>
+<nav class="nav bottomNav"><a href="/workspace">Dossiers</a><a href="/tower">Trois vues</a><a href="/">Poste CAO</a><a href="/knowledge">Base métier</a><a href="/memory">Mémoire du projet</a></nav></main>
+<footer>BOJ.ART — devis calculés et reçus logiciels. Ni envoi au client, ni commande d’imprimante réelle.</footer><script src="/atelier.js"></script></body></html>
