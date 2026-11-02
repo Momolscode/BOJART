@@ -203,5 +203,50 @@ qualification sur la tour.
   (`FigurineRun._no_images`), contrôle de la visionneuse refusé sans capture (code 3). Contrôles,
   réparation surveillée, socle lisse à tenons, export 3MF et tranchage restent faits. Test :
   `test_licensed_third_party_mesh_is_processed_without_any_image`.
-- **État** : en attente du fichier et de la licence d'Olsen.
+- **Précision d'Olsen (13:32 UTC)** : toutes les figurines ne sont pas faites pour la vente ; celle-ci irait
+  dans la collection de BOJ.ART, pour les enfants. La condition de licence de vente reste valable pour
+  toute pièce vendue, mais ne concerne pas cette pièce-là.
+- **Cadre de l'usage privé** (indication sourcée, pas un avis d'avocat) : l'exception de copie privée
+  (Code de la propriété intellectuelle, art. L122-5, 2°) exige une source licite et un usage strictement
+  privé du copiste, et exclut « les copies des oeuvres d'art destinées à être utilisées pour des fins
+  identiques à celles pour lesquelles l'oeuvre originale a été créée »
+  ([texte reproduit](https://www.baumann-avocats.com/CPI/article-l122-5-du-code-de-la-propriete-intellectuelle.php)).
+  Au Sénat, le 17 avril 2015, le co-rapporteur François Pillet a déclaré que « par nature, les œuvres d'art
+  matérielles sont exclues de l'autorisation légale de copie privée »
+  ([compte rendu de presse](https://www.journaldugeek.com/2015/04/27/pas-de-redevance-copie-privee-imprimante-3d/)) ;
+  voir aussi le [rapport du CSPLA sur l'impression 3D](https://www.culture.gouv.fr/Espace-documentation/Rapports/Commission-du-CSPLA-sur-l-impression-3D)
+  (5 juillet 2016). Aucune décision de justice trouvée sur une figurine imprimée. La copie privée ne couvre
+  donc sans doute pas une figurine imprimée. La première réponse donnée à Olsen disait le contraire ;
+  elle a été corrigée dans le fil le jour même.
+- **Fichiers disponibles** (recherche du 2 novembre 2026) : aucun fichier Végéta autorisé par les ayants
+  droit. Les fichiers en vente (CGTrader, Gumroad…) sont des créations de fans ; leurs licences « usage
+  personnel » ou « libre de droits » viennent des sculpteurs et ne valent pas autorisation des ayants droit.
+- **Voies proposées à Olsen** (carte du 2 novembre, 13:42 UTC) :
+  1. recommandée : une figurine officielle (Banpresto, Bandai) posée sur un socle BOJ.ART original, dessiné
+     par Jarvis à la mesure de son socle d'origine (fiche D15) ; rien du personnage n'est modélisé ;
+  2. un fichier de fan imprimé pour la maison, décision et responsabilité d'Olsen (reproduction non
+     autorisée au sens strict) : fiche de provenance avec la source réelle et « usage : collection
+     privée » ; ni vente, ni don hors du foyer, ni concours, ni photo publiée sur les réseaux ou la
+     boutique de BOJ.ART ; mêmes garde-fous qu'au-dessus (aucune sculpture ni image du personnage).
+- **État** : en attente du choix d'Olsen.
+
+## D15. Socle d'exposition pour une figurine du commerce (2 novembre 2026)
+
+- **Contexte** : voie recommandée de la fiche D14 ; sert aussi à toute figurine officielle de la collection.
+- **Décision** : `fabrication.display_socle` et `tools/socle_vitrine.py` dessinent un socle en plaques
+  d'ardoise (même dessin que le socle d'Ardoise) avec une empreinte ronde ou ovale où se pose le socle
+  d'origine de la figurine (jeu de 0,4 mm par côté, 3 mm de profondeur), ou un dessus plat pour un socle
+  d'origine irrégulier (« libre »). Aucune géométrie ni image du personnage : les rendus montrent le socle
+  seul.
+- **Sens d'impression** : à l'endroit, dessous plein. Retourné comme le socle d'Ardoise, le fond de
+  l'empreinte formerait un pont de plusieurs centimètres. Les plaques restent donc en retrait d'au moins
+  0,3 mm sur celle du dessous (`_strata_base(upright=True)`), sans dévers : surplomb mesuré 0 %. Le
+  chemin par défaut du socle en strates est inchangé (sommets identiques, identifiant d'Ardoise gardé).
+- **Essai sur cotes d'hypothèse** (socle d'origine rond de 80 mm, en attendant les cotes réelles) :
+  106 × 105 × 16 mm, bord minimal de 6,6 mm autour de l'empreinte, maillage fermé, 4 h 31 et 43 g de PLA
+  estimés par PrusaSlicer 2.7.2 sous profil d'hypothèse (`preuves/socle-vitrine-hypothese-ronde-80/`).
+- **Tests** : `test_display_socle_holds_an_original_base_and_prints_upright`,
+  `test_display_socle_tool_reports_without_any_character`.
+- **Réexamen** : cotes réelles relevées au pied à coulisse, puis une bague d'essai imprimée pour
+  calibrer le jeu (N3).
 

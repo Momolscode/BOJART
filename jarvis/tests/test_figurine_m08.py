@@ -171,6 +171,55 @@ class GeometryTests(unittest.TestCase):
         self.assertGreater(d[0], 0)    # une capsule de rayon 6 contiendrait ce point : pas de « bouée »
         self.assertLess(d[1], 0); self.assertGreater(d[2], 0); self.assertLess(d[3], 0)
 
+    def test_display_socle_holds_an_original_base_and_prints_upright(self):
+        from shapely.geometry import Polygon
+        from figurine import checks, fabrication
+
+        def holes_at(mesh, z):
+            sec, _ = mesh.section(plane_origin=[0, 0, z], plane_normal=[0, 0, 1]).to_planar()
+            return [Polygon(h).area for p in sec.polygons_full for h in p.interiors]
+
+        mesh, info = fabrication.display_socle('ovale', 90, 70)
+        hb, (a, b) = info['height_mm'], info['pocket']['semi_axes_mm']
+        self.assertEqual((a, b), (45.4, 35.4))                                           # cotes + jeu de 0,4 mm
+        r = checks.check_part(mesh, 'socle_vitrine', thickness_samples=300)
+        self.assertEqual(r['eliminatory'], [])
+        self.assertEqual(r['measured']['overhang_area_fraction'], 0.0)                  # à l'endroit, sans support
+        self.assertAlmostEqual(mesh.bounds[0][2], 0.0, places=4)
+        self.assertAlmostEqual(mesh.bounds[1][2], hb, places=4)
+        holes = holes_at(mesh, hb - 1.5)
+        self.assertEqual(len(holes), 1)
+        self.assertAlmostEqual(holes[0] / (np.pi * a * b), 1.0, delta=0.002)           # empreinte à la cote
+        floor = mesh.ray.intersects_location([[0, 0, hb + 5]], [[0, 0, -1]], multiple_hits=False)[0]
+        self.assertAlmostEqual(float(floor[0][2]), hb - info['pocket']['depth_mm'], places=3)
+        self.assertGreaterEqual(info['rim_min_mm'], fabrication.VITRINE_HYPOTHESES['min_pocket_wall_mm'])
+        self.assertTrue(np.array_equal(fabrication.display_socle('ovale', 90, 70)[0].vertices, mesh.vertices))
+        flat, finfo = fabrication.display_socle('libre', 100, 60)
+        self.assertIsNone(finfo['pocket']); self.assertEqual(holes_at(flat, hb - 1.5), [])
+        for bad in (('carree', 80, None), ('ovale', 90, None), ('ronde', 15, None), ('ronde', 200, None)):
+            with self.assertRaises(ValueError):
+                fabrication.display_socle(*bad)
+        with self.assertRaises(ValueError):                                              # empreinte traversante
+            fabrication.display_socle('ronde', 80, hyp={**fabrication.VITRINE_HYPOTHESES, 'pocket_depth_mm': 14.0})
+
+    @unittest.skipUnless(SLICER, 'PrusaSlicer absent')
+    def test_display_socle_tool_reports_without_any_character(self):
+        import subprocess
+        tool = ROOT / 'tools/socle_vitrine.py'
+        with tempfile.TemporaryDirectory() as d:
+            bad = subprocess.run([sys.executable, str(tool), '--forme', 'ovale', '--largeur', '90', '--out', d],
+                                 capture_output=True, text=True, timeout=300)
+            self.assertEqual(bad.returncode, 2); self.assertIn('REFUSED', bad.stdout)
+            self.assertEqual(list(Path(d).iterdir()), [])                                   # refus avant toute écriture
+            ok = subprocess.run([sys.executable, str(tool), '--forme', 'ronde', '--largeur', '80', '--out', d],
+                                capture_output=True, text=True, timeout=600)
+            self.assertEqual(ok.returncode, 0, ok.stdout + ok.stderr)
+            rep = json.loads((Path(d) / 'rapport.json').read_text(encoding='utf8'))
+            self.assertEqual(rep['slicing']['status'], 'DONE'); self.assertFalse(rep['slicing']['sent_to_machine'])
+            self.assertTrue(rep['slicing']['stats']['forbidden_header_present'])
+            self.assertTrue(rep['socle']['character_geometry'].startswith('aucune'))
+            self.assertEqual(list(Path(d).rglob('*.png')), [])                              # pas de rendu sans --rendus
+
     def test_character_defaults_keep_published_identities(self):
         from figurine import fabrication, pipeline
         from figurine.spec import parse_request

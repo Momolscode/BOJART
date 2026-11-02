@@ -152,6 +152,22 @@ les coudes en volumes ronds, le bout de la tresse en boule, des bras encore tubu
 0,8 × 0,5 mm (bouche, gainage de la poignée, strie du socle) relèvent du niveau résine et peuvent
 s'effacer en FDM. Le procédural reste en dessous d'une sculpture faite à la main (backlog, tâche 2).
 
+## Socle d'exposition pour une figurine du commerce (fiche D15)
+
+Olsen veut un Végéta pour la collection de BOJ.ART, pas pour la vente. Aucun fichier autorisé par les
+ayants droit n'a été trouvé, et la copie privée exclut les copies d'œuvres d'art (fiche D14) : la voie
+recommandée est une figurine officielle posée sur un socle BOJ.ART original.
+`tools/socle_vitrine.py` dessine ce socle en plaques d'ardoise, avec une empreinte ronde ou ovale pour le
+socle d'origine de la figurine, ou un dessus plat (« libre »). Rien du personnage n'est modélisé, et les
+rendus montrent le socle seul. Il s'imprime à l'endroit : retourné, le fond de l'empreinte serait un pont
+de plusieurs centimètres. Les plaques restent donc en retrait les unes des autres (surplomb mesuré 0 %).
+
+Essai sur cotes d'hypothèse (socle d'origine rond de 80 mm, en attendant les cotes réelles) : socle de
+106 × 105 × 16 mm, bord minimal de 6,6 mm autour de l'empreinte, maillage fermé ; tranchage estimé à
+4 h 31 et 42,8 g de PLA sous le même profil d'hypothèse. Preuve : `preuves/socle-vitrine-hypothese-ronde-80/` ;
+fichier et rendus dans le dossier du projet, `figurine-m08/socle-vitrine/hypothese-ronde-80/`.
+Non testé : l'ajustement réel du socle d'origine dans l'empreinte (jeu de 0,4 mm par côté à calibrer).
+
 ## Grille artistique (auto-évaluation, pas une validation indépendante)
 
 | Critère | Observation | Niveau |
@@ -218,7 +234,7 @@ Détail chiffré : `preuves/boucles_2026-11-02.json`.
   `preuves/execution-f65591bfc2cc1f0a-1m-decoupe/`, `preuves/execution-2821f575afea00a7-ardoise/`,
   `preuves/environnement_aligne_2026-11-02.json`, `preuves/atelier_three_core_verifie_2026-11-02.json`,
   `preuves/contre_epreuves_fabrication_v3_2026-11-02.json`, `preuves/execution-15546a650b8110ca-ardoise-v6/`,
-  `preuves/contre_epreuves_details_v6_2026-11-02.json`.
+  `preuves/contre_epreuves_details_v6_2026-11-02.json`, `preuves/socle-vitrine-hypothese-ronde-80/`.
 - Fichiers lourds hors Git (dossier du projet, `figurine-m08/`) : `figurine.stl`, `socle.stl`, `projet.3mf`,
   `rendus/` (vues + `figurine.blend`), `visionneuse/` (captures), `tranchage/apercu_couches_figurine.png`.
 - Choix sourcés : `REGISTRE_DECISIONS_M08.md`. Grille de conception : `GRILLE_CONCEPTION_FIGURINE.md`.

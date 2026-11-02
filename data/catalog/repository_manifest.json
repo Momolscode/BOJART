@@ -359,8 +359,8 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12867,
-      "sha256": "6b481e512b9be4138f66edbdd87f229b16c9750164784cbe7e9408f894f90c8e"
+      "bytes": 13190,
+      "sha256": "449e60447dac31fc8a4072464510e2ec3c85136ded509e4229d5ac60c787e5f9"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
@@ -1294,8 +1294,8 @@
     },
     {
       "path": "jarvis/AGENTS.md",
-      "bytes": 7055,
-      "sha256": "9f2bc9ed80ea5ef6f2d1f196000897ae5854b2213b7fb6d63d749f2ee3c2d3b3"
+      "bytes": 7350,
+      "sha256": "d090435b10bcbac4bf997f6e56435b2b504bfdaee9eddc2652c64d3c784d70de"
     },
     {
       "path": "jarvis/BILAN_LIVRAISON.md",
@@ -1454,8 +1454,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/fabrication.py",
-      "bytes": 15805,
-      "sha256": "01ed72ad20f3ee0572b55b9779aa936b68725f8584162edd95845ed362d76b76"
+      "bytes": 21835,
+      "sha256": "490591cf6c3ec7bb1313fe19de3242064caf1520f70ed70032854d16bd68eb27"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/pipeline.py",
@@ -2249,8 +2249,8 @@
     },
     {
       "path": "jarvis/docs/m08/BACKLOG_ET_REPRISE_M08.md",
-      "bytes": 6650,
-      "sha256": "78a0e1ac5dfab23774614a5d52890be9e77a24a86e414c32fa192d1698fea876"
+      "bytes": 7281,
+      "sha256": "00c4565408355e3f30cf69ab10de32c7dbca9cd7a210e8601b6cc8f254b18f72"
     },
     {
       "path": "jarvis/docs/m08/GRILLE_CONCEPTION_FIGURINE.md",
@@ -2259,13 +2259,13 @@
     },
     {
       "path": "jarvis/docs/m08/REGISTRE_DECISIONS_M08.md",
-      "bytes": 16722,
-      "sha256": "3f574d013ef99b285674d84676e8d9690a6095b762a1433bd75199358ac68327"
+      "bytes": 20864,
+      "sha256": "4a94e1f1106729458dd245eb74cd17ade21351f309d04726771381d371f7dce5"
     },
     {
       "path": "jarvis/docs/m08/RELEASE_M08.md",
-      "bytes": 16695,
-      "sha256": "024a033be7633c9c3f7a657551c25f11db1cf6e16b174ce571bddc4166eeb435"
+      "bytes": 18057,
+      "sha256": "56ce0f4499f0055b532966f8647b4ff1446b9f3b19d66dac7024e008605e18ab"
     },
     {
       "path": "jarvis/docs/m08/preuves/atelier_three_core_absent_2026-11-02.json",
@@ -2476,6 +2476,16 @@
       "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/state.json",
       "bytes": 7122,
       "sha256": "f06ea79551d89b44c8cec1ab125e119e9185d44901f1477bdeac5f22df6a8eae"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/socle-vitrine-hypothese-ronde-80/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/socle-vitrine-hypothese-ronde-80/rapport.json",
+      "bytes": 4039,
+      "sha256": "dcec740dcc24d41f51623af16e0b7005e73cea71be3911e7220a63a4dc976a60"
     },
     {
       "path": "jarvis/fixtures/fleet_1000mm_synthetic.json",
@@ -2889,8 +2899,8 @@
     },
     {
       "path": "jarvis/tests/test_figurine_m08.py",
-      "bytes": 21287,
-      "sha256": "d6a9f3f39f78a1ad80142bdf0c513782feb7d7f6e973d7ab92095d42bf1478b3"
+      "bytes": 24871,
+      "sha256": "6aa252b63c9e43d570ef9f30ada6c4850d2a8b6e8bf815eae5324b1f19172ae7"
     },
     {
       "path": "jarvis/tests/test_growth.py",
@@ -3056,6 +3066,11 @@
       "path": "jarvis/tools/run_checks.py",
       "bytes": 932,
       "sha256": "39fa546ea9b406b7dd70ecefb6df0a3d18608bbd53c21ddc52e8e08de745e0f4"
+    },
+    {
+      "path": "jarvis/tools/socle_vitrine.py",
+      "bytes": 5213,
+      "sha256": "6ceb08bd03690624831c22136f1689e8727651b7cc6ec8ab4d146fa6e51b239d"
     },
     {
       "path": "jarvis/tools/verify_repository.py",

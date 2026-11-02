@@ -82,7 +82,7 @@ def _slate_outline(rng, theta, radius, amp, vertices):
     return (a[:, 0] * e[:, 1] - a[:, 1] * e[:, 0]) / (d[:, 0] * e[:, 1] - d[:, 1] * e[:, 0])
 
 
-def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720):
+def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720, upright=False):
     """Socle « en strates » : plaques d'ardoise empilées aux bords cassés, plus larges vers le bas,
     avec des stries de clivage en V. Même repère que le socle lisse : dessus plat à z = 0 (plan de
     joint des semelles), dessous à z = -hb.
@@ -91,6 +91,8 @@ def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720):
     chanfrein plus raide que 45° (pente 1,15), une plaque qui déborde de celle du dessous ne forme
     qu'une contre-dépouille tournée vers le haut à l'impression, et les stries ont des flancs à 42°.
     Le contour du dessus reste à r - ch/1,15 - amp au moins : la marge autour des pieds est gardée.
+    upright=True : variante imprimée à l'endroit (socle d'exposition) ; chaque plaque reste en retrait
+    d'au moins 0,3 mm sur celle du dessous, sur tout le tour, donc aucun dévers.
     Retourne (maillage trimesh fermé, informations)."""
     import trimesh
     rng = np.random.default_rng(seed)
@@ -106,6 +108,8 @@ def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720):
     R = [_slate_outline(rng, theta, r + step * (n - 1 - i), amp, 17 + i % 3) for i in range(n)]
     for i in range(n - 1):                                # chanfrein contenu dans 60 % de la plaque
         R[i + 1] = np.maximum(R[i + 1], R[i] - 0.6 * h[i] / slope)
+        if upright:                                       # pas de plaque qui déborde de celle du dessous
+            R[i + 1] = np.minimum(R[i + 1], R[i] - 0.3)
     rings, grooves = [(np.zeros(n_theta), R[0])], 0
     for i in range(n):
         if i < n - 1:
@@ -118,7 +122,11 @@ def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720):
         if float(band_top.min()) - z[i] >= 2.0:           # strie de clivage, profondeur variable autour du socle
             zg = z[i] + 0.55 * (float(band_top.min()) - z[i])
             g = 0.45 * k * np.clip(1.6 * np.sin(2 * theta + rng.uniform(0, 2 * np.pi)) + 0.4, 0, 1)
-            rings += [(np.full(n_theta, zg - 0.5), R[i]), (np.full(n_theta, zg), R[i] - g), (np.full(n_theta, zg + 0.5), R[i])]
+            gh = 0.5
+            if upright:                                   # flancs à 42° de la verticale quel que soit k
+                gh = min(0.5 * k, 0.4 * (float(band_top.min()) - z[i]))
+                g = np.minimum(g, 0.9 * gh)
+            rings += [(np.full(n_theta, zg - gh), R[i]), (np.full(n_theta, zg), R[i] - g), (np.full(n_theta, zg + gh), R[i])]
             grooves += 1
         rings += [(band_top, R[i]), upper]
     Z = np.stack([zz for zz, _ in rings]) - hb
@@ -138,6 +146,8 @@ def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720):
             'top_outline_min_radius_mm': round(float((R[-1] - ch / slope).min()), 2),
             'bottom_outline_max_radius_mm': round(float(R[0].max()), 2),
             'chamfer_slope': f'{slope} (plus raide que 45° dans le sens d’impression)'}
+    if upright:
+        info['chamfer_slope'] = f'{slope} (chanfreins tournés vers le haut à l’impression)'
     return mesh, info
 
 
@@ -218,6 +228,92 @@ def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHES
             strata['recess_wall_min_mm'] = round(float(rad[low].min()) - (r - hyp['base_wall_mm'] * k), 2)
         info['base_style'] = {'style': style, 'version': SOCLE_STYLES[style], **strata}
     return {'figurine': figure_mesh, 'socle': base_mesh, 'info': info}
+
+
+# Socle d'exposition pour une figurine du commerce (fiche D15, 2 novembre 2026). Dessin original
+# BOJ.ART : seule l'empreinte du socle d'origine de la figurine est creusée, rien du personnage.
+VITRINE_VERSION = 'bojart.socle.vitrine.v1'
+VITRINE_SHAPES = ('ronde', 'ovale', 'libre')
+VITRINE_HYPOTHESES = {
+    'clearance_per_side_mm': 0.4,     # socle d'origine moulé : dépouille et cotes relevées à la main
+    'pocket_depth_mm': 3.0,
+    'margin_mm': 8.0,                 # ardoise visible autour du socle d'origine
+    'height_mm': 16.0,
+    'min_pocket_wall_mm': 4.0,
+    'status': 'hypothèse à calibrer : relever le socle d’origine au pied à coulisse et imprimer une bague d’essai',
+}
+
+
+def display_socle(shape: str, width_mm: float, depth_mm: float | None = None, hyp=VITRINE_HYPOTHESES,
+                  seed: int = 23, bed_mm=None):
+    """Socle d'exposition « en strates » pour une figurine du commerce posée sur son socle d'origine.
+
+    shape : « ronde » (diamètre width_mm), « ovale » (width_mm × depth_mm) ou « libre » (socle d'origine
+    irrégulier ou absent : dessus plat sans empreinte, dimensionné sur l'ellipse qui contient le
+    rectangle width_mm × depth_mm). Le grand axe est mis en x.
+    Imprimé à l'endroit, dessous plein : retourné, le fond de l'empreinte formerait un pont de plusieurs
+    centimètres, d'où des plaques toujours en retrait les unes des autres (_strata_base upright).
+    Retourne (maillage trimesh fermé, z ∈ [0, hauteur], informations)."""
+    import manifold3d as m3
+    from . import slicing
+    if shape not in VITRINE_SHAPES:
+        raise ValueError(f'Forme d’empreinte inconnue : {shape} (ronde, ovale ou libre)')
+    if shape == 'ronde':
+        depth_mm = width_mm
+    if depth_mm is None:
+        raise ValueError('Profondeur du socle d’origine requise pour une empreinte ovale ou libre.')
+    w, d = sorted((float(width_mm), float(depth_mm)), reverse=True)
+    if d < 20.0:
+        raise ValueError('Socle d’origine de moins de 20 mm : relever les cotes au pied à coulisse.')
+    cl, m, hb = hyp['clearance_per_side_mm'], hyp['margin_mm'], hyp['height_mm']
+    pocket = shape != 'libre'
+    if not 8.0 <= hb <= 60.0:
+        raise ValueError(f'Hauteur de socle de {hb:g} mm hors de la plage 8–60 mm.')
+    if pocket and not 0.5 <= hyp['pocket_depth_mm'] <= hb - 4.0:
+        raise ValueError(f'Empreinte de {hyp["pocket_depth_mm"]:g} mm : il faut entre 0,5 mm et la hauteur moins 4 mm.')
+    # Demi-axes à contenir : l'empreinte avec son jeu, ou l'ellipse qui contient le rectangle « libre ».
+    a, b = (w / 2 + cl, d / 2 + cl) if pocket else (w / 2 * np.sqrt(2), d / 2 * np.sqrt(2))
+    k = max(1.0, (a + m) / 45.0)                          # reliefs proportionnés au-delà du socle d'Ardoise
+    ch = min(1.5 * k, hb / 4)
+    extra = 0.7 * k + ch / 1.15                           # bords cassés et chanfrein du dessus
+    r = a + m + extra
+    slab, strata = _strata_base((0.0, 0.0), r, hb, ch, k, seed=seed, upright=True)
+    sy = (b + m + extra) / r                              # ovale : l'ardoise suit l'empreinte
+    if sy < 1.0:
+        slab.apply_scale([1.0, sy, 1.0])
+    for key in ('top_outline_min_radius_mm', 'bottom_outline_max_radius_mm'):
+        strata.pop(key)                                   # rayons avant mise à l'ovale : remplacés plus bas
+    base = to_manifold(slab)
+    if pocket:
+        depth = hyp['pocket_depth_mm']
+        cut = m3.CrossSection.circle(1.0, 256).scale([a, b]).extrude(depth + 0.01).translate([0, 0, -depth])
+        base = base - cut
+    mesh = to_trimesh(base)
+    mesh.apply_translation([0, 0, hb])
+    # Paroi la plus mince entre l'empreinte (ou la zone d'appui) et le bord du dessus, mesurée sur le
+    # contour réel : sommets du maillage dans le plan du dessus, hors de l'ellipse.
+    v = slab.vertices
+    top = v[np.isclose(v[:, 2], 0.0) & (np.linalg.norm(v[:, :2], axis=1) > 1.0)]
+    t = np.linspace(0, 2 * np.pi, 2048, endpoint=False)
+    ell = np.stack([a * np.cos(t), b * np.sin(t)], axis=1)
+    wall = float(np.min(np.linalg.norm(top[:, None, :2] - ell[None], axis=2)))
+    if wall < hyp['min_pocket_wall_mm']:
+        raise ValueError(f'Bord de {wall:.1f} mm autour de l’empreinte, sous le minimum de {hyp["min_pocket_wall_mm"]} mm.')
+    bed = bed_mm or slicing.SIM_BED_MM
+    if any(e > g for e, g in zip(sorted(mesh.extents[:2], reverse=True), sorted(bed[:2], reverse=True))):
+        raise ValueError(f'Socle de {mesh.extents[0]:.0f} × {mesh.extents[1]:.0f} mm : plus grand que le plateau '
+                         f'd’hypothèse {bed[0]:g} × {bed[1]:g} mm.')
+    info = {
+        'version': VITRINE_VERSION, 'shape': shape, 'original_base_mm': [w, d],
+        'pocket': ({'semi_axes_mm': [round(a, 2), round(b, 2)], 'depth_mm': hyp['pocket_depth_mm'],
+                    'clearance_per_side_mm': cl} if pocket else None),
+        'rim_min_mm': round(wall, 2), 'height_mm': hb,
+        'outer_extents_mm': [round(float(x), 2) for x in mesh.extents],
+        'print_orientation': 'à l’endroit (dessous sur le plateau) : ni support, ni pont',
+        'character_geometry': 'aucune : seule l’empreinte du socle d’origine est creusée',
+        'strata': strata, 'hypotheses': hyp['status'],
+    }
+    return mesh, info
 
 
 def _fits(extents, bed):

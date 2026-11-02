@@ -11,7 +11,7 @@
    (Ardoise, guerrier choisi par Olsen ; « la Sentinelle » reste le personnage de contrôle).
    Résultats dans `runs/figurine/<id>/` (hors Git) : `manifest.json`, `checks.json`, `rendus/`, `tranchage/`.
 4. Visionneuse : `node jarvis/tools/figurine_viewer_check.cjs runs/figurine/<id>`.
-5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (28 tests, ~90 s).
+5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (30 tests, ~100 s).
 
 Règles à garder : un personnage tiers reste BLOQUÉ sans maillage fourni et fiche de provenance ;
 aucun G-code n'est envoyé ; une dépendance absente donne BLOQUÉ, jamais une réussite ; un doublon de
@@ -69,11 +69,18 @@ commande renvoie la tâche existante sans recalcul.
 
 9. **Variante d'un mètre** : clés d'assemblage sur les plans de coupe, répartition sur le parc réel
    (après tâche 3). L'étude actuelle donne seulement le nombre de pièces pour le volume d'hypothèse.
-10. **Personnage sous licence** (choix d'Olsen pour Végéta, fiche D14) : en attente du fichier et de la
-   licence des ayants droit. Reste à faire : schéma de fiche de provenance (source, concédant, usages
-   permis, territoire, durée) et contrôle automatique avant toute importation. La chaîne ne produit déjà
-   aucune image d'un personnage tiers (rendus, aperçu des couches, captures de la visionneuse).
+10. **Personnage sous droits de tiers** (Végéta, fiches D14 et D15) : pièce de collection, pas de vente
+   (précision d'Olsen du 2 novembre). En attente du choix d'Olsen : socle d'exposition pour une figurine
+   officielle (recommandé ; il faut la forme et les cotes de son socle d'origine, puis
+   `tools/socle_vitrine.py`) ou fichier de fan imprimé pour la maison sous sa responsabilité. Reste à
+   faire : schéma de fiche de provenance (source, concédant, usage déclaré, territoire, durée) et contrôle
+   automatique avant toute importation. La chaîne ne produit déjà aucune image d'un personnage tiers
+   (rendus, aperçu des couches, captures de la visionneuse).
 11. **CI** : workflow GitHub qui installe PrusaSlicer et exécute les tests M08 (Blender facultatif).
+12. **Stries du socle en strates au-delà de 22 cm** : pour une figurine plus haute, les stries de clivage
+   du socle retourné se creusent avec l'échelle mais gardent 1 mm de haut, donc des flancs de plus de 45°.
+   Corriger dans une version 2 du style (identifiant de tâche nouveau) ; la variante à l'endroit du socle
+   d'exposition est déjà corrigée.
 
 ## Ce qu'il ne faut pas refaire
 
