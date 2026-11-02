@@ -228,7 +228,10 @@ qualification sur la tour.
      autorisée au sens strict) : fiche de provenance avec la source réelle et « usage : collection
      privée » ; ni vente, ni don hors du foyer, ni concours, ni photo publiée sur les réseaux ou la
      boutique de BOJ.ART ; mêmes garde-fous qu'au-dessus (aucune sculpture ni image du personnage).
-- **État** : en attente du choix d'Olsen.
+- **Choix d'Olsen (14:01 UTC)** : voie 2, un fichier de fan imprimé pour la maison. Les sorties restent hors
+  de Git, dans un dossier à part du projet marqué « collection privée » (fiche de provenance et note).
+- **État** : en attente du fichier et de sa source (boutique, sculpteur). La chaîne attend un seul
+  maillage : un kit en plusieurs pièces devra être assemblé ou traité pièce par pièce.
 
 ## D15. Socle d'exposition pour une figurine du commerce (2 novembre 2026)
 

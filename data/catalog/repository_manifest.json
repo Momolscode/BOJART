@@ -2249,8 +2249,8 @@
     },
     {
       "path": "jarvis/docs/m08/BACKLOG_ET_REPRISE_M08.md",
-      "bytes": 7281,
-      "sha256": "00c4565408355e3f30cf69ab10de32c7dbca9cd7a210e8601b6cc8f254b18f72"
+      "bytes": 7303,
+      "sha256": "638714d0019cef8eecaa8b63d6c5e102271dbc19dcd5c1b7c2ca65742341368b"
     },
     {
       "path": "jarvis/docs/m08/GRILLE_CONCEPTION_FIGURINE.md",
@@ -2259,8 +2259,8 @@
     },
     {
       "path": "jarvis/docs/m08/REGISTRE_DECISIONS_M08.md",
-      "bytes": 20864,
-      "sha256": "4a94e1f1106729458dd245eb74cd17ade21351f309d04726771381d371f7dce5"
+      "bytes": 21233,
+      "sha256": "0d6ec8e84b240332fe59a6930ca1a68f4867ad08b9c4811afdcc4a5e00cea2a4"
     },
     {
       "path": "jarvis/docs/m08/RELEASE_M08.md",

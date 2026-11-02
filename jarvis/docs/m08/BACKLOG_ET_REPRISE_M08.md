@@ -70,9 +70,9 @@ commande renvoie la tâche existante sans recalcul.
 9. **Variante d'un mètre** : clés d'assemblage sur les plans de coupe, répartition sur le parc réel
    (après tâche 3). L'étude actuelle donne seulement le nombre de pièces pour le volume d'hypothèse.
 10. **Personnage sous droits de tiers** (Végéta, fiches D14 et D15) : pièce de collection, pas de vente
-   (précision d'Olsen du 2 novembre). En attente du choix d'Olsen : socle d'exposition pour une figurine
-   officielle (recommandé ; il faut la forme et les cotes de son socle d'origine, puis
-   `tools/socle_vitrine.py`) ou fichier de fan imprimé pour la maison sous sa responsabilité. Reste à
+   (précision d'Olsen du 2 novembre). Olsen a choisi un fichier de fan imprimé pour la maison, sous sa
+   responsabilité (14:01 UTC) : en attente du fichier et de sa source. Le socle d'exposition pour une
+   figurine officielle (`tools/socle_vitrine.py`) reste disponible. Gérer un kit en plusieurs pièces. Reste à
    faire : schéma de fiche de provenance (source, concédant, usage déclaré, territoire, durée) et contrôle
    automatique avant toute importation. La chaîne ne produit déjà aucune image d'un personnage tiers
    (rendus, aperçu des couches, captures de la visionneuse).
