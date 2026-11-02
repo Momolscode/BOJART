@@ -216,12 +216,12 @@ class Client:
             try:
                 if data:
                     connection.send(data)
-            except (BrokenPipeError, ConnectionResetError):
+            except ConnectionError:  # BrokenPipe, Reset, Aborted (Windows) selon l'OS
                 pass  # le serveur a répondu (413) et fermé avant la fin de l'envoi : lire sa réponse
             try:
                 response = connection.getresponse()
                 raw = response.read()
-            except (ConnectionResetError, http.client.HTTPException) as error:
+            except (ConnectionError, http.client.HTTPException) as error:
                 return None, {'error': 'connexion fermée par le serveur (' + type(error).__name__ + ')'}
             return response.status, (json.loads(raw) if raw else None)
         finally:
