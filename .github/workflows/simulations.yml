@@ -1,0 +1,34 @@
+name: Jarvis measured simulations
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'bojart_memory/**'
+      - 'tools/benchmark_jarvis.py'
+      - 'data/knowledge/**'
+      - '.github/workflows/simulations.yml'
+permissions:
+  contents: read
+env:
+  PYTHONUTF8: '1'
+jobs:
+  benchmark:
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Measure reference retrieval, synthetic load and forced stops
+        run: python tools/benchmark_jarvis.py --output .bojart-audit/simulations.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: simulations-${{ matrix.os }}
+          path: .bojart-audit/simulations.json
+          retention-days: 30

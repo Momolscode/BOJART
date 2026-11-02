@@ -180,7 +180,8 @@ class WorkspaceTests(unittest.TestCase):
         archive=self.backup();bad=self.root/'symlink.zip'
         with zipfile.ZipFile(archive) as z,zipfile.ZipFile(bad,'w') as out:
             for info in z.infolist():
-                if info.filename.startswith('media/'):
+                # A database is always present, even without private demo media.
+                if info.filename=='missions.sqlite3':
                     info.create_system=3;info.external_attr=(stat.S_IFLNK|0o777)<<16
                 out.writestr(info,z.read(info.filename))
         with self.assertRaises(IntegrityError):verify_snapshot(bad)

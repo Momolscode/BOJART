@@ -1,0 +1,202 @@
+{
+  "schema": "bojart.retrieval-regression.v1",
+  "failed_commit": "0cd72b775eb4225074494a6b7da15d9061bc4651",
+  "before": {
+    "scope": "14 hand-authored lexical retrieval cases over selected documents; no generative-answer evaluation",
+    "cases": 14,
+    "hits_at_5": 13,
+    "results": [
+      {
+        "question": "Jev décideur voix",
+        "project": "bojart.jarvis",
+        "expected_source": "context/CURRENT.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/INSTALLATION.md",
+          "context/CURRENT.md",
+          "docs/ARCHITECTURE.md",
+          "docs/DATA_GOVERNANCE.md",
+          "docs/RESEARCH_2026-11-01.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "G2",
+        "project": "bojart.creative",
+        "expected_source": "creative/CURRENT.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "creative/CURRENT.md",
+          "data/knowledge/claims.jsonl",
+          "docs/ORCHESTRATION.md",
+          "productions/le-dernier-geste/STATUT_G2.json",
+          "docs/creative/RECUPERATION_PRODUCTION.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "R03",
+        "project": "bojart.creative",
+        "expected_source": "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+        "hit_at_5": true,
+        "returned_sources": [
+          "productions/le-dernier-geste/README.md",
+          "creative/CURRENT.md",
+          "docs/creative/RECUPERATION_PRODUCTION.md",
+          "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+          "productions/le-dernier-geste/STATUT_G2.json"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "restauration sauvegarde",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/DATA_GOVERNANCE.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/DATA_GOVERNANCE.md",
+          "INSTALLER_DEMAIN.md",
+          "context/CURRENT.md",
+          "docs/memory/RESILIENCE.md",
+          "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "microphone voix",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/INSTALLATION.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/INSTALLATION.md",
+          "docs/SIMULATIONS_ATELIER.md",
+          "INSTALLER_DEMAIN.md",
+          "docs/ORCHESTRATION.md",
+          "docs/DEMARRAGE_ET_REPRISE.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "V11 V3",
+        "project": "bojart.sites",
+        "expected_source": "sites/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "sites/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "LangGraph",
+        "project": "bojart.jarvis",
+        "expected_source": "context/CURRENT.md",
+        "hit_at_5": false,
+        "returned_sources": [
+          "docs/memory/OUTILS_ET_ARCHITECTURE.md",
+          "docs/RESEARCH_2026-11-01.md",
+          "INSTALLER_DEMAIN.md",
+          "docs/DEMARRAGE_ET_REPRISE.md",
+          "docs/SIMULATIONS_ATELIER.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "destination GitHub",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/GITHUB_WORKFLOW.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/ETAT_ARCHIVES_2026-11-01.md",
+          "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+          "data/knowledge/claims.jsonl",
+          "docs/GITHUB_WORKFLOW.md",
+          "docs/DATA_GOVERNANCE.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "GPU imprimantes",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/memory/POSTE_RTX4060TI.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/memory/RESILIENCE.md",
+          "docs/memory/POSTE_RTX4060TI.md",
+          "INSTALLER_DEMAIN.md",
+          "docs/memory/INSTALLATION_MODELES.md",
+          "docs/DEMARRAGE_ET_REPRISE.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "contacts profondeur sound design",
+        "project": "bojart.creative",
+        "expected_source": "creative/CURRENT.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "creative/CURRENT.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "OrcaSlicer UVtools tranchage",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "AE MCP Bridge Roto Brush",
+        "project": "bojart.creative",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "hashtags PeintureFigurine recherche",
+        "project": "bojart.creative",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/ORCHESTRATION.md",
+          "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+          "docs/OPERATIONS.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/MODELES_LOCAUX_2026-11-02.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "Search Console export CSV",
+        "project": "bojart.sites",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "data/knowledge/claims.jsonl",
+          "docs/ORCHESTRATION.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      }
+    ]
+  },
+  "correction": "Keep a concise current command catalogue in canonical, and date-scoped experimental evidence in session_log. Full human-readable simulations guide remains available by link. No retrieval engine, gold cases, thresholds or source text removed.",
+  "after_gold_cases": 14,
+  "after_hits": 14,
+  "after_report": "retrieval-after.json"
+}

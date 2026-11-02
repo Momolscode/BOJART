@@ -1,0 +1,675 @@
+{
+  "schema": "bojart.synthetic-fleet-fixture.v1",
+  "data_kind": "synthetic_scheduling_fixture",
+  "scenario": "Demande de figurine à 1000 mm, aucune géométrie de personnage fournie",
+  "target_height_mm": 1000,
+  "parts_height_basis_mm": 1000,
+  "note": "8 imprimantes et 24 volumes entièrement fictifs. Toutes les durées sont des hypothèses, pas des résultats de slicer. Aucun inventaire réel déduit.",
+  "printers": [
+    {
+      "id": "SIM-FDM-01",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 0,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "box",
+        "x": 260,
+        "y": 260,
+        "z": 300
+      }
+    },
+    {
+      "id": "SIM-FDM-02",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 0,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "box",
+        "x": 260,
+        "y": 260,
+        "z": 300
+      }
+    },
+    {
+      "id": "SIM-FDM-03",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 0,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "box",
+        "x": 260,
+        "y": 260,
+        "z": 300
+      }
+    },
+    {
+      "id": "SIM-FDM-04",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 0,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "box",
+        "x": 260,
+        "y": 260,
+        "z": 300
+      }
+    },
+    {
+      "id": "SIM-FDM-05",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 0,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "box",
+        "x": 260,
+        "y": 260,
+        "z": 300
+      }
+    },
+    {
+      "id": "SIM-FDM-06",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 0,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "box",
+        "x": 260,
+        "y": 260,
+        "z": 300
+      }
+    },
+    {
+      "id": "SIM-FDM-07",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 120,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "cylinder",
+        "diameter": 360,
+        "z": 400
+      }
+    },
+    {
+      "id": "SIM-FDM-08",
+      "process": "FDM",
+      "materials": [
+        "PLA"
+      ],
+      "online": true,
+      "ready_after_min": 120,
+      "turnaround_min": 15,
+      "clearance_mm": 5,
+      "volume": {
+        "shape": "box",
+        "x": 320,
+        "y": 320,
+        "z": 300
+      }
+    }
+  ],
+  "parts": [
+    {
+      "id": "SIM-PART-01",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        150,
+        120,
+        160
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 720,
+        "SIM-FDM-02": 792.0,
+        "SIM-FDM-03": 648.0,
+        "SIM-FDM-04": 864.0,
+        "SIM-FDM-05": 756.0,
+        "SIM-FDM-06": 684.0,
+        "SIM-FDM-07": 828.0,
+        "SIM-FDM-08": 612.0
+      }
+    },
+    {
+      "id": "SIM-PART-02",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        170,
+        140,
+        170
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 690,
+        "SIM-FDM-02": 759.0,
+        "SIM-FDM-03": 621.0,
+        "SIM-FDM-04": 828.0,
+        "SIM-FDM-05": 724.5,
+        "SIM-FDM-06": 655.5,
+        "SIM-FDM-07": 793.5,
+        "SIM-FDM-08": 586.5
+      }
+    },
+    {
+      "id": "SIM-PART-03",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        190,
+        160,
+        180
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 660,
+        "SIM-FDM-02": 726.0,
+        "SIM-FDM-03": 594.0,
+        "SIM-FDM-04": 792.0,
+        "SIM-FDM-05": 693.0,
+        "SIM-FDM-06": 627.0,
+        "SIM-FDM-07": 759.0,
+        "SIM-FDM-08": 561.0
+      }
+    },
+    {
+      "id": "SIM-PART-04",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        210,
+        120,
+        190
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 630,
+        "SIM-FDM-02": 693.0,
+        "SIM-FDM-03": 567.0,
+        "SIM-FDM-04": 756.0,
+        "SIM-FDM-05": 661.5,
+        "SIM-FDM-06": 598.5,
+        "SIM-FDM-07": 724.5,
+        "SIM-FDM-08": 535.5
+      }
+    },
+    {
+      "id": "SIM-PART-05",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        150,
+        140,
+        200
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 600,
+        "SIM-FDM-02": 660.0,
+        "SIM-FDM-03": 540.0,
+        "SIM-FDM-04": 720.0,
+        "SIM-FDM-05": 630.0,
+        "SIM-FDM-06": 570.0,
+        "SIM-FDM-07": 690.0,
+        "SIM-FDM-08": 510.0
+      }
+    },
+    {
+      "id": "SIM-PART-06",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        170,
+        160,
+        160
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 570,
+        "SIM-FDM-02": 627.0,
+        "SIM-FDM-03": 513.0,
+        "SIM-FDM-04": 684.0,
+        "SIM-FDM-05": 598.5,
+        "SIM-FDM-06": 541.5,
+        "SIM-FDM-07": 655.5,
+        "SIM-FDM-08": 484.5
+      }
+    },
+    {
+      "id": "SIM-PART-07",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        190,
+        120,
+        170
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 540,
+        "SIM-FDM-02": 594.0,
+        "SIM-FDM-03": 486.0,
+        "SIM-FDM-04": 648.0,
+        "SIM-FDM-05": 567.0,
+        "SIM-FDM-06": 513.0,
+        "SIM-FDM-07": 621.0,
+        "SIM-FDM-08": 459.0
+      }
+    },
+    {
+      "id": "SIM-PART-08",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        210,
+        140,
+        180
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 510,
+        "SIM-FDM-02": 561.0,
+        "SIM-FDM-03": 459.0,
+        "SIM-FDM-04": 612.0,
+        "SIM-FDM-05": 535.5,
+        "SIM-FDM-06": 484.5,
+        "SIM-FDM-07": 586.5,
+        "SIM-FDM-08": 433.5
+      }
+    },
+    {
+      "id": "SIM-PART-09",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        150,
+        160,
+        190
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 480,
+        "SIM-FDM-02": 528.0,
+        "SIM-FDM-03": 432.0,
+        "SIM-FDM-04": 576.0,
+        "SIM-FDM-05": 504.0,
+        "SIM-FDM-06": 456.0,
+        "SIM-FDM-07": 552.0,
+        "SIM-FDM-08": 408.0
+      }
+    },
+    {
+      "id": "SIM-PART-10",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        170,
+        120,
+        200
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 450,
+        "SIM-FDM-02": 495.0,
+        "SIM-FDM-03": 405.0,
+        "SIM-FDM-04": 540.0,
+        "SIM-FDM-05": 472.5,
+        "SIM-FDM-06": 427.5,
+        "SIM-FDM-07": 517.5,
+        "SIM-FDM-08": 382.5
+      }
+    },
+    {
+      "id": "SIM-PART-11",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        190,
+        140,
+        160
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 420,
+        "SIM-FDM-02": 462.0,
+        "SIM-FDM-03": 378.0,
+        "SIM-FDM-04": 504.0,
+        "SIM-FDM-05": 441.0,
+        "SIM-FDM-06": 399.0,
+        "SIM-FDM-07": 483.0,
+        "SIM-FDM-08": 357.0
+      }
+    },
+    {
+      "id": "SIM-PART-12",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        210,
+        160,
+        170
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 390,
+        "SIM-FDM-02": 429.0,
+        "SIM-FDM-03": 351.0,
+        "SIM-FDM-04": 468.0,
+        "SIM-FDM-05": 409.5,
+        "SIM-FDM-06": 370.5,
+        "SIM-FDM-07": 448.5,
+        "SIM-FDM-08": 331.5
+      }
+    },
+    {
+      "id": "SIM-PART-13",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        150,
+        120,
+        180
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 360,
+        "SIM-FDM-02": 396.0,
+        "SIM-FDM-03": 324.0,
+        "SIM-FDM-04": 432.0,
+        "SIM-FDM-05": 378.0,
+        "SIM-FDM-06": 342.0,
+        "SIM-FDM-07": 414.0,
+        "SIM-FDM-08": 306.0
+      }
+    },
+    {
+      "id": "SIM-PART-14",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        170,
+        140,
+        190
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 330,
+        "SIM-FDM-02": 363.0,
+        "SIM-FDM-03": 297.0,
+        "SIM-FDM-04": 396.0,
+        "SIM-FDM-05": 346.5,
+        "SIM-FDM-06": 313.5,
+        "SIM-FDM-07": 379.5,
+        "SIM-FDM-08": 280.5
+      }
+    },
+    {
+      "id": "SIM-PART-15",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        190,
+        160,
+        200
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 300,
+        "SIM-FDM-02": 330.0,
+        "SIM-FDM-03": 270.0,
+        "SIM-FDM-04": 360.0,
+        "SIM-FDM-05": 315.0,
+        "SIM-FDM-06": 285.0,
+        "SIM-FDM-07": 345.0,
+        "SIM-FDM-08": 255.0
+      }
+    },
+    {
+      "id": "SIM-PART-16",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        210,
+        120,
+        160
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 270,
+        "SIM-FDM-02": 297.0,
+        "SIM-FDM-03": 243.0,
+        "SIM-FDM-04": 324.0,
+        "SIM-FDM-05": 283.5,
+        "SIM-FDM-06": 256.5,
+        "SIM-FDM-07": 310.5,
+        "SIM-FDM-08": 229.5
+      }
+    },
+    {
+      "id": "SIM-PART-17",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        150,
+        140,
+        170
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 240,
+        "SIM-FDM-02": 264.0,
+        "SIM-FDM-03": 216.0,
+        "SIM-FDM-04": 288.0,
+        "SIM-FDM-05": 252.0,
+        "SIM-FDM-06": 228.0,
+        "SIM-FDM-07": 276.0,
+        "SIM-FDM-08": 204.0
+      }
+    },
+    {
+      "id": "SIM-PART-18",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        170,
+        160,
+        180
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 210,
+        "SIM-FDM-02": 231.0,
+        "SIM-FDM-03": 189.0,
+        "SIM-FDM-04": 252.0,
+        "SIM-FDM-05": 220.5,
+        "SIM-FDM-06": 199.5,
+        "SIM-FDM-07": 241.5,
+        "SIM-FDM-08": 178.5
+      }
+    },
+    {
+      "id": "SIM-PART-19",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        190,
+        120,
+        190
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 180,
+        "SIM-FDM-02": 198.0,
+        "SIM-FDM-03": 162.0,
+        "SIM-FDM-04": 216.0,
+        "SIM-FDM-05": 189.0,
+        "SIM-FDM-06": 171.0,
+        "SIM-FDM-07": 207.0,
+        "SIM-FDM-08": 153.0
+      }
+    },
+    {
+      "id": "SIM-PART-20",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        210,
+        140,
+        200
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 150,
+        "SIM-FDM-02": 165.0,
+        "SIM-FDM-03": 135.0,
+        "SIM-FDM-04": 180.0,
+        "SIM-FDM-05": 157.5,
+        "SIM-FDM-06": 142.5,
+        "SIM-FDM-07": 172.5,
+        "SIM-FDM-08": 127.5
+      }
+    },
+    {
+      "id": "SIM-PART-21",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        150,
+        160,
+        160
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 120,
+        "SIM-FDM-02": 132.0,
+        "SIM-FDM-03": 108.0,
+        "SIM-FDM-04": 144.0,
+        "SIM-FDM-05": 126.0,
+        "SIM-FDM-06": 114.0,
+        "SIM-FDM-07": 138.0,
+        "SIM-FDM-08": 102.0
+      }
+    },
+    {
+      "id": "SIM-PART-22",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        170,
+        120,
+        170
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 90,
+        "SIM-FDM-02": 99.0,
+        "SIM-FDM-03": 81.0,
+        "SIM-FDM-04": 108.0,
+        "SIM-FDM-05": 94.5,
+        "SIM-FDM-06": 85.5,
+        "SIM-FDM-07": 103.5,
+        "SIM-FDM-08": 76.5
+      }
+    },
+    {
+      "id": "SIM-PART-23",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        190,
+        140,
+        180
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 60,
+        "SIM-FDM-02": 66.0,
+        "SIM-FDM-03": 54.0,
+        "SIM-FDM-04": 72.0,
+        "SIM-FDM-05": 63.0,
+        "SIM-FDM-06": 57.0,
+        "SIM-FDM-07": 69.0,
+        "SIM-FDM-08": 51.0
+      }
+    },
+    {
+      "id": "SIM-PART-24",
+      "label": "Volume fictif de la figurine, pas une pièce de Végéta",
+      "bbox_mm": [
+        210,
+        160,
+        190
+      ],
+      "process": "FDM",
+      "material": "PLA",
+      "state": "unstarted",
+      "minutes_by_printer": {
+        "SIM-FDM-01": 45,
+        "SIM-FDM-02": 49.5,
+        "SIM-FDM-03": 40.5,
+        "SIM-FDM-04": 54.0,
+        "SIM-FDM-05": 47.25,
+        "SIM-FDM-06": 42.75,
+        "SIM-FDM-07": 51.75,
+        "SIM-FDM-08": 38.25
+      }
+    }
+  ]
+}

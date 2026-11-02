@@ -108,7 +108,7 @@ class Handler(LegacyHandler):
             try:length=int(self.headers.get('Content-Length','-1'))
             except ValueError:return self.j({'error':'Taille invalide.'},400)
             if not 0<length<=(MAX_BYTES if is_audio else 16384):return self.j({'error':'Requête hors limites.'},413)
-            raw=self.rfile.read(length)
+            raw=self.read_request_body(length)
             if len(raw)!=length:raise Rejected('Requête incomplète.')
             if is_audio:return self.j(self.server.voice.transcribe(raw))
             data=strict_json(raw)

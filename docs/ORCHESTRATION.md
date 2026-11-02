@@ -80,6 +80,12 @@ Le journal `context/SESSION_HANDOFF.md` appartient à la collection `session_log
 
 Vérifications de l'intégration : [preuve datée](evidence/orchestration-integration-2026-11-01.json). La passation a aussi été dédoublonnée après rapprochement des contributions ; les originaux restent dans l'historique Git.
 
+## Relier les médias à leur recette
+
+La section `production_recovery` rapproche les cinq médias R03 du catalogue de récupération par SHA-256 et taille. Les recettes et catalogues doivent correspondre au manifeste et aux octets audités. Le rapport expose les parties d'archive, les commits épinglés et les rôles artistiques conservés ; il n'effectue aucune copie.
+
+La commande `tools/prepare_production.py` prépare ensuite, sur demande, un dossier externe neuf à partir d'une collecte déjà restaurée. Elle vérifie les copies et conserve les originaux, sans lancer les scripts ou un rendu. Voir le [guide de production](creative/RECUPERATION_PRODUCTION.md). Le classement `catalogued` du rapport et le reçu `copied_verified` ont des portées différentes. Le blocage G2 reste ouvert.
+
 ## Sources techniques
 
 - [Événements GitHub Actions et commit de fusion des PR](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).

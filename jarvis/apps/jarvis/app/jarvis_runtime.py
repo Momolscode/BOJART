@@ -31,6 +31,18 @@ ALIASES.update({'montre le modele a droite':'model', 'interromps ta reponse':'si
                 'ouvre les dossiers':'workspace', 'ouvre la base metier':'knowledge',
                 'ouvre la conception':'cad', 'ouvre les contenus':'growth',
                 'affiche la tour de controle':'tower', 'affiche tout':'tower'})
+# Exact, bounded phrases: a negation or an additional action is never stripped.
+for _label, _choice in {'atelier':'planning', 'planning':'planning', 'dossiers':'workspace',
+                        'studio':'studio', 'contenus':'growth', 'conception':'cad',
+                        'base métier':'knowledge'}.items():
+    for _verb in ('Affiche', 'Montre', 'Ouvre'):
+        for _noun in ('le dashboard', 'le tableau de bord'):
+            ALIASES[norm(f'{_verb} {_noun} {_label}')] = _choice
+ALIASES[norm('Affiche les trois dashboards')] = 'tower'
+ALIASES[norm('Affiche les trois tableaux de bord')] = 'tower'
+AMBIGUOUS_DASHBOARDS = {norm(s) for s in (
+    'Affiche le dashboard', 'Ouvre le dashboard', 'Montre le dashboard',
+    'Affiche un des dashboards', 'Affiche le tableau de bord')}
 VOICE_CONFIRM = ('Confirme cet affichage', 'Je confirme cet affichage')
 VOICE_CANCEL = ('Annule cette proposition', 'Annule cet affichage')
 TERMINAL = {'CLARIFY', 'STALE', 'CANCELLED', 'CANCELLED_AFTER_DISPATCH', 'QUEUED', 'FAILED', 'RESTORED'}
@@ -273,6 +285,8 @@ class JarvisRuntime:
         else:
             key=ALIASES.get(norm(data['text']))
             if key: decision={'source':'local','choice':key,'called':False,'reason':'known_command'}
+            elif norm(data['text']) in AMBIGUOUS_DASHBOARDS:
+                decision={'source':'local','choice':'clarify','called':False,'reason':'dashboard_unspecified'}
             elif row['cancelled']: decision={'source':'local','choice':'clarify','called':False,'reason':'cancelled'}
             else:
                 # Persist BEFORE the remote call: a crash will never auto-repeat it.
@@ -290,6 +304,8 @@ class JarvisRuntime:
                 return {'status':'STALE','message':'Le dossier, le contexte ou le délai a changé. Reformulez la commande.'}
             choice=state['decision']['choice']
             if choice not in COMMANDS:
+                if state['decision'].get('reason')=='dashboard_unspecified':
+                    return {'status':'CLARIFY','message':'Quel tableau de bord : atelier (planning démonstratif), dossiers, Studio, contenus, conception ou base métier ?'}
                 return {'status':'CLARIFY','message':'Commande non reconnue avec certitude. Choisissez un des ordres proposés.'}
             if choice=='model' and not data['operation_id']:
                 return {'status':'CLARIFY','message':'Sélectionnez le modèle à afficher dans ce dossier.'}

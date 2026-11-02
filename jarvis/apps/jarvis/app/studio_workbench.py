@@ -73,7 +73,7 @@ class StudioHandler(M02Handler):
   try:
    n=int(self.headers.get('Content-Length','-1'))
    if not 0<n<=16384:return self.j({'error':'Requête hors limites.'},413)
-   raw=self.rfile.read(n)
+   raw=self.read_request_body(n)
    if len(raw)!=n:raise Rejected('Requête incomplète.')
    d=strict_json(raw)
    if not isinstance(d,dict):raise Rejected('Objet requis.')

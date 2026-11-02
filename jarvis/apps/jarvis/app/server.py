@@ -46,6 +46,13 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         if body:self.wfile.write(body)
     def j(self,obj,status=200):self.response(status,json.dumps(obj,ensure_ascii=False,allow_nan=False).encode('utf8'))
+    def read_request_body(self,length):
+        """Reuse a bounded body received before taking the workspace mutation lock."""
+        buffered=getattr(self,'_buffered_request_body',None)
+        if buffered is not None:
+            if len(buffered)!=length:raise Rejected('Taille de requête incohérente.')
+            return buffered
+        return self.rfile.read(length)
     def authorized(self):
         try:
             cookie=http.cookies.SimpleCookie(self.headers.get('Cookie',''))
@@ -63,7 +70,7 @@ class Handler(BaseHTTPRequestHandler):
         args=urllib.parse.parse_qs(parsed.query)
         bootstrap=args.get('session',[''])[0]
         if parsed.path=='/' and bootstrap:
-            if not hmac.compare_digest(bootstrap,self.server.token):return self.j({'error':'Session invalide.'},401)
+            if not bootstrap.isascii() or not hmac.compare_digest(bootstrap,self.server.token):return self.j({'error':'Session invalide.'},401)
             return self.response(303,extra={'Location':getattr(self.server,'landing_path','/'),'Set-Cookie':'boj_session='+self.server.token+'; HttpOnly; SameSite=Strict; Path=/'})
         if not self.authorized():return self.j({'error':'Ouvrir la fenêtre depuis le lanceur local autorisé.'},401)
         try:
@@ -105,7 +112,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             length=int(self.headers.get('Content-Length','-1'))
             if not 0<length<=16384:return self.j({'error':'Taille de requête invalide.'},413)
-            data=strict_loads(self.rfile.read(length))
+            data=strict_loads(self.read_request_body(length))
             if self.path=='/api/parse':
                 if not isinstance(data,dict) or set(data)!={'command'}:raise Rejected('Champ command unique requis.')
                 return self.j(parse_command(data['command']))

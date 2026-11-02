@@ -214,6 +214,17 @@ def markdown(report):
         for gate in qualification["gates"]:
             lines.append("| " + " | ".join(safe(x) for x in
                          (gate["label"], ", ".join(gate["task_ids"]), ", ".join(gate["required_datasets"]), gate["status"])) + " |")
+    production = report.get("production_recovery")
+    if production:
+        p = production["summary"]
+        lines += ["", "## Sources de production retrouvables", "",
+                  f"{p['catalogued_assets']}/{p['assets']} médias reliés par SHA-256 au catalogue de récupération.",
+                  "Ce rapprochement ne vérifie pas à nouveau les octets des archives et ne valide pas le montage.", "",
+                  "| Chemin de la recette | Partie | État | Rôle conservé |", "|---|---|---|---|"]
+        for row in production["assets"]:
+            lines.append("| " + " | ".join(safe(x) for x in
+                         (row["path"], row["archive"]["part"] if row["archive"] else "—", row["status"], row["role"])) + " |")
+        lines += ["", "La commande tools/prepare_production.py prépare une copie vérifiée dans un nouveau dossier externe ; aucun rendu ni script lancé."]
     lines += ["", "## Premiers lots de lecture", "",
               "Tous les lots, chemins conservés et empreintes sont dans orchestration.json.", "",
               "| Lot | Unités | Chemins | Premier chemin |", "|---|---|---|---|"]

@@ -145,6 +145,8 @@
         "jarvis/apps/jarvis/app/memory.*",
         "jarvis/tests/memory_*",
         "Installer_BOJART_4060Ti.cmd",
+        "Mesurer_BOJART.cmd",
+        "tools/benchmark_jarvis.py",
         "Diagnostic_BOJART.*"
       ],
       "reason": "Mémoire persistante, isolation des domaines et reprise après interruption."
@@ -163,7 +165,10 @@
         "docs/PRODUCTION*",
         "docs/RECHERCHE_ARTISTES*",
         "jarvis/knowledge/growth/*",
-        "ops/higgsfield-*"
+        "ops/higgsfield-*",
+        "tools/prepare_production.py",
+        "bojart_ops/production_recovery.py",
+        "tests/test_production_recovery.py"
       ],
       "reason": "Direction, variantes, recettes et validation artistique distincte des tests."
     },
@@ -177,7 +182,11 @@
     {
       "domain": "runtime",
       "patterns": [
-        "jarvis/*"
+        "jarvis/*",
+        "tests_workflows/*",
+        "Simuler_BOJART.cmd",
+        "tools/simulate_jarvis_workflows.py",
+        "docs/SIMULATIONS_ATELIER.md"
       ],
       "reason": "Runtime Jarvis, CAO, voix et atelier ; matériel à qualifier."
     },
@@ -353,7 +362,8 @@
       "priority": 1,
       "status": "planned",
       "depends_on": [
-        "g2-source"
+        "g2-source",
+        "production-sources"
       ],
       "blockers": [],
       "evidence": [
@@ -400,6 +410,25 @@
         "social_publish"
       ],
       "acceptance": "Publication autorisée avec reçu et données datées ; un brouillon ne valide pas le parcours."
+    },
+    {
+      "id": "production-sources",
+      "title": "Reconstruire les cinq sources R03 et leur recette courante",
+      "domain": "creative",
+      "priority": 1,
+      "status": "done",
+      "depends_on": [
+        "archives-preserved"
+      ],
+      "blockers": [],
+      "evidence": [
+        "docs/creative/RECUPERATION_PRODUCTION.md",
+        "docs/evidence/production-recovery-2026-11-02.json"
+      ],
+      "required_datasets": [
+        "reference_assets"
+      ],
+      "acceptance": "Cinq médias contrôlés par taille et SHA-256 dans une copie de travail externe ; aucune validation du G2 final, du master ou du poste cible."
     }
   ],
   "context_audit": {
@@ -414,5 +443,8 @@
     "data": "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
     "acceptance": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
     "runtime_gates": "jarvis/apps/jarvis/app/launch_readiness.py"
+  },
+  "production_recovery": {
+    "project": "productions/le-dernier-geste"
   }
 }

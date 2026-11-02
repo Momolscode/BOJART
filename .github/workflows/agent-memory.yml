@@ -27,3 +27,22 @@ jobs:
           name: memory-restart-${{ matrix.os }}
           path: .bojart-audit/forced-restart.json
           retention-days: 14
+  media-export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install FFmpeg for the real synthetic export check
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Encode, inspect and decode video and audio
+        run: python tools/diagnose_environment.py --check-media --summary --output "$RUNNER_TEMP/bojart-media-check.json"
+      - name: Save technical receipt, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-media-check-linux
+          path: ${{ runner.temp }}/bojart-media-check.json
+          if-no-files-found: error
+          retention-days: 14

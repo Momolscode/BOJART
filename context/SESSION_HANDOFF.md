@@ -123,6 +123,12 @@ Six nouveaux tests couvrent le refus des anciennes demandes, les nouvelles deman
 
 Rapprochement du pilotage : le correctif de restauration `9c2a0fb47baf1b610e31d2deb800a5323bb9495e` est conservé avec ses six scénarios. La preuve d’orchestration est actualisée sur le corpus et le code réunis.
 
+## Sources de production reliées aux archives — 2 novembre 2026
+
+Base rapprochée : `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, après les correctifs de modèles locaux et de sélection Studio/Growth. Le rapprochement par empreinte identifie les cinq médias R03 dans la collecte initiale ; leurs noms de stockage différaient des chemins attendus par le montage. Le plan expose ce lien, et `tools/prepare_production.py` prépare une copie de travail externe vérifiée avec les recettes courantes.
+
+Les originaux et les anciennes versions sont préservés. Aucune génération, publication ou validation artistique n'est ajoutée ; TEST19 reste provisoire et G2 manque toujours. Guide : `docs/creative/RECUPERATION_PRODUCTION.md`. Recette, empreintes et limites : `docs/evidence/production-recovery-2026-11-02.json`.
+
 ## Modèles facultatifs et premier lancement
 
 Base examinée : `0a7a08dd0a0bed445ef0dc5734be7c841b30467a`, contrôles GitHub réussis. Demande : continuer la préparation de Jarvis.
@@ -155,6 +161,8 @@ Les contrôles avec serveur local simulé vérifient erreurs, changements de tag
 
 Réconciliation : les améliorations concurrentes du Studio/Growth et leurs treize tests d’interface, publiées au commit `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`, sont conservées.
 
+Réconciliation du raccordement des médias : la préparation des profils locaux et le contrôle des identités de modèles publiés à `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont préservés. Les sélections documentaires des deux contributions sont réunies par projet et chemin.
+
 ## Suite de l’audit : lanceurs historiques — 2 novembre 2026
 
 Base examinée : `20283c3136c66fbfca78a9e733b5c74bd5dfcf03`. Les contrôles GitHub de cette base et le reçu Studio/Growth `870896c1f1f313ce64479894a1d174fc34073808` sont réussis.
@@ -164,6 +172,8 @@ Défauts reproduits : les lanceurs de `jarvis/` et `jarvis/apps/jarvis/` démarr
 Validation locale : dix tests exécutent les vrais scripts contre des programmes Python de contrôle et des environnements isolés, sans installation de dépendances ni accès réseau. Ils vérifient les arguments, les espaces/accents, la sélection Python, le choix de dossier et les erreurs. Quatre contrôles HTTP supplémentaires vérifient le téléchargement exact d'une sauvegarde, sa restauration dans un nouveau dossier, les accès authentifiés et les longueurs de réponse ; cette voie existante fonctionne sans correction du serveur. Deux appels réels `--check-only` par les anciens lanceurs atteignent le diagnostic complet sans créer d'état ni appeler de fournisseur. La suite racine compte maintenant 66 tests, exécutés automatiquement sous Ubuntu et Windows ; ses résultats distants et la portée exacte sont consignés dans le reçu d'audit. Ces essais ne qualifient ni le poste cible ni ses moteurs optionnels.
 
 Réconciliation avant publication : les profils de modèles et le contrôle d’identité pendant l’inférence du commit `a0500b39ddf5a6154c701c225c5b2ad80767cc70` sont conservés. Les documents communs ont été fusionnés ; le manifeste repart de cette nouvelle tête.
+
+Raccordement des médias : les lanceurs unifiés et les contrôles de téléchargement de sauvegarde, rapprochés jusqu’à `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Les essais des deux contributions sont relancés ensemble.
 
 ## Adaptation au poste RTX 4060 Ti — 2 novembre 2026
 
@@ -176,3 +186,46 @@ Le contexte de conversation réserve la place de la question, des instructions e
 Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `POSTE_RTX4060TI.md`, qui rassemble le GPU rapporté et les inconnues du parc. Son ancienne source attendue, le résumé `CURRENT.md`, a reculé au classement après l'ajout de ce guide ; la question et le seuil de cinq résultats restent inchangés. Le journal historique conserve les anciennes inconnues à leur date ; seul l'état courant est actualisé.
 
 Réconciliation avant publication : les corrections des lanceurs historiques et leurs quatorze tests, publiés sur `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Le guide d'installation et le journal ont été réunis ; le manifeste repart de cette tête.
+
+Réconciliation du dossier de production : les informations matérielles sourcées, l’installeur RTX 4060 Ti et les contrôles de contexte compact du commit `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` sont conservés avec la reconstruction des cinq médias R03. Le correctif de simulation de collision de dossiers est passé sous Windows et Linux au commit `0d853787285142292a70850a1e38c49ce45b385e`. Les contrôles de l’ensemble réuni sont consignés dans la preuve de récupération.
+
+## Simulations mesurées — 2 novembre 2026
+
+Demande : confirmer le push, trouver des simulations utiles et fournir des statistiques. Le push RTX 4060 Ti est vérifié sur `2025ac1c8f376341532fbd2df8a176b0b8fc3de4`. Les sources runtime/corpus de cette révision ont été comparées à leurs empreintes avant trois répétitions indépendantes en états temporaires sur un hôte Linux sans GPU NVIDIA détecté. Le code du banc et les corpus gardent leurs empreintes dans les rapports.
+
+Résultats : 1 260 recherches, soit 14 questions répétées 90 fois, retrouvent la référence dans les cinq premiers résultats. Médiane 0,706 ms, p95 1,053 ms. Les paquets de 8 000 octets conservent cette référence précise dans 900/1260 cas, contre 1170/1260 à 13 000 octets ; plusieurs sources peuvent contenir la même réponse, ce n'est pas un score d'exactitude du modèle. Trois corpus de 5 000 documents synthétiques, 960 opérations mixtes avec huit workers sans erreur, 60 arrêts forcés et neuf autres scénarios de panne vérifiés. Sauvegarde/restauration : les documents et les 64 notes de chaque lot sont préservés. Les durées de file et de service restent séparées.
+
+Ajouts : banc sans dépendance supplémentaire, rapports bruts, guide de lecture des limites, essai facultatif des modèles déjà installés avec 30 appels et télémétrie Ollama, raccourci Windows `Mesurer_BOJART.cmd` et workflow Ubuntu/Windows. AIPerf est documenté comme piste pour mesurer la première réponse et les intervalles entre tokens ; aucune installation n'est revendiquée. Aucune inférence de modèle réel, latence de commande physique ou qualité artistique n'a été mesurée ici.
+
+Les corrections concurrentes de récupération des sources R03 publiées jusqu'à `70848b97dd59de037801628f6ec67c34b63e56d7` sont conservées. Leurs nouveaux documents restent distincts du corpus figé utilisé pour ces statistiques. Résultats et limites : `docs/evidence/simulations-2026-11-02/README.md`.
+
+
+## 2 novembre 2026 — simulations de demandes et de parc
+
+Les alias exacts « affiche le dashboard atelier/dossiers/Studio/contenus/conception/base métier » et « affiche les trois dashboards » rejoignent le routeur local M07 ; une demande de dashboard sans nom demande une précision sans appel Jev. Les autres contrôles et le circuit de confirmation sont conservés.
+
+Recette : docs/SIMULATIONS_ATELIER.md et docs/evidence/workflows-2026-11-02. Trois campagnes sur hôte Linux : 810 commandes (9 formulations répétées 90 fois), p95 dépôt 19,95 ms, p95 jusqu'au reçu synthétique 32,06 ms ; 16 scénarios de garde/reprise par campagne, tous passés. Ces mesures utilisent les vraies classes et SQLite avec un serveur minimal et des reçus factices, en repli sans LangGraph. Aucun son, navigateur, Jev, LLM ou GPU testé par cette recette. 20 tests dédiés passent localement.
+
+Le simulateur de parc est séparé du runtime vocal : 24 volumes et 8 imprimantes fictifs, 25 h 15 à tour de rôle contre 21 h 24 par heuristique sur ces seules durées supposées ; 23 h 33 sur 7 machines avant démarrage. Pièce trop grande, procédé incompatible, résultat inconnu et changement d'échelle bloquent correctement. Aucune géométrie Végéta, découpe, durée réelle de slicer ou impression produite. La demande vocale de figurine reste CLARIFY. Nouveau lanceur Simuler_BOJART.cmd et tests/CI reproductibles, sans installation automatique ni accès aux machines.
+
+Intégration mémoire : le long guide de simulation initialement indexé en référence courante faisait reculer CURRENT hors du top 5 pour LangGraph (13/14 cas). Correction : docs/COMMANDES_DASHBOARD.md est le catalogue canonique concis ; le rapport d'essais est un journal daté, et le guide complet reste lié. Les 14/14 cas repassent, sans modifier le moteur de recherche, les seuils ou les attentes. Voir les preuves retrieval-regression.json et retrieval-after.json dans le dossier d'essais.
+
+Complément CI au SHA 13005fe924e0c092e87a99a82089c8ad15cf9b4c : 20 tests dédiés et 270 commandes dans chaque mode (règles puis LangGraph), sur Linux et Windows ; tous passent fonctionnellement. Attention à la latence Windows : LangGraph p95 740,895 ms, maximum 17 964,718 ms, sept essais > 1 s dont deux > 5 s. Règles seules : p95 375,076 ms, max 419,910 ms. Cause non isolée, aucune qualification de fluidité constante ni mesure du PC cible. Les quatre rapports CI et leurs empreintes sont conservés dans docs/evidence/workflows-2026-11-02 ; ne pas citer uniquement les chiffres Linux. Aucun changement du runtime de production n'est justifié par une attribution causale non démontrée.
+
+
+## 2 novembre 2026 — réception HTTP et cohérence des sauvegardes
+
+Une requête JSON authentifiée mais incomplète retenait le verrou global avant même d'être reçue : une seconde fenêtre ne pouvait plus créer de dossier. Le défaut a été reproduit sur les routes atelier, Studio et CAO. La réception est désormais bornée à 16 Kio et à douze lecteurs, hors du verrou de mutation, avec le délai de socket existant ; les opérations acceptées gardent leur verrou jusqu'à leur fin. Les limites plus petites de chaque route et les contrôles de session, origine, révision et confirmation restent appliqués. Les routes mémoire et voix conservent leur circuit distinct.
+
+Un jeton de démarrage non ASCII provoquait aussi une coupure de connexion : il reçoit désormais un refus JSON 401. Les longueurs absentes, malformées ou dupliquées, les corps tronqués, les délais dépassés et la saturation sont refusés avant mutation. Treize nouveaux tests utilisent de vraies connexions HTTP et SQLite dans des dossiers temporaires, sans moteur vocal, modèle ni calcul géométrique. Le test de refus des liens symboliques dans les sauvegardes utilise maintenant une base toujours présente, sans dépendre des médias privés.
+
+Vérifications locales : 98 tests racine, 64 tests M06/M07, 38 tests de console consolidée, 31 tests M05 et 20 tests de parcours réussis. Les trois autres cas M05 exigent les médias privés absents et ne sont pas déclarés validés. Les tests de sauvegarde pendant une mutation acceptée et de fermeture pendant une mutation passent. La branche distante c71628cf20426dd8b4bdedbab2dcf403f5135667, dont ses mesures Windows, est préservée. Les contrôles CI et la liste restante de l'audit sont consignés séparément sur audit/context-results. Aucun navigateur ni poste cible n'est qualifié par cette recette.
+
+
+## 2 novembre 2026 — preuve locale d'export vidéo/audio
+
+Suite demandée : continuer puis pousser sur GitHub. La branche de diagnostic PR #11 est rapprochée du commit `b49101e3acad6257e2d1a610dac5fb95ec0a8bfb` ; récupération des sources R03, simulations et correction de réception HTTP sont conservées. Le diagnostic de matériel et de versions reste sans génération par défaut.
+
+L'option `python tools/diagnose_environment.py --check-media --save --summary` encode une mire temporaire de deux secondes en H.264/AAC, contrôle 48 images à 24 i/s, les dimensions et durées, décode toutes les pistes et mesure le signal PCM. Une panne ou un outil absent renvoie 2 et conserve un reçu d'échec ; le fichier de test est nettoyé. Les commandes sont fixes, sans shell ni entrée média utilisateur. Le résultat ne qualifie aucune production, aucun GPU, Blender ou After Effects.
+
+Preuve exécutée sur l'environnement Linux de développement : `docs/evidence/synthetic-media-check-2026-11-02.json`, export réussi, 96 256 échantillons PCM décodés, signal non silencieux, empreinte inchangée puis suppression du clip. Treize nouveaux tests de panne passent. Validation réunie : 129 tests racine, 135 tests agents et 83 tests opérations, plus 14/14 cas de recherche lexicale. Le manifeste public est régénéré et validé. Le job CI `media-export` réalise l'export avec FFmpeg sur Linux ; les tests Windows de ce module simulent les processus et ne prouvent pas un export sur la tour. Voir `docs/DIAGNOSTIC_OUTILS.md` pour les limites et les motifs d'échec.
