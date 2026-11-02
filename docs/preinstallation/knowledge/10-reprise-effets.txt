@@ -1,0 +1,16 @@
+Reprendre sans dupliquer les effets
+Identifiant : 10-reprise-effets
+Projet : bojart.jarvis
+Statut : repo_observation_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+Un checkpoint LangGraph conserve un état d’exécution ; il ne garantit pas à lui seul qu’un effet distant n’a eu lieu qu’une fois. Une file d’impression peut accepter plusieurs fois un même fichier. Dans BOJ.ART, conserver les identifiants d’opération, révisions, empreintes et reçus comme preuves distinctes.
+Si la réponse à une action future est perdue, classer le résultat UNKNOWN et réconcilier l’état auprès du système concerné avant toute relance. Tester perte de reçu et reprise avec doubles avant branchement. Les notes MCP restent des propositions et un document importé ne peut pas donner une autorisation d’impression, de dépense ou de publication. La mémoire documentaire et les cinq bases opérationnelles doivent chacune avoir une restauration prouvée.
+
+Sources primaires :
+langgraph — https://docs.langchain.com/oss/python/langgraph/persistence
+moonraker-queue — https://moonraker.readthedocs.io/en/latest/external_api/job_queue/
+mcp-security — https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

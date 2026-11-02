@@ -45,6 +45,18 @@ def _answer_status(memory, context, project, current_facts, checked):
                 checked[sha] = False
         if not checked[sha]:
             return 'withheld_sources_unavailable'
+        # Old packets without an excerpt proof are retained as history but their
+        # generated answers cannot be silently promoted into the next prompt.
+        if item.get('excerpt_matches_source') is not True or not isinstance(item.get('excerpt_sha256'), str):
+            return 'withheld_unverifiable_context'
+        version = memory.validate_version(item['version_id'], cache=checked)
+        if version.get('metadata') and version['metadata'].get('project_projection_required'):
+            return 'withheld_project_projection_required'
+        if not version['ok'] or not any(
+                c['start_line'] == item.get('start_line') and c['end_line'] == item.get('end_line')
+                and digest(c['text'].encode('utf-8')) == item['excerpt_sha256']
+                for c in version['chunks']):
+            return 'withheld_excerpts_changed'
     for fact in facts:
         if (not isinstance(fact, dict) or not isinstance(fact.get('id'), str)
                 or fact.get('project') != project

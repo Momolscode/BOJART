@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "01-recherche-citee",
+      "title": "Rechercher une procédure sans mélanger les sources",
+      "status": "source_reported_and_recommendation",
+      "source_ids": [
+        "fts5",
+        "embeddinggemma",
+        "mcp-security"
+      ],
+      "path": "docs/preinstallation/knowledge/01-recherche-citee.txt",
+      "sha256": "07ee574ae44b3b48925dcde0fda02f3933c23b1182a5df1bf5fd2bb92d145b07"
+    },
+    {
+      "id": "02-voix-francaise",
+      "title": "Qualifier les nombres, unités et confirmations françaises",
+      "status": "repo_observation_and_recommendation",
+      "source_ids": [
+        "asr",
+        "ct2",
+        "tts-web"
+      ],
+      "path": "docs/preinstallation/knowledge/02-voix-francaise.txt",
+      "sha256": "bd03c2ab93d9d913516fd22107e769d219221b445b28f3c62eeacd1984539923"
+    },
+    {
+      "id": "03-pile-locale-windows",
+      "title": "Préparer la tour Windows sans surdimensionnement présumé",
+      "status": "user_decision_and_recommendation",
+      "source_ids": [
+        "cadquery",
+        "ollama-hardware",
+        "ct2"
+      ],
+      "path": "docs/preinstallation/knowledge/03-pile-locale-windows.txt",
+      "sha256": "c0e87420eccbf47f371cd46bdff35013f0645466160813167ef2633d0935a109"
+    },
+    {
+      "id": "04-modele-memoire",
+      "title": "Distinguer moteur, poids et mémoire",
+      "status": "source_reported_and_recommendation",
+      "source_ids": [
+        "ollama-embed",
+        "embeddinggemma",
+        "gemma-terms",
+        "qwenchat"
+      ],
+      "path": "docs/preinstallation/knowledge/04-modele-memoire.txt",
+      "sha256": "3adb97aed534faa21a6562d21d70327c030da9be3aac06e5a63b452a1d699c84"
+    },
+    {
+      "id": "05-cao-vers-tranchage",
+      "title": "Séparer géométrie correcte, tranchage et fabrication",
+      "status": "repo_observation_and_recommendation",
+      "source_ids": [
+        "cadquery",
+        "orca-cli",
+        "prusa-profiles"
+      ],
+      "path": "docs/preinstallation/knowledge/05-cao-vers-tranchage.txt",
+      "sha256": "9336460245be646a0d059203e4797a7592afed5d9de4e371d315e6a50ad83ec3"
+    },
+    {
+      "id": "06-materiaux-choix",
+      "title": "Choisir une famille de matériau à partir de l’usage",
+      "status": "source_reported_and_recommendation",
+      "source_ids": [
+        "pla",
+        "petg",
+        "asa"
+      ],
+      "path": "docs/preinstallation/knowledge/06-materiaux-choix.txt",
+      "sha256": "e524797a2a9c6a4e82fff4618828b94c2254607f6178d39085f04abcdff84eb0"
+    },
+    {
+      "id": "07-resine-documentation",
+      "title": "Préparer une fiche résine propre au produit",
+      "status": "source_reported_and_recommendation",
+      "source_ids": [
+        "resin-sds"
+      ],
+      "path": "docs/preinstallation/knowledge/07-resine-documentation.txt",
+      "sha256": "d24be56fd22800024fd9afb5bb43e7e225520bc11803c66951bd2f6e35cc6a74"
+    },
+    {
+      "id": "08-maintenance-par-modele",
+      "title": "La maintenance suit la machine exacte",
+      "status": "source_reported_and_recommendation",
+      "source_ids": [
+        "maintenance-prusa",
+        "klipper-checks"
+      ],
+      "path": "docs/preinstallation/knowledge/08-maintenance-par-modele.txt",
+      "sha256": "53db43efc65fdd2b2f6596201845b241bed8f9387c626704d74786e41864497a"
+    },
+    {
+      "id": "09-telemetrie-inconnue",
+      "title": "Lire un état ne donne pas le droit de piloter",
+      "status": "source_reported_and_recommendation",
+      "source_ids": [
+        "moonraker",
+        "moonraker-auth",
+        "octoprint",
+        "octoprint-access"
+      ],
+      "path": "docs/preinstallation/knowledge/09-telemetrie-inconnue.txt",
+      "sha256": "aa5fb0af1464b64e74a42cd596e8ec3e3761ea22a593d68255a356a55be82a15"
+    },
+    {
+      "id": "10-reprise-effets",
+      "title": "Reprendre sans dupliquer les effets",
+      "status": "repo_observation_and_recommendation",
+      "source_ids": [
+        "langgraph",
+        "moonraker-queue",
+        "mcp-security"
+      ],
+      "path": "docs/preinstallation/knowledge/10-reprise-effets.txt",
+      "sha256": "802285fc869d8cca05a368088b1cbbf74eee8e76192d844aaac82c06bd712705"
+    },
+    {
+      "id": "11-blender-connecteur",
+      "title": "Connecter Blender par opérations bornées",
+      "status": "source_reported_and_recommendation",
+      "source_ids": [
+        "blender-cli",
+        "blender-lts"
+      ],
+      "path": "docs/preinstallation/knowledge/11-blender-connecteur.txt",
+      "sha256": "1cfed4542408ee746b8a489a15d882874ec62e20545383395ebf306801980534"
+    },
+    {
+      "id": "12-mcp-interop",
+      "title": "Qualifier le client MCP avant la reprise Claude",
+      "status": "repo_observation_and_recommendation",
+      "source_ids": [
+        "mcp-old",
+        "mcp-current"
+      ],
+      "path": "docs/preinstallation/knowledge/12-mcp-interop.txt",
+      "sha256": "0c05defc18ba81fccd4d3f7075fcc5c7a086a449cc8b8db51144560e4d17a0e3"
+    }
+  ]
+}

@@ -37,7 +37,7 @@
  function norm(text){return text.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[.,!?]/g,' ').trim().replace(/^jarvis\s*/,'').replace(/\s+/g,' ');}
  async function stop(reason){
   if(!recording)return;recording=false;busy=true;controls();const token=epoch;
-  try{const audio=await BojCapture.stop();state('TRANSCRIPTION','Reconnaissance locale de la prise…');
+  try{const audio=await BojCapture.stop();if(token!==epoch)return;state('TRANSCRIPTION','Reconnaissance locale de la prise…');
    const r=await api('/api/voice/transcribe',audio,{'Content-Type':'audio/wav','X-Boj-Voice-Owner':BojCapture.owner});
    if(token!==epoch)return;
    if(r.status==='no_speech'){state('À L’ÉCOUTE','Aucune parole exploitable. Aucun ordre envoyé.');return;}

@@ -1,5 +1,7 @@
 # Consolidation BOJART
 
+Actualisation du 2 novembre 2026 : la configuration déclarée est Windows, Ryzen 5 5600G, RTX 4060 Ti, RAM 16 Go ; passage à 32 Go prévu. Voir `../../data/preinstallation/target-profile.json` et le contexte courant à la racine BOJART. Les mentions ci-dessous « matériel inconnu » et budget 3 000–5 000 EUR décrivent les étapes historiques ; elles ne sont ni une mesure actuelle, ni un budget de mise à niveau reconfirmé. Le matériel, la voix et les imprimantes restent à qualifier.
+
 Le point d’entrée courant est `../context/CURRENT.md` depuis la racine Jarvis, soit `context/CURRENT.md` à la racine du dépôt BOJART. Destination GitHub actuelle : Momolscode/BOJART. Les mentions de dépôt et comptes ci-dessous sont historiques.
 
 # BOJ.ART — reprise en cinq minutes

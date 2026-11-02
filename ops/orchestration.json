@@ -69,7 +69,11 @@
     {
       "domain": "research",
       "patterns": [
-        "docs/research/*"
+        "docs/research/*",
+        "docs/preinstallation/knowledge/*",
+        "data/preinstallation/knowledge-cards.json",
+        "data/preinstallation/sources-curated.json",
+        "data/preinstallation/tool-registry.json"
       ],
       "reason": "Propositions sourcées ; installation et qualification distinctes."
     },
@@ -110,6 +114,8 @@
         "SECURITY.md",
         "context/*",
         "data/knowledge/*",
+        "data/preinstallation/requirements.json",
+        "data/preinstallation/target-profile.json",
         "data/catalog/*",
         "docs/ARCHITECTURE*",
         "docs/DATA_GOVERNANCE*",
@@ -130,6 +136,7 @@
         "tests_agent/*",
         "tests/test_memory*",
         "tests/test_installation.py",
+        "data/preinstallation/retrieval-cases.json",
         "tools/doctor.py",
         "tools/start_jarvis.py",
         "tools/prepare_installation.py",
@@ -197,6 +204,10 @@
         ".github/*",
         "bojart_ops/*",
         "tests_ops/*",
+        "data/preinstallation/target-inventory.template.json",
+        "skills/bojart-context-reconstruction/*",
+        "skills/bojart-evidence-audit/*",
+        "skills/bojart-tool-qualification/*",
         "tools/*",
         "configs/*",
         "ops/*",

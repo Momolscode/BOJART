@@ -12,6 +12,11 @@ const {chromium}=require('playwright');
  try{
   await page.goto(input.origin+'/?session='+encodeURIComponent(input.token));await page.goto(input.origin+'/memory');
   await page.waitForFunction(()=>document.getElementById('docs').textContent!=='—');
+  await check('SQLite structure is distinct from full source and index verification',async()=>{
+   assert.equal(await page.locator('#integrity').textContent(),'Structure saine');
+   await page.locator('#verify').click();await page.getByText('Contrôle complet réussi',{exact:true}).waitFor();
+   assert.equal(await page.locator('#integrity').textContent(),'Sources et index contrôlés');
+  });
   await check('Search renders source text without executing embedded HTML',async()=>{
    await page.locator('#question').fill('preuveCitationXYZ');await page.locator('#search').click();
    await page.getByText('1 passages retrouvés',{exact:true}).waitFor();
@@ -27,6 +32,7 @@ const {chromium}=require('playwright');
    const file=await download,pack=JSON.parse(fs.readFileSync(await file.path(),'utf8'));
    assert.equal(pack.schema,'bojart.agent-context.v2');assert.equal(pack.project,'bojart.creative');
    assert.ok(pack.evidence.length);assert.ok(pack.evidence.every(e=>e.source_bytes_verified&&e.project===pack.project));
+   assert.ok(pack.evidence.every(e=>e.excerpt_matches_source&&/^[a-f0-9]{64}$/.test(e.excerpt_sha256)));
    assert.ok(Array.from(pack.text).length<=pack.max_characters);
    assert.equal(crypto.createHash('sha256').update(pack.text).digest('hex'),pack.sha256);
    assert.match(file.suggestedFilename(),/^BOJART_REPRISE_bojart_creative_/);

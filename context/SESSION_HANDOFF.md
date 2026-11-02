@@ -177,6 +177,10 @@ Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `
 
 Réconciliation avant publication : les corrections des lanceurs historiques et leurs quatorze tests, publiés sur `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Le guide d'installation et le journal ont été réunis ; le manifeste repart de cette tête.
 
+## Reprise mémoire locale V4 du 2 novembre 2026
+
+Base distante intégrée : `2025ac1c8f376341532fbd2df8a176b0b8fc3de4`. La copie locale ajoute les corrections des quatre défauts mémoire relevés en V3, avec nouvelles contre-épreuves. Lire `docs/memory/HARDENING_2026-11-02.txt` et la matrice de réception V4 livrée avant les audits historiques. Ne pas relancer automatiquement les demandes UNKNOWN et arrêter les anciens processus avant migration. Cette entrée ne prouve ni push GitHub ni recette du matériel.
+
 Réconciliation du dossier de production : les informations matérielles sourcées, l’installeur RTX 4060 Ti et les contrôles de contexte compact du commit `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` sont conservés avec la reconstruction des cinq médias R03. Le correctif de simulation de collision de dossiers est passé sous Windows et Linux au commit `0d853787285142292a70850a1e38c49ce45b385e`. Les contrôles de l’ensemble réuni sont consignés dans la preuve de récupération.
 
 ## Simulations mesurées — 2 novembre 2026
@@ -210,3 +214,7 @@ Une requête JSON authentifiée mais incomplète retenait le verrou global avant
 Un jeton de démarrage non ASCII provoquait aussi une coupure de connexion : il reçoit désormais un refus JSON 401. Les longueurs absentes, malformées ou dupliquées, les corps tronqués, les délais dépassés et la saturation sont refusés avant mutation. Treize nouveaux tests utilisent de vraies connexions HTTP et SQLite dans des dossiers temporaires, sans moteur vocal, modèle ni calcul géométrique. Le test de refus des liens symboliques dans les sauvegardes utilise maintenant une base toujours présente, sans dépendre des médias privés.
 
 Vérifications locales : 98 tests racine, 64 tests M06/M07, 38 tests de console consolidée, 31 tests M05 et 20 tests de parcours réussis. Les trois autres cas M05 exigent les médias privés absents et ne sont pas déclarés validés. Les tests de sauvegarde pendant une mutation acceptée et de fermeture pendant une mutation passent. La branche distante c71628cf20426dd8b4bdedbab2dcf403f5135667, dont ses mesures Windows, est préservée. Les contrôles CI et la liste restante de l'audit sont consignés séparément sur audit/context-results. Aucun navigateur ni poste cible n'est qualifié par cette recette.
+
+## Passation transversale locale V5 — 2 novembre 2026
+
+Le lot distant c71628cf20426dd8b4bdedbab2dcf403f5135667 est intégré avec les correctifs mémoire V4. Lire docs/AUDIT_TRANSVERSAL_V5.txt et docs/research/audit-transversal-2026-11-02/ pour les corrections, les données et les propositions. La réception détaillée, la couverture des chats et les sources sélectionnées restent dans le paquet JARVIS_V5. Une copie locale corrigée ne signifie ni push, ni installation sur la tour.

@@ -24,6 +24,10 @@ Linux : `command` vaut `/chemin/BOJART/.venv/bin/python`, et `args` contient `/c
 | `memory_context` | `query`, `project` facultatif | Contexte borné, faits datés, contradictions, références |
 | `memory_status` | Aucun champ | Compteurs et contrôle SQLite |
 | `memory_note` | `key`, `value`, `source`, `project` facultatif | Ajout idempotent d’une proposition locale |
+| `jarvis_capabilities` | `query` facultatif | Exigences sourcées et réceptions proposées, sans exécution |
+| `jarvis_tool_catalog` | `query` facultatif | Outils intégrés ou candidats, sans installation ni connexion |
+| `jarvis_preparation_status` | Aucun champ | Intégrité du corpus préparé et matériel déclaré, sans diagnostic du poste |
+| `jarvis_research_search` | `query` | Recherche explicite des propositions et fiches de recherche, sans les promouvoir en références validées |
 
 `project` : `bojart.jarvis` par défaut, `bojart.creative` ou `bojart.sites`. Aucun outil d’exécution, de suppression, d’impression ou de publication n’est exposé.
 

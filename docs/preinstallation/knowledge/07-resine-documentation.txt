@@ -1,0 +1,14 @@
+Préparer une fiche résine propre au produit
+Identifiant : 07-resine-documentation
+Projet : bojart.jarvis
+Statut : source_reported_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+Avant un essai résine, rassembler la référence exacte du produit, sa fiche de données de sécurité dans la langue appropriée et sa révision, sa fiche technique, ainsi que les procédures du fabricant pour imprimante, lavage et post-polymérisation. Les conditions d’une certification éventuelle sont liées au matériau, à la machine et au procédé cités.
+Carte BOJ.ART à compléter : référence/lot/date, stockage, équipements de protection selon FDS, conditions de poste, produit de lavage compatible, traitement après impression, gestion des déchets applicable au site et preuve de formation opérateur. Les paramètres d’exposition, durées de cure, solvants ou traitement des déchets ne sont pas transférables entre toutes les résines. Jarvis peut retrouver la procédure vérifiée ; il ne doit pas inventer une recette en l’absence de référence produit.
+
+Sources primaires :
+resin-sds — https://formlabs.com/resources/safety/
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.
