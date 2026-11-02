@@ -98,6 +98,8 @@ def main():
     ap.add_argument('--detail', type=int, default=10, help='touches détaillées par pinceau')
     ap.add_argument('--seed', type=int, default=1)
     ap.add_argument('--no-grouping', action='store_true', help='ordre du planificateur, sans regrouper par pot')
+    ap.add_argument('--frida-plan', help='plan JSON exporté de FRIDA (voir bojart_painter/frida_bridge.py)')
+    ap.add_argument('--title', default='Atelier simulé — fin de semaine 3')
     a = ap.parse_args()
 
     import mujoco
@@ -109,10 +111,21 @@ def main():
         f.unlink()
     mm = 1.0
     target = np.asarray(Image.open(a.image).convert('RGB').resize(CANVAS_MM, Image.LANCZOS), dtype=np.float32) / 255
-    painter = HDPainter(target, 'atelier_3_semaines', mm, a.seed, hidden=Deposit(1.25, 0.75),
-                        position_sigma_mm=0.5, color_sigma=0.03)
-    res = painter.run(a.strokes, record=True, group_by_color=not a.no_grouping)
-    executed = res['executed']; palette = painter.palette
+    if a.frida_plan:  # plan calculé par FRIDA hors dépôt, rejoué en boucle ouverte
+        from bojart_painter.frida_bridge import load_plan, replay, to_strokes
+        plan = load_plan(a.frida_plan)
+        if [round(v * 1000) for v in plan['canvas_m']] != list(CANVAS_MM):
+            raise SystemExit(f"plan FRIDA pour une toile {plan['canvas_m']} m, scène prévue pour {CANVAS_MM} mm")
+        executed = to_strokes(plan, mm)
+        palette = np.clip(np.asarray(plan['palette'], dtype=np.float32), 0, 1)
+        painter = HDPainter(target, 'reproduction', mm, a.seed, hidden=Deposit(1.0, 1.0))
+        rep = replay(target, executed, mm)
+        res = {'learned': None, 'hidden': rep['hidden'], 'psnr_db': rep['psnr_db'], 'ssim': rep['ssim']}
+    else:
+        painter = HDPainter(target, 'atelier_3_semaines', mm, a.seed, hidden=Deposit(1.25, 0.75),
+                            position_sigma_mm=0.5, color_sigma=0.03)
+        res = painter.run(a.strokes, record=True, group_by_color=not a.no_grouping)
+        executed = res['executed']; palette = painter.palette
 
     model_path = Path(a.menagerie) / 'scene_bojart_atelier.xml'
     model_path.write_text(scene_xml(), encoding='utf-8')
@@ -186,11 +199,12 @@ def main():
         r.update_scene(d, camera or cam); img = Image.fromarray(r.render())
         panel = Image.new('RGB', (W3 + 430, H3), (250, 249, 246)); panel.paste(img, (0, 0))
         g = ImageDraw.Draw(panel); X = W3 + 25
-        g.text((X, 16), 'Atelier simulé — fin de semaine 3', fill='black', font=bold)
+        g.text((X, 16), a.title, fill='black', font=bold)
         panel.paste(Image.fromarray((np.clip(world, 0, 1) * 255).astype(np.uint8)).resize((380, 237), Image.LANCZOS), (X, 50))
         y = 305
         lines = [f"Touches : {state['n']:,} / {len(executed):,}".replace(',', ' '),
-                 f"Pinceau : {BRUSHES[state['brush']]:.0f} mm" if state['brush'] is not None else 'Pinceau : —',
+                 ('Pinceau : modèle FRIDA, 3,5–7,5 mm' if a.frida_plan else f"Pinceau : {BRUSHES[state['brush']]:.0f} mm")
+                 if state['brush'] is not None else 'Pinceau : —',
                  f"Temps de bras estimé : {int(state['seconds'] // 3600)} h {int(state['seconds'] % 3600 // 60):02d}",
                  f"Vitesse de la vidéo : {state['speed']}", state['note']]
         for line in lines:
@@ -242,7 +256,10 @@ def main():
         c = mujoco.MjvCamera(); c.lookat[:] = cam.lookat; c.distance = 1.5; c.elevation = -28
         c.azimuth = 120 + k * 2.6; state['note'] = 'la cellule de peinture'
         frame(c)
-    phase_of = [int(np.argmin([abs(e['width_mm'] - b) for b in BRUSHES])) for e in executed]
+    if a.frida_plan:  # FRIDA peint avec un seul pinceau (modèle de touche mesuré) : celui du milieu du support
+        phase_of = [1] * len(executed)
+    else:
+        phase_of = [int(np.argmin([abs(e['width_mm'] - b) for b in BRUSHES])) for e in executed]
     pot_of = [int(((palette - e['color']) ** 2).sum(1).argmin()) for e in executed]
     shown = {0: 0, 1: 0, 2: 0}; current_pot = None; since_dip = 0
     for idx, e in enumerate(executed):
@@ -281,14 +298,14 @@ def main():
                 state['speed'] = 'accélérée'
         elif idx % 25 == 0 or idx == len(executed) - 1:
             state['note'] = 'peinture en cours'; upload(); frame()
-    state['note'] = 'terminé'; change_brush(0, show=False); upload()
+    change_brush(0, show=False); state['note'] = 'terminé'; upload()
     for k in range(50):
         c = mujoco.MjvCamera(); c.lookat[:] = [0.42, 0, 0.0]; c.distance = 1.1 - k * 0.006
         c.elevation = -35 - k * 0.9; c.azimuth = 215 - k * 0.6
         frame(c)
     stats = {'frames': fi[0], 'strokes': len(executed), 'ik_error_p95_m': float(np.percentile(errs, 95)),
              'ik_error_max_m': float(max(errs)), 'ik_canvas_error_max_m': float(max(canvas_errs)),
-             'ik_retries': retries[0], 'grouped_by_color': not a.no_grouping, 'dips': state['dips'],
+             'ik_retries': retries[0], 'grouped_by_color': not a.no_grouping and not a.frida_plan, 'frida_plan': bool(a.frida_plan), 'dips': state['dips'],
              'color_changes': state['rinses'], 'arm_time_estimate_s': round(state['seconds']),
              'learned': res['learned'], 'hidden': res['hidden'], 'psnr_db': res['psnr_db'], 'ssim': res['ssim']}
     (out / 'stats.json').write_text(json.dumps(stats, indent=2), encoding='utf-8')

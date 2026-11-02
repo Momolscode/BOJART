@@ -192,7 +192,8 @@
     "hd-nuit-etoilee-tres-fin-1mm-seed1.json": "5774ce6d5d66a1f92a305ab23f39b4ac35fd408d5c057fc60a68bcf13ac5cc6d",
     "hd-nuit-etoilee-atelier-3-semaines-seed1.json": "cb087d0e7fec1da274f11c07c2db91c2c46ad4348ce8ea91d62ee8af78e71795",
     "calibration-semaine1-seed1.json": "ee36ac7ffe4da79757fa7e8da1a473655ad0e09631cf379ef71c67ed6ad1344c",
-    "atelier-animation-seed1.json": "69a64de782b99631189f9950127c8fa7c030fdfcdf9730667dee7b85964536a2"
+    "atelier-animation-seed1.json": "69a64de782b99631189f9950127c8fa7c030fdfcdf9730667dee7b85964536a2",
+    "frida-essai-cpu-seed1.json": "e33ee6b9aff5a9c365046ad2fe6343d445474fa91f2e560a95f724696617aa51"
   },
   "limits": "Le monde physique est lui-même un modèle simplifié. Ces chiffres valident la logique de la boucle et de l’estimation, pas une peinture réelle, un bras, un pinceau ni un coupon. Graines peu nombreuses : tendances, pas significativité.",
   "until_converged_seed1": {
@@ -435,5 +436,26 @@
       }
     },
     "limits": "Cinématique inverse sans dynamique ni collisions ; dépôt de peinture modélisé ; temps de bras estimé par règle simple, non mesuré. Illustration, pas preuve d'accès ni de cadence."
+  },
+  "frida_cpu_trial": {
+    "frida_commit": "f42fa61",
+    "license": "GPL-3.0",
+    "path_in_git": false,
+    "small_brush_width_mm": [
+      3.5,
+      7.5
+    ],
+    "comparison_900_strokes_ssim": {
+      "frida_own_render": 0.0948,
+      "bojart_same_brush": [
+        0.116,
+        0.1277
+      ],
+      "bojart_20_8_3_mm": 0.1721
+    },
+    "frida_seconds_cpu": 2908.2,
+    "bridge_geometry_mean_overlap": 0.85,
+    "animation_arm_time_estimate_s": 2579,
+    "learningtopaint": "non essayé (poids inaccessibles depuis le conteneur)"
   }
 }

@@ -13,6 +13,7 @@ Hôte : conteneur Linux, Python 3.13, sans GPU, robot ni caméra. Code : `bojart
 | `hd-nuit-etoilee-atelier-3-semaines-seed1.json` | `… hd --style atelier_3_semaines --strokes 6000 --width-px 500 --mm-per-px 1.0 --hidden-gain 1.25 --hidden-opacity 0.75 --position-sigma-mm 0.5 --color-sigma 0.03` |
 | `calibration-semaine1-seed1.json` | `bojart_painter.calibration.stroke_library(palette atelier_3_semaines)` : 30 touches mesurées sur photo simulée |
 | `atelier-animation-seed1.json` | `run(..., group_by_color=True)` comparé à l'ordre du planificateur, puis `tools/render_painter_cell.py --strokes 6000 --detail 10` (MuJoCo 3.17.0, xArm 7 Menagerie) ; vidéo hors Git |
+| `frida-essai-cpu-seed1.json` | FRIDA (cmubig/Frida `f42fa61`, GPL-3.0, hors Git) en simulation sur CPU, objectif l2, 900 touches, 120 itérations, fiche `configs/painter/frida/materials_xarm6_toile50x31.json` ; comparaison à 900 touches avec `bojart_painter` ; rejeu par `bojart_painter/frida_bridge.py` et `tools/render_painter_cell.py --frida-plan` ; harnais, plan et vidéo hors Git |
 | `summary.json` | Agrégat des rapports ci-dessus et leurs SHA-256 |
 
 Les rendus PPM sont restés hors Git ; une planche de la graine 1 a été remise à l'utilisateur hors du dépôt.

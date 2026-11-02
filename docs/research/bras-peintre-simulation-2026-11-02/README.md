@@ -119,6 +119,17 @@ Question de l'utilisateur : existe-t-il des entraînements open source à réuti
 
 Sources : `web-frida-github-20261102`, `web-spline-frida-20261102`, `web-learningtopaint-20261102`, `web-stylized-neural-painting-20261102`, `web-lerobot-20261102`, `web-impasto-20261102`.
 
+### Mise en œuvre (accord de l'utilisateur, 2 novembre 2026)
+
+- **FRIDA installé hors dépôt** (commit `f42fa61`, GPL-3.0). Son planificateur tourne sur processeur, sans carte graphique, avec l'objectif l2 et le modèle de touche `small_brush` mesuré par CMU sur un vrai pinceau. Selon la pression z, ce pinceau trace de 3,5 à 7,5 mm. Les objectifs qui exigent CLIP ou un modèle de diffusion restent indisponibles : leurs poids ne sont pas téléchargeables dans le conteneur.
+- **Fiche matériel de notre cellule** au format FRIDA : `configs/painter/frida/materials_xarm6_toile50x31.json` (xArm 6, toile 50 × 31 cm, 10 pots). Ce sont des valeurs de départ à mesurer sur place. Le point le plus lointain, le coin de la toile, est à 63 cm de la base.
+- **Passerelle** `bojart_painter/frida_bridge.py` (sans code FRIDA) : elle convertit un plan FRIDA en touches de Bézier, puis les rejoue dans le monde simulé (`replay`) ou sur le bras animé (`tools/render_painter_cell.py --frida-plan`). Sur 12 touches tirées au hasard, 85 % des points de la trajectoire tombent dans la touche rendue par FRIDA.
+- **Essai à 900 touches** sur La Nuit étoilée, toile 50 × 31 cm. FRIDA a mis 48 min sur processeur pour 120 itérations ; son propre rendu atteint SSIM 0,095 et PSNR 12,4 dB. Notre planificateur, avec un pinceau de même largeur (3,5–7,5 mm), atteint SSIM 0,12–0,13 et PSNR 12,3–12,7 dB, en moins d'une minute. Avec nos trois pinceaux (20, 8, 3 mm), il atteint SSIM 0,17. À pinceau égal, la qualité est donc comparable. La différence tient à la taille du pinceau et au nombre d'itérations : sur carte graphique, FRIDA itère davantage.
+- **Rejeu du plan FRIDA par notre bras simulé** : 900 touches, 9 changements de couleur (FRIDA trie déjà par couleur), environ 43 min de bras estimées, et une cinématique inverse à moins de 0,3 mm. Notre modèle de dépôt, avec poils et charge, est plus transparent que la peinture acrylique apprise par FRIDA. Le rejeu est donc plus clair (SSIM 0,05). C'est un écart de modèle de dépôt : il ne dit rien de la qualité du plan.
+- **LearningToPaint non essayé** : ses poids sont sur Google Drive, et Google Drive, Hugging Face et download.pytorch.org sont refusés par le réseau du conteneur. À reprendre si ces hôtes sont autorisés, ou si les fichiers `actor.pkl` et `renderer.pkl` sont déposés dans le projet.
+
+Conclusion : FRIDA sert de chaîne robot, caméra et modèle de touche mesuré. `bojart_painter` reste l'outil rapide pour itérer sans matériel, et la passerelle permet de passer de l'un à l'autre. Rapport : `docs/evidence/painter-simulation-2026-11-02/frida-essai-cpu-seed1.json`.
+
 ## Limites
 
 - Le monde « physique » est lui-même un modèle. Le recalage ne prouve que la logique de la boucle. La peinture réelle (charge du pinceau, séchage, mélange, relief) demande les mesures G1.

@@ -364,8 +364,8 @@
     },
     {
       "path": "bojart_painter/__main__.py",
-      "bytes": 8997,
-      "sha256": "47c47af4650a04f15404c55e6d887a8910420002e1a870d44e1d2c3e5037e00f"
+      "bytes": 9016,
+      "sha256": "06622a5ae461951e000b252e4f23bd420cb4386121865655541cd7fac8296a72"
     },
     {
       "path": "bojart_painter/arms.py",
@@ -386,6 +386,11 @@
       "path": "bojart_painter/coupon.py",
       "bytes": 4615,
       "sha256": "441a0ea64e4b0d6473a0b1e811ab194c8a83f1c27eb2a1cc60642f7e1a7ca7a4"
+    },
+    {
+      "path": "bojart_painter/frida_bridge.py",
+      "bytes": 3144,
+      "sha256": "007405e9418a283e7ccb5e7fd63e178332ae9c9621c4f22dcaee7f52ee2d6edf"
     },
     {
       "path": "bojart_painter/hd.py",
@@ -413,6 +418,11 @@
       "sha256": "8be12cc5143764aaa722f0f7db89e7890abf66feb50cac15cab85d07b4f40e42"
     },
     {
+      "path": "configs/painter/frida/materials_xarm6_toile50x31.json",
+      "bytes": 847,
+      "sha256": "f9c8eb0d76048543cdc961ac0aba02a6fd72e2e1c9405e132e18a859433cbdd8"
+    },
+    {
       "path": "configs/painter/styles.json",
       "bytes": 1279,
       "sha256": "1758b6e7ad09b9f45371e2691aa56b4fa29085f23aeecc4a4ff67bbfa439f4b0"
@@ -424,13 +434,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12911,
-      "sha256": "375bd48f45fe40e0f287123f720732b763e25ff5a39dd07f274c13456f6a41f7"
+      "bytes": 13259,
+      "sha256": "56b043370488fee356d3832e8c7158d073df0b0ffc59e95489cc22b4b763d8d8"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 46137,
-      "sha256": "6beb09e5c82ab2eec77518cbaed2a49c9bffa59b44be1898ff28cf3ff1956235"
+      "bytes": 46878,
+      "sha256": "3b303641b20b8b77fbf55faaa31f46121b7bc3c5f7557a834a115191354346cc"
     },
     {
       "path": "creative/CURRENT.md",
@@ -519,8 +529,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 16956,
-      "sha256": "5e90ffd8d3fc3adaeb9c9c8466116a573ea60975fa188fda96db1e45820255aa"
+      "bytes": 17781,
+      "sha256": "8a3dadb7707230d35b37f05c5d57ce9d9ba440dcb849755ff052af78b337963d"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -854,8 +864,8 @@
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/README.md",
-      "bytes": 2684,
-      "sha256": "48ff81e32ad4276f3fd9b030ee2cce7b063118bad725576d1cc93d535c35ddfa"
+      "bytes": 3075,
+      "sha256": "553b37eb7c27e478949aa25dd7d8b77f71bd2c28e48b0a44fcbd94c536bfdb92"
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/arms.json",
@@ -871,6 +881,11 @@
       "path": "docs/evidence/painter-simulation-2026-11-02/calibration-semaine1-seed1.json",
       "bytes": 4466,
       "sha256": "ee36ac7ffe4da79757fa7e8da1a473655ad0e09631cf379ef71c67ed6ad1344c"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/frida-essai-cpu-seed1.json",
+      "bytes": 5778,
+      "sha256": "e33ee6b9aff5a9c365046ad2fe6343d445474fa91f2e560a95f724696617aa51"
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/hd-nuit-etoilee-atelier-3-semaines-seed1.json",
@@ -929,8 +944,8 @@
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/summary.json",
-      "bytes": 12624,
-      "sha256": "37fb5b99fe0c3a43dfaef987b55c7375f777ff4777bcf7481585fef4adb70fd3"
+      "bytes": 13271,
+      "sha256": "b8b9fc944f087cb0ed5db771149361e300e4cb1f1f12a11fae18cdf79b1ce87f"
     },
     {
       "path": "docs/evidence/production-recovery-2026-11-02.json",
@@ -1309,8 +1324,8 @@
     },
     {
       "path": "docs/research/bras-peintre-simulation-2026-11-02/README.md",
-      "bytes": 15238,
-      "sha256": "a34ff8de3055ddc2e775498040ab487fb4de0444d3088251ab7dc05d6936e03a"
+      "bytes": 17915,
+      "sha256": "10db74556c50d13f6059f2fb4dd53f9fb39bb64a96fd97fa2e5dca780210ed8d"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -4709,8 +4724,8 @@
     },
     {
       "path": "tests_painter/test_painter_hd.py",
-      "bytes": 3896,
-      "sha256": "aded5d8639d2e62cafaa5364b050b2e8b55ad10726a4955220424d101f1917e3"
+      "bytes": 5339,
+      "sha256": "0d794578975c5d608e7caa2229f174f38dc76bcc265da12f4b3e2ea145fa7bc9"
     },
     {
       "path": "tests_workflows/test_journeys.py",
@@ -4789,8 +4804,8 @@
     },
     {
       "path": "tools/render_painter_cell.py",
-      "bytes": 16223,
-      "sha256": "8298ce625cbda922b4445ced203cf14093702036e6191f3075b328ddef80b7a3"
+      "bytes": 17462,
+      "sha256": "fd86e4f264376a75f1a63552008c4f72f9448dbd5f1649208b1a38333fbc54e1"
     },
     {
       "path": "tools/restore_archive_2026_11_01.py",

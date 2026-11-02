@@ -73,6 +73,25 @@ class HDPainterTests(unittest.TestCase):
         self.assertLess(grouped, loose / 2)
         self.assertLessEqual(grouped, 2 * 10 * 2)  # au plus un passage par pot, pinceau et lot
 
+    def test_frida_plan_bridge_geometry_and_replay(self):
+        import math
+        from bojart_painter.frida_bridge import replay, to_strokes, width_mm
+        table = [{'z': 0.1, 'length_m': 0.05, 'width_mm_median': 3.5}, {'z': 0.9, 'length_m': 0.05, 'width_mm_median': 7.5}]
+        plan = {'canvas_m': [0.30, 0.20], 'width_table': table, 'strokes': [
+            {'xt': 0.0, 'yt': 0.0, 'angle': 0.0, 'length_m': 0.05, 'bend_m': 0.0, 'z': 0.5, 'color': [0.1, 0.2, 0.7]},
+            {'xt': -0.5, 'yt': 0.5, 'angle': math.pi / 2, 'length_m': 0.04, 'bend_m': 0.01, 'z': 0.9, 'color': [0.9, 0.8, 0.1]}]}
+        self.assertAlmostEqual(width_mm(0.5, table), 5.5)
+        a, b = to_strokes(plan, mm_per_px=5.0)
+        np.testing.assert_allclose(a['p'][0], [30, 20])      # centre de la toile 300 × 200 mm, 5 mm/px
+        np.testing.assert_allclose(a['p'][2], [40, 20])      # angle 0 : vers la droite de l'image
+        np.testing.assert_allclose(b['p'][0], [15, 30])
+        np.testing.assert_allclose(b['p'][2], [15, 22])      # angle 90° : vers le haut de l'image
+        self.assertLess(b['p'][1][0], 15)                     # courbure positive : à gauche du trajet montant
+        target = np.ones((40, 60, 3), dtype=np.float32)
+        res = replay(target, [a, b], mm_per_px=5.0)
+        self.assertEqual(res['strokes'], 2)
+        self.assertLess(float(res['world'][20, 33].max()), 0.9)  # la première touche a bien été peinte
+
     def test_palette_style_uses_palette(self):
         from bojart_painter.hd import HDPainter
         p = HDPainter(self.target(), 'empattement', mm_per_px=5.0, seed=1)
