@@ -24,15 +24,17 @@ async function refresh(){
  $('statMachines').textContent=r.machines;$('statMachinesNote').textContent=r.machines_simulees+' simulée(s), '+(r.machines-r.machines_simulees)+' déclarée(s)';
  $('statDemandes').textContent=r.demandes_ouvertes;$('statDevis').textContent=r.devis_brouillons+' / '+r.devis_emis;$('statRappro').textContent=r.rapprochements;
  for(const id of ['dDossier','qDossier']){const s=$(id),keep=s.value;s.replaceChildren(...projects.map(p=>{const o=el('option',p.name+' · '+p.id);o.value=p.id;return o;}));if(keep)s.value=keep;}
- renderDemandes();renderDevis();renderMachines();
+ renderDemandes();renderDevis();renderCommandes();renderMachines();
  if($('feedback').textContent==='Lecture de l’atelier…')message('État lu. Imprimantes simulées ; aucun envoi automatique.');
 }
 
+function delays(d){const out=[],fmt=(x,label)=>{if(x)out.push(el('span','· '+label+' : '+String(x.mediane_jours).replace('.',',')+' j médian (max '+x.max_jours+' j, n = '+x.n+')'));};
+ fmt(d.reception_a_envoi,'réception → devis envoyé');fmt(d.envoi_a_reponse,'envoi → réponse');return out;}
 function renderDemandes(){
  const f=state.commerce.entonnoir,d=f.demandes_reelles;
  $('funnel').replaceChildren(...[['reçues',d.recues],['qualifiées',d.qualifiees],['devis envoyés',d.devis_envoyes],['acceptées',d.acceptees],['livrées',d.livrees]]
   .map(([k,v])=>{const s=el('span');s.append(el('b',String(v)),' '+k);return s;}),el('span',f.rapport?'· '+f.rapport.acceptees_sur_envoyes+' acceptées / envoyées':'· aucun devis envoyé'),
-  el('span','· '+f.demonstration+' démonstration(s) hors comptes'));
+  el('span','· '+f.demonstration+' démonstration(s) hors comptes'),...delays(f.delais));
  const list=$('demandes');list.replaceChildren();
  if(!state.commerce.demandes.length)list.append(el('p','Aucune demande enregistrée.','help'));
  const q=$('qDemande'),keep=q.value;q.replaceChildren(el('option','aucune'));q.firstChild.value='';
@@ -77,6 +79,8 @@ async function showDevis(numero,version){
  if(doc.totaux?.mention_tva)it.append(el('p',doc.totaux.mention_tva));
  it.append(el('small','Machine '+doc.heures_machine+' h · main-d’œuvre '+doc.heures_main_oeuvre+' h · délai '+(doc.delai_jours?doc.delai_jours+' jours':'à indiquer')));
  if(doc.bloquants_emission.length){const ul=el('ul',null,'blockers');for(const b of doc.bloquants_emission)ul.append(el('li',b));it.append(el('p','Émission bloquée :'),ul);}
+ const print=el('a','Version imprimable (PDF)');print.href='/atelier/devis/imprimer?numero='+encodeURIComponent(numero)+'&version='+version;print.target='_blank';print.rel='noopener';
+ const pp=el('p');pp.append(print);it.append(pp);
  const acts=el('div',null,'actions'),sha=r.document_sha256;
  if(r.etat==='brouillon'&&doc.emettable)acts.append(button('Émettre (figer cette version)','primary',async()=>{const dest=prompt('Destinataire (nom et adresse) :');if(!dest)return;
   const key='emit_'+sha;await api('/api/atelier/devis/emettre',{request_id:rid(key),numero,version,document_sha256:sha,destinataire:dest});done(key);message(numero+' v'+version+' émis et figé. Rien n’a été envoyé.');}));
@@ -87,6 +91,34 @@ async function showDevis(numero,version){
   button('Enregistrer un refus','secondary',async()=>{const why=prompt('Motif du refus :');if(!why)return;const key='no_'+sha;
    await api('/api/atelier/devis/refuser',{request_id:rid(key),numero,version,document_sha256:sha,motif:why});done(key);}));}
  if(['brouillon','emis','expire'].includes(r.etat))acts.append(button('Réviser (nouvelle version)','secondary',async()=>{fillForm(doc,numero);$('newDevisBox').open=true;$('newDevisBox').scrollIntoView();}));
+ it.append(acts);box.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// --- commandes : prévu / réel ------------------------------------------------------------
+const pct=v=>v===null||v===undefined?'—':(v>0?'+':'')+String(v).replace('.',',')+' %';
+function renderCommandes(){
+ const cal=state.commerce.calibration,box=$('calibration'),procs=Object.keys(cal).filter(k=>k!=='commandes_ignorees_integrite');
+ box.replaceChildren(...(procs.length?procs.map(k=>el('span',k+' : temps réel / prévu × '+cal[k].ratio_temps_median.replace('.',',')+', matière × '+cal[k].ratio_matiere_median.replace('.',',')+' ('+cal[k].pieces_mesurees+' pièce(s) mesurée(s))'))
+  :[el('span','Aucune mesure opérateur : pas encore de dérive connue entre devis et production.')]));
+ const list=$('commandes');list.replaceChildren();
+ if(!state.commerce.commandes.length)list.append(el('p','Aucune commande : elle naît de l’accord sur un devis émis et envoyé.','help'));
+ for(const c of state.commerce.commandes){const it=el('article',null,'item'),h=el('header');h.append(el('strong',c.id+' · '+c.numero+' v'+c.version),tag(c.etat));it.append(h);
+  it.append(el('small','Accord du '+c.accepte_le+' · production autorisée : non (chaque impression garde son autorisation machine)'));
+  const acts=el('div',null,'actions');acts.append(button('Prévu / réel','secondary',()=>showCommande(c.id)));it.append(acts);list.append(it);}
+}
+async function showCommande(id){
+ const r=await api('/api/atelier/comparaison?commande_id='+encodeURIComponent(id)),box=$('commandeDetail');box.replaceChildren();
+ const it=el('article',null,'item');box.append(it);const h=el('header');h.append(el('strong','Prévu / réel · '+id+' · '+r.numero+' v'+r.version));it.append(h);
+ const tbl=el('table',null,'lines'),head=el('tr');head.append(el('th','Pièce'),el('th','Prévu par pièce'),el('th','Mesures','num'),el('th','Écart temps','num'),el('th','Écart matière','num'),el('th','Simulés','num'));tbl.append(head);
+ for(const p of r.pieces){const u=p.prevu_unitaire,tr=el('tr');tr.append(el('td',p.piece_id+' ('+p.procede+', ×'+p.quantite+')'),el('td',hours(u.temps_machine_s)+' · '+String(u.matiere).replace('.',',')+' '+u.unite_matiere),
+  el('td',String(p.mesures),'num'),el('td',pct(p.ecart_temps_pct),'num'),el('td',pct(p.ecart_matiere_pct),'num'),el('td',String(p.releves_simulation.length),'num'));tbl.append(tr);}
+ it.append(tbl,el('small',r.note));
+ const acts=el('div',null,'actions'),piece=select(r.pieces.map(p=>p.piece_id)),t=input('temps réel (h)','','number'),m=input('matière réelle (g ou ml)','','number'),who=input('opérateur','');
+ t.step='any';m.step='any';
+ acts.append(piece,t,m,who,button('Enregistrer une mesure','primary',async()=>{const sec=Math.round(Number(t.value)*3600),mat=Number(m.value);
+  if(!(sec>0)||!(mat>0))throw Error('Temps et matière mesurés : nombres positifs.');if(!who.value.trim())throw Error('Indique qui a mesuré.');
+  const key='rel_'+id+'_'+piece.value+'_'+sec+'_'+mat;await api('/api/atelier/releve',{request_id:rid(key),commande_id:id,piece_id:piece.value,temps_machine_s:sec,matiere:mat,source:'mesure_operateur',mesure_par:who.value.trim()});
+  done(key);message('Mesure enregistrée pour '+piece.value+' ('+who.value.trim()+').');await showCommande(id);}));
  it.append(acts);box.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 

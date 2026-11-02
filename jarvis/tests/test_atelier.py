@@ -15,6 +15,7 @@ from atelier_estimation import duration_seconds, parse_slicer_metadata, slicer_e
 from atelier_devis import compute, digest, MENTION_293B
 from atelier_commerce import Commerce
 from atelier_parc import Parc
+from atelier_document import client_lines, render_quote
 
 CONFIG = ROOT / 'config/atelier'
 FIXTURES = Path(__file__).resolve().parent / 'fixtures/atelier'
@@ -328,6 +329,110 @@ class CommerceTests(unittest.TestCase):
         b = self.c.calculate({'request_id': 'essai-calc-n2', 'entree': entry(), 'tarifs': declared()})
         self.assertEqual((a['numero'], b['numero']), ('DV-2026-0001', 'DV-2026-0002'))
 
+    def sent_and_accepted(self, q, i, rid='q1', sent=TODAY, accepted=TODAY):
+        self.c.mark_sent({'request_id': 'essai-sent-' + rid, 'numero': q['numero'], 'version': q['version'], 'document_sha256': i['document_sha256'],
+                          'moyen': 'e-mail', 'envoye_le': sent.isoformat()})
+        return self.c.accept({'request_id': 'essai-acc-' + rid, 'numero': q['numero'], 'version': q['version'], 'document_sha256': i['document_sha256'],
+                              'preuve': 'Bon pour accord signé', 'accepte_le': accepted.isoformat()})
+
+    def test_funnel_counts_every_request_not_only_the_displayed_ones(self):
+        for n in range(205):
+            self.c.receive({'request_id': f'essai-volume-{n:04d}', 'dossier_id': 'BOJ-ESSAI', 'origine': 'vitrine', 'reference_source': f'V{n}',
+                            'recue_le': '2026-11-01', 'resume': 'Socle'})
+        view = self.c.overview()
+        self.assertEqual(len(view['demandes']), 200)  # la liste affichée reste bornée
+        self.assertEqual(view['entonnoir']['demandes_reelles']['recues'], 205)
+        self.assertEqual(view['compteurs']['demandes_ouvertes'], 205)
+
+    def test_milestones_keep_declared_dates_and_give_response_delays(self):
+        first, second = self.demande(), self.demande('req-demande-2')  # reçues le 1er novembre, qualifiées le 2
+        q1, i1 = self.issued(first, rid='d1')
+        q2, i2 = self.issued(second, rid='d2')
+        self.day[0] = TODAY + timedelta(days=6)  # saisie tardive : les dates déclarées font foi
+        self.sent_and_accepted(q1, i1, rid='d1', sent=TODAY + timedelta(days=1), accepted=TODAY + timedelta(days=4))
+        self.c.mark_sent({'request_id': 'essai-sent-d2', 'numero': q2['numero'], 'version': 1, 'document_sha256': i2['document_sha256'],
+                          'moyen': 'e-mail', 'envoye_le': TODAY.isoformat()})
+        view = self.c.overview()
+        jalons = next(d for d in view['demandes'] if d['id'] == first)['jalons']
+        self.assertEqual(jalons, {'recue': '2026-11-01', 'qualifiee': '2026-11-02', 'devis_envoye': '2026-11-03', 'acceptee': '2026-11-06'})
+        delais = view['entonnoir']['delais']
+        self.assertEqual(delais['reception_a_envoi'], {'n': 2, 'mediane_jours': 1.5, 'max_jours': 2})
+        self.assertEqual(delais['envoi_a_reponse'], {'n': 1, 'mediane_jours': 3, 'max_jours': 3})
+
+    def test_an_expired_quote_cannot_be_sent(self):
+        q, i = self.issued(validite_jours=10)  # émis le 2, valable jusqu'au 12
+        self.day[0] = TODAY + timedelta(days=20)
+        self.assertEqual(self.c.quote(q['numero'], 1)['etat'], 'expire')  # même jamais envoyé
+        base = {'numero': q['numero'], 'version': 1, 'document_sha256': i['document_sha256'], 'moyen': 'courrier'}
+        with self.assertRaisesRegex(Rejected, 'Devis expiré à la date d’envoi'):
+            self.c.mark_sent(dict(base, request_id='essai-sent-late', envoye_le=(TODAY + timedelta(days=15)).isoformat()))
+        on_time = self.c.mark_sent(dict(base, request_id='essai-sent-ontime', envoye_le=(TODAY + timedelta(days=5)).isoformat()))
+        self.assertEqual(on_time['envoye_le'], '2026-11-07')  # envoi fait à temps, déclaré plus tard
+
+    def test_planned_versus_actual_uses_operator_measurements_only(self):
+        q, i = self.issued()
+        a = self.sent_and_accepted(q, i)
+
+        def actual(rid, piece, seconds, matter, source, **who):
+            return self.c.record_actual({'request_id': rid, 'commande_id': a['commande_id'], 'piece_id': piece, 'temps_machine_s': seconds,
+                                         'matiere': matter, 'source': source, **who})
+        with self.assertRaisesRegex(Rejected, 'indiquer qui a mesuré'):
+            actual('essai-rel-anonyme', 'figurine', 48577, 124.29, 'mesure_operateur')
+        with self.assertRaisesRegex(Rejected, 'Un résultat simulé n’a pas de mesureur'):
+            actual('essai-rel-sim-qui', 'figurine', 99999, 999.0, 'simulation', mesure_par='Olsen')
+        actual('essai-rel-sim', 'figurine', 99999, 999.0, 'simulation')
+        actual('essai-rel-m1', 'figurine', 48577, 124.29, 'mesure_operateur', mesure_par='Medhi')  # +10 % / +10 %
+        actual('essai-rel-m2', 'buste', 8100, 76.95, 'mesure_operateur', mesure_par='Medhi')  # −10 % / −10 %
+        pieces = {p['piece_id']: p for p in self.c.compare(a['commande_id'])['pieces']}
+        fig = pieces['figurine']
+        self.assertEqual(fig['prevu_unitaire'], {'temps_machine_s': 44161.0, 'matiere': 112.99, 'unite_matiere': 'g'})
+        self.assertEqual((fig['mesures'], fig['ecart_temps_pct'], fig['ecart_matiere_pct']), (1, 10.0, 10.0))
+        self.assertEqual(len(fig['releves_simulation']), 1)
+        self.assertEqual(fig['releves_operateur'][0]['mesure_par'], 'Medhi')
+        self.assertEqual(pieces['buste']['prevu_unitaire']['unite_matiere'], 'ml')
+        self.assertEqual((pieces['buste']['ecart_temps_pct'], pieces['buste']['ecart_matiere_pct']), (-10.0, -10.0))
+        calibration = self.c.overview()['calibration']
+        self.assertEqual(calibration['FDM'], {'pieces_mesurees': 1, 'ratio_temps_median': '1.100', 'ratio_matiere_median': '1.100'})
+        self.assertEqual(calibration['RESINE']['ratio_temps_median'], '0.900')
+
+
+class QuoteDocumentTests(unittest.TestCase):
+    def page(self, doc, etat='brouillon'):
+        return render_quote({'numero': 'DV-2026-0001', 'version': 1, 'etat': etat, 'document_sha256': SHA_A, 'document': doc})
+
+    def test_client_lines_hide_costs_and_sum_exactly_to_the_total(self):
+        for copies in range(1, 13):
+            for margin in ('0.30', '0.27', '0.45'):
+                doc = compute(entry(exemplaires=copies), declared(marge=margin), today=TODAY)
+                lines = client_lines(doc)
+                self.assertEqual(sum(Decimal(l['montant_ht']) for l in lines), Decimal(doc['totaux']['total_ht']), (copies, margin))
+        self.assertEqual([(l['ref'], l['quantite']) for l in lines], [('figurine', 12), ('buste', 24), ('finition', 12), ('conception', 1), ('emballage', 1)])
+        page = self.page(compute(entry(), declared(), today=TODAY))
+        for internal in ('Coût de revient', 'Marge', 'cout_revient', '€/kg', '€/h'):
+            self.assertNotIn(internal, page)
+        self.assertIn('DOCUMENT DE TRAVAIL', page)
+
+    def test_text_is_escaped_and_example_grid_is_marked(self):
+        page = self.page(compute(entry(titre='<script>alert(1)</script>'), tariffs(), today=TODAY))
+        self.assertNotIn('<script>alert', page)
+        self.assertIn('&lt;script&gt;alert(1)&lt;/script&gt;', page)
+        self.assertIn('EXEMPLE — NE PAS ENVOYER', page)
+        self.assertIn('TTC non calculé', page)
+
+    def test_issued_quote_prints_without_watermark(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        store = Store(tmp.name)
+        store.create_project('BOJ-ESSAI', 'Essai')
+        c = Commerce(store, today=lambda: TODAY)
+        q = c.calculate({'request_id': 'essai-calc-print', 'entree': entry(), 'tarifs': declared()})
+        c.issue({'request_id': 'essai-emit-print', 'numero': q['numero'], 'version': 1, 'document_sha256': q['document_sha256'],
+                 'destinataire': 'Client, 2 rue du Test'})
+        page = render_quote(c.quote(q['numero'], 1))
+        self.assertNotIn('DOCUMENT DE TRAVAIL', page)
+        for expected in ('Client, 2 rue du Test', 'Atelier de test', '12345678901234', 'Valable jusqu’au 2 décembre 2026', 'Bon pour accord'):
+            self.assertIn(expected, page)
+
 
 class ParcTests(unittest.TestCase):
     def setUp(self):
@@ -518,6 +623,10 @@ class WorkspaceAndHttpTests(unittest.TestCase):
         self.assertEqual((status, est['temps_machine_s']), (200, 1047))
         self.assertEqual(self.call('POST', '/api/atelier/estimer', {'lignes': ['G1 X10'], 'fichier_sha256': SHA_A, 'octets': 1})[0], 409)
         self.assertEqual(self.call('GET', '/atelier')[0], 200)
+        status, page = self.call('GET', '/atelier/devis/imprimer?numero=DV-2026-0001&version=1')
+        self.assertEqual(status, 200)
+        self.assertIn('DOCUMENT DE TRAVAIL'.encode(), page)
+        self.assertEqual(self.call('GET', '/atelier/devis/imprimer?numero=DV-2026-0001&version=1', cookie=False)[0], 401)
 
     def test_backup_restore_keeps_quotes_and_revokes_machine_rights(self):
         from workspace_state import restore_snapshot

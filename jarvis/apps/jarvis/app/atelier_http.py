@@ -13,11 +13,14 @@ from urllib.parse import parse_qs
 from core import Rejected, IntegrityError
 from dialogue import strict_json
 from atelier_estimation import parse_slicer_metadata
+from atelier_document import render_quote
 
 CONFIG = Path(__file__).resolve().parents[3] / 'config' / 'atelier'
 PAGES = {'/atelier': ('atelier.html', 'text/html; charset=utf-8'), '/atelier.js': ('atelier.js', 'text/javascript; charset=utf-8'),
-         '/atelier.css': ('atelier.css', 'text/css; charset=utf-8')}
-GETS = {*PAGES, '/api/atelier/etat', '/api/atelier/devis', '/api/atelier/grille', '/api/atelier/grille-exemple', '/api/atelier/comparaison'}
+         '/atelier.css': ('atelier.css', 'text/css; charset=utf-8'), '/atelier-devis.css': ('atelier-devis.css', 'text/css; charset=utf-8'),
+         '/atelier-devis.js': ('atelier-devis.js', 'text/javascript; charset=utf-8')}
+PRINT = '/atelier/devis/imprimer'
+GETS = {*PAGES, PRINT, '/api/atelier/etat', '/api/atelier/devis', '/api/atelier/grille', '/api/atelier/grille-exemple', '/api/atelier/comparaison'}
 POSTS = {'/api/atelier/demande', '/api/atelier/demande/etat', '/api/atelier/devis/calculer', '/api/atelier/devis/emettre',
          '/api/atelier/devis/envoye', '/api/atelier/devis/accepter', '/api/atelier/devis/refuser', '/api/atelier/releve',
          '/api/atelier/machine', '/api/atelier/autorisation', '/api/atelier/autorisation/revoquer', '/api/atelier/ordre',
@@ -35,7 +38,7 @@ def state(server):
             'resume': {'machines': len(parc['machines']),
                        'machines_simulees': sum(m['fiche']['origine'] == 'simulee' for m in parc['machines']),
                        'rapprochements': sum(m['rapprochement_requis'] for m in parc['machines']),
-                       'demandes_ouvertes': sum(d['etat'] in ('recue', 'qualifiee', 'devis_envoye') for d in commerce['demandes']),
+                       'demandes_ouvertes': commerce['compteurs']['demandes_ouvertes'],
                        'devis_brouillons': sum(q['courant'] and q['etat'] == 'brouillon' for q in commerce['devis']),
                        'devis_emis': sum(q['courant'] and q['etat'] == 'emis' for q in commerce['devis'])},
             'physique': False, 'envoi_externe': False}
@@ -59,10 +62,13 @@ def get(handler, parsed, app_root):
             if q:
                 raise Rejected('Aucun paramètre attendu.')
             return h.j(state(h.server))
-        if route == '/api/atelier/devis':
+        if route in ('/api/atelier/devis', PRINT):
             if set(q) != {'numero', 'version'} or not q['version'][0].isdigit():
                 raise Rejected('numero et version requis.')
-            return h.j(h.server.commerce.quote(q['numero'][0], int(q['version'][0])))
+            quote = h.server.commerce.quote(q['numero'][0], int(q['version'][0]))
+            if route == PRINT:
+                return h.response(200, render_quote(quote).encode('utf-8'), 'text/html; charset=utf-8')
+            return h.j(quote)
         if route == '/api/atelier/grille':
             if set(q) != {'sha256'}:
                 raise Rejected('sha256 requis.')

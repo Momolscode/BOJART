@@ -14,6 +14,7 @@ import json
 import re
 import threading
 from datetime import date, timedelta
+from statistics import median
 
 from core import Rejected, IntegrityError, now
 from atelier_devis import compute, canonical, digest, text, validate_tariffs
@@ -27,6 +28,7 @@ TRANSITIONS = {
     'en_production': {'livree'},
 }
 HORS_ENTONNOIR = ('doublon', 'spam')
+OUVERTES = ('recue', 'qualifiee', 'devis_envoye')
 _REQUEST = re.compile(r'^[A-Za-z0-9_-]{8,96}$')
 _NUMERO = re.compile(r'^DV-[0-9]{4}-[0-9]{4}$')
 _SHA = re.compile(r'^[0-9a-f]{64}$')
@@ -98,10 +100,11 @@ class Commerce:
             raise Rejected('Demande inconnue.')
         return row
 
-    def _set_demande(self, db, demande_id, etat, motif=None):
+    def _set_demande(self, db, demande_id, etat, motif=None, on=None):
+        """``on`` : date déclarée de l'étape (envoi, accord) ; sinon la date de saisie."""
         row = self._demande(db, demande_id)
         milestones = json.loads(row['jalons'])
-        milestones.setdefault(etat, self.today().isoformat())
+        milestones.setdefault(etat, (on or self.today()).isoformat())
         db.execute('UPDATE atelier_demandes SET etat=?, motif=COALESCE(?, motif), revision=revision+1, maj=?, jalons=? WHERE id=?',
                    (etat, motif, now(), canonical(milestones), demande_id))
 
@@ -241,12 +244,14 @@ class Commerce:
                 raise Rejected('Seule la version émise courante peut être déclarée envoyée.')
             if sent < date.fromisoformat(doc['emis_le']) or sent > self.today():
                 raise Rejected('Date d’envoi incohérente avec l’émission.')
+            if sent > date.fromisoformat(doc['valide_jusqu_au']):
+                raise Rejected('Devis expiré à la date d’envoi : émettre une nouvelle version.')
             db.execute('UPDATE atelier_devis SET envoye_le=?, moyen_envoi=? WHERE numero=? AND version=?',
                        (sent.isoformat(), means, payload['numero'], payload['version']))
             if row['demande_id']:
                 demande = self._demande(db, row['demande_id'])
                 if demande['etat'] == 'qualifiee':
-                    self._set_demande(db, demande['id'], 'devis_envoye')
+                    self._set_demande(db, demande['id'], 'devis_envoye', on=sent)
             return {'numero': payload['numero'], 'version': payload['version'], 'envoye_le': sent.isoformat(), 'declare_par_operateur': True}
         return self._run('devis.envoye', payload, apply)
 
@@ -276,7 +281,7 @@ class Commerce:
             if row['demande_id']:
                 demande = self._demande(db, row['demande_id'])
                 if demande['etat'] in ('qualifiee', 'devis_envoye'):
-                    self._set_demande(db, demande['id'], 'acceptee')
+                    self._set_demande(db, demande['id'], 'acceptee', on=accepted)
             return {'commande_id': command_id, 'numero': payload['numero'], 'version': payload['version'],
                     'document_sha256': row['document_sha256'], 'production_autorisee': False,
                     'note': 'L’accord crée la commande. Chaque impression garde sa propre autorisation machine.'}
@@ -303,10 +308,16 @@ class Commerce:
     def record_actual(self, payload):
         """Prévu / réel : relevé opérateur ou résultat simulé, jamais confondus."""
         required = {'request_id', 'commande_id', 'piece_id', 'temps_machine_s', 'matiere', 'source'}
-        if not isinstance(payload, dict) or set(payload) != required:
-            raise Rejected('Relevé : ' + ', '.join(sorted(required)) + ' requis.')
+        if not isinstance(payload, dict) or not required <= set(payload) <= required | {'mesure_par'}:
+            raise Rejected('Relevé : ' + ', '.join(sorted(required)) + ' requis (+ mesure_par).')
         if payload['source'] not in ('mesure_operateur', 'simulation'):
             raise Rejected('Source du relevé : mesure_operateur ou simulation.')
+        if payload['source'] == 'mesure_operateur':
+            if 'mesure_par' not in payload:
+                raise Rejected('Mesure opérateur : indiquer qui a mesuré (mesure_par).')
+            measured_by = text(payload['mesure_par'], 'Mesure faite par', 80)
+        elif 'mesure_par' in payload:
+            raise Rejected('Un résultat simulé n’a pas de mesureur.')
         for field in ('temps_machine_s', 'matiere'):
             value = payload[field]
             if type(value) not in (int, float) or not value > 0 or value > 1e7:
@@ -320,8 +331,10 @@ class Commerce:
             if payload['piece_id'] not in {line['ref'] for line in doc['lignes'] if line['type'] == 'machine'}:
                 raise Rejected('Pièce absente du devis accepté.')
             actual = json.loads(command['realise_json'])
-            actual.setdefault(payload['piece_id'], []).append(
-                {'temps_machine_s': payload['temps_machine_s'], 'matiere': payload['matiere'], 'source': payload['source'], 'releve_le': now()})
+            record = {'temps_machine_s': payload['temps_machine_s'], 'matiere': payload['matiere'], 'source': payload['source'], 'releve_le': now()}
+            if payload['source'] == 'mesure_operateur':
+                record['mesure_par'] = measured_by
+            actual.setdefault(payload['piece_id'], []).append(record)
             db.execute('UPDATE atelier_commandes SET realise_json=? WHERE id=?', (canonical(actual), command['id']))
             return {'commande_id': command['id'], 'piece_id': payload['piece_id'], 'releves': len(actual[payload['piece_id']])}
         return self._run('commande.releve', payload, apply)
@@ -346,9 +359,44 @@ class Commerce:
         return grid
 
     def _state(self, row, doc):
-        if row['etat'] == 'emis' and row['envoye_le'] and self.today() > date.fromisoformat(doc['valide_jusqu_au']):
+        if row['etat'] == 'emis' and self.today() > date.fromisoformat(doc['valide_jusqu_au']):
             return 'expire'
         return row['etat']
+
+    @staticmethod
+    def _planned(doc):
+        """Prévu unitaire de chaque pièce, tiré de l'estimation figée dans le devis accepté."""
+        planned = {}
+        for piece in doc.get('pieces', []):
+            est = piece.get('estimation')
+            if not est:
+                continue
+            fdm = piece['procede'] == 'FDM'
+            planned[piece['id']] = {'procede': piece['procede'], 'quantite': doc['exemplaires'] * piece['par_exemplaire'],
+                                    'prevu_unitaire': {'temps_machine_s': float(est['temps_machine_s']),
+                                                       'matiere': float(est['matiere_g' if fdm else 'matiere_ml']),
+                                                       'unite_matiere': 'g' if fdm else 'ml'}}
+        return planned
+
+    def _pieces_vs_actual(self, command, doc):
+        """Un relevé = une pièce imprimée. Seules les mesures opérateur entrent dans l'écart."""
+        actual = json.loads(command['realise_json'])
+        rows = []
+        for ref, plan in self._planned(doc).items():
+            records = actual.get(ref, [])
+            measured = [r for r in records if r['source'] == 'mesure_operateur']
+            row = {'piece_id': ref, **plan, 'mesures': len(measured), 'releves_operateur': measured,
+                   'releves_simulation': [r for r in records if r['source'] == 'simulation'],
+                   'sources': sorted({r['source'] for r in records}),
+                   'ratio_temps': None, 'ratio_matiere': None, 'ecart_temps_pct': None, 'ecart_matiere_pct': None}
+            if measured:
+                unit = plan['prevu_unitaire']
+                row['ratio_temps'] = median(r['temps_machine_s'] for r in measured) / unit['temps_machine_s']
+                row['ratio_matiere'] = median(r['matiere'] for r in measured) / unit['matiere']
+                row['ecart_temps_pct'] = round((row['ratio_temps'] - 1) * 100, 1)
+                row['ecart_matiere_pct'] = round((row['ratio_matiere'] - 1) * 100, 1)
+            rows.append(row)
+        return rows
 
     def compare(self, command_id):
         with self.store.connect() as db:
@@ -356,19 +404,39 @@ class Commerce:
             if not command:
                 raise Rejected('Commande inconnue.')
             _, doc = self._version(db, command['numero'], command['version'], command['document_sha256'])
-        entry_hours = {line['ref']: line['base'] for line in doc['lignes'] if line['type'] == 'machine'}
-        actual = json.loads(command['realise_json'])
-        rows = []
-        for ref in entry_hours:
-            records = actual.get(ref, [])
-            rows.append({'piece_id': ref, 'prevu': entry_hours[ref], 'releves': records,
-                         'sources': sorted({r['source'] for r in records})})
-        return {'commande_id': command_id, 'numero': command['numero'], 'version': command['version'], 'pieces': rows,
-                'note': 'Un résultat simulé ne remplace pas une mesure ; la grille n’est jamais corrigée automatiquement.'}
+        return {'commande_id': command_id, 'numero': command['numero'], 'version': command['version'],
+                'pieces': self._pieces_vs_actual(command, doc),
+                'note': 'Écart = médiane des mesures opérateur par pièce, comparée au prévu unitaire. '
+                        'Un résultat simulé ne remplace pas une mesure ; la grille n’est jamais corrigée automatiquement.'}
+
+    def _calibration(self, db):
+        """Dérive des estimations par procédé, sur toutes les commandes intactes ayant des mesures opérateur."""
+        ratios, skipped = {}, 0
+        for command in db.execute('SELECT * FROM atelier_commandes').fetchall():
+            row = db.execute('SELECT document_json FROM atelier_devis WHERE numero=? AND version=?',
+                             (command['numero'], command['version'])).fetchone()
+            doc = json.loads(row['document_json']) if row else None
+            if doc is None or digest(doc) != command['document_sha256']:
+                skipped += 1
+                continue
+            for piece in self._pieces_vs_actual(command, doc):
+                if piece['mesures']:
+                    bucket = ratios.setdefault(piece['procede'], {'temps': [], 'matiere': []})
+                    bucket['temps'].append(piece['ratio_temps'])
+                    bucket['matiere'].append(piece['ratio_matiere'])
+        out = {proc: {'pieces_mesurees': len(b['temps']), 'ratio_temps_median': f"{median(b['temps']):.3f}",
+                      'ratio_matiere_median': f"{median(b['matiere']):.3f}"} for proc, b in sorted(ratios.items())}
+        if skipped:
+            out['commandes_ignorees_integrite'] = skipped
+        return out
 
     def overview(self):
         with self.store.connect() as db:
             demandes = [{**dict(r), 'jalons': json.loads(r['jalons'])} for r in db.execute('SELECT * FROM atelier_demandes ORDER BY recue_le DESC, id LIMIT 200')]
+            # Les comptes portent sur toutes les demandes, pas sur la seule liste affichée.
+            every = [{'origine': r['origine'], 'etat': r['etat'], 'jalons': json.loads(r['jalons'])}
+                     for r in db.execute('SELECT origine, etat, jalons FROM atelier_demandes')]
+            calibration = self._calibration(db)
             versions = db.execute('SELECT * FROM atelier_devis ORDER BY numero DESC, version DESC LIMIT 400').fetchall()
             commandes = [dict(r) for r in db.execute('SELECT id, numero, version, accepte_le, etat FROM atelier_commandes ORDER BY accepte_le DESC LIMIT 200')]
         quotes, seen = [], set()
@@ -382,9 +450,18 @@ class Commerce:
                            'valide_jusqu_au': doc.get('valide_jusqu_au'), 'envoye_le': row['envoye_le'], 'grille': doc.get('grille')})
             seen.add(row['numero'])
         return {'schema': 'bojart.atelier.commerce.v1', 'demandes': demandes, 'devis': quotes, 'commandes': commandes,
-                'entonnoir': self.funnel(demandes, quotes, commandes)}
+                'entonnoir': self.funnel(every), 'calibration': calibration,
+                'compteurs': {'demandes': len(every), 'demandes_ouvertes': sum(d['etat'] in OUVERTES for d in every)}}
 
-    def funnel(self, demandes, quotes, commandes):
+    @staticmethod
+    def _delays(pairs):
+        days = [(date.fromisoformat(end) - date.fromisoformat(start)).days for start, end in pairs]
+        if not days:
+            return None
+        middle = median(days)
+        return {'n': len(days), 'mediane_jours': int(middle) if middle == int(middle) else middle, 'max_jours': max(days)}
+
+    def funnel(self, demandes):
         """Comptes réels seulement ; la démonstration est comptée à part."""
         real = [d for d in demandes if d['origine'] != 'demonstration']
         counted = [d for d in real if d['etat'] not in HORS_ENTONNOIR]
@@ -394,6 +471,10 @@ class Commerce:
         ratio = None
         if reached['devis_envoyes']:
             ratio = {'acceptees_sur_envoyes': f"{reached['acceptees']}/{reached['devis_envoyes']}"}
+        sent = [d['jalons'] for d in counted if 'devis_envoye' in d['jalons']]
+        delays = {'reception_a_envoi': self._delays((j['recue'], j['devis_envoye']) for j in sent),
+                  'envoi_a_reponse': self._delays((j['devis_envoye'], j.get('acceptee') or j['refusee'])
+                                                  for j in sent if 'acceptee' in j or 'refusee' in j)}
         return {'demandes_reelles': reached, 'exclues': {e: sum(d['etat'] == e for d in real) for e in HORS_ENTONNOIR},
-                'demonstration': len(demandes) - len(real), 'rapport': ratio,
-                'note': 'Comptes issus des demandes enregistrées ; aucun taux extrapolé ni source publicitaire déduite.'}
+                'demonstration': len(demandes) - len(real), 'rapport': ratio, 'delais': delays,
+                'note': 'Comptes et délais (en jours, dates déclarées) issus des demandes enregistrées ; aucun taux extrapolé.'}
