@@ -213,6 +213,16 @@ class PipelineFaultTests(unittest.TestCase):
         self.assertEqual(self.state(res)['steps']['slicing']['status'], 'BLOCKED')
 
     @unittest.skipUnless(SLICER and shutil.which('blender'), 'PrusaSlicer ou Blender absent')
+    def test_one_metre_variant_stops_at_cut_study(self):
+        res = self.run_("Jarvis, crée la Sentinelle 3D de 1 m", render_size=64)
+        self.assertEqual(res['status'], 'BLOCKED')
+        st = self.state(res)
+        self.assertEqual(st['steps']['slicing']['status'], 'BLOCKED')
+        plan = json.loads((Path(res['dir']) / 'cut_plan.json').read_text(encoding='utf8'))
+        self.assertGreater(len(plan['pieces']), 1)
+        self.assertFalse((Path(res['dir']) / 'tranchage').exists())
+
+    @unittest.skipUnless(SLICER and shutil.which('blender'), 'PrusaSlicer ou Blender absent')
     def test_complete_low_res_journey_and_duplicate(self):
         res = self.run_()
         self.assertEqual(res['status'], 'DONE', res)

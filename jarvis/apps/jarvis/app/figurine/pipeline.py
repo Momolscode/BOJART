@@ -359,6 +359,12 @@ class FigurineRun:
         return {'_outputs': ['projet.3mf'], **r}
 
     def _s_slicing(self):
+        plan = self.dir / 'cut_plan.json'
+        if plan.exists():
+            n = len(json.loads(plan.read_text(encoding='utf8'))['pieces'])
+            raise Blocked(f'Figurine plus grande que le volume d’hypothèse {slicing.SIM_BED_MM} mm : étude de découpe '
+                          f'en {n} pièces produite (cut_plan.json), clés d’assemblage et parc réel non définis. '
+                          'Tranchage par pièce non réalisé : étape BLOQUÉE.')
         sd = self.dir / 'tranchage'; sd.mkdir(exist_ok=True)
         fault = 'slicer_missing' if 'slicer_missing' in self.faults else ('slicer_fail' if 'slicer_fail' in self.faults else None)
         results, outs = {}, []
