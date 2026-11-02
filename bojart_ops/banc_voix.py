@@ -209,9 +209,20 @@ class Client:
                 sent['Content-Type'] = content_type
                 sent['Content-Length'] = str(len(data))
             sent.update(headers or {})
-            connection.request(method, path, body=data, headers=sent)
-            response = connection.getresponse()
-            raw = response.read()
+            connection.putrequest(method, path)
+            for name, value in sent.items():
+                connection.putheader(name, value)
+            connection.endheaders()
+            try:
+                if data:
+                    connection.send(data)
+            except (BrokenPipeError, ConnectionResetError):
+                pass  # le serveur a répondu (413) et fermé avant la fin de l'envoi : lire sa réponse
+            try:
+                response = connection.getresponse()
+                raw = response.read()
+            except (ConnectionResetError, http.client.HTTPException) as error:
+                return None, {'error': 'connexion fermée par le serveur (' + type(error).__name__ + ')'}
             return response.status, (json.loads(raw) if raw else None)
         finally:
             connection.close()
@@ -588,10 +599,15 @@ def scenarios(bench, reference_audio):
            {'http': status, 'message': (body or {}).get('error')})
 
     too_long = _wav(_pcm(reference_audio) + b'\x00\x00' * 16000 * 14)
+    checked = len(bench.instruments.validations)
     status, body = client.call('POST', '/api/voice/transcribe', too_long, content_type='audio/wav',
                                headers={'X-Boj-Voice-Owner': owner})
-    record('prise_trop_longue', 'coupure', f'{len(too_long)} octets (> 15 s)', 'refus avant transcription',
-           status in (409, 413), {'http': status, 'message': (body or {}).get('error')})
+    # Le serveur refuse sur l'en-tête Content-Length sans lire le corps ; selon l'OS, le client
+    # reçoit le 413 ou voit la connexion fermée pendant l'envoi. Dans les deux cas : WAV jamais lu.
+    unread = len(bench.instruments.validations) == checked
+    record('prise_trop_longue', 'coupure', f'{len(too_long)} octets (> 15 s)', 'refus avant lecture du WAV',
+           status in (409, 413, None) and unread and bench.command_count() == before,
+           {'http': status, 'message': (body or {}).get('error'), 'wav_lu': not unread})
 
     wrong_rate = _wav(_pcm(reference_audio), rate=48000)
     status, body = client.call('POST', '/api/voice/transcribe', wrong_rate, content_type='audio/wav',

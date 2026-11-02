@@ -202,6 +202,35 @@ class StatisticsContracts(unittest.TestCase):
         self.assertNotIn('tom', voix_corpus.VOICES)
 
 
+class ClientContracts(unittest.TestCase):
+    def test_refusal_sent_before_the_body_is_read_is_not_a_crash(self):
+        """Le serveur répond 413 sur l'en-tête puis ferme : le client ne doit pas lever BrokenPipe."""
+        import socket
+        listener = socket.socket()
+        listener.bind(('127.0.0.1', 0))
+        listener.listen(1)
+
+        def serve():
+            connection, _ = listener.accept()
+            data = b''
+            while b'\r\n\r\n' not in data:
+                data += connection.recv(4096)
+            body = b'{"error": "Requ\\u00eate hors limites."}'
+            connection.sendall(b'HTTP/1.0 413 Payload Too Large\r\nContent-Type: application/json\r\n'
+                               b'Content-Length: ' + str(len(body)).encode() + b'\r\n\r\n' + body)
+            connection.close()
+            listener.close()
+
+        thread = threading.Thread(target=serve)
+        thread.start()
+        app = type('App', (), {'server_port': listener.getsockname()[1], 'token': 't', 'origin': 'http://127.0.0.1'})()
+        status, body = banc_voix.Client(app).call('POST', '/api/voice/transcribe', b'\x00' * 8_000_000,
+                                                 content_type='audio/wav')
+        thread.join(10)
+        self.assertIn(status, (413, None))
+        self.assertIn('error', body)
+
+
 @unittest.skipUnless(shutil.which('node'), 'Node absent : code navigateur non exécutable')
 class BrowserCodeContracts(unittest.TestCase):
     """Le harnais exécute voice_endpoint.js et l'encodeur de capture.js tels quels."""

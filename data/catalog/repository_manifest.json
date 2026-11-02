@@ -374,8 +374,8 @@
     },
     {
       "path": "bojart_ops/banc_voix.py",
-      "bytes": 67979,
-      "sha256": "c9cae777f254127b3bc8ed56f3a3459ed9ccd7441b292fed272b05ab4e3a4aef"
+      "bytes": 68941,
+      "sha256": "2c46974d502b81586ed143ef6914b1933759f76002c7f3e095b02a0ada4a6f90"
     },
     {
       "path": "bojart_ops/collecte.py",
@@ -4749,8 +4749,8 @@
     },
     {
       "path": "tests_ops/test_banc_voix.py",
-      "bytes": 13704,
-      "sha256": "9593008c0e2b86de59bca2150ecb1724710c5d794b9a622f8844779cb3542235"
+      "bytes": 15029,
+      "sha256": "8cf89429701f14a4d77a001435c9bb62f778fd336a5723ad76a9849f46c4e033"
     },
     {
       "path": "tests_ops/test_collecte.py",
