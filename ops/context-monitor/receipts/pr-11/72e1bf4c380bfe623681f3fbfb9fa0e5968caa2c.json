@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "pull_request": {
+    "number": 11,
+    "url": "https://github.com/Momolscode/BOJART/pull/11",
+    "state": "open",
+    "draft": false,
+    "merged": false,
+    "base": {
+      "ref": "main",
+      "sha": "b49101e3acad6257e2d1a610dac5fb95ec0a8bfb"
+    },
+    "head": {
+      "ref": "feat/launch-environment-diagnostics",
+      "sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "repository": "Momolscode/BOJART"
+    }
+  },
+  "trigger_kind": "synchronize",
+  "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+  "compared_from_sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
+  "started_at": "2026-11-02T01:26:35Z",
+  "finished_at": "2026-11-02T01:29:15Z",
+  "status": "complete",
+  "changed_paths": [
+    ".github/workflows/agent-memory.yml",
+    ".github/workflows/simulations.yml",
+    ".github/workflows/workflow-simulations.yml",
+    "Mesurer_BOJART.cmd",
+    "Simuler_BOJART.cmd",
+    "bojart_memory/benchmarks.py",
+    "bojart_ops/media_check.py",
+    "bojart_ops/orchestration.py",
+    "bojart_ops/production_recovery.py",
+    "context/SESSION_HANDOFF.md",
+    "creative/CURRENT.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/COMMANDES_DASHBOARD.md",
+    "docs/DIAGNOSTIC_OUTILS.md",
+    "docs/ORCHESTRATION.md",
+    "docs/SIMULATIONS_ATELIER.md",
+    "docs/creative/RECUPERATION_PRODUCTION.md",
+    "docs/evidence/production-recovery-2026-11-02.json",
+    "docs/evidence/simulations-2026-11-02/README.md",
+    "docs/evidence/simulations-2026-11-02/run-1.json",
+    "docs/evidence/simulations-2026-11-02/run-2.json",
+    "docs/evidence/simulations-2026-11-02/run-3.json",
+    "docs/evidence/simulations-2026-11-02/summary.json",
+    "docs/evidence/synthetic-media-check-2026-11-02.json",
+    "docs/evidence/workflows-2026-11-02/README.md",
+    "docs/evidence/workflows-2026-11-02/before.json",
+    "docs/evidence/workflows-2026-11-02/ci-linux-langgraph.json",
+    "docs/evidence/workflows-2026-11-02/ci-linux-rules.json",
+    "docs/evidence/workflows-2026-11-02/ci-observations.json",
+    "docs/evidence/workflows-2026-11-02/ci-windows-langgraph.json",
+    "docs/evidence/workflows-2026-11-02/ci-windows-rules.json",
+    "docs/evidence/workflows-2026-11-02/retrieval-after.json",
+    "docs/evidence/workflows-2026-11-02/retrieval-regression.json",
+    "docs/evidence/workflows-2026-11-02/run-1.json",
+    "docs/evidence/workflows-2026-11-02/run-2.json",
+    "docs/evidence/workflows-2026-11-02/run-3.json",
+    "docs/evidence/workflows-2026-11-02/summary.json",
+    "docs/evidence/workflows-2026-11-02/tests.log",
+    "docs/memory/SIMULATIONS.md",
+    "jarvis/apps/jarvis/app/consolidated_workbench.py",
+    "jarvis/apps/jarvis/app/fleet_simulation.py",
+    "jarvis/apps/jarvis/app/jarvis_runtime.py",
+    "jarvis/apps/jarvis/app/server.py",
+    "jarvis/apps/jarvis/app/studio_workbench.py",
+    "jarvis/apps/jarvis/app/workbench.py",
+    "jarvis/fixtures/fleet_1000mm_synthetic.json",
+    "jarvis/tests/test_workspace_m05.py",
+    "ops/orchestration.json",
+    "productions/le-dernier-geste/README.md",
+    "tests/test_http_boundaries.py",
+    "tests/test_media_check.py",
+    "tests/test_production_recovery.py",
+    "tests_agent/test_benchmarks.py",
+    "tests_workflows/test_journeys.py",
+    "tools/benchmark_jarvis.py",
+    "tools/diagnose_environment.py",
+    "tools/orchestrate.py",
+    "tools/prepare_production.py",
+    "tools/simulate_jarvis_workflows.py"
+  ],
+  "reviewed_paths": [
+    ".github/workflows/agent-memory.yml",
+    ".github/workflows/simulations.yml",
+    ".github/workflows/workflow-simulations.yml",
+    "Mesurer_BOJART.cmd",
+    "Simuler_BOJART.cmd",
+    "bojart_memory/benchmarks.py",
+    "bojart_ops/media_check.py",
+    "bojart_ops/orchestration.py",
+    "bojart_ops/production_recovery.py",
+    "context/SESSION_HANDOFF.md",
+    "creative/CURRENT.md",
+    "data/catalog/repository_manifest.json",
+    "data/knowledge/index.json",
+    "docs/COMMANDES_DASHBOARD.md",
+    "docs/DIAGNOSTIC_OUTILS.md",
+    "docs/ORCHESTRATION.md",
+    "docs/SIMULATIONS_ATELIER.md",
+    "docs/creative/RECUPERATION_PRODUCTION.md",
+    "docs/evidence/production-recovery-2026-11-02.json",
+    "docs/evidence/simulations-2026-11-02/README.md",
+    "docs/evidence/simulations-2026-11-02/run-1.json",
+    "docs/evidence/simulations-2026-11-02/run-2.json",
+    "docs/evidence/simulations-2026-11-02/run-3.json",
+    "docs/evidence/simulations-2026-11-02/summary.json",
+    "docs/evidence/synthetic-media-check-2026-11-02.json",
+    "docs/evidence/workflows-2026-11-02/README.md",
+    "docs/evidence/workflows-2026-11-02/before.json",
+    "docs/evidence/workflows-2026-11-02/ci-linux-langgraph.json",
+    "docs/evidence/workflows-2026-11-02/ci-linux-rules.json",
+    "docs/evidence/workflows-2026-11-02/ci-observations.json",
+    "docs/evidence/workflows-2026-11-02/ci-windows-langgraph.json",
+    "docs/evidence/workflows-2026-11-02/ci-windows-rules.json",
+    "docs/evidence/workflows-2026-11-02/retrieval-after.json",
+    "docs/evidence/workflows-2026-11-02/retrieval-regression.json",
+    "docs/evidence/workflows-2026-11-02/run-1.json",
+    "docs/evidence/workflows-2026-11-02/run-2.json",
+    "docs/evidence/workflows-2026-11-02/run-3.json",
+    "docs/evidence/workflows-2026-11-02/summary.json",
+    "docs/evidence/workflows-2026-11-02/tests.log",
+    "docs/memory/SIMULATIONS.md",
+    "jarvis/apps/jarvis/app/consolidated_workbench.py",
+    "jarvis/apps/jarvis/app/fleet_simulation.py",
+    "jarvis/apps/jarvis/app/jarvis_runtime.py",
+    "jarvis/apps/jarvis/app/server.py",
+    "jarvis/apps/jarvis/app/studio_workbench.py",
+    "jarvis/apps/jarvis/app/workbench.py",
+    "jarvis/fixtures/fleet_1000mm_synthetic.json",
+    "jarvis/tests/test_workspace_m05.py",
+    "ops/orchestration.json",
+    "productions/le-dernier-geste/README.md",
+    "tests/test_http_boundaries.py",
+    "tests/test_media_check.py",
+    "tests/test_production_recovery.py",
+    "tests_agent/test_benchmarks.py",
+    "tests_workflows/test_journeys.py",
+    "tools/benchmark_jarvis.py",
+    "tools/diagnose_environment.py",
+    "tools/orchestrate.py",
+    "tools/prepare_production.py",
+    "tools/simulate_jarvis_workflows.py",
+    "AGENTS.md",
+    "context/CURRENT.md",
+    "data/knowledge/claims.jsonl",
+    "docs/OPERATIONS.md",
+    "jarvis/AGENTS.md",
+    "jarvis/apps/jarvis/AGENTS.md"
+  ],
+  "pending_paths": [],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha": "4ec392db6c45655bdb0c5a2d0bc0fb19df054202",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/AGENTS.md"
+    },
+    {
+      "path": "context/CURRENT.md",
+      "sha": "ff57879bcb1d7a32c99d6bcfa979ad45c6c22570",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/context/CURRENT.md"
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "sha": "9d84e3225d12973718d9eb496bbd7090ad8c95ae",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/context/SESSION_HANDOFF.md"
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "sha": "20c4b51ea2e25b2105f57c372b0c1e292e45666e",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/data/knowledge/claims.jsonl"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha": "3ddd7fa10040698af5088f768fa975e9d6fdcf6e",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/docs/OPERATIONS.md"
+    },
+    {
+      "path": "jarvis/AGENTS.md",
+      "sha": "ada8a9ea253fff9438204f2007dc7a65658898cc",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/jarvis/AGENTS.md"
+    },
+    {
+      "path": "jarvis/apps/jarvis/AGENTS.md",
+      "sha": "46612e2771a263910488911c2c87648338cb189c",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/jarvis/apps/jarvis/AGENTS.md"
+    },
+    {
+      "path": ".github/workflows/agent-memory.yml",
+      "sha": "7484b95e82270c3e2ae8a526ff7e4eb2e8590bd0",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/.github/workflows/agent-memory.yml"
+    },
+    {
+      "path": ".github/workflows/simulations.yml",
+      "sha": "d5c10efe22be1d3331d884a4eed4f8d442168036",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/.github/workflows/simulations.yml"
+    },
+    {
+      "path": ".github/workflows/workflow-simulations.yml",
+      "sha": "b8024588679bfa4f5eaf1e782a447eb0548d45ea",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/.github/workflows/workflow-simulations.yml"
+    },
+    {
+      "path": "bojart_ops/media_check.py",
+      "sha": "0d5be4a45853335afd109ec5da7f788b5a206065",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/bojart_ops/media_check.py"
+    },
+    {
+      "path": "bojart_ops/production_recovery.py",
+      "sha": "6c0fbfb333bcc1c9b3d20de6804cd38bef745a1c",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/bojart_ops/production_recovery.py"
+    },
+    {
+      "path": "docs/evidence/simulations-2026-11-02/summary.json",
+      "sha": "14fe5050f5508e3c42811202681bd92e0e93da05",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/docs/evidence/simulations-2026-11-02/summary.json"
+    },
+    {
+      "path": "docs/evidence/synthetic-media-check-2026-11-02.json",
+      "sha": "680f6439ab7a5b503279cc6a845d7f7dbc9e7405",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/docs/evidence/synthetic-media-check-2026-11-02.json"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/summary.json",
+      "sha": "edf19c1de5f8a74d15cb536e40e3a56e8ec63f28",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/docs/evidence/workflows-2026-11-02/summary.json"
+    },
+    {
+      "path": "tests/test_http_boundaries.py",
+      "sha": "b3d8320f34b422cb27700fd8b399d0fe73693fe9",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/tests/test_http_boundaries.py"
+    },
+    {
+      "path": "tests/test_media_check.py",
+      "sha": "ab7b2a8aeafae0a963143f530ae09755edd48bcb",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/tests/test_media_check.py"
+    },
+    {
+      "path": "tools/diagnose_environment.py",
+      "sha": "fe61f5bff612fbb8e66e088973ecc7c792b36635",
+      "revision": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "url": "https://github.com/Momolscode/BOJART/blob/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c/tools/diagnose_environment.py"
+    },
+    {
+      "url": "https://api.github.com/repos/Momolscode/BOJART/compare/2767b2ffb6466cff126b6605bce1a5268f93bc8b...72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "description": "Comparaison paginée du dernier SHA traité vers la tête figée; 60 fichiers, 12 commits, too_large non signalé."
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-11/2767b2ffb6466cff126b6605bce1a5268f93bc8b.json",
+      "sha": "6b94d032c93c321e1534d34e6a22ebf9dbd27f5c",
+      "revision": "637a63c618802db537f8d86b63154ace80cd13a7",
+      "url": "https://github.com/Momolscode/BOJART/blob/audit/context-results/ops/context-monitor/receipts/pr-11/2767b2ffb6466cff126b6605bce1a5268f93bc8b.json"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-1/6cda578f14701ad9e0cf76bad9a1cf6b77d55f76.continuation-simulations.json",
+      "revision": "bc9513ff3c77775f86555936229a2b33ad00ee01",
+      "url": "https://github.com/Momolscode/BOJART/blob/audit/context-results/ops/context-monitor/receipts/pr-1/6cda578f14701ad9e0cf76bad9a1cf6b77d55f76.continuation-simulations.json"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-1/c71628bb40f0220322b774ec3ce9a49dd84bfc10.json",
+      "revision": "d39305e",
+      "url": "https://github.com/Momolscode/BOJART/blob/audit/context-results/ops/context-monitor/receipts/pr-1/c71628bb40f0220322b774ec3ce9a49dd84bfc10.json"
+    },
+    {
+      "path": "ops/context-monitor/receipts/pr-1/b49101e3acad6257e2d1a610dac5fb95ec0a8bfb.continuation-historical-proofs.json",
+      "revision": "637a63c618802db537f8d86b63154ace80cd13a7",
+      "url": "https://github.com/Momolscode/BOJART/blob/audit/context-results/ops/context-monitor/receipts/pr-1/b49101e3acad6257e2d1a610dac5fb95ec0a8bfb.continuation-historical-proofs.json"
+    }
+  ],
+  "checks": [
+    {
+      "name": "BOJART quality schema (pull_request)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372475697",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Exécution associée à la tête figée mais checkout du commit de fusion synthétique b1cb7abc9bd6610f49833cca6d2e66d8ad2d5993; schéma qualité et rejet attendu, sans approbation artistique."
+    },
+    {
+      "name": "BOJART data audit (pull_request)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372475719",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Exécution associée à la tête figée mais checkout de fusion synthétique; inventaire, syntaxe et invariants, sans revue sémantique exhaustive."
+    },
+    {
+      "name": "BOJART continuity (pull_request)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372475692",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Fusion synthétique; 129 tests racine, 135 tests agent, 83 tests ops et 14/14 cas lexicaux d'après les journaux. Portée logicielle seulement."
+    },
+    {
+      "name": "BOJART data audit (push)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372471678",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Checkout direct de la tête exacte; inventaire suivi, classification des sources et invariants techniques."
+    },
+    {
+      "name": "BOJART continuity (push)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372471724",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Checkout direct de la tête exacte; tests logiciels et contrôles de continuité, sans matériel cible ni validation artistique."
+    },
+    {
+      "name": "Jarvis agent memory (push)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372471764",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Checkout direct 72e1bf4; Ubuntu et Windows mémoire/redémarrage réussis, plus export synthétique CPU FFmpeg réussi et reçu téléversé."
+    },
+    {
+      "name": "Jarvis agent memory (pull_request)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372475739",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Fusion synthétique; Ubuntu, Windows et media-export réussis. Le succès direct de la tête est fourni séparément par le run push."
+    },
+    {
+      "name": "Jarvis measured simulations (push)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372471717",
+      "conclusion": "success",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Benchmarks synthétiques Ubuntu et Windows; aucun LLM, GPU, voix, navigateur, machine ou approbation artistique."
+    },
+    {
+      "name": "Jarvis transcript and fleet simulations (push)",
+      "url": "https://github.com/Momolscode/BOJART/actions/runs/41372471694",
+      "conclusion": "in_progress",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "scope": "Ubuntu réussi; job Windows encore en cours au moment du reçu. Planificateur et règles synthétiques, aucune géométrie, trancheur ni machine réelle."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "evidence": "Les 60 chemins du delta depuis le dernier reçu complet ont été lus. La comparaison GitHub annonce 60 fichiers et 12 commits sans drapeau too_large; le sous-delta propre à la branche par rapport à la base actuelle porte sur 19 chemins. Les apports fusionnés de main ont été recoupés avec leurs reçus PR 1.",
+      "action": "Aucun correctif source établi."
+    },
+    {
+      "severity": "info",
+      "evidence": "Le contrôle média effectue, uniquement sur demande, un export synthétique CPU FFmpeg H.264/AAC 720x1280, 24 i/s, 48 images et 2 s, puis sonde et décode entièrement le résultat, mesure le PCM, vérifie l'empreinte et supprime le temporaire. Le run push exact 41372471764 a réussi et a téléversé le reçu.",
+      "action": "Conserver les qualificatifs tested_in_simulation=true, production_ready=false, physical_hardware_qualified=false et artistic_approval=false."
+    },
+    {
+      "severity": "info",
+      "evidence": "La preuve versionnée rapporte 625365 octets, SHA-256 cb3358…, 96256 échantillons PCM, RMS 0,022037, pic 0,034363, provider_calls=0 et suppression du temporaire. Elle ne contient ni média utilisateur ni appel fournisseur.",
+      "action": "Aucune génération, aucun crédit et aucune relance Higgsfield."
+    },
+    {
+      "severity": "info",
+      "evidence": "Les simulations mémoire, orchestration et flotte conservent leur portée synthétique: 1260/1260 hits@5 sur 14 cas distincts répétés, exactitude de source 71,4 % à 8K et 92,9 % à 13K, 960 opérations sans erreur et latences Windows atypiques conservées. Aucun état ne transforme completed en approbation artistique.",
+      "action": "Ne pas extrapoler aux modèles, à la voix, au GPU, au navigateur, à Blender/After Effects, à Jev ou aux machines."
+    },
+    {
+      "severity": "info",
+      "evidence": "La récupération de production vérifie des empreintes exactes et copie vers un nouvel espace externe; le planificateur de flotte reste sans géométrie, trancheur ni commande physique. La séparation Jarvis transcription/décision typée/prévisualisation/exécution/reçu demeure intacte.",
+      "action": "Maintenir les étapes physiques bloquées jusqu'à preuve supervisée."
+    },
+    {
+      "severity": "info",
+      "evidence": "Le manifeste de la tête contient 881 entrées pour 881 blobs hors manifeste; ensembles et tailles correspondent. Les 59 chemins modifiés hors manifeste sont couverts, sans doublon SHA-256 impliquant ces chemins. Le workflow de continuité exact a validé les empreintes.",
+      "action": "Aucune suppression ni déduplication."
+    },
+    {
+      "severity": "warning",
+      "evidence": "Au moment du reçu, Jarvis transcript and fleet simulations 41372471694 reste en cours côté Windows; l'Ubuntu est réussi. Les autres runs directs de la tête listés sont terminés avec succès.",
+      "action": "Lire sa conclusion lors d'un prochain événement utile; ne pas interpréter l'absence de conclusion comme un succès."
+    }
+  ],
+  "corrections": [],
+  "limitations": [
+    "Aucun accès ni diagnostic exécuté sur la tour cible; aucune qualification GPU, microphone, écrans, imprimantes ou logiciels créatifs réels.",
+    "Aucun modèle, rendu artistique, média utilisateur, navigateur, fournisseur, crédit, Jev réel, trancheur ou machine n'a été lancé ou commandé.",
+    "Les runs pull_request utilisent un commit de fusion synthétique; seules les exécutions push listées prouvent un checkout direct de la tête exacte.",
+    "Les métriques de simulation sont bornées à leurs fixtures et répétitions; elles ne constituent ni une validation matérielle, ni une approbation artistique.",
+    "Le run transcript/fleet Windows était encore en cours à finished_at; sa conclusion n'est pas fabriquée."
+  ],
+  "next_actions": [
+    "Exécuter le diagnostic borné sur la tour cible et conserver le rapport brut privé avant toute qualification matérielle.",
+    "Faire valider humainement toute nouvelle sortie artistique; les contrôles présents restent techniques.",
+    "Relever la conclusion du run transcript/fleet Windows lors du prochain événement utile si elle change la portée."
+  ]
+}

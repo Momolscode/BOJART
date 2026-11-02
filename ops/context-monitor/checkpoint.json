@@ -657,8 +657,8 @@
       "updated_at": "2026-11-01T23:48:07Z"
     },
     "11": {
-      "head_sha": "2767b2ffb6466cff126b6605bce1a5268f93bc8b",
-      "receipt_path": "ops/context-monitor/receipts/pr-11/2767b2ffb6466cff126b6605bce1a5268f93bc8b.json",
+      "head_sha": "72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c",
+      "receipt_path": "ops/context-monitor/receipts/pr-11/72e1bf4c380bfe623681f3fbfb9fa0e5968caa2c.json",
       "status": "complete",
       "pending_paths": []
     }
