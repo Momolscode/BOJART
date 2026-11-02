@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 12692,
+      "sha256": "c565f97e1bc230d19c2799fef2c6f9a16135323f10c20606d0eca1127192b011"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 44152,
+      "sha256": "95eebaf164cd98c053e2dfb57bf19b441657922de3e91e5e74cbc65adb436144"
     },
     {
       "path": "creative/CURRENT.md",
@@ -526,6 +526,11 @@
       "path": "docs/ARCHIVE_RESTAURATION.md",
       "bytes": 1274,
       "sha256": "96f9edc86636410340e4448e675888a21619514bf41c75a0f60f2a458c2afe40"
+    },
+    {
+      "path": "docs/ATELIER_DEVIS_PARC.md",
+      "bytes": 9657,
+      "sha256": "e4d6e40a7b316856f748fedb0c466b07ec69e9b00b08425f97cfd45ff4178e9c"
     },
     {
       "path": "docs/AUDIT_CONTINU_2026-11-01.md",
@@ -736,6 +741,11 @@
       "path": "docs/creative/THE_AWAKENING.md",
       "bytes": 1537,
       "sha256": "32f3c88e249582d9ad85c014c096f27373e73e36cdf140cb2f2567dded29b367"
+    },
+    {
+      "path": "docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json",
+      "bytes": 8620,
+      "sha256": "ca8b80768a74f473a21011c4159fb729349733783c8336b16b3f05ba64a36ae5"
     },
     {
       "path": "docs/evidence/consolidation-2026-11-01.json",
@@ -1654,8 +1664,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.html",
-      "bytes": 4073,
-      "sha256": "3aeb866cac14a58c2824c9d9feabe6583d3fd01aaf4b875e96b49d47714d8fcd"
+      "bytes": 4117,
+      "sha256": "689353b9694a28a7c4c598f3130cb6a26f6f8a2d181e10aee1e6513f6d7a7640"
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.js",
@@ -2809,8 +2819,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 14781,
+      "sha256": "aa746ef30b8cfd2e7b43b7cf00a48aa837914cb393a5f31925e55219c8931197"
     },
     {
       "path": "ops/request-example.json",

@@ -9,6 +9,14 @@ Le profil matériel déclaré est dans `data/preinstallation/target-profile.json
 La recherche V5 ajoute 31 références officielles, 15 propositions et 10 contrats de qualification : `docs/research/audit-transversal-2026-11-02/`. Les recettes restent non exécutées tant qu’aucun reçu ne les qualifie. Les données terrain sont des gabarits historiques ; elles ne remplacent ni un inventaire ni une mesure. Le contexte actif est nettoyé sans supprimer les originaux.
 
 
+## Atelier : demandes, devis et parc simulé — 2 novembre 2026
+
+La page `/atelier` de la console consolidée suit les demandes clients, calcule des devis versionnés et pilote un parc d'imprimantes **simulé**. Le devis reprend la formule `calculateQuote` d'Atelier V11, au centime, à partir des métadonnées PrusaSlicer/OrcaSlicer/Bambu Studio ou d'une estimation résine depuis un STL. Un devis émis est figé par empreintes ; l'accord client crée une commande sans autoriser la production.
+
+Les ordres machine exigent une autorisation par machine et par action. Un résultat inconnu bloque la machine jusqu'à une lecture d'état. Les machines déclarées réelles ne reçoivent aucun ordre : aucun connecteur n'est raccordé. La restauration révoque les autorisations et rend inconnus les ordres en cours.
+
+Aucun devis réel n'est émettable : grille tarifaire, régime de TVA et émetteur de BOJ.ART restent à déclarer. Le parc réel reste à inventorier. Voir `docs/ATELIER_DEVIS_PARC.md` et `docs/evidence/atelier-devis-parc-2026-11-02/`. Codé et testé en isolation (35 tests, parcours navigateur, banc de la PR #17 sur l'arbre fusionné) ; ni installé sur la tour, ni qualifié sur une machine.
+
 ## Robotique — STRATES, 2 novembre 2026
 
 La session « bras robotique » porte sur la peinture au pinceau d’un relief mural stratifié. Elle est liée à l’atelier et à Jarvis. Un audit documentaire de 12 pages recommande un banc d’essai ciblé avant tout achat de cellule. Il faut d’abord figer une recette distincte des figurines, puis mesurer matière, contact et débordement ≤ 1 mm. Aucune performance physique n’est acquise.
@@ -25,7 +33,7 @@ BOJ.ART vise un atelier artistique augmenté : conception, FDM/résine, finition
 
 Base M07 : `84aff373fe78db173e9601f285ce908f64587c55`. Les 437 fichiers du manifeste concordent avec les octets récupérés. Recette réexécutée : 578 tests Python et 7 tests de signal réussis. La recette navigateur historique ne mesure pas la tour réelle.
 
-M07 conserve LangGraph et ses checkpoints SQLite, des dossiers CAO, trois vues avec reçus, un catalogue Studio et des brouillons Growth. CAO paramétrique bornée. Connecteurs imprimantes, découpe multi-pièces, publication et statistiques restent à raccorder.
+M07 conserve LangGraph et ses checkpoints SQLite, des dossiers CAO, trois vues avec reçus, un catalogue Studio et des brouillons Growth. CAO paramétrique bornée. Connecteurs imprimantes, découpe multi-pièces, publication et statistiques restent à raccorder. Les devis et le parc simulé sont décrits plus haut (section Atelier).
 
 La consolidation ajoute une mémoire documentaire locale : originaux préservés, versions, recherche FTS5 citée, import idempotent et restauration vérifiée. Le panneau `/memory` ajoute la recherche citée, les contextes bornés et les notes au statut proposition. Le lanceur indexe le contexte sélectionné dans la même base `memory.sqlite`. Le serveur MCP expose cette mémoire aux assistants compatibles. Les embeddings hybrides et la conversation via Ollama sont facultatifs, à configurer après essai local. Seuls les échanges de ce panneau sont mémorisés comme épisodes : les journaux de commandes M07 restent séparés. Ce n’est ni un entraînement de modèle ni une compréhension automatique des images.
 

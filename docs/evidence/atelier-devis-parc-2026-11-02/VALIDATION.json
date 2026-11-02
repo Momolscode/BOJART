@@ -1,0 +1,344 @@
+{
+ "schema": "bojart.evidence.v1",
+ "date": "2026-11-02",
+ "objet": "Atelier : demandes clients, devis versionnés, parc d’imprimantes simulé",
+ "base": {
+  "main": "3436f53",
+  "branche": "claude/project-thread-3d3qlr",
+  "commit_code": "762c890"
+ },
+ "environnement": "Conteneur Linux, Python 3.13.18, Node.js, Chromium Playwright ; sans GPU, sans tour, sans imprimante.",
+ "niveau": "codé et testé en isolation ; non installé ; aucune machine réelle contactée",
+ "tests": {
+  "jarvis/tests/test_atelier.py": {
+   "tests": 35,
+   "resultat": "OK",
+   "commande": "cd jarvis && python3 -m unittest tests.test_atelier -v",
+   "note": "Chaque refus attendu est vérifié sur son motif exact (assertRaisesRegex), pas seulement sur le type d’exception."
+  },
+  "tests": {
+   "tests": 102,
+   "resultat": "OK"
+  },
+  "tests_agent": {
+   "tests": 236,
+   "resultat": "OK"
+  },
+  "node --test (3 fichiers de continuity.yml)": {
+   "tests": 30,
+   "resultat": "OK"
+  },
+  "node --check memory.js atelier.js tower_screen.js": {
+   "resultat": "OK"
+  },
+  "jarvis/tests (discover)": {
+   "tests": 315,
+   "echecs": 1,
+   "erreurs": 2,
+   "ignores": 1,
+   "note": "Les 3 cas en échec (test_workspace_m05 ×2, test_growth ×1) échouent à l’identique sur main 3436f53 non modifié : médias M07 d’essai absents du dépôt public."
+  },
+  "tools/validate_repository.py": {
+   "resultat": "ok",
+   "fichiers": 946
+  }
+ },
+ "calcul_identique_atelier_v11": "Test QuoteTests.test_same_formula_as_atelier_v11_calculate_quote : calculateQuote de sites/atelier/dist/lib/workshop.js exécuté par Node donne le même total au centime.",
+ "geometrie_stl_contre_trimesh": {
+  "trimesh_version": "4.11.1",
+  "pieces": [
+   {
+    "fichier": "figurine-m08/figurine.stl",
+    "sha256": "7292980adb18aa716cb981bfcd75f26724e16e1b300062853a4d757fbfe2196e",
+    "octets": 9090584,
+    "bojart": {
+     "triangles": 181810,
+     "ferme": true,
+     "volume_cm3": 206.231,
+     "surface_cm2": 382.239,
+     "boite_mm": [
+      125.826,
+      99.03,
+      188.0
+     ],
+     "aretes_ouvertes": 0,
+     "aretes_non_manifold": 0
+    },
+    "duree_s": 1.78,
+    "trimesh": {
+     "triangles": 181810,
+     "ferme": true,
+     "volume_cm3": 206.231,
+     "surface_cm2": 382.239,
+     "boite_mm": [
+      125.826,
+      99.03,
+      188.0
+     ]
+    }
+   },
+   {
+    "fichier": "figurine-m08/socle.stl",
+    "sha256": "028493fe9de55568737c5a3149811e1c8598ef89df529c70fe876f5f3664368e",
+    "octets": 83084,
+    "bojart": {
+     "triangles": 1660,
+     "ferme": true,
+     "volume_cm3": 159.44,
+     "surface_cm2": 457.159,
+     "boite_mm": [
+      146.262,
+      146.262,
+      18.0
+     ],
+     "aretes_ouvertes": 0,
+     "aretes_non_manifold": 0
+    },
+    "duree_s": 0.01,
+    "trimesh": {
+     "triangles": 1660,
+     "ferme": true,
+     "volume_cm3": 159.44,
+     "surface_cm2": 457.159,
+     "boite_mm": [
+      146.262,
+      146.262,
+      18.0
+     ]
+    }
+   }
+  ]
+ },
+ "geometrie_note": "Fichiers de la chaîne figurine M08 (dossier projet, non versionnés). Empreintes identiques au manifeste M08 (figurine 7292980a…, socle 028493fe…).",
+ "parcours_navigateur": {
+  "serveur": "console consolidée réelle sur 127.0.0.1, espace temporaire",
+  "etapes": [
+   [
+    "demo",
+    "Démonstration chargée : Données de démonstration. Les trois machines sont simulées ; aucune ne décrit le parc réel de BOJ.ART. Le devis utilise la grille d'exemple et ne peut pas être émis."
+   ],
+   [
+    "devis_lignes",
+    15
+   ],
+   [
+    "bloquants",
+    5
+   ],
+   [
+    "gcode",
+    "G-code lu : 0,29 h, 1.76 g (estimation du trancheur)."
+   ],
+   [
+    "televerser",
+    "SIM-FDM-1 · téléverser Figurine : confirme"
+   ],
+   [
+    "chauffer",
+    "SIM-FDM-1 · chauffer : confirme (reçu logiciel simulé)"
+   ],
+   [
+    "demarrer_sans_plateau",
+    "Confirmer sur place que le plateau est libre et propre avant le départ."
+   ],
+   [
+    "demarrer",
+    "SIM-FDM-1 · démarrer : confirme"
+   ],
+   [
+    "pause_tardive",
+    "SIM-FDM-1 · pause : inconnu — Délai dépassé avant l’accusé de la machine simulée. (reçu logiciel simulé)"
+   ],
+   [
+    "reprendre_bloque",
+    "Résultat d’un ordre précédent inconnu : lire l’état de la machine avant tout nouvel ordre."
+   ],
+   [
+    "rapprochement",
+    "SIM-FDM-1 · lire_etat : confirme (reçu logiciel simulé)"
+   ],
+   [
+    "tour_gauche",
+    200,
+    200,
+    "rendered · Vue traitée par le navigateur. (accusé logiciel, non matériel)"
+   ]
+  ],
+  "erreurs_console": [
+   "Failed to load resource: the server responded with a status of 409 (Conflict)",
+   "Failed to load resource: the server responded with a status of 409 (Conflict)"
+  ],
+  "lecture_erreurs": "Les deux 409 sont les deux refus volontaires du parcours : démarrage sans confirmation du plateau, reprise bloquée après résultat inconnu."
+ },
+ "banc_pr17": {
+  "commande": "git worktree add <dossier> origin/claude/project-thread-0y7gbd ; git merge claude/project-thread-3d3qlr ; manifeste régénéré ; python3 tools/banc_preinstallation.py",
+  "banc_seul": {
+   "commit": "1dda9c7",
+   "synthese": {
+    "actions": 36,
+    "actions_par_statut": {
+     "echec": 2,
+     "simule_ok": 11,
+     "partiel": 17,
+     "non_code": 6
+    },
+    "constats_par_severite": {
+     "bloquant": 5,
+     "majeur": 14,
+     "mineur": 38
+    },
+    "tests_executes": 943,
+    "scenarios_http": {
+     "ok": 14,
+     "ok_reserve": 1,
+     "echec": 0,
+     "non_execute": 1
+    }
+   }
+  },
+  "banc_fusionne": {
+   "synthese": {
+    "actions": 36,
+    "actions_par_statut": {
+     "echec": 2,
+     "simule_ok": 11,
+     "partiel": 17,
+     "non_code": 6
+    },
+    "constats_par_severite": {
+     "bloquant": 5,
+     "majeur": 14,
+     "mineur": 38
+    },
+    "tests_executes": 978,
+    "scenarios_http": {
+     "ok": 14,
+     "ok_reserve": 1,
+     "echec": 0,
+     "non_execute": 1
+    }
+   }
+  },
+  "suites_seul": {
+   "tests": {
+    "statut": "ok",
+    "tests": 102,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "tests_agent": {
+    "statut": "ok",
+    "tests": 236,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "tests_ops": {
+    "statut": "ok",
+    "tests": 122,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "tests_workflows": {
+    "statut": "ok",
+    "tests": 20,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "jarvis_tests": {
+    "statut": "partiel",
+    "tests": 280,
+    "echecs": 1,
+    "erreurs": 2
+   },
+   "jarvis_app_tests": {
+    "statut": "echec",
+    "tests": 49,
+    "echecs": 1,
+    "erreurs": 10
+   },
+   "jarvis_app_tests_m03": {
+    "statut": "partiel",
+    "tests": 52,
+    "echecs": 0,
+    "erreurs": 3
+   },
+   "metier": {
+    "statut": "ok",
+    "tests": 41,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "node_jarvis": {
+    "statut": "ok",
+    "tests": 41,
+    "echecs": 0,
+    "erreurs": null
+   }
+  },
+  "suites_fusionne": {
+   "tests": {
+    "statut": "ok",
+    "tests": 102,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "tests_agent": {
+    "statut": "ok",
+    "tests": 236,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "tests_ops": {
+    "statut": "ok",
+    "tests": 122,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "tests_workflows": {
+    "statut": "ok",
+    "tests": 20,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "jarvis_tests": {
+    "statut": "partiel",
+    "tests": 315,
+    "echecs": 1,
+    "erreurs": 2
+   },
+   "jarvis_app_tests": {
+    "statut": "echec",
+    "tests": 49,
+    "echecs": 1,
+    "erreurs": 10
+   },
+   "jarvis_app_tests_m03": {
+    "statut": "partiel",
+    "tests": 52,
+    "echecs": 0,
+    "erreurs": 3
+   },
+   "metier": {
+    "statut": "ok",
+    "tests": 41,
+    "echecs": 0,
+    "erreurs": 0
+   },
+   "node_jarvis": {
+    "statut": "ok",
+    "tests": 41,
+    "echecs": 0,
+    "erreurs": null
+   }
+  },
+  "differences": "jarvis_tests passe de 280 à 315 tests (+35, tous réussis) ; mêmes échecs, mêmes constats, mêmes statuts des 36 actions, mêmes scénarios HTTP (dont http_dashboard_atelier ok).",
+  "bloquants_preexistants": "5 constats bloquants identiques dans les deux runs : cadquery absent du conteneur (jarvis_app_tests).",
+  "conflit_fusion": "data/catalog/repository_manifest.json seulement (fichier généré, régénéré)."
+ },
+ "limites": [
+  "Aucune grille tarifaire, aucun régime de TVA ni émetteur réels : aucun devis émettable.",
+  "Aucun connecteur d’imprimante codé ; les machines déclarées réelles ne reçoivent aucun ordre.",
+  "Mentions légales du devis non relues sur source officielle (403 le 2 novembre 2026).",
+  "Captures d’écran conservées hors du dépôt (pas de nouveau binaire sans accord)."
+ ]
+}
