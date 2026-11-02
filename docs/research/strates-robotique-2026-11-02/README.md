@@ -51,6 +51,21 @@ Les calculs du document ont été recalculés : `verification-calculs.json`. Les
 
 Ce dossier reste une recherche (`bojart.jarvis`, collection `research`). Il ne crée ni route, ni connecteur, ni commande machine. Il rejoint les invariants existants : route → garde → dispatch → reçu, résultat inconnu rapproché avant relance, et aucun pouvoir physique conféré par un document ou une conversation.
 
+## Fiche d'acceptation G0, version 0 (2 novembre 2026)
+
+Statut : **acceptée par l'utilisateur, validation du rendu en attente**. Les questions ont été posées une par une dans le fil de projet. L'utilisateur a choisi le motif, puis a délégué les autres choix (« Ok, je te laisse choisir à ma place le choix le plus stratégique »). Les valeurs retenues sont celles de l'audit ou, à défaut, les plus simples à mesurer. Version structurée : `fiche-g0-v0.json`.
+
+| Point | Valeur retenue | Choisi par |
+|---|---|---|
+| Motif | Un seul trait de 10 à 15 cm, largeur nominale 7 mm, sur coupon | Utilisateur (valeur de l'audit) |
+| Pinceau | Plat, fibres synthétiques, environ 7 mm ; toujours le même exemplaire | Assistant, à confirmer avec la personne qui peint STRATES |
+| Support | Petites plaques plates imprimées en 3D sur le parc, apprêt blanc ; provisoire jusqu'à connaître la matière du relief | Assistant, par délégation |
+| Peinture | Acrylique noire, même marque, même lot si possible, même dilution | Assistant, par délégation |
+| Réussi | Largeur entre 6 et 8 mm sur au moins 90 % de la longueur ; débordement mesuré + incertitude ≤ 1 mm. Sinon raté | Assistant, valeurs de l'audit |
+| Qui valide | L'utilisateur, et la personne qui peint STRATES pour le rendu | Assistant, par délégation |
+
+Restent ouverts : la validation du rendu et du pinceau par la personne qui peint STRATES, les références exactes du pinceau et de la peinture, et un instrument de mesure indépendant du robot. Avant toute collecte, le protocole G1 doit aussi fixer la charge de peinture, l'essuyage, les délais, la dilution, la température et l'humidité. Cette fiche ne vaut ni mesure, ni choix de bras, ni achat.
+
 ## Prochaine preuve
 
-G0 : fiche d'acceptation STRATES signée (motif, pinceau, support, rendus acceptable/inacceptable). Ensuite des coupons mesurés avec incertitude déclarée. Si l'utilisateur l'autorise, verser le PDF, les deux vidéos et le texte de la conversation dans un stockage privé avec leurs empreintes.
+G1 : imprimer les coupons, fixer le protocole de collecte, peindre des traits de référence à la main, puis mesurer largeur et débordement avec leur incertitude. Si l'utilisateur l'autorise, verser le PDF, les deux vidéos et le texte de la conversation dans un stockage privé avec leurs empreintes.

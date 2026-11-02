@@ -15,7 +15,7 @@ La session « bras robotique » porte sur la peinture au pinceau d’un relief m
 
 Deux vidéos générées illustrent la direction artistique ; elles ne prouvent ni le dépôt ni la précision. La conversation source n’a pas été lue. Le PDF, ses montants et les médias restent hors du dépôt public. Voir `docs/research/strates-robotique-2026-11-02/README.md`.
 
-La prochaine preuve est inscrite au registre de pilotage : tâche `strates-g0` dans `ops/orchestration.json`, bloquée tant que la fiche d’acceptation STRATES n’est pas signée. Elle ne déclenche ni mesure, ni achat, ni commande machine.
+La fiche d’acceptation G0, version 0, est acceptée par l’utilisateur le 2 novembre : un trait de 10 à 15 cm et d’environ 7 mm, pinceau plat synthétique, coupons imprimés à l’apprêt blanc, acrylique noire. Le trait est réussi entre 6 et 8 mm de large sur 90 % de sa longueur, avec un débordement d’au plus 1 mm incertitude comprise. L’utilisateur a choisi le motif et délégué le reste ; la validation du rendu par la personne qui peint STRATES reste attendue. Voir `docs/research/strates-robotique-2026-11-02/fiche-g0-v0.json`. La tâche `strates-g0` d’`ops/orchestration.json` passe en cours ; elle ne déclenche ni mesure, ni achat, ni commande machine. Prochaine preuve : coupons G1 mesurés avec incertitude.
 
 ## Projet
 

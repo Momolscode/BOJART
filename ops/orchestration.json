@@ -444,14 +444,16 @@
       "title": "Signer la fiche d'acceptation STRATES (G0) avant toute mesure ou achat",
       "domain": "research",
       "priority": 1,
-      "status": "blocked",
+      "status": "in_progress",
       "depends_on": [],
       "blockers": [
-        "Motif, pinceau, support, peinture et rendus acceptable/inacceptable non fixés ni signés par l'utilisateur ; aucune mesure physique acquise."
+        "Fiche version 0 acceptée par l'utilisateur le 2 novembre 2026, choix délégués à l'assistant ; validation du rendu et du pinceau par la personne qui peint STRATES en attente.",
+        "Aucun coupon imprimé ni mesuré ; aucune mesure physique acquise."
       ],
       "evidence": [
         "docs/research/strates-robotique-2026-11-02/README.md",
-        "docs/research/strates-robotique-2026-11-02/verification-calculs.json"
+        "docs/research/strates-robotique-2026-11-02/verification-calculs.json",
+        "docs/research/strates-robotique-2026-11-02/fiche-g0-v0.json"
       ],
       "acceptance": "Fiche STRATES versionnée et signée, distincte des critères figurines ; puis coupons mesurés avec incertitude déclarée avant tout choix de capteur, de bras ou de cellule."
     }

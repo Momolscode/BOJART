@@ -242,3 +242,13 @@ Limites. Le corps de la conversation n'est pas lu. Les documents internes I1–I
 Prochaine preuve : fiche d'acceptation STRATES (G0) signée, puis coupons mesurés avec incertitude. Le choix d'un stockage privé pour le PDF, les vidéos, le texte de la conversation et les rapports V5 revient à l'utilisateur.
 
 Correctif CI Windows : `OwnerLock` comparait le chemin résolu du dossier `.ask-locks` à son chemin absolu non résolu. Sous Windows, un nom court 8.3 du dossier temporaire suffisait à signaler une redirection : trois tests `test_ask_requests` échouaient. Un parent lié produit le même faux positif sous Linux ou macOS. L'état est désormais résolu avant comparaison ; seul un `.ask-locks` lien ou jonction reste refusé. Deux tests sont ajoutés : un parent lié est accepté, un dossier de verrous redirigé est refusé sans réservation. Le premier échoue sans la correction.
+
+## Fiche d'acceptation STRATES G0, version 0 — 2 novembre 2026
+
+Objectif : fixer, avant toute mesure ou achat, ce que le premier essai au pinceau doit réussir. Les questions ont été posées une par une dans le fil de projet. L'utilisateur a répondu « A » pour le motif, « Je sais pas ce qu’est le mieux » pour le pinceau, puis « Ok, je te laisse choisir à ma place le choix le plus stratégique » pour le reste.
+
+Décisions, version 0 : un trait de 10 à 15 cm, largeur nominale 7 mm, sur coupon ; pinceau plat synthétique d'environ 7 mm ; coupons imprimés en 3D sur le parc avec apprêt blanc, en attendant la matière réelle du relief ; acrylique noire, même marque et même dilution. Le trait est réussi si sa largeur reste entre 6 et 8 mm sur au moins 90 % de la longueur et si le débordement mesuré, incertitude comprise, ne dépasse pas 1 mm. Valident : l'utilisateur et la personne qui peint STRATES, pour le rendu. Les choix délégués sont marqués comme tels dans la fiche ; aucun nom n'est écrit dans le dépôt.
+
+Fichiers : `docs/research/strates-robotique-2026-11-02/fiche-g0-v0.json` et sa section dans le README du dossier, une affirmation `user_decision` au registre, une source, `context/CURRENT.md` et la tâche `strates-g0`, désormais en cours.
+
+Limites : aucun coupon imprimé ni mesuré ; références exactes du pinceau et de la peinture non choisies ; validation du rendu attendue. Prochaine preuve, G1 : protocole de collecte (charge, essuyage, délais, dilution, température, humidité), traits de référence à la main, puis largeur et débordement mesurés avec un instrument indépendant du robot.
