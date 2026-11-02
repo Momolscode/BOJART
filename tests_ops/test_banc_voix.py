@@ -17,6 +17,7 @@ import tempfile
 import threading
 import time
 import unittest
+from unittest import mock
 import wave
 from pathlib import Path
 
@@ -229,6 +230,35 @@ class ClientContracts(unittest.TestCase):
         thread.join(10)
         self.assertIn(status, (413, None))
         self.assertIn('error', body)
+
+
+class BenchLifecycle(unittest.TestCase):
+    def test_stop_waits_for_the_requests_still_running(self):
+        """Une requête encore en cours après stop() garde la base SQLite ouverte : WinError 32 sous Windows."""
+        banc_voix._app_modules()
+        import control_tower
+        original = control_tower.ControlTower.poll
+        started, finished = threading.Event(), threading.Event()
+
+        def slow_poll(tower, screen_id):
+            started.set()
+            time.sleep(0.8)
+            try:
+                return original(tower, screen_id)
+            finally:
+                finished.set()
+
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(control_tower.ControlTower, 'poll', slow_poll):
+            model = Path(tmp) / 'modele'
+            model.mkdir()
+            for name in banc_voix.MODEL_FILES:
+                (model / name).write_text('double de test', encoding='utf-8')
+            bench = banc_voix.Bench(Path(tmp) / 'etat', model, langgraph=False, loader=lambda: FakeWhisper({}))
+            bench.start()
+            self.assertTrue(started.wait(10), 'aucune vue n’a demandé de commande')
+            bench.stop()
+            self.assertTrue(finished.is_set(), 'stop() est revenu pendant une requête')
+            self.assertEqual([t for t in bench.requests if t.is_alive()], [])
 
 
 @unittest.skipUnless(shutil.which('node'), 'Node absent : code navigateur non exécutable')

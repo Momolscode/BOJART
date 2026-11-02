@@ -382,6 +382,19 @@ class Bench:
                 if hook:
                     hook()
         self.app.voice.transcribe = transcribe
+        # Comme ThreadingMixIn, mais chaque requête est suivie pour que stop() attende sa fin :
+        # sous Windows, une requête encore en cours garde la base SQLite ouverte et le dossier
+        # temporaire ne peut plus être supprimé (WinError 32).
+        requests, server = [], self.app
+        self.requests = requests
+
+        def process_request(request, client_address):
+            thread = threading.Thread(target=server.process_request_thread, args=(request, client_address),
+                                      name='banc-voix-requete', daemon=True)
+            requests[:] = [t for t in requests if t.is_alive()]
+            requests.append(thread)
+            thread.start()
+        self.app.process_request = process_request
         self.thread = threading.Thread(target=self.app.serve_forever, kwargs={'poll_interval': 0.05}, daemon=True)
         self.thread.start()
         self.client = Client(self.app)
@@ -401,9 +414,15 @@ class Bench:
         for screen in self.screens.values():
             screen.close()
         self.console_events.close()
+        for screen in self.screens.values():  # plus aucun poll ni accusé en vol
+            if screen.is_alive():
+                screen.join(10)
         self.app.shutdown()
-        self.app.server_close()
+        self.app.server_close()  # ferme aussi le flux d'événements
         self.thread.join(5)
+        for thread in [s.events for s in self.screens.values()] + [self.console_events] + self.requests:
+            if thread.is_alive():
+                thread.join(10)
         self.app = None
 
     def restart(self):
@@ -777,7 +796,8 @@ def scenarios(bench, reference_audio):
 
 def _git(*args):
     try:
-        return subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, timeout=30).stdout.strip()
+        return subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, encoding='utf-8',
+                              errors='replace', timeout=30).stdout.strip()
     except (OSError, subprocess.SubprocessError):
         return None
 
@@ -831,7 +851,7 @@ def environment():
     gpu = None
     try:
         out = subprocess.run(['nvidia-smi', '--query-gpu=name,driver_version,memory.total', '--format=csv,noheader'],
-                             capture_output=True, text=True, timeout=10)
+                             capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=10)
         gpu = out.stdout.strip() or None
     except (OSError, subprocess.SubprocessError):
         gpu = None
@@ -924,7 +944,10 @@ def run(corpus_dir, model_dir, output, langgraph=True, variante='runtime', limit
     dirty = bool(_git('status', '--porcelain', '--untracked-files=no'))
     instruments = Instruments()
     _, _, _, _, voice_module = _app_modules()
-    with tempfile.TemporaryDirectory(prefix='bojart-banc-voix-') as tmp, ExitStack() as stack:
+    # Un fichier encore verrouillé (antivirus Windows) ne doit pas faire perdre une mesure de vingt minutes :
+    # le dossier temporaire reste alors sur le disque, le rapport est écrit.
+    with tempfile.TemporaryDirectory(prefix='bojart-banc-voix-', ignore_cleanup_errors=True) as tmp, \
+            ExitStack() as stack:
         tmp = Path(tmp)
         stack.enter_context(patch.object(voice_module, 'validate_audio', instruments.validate(voice_module.validate_audio)))
         if loader is None:
@@ -1143,7 +1166,7 @@ def noise_probe(model_dir, output, seeds=8, levels=BRUIT_NIVEAUX_DB, conditions=
     started_at = datetime.now(timezone.utc)
     core, _, display_contracts, jarvis_runtime, voice = _app_modules()
     clips = _noise_clips(seeds, levels, conditions)
-    with tempfile.TemporaryDirectory(prefix='bojart-sonde-bruit-') as tmp:
+    with tempfile.TemporaryDirectory(prefix='bojart-sonde-bruit-', ignore_cleanup_errors=True) as tmp:
         tmp = Path(tmp)
         harness_plan = []
         for clip in clips:
