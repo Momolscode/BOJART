@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "checksCount": 6,
+  "checks": [
+    "Premier démarrage : origine ou opération illisible affiche la récupération, sans démonstration ni appel au service de journal",
+    "Copie de récupération téléchargée : octets exacts, nom explicite et aucune réécriture",
+    "Réexamens répétés sans réparation : état stable, aucun cycle de rendu ou reprise des services",
+    "Origine réparée à l’identique puis réexaminée : dossier retrouvé et contrôle de disponibilité relancé",
+    "Corruption avec formulaire ouvert : brouillon préservé, bannière unique, soumission bloquée et reprise après réparation",
+    "Navigation et commandes restent bloquées ; fermeture de panneau reste possible sans ajouter d’opération"
+  ],
+  "scope": "Actual app.js and WorkshopStore in isolated JSDOM surfaces. Only viewer/media/service adapters are stubs. No browser engine, network, SQLite changes or physical commands."
+}

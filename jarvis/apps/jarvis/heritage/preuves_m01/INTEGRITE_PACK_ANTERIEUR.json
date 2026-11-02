@@ -1,0 +1,106 @@
+{
+  "passed": 25,
+  "total": 25,
+  "checks": [
+    {
+      "file": "01_Demonstration/APERCU_DEMONSTRATION.png",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/DEMONSTRATION_BOJART.html",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/PREUVE_GEOMETRIE.json",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/RENDU_DU_STL.png",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/generer_socle.py",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/socle_180mm.step",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/socle_180mm.stl",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/socle_180mm.svg",
+      "ok": true
+    },
+    {
+      "file": "01_Demonstration/socle_180mm_metres.glb",
+      "ok": true
+    },
+    {
+      "file": "02_Audit_PC/Audit_Windows.ps1",
+      "ok": true
+    },
+    {
+      "file": "02_Audit_PC/Demarrer_Audit_Linux.sh",
+      "ok": true
+    },
+    {
+      "file": "02_Audit_PC/Demarrer_Audit_Windows.cmd",
+      "ok": true
+    },
+    {
+      "file": "02_Audit_PC/audit_pc_v2.py",
+      "ok": true
+    },
+    {
+      "file": "03_Preuve_Et_Tests/CONTROLE_PDF.json",
+      "ok": true
+    },
+    {
+      "file": "03_Preuve_Et_Tests/RESULTATS_TESTS.json",
+      "ok": true
+    },
+    {
+      "file": "03_Preuve_Et_Tests/RESULTATS_VISUALISEUR.json",
+      "ok": true
+    },
+    {
+      "file": "03_Preuve_Et_Tests/TESTS_EXECUTES.txt",
+      "ok": true
+    },
+    {
+      "file": "03_Preuve_Et_Tests/decision_gate_demo.py",
+      "ok": true
+    },
+    {
+      "file": "03_Preuve_Et_Tests/test_proof.py",
+      "ok": true
+    },
+    {
+      "file": "04_Documents/CONTRAT_LANCEMENT.json",
+      "ok": true
+    },
+    {
+      "file": "04_Documents/Dossier_Associes.pdf",
+      "ok": true
+    },
+    {
+      "file": "04_Documents/MISSION_REPRISE_CLAUDE.md",
+      "ok": true
+    },
+    {
+      "file": "04_Documents/REGISTRE_PREUVES.md",
+      "ok": true
+    },
+    {
+      "file": "04_Documents/SOURCES.md",
+      "ok": true
+    },
+    {
+      "file": "README_COMMENCER_ICI.md",
+      "ok": true
+    }
+  ]
+}

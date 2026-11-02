@@ -1,0 +1,353 @@
+[
+  {
+    "path": "context/CURRENT.md",
+    "project": "bojart.jarvis",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "context/SESSION_HANDOFF.md",
+    "project": "bojart.jarvis",
+    "provenance": "Dated session journal; historical statements remain searchable but do not supersede current reference documents or the sourced claim ledger.",
+    "collection": "session_log"
+  },
+  {
+    "path": "docs/INSTALLATION.md",
+    "project": "bojart.jarvis",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "docs/DATA_GOVERNANCE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "docs/GITHUB_WORKFLOW.md",
+    "project": "bojart.jarvis",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "docs/RESEARCH_2026-11-01.md",
+    "project": "bojart.jarvis",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "creative/CURRENT.md",
+    "project": "bojart.creative",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+    "project": "bojart.creative",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "sites/README.md",
+    "project": "bojart.sites",
+    "provenance": "Curated BOJART repository, 2026-11-01; see data/knowledge/sources.json"
+  },
+  {
+    "path": "productions/le-dernier-geste/README.md",
+    "project": "bojart.creative",
+    "provenance": "GitHub source 1ca60c3571c78f9303b8b4d54e82e34ae3e439f7; R03 production recipe"
+  },
+  {
+    "path": "docs/OPERATIONS.md",
+    "project": "bojart.creative",
+    "provenance": "Reconciled GitHub source cd71c6ba640f304248702d8a3e64c60f900f9d0b; reported observations, not new provider verification"
+  },
+  {
+    "path": "ops/higgsfield-observations.json",
+    "project": "bojart.creative",
+    "provenance": "Reconciled GitHub source cd71c6ba640f304248702d8a3e64c60f900f9d0b; reported observations, not new provider verification"
+  },
+  {
+    "path": "productions/le-dernier-geste/STATUT_G2.json",
+    "project": "bojart.creative",
+    "provenance": "Reconciled GitHub source cd71c6ba640f304248702d8a3e64c60f900f9d0b; reported observations, not new provider verification"
+  },
+  {
+    "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
+    "project": "bojart.jarvis",
+    "provenance": "BOJART PR #1 webhook relay installed and opening event observed, 2026-11-01; acceptance and per-SHA receipts on audit/context-results"
+  },
+  {
+    "path": "data/knowledge/claims.jsonl",
+    "project": "bojart.jarvis",
+    "provenance": "Curated claim ledger with source IDs and supersession, 2026-11-01"
+  },
+  {
+    "path": "data/knowledge/claims.jsonl",
+    "project": "bojart.creative",
+    "provenance": "Curated claim ledger with source IDs and supersession, 2026-11-01"
+  },
+  {
+    "path": "data/knowledge/claims.jsonl",
+    "project": "bojart.sites",
+    "provenance": "Curated claim ledger with source IDs and supersession, 2026-11-01"
+  },
+  {
+    "path": "INSTALLER_DEMAIN.md",
+    "project": "bojart.jarvis",
+    "provenance": "Agent memory preparation, 2026-11-01; proposals distinguished from validated integrations"
+  },
+  {
+    "path": "docs/memory/OUTILS_ET_ARCHITECTURE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Agent memory preparation, 2026-11-01; proposals distinguished from validated integrations"
+  },
+  {
+    "path": "docs/memory/MCP.md",
+    "project": "bojart.jarvis",
+    "provenance": "Agent memory preparation, 2026-11-01; proposals distinguished from validated integrations"
+  },
+  {
+    "path": "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+    "project": "bojart.jarvis",
+    "provenance": "Original recovery inventory checked on 2026-11-01; current GitHub byte restoration is documented in docs/ETAT_ARCHIVES_2026-11-01.md."
+  },
+  {
+    "path": "docs/DEMARRAGE_ET_REPRISE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Current launcher and context-export implementation; see docs/evidence/startup-2026-11-01.json for executed software checks"
+  },
+  {
+    "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
+    "project": "bojart.jarvis",
+    "provenance": "3340 unique objects restored from three pinned GitHub commits and compared byte-for-byte to source ZIPs; see docs/evidence/recovery-resumption-2026-11-01.json."
+  },
+  {
+    "path": "docs/ORCHESTRATION.md",
+    "project": "bojart.jarvis",
+    "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
+  },
+  {
+    "path": "docs/ORCHESTRATION.md",
+    "project": "bojart.creative",
+    "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
+  },
+  {
+    "path": "docs/ORCHESTRATION.md",
+    "project": "bojart.sites",
+    "provenance": "Versioned orchestration rules and declared tasks; path classification is not semantic review or target-hardware approval."
+  },
+  {
+    "path": "docs/memory/RESILIENCE.md",
+    "project": "bojart.jarvis",
+    "provenance": "Atomic import and consistent context snapshot implementation; forced launcher restart checked on Windows and Linux at d57330052b32cb5f638e841bdc086804cd65ede1 (GitHub Actions run 41357380816); no hardware power-loss qualification."
+  },
+  {
+    "path": "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+    "project": "bojart.creative",
+    "provenance": "Recovery from identified sources, SHA-256 deduplication and remote Git restoration; see recovery-deep-20261101"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.jarvis",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.creative",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/research/launch-toolchain-2026-11-01/README.md",
+    "project": "bojart.sites",
+    "provenance": "Primary-source toolchain research, 2026-11-01; 18 pinned repositories, selected documentation; proposed integrations, no target installation or audience measurements. See SOURCE_SNAPSHOT.json and VALIDATION.json beside this document.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/memory/CONVERSATIONS.md",
+    "project": "bojart.jarvis",
+    "provenance": "Conversation context implementation with source freshness checks and bounded complete JSON; model output quality remains unqualified. See tests_agent/test_conversation_context.py and per-commit GitHub Actions results."
+  },
+  {
+    "path": "docs/memory/MODELES_LOCAUX.md",
+    "project": "bojart.jarvis",
+    "provenance": "Local model configuration, metadata-only diagnostics and lexical fallback implementation; official Ollama API checked 2026-11-01. No inference or target-hardware qualification."
+  },
+  {
+    "path": "docs/creative/RECUPERATION_PRODUCTION.md",
+    "project": "bojart.creative",
+    "provenance": "Current production reconstruction procedure; exact asset hashes, isolated workspace and explicit separation from artistic approval. See production-recovery-2026-11-02 evidence."
+  },
+  {
+    "path": "docs/memory/INSTALLATION_MODELES.md",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Local model selection and setup, 2026-11-02; primary sources linked in the guide. Profiles are candidates; target hardware, real inference and creative output remain unqualified."
+  },
+  {
+    "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Local model selection and setup, 2026-11-02; primary sources linked in the guide. Profiles are candidates; target hardware, real inference and creative output remain unqualified."
+  },
+  {
+    "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
+    "project": "bojart.creative",
+    "collection": "research",
+    "provenance": "Local model selection and setup, 2026-11-02; primary sources linked in the guide. Profiles are candidates; target hardware, real inference and creative output remain unqualified."
+  },
+  {
+    "path": "docs/memory/POSTE_RTX4060TI.md",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Hardware reported by user and supplied photograph, 2026-11-02; sanitized facts with source IDs; proposed compact profile, no target inference or performance qualification."
+  },
+  {
+    "path": "docs/memory/SIMULATIONS.md",
+    "project": "bojart.jarvis",
+    "provenance": "Reproducible host measurements and explicit limits, 2026-11-02; raw reports and runtime/corpus fingerprints in docs/evidence/simulations-2026-11-02. No GPU or generative quality measured on the target."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/01-recherche-citee.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/02-voix-francaise.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/03-pile-locale-windows.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/04-modele-memoire.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/05-cao-vers-tranchage.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/06-materiaux-choix.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/07-resine-documentation.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/08-maintenance-par-modele.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/09-telemetrie-inconnue.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/10-reprise-effets.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/11-blender-connecteur.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/12-mcp-interop.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/DECISIONS_UTILISATEUR.txt",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/PREPARATION_WINDOWS.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/ARCHITECTURE_ET_REPRISE.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/memory/HARDENING_2026-11-02.txt",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Contrat du correctif local V4 du 2 novembre 2026; preuves exécutées jointes au paquet, sans qualification matérielle ni publication GitHub implicite."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/recherche-v5.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Recherche V5 du 2 novembre 2026 : propositions et jeux de qualification non exécutés ; données physiques manquantes explicites ; sources officielles référencées. Aucun connecteur activé."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/datasets-qualification-v5.json",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Recherche V5 du 2 novembre 2026 : propositions et jeux de qualification non exécutés ; données physiques manquantes explicites ; sources officielles référencées. Aucun connecteur activé."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/SCENARIO_VEGETA_1000MM.json",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Recherche V5 du 2 novembre 2026 : propositions et jeux de qualification non exécutés ; données physiques manquantes explicites ; sources officielles référencées. Aucun connecteur activé."
+  },
+  {
+    "path": "docs/COMMANDES_DASHBOARD.md",
+    "project": "bojart.jarvis",
+    "provenance": "Current bounded display command catalogue, 2026-11-02; implementation jarvis/apps/jarvis/app/jarvis_runtime.py. Separate dated simulations do not qualify audio, physical displays, slicing or printers."
+  },
+  {
+    "path": "docs/evidence/workflows-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "session_log",
+    "provenance": "Dated experimental evidence, 2026-11-02. Actual Python/SQLite measurements with synthetic transcripts/receipts and fictitious fleet; historical test record, not current target-hardware qualification."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/donnees-terrain.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Synthèse V5 de10 documents historiques vérifiés ; propositions de collecte, pas données réelles du poste. Huit originaux sont conservés dans le pack privé, hors Git public."
+  },
+  {
+    "path": "docs/research/strates-robotique-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Session bras robotique STRATES, 2 novembre 2026 : synthèse publique d’un audit documentaire lu intégralement (original hors Git), propositions et calculs recalculés ; aucune performance physique, aucun achat ni connecteur."
+  },
+  {
+    "path": "docs/evidence/handoff-v5-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "session_log",
+    "provenance": "Réception datée du paquet V5 le 2 novembre 2026 : octets vérifiés, rejeu exact et tests exécutés sur conteneur Linux ; ne qualifie pas la tour."
+  }
+]

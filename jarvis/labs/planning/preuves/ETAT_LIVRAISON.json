@@ -1,0 +1,22 @@
+{
+  "schema": "bojart.delivery/1",
+  "date": "2026-10-30",
+  "delivered": [
+    "primary-source research",
+    "synthetic planner",
+    "standalone HTML",
+    "test reports"
+  ],
+  "planner_tests_passed": 22,
+  "interface_checks_passed": 14,
+  "ortools_installed": false,
+  "ortools_install_failure": "DNS/network resolution unavailable in local container",
+  "new_models_executed": [],
+  "target_pc_accessed": false,
+  "published_sites_modified": false,
+  "paid_generations_started": 0,
+  "real_devices_controlled": 0,
+  "python": "3.13.5",
+  "ui_test_method": "Chromium headless set_content; file:// blocked by administrator; no bypass",
+  "is_production_ready": false
+}

@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "repository": "Momolscode/BOJART",
+  "batch_size": 20,
+  "routing_policy": "first_match; classification by path only, never semantic approval",
+  "domains": [
+    {
+      "id": "continuity",
+      "label": "Contexte et décisions",
+      "project": "bojart.jarvis",
+      "priority": 0
+    },
+    {
+      "id": "memory",
+      "label": "Mémoire et reprise",
+      "project": "bojart.jarvis",
+      "priority": 0
+    },
+    {
+      "id": "recovery",
+      "label": "Archives et restauration",
+      "project": "bojart.jarvis",
+      "priority": 0
+    },
+    {
+      "id": "runtime",
+      "label": "Jarvis et atelier",
+      "project": "bojart.jarvis",
+      "priority": 1
+    },
+    {
+      "id": "creative",
+      "label": "Direction et production",
+      "project": "bojart.creative",
+      "priority": 1
+    },
+    {
+      "id": "sites",
+      "label": "Sites Atelier et Studio",
+      "project": "bojart.sites",
+      "priority": 2
+    },
+    {
+      "id": "operations",
+      "label": "Contrôles et opérations",
+      "project": "bojart.jarvis",
+      "priority": 1
+    },
+    {
+      "id": "history",
+      "label": "Références historiques",
+      "project": null,
+      "priority": 2
+    },
+    {
+      "id": "research",
+      "label": "Recherches et propositions",
+      "project": null,
+      "priority": 1
+    },
+    {
+      "id": "unclassified",
+      "label": "À classer explicitement",
+      "project": null,
+      "priority": 0
+    }
+  ],
+  "rules": [
+    {
+      "domain": "research",
+      "patterns": [
+        "docs/research/*",
+        "docs/preinstallation/knowledge/*",
+        "data/preinstallation/knowledge-cards.json",
+        "data/preinstallation/sources-curated.json",
+        "data/preinstallation/tool-registry.json"
+      ],
+      "reason": "Propositions sourcées ; installation et qualification distinctes."
+    },
+    {
+      "domain": "history",
+      "patterns": [
+        "docs/historical/*",
+        "jarvis/apps/jarvis/heritage/*",
+        "jarvis/research/*",
+        "jarvis/labs/*",
+        "jarvis/docs/m0[1-5]/*"
+      ],
+      "reason": "Version historique ou expérimentation ; ne remplace pas les décisions courantes."
+    },
+    {
+      "domain": "recovery",
+      "patterns": [
+        "archive/*",
+        "data/catalog/recovery-*/*",
+        "docs/ETAT_ARCHIVES*",
+        "docs/RECUPERATION*",
+        "docs/ARCHIVE*",
+        "docs/ETAT_SAUVEGARDE*",
+        "docs/PRIVATE_ARCHIVE*",
+        "docs/evidence/recovery-*",
+        "tools/restore_*",
+        "tools/verify_manifest.py",
+        "tests/test_archive*",
+        "tests_ops/test_archive*"
+      ],
+      "reason": "Préservation des originaux, provenance et restauration vérifiable."
+    },
+    {
+      "domain": "continuity",
+      "patterns": [
+        "AGENTS.md",
+        "README.md",
+        "SECURITY.md",
+        "context/*",
+        "data/knowledge/*",
+        "data/preinstallation/requirements.json",
+        "data/preinstallation/target-profile.json",
+        "data/catalog/*",
+        "docs/ARCHITECTURE*",
+        "docs/DATA_GOVERNANCE*",
+        "docs/GITHUB_WORKFLOW*",
+        "docs/SURVEILLANCE*",
+        "ops/context-monitor.json",
+        "ops/orchestration.json",
+        "docs/ORCHESTRATION*",
+        "jarvis/context/*",
+        "jarvis/AGENTS.md"
+      ],
+      "reason": "Contrats et sources qui orientent les prochaines sessions."
+    },
+    {
+      "domain": "memory",
+      "patterns": [
+        "bojart_memory/*",
+        "tests_agent/*",
+        "tests/test_memory*",
+        "tests/test_installation.py",
+        "data/preinstallation/retrieval-cases.json",
+        "tools/doctor.py",
+        "tools/start_jarvis.py",
+        "tools/prepare_installation.py",
+        "tools/check_startup.py",
+        "tools/memory_*",
+        "tools/evaluate_memory.py",
+        "INSTALLER_DEMAIN.md",
+        "Installer_BOJART.*",
+        "Lancer_BOJART.*",
+        "docs/INSTALLATION*",
+        "docs/DEMARRAGE*",
+        "docs/memory/*",
+        "jarvis/apps/jarvis/app/memory.*",
+        "jarvis/tests/memory_*",
+        "Installer_BOJART_4060Ti.cmd",
+        "Mesurer_BOJART.cmd",
+        "tools/benchmark_jarvis.py"
+      ],
+      "reason": "Mémoire persistante, isolation des domaines et reprise après interruption."
+    },
+    {
+      "domain": "creative",
+      "patterns": [
+        "creative/*",
+        "productions/*",
+        "runs/*",
+        "reviews/*",
+        "PRODUCTION.md",
+        "docs/creative/*",
+        "docs/validation/*",
+        "docs/CREATIVE*",
+        "docs/PRODUCTION*",
+        "docs/RECHERCHE_ARTISTES*",
+        "jarvis/knowledge/growth/*",
+        "ops/higgsfield-*",
+        "tools/prepare_production.py",
+        "bojart_ops/production_recovery.py",
+        "tests/test_production_recovery.py"
+      ],
+      "reason": "Direction, variantes, recettes et validation artistique distincte des tests."
+    },
+    {
+      "domain": "sites",
+      "patterns": [
+        "sites/*"
+      ],
+      "reason": "Sources des sites ; intégration métier et publication distinctes."
+    },
+    {
+      "domain": "runtime",
+      "patterns": [
+        "jarvis/*",
+        "tests_workflows/*",
+        "Simuler_BOJART.cmd",
+        "tools/simulate_jarvis_workflows.py",
+        "docs/SIMULATIONS_ATELIER.md"
+      ],
+      "reason": "Runtime Jarvis, CAO, voix et atelier ; matériel à qualifier."
+    },
+    {
+      "domain": "operations",
+      "patterns": [
+        ".gitattributes",
+        ".gitignore",
+        ".github/*",
+        "bojart_ops/*",
+        "tests_ops/*",
+        "data/preinstallation/target-inventory.template.json",
+        "skills/bojart-context-reconstruction/*",
+        "skills/bojart-evidence-audit/*",
+        "skills/bojart-tool-qualification/*",
+        "tools/*",
+        "configs/*",
+        "ops/*",
+        "docs/*",
+        "tests/*"
+      ],
+      "reason": "Outillage, preuves logicielles, contrôles et reçus d'opération."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "archives-preserved",
+      "title": "Conserver les trois sauvegardes et leur restaurateur",
+      "domain": "recovery",
+      "priority": 0,
+      "status": "done",
+      "depends_on": [],
+      "blockers": [],
+      "evidence": [
+        "docs/ETAT_ARCHIVES_2026-11-01.md",
+        "docs/evidence/recovery-resumption-2026-11-01.json"
+      ],
+      "acceptance": "3 340 contenus de la collecte restaurés et comparés aux ZIP ; ne certifie pas tous les anciens chats."
+    },
+    {
+      "id": "memory-software",
+      "title": "Conserver la recette logicielle de mémoire et reprise",
+      "domain": "memory",
+      "priority": 0,
+      "status": "done",
+      "depends_on": [],
+      "blockers": [],
+      "evidence": [
+        "docs/DEMARRAGE_ET_REPRISE.md",
+        "docs/evidence/startup-2026-11-01.json"
+      ],
+      "acceptance": "Démarrage, reprise et restauration sur hôte Linux documentés ; qualification du poste distincte."
+    },
+    {
+      "id": "context-review",
+      "title": "Poursuivre la revue contextuelle par lots",
+      "domain": "continuity",
+      "priority": 0,
+      "status": "in_progress",
+      "depends_on": [],
+      "blockers": [],
+      "evidence": [
+        "docs/SURVEILLANCE_CONTEXTUELLE.md",
+        "ops/context-monitor.json"
+      ],
+      "acceptance": "Reçu de la révision courante, portée lue et chemins restants ; aucun classement automatique ne vaut relecture."
+    },
+    {
+      "id": "target-inventory",
+      "title": "Inventorier le poste et les périphériques",
+      "domain": "runtime",
+      "priority": 0,
+      "status": "blocked",
+      "depends_on": [],
+      "blockers": [
+        "OS, GPU, RAM et CPU rapportés le 2 novembre 2026 ; diagnostic réel, pilote, espaces libres, moniteurs, micro et modèles d'imprimantes restent à établir."
+      ],
+      "evidence": [
+        "context/CURRENT.md",
+        "INSTALLER_DEMAIN.md",
+        "docs/memory/POSTE_RTX4060TI.md"
+      ],
+      "acceptance": "Inventaire observé sur le poste ; choix de modèles fondé sur ses ressources.",
+      "required_datasets": [
+        "target_hardware"
+      ]
+    },
+    {
+      "id": "target-install",
+      "title": "Installer et restaurer la mémoire sur la tour",
+      "domain": "memory",
+      "priority": 0,
+      "status": "planned",
+      "depends_on": [
+        "target-inventory",
+        "memory-software"
+      ],
+      "blockers": [],
+      "evidence": [
+        "INSTALLER_DEMAIN.md",
+        "docs/DEMARRAGE_ET_REPRISE.md"
+      ],
+      "acceptance": "Diagnostic réel, recherche citée, deux démarrages et restauration dans un dossier neuf.",
+      "qualification_gates": [
+        "restore_drill"
+      ]
+    },
+    {
+      "id": "voice-displays",
+      "title": "Qualifier voix française et trois vues",
+      "domain": "runtime",
+      "priority": 1,
+      "status": "planned",
+      "depends_on": [
+        "target-install"
+      ],
+      "blockers": [],
+      "evidence": [
+        "context/CURRENT.md",
+        "jarvis/context/START_HERE.md"
+      ],
+      "acceptance": "Essais réels en bruit, latence mesurée et reçus de chargement/rendu sur les moniteurs.",
+      "qualification_gates": [
+        "speech_offline",
+        "llm_qualified",
+        "jev_contract",
+        "screen_physical"
+      ]
+    },
+    {
+      "id": "printers",
+      "title": "Qualifier une FDM puis une résine avec opérateur",
+      "domain": "runtime",
+      "priority": 2,
+      "status": "planned",
+      "depends_on": [
+        "target-install"
+      ],
+      "blockers": [
+        "Connecteurs et procédure opérateur à valider sur les machines identifiées."
+      ],
+      "evidence": [
+        "context/CURRENT.md"
+      ],
+      "acceptance": "Recettes d'atelier documentées ; les documents et transcriptions ne déclenchent aucune commande libre.",
+      "qualification_gates": [
+        "cad_runtime",
+        "printer_fdm",
+        "printer_resin",
+        "production_safety"
+      ]
+    },
+    {
+      "id": "g2-source",
+      "title": "Retrouver la source fidèle du plan G2",
+      "domain": "creative",
+      "priority": 1,
+      "status": "blocked",
+      "depends_on": [],
+      "blockers": [
+        "Modèle exact, rig et plan fidèle non retrouvés."
+      ],
+      "evidence": [
+        "creative/CURRENT.md",
+        "productions/le-dernier-geste/STATUT_G2.json"
+      ],
+      "acceptance": "Source identifiée, provenance conservée et conformité au personnage vérifiée.",
+      "required_datasets": [
+        "reference_assets"
+      ]
+    },
+    {
+      "id": "master-review",
+      "title": "Revoir le montage après résolution de G2",
+      "domain": "creative",
+      "priority": 1,
+      "status": "planned",
+      "depends_on": [
+        "g2-source",
+        "production-sources"
+      ],
+      "blockers": [],
+      "evidence": [
+        "productions/le-dernier-geste/README.md",
+        "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json"
+      ],
+      "acceptance": "Validation artistique explicite et distincte du contrôle des frames ; R03 reste une coupe de travail.",
+      "qualification_gates": [
+        "studio_identity"
+      ]
+    },
+    {
+      "id": "sites-contract",
+      "title": "Définir le contrat de données sites–Jarvis",
+      "domain": "sites",
+      "priority": 2,
+      "status": "planned",
+      "depends_on": [],
+      "blockers": [],
+      "evidence": [
+        "sites/README.md",
+        "context/CURRENT.md"
+      ],
+      "acceptance": "Entités et champs communs documentés, migrations et parcours testés avant raccordement des publications.",
+      "qualification_gates": [
+        "site_quotes"
+      ]
+    },
+    {
+      "id": "social-trial",
+      "title": "Qualifier un parcours de publication et de mesure",
+      "domain": "creative",
+      "priority": 2,
+      "status": "blocked",
+      "depends_on": [],
+      "blockers": [
+        "Compte propriétaire, contenu approuvé et accès aux statistiques à confirmer avant la recette."
+      ],
+      "evidence": [
+        "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+        "jarvis/knowledge/growth/PUBLISHING_CONTRACT.md"
+      ],
+      "qualification_gates": [
+        "social_publish"
+      ],
+      "acceptance": "Publication autorisée avec reçu et données datées ; un brouillon ne valide pas le parcours."
+    },
+    {
+      "id": "production-sources",
+      "title": "Reconstruire les cinq sources R03 et leur recette courante",
+      "domain": "creative",
+      "priority": 1,
+      "status": "done",
+      "depends_on": [
+        "archives-preserved"
+      ],
+      "blockers": [],
+      "evidence": [
+        "docs/creative/RECUPERATION_PRODUCTION.md",
+        "docs/evidence/production-recovery-2026-11-02.json"
+      ],
+      "required_datasets": [
+        "reference_assets"
+      ],
+      "acceptance": "Cinq médias contrôlés par taille et SHA-256 dans une copie de travail externe ; aucune validation du G2 final, du master ou du poste cible."
+    },
+    {
+      "id": "strates-g0",
+      "title": "Signer la fiche d'acceptation STRATES (G0) avant toute mesure ou achat",
+      "domain": "research",
+      "priority": 1,
+      "status": "blocked",
+      "depends_on": [],
+      "blockers": [
+        "Motif, pinceau, support, peinture et rendus acceptable/inacceptable non fixés ni signés par l'utilisateur ; aucune mesure physique acquise."
+      ],
+      "evidence": [
+        "docs/research/strates-robotique-2026-11-02/README.md",
+        "docs/research/strates-robotique-2026-11-02/verification-calculs.json"
+      ],
+      "acceptance": "Fiche STRATES versionnée et signée, distincte des critères figurines ; puis coupons mesurés avec incertitude déclarée avant tout choix de capteur, de bras ou de cellule."
+    }
+  ],
+  "context_audit": {
+    "branch": "audit/context-results",
+    "checkpoint_path": "ops/context-monitor/checkpoint.json",
+    "relay_pull_request": 1,
+    "url": "https://github.com/Momolscode/BOJART/tree/audit/context-results/ops/context-monitor",
+    "observation_note": "Le checkpoint est une observation datée ; comparer sa tête au SHA effectivement audité."
+  },
+  "qualification_sources": {
+    "tools": "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+    "data": "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+    "acceptance": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+    "runtime_gates": "jarvis/apps/jarvis/app/launch_readiness.py"
+  },
+  "production_recovery": {
+    "project": "productions/le-dernier-geste"
+  }
+}

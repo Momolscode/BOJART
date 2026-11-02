@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "node": "v24.19.0",
+  "checks": [
+    "Opération JSON corrompue au redémarrage : aucun dossier fictif, aucune réécriture, actions et fusion bloquées",
+    "Origine invalide ou supprimée avec historique : refus sans nouvelle graine",
+    "Origine illisible sans opérations : elle demeure intacte au premier chargement",
+    "Une enveloppe valide en JSON mais hors contrat ou sous une mauvaise clé est bloquée",
+    "Corruption en session : dernier dossier lisible conservé et copie brute exacte sans autres données locales",
+    "Réexamen explicite après restauration des octets : état retrouvé, nouvelle opération possible",
+    "Disparition ou substitution valide d’une opération déjà lue : aucun retour en arrière silencieux",
+    "Panne de lecture du navigateur : état préservé puis réexamen réussi",
+    "Quota d’écriture : opération volatile conservée et exportable, sans confusion avec une corruption",
+    "Nouveau stockage intégralement non inscriptible : démonstration explicitement volatile encore utilisable",
+    "Reçus absents ou invalides et genèse manquante : état confirmé préservé, aucune autorité substituée",
+    "Échec d’écriture du nouveau reçu : les reçus déjà persistés restent valides et le nouveau reçu demeure en mémoire",
+    "Deux écrans sur le même stockage restent compatibles avec les opérations ajoutées",
+    "Coffre : les octets sont capturés avant écriture ; mutation du tampon appelant sans effet sur le fichier confirmé",
+    "Client coffre : fichier et manifeste capturés avant SHA, y compris une vue partielle de tampon",
+    "Client coffre sans date fournie : reprise après reçu perdu et nouvelle instance sans conflit de manifeste"
+  ],
+  "checksCount": 16,
+  "scope": "Pure browser-storage model plus real temporary SQLite and STL files; no browser, listener, machine or account.",
+  "physicalCommands": 0,
+  "listenersStarted": 0
+}

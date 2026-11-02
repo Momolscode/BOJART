@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-30",
+  "scope": "Documents fournis relus ; aucun code/site publié modifié.",
+  "files": [
+    {
+      "name": "PROGRES_ET_LIMITES_M02.md",
+      "bytes": 3487,
+      "sha256": "b724a1306f9a9f6754d0ced3facc85c2eb2e84587c0d479e818700161f81c87b"
+    },
+    {
+      "name": "CONTEXTE_LISIBLE.md",
+      "bytes": 5563,
+      "sha256": "438d3a40354ce1d0b75517cfcd6e2609290774a5f4bf742c1faa7efb963b1b9e"
+    }
+  ]
+}

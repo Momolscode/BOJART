@@ -1,0 +1,35 @@
+test_accents_are_searchable (test_memory.MemoryTests.test_accents_are_searchable) ... ok
+test_aliases_keep_provenance_but_deduplicate_bytes (test_memory.MemoryTests.test_aliases_keep_provenance_but_deduplicate_bytes) ... ok
+test_backup_restore_preserves_search_and_versions (test_memory.MemoryTests.test_backup_restore_preserves_search_and_versions) ... ok
+test_backup_traversal_is_rejected (test_memory.MemoryTests.test_backup_traversal_is_rejected) ... ok
+test_changed_original_is_not_returned_as_verified_evidence (test_memory.MemoryTests.test_changed_original_is_not_returned_as_verified_evidence) ... ok
+test_chunks_do_not_lose_long_lines (test_memory.MemoryTests.test_chunks_do_not_lose_long_lines) ... ok
+test_corrupt_backup_is_rejected_before_destination_created (test_memory.MemoryTests.test_corrupt_backup_is_rejected_before_destination_created) ... ok
+test_corrupt_object_blocks_future_import (test_memory.MemoryTests.test_corrupt_object_blocks_future_import) ... ok
+test_fts_operator_input_is_not_executed_as_syntax (test_memory.MemoryTests.test_fts_operator_input_is_not_executed_as_syntax) ... ok
+test_identical_import_is_idempotent (test_memory.MemoryTests.test_identical_import_is_idempotent) ... ok
+test_missing_memory_read_does_not_create_state (test_memory.MemoryTests.test_missing_memory_read_does_not_create_state) ... ok
+test_non_utf8_rejected (test_memory.MemoryTests.test_non_utf8_rejected) ... ok
+test_outside_root_rejected (test_memory.MemoryTests.test_outside_root_rejected) ... ok
+test_private_configuration_excluded (test_memory.MemoryTests.test_private_configuration_excluded) ... ok
+test_projects_are_isolated (test_memory.MemoryTests.test_projects_are_isolated) ... ok
+test_readonly_does_not_allow_ingest (test_memory.MemoryTests.test_readonly_does_not_allow_ingest) ... ok
+test_removed_canonical_document_is_retired_but_preserved (test_memory.MemoryTests.test_removed_canonical_document_is_retired_but_preserved) ... ok
+test_restore_never_overwrites_existing_directory (test_memory.MemoryTests.test_restore_never_overwrites_existing_directory) ... ok
+test_retrieval_is_untrusted_and_cites_source_lines (test_memory.MemoryTests.test_retrieval_is_untrusted_and_cites_source_lines) ... ok
+test_reverting_a_source_reuses_version_without_duplicate_chunks (test_memory.MemoryTests.test_reverting_a_source_reuses_version_without_duplicate_chunks) ... ok
+test_schema_mismatch_is_not_implicitly_migrated (test_memory.MemoryTests.test_schema_mismatch_is_not_implicitly_migrated) ... ok
+test_symlink_rejected (test_memory.MemoryTests.test_symlink_rejected) ... ok
+test_unknown_project_rejected (test_memory.MemoryTests.test_unknown_project_rejected) ... ok
+test_update_preserves_history_and_hides_old_version_by_default (test_memory.MemoryTests.test_update_preserves_history_and_hides_old_version_by_default) ... ok
+test_no_cross_domain_results (test_memory_http.MemoryHttpTests.test_no_cross_domain_results) ... ok
+test_real_search_returns_cited_result (test_memory_http.MemoryHttpTests.test_real_search_returns_cited_result) ... ok
+test_session_required (test_memory_http.MemoryHttpTests.test_session_required) ... ok
+test_ui_and_navigation_are_served (test_memory_http.MemoryHttpTests.test_ui_and_navigation_are_served) ... ok
+test_uninitialized_memory_is_explicit (test_memory_http.MemoryHttpTests.test_uninitialized_memory_is_explicit) ... ok
+test_unknown_project_and_duplicate_parameters_rejected (test_memory_http.MemoryHttpTests.test_unknown_project_and_duplicate_parameters_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 5.002s
+
+OK

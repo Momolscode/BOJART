@@ -1,0 +1,25 @@
+flowchart TD
+  USER["Idée ou demande vocale"] --> PILOT["Pilotage Jarvis · contexte du dossier"]
+  KNOW["Base métier · sources et recherche par mots-clés"] --> PILOT
+  PILOT --> PROPOSAL["Proposition de conception · validation humaine"]
+  PROPOSAL --> CAD["CAO paramétrique · fichiers et empreintes"]
+  CAD --> DISPLAY["Aperçu 3D · vue création"]
+  CAD -.-> SLICE["Découpe et profils machine · à raccorder"]
+  SLICE -.-> PLAN["Planning du parc réel · à raccorder"]
+  PLAN -.-> PRINT["FDM ou résine · qualification et supervision"]
+  PRINT -.-> CHECK["Contrôle physique · finition · validation"]
+  CHECK -.-> MEDIA["Médias authentiques de la pièce"]
+  MEDIA --> STUDIO["Studio · références et brief conservé"]
+  STUDIO --> DRAFT["Contenus · brouillons et validation des sources"]
+  STUDIO -.-> RENDER["Rendu vidéo externe · à raccorder"]
+  DRAFT -.-> PUBLISH["Publication · compte et confirmation requis"]
+  RENDER -.-> PUBLISH
+  PUBLISH -.-> ANALYTICS["Mesures réelles · à raccorder"]
+  PILOT --> JOURNAL[("Historique des opérations et sauvegardes")]
+  CAD --> JOURNAL
+  STUDIO --> JOURNAL
+  DRAFT --> JOURNAL
+  classDef ready fill:#16372f,stroke:#68c8ac,color:#f4fff9
+  classDef future fill:#302a38,stroke:#aa98bb,color:#f2eaf9,stroke-dasharray:5 4
+  class PILOT,KNOW,PROPOSAL,CAD,DISPLAY,STUDIO,DRAFT,JOURNAL ready
+  class SLICE,PLAN,PRINT,CHECK,RENDER,PUBLISH,ANALYTICS future

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-01",
+  "source_m07_commit": "84aff373fe78db173e9601f285ce908f64587c55",
+  "remote_base_reconciled": "cd71c6ba640f304248702d8a3e64c60f900f9d0b",
+  "source_integrity": {
+    "m07_manifest_files_verified": 437,
+    "archives_crc_verified": 3,
+    "site_source_commits": {
+      "atelier": "58309e61e2d70364b3a18223f706a478761da8b3",
+      "studio": "87306314a847c6d2f109bf5833345b3b80af22e1"
+    }
+  },
+  "checks": [
+    {
+      "scope": "original M07 recovered archive",
+      "command": "python3 tools/run_checks.py",
+      "exit_code": 0,
+      "passed": {
+        "python": 578,
+        "node": 7
+      },
+      "original_log_sha256": "a92d4a53e20eb96cef9325e9854cd47dc1e8567b034545802dd76e2611fd6323",
+      "published_log": "docs/evidence/m07-baseline-tests.log",
+      "published_log_sha256": "a92d4a53e20eb96cef9325e9854cd47dc1e8567b034545802dd76e2611fd6323",
+      "redaction": "environment paths replaced; test output retained"
+    },
+    {
+      "scope": "consolidated jarvis/ with 11 explicitly restored private demo media",
+      "command": "python3 tools/run_checks.py",
+      "exit_code": 0,
+      "passed": {
+        "python": 578,
+        "node": 7
+      },
+      "original_log_sha256": "440bed5ae24f88261eb6257f903183bb6c39553ff1177a1f1af87f592884bf12",
+      "published_log": "docs/evidence/m07-consolidated-tests.log",
+      "published_log_sha256": "440bed5ae24f88261eb6257f903183bb6c39553ff1177a1f1af87f592884bf12",
+      "redaction": "environment paths replaced; test output retained"
+    },
+    {
+      "scope": "documentary memory and real localhost HTTP integration",
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "passed": {
+        "python": 30
+      },
+      "original_log_sha256": "9c417b425f2361c07e538d18d51b274ca950453cf4878874879f9134a044aae8",
+      "published_log": "docs/evidence/memory-tests-final.log",
+      "published_log_sha256": "9c417b425f2361c07e538d18d51b274ca950453cf4878874879f9134a044aae8",
+      "redaction": "environment paths replaced; test output retained"
+    },
+    {
+      "scope": "concurrent operations module, reconciled timeline schemas",
+      "command": "python3 -m unittest discover -s tests_ops -v",
+      "exit_code": 0,
+      "passed": {
+        "python": 36
+      },
+      "published_log": "docs/evidence/ops-consolidated-tests.log",
+      "published_log_sha256": "27c4b2859d95a09e4b532352a54393468d81af077615fe5c2886ca5a25bbfa70"
+    }
+  ],
+  "test_count_explanation": "578 = 274 main unittest + 242 legacy pytest + 40 knowledge + 22 planning. The baseline and consolidated runs repeat the same suites; do not add them. 30 memory/HTTP tests are separate.",
+  "retrieval": {
+    "report": "docs/evidence/retrieval-2026-11-01.json",
+    "cases": 10,
+    "hits_at_5": 10,
+    "scope": "hand-authored lexical retrieval; not independent generalization or generated-answer accuracy"
+  },
+  "not_tested": [
+    "actual PC or operating-system installation",
+    "microphone, ASR model or live Jev service",
+    "physical printers and monitors",
+    "new browser visual inspection",
+    "artistic validation of R03",
+    "all prior conversations",
+    "shared Sites/Jarvis business database"
+  ],
+  "public_checkout": "Starts without private demo media. Full historical M07 suites require explicit archive restoration. Memory and HTTP suite runs without them.",
+  "remote_publication_verification": "Verify commit, complete Git tree blob SHAs, and downloaded representative files after push. Not claimed by this pre-push report.",
+  "audit_after_reconciliation": {
+    "files": 692,
+    "errors": 0,
+    "warnings": 5,
+    "warning_scope": "R03 media deliberately absent from public checkout; originals stay external",
+    "schema_reconciliation": "R01 duration_s and Sites brand-film.v1 with explicit crossfades checked separately"
+  },
+  "public_source_only_check": {
+    "memory_http_tests": 30,
+    "node_signal_tests": 7,
+    "passed": true,
+    "private_media_present": false
+  }
+}

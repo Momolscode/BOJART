@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": [
+    "Eight technical fields are compared from immutable source projections; impacts are deduplicated, no personal/source prose or working data enters the result.",
+    "Absent dimensions remain unknown, dimensions retain millimetres and budget preferences are displayed without a price calculation.",
+    "Contact/status-only changes remain import conflicts while the comparison honestly reports unchanged technical parameters and unknown source-field differences.",
+    "Older exports and changed content under the same revision receive distinct review warnings; ordering is never inferred from export time.",
+    "Mismatched identities, ambiguous matches and missing/corrupt projections refuse comparison instead of silently selecting an unrelated dossier.",
+    "Actual app preview shows semantic comparison rows against source quantity 2, not working quantity 9; it keeps creation disabled and writes no working mutation.",
+    "Opening the retained dossier uses its exact ID, clears source contact from the drawer, and preserves working quantity and notes.",
+    "The real UI keeps a source-only revision visible for review without incorrectly treating it as an accepted merge.",
+    "CSS parses, changed rows use explicit text as well as color, keyboard scrolling is named, and both reduced-motion paths disable comparison animation."
+  ],
+  "browserRenderingVerified": false,
+  "scope": "Read-only technical comparison and real app/store in JSDOM, SHA-256-checked synthetic export fixtures. No sender authentication, printer, D1 account, social publication, email or payment."
+}

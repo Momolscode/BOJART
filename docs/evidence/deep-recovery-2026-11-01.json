@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-01T22:36:46.309157+00:00",
+  "archive_repository": "Momolscode/BOJART",
+  "archive_branch": "archive/deep-recovery-2026-11-01",
+  "archive_commit": "81d43e7910f17ebb85fdccab244b3f53bf360f9d",
+  "archive_tree": "e97c8d2e63387259b5ea428f56c9580c24056589",
+  "manifest_sha256": "72b431f1bf6b2ac04315b383010b2d8b8956b77119164385aaf0a1d564dfbc42",
+  "unique_objects": 62,
+  "unique_bytes": 390425092,
+  "data_blobs": 85,
+  "baseline_unique_objects": 3340,
+  "overlap_with_baseline": 0,
+  "combined_indexed_originals": 3402,
+  "duplicate_existing_main_document_excluded": "docs/historical/BOJART_RECUPERATION_LIRE_D_ABORD.txt",
+  "generation_records": 76,
+  "completed_results_downloaded": 60,
+  "input_urls_downloaded": 41,
+  "new_generation_results": 41,
+  "new_reference_media": 16,
+  "new_conversation_screenshots": 4,
+  "new_transport_documents": 1,
+  "all_remote_git_objects_restored": true,
+  "byte_for_byte_comparison_with_downloaded_originals": "passed",
+  "sha256_checks": "passed",
+  "git_fsck": "passed",
+  "format_checks": {
+    "files": 62,
+    "failed": 0,
+    "methods": [
+      "Pillow verify for images",
+      "ffprobe for audio/video",
+      "UTF-8 read for text"
+    ]
+  },
+  "restore_safeguards": 11,
+  "no_new_generation_jobs": true,
+  "full_chat_transcripts_recovered": false,
+  "workshop_pc_accessed": false,
+  "tiktok_7099716894994730246_recovered": false,
+  "scene_v35_revision": 2,
+  "runtime_or_artistic_qualification": false
+}

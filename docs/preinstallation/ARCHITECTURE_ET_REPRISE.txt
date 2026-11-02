@@ -1,0 +1,33 @@
+JARVIS : VISION, ÉTAT OBSERVÉ ET REPRISE CONTRÔLÉE
+
+Les deux diagrammes utilisateur ont des rôles différents. « JARVIS 5 — architecture globale » est une cible : entrée multimodale, mémoire, planificateur et rôles connaissance, voix, 3D, fabrication, Studio, planning et outils. « De ta demande à une action vérifiée », au SHA 3c28821, est un état M07 historique. Lire les capacités réelles dans le code courant et les preuves d’essai, jamais dans le seul titre installable ou fiable.
+
+Architecture actuelle observée : mémoire documentaire SQLite/FTS5 et objets immuables ; extension sémantique facultative ; graphe local route → guard → dispatch → receipt et repli déterministe ; intentions visuelles bornées, circuit CAO dédié ; cinq bases opérationnelles séparées. Le planner d’audit bojart_ops/orchestration.py prépare des lots de revue et n’exécute pas les agents qu’il décrit.
+Jev est un décideur texte hébergé facultatif après transcription ; il n’est ni l’ASR, ni un agent vocal local, ni l’autorité des imprimantes. Les trois accusés des vues navigateur ne prouvent pas la disposition physique des moniteurs. La conversation audio continue, vision/OCR, suivi d’imprimantes, file multi-machines et publication autonome restent des extensions à qualifier.
+
+Contrat proposé pour toute chaîne future :
+entrée → identification de l’intention et des ambiguïtés → recherche sourcée bornée → proposition de plan → garde AVANT effet → exécution bornée → observation externe → reçu → rapprochement → synthèse.
+Le validateur placé seulement après executor dans le schéma de vision est insuffisant. Conserver aussi le contrôle après exécution. Un checkpoint ne prouve pas qu’une action distante a été effectuée exactement une fois. Les états refusé, attente, annulé, échoué, inconnu et vérifié doivent rester distincts.
+Chaque opération lie demande, projet, dossier/révision, empreinte d’asset, version de recette, outil/version, paramètres validés, autorisation applicable, identifiant d’opération et reçus datés. L’autorisation ne voyage pas dans un document importé. Une réponse perdue produit UNKNOWN puis réconciliation, pas relance physique automatique.
+
+Mémoire et « destruction de contexte »
+Il s’agit d’écarter les hypothèses obsolètes du contexte actif et de remettre en cause les décisions, tout en conservant les originaux. Classer décision directe, fait observé, information rapportée, proposition et inconnu. Dater les versions, conserver la chaîne de remplacement. Les anciennes réponses générées ne deviennent pas des faits. Une session neuve repart d’un paquet court avec sources et questions ouvertes ; le texte intégral reste consultable hors prompt.
+À chaque reprise : vérifier SHA/base et modifications locales ; lire décisions directes, état courant, risques ouverts et preuves ; demander au retrieval uniquement les passages utiles ; confronter une conclusion importante au fichier original ; consigner le nouveau résultat avec environnement et hash. Un résumé intermédiaire ne remplace ni un rapport d’échec ni une décision utilisateur.
+
+Données prioritaires
+Le registre des exigences référence 14 ensembles à préparer. Les huit registres métier existants restent la cible de saisie pour machines, matières, recettes, qualité, dossiers, coûts, médias et observations. Recueillir modèles exacts, interfaces, manuels/FDS, matériaux/lots/profils qualifiés, procédés de finition, temps opérateur, nettoyage/déchargement, calibrations et coûts complets. Les valeurs inconnues restent inconnues. Préserver la référence artistique et les versions rejetées.
+
+Interfaces de préparation ajoutées
+jarvis_capabilities : consultation des exigences, statut documentaire et réception proposée.
+jarvis_tool_catalog : outils intégrés/candidats, sources, licences et conditions d’usage.
+jarvis_preparation_status : intégrité des fiches préparées et profil déclaré.
+jarvis_research_search : recherche lexicale explicite dans la collection research du même magasin. La priorité des références dans la recherche générale peut masquer les propositions ; ce mode les rend consultables sans les promouvoir en faits.
+Ces quatre outils MCP n’exécutent aucun outil du catalogue. Les quatre outils mémoire existants conservent leur rôle. Tester le client Claude réel et la version négociée ; une session JSON-RPC en test ne prouve pas son installation dans Claude.
+
+Cadence d’amélioration
+Lot A : mémoire, provenance, restauration et bugs bloquants mesurés.
+Lot B : recette Windows, interface et voix réelle.
+Lot C : une chaîne créative ou machine en lecture seule, avec données authentiques.
+Lot D : simulation puis premier effet explicitement autorisé et reçu indépendant.
+Lot E : endurance, reprise après incident, coût, qualité artistique et retours opérateur.
+À chaque lot, réauditer les effets de la correction et mettre à jour la couverture. La cible reste BOJ.ART ; une architecture plus complexe doit résoudre un défaut constaté avant adoption.

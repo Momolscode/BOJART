@@ -1,0 +1,29 @@
+name: Jarvis agent memory
+on: [push, pull_request]
+permissions:
+  contents: read
+env:
+  PYTHONUTF8: '1'
+jobs:
+  local-memory:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Memory persistence, retrieval, MCP and HTTP
+        run: python -m unittest discover -s tests_agent -v
+      - name: Existing memory compatibility
+        run: python -m unittest discover -s tests -v
+      - name: Forced launcher stop and verified restart
+        run: python tools/check_startup.py --abrupt --output .bojart-audit/forced-restart.json
+      - name: Save restart evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: memory-restart-${{ matrix.os }}
+          path: .bojart-audit/forced-restart.json
+          retention-days: 14

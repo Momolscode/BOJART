@@ -1,0 +1,89 @@
+{
+  "schema": "bojart.edit_brief.v1",
+  "id": "studio-demo-001",
+  "created_at": "2026-10-30T18:29:58.138713+00:00",
+  "anchor_id": "visage",
+  "segment_order": [
+    "profil",
+    "troisquarts",
+    "visage"
+  ],
+  "sources": [
+    {
+      "id": "visage",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Sculpture · visage et tenue",
+      "start": 10.2,
+      "end": 11.1,
+      "kind": "authentic_capture",
+      "review": "approved_internal",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": true,
+      "evidence": "Vue originale à 10,2 s du dossier V6. Sert à comparer le personnage ; ne prouve aucune dimension physique.",
+      "tags": [
+        "sculpture",
+        "visage",
+        "reference",
+        "short bordeaux",
+        "cicatrices"
+      ],
+      "revision": 1
+    },
+    {
+      "id": "profil",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Sculpture · profil et socle",
+      "start": 5.0,
+      "end": 6.0,
+      "kind": "authentic_capture",
+      "review": "approved_internal",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": true,
+      "evidence": "Comparaison visuelle des images extraites du média fourni. Validation interne de catégorie, pas validation technique ni droits.",
+      "tags": [
+        "sculpture",
+        "profil",
+        "socle",
+        "vraie figurine"
+      ],
+      "revision": 1
+    },
+    {
+      "id": "troisquarts",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Sculpture · trois-quarts",
+      "start": 8.5,
+      "end": 9.4,
+      "kind": "authentic_capture",
+      "review": "approved_internal",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": true,
+      "evidence": "Vue originale déjà retenue dans la fiche de fidélité V6. Source vidéo conservée par empreinte.",
+      "tags": [
+        "sculpture",
+        "reference",
+        "short bordeaux",
+        "trois quarts"
+      ],
+      "revision": 1
+    }
+  ],
+  "source_digest": "d3d36d93bc524b55082a55118657e53899301af35fbc727fafe5ca1cf72c67fb",
+  "status": "PREPARED_NOT_RENDERED",
+  "publish_allowed": false,
+  "cost_incurred": 0,
+  "requires_review": [
+    "assemblage_et_raccords",
+    "son_et_droits",
+    "validation_artistique_finale"
+  ],
+  "rights_pending": [
+    "visage",
+    "profil",
+    "troisquarts"
+  ],
+  "note": "Un brief n’est ni une vidéo rendue ni une autorisation de publier."
+}

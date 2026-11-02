@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "node": "v24.19.0",
+  "checks": [
+    "Original STL bytes preserved with SHA, stable idempotent receipt, immutable ID and reopen",
+    "Real vault export/restoration verifies every original byte and is idempotent",
+    "Corrupt last STL, truncated archive or identity conflict never exposes a partial restoration",
+    "Missing binaries can be restored from verified archive; corrupt existing bytes are reported without overwrite",
+    "Browser export includes current and replaced originals and restores directly into tower vault",
+    "Same-origin HTTP/browser client uploads, downloads, lists and restores complete archive without listener",
+    "Client refuses wrong receipt, unexpected SHA and lying Content-Length before oversized allocation",
+    "Offline status is bounded and returns a usable unavailable state"
+  ],
+  "originalSHA256": [
+    "2a787062302fd5ca0c30c947f06ed5b97f2a4fe6f15b3d1ef0bff1dfde608f52",
+    "e7028b2223c075712ab005416a2befab709dc1a002bbef0e183be86326329756"
+  ],
+  "serverArchiveRoundtrip": true,
+  "browserArchiveToServerRoundtrip": true,
+  "listenersStarted": 0,
+  "physicalCommands": 0
+}

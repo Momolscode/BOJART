@@ -1,0 +1,11 @@
+{
+  "source_archive": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip",
+  "sha256": "d046b42cae172ed9bb5600a8a22e4264b01dcf9a1e12191af6c8b82f43636d30",
+  "read": [
+    "docs/PROGRES_ET_LIMITES_M03.md",
+    "liste de fichiers dans archive"
+  ],
+  "modified": false,
+  "files_connector_discovery": "La découverte Files n’a pas fourni de fonction Files exploitable dans cette session. Lecture de la pièce montée via le conteneur.",
+  "source_documents_full_copy": false
+}

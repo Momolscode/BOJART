@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "checks": 20,
+  "names": [
+    "Dimensions de métadonnées et jobs simulés ne constituent aucune preuve de STL",
+    "Vrai binaire STL décodé par le code livré, dimensions et SHA partagés avec la mission centrale",
+    "Unité pouces mesurée dans le fichier, hauteur du brief sans effet sur la géométrie",
+    "Relecture dédupliquée ; force relit le binaire et retire les preuves pendant le contrôle",
+    "Fichier absent et STL invalide restent distingués après une lecture",
+    "Une panne de calcul SHA ne transforme pas un STL décodable en fichier géométriquement invalide",
+    "Pièce modifiée pendant la lecture : le résultat ancien est rejeté",
+    "Pièce modifiée pendant la mesure ou le SHA : aucun résultat tardif absorbé",
+    "Changement de dossier actif sans modification du dossier cible : preuve attachée au bon dossier",
+    "Destruction du contrôleur ou suppression du dossier pendant la lecture : résultat abandonné",
+    "Rapport d’un autre projet ou d’une ancienne révision refusé par la mission",
+    "Changement de profil machine : rapport ancien écarté, mesures de fichier réutilisables avec fiche actuelle",
+    "Absorption : format, marque et limites exigés, anciennes métadonnées rejetées",
+    "Le résumé fourni n’est jamais une autorité : compteurs recalculés depuis les preuves individuelles",
+    "Preuve individuelle corrompue : rejet par les validations de préparation",
+    "Empreinte de fichier attendue : un autre binaire ne devient pas la preuve de cette référence",
+    "La prochaine décision et la mission partagent les mêmes faits et gardent les besoins de procédé",
+    "La démonstration ne devient pas le chemin nominal vers la fabrication",
+    "Les versions d’édit enregistrées remontent dans la mission sans prétendre un rendu vidéo",
+    "Questions Pourquoi et Où : réponse descriptive, ni modification métier ni navigation"
+  ],
+  "failures": [],
+  "scope": "Actual bundled STL decoder on synthetic binary geometry; pure mission and mocked I/O. No browser/WebGL, server, account, slicer or physical printer."
+}

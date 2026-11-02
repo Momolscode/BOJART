@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "groups": 18,
+  "checks": [
+    "Contrat borné, copie de contexte et paire pièce/révision",
+    "Requête officielle : endpoint fixe, critères disponibles et none, modèle figé",
+    "Décision réelle validée et scores conservés sans écriture de projet",
+    "Abstention sur incertitude, égalité et choix none",
+    "Réponses invalides : schéma, modèle effectif, distribution et choix refusés",
+    "Sans clé : aucun appel, statut non configuré",
+    "Clé serveur, zéro appel au statut, connexion uniquement après réponse vérifiée",
+    "Un échec suivant retire le statut connecté et conserve la dernière vérification datée",
+    "Erreurs réseau et fournisseur normalisées sans exception ou corps amont",
+    "Délai borné et appel concurrent refusé sans second envoi",
+    "Corps fournisseur borné, type JSON et UTF-8 vérifiés",
+    "Statut et dashboard servis sans appel au modèle, HEAD sans corps",
+    "POST valide transmis une seule fois avec contexte précis et retour normalisé",
+    "Host, Origin et origine navigateur extérieurs refusés avant fournisseur",
+    "JSON, taille, schéma et méthode invalides refusés sans appel",
+    "Dossier dist seul : traversée, lien externe, fichiers cachés et API inconnue exclus",
+    "Lecture vidéo : octets complets, Range, suffixe, HEAD et borne invalide",
+    "Exceptions inattendues masquées dans les réponses HTTP"
+  ],
+  "realApiCalled": false,
+  "listeningSocketOpened": false,
+  "browserRenderingVerified": false
+}

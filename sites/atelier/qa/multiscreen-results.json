@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    "Three dedicated window roles are discovered and shown at the Jarvis station.",
+    "A model command targets the right window, confirms the demo, and leaves Jarvis central.",
+    "A station keeps its role through manual navigation; an explicit right-screen request still targets that station.",
+    "Production view is acknowledged by the left window without changing the central view.",
+    "Film view opens only on the right and does not claim automatic playback.",
+    "An open editor on the receiving screen is preserved; the sender sees a rejection.",
+    "A stale revision or unknown project is rejected without replacing the active dossier.",
+    "The central visual dock sends the new 22.7-second BOJ.ART signature edit to screen 03, with receipt and arrival note; central Jarvis stays in place.",
+    "The local visual form selects the requested model; conflicting model/art requests preserve the current view and send no provider or display request.",
+    "A missing status endpoint and an unconfigured gateway keep Jev disabled; a configured gateway enables it without inventing a successful call.",
+    "An injected TypeSafe answer passes through the real server normalizer and browser validator before one model request reaches the right screen.",
+    "Uncertain and explicit none provider decisions keep the current scene and emit no cross-screen request.",
+    "A delayed Jev response for the previous dossier is refused after project synchronization, without replacing the new dossier or sending a visual command.",
+    "A delayed Jev result preserves a different open editor, including its unsaved text, and does not change another screen.",
+    "The identity drawer presents four verifiable source sequences, manual film controls, source-derived timings, and a working screen-03 presentation action.",
+    "A renderer failure is returned to Jarvis; no successful model display or local retry is invented.",
+    "An absent right window opens screen setup, preserving Jarvis and avoiding a silent local fallback."
+  ],
+  "browserRenderingVerified": false,
+  "webglRenderingVerified": false,
+  "liveJevVerified": false,
+  "scope": "Three isolated JSDOM windows, real application/store/display controller and TypeSafe response normalizer, shared storage and BroadcastChannel double. Renderer stub and injected provider HTTP responses only; no browser, socket or live Jev request."
+}

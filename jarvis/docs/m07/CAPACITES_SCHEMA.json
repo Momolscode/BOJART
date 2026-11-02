@@ -1,0 +1,92 @@
+{
+  "version": "M07",
+  "observed_date": "2026-11-01",
+  "target_hardware_qualified": false,
+  "nodes": {
+    "entry": {
+      "title": "Parler ou écrire",
+      "description": "Le navigateur demande un geste et une autorisation pour le micro. La prise est limitée à 15 secondes ; il n’y a pas de mot d’éveil actif.",
+      "state": "setup"
+    },
+    "context": {
+      "title": "Contexte figé avant écoute",
+      "description": "M07 conserve la révision, l’empreinte du contexte et la sélection avant la capture. Une réponse devenue périmée est refusée.",
+      "state": "ready"
+    },
+    "memory": {
+      "title": "Mémoire et reprise",
+      "description": "Les tours, plans et checkpoints occupent la base locale déjà sauvegardée. La restauration neutralise les distributions inachevées.",
+      "state": "ready"
+    },
+    "speech": {
+      "title": "Capture puis transcription",
+      "description": "L’arrêt sur pause utilise l’énergie du signal ; il ne comprend pas le sens de la phrase. La chaîne est testée avec un signal synthétique et un faux ASR. Les poids et la qualité réelle restent à qualifier.",
+      "state": "setup"
+    },
+    "route": {
+      "title": "LangGraph : route",
+      "description": "Le graphe exécuté comporte route, guard, dispatch et receipt. Les ordres connus restent locaux et n’appellent pas Jev.",
+      "state": "ready"
+    },
+    "local": {
+      "title": "Règles locales",
+      "description": "Une scène de trois vues a été ajoutée au catalogue. Aucune commande système libre ne provient de la transcription.",
+      "state": "ready"
+    },
+    "jev": {
+      "title": "Jev facultatif",
+      "description": "L’adaptateur utilise Jev 1.14 avec des choix bornés. Jev reçoit le texte, pas le microphone. Sa qualité sur les formulations françaises reste à mesurer.",
+      "state": "setup"
+    },
+    "approval": {
+      "title": "Confirmation du choix",
+      "description": "« Confirme cet affichage » concerne seulement la proposition visuelle courante de cette fenêtre et de ce dossier. Le contexte est revérifié. « Oui » seul ne suffit pas.",
+      "state": "ready"
+    },
+    "guard": {
+      "title": "LangGraph : guard",
+      "description": "Une demande périmée, annulée ou liée à un modèle incompatible est refusée. L’ensemble de la scène est préparé avant sa première distribution.",
+      "state": "ready"
+    },
+    "refuse": {
+      "title": "Refus visible",
+      "description": "Le message conserve le motif. Un résultat distant inconnu n’est pas répété automatiquement. Une annulation ne promet pas d’effacer un affichage déjà visible.",
+      "state": "ready"
+    },
+    "dispatch": {
+      "title": "LangGraph : dispatch",
+      "description": "La scène produit exactement trois commandes distinctes. Une réponse perdue reprend les mêmes références, y compris après une distribution partielle.",
+      "state": "ready"
+    },
+    "journal": {
+      "title": "LangGraph : receipt",
+      "description": "Ce nœud enregistre la proposition, le refus ou la mise en file. Les reçus de rendu arrivent ensuite de manière asynchrone et sont relus par le suivi des vues.",
+      "state": "ready"
+    },
+    "left": {
+      "title": "Gauche · atelier",
+      "description": "La vue planning reste explicitement une démonstration. Le parc, ses disponibilités et les temps réels ne sont pas connectés.",
+      "state": "ready"
+    },
+    "center": {
+      "title": "Centre · pilotage",
+      "description": "La vue présente les dossiers locaux et les accès au travail conservé. La CAO se crée depuis son circuit de proposition et confirmation existant.",
+      "state": "ready"
+    },
+    "right": {
+      "title": "Droite · création",
+      "description": "Le modèle sélectionné est contrôlé puis rendu. Sans sélection explicite, la scène montre le Studio. Aucune sélection de modèle n’est devinée.",
+      "state": "ready"
+    },
+    "receipt": {
+      "title": "Suivi des rendus",
+      "description": "Le suivi distingue les vues restantes, affichées ou en échec. La composition complète exige trois reçus. Ils attestent le navigateur, pas le moniteur physique.",
+      "state": "ready"
+    },
+    "feedback": {
+      "title": "Retour à l’utilisateur",
+      "description": "La réponse écrite est reliée au résultat. La parole dépend d’une voix française locale du navigateur, à vérifier avec les haut-parleurs réels.",
+      "state": "setup"
+    }
+  }
+}
