@@ -9,10 +9,33 @@
    "defaut_detecte": "pic mémoire de l'étape contrôles : 4 252,9 Mo (exécution 0932c22a28428a7b)",
    "variable_modifiee": "lancers de rayons par paquets de 100 au lieu d'un seul appel (checks.wall_thickness)",
    "mesure_isolee_meme_maillage": {
-    "avant": {"secondes": 27.77, "pic_rss_mo": 4043, "epaisseur_min_mm": 3.99, "p1_mm": 6.669, "echantillons": 1500, "rayons_perdus": 0},
-    "apres": {"secondes": 10.93, "pic_rss_mo": 512, "epaisseur_min_mm": 3.99, "p1_mm": 6.669, "echantillons": 1500, "rayons_perdus": 0}
+    "avant": {
+     "secondes": 27.77,
+     "pic_rss_mo": 4043,
+     "epaisseur_min_mm": 3.99,
+     "p1_mm": 6.669,
+     "echantillons": 1500,
+     "rayons_perdus": 0
+    },
+    "apres": {
+     "secondes": 10.93,
+     "pic_rss_mo": 512,
+     "epaisseur_min_mm": 3.99,
+     "p1_mm": 6.669,
+     "echantillons": 1500,
+     "rayons_perdus": 0
+    }
    },
-   "dans_le_parcours": {"avant_0932c22a28428a7b": {"secondes": 25.255, "pic_rss_mo": 4252.9}, "apres_5368f3d7cdca9a69": {"secondes": 10.574, "pic_rss_mo": 620.2}},
+   "dans_le_parcours": {
+    "avant_0932c22a28428a7b": {
+     "secondes": 25.255,
+     "pic_rss_mo": 4252.9
+    },
+    "apres_5368f3d7cdca9a69": {
+     "secondes": 10.574,
+     "pic_rss_mo": 620.2
+    }
+   },
    "essais": 1,
    "decision": "conservé : mêmes valeurs mesurées, mémoire ÷ 7,9 et durée ÷ 2,5 sur cet essai unique",
    "retour_arriere": "paramètre batch de wall_thickness"
@@ -23,12 +46,82 @@
    "defaut_detecte": "socle plein : 9 h 30 min 31 s et 93,22 g estimés, plus long que la figurine elle-même à matière égale",
    "variable_modifiee": "évidement du socle par dessous (parois 3 mm, plancher 2 mm sous les logements) + tranchage retourné",
    "meme_trancheur_et_profil": "PrusaSlicer 2.7.2, profil_simulation.ini identique",
-   "avant_0932c22a28428a7b": {"temps_estime": "9h 30m 31s", "filament_g": 93.22, "filament_cm3": 75.18, "stabilite_marge_mm": 70.24, "epaisseur_min_socle_mm": 16.543},
-   "apres_5368f3d7cdca9a69": {"temps_estime": "8h 10m 9s", "filament_g": 73.77, "filament_cm3": 59.49, "stabilite_marge_mm": 69.12, "epaisseur_min_socle_mm": 1.999},
+   "avant_0932c22a28428a7b": {
+    "temps_estime": "9h 30m 31s",
+    "filament_g": 93.22,
+    "filament_cm3": 75.18,
+    "stabilite_marge_mm": 70.24,
+    "epaisseur_min_socle_mm": 16.543
+   },
+   "apres_5368f3d7cdca9a69": {
+    "temps_estime": "8h 10m 9s",
+    "filament_g": 73.77,
+    "filament_cm3": 59.49,
+    "stabilite_marge_mm": 69.12,
+    "epaisseur_min_socle_mm": 1.999
+   },
    "gain": "-14 % de temps estimé, -21 % de matière estimée",
    "criteres_conserves": "volume fermé, aucun élément flottant, ajustement sans interférence, stabilité estimée, épaisseur ≥ 0,8 mm",
    "decision": "conservé ; prochaine variable à tester : hauteur de couche du socle (pièce sans détail)",
    "nature": "estimations de tranchage, pas des durées d'impression mesurées"
+  },
+  {
+   "id": "qualite-surface-voxel",
+   "type": "qualité 3D (surface)",
+   "defaut_detecte": "terrasses de voxelisation visibles sur la vue maillage (plastron) de l'exécution d70b23ab2e4e3376",
+   "mesure": "écart |SDF| aux sommets, approximation de la distance à la surface voulue, ramené à l'échelle finale (×1,2874), semelles exclues",
+   "essais": [
+    {
+     "voxel_mm_nominal": 0.6,
+     "taubin_iterations": 6,
+     "seconds": 46.6,
+     "triangles": 181536,
+     "watertight": true,
+     "bodies": 1,
+     "peak_rss_mb_cumulative": 343,
+     "ecart_surface_implicite_mm": {
+      "p50": 0.0435,
+      "p95": 0.1323,
+      "p99": 0.2177,
+      "max": 0.4847
+     }
+    },
+    {
+     "voxel_mm_nominal": 0.45,
+     "taubin_iterations": 6,
+     "seconds": 108.0,
+     "triangles": 323502,
+     "watertight": true,
+     "bodies": 1,
+     "peak_rss_mb_cumulative": 690,
+     "ecart_surface_implicite_mm": {
+      "p50": 0.0247,
+      "p95": 0.0745,
+      "p99": 0.1242,
+      "max": 0.2865
+     }
+    },
+    {
+     "voxel_mm_nominal": 0.6,
+     "taubin_iterations": 12,
+     "seconds": 41.1,
+     "triangles": 181536,
+     "watertight": true,
+     "bodies": 1,
+     "peak_rss_mb_cumulative": 690,
+     "ecart_surface_implicite_mm": {
+      "p50": 0.0841,
+      "p95": 0.2418,
+      "p99": 0.4123,
+      "max": 0.773
+     }
+    }
+   ],
+   "decision": {
+    "voxel_0.45": "gain réel de fidélité (p95 0,132 → 0,075 mm, p99 0,218 → 0,124 mm) mais durée ×2,3 et triangles ×1,8 : non adopté par défaut pour le FDM 0,15 mm (écart déjà proche d'une couche) ; recommandé pour la résine via --voxel 0.45",
+    "taubin_12": "rejeté : surface plus éloignée de l'intention (p95 0,242 mm), le lissage rétrécit les volumes"
+   },
+   "arret": "deux variables essayées, une seule utile sous condition ; prochaine piste : maillage adaptatif ou dual contouring, pas plus de lissage"
   }
  ]
 }

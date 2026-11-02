@@ -2034,13 +2034,18 @@
     },
     {
       "path": "jarvis/docs/m08/BACKLOG_ET_REPRISE_M08.md",
-      "bytes": 4664,
-      "sha256": "d3847b522765d14881063c5018240b56bbeffa92c6fd68388465a0b3fdcc2367"
+      "bytes": 4988,
+      "sha256": "ba9e389e487a7feddabc11934de133fa4a8cc9f562d702179829f6d20d16201b"
     },
     {
       "path": "jarvis/docs/m08/REGISTRE_DECISIONS_M08.md",
       "bytes": 6893,
       "sha256": "ee7f763e144236ae26155a28d8c142ffdc9d8a18f0fa772e5907d48db52f4261"
+    },
+    {
+      "path": "jarvis/docs/m08/RELEASE_M08.md",
+      "bytes": 9680,
+      "sha256": "1bb3dc28f4511bb3c96d5d816c4b38e8d8c8fd63dbe3b3012a835c7848e97ed6"
     },
     {
       "path": "jarvis/docs/m08/preuves/atelier_three_core_absent_2026-11-02.json",
@@ -2049,8 +2054,98 @@
     },
     {
       "path": "jarvis/docs/m08/preuves/boucles_2026-11-02.json",
-      "bytes": 2397,
-      "sha256": "a83898db184a35519a10df593538bfef799202b70b9438f02b20ac18240fbc67"
+      "bytes": 4468,
+      "sha256": "1a810a7709155d0386515daf42e3ec0f91854410eb8fe057f91cac0b8ab45a62"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/manifest_partiel.json",
+      "bytes": 4240,
+      "sha256": "e6d8848b1c3e51c8f4173c3d361cdf5a5af996c233fdb656cbc0e8b95ddc1ad6"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/spec.json",
+      "bytes": 969,
+      "sha256": "82eac147ae93197bc106f6659d1e32d0aa2c28dac3e44000a103cf03e591c562"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/state.json",
+      "bytes": 3974,
+      "sha256": "46d364379090bbb6fccd3c71b0dd8f463bcd13311f0f3ab8f2257bbd0c47c87a"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/assembly.json",
+      "bytes": 763,
+      "sha256": "0cbb6023f08f1da1cb7c7ba3a98d5892dee337c666bb28d8a84e7928ccb75644"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/checks.json",
+      "bytes": 2455,
+      "sha256": "4539d487791ce906434ef9ee5461a24c0d94f985d24dd100e78f6b6c41f29e2e"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/manifest.json",
+      "bytes": 6977,
+      "sha256": "4c60960342ef3892f49be0489e3bda69c7287fdb020a458814af6114b1e40a76"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/pose_study.json",
+      "bytes": 1274,
+      "sha256": "76493c3d77406584fdab463da726f1cb35ea7ebe54a53662fa8cf587e09ce824"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/spec.json",
+      "bytes": 955,
+      "sha256": "dcbb0b9244318f782cb61fe8e8519aa6291e6bf9dbcbe89b5ee57391a1d22fb3"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/state.json",
+      "bytes": 8060,
+      "sha256": "0a607861d90bd2eb43548c08d627596d91f072d33b2486ed2d0fb2320710d5a2"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/tranchage.json",
+      "bytes": 1963,
+      "sha256": "b69dc078ff139ca4ca665d1c4edc79ceedd63aa6a1ae46f0f3377e717c224bd8"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/viewer_check.json",
+      "bytes": 1883,
+      "sha256": "859594ea11f8293ca9fcbd84f81807585489e7a99873ab0a15bb8a37867354ba"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/assembly.json",
+      "bytes": 765,
+      "sha256": "2f9e53fa238c774302892404a5ad3c902606a88eaeec992caff9497d5a547841"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/checks.json",
+      "bytes": 2474,
+      "sha256": "c5338113da9c48d4f5695c54e07c367b2a09245fb2ba5f126f3fba10a9104471"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/cut_plan.json",
+      "bytes": 3945,
+      "sha256": "4fbd447841ae948b4de85d29fbb61a58d7c56b29ec1ffdc8788de8d0831f9aca"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/manifest_partiel.json",
+      "bytes": 6457,
+      "sha256": "cc4d6f968bf9db1cb5c88fe41bbea84be3e5fa5f22c33fb5496de5e500ecec43"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/spec.json",
+      "bytes": 892,
+      "sha256": "78f83a53f80a1e7782d7b8f24c3f4df7901d4481ce9d160a79e9337ef9721fb6"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/state.json",
+      "bytes": 7122,
+      "sha256": "f06ea79551d89b44c8cec1ab125e119e9185d44901f1477bdeac5f22df6a8eae"
     },
     {
       "path": "jarvis/fixtures/fleet_1000mm_synthetic.json",

@@ -51,13 +51,17 @@ commande renvoie la tâche existante sans recalcul.
 7. **Socle : hauteur de couche 0,25–0,3 mm** (pièce sans détail) puis règle de rayon plus serrée.
    Test : même figure, même profil hors cette variable ; garder si gain sans perte des critères.
 
+8. **Surfaces et intersections** : maillage adaptatif ou dual contouring pour supprimer les terrasses
+   sans doubler la durée (référence mesurée : voxel 0,45 → p95 0,07 mm en 108 s) ; ajouter un contrôle
+   explicite d'auto-intersections. Test : écart p95 ≤ 0,05 mm en ≤ 60 s sur le conteneur de référence.
+
 ### P3 — extensions
 
-8. **Variante d'un mètre** : clés d'assemblage sur les plans de coupe, répartition sur le parc réel
+9. **Variante d'un mètre** : clés d'assemblage sur les plans de coupe, répartition sur le parc réel
    (après tâche 3). L'étude actuelle donne seulement le nombre de pièces pour le volume d'hypothèse.
-9. **Personnage sous licence** : schéma de fiche de provenance (source, licence, usages permis) et
+10. **Personnage sous licence** : schéma de fiche de provenance (source, licence, usages permis) et
    contrôle automatique avant toute importation.
-10. **CI** : workflow GitHub qui installe PrusaSlicer et exécute les tests M08 (Blender facultatif).
+11. **CI** : workflow GitHub qui installe PrusaSlicer et exécute les tests M08 (Blender facultatif).
 
 ## Ce qu'il ne faut pas refaire
 
