@@ -20,11 +20,12 @@ PAGES = {'/atelier': ('atelier.html', 'text/html; charset=utf-8'), '/atelier.js'
          '/atelier.css': ('atelier.css', 'text/css; charset=utf-8'), '/atelier-devis.css': ('atelier-devis.css', 'text/css; charset=utf-8'),
          '/atelier-devis.js': ('atelier-devis.js', 'text/javascript; charset=utf-8')}
 PRINT = '/atelier/devis/imprimer'
-GETS = {*PAGES, PRINT, '/api/atelier/etat', '/api/atelier/devis', '/api/atelier/grille', '/api/atelier/grille-exemple', '/api/atelier/comparaison'}
+GETS = {*PAGES, PRINT, '/api/atelier/etat', '/api/atelier/devis', '/api/atelier/grille', '/api/atelier/grille-exemple',
+        '/api/atelier/grille-courante', '/api/atelier/comparaison'}
 POSTS = {'/api/atelier/demande', '/api/atelier/demande/etat', '/api/atelier/devis/calculer', '/api/atelier/devis/emettre',
          '/api/atelier/devis/envoye', '/api/atelier/devis/accepter', '/api/atelier/devis/refuser', '/api/atelier/releve',
          '/api/atelier/machine', '/api/atelier/autorisation', '/api/atelier/autorisation/revoquer', '/api/atelier/ordre',
-         '/api/atelier/simulation', '/api/atelier/demo', '/api/atelier/estimer'}
+         '/api/atelier/simulation', '/api/atelier/demo', '/api/atelier/estimer', '/api/atelier/grille/declarer'}
 
 
 def load_config(name):
@@ -75,6 +76,10 @@ def get(handler, parsed, app_root):
             return h.j(h.server.commerce.grid(q['sha256'][0]))
         if route == '/api/atelier/grille-exemple':
             return h.j(load_config('tarifs.exemple.json'))
+        if route == '/api/atelier/grille-courante':
+            if q:
+                raise Rejected('Aucun paramètre attendu.')
+            return h.j(h.server.commerce.current_grid())
         if set(q) != {'commande_id'}:
             raise Rejected('commande_id requis.')
         return h.j(h.server.commerce.compare(q['commande_id'][0]))
@@ -135,7 +140,7 @@ def dispatch(server, path, data):
         '/api/atelier/devis/refuser': commerce.refuse, '/api/atelier/releve': commerce.record_actual,
         '/api/atelier/machine': parc.declare, '/api/atelier/autorisation': parc.grant,
         '/api/atelier/autorisation/revoquer': parc.revoke, '/api/atelier/ordre': parc.order,
-        '/api/atelier/simulation': parc.simulate, '/api/atelier/estimer': estimate,
+        '/api/atelier/simulation': parc.simulate, '/api/atelier/estimer': estimate, '/api/atelier/grille/declarer': commerce.declare_grid,
     }
     if path == '/api/atelier/demo':
         if data:

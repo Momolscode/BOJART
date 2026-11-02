@@ -17,7 +17,7 @@ from datetime import date, timedelta
 from statistics import median
 
 from core import Rejected, IntegrityError, now
-from atelier_devis import compute, canonical, digest, text, validate_tariffs
+from atelier_devis import compute, canonical, digest, grid_blockers, text, validate_tariffs
 
 ORIGINES = ('vitrine', 'email', 'telephone', 'atelier', 'reseau_social', 'salon', 'autre', 'demonstration')
 TRANSITIONS = {
@@ -47,6 +47,8 @@ CREATE TABLE IF NOT EXISTS atelier_devis (
   emis_le TEXT, envoye_le TEXT, moyen_envoi TEXT, PRIMARY KEY (numero, version));
 CREATE TABLE IF NOT EXISTS atelier_grilles (
   sha256 TEXT PRIMARY KEY, version TEXT NOT NULL, origine TEXT NOT NULL, grille_json TEXT NOT NULL, enregistree_le TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS atelier_grille_declarations (
+  rang INTEGER PRIMARY KEY AUTOINCREMENT, sha256 TEXT NOT NULL REFERENCES atelier_grilles (sha256), declaree_le TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS atelier_commandes (
   id TEXT PRIMARY KEY, numero TEXT NOT NULL, version INTEGER NOT NULL, document_sha256 TEXT NOT NULL,
   accepte_le TEXT NOT NULL, preuve TEXT NOT NULL, etat TEXT NOT NULL, realise_json TEXT NOT NULL,
@@ -148,12 +150,68 @@ class Commerce:
             return {'demande_id': row['id'], 'etat': payload['etat'], 'revision': row['revision'] + 1}
         return self._run('demande.etat', payload, apply)
 
+    # -- grille tarifaire déclarée ------------------------------------------------------
+    @staticmethod
+    def _current_row(db):
+        return db.execute('SELECT d.rang, d.sha256, d.declaree_le, g.grille_json FROM atelier_grille_declarations d '
+                          'JOIN atelier_grilles g ON g.sha256 = d.sha256 ORDER BY d.rang DESC LIMIT 1').fetchone()
+
+    def declare_grid(self, payload):
+        """Fait d'une grille d'origine « declare » la grille courante. ``courante_attendue`` est
+        l'empreinte lue (ou null) : une déclaration concurrente est refusée, pas écrasée."""
+        required = {'request_id', 'grille', 'courante_attendue'}
+        if not isinstance(payload, dict) or set(payload) != required:
+            raise Rejected('Grille : request_id, grille et courante_attendue (empreinte lue, ou null) requis.')
+        expected = payload['courante_attendue']
+        if expected is not None and (not isinstance(expected, str) or not _SHA.fullmatch(expected)):
+            raise Rejected('courante_attendue : empreinte SHA-256 lue, ou null.')
+        grid = validate_tariffs(payload['grille'])
+        if grid['origine'] != 'declare':
+            raise Rejected('Seule une grille d’origine « declare » devient la grille courante ; la grille d’exemple reste un essai.')
+        if iso_day(grid['declare_le'], 'Date de déclaration') > self.today():
+            raise Rejected('Date de déclaration dans le futur.')
+        sha = digest(grid)
+
+        def apply(db):
+            current = self._current_row(db)
+            if (current['sha256'] if current else None) != expected:
+                raise Rejected('La grille courante a changé depuis ta lecture : relis-la avant de déclarer.')
+            if current and current['sha256'] == sha:
+                raise Rejected('Grille identique à la grille courante : rien à déclarer.')
+            if db.execute('SELECT 1 FROM atelier_grilles WHERE version=? AND sha256<>?', (grid['version'], sha)).fetchone():
+                raise Rejected('Cette version de grille désigne déjà un autre contenu : choisir un nouveau libellé de version.')
+            db.execute('INSERT OR IGNORE INTO atelier_grilles VALUES (?,?,?,?,?)', (sha, grid['version'], grid['origine'], canonical(grid), now()))
+            rang = db.execute('INSERT INTO atelier_grille_declarations (sha256, declaree_le) VALUES (?,?)', (sha, now())).lastrowid
+            return {'sha256': sha, 'version': grid['version'], 'rang': rang, 'bloquants_grille': grid_blockers(grid)}
+        return self._run('grille.declarer', payload, apply)
+
+    def current_grid(self):
+        with self.store.connect() as db:
+            row = self._current_row(db)
+            history = db.execute('SELECT d.rang, d.sha256, d.declaree_le, g.grille_json FROM atelier_grille_declarations d '
+                                 'JOIN atelier_grilles g ON g.sha256 = d.sha256 ORDER BY d.rang DESC LIMIT 20').fetchall()
+        if not row:
+            return {'grille': None, 'sha256': None, 'historique': []}
+        grid = json.loads(row['grille_json'])
+        if digest(grid) != row['sha256']:
+            raise IntegrityError('Grille tarifaire courante altérée.')
+        past = []
+        for h in history:
+            g = json.loads(h['grille_json'])
+            past.append({'rang': h['rang'], 'sha256': h['sha256'], 'version': g.get('version'), 'declare_par': g.get('declare_par'),
+                         'declare_le': g.get('declare_le'), 'enregistree_le': h['declaree_le'], 'intacte': digest(g) == h['sha256']})
+        return {'grille': grid, 'sha256': row['sha256'], 'rang': row['rang'], 'enregistree_le': row['declaree_le'],
+                'bloquants_grille': grid_blockers(grid), 'historique': past}
+
     # -- devis --------------------------------------------------------------------------
     def calculate(self, payload):
-        required = {'request_id', 'entree', 'tarifs'}
-        if not isinstance(payload, dict) or not required <= set(payload) <= required | {'numero', 'demande_id'}:
-            raise Rejected('Calcul : request_id, entree, tarifs (+ numero ou demande_id) attendus.')
-        document = compute(payload['entree'], payload['tarifs'], today=self.today())
+        required = {'request_id', 'entree'}
+        if (not isinstance(payload, dict) or not required <= set(payload) <= required | {'tarifs', 'tarifs_sha256', 'numero', 'demande_id'}
+                or ('tarifs' in payload) == ('tarifs_sha256' in payload)):
+            raise Rejected('Calcul : request_id, entree, et tarifs ou tarifs_sha256 (+ numero ou demande_id) attendus.')
+        # Une grille enregistrée se désigne par son empreinte : elle est relue et vérifiée, jamais recopiée.
+        tariffs = payload['tarifs'] if 'tarifs' in payload else self.grid(payload['tarifs_sha256'])
+        document = compute(payload['entree'], tariffs, today=self.today())
         self.store.require_project(document['dossier_id'])
 
         def apply(db):
@@ -185,7 +243,7 @@ class Commerce:
                 version = last['version'] + 1
                 db.execute("UPDATE atelier_devis SET etat='remplace' WHERE numero=? AND etat='brouillon'", (numero,))
             doc = {**document, 'numero': numero, 'version': version}
-            grid = validate_tariffs(payload['tarifs'])
+            grid = validate_tariffs(tariffs)
             # La grille exacte reste consultable : le devis se recalcule à l'identique.
             db.execute('INSERT OR IGNORE INTO atelier_grilles VALUES (?,?,?,?,?)',
                        (document['tarifs_sha256'], grid['version'], grid['origine'], canonical(grid), now()))
@@ -219,6 +277,9 @@ class Commerce:
                 raise Rejected('Seul un brouillon courant peut être émis.')
             if not doc['emettable']:
                 raise Rejected('Émission impossible : ' + ' '.join(doc['bloquants_emission']))
+            current = self._current_row(db)
+            if current and current['sha256'] != doc['tarifs_sha256']:
+                raise Rejected('La grille courante a changé depuis ce calcul : recalculer le devis avec la grille courante avant de l’émettre.')
             today = self.today()
             days = (date.fromisoformat(doc['valide_jusqu_au']) - date.fromisoformat(doc['date_calcul'])).days
             issued = {**doc, 'statut': 'emis', 'emis_le': today.isoformat(),
@@ -439,6 +500,12 @@ class Commerce:
             calibration = self._calibration(db)
             versions = db.execute('SELECT * FROM atelier_devis ORDER BY numero DESC, version DESC LIMIT 400').fetchall()
             commandes = [dict(r) for r in db.execute('SELECT id, numero, version, accepte_le, etat FROM atelier_commandes ORDER BY accepte_le DESC LIMIT 200')]
+            current = self._current_row(db)
+        grid_now = None
+        if current:
+            g = json.loads(current['grille_json'])
+            grid_now = {'sha256': current['sha256'], 'version': g['version'], 'declare_par': g.get('declare_par'), 'declare_le': g.get('declare_le'),
+                        'intacte': digest(g) == current['sha256'], 'bloquants_grille': grid_blockers(g)}
         quotes, seen = [], set()
         for row in versions:
             doc = json.loads(row['document_json'])
@@ -447,10 +514,12 @@ class Commerce:
                            'etat': self._state(row, doc) if intact else 'altere', 'courant': row['numero'] not in seen,
                            'document_sha256': row['document_sha256'], 'titre': doc.get('titre'), 'totaux': doc.get('totaux'),
                            'emettable': doc.get('emettable'), 'bloquants_emission': doc.get('bloquants_emission'),
-                           'valide_jusqu_au': doc.get('valide_jusqu_au'), 'envoye_le': row['envoye_le'], 'grille': doc.get('grille')})
+                           'valide_jusqu_au': doc.get('valide_jusqu_au'), 'envoye_le': row['envoye_le'], 'grille': doc.get('grille'),
+                           'grille_a_jour': None if not grid_now or (doc.get('grille') or {}).get('origine') != 'declare'
+                           else doc.get('tarifs_sha256') == grid_now['sha256']})
             seen.add(row['numero'])
         return {'schema': 'bojart.atelier.commerce.v1', 'demandes': demandes, 'devis': quotes, 'commandes': commandes,
-                'entonnoir': self.funnel(every), 'calibration': calibration,
+                'entonnoir': self.funnel(every), 'calibration': calibration, 'grille_courante': grid_now,
                 'compteurs': {'demandes': len(every), 'demandes_ouvertes': sum(d['etat'] in OUVERTES for d in every)}}
 
     @staticmethod

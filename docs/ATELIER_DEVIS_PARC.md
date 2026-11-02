@@ -22,6 +22,9 @@ Le même cookie de session, le contrôle d'origine, la limite de 8 Kio par requ�
 - Lignes : matière (avec pertes), temps machine, provision de reprise, main-d'œuvre (par lot ou par exemplaire), frais. Chaque ligne est arrondie au centime ; les totaux sont des sommes de lignes arrondies (calcul en `Decimal`).
 - Estimations acceptées : métadonnées d'un G-code ASCII PrusaSlicer, OrcaSlicer ou Bambu Studio ; estimation géométrique résine depuis un STL ; ou mesure saisie. Une pièce FDM exige un tranchage. Un fichier tranché avec un profil de simulation bloque l'émission.
 - TVA : `assujetti` (avec taux), `franchise_293B` (mention « TVA non applicable, art. 293 B du CGI ») ou `a_definir`. Sans régime, le TTC n'est pas calculé. Une valeur manquante n'est jamais remplacée par zéro.
+- **Grille déclarée** : le formulaire « Déclarer la grille de BOJ.ART » remplace l'édition du JSON. Il demande version, déclarant, date, validité, matières (prix HT et source), coût machine, pertes et provision de reprise par procédé, main-d'œuvre, marge, commission, TVA et émetteur. Les pourcentages se saisissent en % (30, 27,5) et sont convertis sans arrondi flottant. Chaque déclaration crée une version : empreinte SHA-256, historique, et un libellé de version ne peut pas désigner deux contenus. Une déclaration concurrente est refusée (empreinte lue exigée). Le statut affiche ce qui manque encore pour émettre.
+- Le chiffrage choisit la grille : déclarée courante (par son empreinte, relue et vérifiée en base), exemple (essai jamais émis) ou JSON collé (avancé). Un brouillon calculé avec une grille déclarée remplacée depuis porte « grille remplacée : recalculer » et son émission est refusée ; la révision le recalcule avec la grille courante. Un devis déjà émis garde sa grille.
+- SIRET : 14 chiffres et clé de contrôle (Luhn sur le SIRET et le SIREN ; La Poste, SIREN 356000000 hors siège : somme des chiffres multiple de 5), même règle que la bibliothèque python-stdnum 2.1. Une clé juste détecte une faute de frappe ; elle ne prouve pas que l'établissement existe (répertoire SIRENE de l'INSEE, non consulté).
 - Émission impossible tant que : grille d'exemple, régime de TVA inconnu, émetteur absent (raison sociale, adresse, SIRET), délai absent, estimation de simulation. La liste des bloquants s'affiche sur le devis.
 - Versions : numérotation `DV-AAAA-NNNN`. Un devis émis est figé : document, grille, entrée et calcul ont chacun leur SHA-256. Une modification produit la version suivante et remplace la précédente. Un document altéré en base est signalé « altéré » et refusé.
 - Envoi déclaré : refusé si la date d'envoi dépasse la validité. Un devis émis passé sa validité s'affiche « expiré », envoyé ou non.
@@ -57,7 +60,9 @@ Les tables atelier vivent dans la base des missions et suivent la sauvegarde glo
 
 ## À fournir par BOJ.ART avant un premier devis réel
 
-1. Grille déclarée : prix matières, coût horaire par procédé, taux de main-d'œuvre, pertes, provision de reprise, marge, commission, durée de validité. Déclarant et date sont exigés.
+Tout se saisit dans le formulaire « Déclarer la grille de BOJ.ART » de la page `/atelier` :
+
+1. Grille : prix matières (avec leur source), coût horaire par procédé, taux de main-d'œuvre, pertes, provision de reprise, marge, commission, durée de validité. Déclarant et date sont exigés.
 2. Régime de TVA et, s'il y a lieu, le taux.
 3. Émetteur : raison sociale, adresse, SIRET.
 4. Relecture des mentions obligatoires du devis par la personne responsable. Les pages officielles (DGCCRF, service-public) ont renvoyé 403 ou une redirection hors sujet le 2 novembre : elles ne sont pas relues ici.
@@ -85,6 +90,7 @@ Ordre proposé : une machine identifiée, lecture d'état seule, avec opérateur
 - PrusaLink : https://github.com/prusa3d/Prusa-Link-Web/blob/f7fa76d8aca68d78e68151b4ed4fe38de28ff2ca/spec/openapi.yaml (repérée, non relue).
 - PrusaSlicer, cas de test : https://raw.githubusercontent.com/prusa3d/PrusaSlicer/master/resources/test_data/test_vase.gcode (10 lignes de métadonnées extraites, provenance dans `jarvis/tests/fixtures/atelier/PROVENANCE.json`).
 - Mentions du devis : https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/devis (403, non relue).
+- Clé du SIRET : `stdnum/fr/siret.py` de python-stdnum 2.1 (archive source PyPI `python_stdnum-2.1.tar.gz`, SHA-256 `6b01645969eb3dfd55061a0114d593753cd9e653cea9083198b7eea12644397a`), lu le 2 novembre ; ses vecteurs `73282932000074` (valide) et `73282932000079` (refusé) sont repris dans les tests. Aucune dépendance ajoutée.
 
 ## Preuves
 

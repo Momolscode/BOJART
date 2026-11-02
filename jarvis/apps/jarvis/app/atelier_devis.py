@@ -83,6 +83,36 @@ def keys(raw, name, required, optional=()):
 
 # --- Grille tarifaire ------------------------------------------------------------------
 
+def _luhn(digits):
+    total = 0
+    for index, char in enumerate(reversed(digits)):
+        value = int(char) * (2 if index % 2 else 1)
+        total += value - 9 if value > 9 else value
+    return total % 10 == 0
+
+
+def siret_ok(number):
+    """Clé de contrôle du SIRET, même règle que python-stdnum 2.1 (``stdnum/fr/siret.py``) :
+    Luhn sur les 14 chiffres et sur le SIREN ; établissements de La Poste (SIREN 356000000,
+    hors siège 35600000000048) : somme des chiffres multiple de 5. Une clé juste détecte une
+    faute de frappe ; elle ne prouve pas que l'établissement existe (répertoire SIRENE)."""
+    if number.startswith('356000000') and number != '35600000000048':
+        return sum(map(int, number)) % 5 == 0
+    return _luhn(number) and _luhn(number[:9])
+
+
+def grid_blockers(tariffs):
+    """Ce qui, dans la grille seule, empêche d'émettre un devis."""
+    out = []
+    if tariffs['tva']['regime'] == 'a_definir':
+        out.append('Régime de TVA de BOJ.ART à déclarer (assujetti ou franchise) : total TTC non calculé.')
+    if tariffs['origine'] == 'exemple':
+        out.append('Grille tarifaire d’exemple : aucun prix réel de BOJ.ART.')
+    if 'emetteur' not in tariffs:
+        out.append('Identité de l’émetteur (raison sociale, adresse, SIRET) absente.')
+    return out
+
+
 def validate_tariffs(raw):
     keys(raw, 'Grille tarifaire', {'schema', 'version', 'origine', 'devise', 'matieres', 'machines', 'main_oeuvre',
                                     'pertes_matiere', 'provision_reprise', 'marge', 'commission', 'tva', 'validite_jours'},
@@ -143,6 +173,8 @@ def validate_tariffs(raw):
         siret = text(e['siret'], 'SIRET', 14)
         if not re.fullmatch(r'[0-9]{14}', siret):
             raise Rejected('SIRET : 14 chiffres.')
+        if not siret_ok(siret):
+            raise Rejected('SIRET : clé de contrôle invalide, vérifier la saisie.')
         out['emetteur'] = {'raison_sociale': text(e['raison_sociale'], 'Raison sociale', 160),
                            'adresse': text(e['adresse'], 'Adresse', 300), 'siret': siret}
         if 'contact' in e:
@@ -297,13 +329,7 @@ def compute(entry, tariffs, *, today=None):
     for fee in entry['frais']:
         add('frais', fee['id'], fee['libelle'], 'montant déclaré', Decimal(fee['montant_ht']))
     regime = tariffs['tva']['regime']
-    blockers = [m['detail'] for m in missing]
-    if regime == 'a_definir':
-        blockers.append('Régime de TVA de BOJ.ART à déclarer (assujetti ou franchise) : total TTC non calculé.')
-    if tariffs['origine'] == 'exemple':
-        blockers.append('Grille tarifaire d’exemple : aucun prix réel de BOJ.ART.')
-    if 'emetteur' not in tariffs:
-        blockers.append('Identité de l’émetteur (raison sociale, adresse, SIRET) absente.')
+    blockers = [m['detail'] for m in missing] + grid_blockers(tariffs)
     if 'delai_jours' not in entry:
         blockers.append('Délai de réalisation à indiquer.')
     if any(h['nature'] == 'profil_simulation' for h in hypotheses):

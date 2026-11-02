@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'apps/jarvis/app'))
 from core import Store, Rejected, IntegrityError
 from atelier_estimation import duration_seconds, parse_slicer_metadata, slicer_estimate, stl_geometry, resin_estimate
-from atelier_devis import compute, digest, MENTION_293B
+from atelier_devis import compute, digest, siret_ok, validate_tariffs, MENTION_293B
 from atelier_commerce import Commerce
 from atelier_parc import Parc
 from atelier_document import client_lines, render_quote
@@ -31,7 +31,7 @@ def tariffs(**changes):
 
 def declared(**changes):
     base = {'origine': 'declare', 'declare_par': 'Olsen', 'declare_le': '2026-11-02', 'tva': {'regime': 'assujetti', 'taux': '0.20'},
-            'emetteur': {'raison_sociale': 'Atelier de test', 'adresse': '1 rue de l’Essai', 'siret': '12345678901234'}}
+            'emetteur': {'raison_sociale': 'Atelier de test', 'adresse': '1 rue de l’Essai', 'siret': '12345678200010'}}
     base.update(changes)
     return tariffs(**base)
 
@@ -205,6 +205,18 @@ class QuoteTests(unittest.TestCase):
         self.assertFalse(doc['emettable'])
         self.assertTrue(any('simulation' in b for b in doc['bloquants_emission']))
 
+    def test_siret_check_key(self):
+        # Vecteurs de python-stdnum 2.1 (stdnum/fr/siret.py) : 73282932000074 valide, 73282932000079 refusé.
+        self.assertTrue(siret_ok('73282932000074'))
+        self.assertFalse(siret_ok('73282932000079'))
+        # La Poste : siège en Luhn, établissements en somme des chiffres multiple de 5 (3+5+6+4+9+8+3+7 = 45).
+        self.assertTrue(siret_ok('35600000000048'))
+        self.assertTrue(siret_ok('35600000049837'))
+        self.assertFalse(siret_ok('35600000049838'))
+        for siret, error in (('73282932000079', 'clé de contrôle invalide'), ('7328293200007', '14 chiffres'), ('7328293200007A', '14 chiffres')):
+            with self.assertRaisesRegex(Rejected, error):
+                validate_tariffs(declared(emetteur={'raison_sociale': 'X', 'adresse': 'Y', 'siret': siret}))
+
     def test_deterministic_and_strict(self):
         self.assertEqual(digest(compute(entry(), declared(), today=TODAY)), digest(compute(entry(), declared(), today=TODAY)))
         for grid, why in ((declared(marge='0.7', commission='0.3'), 'marge \\+ commission'), (declared(declare_par=''), 'qui l’a renseignée'),
@@ -329,6 +341,56 @@ class CommerceTests(unittest.TestCase):
         b = self.c.calculate({'request_id': 'essai-calc-n2', 'entree': entry(), 'tarifs': declared()})
         self.assertEqual((a['numero'], b['numero']), ('DV-2026-0001', 'DV-2026-0002'))
 
+    def declare(self, rid, expected=None, **kw):
+        return self.c.declare_grid({'request_id': 'essai-grille-' + rid, 'grille': declared(**kw), 'courante_attendue': expected})
+
+    def test_declared_grid_becomes_current_and_quotes_reference_it(self):
+        self.assertEqual(self.c.current_grid(), {'grille': None, 'sha256': None, 'historique': []})
+        d = self.declare('g1', version='bojart-2026-11')
+        self.assertEqual((d['sha256'], d['bloquants_grille'], d['rang']), (digest(validate_tariffs(declared(version='bojart-2026-11'))), [], 1))
+        current = self.c.current_grid()
+        self.assertEqual((current['sha256'], current['grille']['declare_par'], len(current['historique'])), (d['sha256'], 'Olsen', 1))
+        q = self.c.calculate({'request_id': 'essai-calc-par-empreinte', 'entree': entry(), 'tarifs_sha256': d['sha256']})
+        self.assertEqual(self.c.quote(q['numero'], 1)['document']['tarifs_sha256'], d['sha256'])
+        self.assertEqual(q['totaux'], compute(entry(), declared(version='bojart-2026-11'), today=TODAY)['totaux'])
+        self.c.issue({'request_id': 'essai-emit-empreinte', 'numero': q['numero'], 'version': 1, 'document_sha256': q['document_sha256'], 'destinataire': 'Client'})
+        self.assertEqual(self.c.overview()['grille_courante']['version'], 'bojart-2026-11')
+        for bad, error in (({'tarifs': declared(), 'tarifs_sha256': d['sha256']}, 'tarifs ou tarifs_sha256'), ({}, 'tarifs ou tarifs_sha256'),
+                           ({'tarifs_sha256': SHA_B}, 'Grille inconnue')):
+            with self.assertRaisesRegex(Rejected, error):
+                self.c.calculate({'request_id': 'essai-calc-mauvaise-grille', 'entree': entry(), **bad})
+
+    def test_grid_declaration_is_guarded(self):
+        with self.assertRaisesRegex(Rejected, 'Seule une grille d’origine « declare »'):
+            self.c.declare_grid({'request_id': 'essai-grille-exemple', 'grille': tariffs(), 'courante_attendue': None})
+        with self.assertRaisesRegex(Rejected, 'Date de déclaration dans le futur'):
+            self.declare('futur', declare_le='2026-11-03')
+        d = self.declare('g1', version='v1')
+        self.assertTrue(self.declare('g1', version='v1')['replayed'])
+        with self.assertRaisesRegex(Rejected, 'La grille courante a changé depuis ta lecture'):
+            self.declare('perime', None, version='v2', marge='0.35')
+        with self.assertRaisesRegex(Rejected, 'Grille identique à la grille courante'):
+            self.declare('identique', d['sha256'], version='v1')
+        with self.assertRaisesRegex(Rejected, 'Cette version de grille désigne déjà un autre contenu'):
+            self.declare('meme-version', d['sha256'], version='v1', marge='0.35')
+        v2 = self.declare('g2', d['sha256'], version='v2', marge='0.35')
+        back = self.declare('retour', v2['sha256'], version='v1')  # revenir à une grille antérieure reste possible
+        self.assertEqual((back['sha256'], back['rang']), (d['sha256'], 3))
+        self.assertEqual([h['version'] for h in self.c.current_grid()['historique']], ['v1', 'v2', 'v1'])
+
+    def test_a_draft_computed_with_a_replaced_grid_cannot_be_issued(self):
+        trial = self.c.calculate({'request_id': 'essai-calc-exemple-g', 'entree': entry(), 'tarifs': tariffs()})
+        g1 = self.declare('g1', version='v1')
+        old = self.c.calculate({'request_id': 'essai-calc-ancienne', 'entree': entry(), 'tarifs_sha256': g1['sha256']})
+        g2 = self.declare('g2', g1['sha256'], version='v2', marge='0.35')
+        fresh = self.c.calculate({'request_id': 'essai-calc-nouvelle', 'entree': entry(), 'tarifs_sha256': g2['sha256']})
+        # Un essai sur la grille d'exemple n'est pas « périmé » : il n'est simplement jamais émettable.
+        self.assertEqual({q['numero']: q['grille_a_jour'] for q in self.c.overview()['devis']},
+                         {trial['numero']: None, old['numero']: False, fresh['numero']: True})
+        with self.assertRaisesRegex(Rejected, 'La grille courante a changé depuis ce calcul'):
+            self.c.issue({'request_id': 'essai-emit-ancienne', 'numero': old['numero'], 'version': 1, 'document_sha256': old['document_sha256'], 'destinataire': 'C'})
+        self.c.issue({'request_id': 'essai-emit-nouvelle', 'numero': fresh['numero'], 'version': 1, 'document_sha256': fresh['document_sha256'], 'destinataire': 'C'})
+
     def sent_and_accepted(self, q, i, rid='q1', sent=TODAY, accepted=TODAY):
         self.c.mark_sent({'request_id': 'essai-sent-' + rid, 'numero': q['numero'], 'version': q['version'], 'document_sha256': i['document_sha256'],
                           'moyen': 'e-mail', 'envoye_le': sent.isoformat()})
@@ -430,7 +492,7 @@ class QuoteDocumentTests(unittest.TestCase):
                  'destinataire': 'Client, 2 rue du Test'})
         page = render_quote(c.quote(q['numero'], 1))
         self.assertNotIn('DOCUMENT DE TRAVAIL', page)
-        for expected in ('Client, 2 rue du Test', 'Atelier de test', '12345678901234', 'Valable jusqu’au 2 décembre 2026', 'Bon pour accord'):
+        for expected in ('Client, 2 rue du Test', 'Atelier de test', '12345678200010', 'Valable jusqu’au 2 décembre 2026', 'Bon pour accord'):
             self.assertIn(expected, page)
 
 
@@ -627,6 +689,26 @@ class WorkspaceAndHttpTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertIn('DOCUMENT DE TRAVAIL'.encode(), page)
         self.assertEqual(self.call('GET', '/atelier/devis/imprimer?numero=DV-2026-0001&version=1', cookie=False)[0], 401)
+
+    def test_grid_routes(self):
+        self.assertEqual(self.call('GET', '/api/atelier/grille-courante', cookie=False)[0], 401)
+        self.assertEqual(self.call('GET', '/api/atelier/grille-courante'), (200, {'grille': None, 'sha256': None, 'historique': []}))
+        self.call('POST', '/api/atelier/demo', {})
+        # La démonstration a enregistré la grille d'exemple : son libellé de version ne peut pas désigner un autre contenu.
+        status, d = self.call('POST', '/api/atelier/grille/declarer', {'request_id': 'essai-http-grille-0', 'grille': declared(), 'courante_attendue': None})
+        self.assertEqual(status, 409)
+        self.assertIn('nouveau libellé de version', d['error'])
+        status, d = self.call('POST', '/api/atelier/grille/declarer', {'request_id': 'essai-http-grille', 'grille': declared(version='bojart-2026-11'),
+                                                                       'courante_attendue': None})
+        self.assertEqual((status, d['bloquants_grille']), (200, []), d)
+        status, current = self.call('GET', '/api/atelier/grille-courante')
+        self.assertEqual((status, current['sha256']), (200, d['sha256']))
+        self.assertEqual(self.call('GET', '/api/atelier/grille-courante?x=1')[0], 409)
+        e = entry(dossier_id='BOJ-DEMO-ATELIER')
+        status, q = self.call('POST', '/api/atelier/devis/calculer', {'request_id': 'essai-http-calc', 'entree': e, 'tarifs_sha256': d['sha256']})
+        self.assertEqual((status, q['emettable']), (200, True), q)
+        status, state = self.call('GET', '/api/atelier/etat')
+        self.assertEqual(state['commerce']['grille_courante']['sha256'], d['sha256'])
 
     def test_backup_restore_keeps_quotes_and_revokes_machine_rights(self):
         from workspace_state import restore_snapshot

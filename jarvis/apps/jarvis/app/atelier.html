@@ -19,7 +19,26 @@
 
 <section class="panel"><p class="eyebrow">02 / DEVIS</p><h2>Un calcul expliqué,<br><em>une version figée.</em></h2>
 <p class="help">Prix HT = coût de revient / (1 − marge − commission), comme le chiffrage de l’Atelier V11. Une valeur manquante n’est jamais comptée zéro.</p>
-<div id="devis" class="list"></div><div id="devisDetail"></div>
+<h3 class="sub">Grille tarifaire</h3><div id="grilleEtat" class="list"></div>
+<details id="grilleBox"><summary>Déclarer la grille de BOJ.ART</summary><form id="newGrille" class="grid">
+<p class="help wide">Chaque déclaration crée une version : un devis émis garde la sienne. Un brouillon calculé avec une grille remplacée doit être recalculé avant émission. Nombres en écriture française acceptés (25,50).</p>
+<label>Version<input id="gVersion" required maxlength="80" placeholder="nouveau libellé, ex. bojart-2026-11"></label>
+<label>Déclarée par<input id="gPar" required maxlength="120" placeholder="qui fournit ces chiffres"></label>
+<label>Le<input id="gLe" type="date" required></label>
+<label>Validité d’un devis (jours)<input id="gValidite" type="number" min="1" max="365" required placeholder="ex. 30"></label>
+<fieldset class="wide"><legend>Matières : prix HT au kg (FDM) ou au litre (résine), avec leur source</legend><div id="gMats"></div><button id="gAddMat" class="secondary" type="button">Ajouter une matière</button></fieldset>
+<fieldset class="wide"><legend>Par procédé : laisser vide un procédé non utilisé</legend><div id="gProcs"></div></fieldset>
+<label>Main-d’œuvre (€ HT de l’heure)<input id="gTaux" required inputmode="decimal" placeholder="ex. 35"></label>
+<label>Marge (taux de marque, % du prix HT)<input id="gMarge" required inputmode="decimal" placeholder="ex. 30"></label>
+<label>Commission (% du prix HT)<input id="gCommission" required inputmode="decimal" placeholder="0 si aucune"></label>
+<label>Régime de TVA<select id="gTva"><option value="a_definir">à définir (TTC non calculé, émission bloquée)</option><option value="assujetti">assujetti à la TVA</option><option value="franchise_293B">franchise en base (art. 293 B du CGI)</option></select></label>
+<label>Taux de TVA (%)<input id="gTvaTaux" inputmode="decimal" placeholder="assujetti seulement, ex. 20"></label>
+<fieldset class="wide grid"><legend>Émetteur imprimé sur le devis (les trois premiers champs ensemble)</legend>
+<label>Raison sociale<input id="gRs" maxlength="160"></label><label>SIRET<input id="gSiret" inputmode="numeric" maxlength="20" placeholder="14 chiffres, clé contrôlée"></label>
+<label class="wide">Adresse<input id="gAdr" maxlength="300"></label><label class="wide">Contact (facultatif)<input id="gContact" maxlength="160"></label></fieldset>
+<label class="wide">Note (facultatif)<input id="gNote" maxlength="500"></label>
+<button class="primary" type="submit">Déclarer cette grille</button></form></details>
+<h3 class="sub">Devis</h3><div id="devis" class="list"></div><div id="devisDetail"></div>
 <h3 class="sub">Commandes : prévu / réel</h3><p class="help">Un relevé = une pièce imprimée, mesurée par l’opérateur. Les résultats simulés sont affichés à part et n’entrent pas dans l’écart ; la grille n’est jamais recalée automatiquement.</p>
 <div id="calibration" class="funnel"></div><div id="commandes" class="list"></div><div id="commandeDetail"></div>
 <details id="newDevisBox"><summary>Chiffrer un dossier</summary><form id="newDevis" class="grid">
@@ -31,7 +50,8 @@
 <fieldset class="wide"><legend>Pièces</legend><div id="pieces"></div><button id="addPiece" class="secondary" type="button">Ajouter une pièce</button></fieldset>
 <fieldset class="wide"><legend>Main-d’œuvre</legend><div id="ops"></div><button id="addOp" class="secondary" type="button">Ajouter une opération</button></fieldset>
 <fieldset class="wide"><legend>Frais</legend><div id="fees"></div><button id="addFee" class="secondary" type="button">Ajouter un frais</button></fieldset>
-<label class="wide">Grille tarifaire (JSON bojart.tarifs.v1)<textarea id="qGrille" rows="6" spellcheck="false"></textarea><small>Chargée avec la grille d’exemple : elle permet le calcul, jamais l’émission. Remplace-la par ta grille déclarée.</small></label>
+<label class="wide">Grille tarifaire<select id="qGrilleSel"></select></label>
+<details class="wide"><summary>Grille en JSON (avancé)</summary><label>Utilisée seulement avec « JSON collé »<textarea id="qGrille" rows="6" spellcheck="false"></textarea></label></details>
 <button class="primary" type="submit">Calculer le brouillon</button></form></details></section>
 
 <section class="panel"><p class="eyebrow">03 / PARC D’IMPRIMANTES</p><h2>Autoriser par machine,<br><em>action par action.</em></h2>

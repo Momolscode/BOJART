@@ -23,3 +23,6 @@ details{margin-top:14px}summary{cursor:pointer;font-size:13px}.intro aside butto
 .grid>button.primary{grid-column:1/-1}
 .item>small{display:block}
 h3.sub{margin:28px 0 4px;font-size:15px;letter-spacing:.04em}
+.row label.field{display:flex;flex-direction:column;gap:4px;font-size:inherit;color:inherit;flex:1 1 130px;min-width:0}.row label.field>span{font-size:11px;color:var(--muted)}
+.row label.field input,.row label.field select{flex:none;width:100%;box-sizing:border-box}
+.row.proc strong{flex:0 0 64px;align-self:center}

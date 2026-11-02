@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12946,
-      "sha256": "a8718f29f50e764b7786a77982e7ac4ff7b3550e18287f962a8f98650d54f778"
+      "bytes": 13110,
+      "sha256": "bbf58e271706ae808c6acefe8fde789e28b46eb9eac2d25734927db507cc19fa"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 45350,
-      "sha256": "20dd4c60727ff21f8c479fa4521c9f59facaa1019447ab8090c956a30c21ac13"
+      "bytes": 46330,
+      "sha256": "1399d7a80816b80e816ca80a712f13bc9eed2546018ad1466e8bd09e1302b0c0"
     },
     {
       "path": "creative/CURRENT.md",
@@ -529,8 +529,8 @@
     },
     {
       "path": "docs/ATELIER_DEVIS_PARC.md",
-      "bytes": 11509,
-      "sha256": "d7566f63387f442fa6be18d0c0020cb87d37543fe713491d148d625eeae2b1b0"
+      "bytes": 13323,
+      "sha256": "a7e09a331c7d673ce06cb06e0ea2b7662f83c8dc2a1453e158d5343ee95ed4f7"
     },
     {
       "path": "docs/AUDIT_CONTINU_2026-11-01.md",
@@ -1399,28 +1399,28 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier.css",
-      "bytes": 3246,
-      "sha256": "ab4ea90cdddcb07829e85e834fa9141fa7653ae0aa932766136f90b927c85cf9"
+      "bytes": 3563,
+      "sha256": "8d84574257d2de71bd15a4d6cf21e719c5c5b90cbaceb25b9758393fafd73f25"
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier.html",
-      "bytes": 7277,
-      "sha256": "eb93933371c34ad59e8ccf953a55fa5213908265356c2cff53d6fa2bc1d2f927"
+      "bytes": 9878,
+      "sha256": "d14d2f2a1b644a30a4b815893ae48468da5b66707224626f05882ed4fb9c5ccb"
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier.js",
-      "bytes": 27161,
-      "sha256": "c7b8af3e4ad922496a412e11dafe0c3aad773a4620414a72f990c18f73508b44"
+      "bytes": 35571,
+      "sha256": "00d1dde278ac990cc7bd7e16381c31ae748e3382af8a494c9ce715086fc2e9b9"
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier_commerce.py",
-      "bytes": 30580,
-      "sha256": "36d080e27f662493f495f3d046ec2bbd00f7825a2af303f6ce55f0242211c953"
+      "bytes": 35730,
+      "sha256": "17929df76d05caa6f8720015da3808f13ec8644f68d5b37b4fd53064d9fabce3"
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier_devis.py",
-      "bytes": 19823,
-      "sha256": "d3ddc172c7d45b279f7d9956898207e727f437d5c9722fb2ba8806f9f383f7a7"
+      "bytes": 20882,
+      "sha256": "78bd6ea18b73f3e4ba78d3fa11a73662632e316873b21ec8207cac618a8ce7f9"
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier_document.py",
@@ -1434,8 +1434,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier_http.py",
-      "bytes": 8110,
-      "sha256": "bb94983159873cf44c2f67861361374946a03824792074480a9f6b82f3a5cdc2"
+      "bytes": 8424,
+      "sha256": "7a44a35ee44fb86c04fa3b7fb4705e00e4c65f77edf111ae0ee80c09578e8777"
     },
     {
       "path": "jarvis/apps/jarvis/app/atelier_parc.py",
@@ -2649,8 +2649,8 @@
     },
     {
       "path": "jarvis/tests/test_atelier.py",
-      "bytes": 41581,
-      "sha256": "9f3884d08a9e21c4b3b79386c2c0ed457942c709e431f7a4d87dd9950331096f"
+      "bytes": 48509,
+      "sha256": "a4119ae7a9c979c27336fac5823382b676b9d6731a1888d7b4dc0d03e9f44f8c"
     },
     {
       "path": "jarvis/tests/test_connection_lifetime.py",

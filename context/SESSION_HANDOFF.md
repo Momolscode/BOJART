@@ -275,3 +275,11 @@ Ajouts :
 Tests : `test_atelier` 42/42 ; `jarvis/tests` 322 avec les 3 mêmes échecs que `main` ; `tests` 102, `tests_agent` 236, `tests_ops` 98, `tests_workflows` 20, Node 30. Parcours Chromium sans erreur console, PDF A4 d'une page. Détail : `docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json` (section `ameliorations_soir`).
 
 Limites inchangées : aucun prix, régime de TVA ni émetteur réels ; mentions légales non relues ; aucun connecteur d'imprimante.
+
+Suite du soir : la grille tarifaire se déclare par un formulaire (plus de JSON à la main) :
+- chaque déclaration est versionnée par empreinte, avec historique ; une déclaration concurrente est refusée ;
+- le chiffrage désigne la grille courante par son empreinte ;
+- un brouillon calculé avec une grille remplacée est signalé et son émission refusée ;
+- le SIRET de l'émetteur est contrôlé par sa clé (règle de python-stdnum 2.1, La Poste comprise).
+
+Tests : `test_atelier` 47/47, dont 5 nouveaux qui échouaient avant ; `jarvis/tests` 327 avec les 3 mêmes échecs que `main`. Parcours Chromium : SIRET faux refusé, deux versions de grille, brouillon périmé bloqué, révision, émission, PDF A4 d'une page. Banc #17 sur la fusion, trois passages : seul l'effectif des tests atelier change ; la répartition 429 / « EN ATTENTE » du scénario concurrent varie déjà de 2 à 8 refus sur le banc seul. Détail : `VALIDATION.json`, section `grille_declaree`.
