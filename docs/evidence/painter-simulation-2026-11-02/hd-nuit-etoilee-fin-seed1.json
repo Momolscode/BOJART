@@ -1,0 +1,134 @@
+{
+  "command": "hd",
+  "image": {
+    "sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+    "path_in_git": false
+  },
+  "style": "fin",
+  "seed": 1,
+  "requested_strokes": 16000,
+  "log": [
+    {
+      "batch": 1,
+      "strokes": 1474,
+      "mse": 0.01978,
+      "psnr_db": 17.04,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 26.2
+    },
+    {
+      "batch": 2,
+      "strokes": 2576,
+      "mse": 0.01788,
+      "psnr_db": 17.48,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 48.0
+    },
+    {
+      "batch": 3,
+      "strokes": 3960,
+      "mse": 0.0165,
+      "psnr_db": 17.82,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 66.3
+    },
+    {
+      "batch": 4,
+      "strokes": 5579,
+      "mse": 0.01537,
+      "psnr_db": 18.13,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 82.9
+    },
+    {
+      "batch": 5,
+      "strokes": 7389,
+      "mse": 0.01428,
+      "psnr_db": 18.45,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 99.7
+    },
+    {
+      "batch": 6,
+      "strokes": 9287,
+      "mse": 0.01326,
+      "psnr_db": 18.77,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 116.3
+    },
+    {
+      "batch": 7,
+      "strokes": 11243,
+      "mse": 0.01232,
+      "psnr_db": 19.1,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 131.6
+    },
+    {
+      "batch": 8,
+      "strokes": 13236,
+      "mse": 0.01146,
+      "psnr_db": 19.41,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 145.8
+    }
+  ],
+  "strokes": 13236,
+  "final_mse": 0.01146,
+  "psnr_db": 19.41,
+  "hidden": {
+    "width_gain": 1.15,
+    "opacity": 0.82
+  },
+  "learned": {
+    "width_gain": 1.15,
+    "opacity": 0.8
+  },
+  "grid_px": [
+    450,
+    281
+  ],
+  "mm_per_px": 2.0,
+  "runtime": {
+    "seconds": 146.16,
+    "python": "3.13.18",
+    "platform": "Linux",
+    "fingerprints": {
+      "bojart_painter/arms.py": "9f7a60bba19e83ff5a76a0b940f49f192a1ec12781c3eec5494e1938c99e8493",
+      "bojart_painter/canvas.py": "7801661034bb1900e8bd3ba17a714d20c4d7420fd3ded35ebdd1b83f6b5ed422",
+      "bojart_painter/coupon.py": "441a0ea64e4b0d6473a0b1e811ab194c8a83f1c27eb2a1cc60642f7e1a7ca7a4",
+      "bojart_painter/hd.py": "21cd7466aea6e9c3846fe3c8a277f5bbb01353987adf3db9828353487999c637",
+      "bojart_painter/loop.py": "b021f1bfc8230438678a97fd3025ee38e7640fc09afc6bafa35b9e1ce2045e4a",
+      "bojart_painter/planner.py": "dd8a4cb430f3efa9cb53563ace27f6d116d3a4130f7c09368fcf3990bafe23e1",
+      "bojart_painter/targets.py": "e4110c6e65988c38ca0fad06ce2973f163ec73650098648199012d1518945676",
+      "bojart_painter/__main__.py": "12109de063eee40b85e9f31a8a7323983774ffd53841b944a9588eeb67b08d8d",
+      "configs/painter/arms.json": "8be12cc5143764aaa722f0f7db89e7890abf66feb50cac15cab85d07b4f40e42",
+      "configs/painter/styles.json": "1758b6e7ad09b9f45371e2691aa56b4fa29085f23aeecc4a4ff67bbfa439f4b0"
+    },
+    "limits": "Simulation logicielle ; aucun bras, pinceau, peinture ni coupon réel mesuré."
+  }
+}

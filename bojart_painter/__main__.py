@@ -16,7 +16,7 @@ from .loop import compare_open_closed, run_painting_loop
 from .targets import SYNTHETIC, load_ppm, make_target, save_ppm
 
 STYLES_PATH = ROOT / 'configs/painter/styles.json'
-CODE = ['bojart_painter/' + p for p in ('arms.py', 'canvas.py', 'coupon.py', 'loop.py', 'planner.py', 'targets.py', '__main__.py')]
+CODE = ['bojart_painter/' + p for p in ('arms.py', 'canvas.py', 'coupon.py', 'hd.py', 'loop.py', 'planner.py', 'targets.py', '__main__.py')]
 
 
 def _fingerprints():
@@ -89,10 +89,27 @@ def cmd_coupon(a):
             'strates_budget_mm': STRATES_BUDGET_MM, 'recipe': RECIPE}
 
 
+def cmd_hd(a):
+    from .hd import HDPainter, load_image  # numpy et Pillow requis
+    raw = Path(a.image).read_bytes()
+    target = load_image(a.image, a.width_px)
+    res = HDPainter(target, a.style, a.mm_per_px, a.seed).run(a.strokes)
+    snaps = res.pop('snapshots')
+    if a.save_png:
+        from PIL import Image
+        import numpy as np
+        out = Path(a.save_png); out.mkdir(parents=True, exist_ok=True)
+        Image.fromarray((target * 255).astype('uint8')).save(out / 'cible.png')
+        for k, v in snaps.items():
+            Image.fromarray((np.clip(v, 0, 1) * 255).astype('uint8')).save(out / f'{a.style}-{k:06d}.png')
+    return {'command': 'hd', 'image': {'sha256': hashlib.sha256(raw).hexdigest(), 'path_in_git': False},
+            'style': a.style, 'seed': a.seed, 'requested_strokes': a.strokes, **res}
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog='python -m bojart_painter', description=__doc__)
     sub = p.add_subparsers(dest='cmd', required=True)
-    for name in ('arms', 'simulate', 'coupon'):
+    for name in ('arms', 'simulate', 'coupon', 'hd'):
         s = sub.add_parser(name)
         s.add_argument('--seed', type=int, default=1)
         s.add_argument('--output')
@@ -104,6 +121,13 @@ def main(argv=None):
             s.add_argument('--arm', default='ufactory_xarm6')
         if name == 'coupon':
             s.add_argument('--sigma-divisor', type=float, default=2.0)
+        if name == 'hd':
+            s.add_argument('--image', required=True, help='image locale hors Git (domaine public ou droits vérifiés)')
+            s.add_argument('--style', default='fin', choices=['reproduction', 'fin', 'empattement'])
+            s.add_argument('--strokes', type=int, default=8000)
+            s.add_argument('--width-px', type=int, default=450)
+            s.add_argument('--mm-per-px', type=float, default=2.0)
+            s.add_argument('--save-png', help='dossier hors Git pour les rendus')
         if name == 'simulate':
             s.add_argument('--target', default='synthetic:paysage')
             s.add_argument('--style', nargs='+', default=['reproduction'])
@@ -117,7 +141,7 @@ def main(argv=None):
             s.add_argument('--episodes', help='journal JSONL des touches (hors Git)')
     a = p.parse_args(argv)
     t0 = time.perf_counter()
-    result = {'arms': cmd_arms, 'simulate': cmd_simulate, 'coupon': cmd_coupon}[a.cmd](a)
+    result = {'arms': cmd_arms, 'simulate': cmd_simulate, 'coupon': cmd_coupon, 'hd': cmd_hd}[a.cmd](a)
     result['runtime'] = {'seconds': round(time.perf_counter() - t0, 2), 'python': platform.python_version(),
                          'platform': platform.system(), 'fingerprints': _fingerprints(),
                          'limits': 'Simulation logicielle ; aucun bras, pinceau, peinture ni coupon réel mesuré.'}

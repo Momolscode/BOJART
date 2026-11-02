@@ -8,6 +8,7 @@ Hôte : conteneur Linux, Python 3.13, sans GPU, robot ni caméra. Code : `bojart
 | `simulate-paysage-seed1.json` | `python -m bojart_painter simulate --target synthetic:paysage --style reproduction touches_courtes aplats_geometriques gestuel --compare --seed 1` |
 | `simulate-{paysage,composition}-seed{1,2,3}.json` | `… --style reproduction aplats_geometriques --compare --seed N` |
 | `simulate-paysage-converge-seed1.json` | `… --target synthetic:paysage --style touches_courtes reproduction --until-converged --seed 1` (arrêt sur toile couverte et gain < 2 %) |
+| `hd-nuit-etoilee-fin-seed1.json`, `hd-nuit-etoilee-empattement-seed1.json` | `python -m bojart_painter hd --image <La Nuit étoilée, hors Git> --style fin --strokes 16000` puis `--style empattement --strokes 5000` (numpy 2.5.3, Pillow 12.3.0) |
 | `summary.json` | Agrégat des rapports ci-dessus et leurs SHA-256 |
 
 Les rendus PPM sont restés hors Git ; une planche de la graine 1 a été remise à l'utilisateur hors du dépôt.

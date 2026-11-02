@@ -55,6 +55,7 @@ python -m bojart_painter arms --output rapport-bras.json
 python -m bojart_painter simulate --target synthetic:paysage --style reproduction aplats_geometriques --compare --save-ppm hors-git/
 python -m bojart_painter simulate --target ppm:/chemin/oeuvre-domaine-public.ppm --style reproduction --until-converged --episodes hors-git/episodes.jsonl
 python -m bojart_painter coupon --arm agilex_piper --trials 59
+python -m bojart_painter hd --image /chemin/hors-git/oeuvre-domaine-public.jpg --style fin --strokes 16000 --save-png hors-git/
 python -m unittest discover -s tests_painter -v
 ```
 
@@ -73,6 +74,16 @@ Résultats (3 graines, 200 touches, toile 90 × 65 cm à 10 mm/pixel) :
 - Boucle fermée avec recalage contre plan unique en boucle ouverte : erreur plus basse 3/3 sur paysage/reproduction (−24 %), paysage/aplats et composition/aplats. Sur composition/reproduction, aucune différence nette (1/3).
 - Le recalage pèse surtout sur les aplats larges et opaques ; pour des touches fines, la replanification compense déjà une bonne part de l'erreur.
 - Avec un budget fixe de 200 touches, le style « touches courtes » s'arrêtait avant le ciel. L'option `--until-converged` continue désormais par lots tant qu'il reste de la toile vierge ou que l'erreur baisse d'au moins 2 % par lot (plafond `--max-strokes`). Sur le paysage, graine 1 : touches courtes 2 449 touches, 0 % de toile vierge, PSNR 34,1 dB, environ 2 h 38 de bras estimées ; reproduction 1 300 touches, PSNR 35,5 dB, environ 1 h 46. Rapport : `simulate-paysage-converge-seed1.json`.
+
+## Rendu haute définition (`bojart_painter/hd.py`, numpy facultatif)
+
+Les premiers rendus, à 10 mm par pixel avec 200 touches sur une cible en aplats, ressemblaient à une peinture d'enfant. C'était une limite de la démonstration, pas de la méthode. La version HD reprend la même boucle (monde caché, recalage, replanification par lots) à 2 mm par pixel, avec des pinceaux de 30 mm jusqu'à 2,5 mm, une orientation le long des contours et une texture de poils.
+
+Essai sur *La Nuit étoilée* (1889, domaine public). L'image source est restée hors Git ; seule son empreinte figure dans le rapport. Avec 13 236 touches (PSNR 19,4 dB, contre 17,9 dB pour l'empâtement à 12 couleurs en 4 618 touches), le rendu reproduit composition, couleurs et tourbillons principaux, avec des touches visibles. Le recalage retrouve encore le dépôt caché (1,15 / 0,80 pour 1,15 / 0,82). Les tourbillons fins et le relief de l'empâtement d'origine ne sont pas atteints. Rapports : `hd-nuit-etoilee-*.json`.
+
+C'est le niveau visé pour une œuvre pilote de 90 × 56 cm : une réinterprétation à touches visibles, pas une copie indiscernable. La durée de bras est estimée à 6–9 h pour 10 000 à 13 000 touches, recharges comprises ; c'est une hypothèse de vitesse, pas une mesure.
+
+Le rendu 3D du bras (modèle xArm 7 de MuJoCo Menagerie, toile réduite à 40 × 29 cm) a été produit hors du dépôt. Les modèles Menagerie gardent leur licence propre et ne sont pas versés ici.
 
 ## Limites
 

@@ -186,7 +186,9 @@
     "simulate-paysage-seed1.json": "d3ca0afb014500893e2013e985c2e53877dae499bb4edd80feba2760c361d5af",
     "simulate-paysage-seed2.json": "cea7b42865cbb57032d720c9ee6bf74cf7c8d094ce00104bbc28f1db63b42de9",
     "simulate-paysage-seed3.json": "fe3c5599df90c202bb9329bd10a94196bacf962c9fbde7574cc388028daa6423",
-    "simulate-paysage-converge-seed1.json": "2085efa4daf8c9a7648b583889857da2cd65498b60d62ed3f3e19bc32d5a9e29"
+    "simulate-paysage-converge-seed1.json": "2085efa4daf8c9a7648b583889857da2cd65498b60d62ed3f3e19bc32d5a9e29",
+    "hd-nuit-etoilee-fin-seed1.json": "61baf9252ade5073757abd4a0b7fcd7d79aa441ca239457cdd91ea0c51f17456",
+    "hd-nuit-etoilee-empattement-seed1.json": "97443ba6df028653a1e97420f810509f92b84213e0d27e749d235ef470140c2b"
   },
   "limits": "Le monde physique est lui-même un modèle simplifié. Ces chiffres valident la logique de la boucle et de l’estimation, pas une peinture réelle, un bras, un pinceau ni un coupon. Graines peu nombreuses : tendances, pas significativité.",
   "until_converged_seed1": {
@@ -205,5 +207,38 @@
       "execution_time_estimate_s": 6365
     }
   },
-  "code_revision_note": "Les rapports à budget fixe ont été produits avant l'ajout de --until-converged (empreinte loop.py antérieure) ; le rapport converge porte l'empreinte courante."
+  "code_revision_note": "Les rapports à budget fixe ont été produits avant l'ajout de --until-converged (empreinte loop.py antérieure) ; le rapport converge porte l'empreinte courante.",
+  "hd_public_domain_painting": {
+    "target": "La Nuit étoilée (Van Gogh, 1889, domaine public) ; image hors Git",
+    "runs": {
+      "fin": {
+        "strokes": 13236,
+        "psnr_db": 19.41,
+        "learned": {
+          "width_gain": 1.15,
+          "opacity": 0.8
+        },
+        "hidden": {
+          "width_gain": 1.15,
+          "opacity": 0.82
+        },
+        "image_sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+        "seconds": 146.16
+      },
+      "empattement": {
+        "strokes": 4618,
+        "psnr_db": 17.95,
+        "learned": {
+          "width_gain": 1.15,
+          "opacity": 0.8
+        },
+        "hidden": {
+          "width_gain": 1.15,
+          "opacity": 0.82
+        },
+        "image_sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+        "seconds": 45.11
+      }
+    }
+  }
 }
