@@ -136,6 +136,28 @@ class SuiteParsing(unittest.TestCase):
         counts, failing, verdict = bs.parse_unittest('Ran 41 tests in 0.03s\n\nOK (skipped=2)\n')
         self.assertEqual((verdict, counts['tests'], counts['skipped'], failing), ('OK', 41, 2, []))
 
+    def test_failure_keeps_the_exception_line(self):
+        sep, dash = '=' * 70, '-' * 70
+        output = '\n'.join([
+            sep, 'ERROR: test_success (test_archive_restore.RestoreArchiveTests.test_success)', dash,
+            'Traceback (most recent call last):', '  File "x.py", line 1, in ensure_inside',
+            '    raise ValueError("Unsafe archive path")', 'ValueError: Unsafe archive path', '',
+            sep, 'FAIL: test_move (test_media_library.MediaTests.test_move)', dash,
+            'Traceback (most recent call last):', "AssertionError: WindowsPath('C:/a') != WindowsPath('C:/b')", '',
+            dash, 'Ran 2 tests in 0.1s', '', 'FAILED (failures=1, errors=1)'])
+        _, failing, _ = bs.parse_unittest(output)
+        self.assertEqual([f['erreur'] for f in failing],
+                         ['ValueError: Unsafe archive path', "AssertionError: WindowsPath('C:/a') != WindowsPath('C:/b')"])
+
+    def test_failure_already_present_in_utf8_is_not_blamed_on_cp1252(self):
+        suite = {'status': 'echec', 'regressions': [{'kind': 'ERROR', 'test': 'a.A.test_path'}, {'kind': 'FAIL', 'test': 'b.B.test_accent'}]}
+        out = bs.separate_utf8_failures(dict(suite), {'a.A.test_path'})
+        self.assertEqual(([r['test'] for r in out['regressions']], out['status']), (['b.B.test_accent'], 'echec'))
+        only_baseline = bs.separate_utf8_failures({'status': 'echec', 'regressions': [{'kind': 'ERROR', 'test': 'a.A.test_path'}]},
+                                                  {'a.A.test_path'})
+        self.assertEqual((only_baseline['regressions'], only_baseline['status']), ([], 'partiel'))
+        self.assertEqual(only_baseline['echecs_aussi_en_utf8'][0]['test'], 'a.A.test_path')
+
 
 class Catalogue(unittest.TestCase):
     def setUp(self):

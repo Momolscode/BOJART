@@ -41,6 +41,9 @@ Défauts trouvés et **corrigés dans ce lot** :
 2. **`Simuler_BOJART.cmd` sans `PYTHONUTF8=1`**, contrairement aux autres lanceurs.
 3. **Lectures/écritures de texte sans encodage explicite** dans le code exécuté par l'application et les outils (serveur, médiathèque FFprobe, mesures, préinstallation, `doctor`, `start_jarvis`, `validate_repository`, etc.). Sous Windows sans mode UTF-8, Python utilise cp1252 : accents corrompus en silence, ou `UnicodeDecodeError`. Le manifeste écrit par `validate_repository.py --write-manifest` aurait aussi pris des fins de ligne CRLF sous Windows. Un test mémoire échouait réellement en cp1252.
 4. **Base de travail corrompue** : le refus de démarrer était correct (aucune réinitialisation silencieuse), mais l'utilisateur recevait une trace Python. Le message nomme maintenant la cause et la restauration dans un nouveau dossier.
+5. **Chemins Windows non canoniques** (trouvé par la CI Windows du banc) : un dossier temporaire Windows peut porter un nom court 8.3 (`RUNNER~1`) que `resolve()` développe. L'outil de restauration de l'archive refusait alors une restauration légitime comme « chemin dangereux », et un test de la médiathèque comparait deux formes du même chemin. Les deux comparent maintenant des chemins canoniques.
+
+Le rapport garde la ligne d'exception de chaque test en échec, et un test qui échoue déjà en UTF-8 n'est pas imputé à l'encodage cp1252.
 
 Constats **conservés pour décision ou recette** :
 

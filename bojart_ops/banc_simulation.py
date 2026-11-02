@@ -92,6 +92,24 @@ def child_env(extra=None):
 RAN = re.compile(r'^Ran (\d+) tests? in ([\d.]+)s', re.M)
 SUMMARY = re.compile(r'^(OK|FAILED)(?: \(([^)]*)\))?\s*$', re.M)
 FAILED_TEST = re.compile(r'^(ERROR|FAIL): (\S+) \(([^)]+)\)', re.M)
+BLOCK_SEP = re.compile(r'^={50,}$', re.M)
+DASH_SEP = re.compile(r'^-{50,}$', re.M)
+EXCEPTION_LINE = re.compile(r'^[A-Za-z_][\w.]*(?:Error|Exception|Exit|Interrupt)\b.*$', re.M)
+
+
+def failure_excerpts(output):
+    """Last exception line of each failing test, so a report from the tower can be diagnosed."""
+    excerpts = {}
+    for block in BLOCK_SEP.split(output)[1:]:
+        head = FAILED_TEST.search(block)
+        if not head:
+            continue
+        parts = DASH_SEP.split(block)
+        body = parts[1] if len(parts) > 1 else ''
+        found = EXCEPTION_LINE.findall(body)
+        line = found[-1] if found else next((x for x in reversed(body.strip().splitlines()) if x.strip()), '')
+        excerpts[(head.group(2), head.group(3))] = line.strip()[:300]
+    return excerpts
 
 
 def parse_unittest(output):
@@ -106,8 +124,12 @@ def parse_unittest(output):
                 if key in counts:
                     counts[key] = int(value)
     failing = []
+    excerpts = failure_excerpts(output)
     for kind, name, where in FAILED_TEST.findall(output):
-        failing.append({'kind': kind, 'test': f'{name} ({where})' if name in ('setUpClass', 'tearDownClass') else where})
+        item = {'kind': kind, 'test': f'{name} ({where})' if name in ('setUpClass', 'tearDownClass') else where}
+        if excerpts.get((name, where)):
+            item['erreur'] = excerpts[(name, where)]
+        failing.append(item)
     return counts, failing, (summary[-1][0] if summary else None)
 
 
@@ -243,19 +265,31 @@ ENCODING_HTTP = {'http_demarrage_securite', 'http_ecrans_appairage', 'http_dashb
                  'http_refus_physique_negation', 'http_coupure_reprise', 'http_cao_socle'}
 
 
-def run_encoding(python, workdir):
+def separate_utf8_failures(suite, baseline):
+    """A test that already fails in UTF-8 is not an encoding defect: keep it visible, outside the cp1252 verdict."""
+    same = [r for r in suite.get('regressions', []) if r['test'] in baseline]
+    if same:
+        suite['regressions'] = [r for r in suite['regressions'] if r['test'] not in baseline]
+        suite['echecs_aussi_en_utf8'] = same
+        if suite['status'] == 'echec' and not suite['regressions']:
+            suite['status'] = 'partiel'
+    return suite
+
+
+def run_encoding(python, workdir, baseline=None):
     env, reason = cp1252_environment(workdir)
     if env is None:
         return {'status': 'non_execute', 'detail': reason, 'suites': []}
     from bojart_ops import banc_http
     actual = subprocess.run([python, '-c', 'import locale;print(locale.getencoding())'], env={**os.environ, **env},
                             capture_output=True, text=True, encoding='utf-8').stdout.strip()
-    suites = [run_unittest_suite(python, sid, d, p, 'Encodage ' + actual, 900, extra_env=env) for sid, d, p in ENCODING_SUITES]
+    suites = [separate_utf8_failures(run_unittest_suite(python, sid, d, p, 'Encodage ' + actual, 900, extra_env=env), baseline or set())
+              for sid, d, p in ENCODING_SUITES]
     http = banc_http.run_http(python, only=ENCODING_HTTP, env=env)
     worst = ('echec' if any(s['status'] == 'echec' for s in suites + http) else
              'partiel' if any(s['status'] in ('partiel', 'non_execute') for s in suites + http) else 'ok')
     return {'status': worst, 'encodage_par_defaut': actual, 'environnement': {k: ('<temporaire>' if k == 'LOCPATH' else v) for k, v in env.items()},
-            'suites': suites, 'http': http,
+            'suites': suites, 'http': http, 'comparaison_utf8': baseline is not None,
             'limite': ('Windows natif, mode UTF-8 de Python désactivé.' if os.name == 'nt' else
                        'Émulation sous Linux : encodage des fichiers et sous-processus comme Windows, pas la console ni le système de fichiers Windows.')}
 
@@ -340,8 +374,9 @@ def collect_findings(results):
         findings += check['findings']
     for s in results.get('suites', []):
         for r in s.get('regressions', []):
+            error = r.get('erreur') if isinstance(r, dict) else None
             findings.append({'check': 'suite:' + s['id'], 'severity': 'bloquant', 'path': r.get('test', r) if isinstance(r, dict) else r,
-                             'detail': 'Test en échec', 'fix': 'Analyser et corriger.'})
+                             'detail': 'Test en échec' + (' : ' + error if error else ''), 'fix': 'Analyser et corriger.'})
         causes = {}
         for e in s.get('echecs_expliques', []):
             causes.setdefault(e['cause'], []).append(e['test'])
@@ -361,8 +396,10 @@ def collect_findings(results):
     enc = results.get('encodage', {})
     for s in enc.get('suites', []):
         for r in s.get('regressions', []):
+            detail = ('Échoue avec l’encodage par défaut de Windows (cp1252) alors qu’il passe en UTF-8.' if enc.get('comparaison_utf8')
+                      else 'Échoue avec l’encodage par défaut de Windows (cp1252) ; suite UTF-8 non exécutée pour comparaison.')
             findings.append({'check': 'encodage:cp1252', 'severity': 'majeur', 'path': r['test'],
-                             'detail': 'Échoue avec l’encodage par défaut de Windows (cp1252) alors qu’il passe en UTF-8.', 'fix': 'Passer encoding="utf-8".'})
+                             'detail': detail + (' ' + r['erreur'] if r.get('erreur') else ''), 'fix': 'Passer encoding="utf-8".'})
     for sc in enc.get('http', []):
         if sc['status'] == 'echec':
             findings.append({'check': 'encodage:cp1252', 'severity': 'majeur', 'path': 'serveur Jarvis (' + sc['id'] + ')',
@@ -416,7 +453,9 @@ def run_bench(python=sys.executable, *, suites=True, http=True, static=True, too
         if http:
             results['http'] = banc_http.run_http(python)
         if encoding and not quick:
-            results['encodage'] = run_encoding(python, workdir)
+            baseline = ({r['test'] for s in results['suites'] for r in s.get('regressions', []) if isinstance(r, dict)}
+                        if 'suites' in results else None)
+            results['encodage'] = run_encoding(python, workdir, baseline)
         if network:
             results['reseau'] = run_windows_wheels(python, workdir)
     results['actions'] = evaluate_catalog(results)

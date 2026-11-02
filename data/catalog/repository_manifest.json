@@ -344,8 +344,8 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 28630,
-      "sha256": "5515256ec3a53e6e1ff7e217e591dc951ec7b879a975a96c92eb35e559d20e27"
+      "bytes": 30739,
+      "sha256": "4878645f3e38e5015779927df04b383b193f0263263e55c3db60d3d8752ae26e"
     },
     {
       "path": "bojart_ops/banc_statique.py",
@@ -384,13 +384,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12419,
-      "sha256": "8a161d9515b8c39f96063846820a35c5833326e69130ac13497bde9006add438"
+      "bytes": 12500,
+      "sha256": "3cef20902a3566394ad51c644734e2204861be17c75021c43e0d98cae27d0daf"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 43390,
-      "sha256": "6408e28aeb4a539b8d0d58256defd45f1e3a37210ec6ce514c804ba4b4d92056"
+      "bytes": 43545,
+      "sha256": "d227d97a85d310810f947ffde54db8f3117a4cd7f5f3d6d69e74a5ff289e820a"
     },
     {
       "path": "creative/CURRENT.md",
@@ -569,8 +569,8 @@
     },
     {
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
-      "bytes": 6842,
-      "sha256": "57e74486c6a8330217983ee07689d641c8c96a20b43d72ec566026fbee6ecc43"
+      "bytes": 7395,
+      "sha256": "2a9b01aa38ec144b7c0597946f9a3aaa06e6af72e2076de34f3cb03c96af053a"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -774,8 +774,8 @@
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
-      "bytes": 5536,
-      "sha256": "bd926ba1c1693421d003e35cd0efc63e8c8e30cc446910be510970339e5d23f8"
+      "bytes": 7140,
+      "sha256": "d89ce7df4642646a1d79a2f146b43ef69496300e5d82c31c5330ee64079bb0c5"
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",
@@ -786,6 +786,11 @@
       "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.md",
       "bytes": 26055,
       "sha256": "ee2fe7a66bf82ed624475281930797c1f9dbe79689dc70a39591be9b7b7585bb"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-41c3f48.json",
+      "bytes": 94661,
+      "sha256": "1c71e8a9ddf97c2ecbe41c5c022642406d79b6b80940e05b9ed5ecfa22a06019"
     },
     {
       "path": "docs/evidence/consolidation-2026-11-01.json",
@@ -2019,8 +2024,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/tests_m03/test_media_library.py",
-      "bytes": 9568,
-      "sha256": "bb4deae6e65965c0a15250f9cc4c705afa6285bf97f344ea3c5cefe58464d9a9"
+      "bytes": 9578,
+      "sha256": "1dc260b70a92705fd4d8a2f091867a7aa5cba913339ed3ecefb0701793aed663"
     },
     {
       "path": "jarvis/apps/jarvis/tests_m03/test_preview_m03.py",
@@ -4584,8 +4589,8 @@
     },
     {
       "path": "tests_ops/test_banc_simulation.py",
-      "bytes": 11349,
-      "sha256": "1dd5c6d4cd8c42b8362550b11e0a93723cba7ca9d76d74c73ca54cb5f89c4cbb"
+      "bytes": 13072,
+      "sha256": "e3592efdd36657377871606d0ff64750ef4caf00dd09515b91bae7fe66bcc8a6"
     },
     {
       "path": "tests_ops/test_ops.py",
@@ -4689,8 +4694,8 @@
     },
     {
       "path": "tools/restore_archive_2026_11_01.py",
-      "bytes": 4495,
-      "sha256": "1c0ab7167d1b09089a74c4c7608d072107ac4852ab875802703203126d478256"
+      "bytes": 4628,
+      "sha256": "81af44963c48512e5f1ce47f77be9916b6cb84be8bf891f415d693f5fbd47e6f"
     },
     {
       "path": "tools/restore_recovery_2026_11_01.py",

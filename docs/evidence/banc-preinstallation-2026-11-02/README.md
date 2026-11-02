@@ -44,6 +44,7 @@ Appels locaux sur l'hôte de test, sans rendu ni micro. Ce ne sont ni des latenc
 3. E/S texte sans encodage explicite dans le code exécuté (serveur, médiathèque, mesures, préinstallation, outils de lancement et de validation) ; un test mémoire échouait réellement en cp1252.
 4. Base de travail corrompue : trace Python brute au lieu d'un message.
 5. Le premier passage complet (`41c3f48`) a signalé deux appels du banc lui-même sans encodage : corrigés dans `860aaaf`, mesuré ici.
+6. **Trouvés uniquement sous Windows (CI, ci-dessous)** : sous Windows, le dossier temporaire peut porter un nom court 8.3 (`C:\Users\RUNNER~1\…`), que `resolve()` développe en nom long. L'outil `restore_archive_2026_11_01.py` comparait un chemin canonique à une racine non canonique et refusait comme « chemin dangereux » une restauration légitime (3 tests) ; un test de la médiathèque M03 comparait le chemin canonique rendu par la bibliothèque au chemin court (1 test). Corrigés après ce passage : racine canonique dans l'outil, racine canonique dans le test. Reproduit puis vérifié sous Linux avec un dossier temporaire non canonique.
 
 ## Préconditions et constats ouverts
 
@@ -56,7 +57,13 @@ Appels locaux sur l'hôte de test, sans rendu ni micro. Ce ne sont ni des latenc
 
 ## CI
 
-Le workflow `Jarvis pre-installation bench` exécute le même banc sur `ubuntu-latest` et `windows-latest` et conserve ses rapports 30 jours. Résultats rattachés à leur SHA dans la PR #17.
+Le workflow `Jarvis pre-installation bench` exécute le même banc sur `ubuntu-latest` et `windows-latest` et conserve ses rapports 30 jours.
+
+- Linux : réussi sur `41c3f48` et `860aaaf`.
+- Windows Server 2025, Python 3.12.10, au commit `41c3f48` : [ci-windows-41c3f48.json](ci-windows-41c3f48.json), artefact `preinstall-bench-windows-latest` (zip SHA-256 `f94bb811aa3ed542d9dfbb5174d041f1da837cb22e41ce8661fd1480fa3a1c63`, fichier tel quel). **952 tests, 16/16 scénarios HTTP réussis sous Windows natif** (1 réserve de charge), roues résolues (96 paquets), encodage cp1252 natif sans défaut d'encodage. Mais **4 tests en échec** : le défaut 6 ci-dessus, qui n'est pas lié à l'encodage même si ce passage l'attribuait à cp1252. Le banc ne mélange plus ces cas : un test qui échoue déjà en UTF-8 n'est plus imputé à l'encodage, et chaque échec garde sa ligne d'exception dans le rapport.
+- Temps HTTP Windows (runner partagé, pas la tour) : dashboard atelier 175 ms au dépôt et 167 ms à l'accusé, trois dashboards 193 ms, socle CAO 6,1 s.
+
+Le passage Windows après correction est rattaché à son SHA dans la PR #17.
 
 ## Limites
 
