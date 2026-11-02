@@ -152,6 +152,8 @@
         "jarvis/apps/jarvis/app/memory.*",
         "jarvis/tests/memory_*",
         "Installer_BOJART_4060Ti.cmd",
+        "Installer_Tout_BOJART.cmd",
+        "tools/installer_tout.py",
         "Mesurer_BOJART.cmd",
         "tools/benchmark_jarvis.py"
       ],

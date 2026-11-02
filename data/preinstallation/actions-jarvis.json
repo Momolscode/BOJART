@@ -30,6 +30,25 @@
       "porte_reelle": "restore_drill"
     },
     {
+      "id": "installation.tout_en_un",
+      "domaine": "Installation",
+      "action": "Installer toute la tour en une fois après un seul accord : Ollama, FFmpeg, Jarvis complet depuis le verrou, modèles locaux, banc",
+      "exemple": "Installer_Tout_BOJART.cmd",
+      "etat_code": "code",
+      "verifications": [
+        "outil:installation_tout_simulation",
+        "suite:tests_ops",
+        "statique:scripts_cmd",
+        "statique:verrou_installation"
+      ],
+      "hors_simulation": [
+        "winget réel et droits du compte Windows",
+        "Téléchargements réels (Python, Ollama, FFmpeg, modèles)",
+        "Démarrage réel d'Ollama et VRAM de la RTX 4060 Ti"
+      ],
+      "porte_reelle": null
+    },
+    {
       "id": "installation.lanceurs",
       "domaine": "Installation",
       "action": "Lancer, mesurer, simuler et restaurer par double-clic",

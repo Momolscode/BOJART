@@ -167,7 +167,8 @@ class Catalogue(unittest.TestCase):
         from bojart_ops import banc_http
         from launch_readiness import REQUIRED_GATES
         known = {'suite:' + s[0] for s in bs.SUITES} | {'suite:node_jarvis'}
-        known |= {'outil:' + t for t in ('simulation_workflows', 'validate_repository', 'evaluate_memory', 'check_startup_abrupt')}
+        known |= {'outil:' + t for t in ('simulation_workflows', 'validate_repository', 'evaluate_memory', 'check_startup_abrupt',
+                                            'installation_tout_simulation')}
         known |= {'statique:' + c for c in st.CHECKS} | {'http:' + name for name, _ in banc_http.SCENARIOS}
         known |= {'encodage:cp1252', 'reseau:roues_windows'}
         ids = [a['id'] for a in self.catalog['actions']]

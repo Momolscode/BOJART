@@ -224,6 +224,14 @@ def run_tools(python, workdir):
     out.append(run_tool('evaluate_memory', ['tools/evaluate_memory.py'], python))
     startup = Path(workdir) / 'startup.json'
     out.append(run_tool('check_startup_abrupt', ['tools/check_startup.py', '--abrupt', '--output', str(startup)], python))
+
+    def install_plan(stdout):
+        data = json.loads(stdout)
+        plan = data['plan']
+        return {'plan': [f'{s["id"]}:{s["type"]}' for s in plan], 'avertissements': data['avertissements'],
+                'status': 'ok' if data['simulation'] is True and any(s['id'] == 'jarvis' for s in plan) else 'echec'}
+    out.append(run_tool('installation_tout_simulation', ['tools/installer_tout.py', '--simulation'], python, timeout=120,
+                        check_json=install_plan))
     return out
 
 
