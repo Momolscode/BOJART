@@ -45,5 +45,9 @@ jobs:
         if: always()
         with:
           name: workflow-simulations-${{ matrix.os }}
-          path: .bojart-audit/workflows-*.json
+          path: |
+            .bojart-audit/workflows-rules.json
+            .bojart-audit/workflows-langgraph.json
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 30
