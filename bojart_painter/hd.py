@@ -16,7 +16,18 @@ HD_STYLES = {
     'reproduction': dict(width_mm=(30, 4), length_ratio=(0.8, 4.0), curvature=0.25, palette=None),
     'fin': dict(width_mm=(30, 2.5), length_ratio=(1.0, 5.0), curvature=0.3, palette=None),
     'empattement': dict(width_mm=(24, 7), length_ratio=(1.2, 2.5), curvature=0.1, palette=12),
+    'tres_fin': dict(width_mm=(30, 1.5), length_ratio=(1.0, 6.0), curvature=0.3, palette=None),
 }
+
+
+def ssim(a, b, k=3):
+    """SSIM moyen sur la luminance, fenêtre carrée (2k+1)² : 1 = images identiques."""
+    w = np.array([0.299, 0.587, 0.114], dtype=np.float32)
+    x, y = a @ w, b @ w
+    mx, my = _box_blur(x, k), _box_blur(y, k)
+    vx = _box_blur(x * x, k) - mx * mx; vy = _box_blur(y * y, k) - my * my; cxy = _box_blur(x * y, k) - mx * my
+    c1, c2 = 0.01 ** 2, 0.03 ** 2
+    return float((((2 * mx * my + c1) * (2 * cxy + c2)) / ((mx * mx + my * my + c1) * (vx + vy + c2))).mean())
 
 
 class Deposit:
@@ -182,9 +193,11 @@ class HDPainter:
             obs = self.observe()
             mse = float(((self.world - self.T) ** 2).mean())
             log.append({'batch': b + 1, 'strokes': done, 'mse': round(mse, 5),
-                        'psnr_db': round(10 * math.log10(1 / mse), 2), 'believed': self.believed.as_dict(),
+                        'psnr_db': round(10 * math.log10(1 / mse), 2), 'ssim': round(ssim(self.world, self.T), 4),
+                        'believed': self.believed.as_dict(),
                         'seconds': round(time.perf_counter() - t0, 1)})
         snaps[done] = self.world.copy()
         return {'log': log, 'strokes': done, 'final_mse': log[-1]['mse'], 'psnr_db': log[-1]['psnr_db'],
+                'ssim': log[-1]['ssim'],
                 'hidden': self.hidden.as_dict(), 'learned': self.believed.as_dict(),
                 'grid_px': [self.W, self.H], 'mm_per_px': self.mm, 'snapshots': snaps}

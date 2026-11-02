@@ -188,7 +188,8 @@
     "simulate-paysage-seed3.json": "fe3c5599df90c202bb9329bd10a94196bacf962c9fbde7574cc388028daa6423",
     "simulate-paysage-converge-seed1.json": "2085efa4daf8c9a7648b583889857da2cd65498b60d62ed3f3e19bc32d5a9e29",
     "hd-nuit-etoilee-fin-seed1.json": "61baf9252ade5073757abd4a0b7fcd7d79aa441ca239457cdd91ea0c51f17456",
-    "hd-nuit-etoilee-empattement-seed1.json": "97443ba6df028653a1e97420f810509f92b84213e0d27e749d235ef470140c2b"
+    "hd-nuit-etoilee-empattement-seed1.json": "97443ba6df028653a1e97420f810509f92b84213e0d27e749d235ef470140c2b",
+    "hd-nuit-etoilee-tres-fin-1mm-seed1.json": "5774ce6d5d66a1f92a305ab23f39b4ac35fd408d5c057fc60a68bcf13ac5cc6d"
   },
   "limits": "Le monde physique est lui-même un modèle simplifié. Ces chiffres valident la logique de la boucle et de l’estimation, pas une peinture réelle, un bras, un pinceau ni un coupon. Graines peu nombreuses : tendances, pas significativité.",
   "until_converged_seed1": {
@@ -238,6 +239,125 @@
         },
         "image_sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
         "seconds": 45.11
+      },
+      "tres_fin_1mm": {
+        "strokes": 41703,
+        "psnr_db_native_1mm": 16.86,
+        "ssim_native_1mm": 0.3039,
+        "compared_on_2mm_grid": {
+          "tres_fin_1mm_41703": {
+            "psnr_db": 21.04,
+            "ssim": 0.635
+          },
+          "fin_2mm_13236": {
+            "psnr_db": 19.42,
+            "ssim": 0.4434
+          }
+        },
+        "curve": [
+          {
+            "strokes": 1621,
+            "psnr_db": 14.84,
+            "ssim": 0.1066
+          },
+          {
+            "strokes": 2490,
+            "psnr_db": 15.04,
+            "ssim": 0.1157
+          },
+          {
+            "strokes": 3358,
+            "psnr_db": 15.15,
+            "ssim": 0.1213
+          },
+          {
+            "strokes": 4384,
+            "psnr_db": 15.27,
+            "ssim": 0.128
+          },
+          {
+            "strokes": 5537,
+            "psnr_db": 15.37,
+            "ssim": 0.1337
+          },
+          {
+            "strokes": 6892,
+            "psnr_db": 15.47,
+            "ssim": 0.1398
+          },
+          {
+            "strokes": 8375,
+            "psnr_db": 15.56,
+            "ssim": 0.1462
+          },
+          {
+            "strokes": 10121,
+            "psnr_db": 15.66,
+            "ssim": 0.1542
+          },
+          {
+            "strokes": 12080,
+            "psnr_db": 15.77,
+            "ssim": 0.164
+          },
+          {
+            "strokes": 14246,
+            "psnr_db": 15.87,
+            "ssim": 0.1733
+          },
+          {
+            "strokes": 16553,
+            "psnr_db": 15.98,
+            "ssim": 0.1845
+          },
+          {
+            "strokes": 19020,
+            "psnr_db": 16.08,
+            "ssim": 0.1967
+          },
+          {
+            "strokes": 21636,
+            "psnr_db": 16.19,
+            "ssim": 0.2091
+          },
+          {
+            "strokes": 24320,
+            "psnr_db": 16.29,
+            "ssim": 0.2223
+          },
+          {
+            "strokes": 27103,
+            "psnr_db": 16.39,
+            "ssim": 0.2356
+          },
+          {
+            "strokes": 29933,
+            "psnr_db": 16.49,
+            "ssim": 0.2494
+          },
+          {
+            "strokes": 32824,
+            "psnr_db": 16.58,
+            "ssim": 0.2624
+          },
+          {
+            "strokes": 35766,
+            "psnr_db": 16.68,
+            "ssim": 0.2771
+          },
+          {
+            "strokes": 38732,
+            "psnr_db": 16.77,
+            "ssim": 0.2909
+          },
+          {
+            "strokes": 41703,
+            "psnr_db": 16.86,
+            "ssim": 0.3039
+          }
+        ],
+        "seconds": 817.69,
+        "note": "PSNR/SSIM natifs à 1 mm non comparables aux runs à 2 mm (cible plus détaillée) ; comparaison faite après rééchantillonnage des deux rendus sur la grille 450 px. La courbe monte encore linéairement à 41 703 touches : pas de plateau observé."
       }
     }
   }

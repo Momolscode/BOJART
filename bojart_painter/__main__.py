@@ -93,7 +93,7 @@ def cmd_hd(a):
     from .hd import HDPainter, load_image  # numpy et Pillow requis
     raw = Path(a.image).read_bytes()
     target = load_image(a.image, a.width_px)
-    res = HDPainter(target, a.style, a.mm_per_px, a.seed).run(a.strokes)
+    res = HDPainter(target, a.style, a.mm_per_px, a.seed).run(a.strokes, batches=a.batches)
     snaps = res.pop('snapshots')
     if a.save_png:
         from PIL import Image
@@ -123,9 +123,10 @@ def main(argv=None):
             s.add_argument('--sigma-divisor', type=float, default=2.0)
         if name == 'hd':
             s.add_argument('--image', required=True, help='image locale hors Git (domaine public ou droits vérifiés)')
-            s.add_argument('--style', default='fin', choices=['reproduction', 'fin', 'empattement'])
+            s.add_argument('--style', default='fin', choices=['reproduction', 'fin', 'empattement', 'tres_fin'])
             s.add_argument('--strokes', type=int, default=8000)
             s.add_argument('--width-px', type=int, default=450)
+            s.add_argument('--batches', type=int, default=8)
             s.add_argument('--mm-per-px', type=float, default=2.0)
             s.add_argument('--save-png', help='dossier hors Git pour les rendus')
         if name == 'simulate':

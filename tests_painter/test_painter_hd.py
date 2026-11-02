@@ -25,6 +25,12 @@ class HDPainterTests(unittest.TestCase):
         self.assertAlmostEqual(a['learned']['width_gain'], a['hidden']['width_gain'], delta=0.1)
         self.assertAlmostEqual(a['learned']['opacity'], a['hidden']['opacity'], delta=0.1)
 
+    def test_ssim_is_one_for_identical_images(self):
+        from bojart_painter.hd import ssim
+        t = self.target()
+        self.assertAlmostEqual(ssim(t, t), 1.0, places=5)
+        self.assertLess(ssim(np.ones_like(t), t), 0.9)
+
     def test_palette_style_uses_palette(self):
         from bojart_painter.hd import HDPainter
         p = HDPainter(self.target(), 'empattement', mm_per_px=5.0, seed=1)

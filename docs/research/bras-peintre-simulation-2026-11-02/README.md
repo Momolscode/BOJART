@@ -81,6 +81,8 @@ Les premiers rendus, à 10 mm par pixel avec 200 touches sur une cible en aplats
 
 Essai sur *La Nuit étoilée* (1889, domaine public). L'image source est restée hors Git ; seule son empreinte figure dans le rapport. Avec 13 236 touches (PSNR 19,4 dB, contre 17,9 dB pour l'empâtement à 12 couleurs en 4 618 touches), le rendu reproduit composition, couleurs et tourbillons principaux, avec des touches visibles. Le recalage retrouve encore le dépôt caché (1,15 / 0,80 pour 1,15 / 0,82). Les tourbillons fins et le relief de l'empâtement d'origine ne sont pas atteints. Rapports : `hd-nuit-etoilee-*.json`.
 
+À 1 mm par pixel avec des pinceaux jusqu'à 1,5 mm (`--style tres_fin`), 41 703 touches donnent PSNR 21,0 dB et SSIM 0,64 contre 19,4 dB et 0,44 pour la version à 13 236 touches, comparées sur la même grille. La fidélité monte encore à la fin de l'essai : aucun plateau n'est atteint, mais la durée de bras estimée passe à environ 28 h. Une copie qui trompe à 1–2 m paraît accessible avec une capture haute définition de l'original, l'étalonnage des mélanges et une peinture en couches ; le relief, la trajectoire exacte des touches et le vieillissement restent hors de portée, et une copie doit rester déclarée (domaine public, dimensions différentes, mention « d'après », sans la signature d'origine).
+
 C'est le niveau visé pour une œuvre pilote de 90 × 56 cm : une réinterprétation à touches visibles, pas une copie indiscernable. La durée de bras est estimée à 6–9 h pour 10 000 à 13 000 touches, recharges comprises ; c'est une hypothèse de vitesse, pas une mesure.
 
 Le rendu 3D du bras (modèle xArm 7 de MuJoCo Menagerie, toile réduite à 40 × 29 cm) a été produit hors du dépôt. Les modèles Menagerie gardent leur licence propre et ne sont pas versés ici.
