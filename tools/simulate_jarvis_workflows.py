@@ -251,7 +251,7 @@ def run(repeats=30):
     source_paths=[Path(__file__).relative_to(ROOT), fixture_path.relative_to(ROOT)]
     source_paths += [p.relative_to(ROOT) for p in sorted(APP.glob('*.py')) if p.name in (
         'core.py','dialogue.py','control_tower.py','display_contracts.py','jarvis_runtime.py',
-        'jev_decider.py','tower_events.py','fleet_simulation.py')]
+        'jev_decider.py','tower_events.py','fleet_simulation.py','sqlite_sessions.py')]
     report={'schema':'bojart.workflow-simulation.v1', 'created_at':datetime.now(timezone.utc).isoformat(),
             'host':{'os':platform.system(),'python':platform.python_version(),'machine':platform.machine()},
             'scope':{'transcripts':'synthetic post-ASR text', 'sqlite':'real temporary databases',

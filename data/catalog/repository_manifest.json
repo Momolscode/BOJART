@@ -39,8 +39,8 @@
     },
     {
       "path": ".github/workflows/workflow-simulations.yml",
-      "bytes": 3162,
-      "sha256": "d1ea5150b2cdb8fd2f8e2555a68f0d9493981b4f1463421948d1099deacd5e94"
+      "bytes": 3438,
+      "sha256": "53a193e74c172193fd41533059e346294ce994bc3f6fa1fa2fb59e7ecf027dc0"
     },
     {
       "path": ".gitignore",
@@ -2369,8 +2369,8 @@
     },
     {
       "path": "jarvis/tests/test_jarvis_m07.py",
-      "bytes": 9463,
-      "sha256": "bf35f4c154813d0455e601adb10792850dc3234630ebf6c491399cd1a29b4c2c"
+      "bytes": 9507,
+      "sha256": "25788c03ef482b445a1ca90e09d7dccbc693f8a3a27c1c0eeac0fffcff13c841"
     },
     {
       "path": "jarvis/tests/test_preservation.py",
@@ -4354,13 +4354,18 @@
     },
     {
       "path": "tools/simulate_jarvis_workflows.py",
-      "bytes": 15504,
-      "sha256": "e73f8531294efbb184f585123b692d5adb596be4295064879af7266b7ac2b773"
+      "bytes": 15525,
+      "sha256": "b3bd23b5fd686f8e197a5b794958a26a2709bb33c328c36c5d5f98237f5fca30"
     },
     {
       "path": "tools/start_jarvis.py",
       "bytes": 5335,
       "sha256": "abd80dab005b96defe67ad81d5357d2cf1584db216c4016060a5ed558befc194"
+    },
+    {
+      "path": "tools/stress_jarvis_fleet.py",
+      "bytes": 7978,
+      "sha256": "e389e853644a76c47e1b22917daa3d126446c6528877c1ba2552b71c48ce3fc3"
     },
     {
       "path": "tools/validate_repository.py",

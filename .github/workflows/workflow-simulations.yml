@@ -8,6 +8,8 @@ on:
       - 'jarvis/requirements-orchestration.txt'
       - 'tools/simulate_jarvis_workflows.py'
       - 'tools/benchmark_jarvis_latency.py'
+      - 'tools/stress_jarvis_fleet.py'
+      - 'jarvis/tests/test_jarvis_m0[67].py'
       - 'tests_workflows/**'
       - 'data/knowledge/**'
       - 'docs/COMMANDES_DASHBOARD.md'
@@ -39,6 +41,8 @@ jobs:
         run: python -m unittest discover -s tests_workflows -v
       - name: Measure rules fallback
         run: python tools/simulate_jarvis_workflows.py --output .bojart-audit/workflows-rules.json
+      - name: Variable fleets and enumerated small optima
+        run: python tools/stress_jarvis_fleet.py --output .bojart-audit/fleet-stress.json
       - name: Compare rules latency on the same host
         run: python tools/benchmark_jarvis_latency.py --baseline .bojart-audit/baseline --output .bojart-audit/latency-rules.json --expected-engine missing_dependency
       - name: Existing connection and HTTP boundary contracts
@@ -66,6 +70,7 @@ jobs:
             .bojart-audit/workflows-langgraph.json
             .bojart-audit/latency-rules.json
             .bojart-audit/latency-langgraph.json
+            .bojart-audit/fleet-stress.json
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 30
