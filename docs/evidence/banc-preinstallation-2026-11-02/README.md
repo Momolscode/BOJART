@@ -63,7 +63,8 @@ Le workflow `Jarvis pre-installation bench` exécute le même banc sur `ubuntu-l
 - Windows Server 2025, Python 3.12.10, au commit `41c3f48` : [ci-windows-41c3f48.json](ci-windows-41c3f48.json), artefact `preinstall-bench-windows-latest` (zip SHA-256 `f94bb811aa3ed542d9dfbb5174d041f1da837cb22e41ce8661fd1480fa3a1c63`, fichier tel quel). **952 tests, 16/16 scénarios HTTP réussis sous Windows natif** (1 réserve de charge), roues résolues (96 paquets), encodage cp1252 natif sans défaut d'encodage. Mais **4 tests en échec** : le défaut 6 ci-dessus, qui n'est pas lié à l'encodage même si ce passage l'attribuait à cp1252. Le banc ne mélange plus ces cas : un test qui échoue déjà en UTF-8 n'est plus imputé à l'encodage, et chaque échec garde sa ligne d'exception dans le rapport.
 - Temps HTTP Windows (runner partagé, pas la tour) : dashboard atelier 175 ms au dépôt et 167 ms à l'accusé, trois dashboards 193 ms, socle CAO 6,1 s.
 
-Le passage Windows après correction est rattaché à son SHA dans la PR #17.
+- Windows après correction, au commit `678da4f` : [ci-windows-678da4f.json](ci-windows-678da4f.json), artefact zip SHA-256 `0d667dececbf613e2d7487ac0d5c32523ce882976c8b2b1ddc5d9cd370ec7fd7`. **Réussi : 954 tests sans régression, 0 bloquant, 16/16 scénarios HTTP** (1 réserve de charge), 7 scénarios et 5 suites en cp1252 natif sans défaut d'encodage, 96 roues sans compilation. Actions : 12 simulées OK, 18 partielles, 6 non codées ; la différence avec Linux vient de Playwright, absent du runner Windows (tests navigateur non exécutés, explicitement listés). Temps HTTP de ce passage : dashboard atelier 226 ms au dépôt et 300 ms à l'accusé, trois dashboards 758 ms, socle CAO 2,8 s ; ils varient fortement d'un runner partagé à l'autre et ne préjugent pas de la tour.
+- Linux au commit `678da4f` : réussi.
 
 ## Limites
 
