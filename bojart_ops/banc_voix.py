@@ -676,10 +676,13 @@ def scenarios(bench, reference_audio):
     turn = bench.voice_turn(reference_audio, **canonical)
     atelier.retard = 0.0
     shown = turn.get('etapes_ms', {}).get('affichage')
+    server = turn.get('etapes_ms', {}).get('affichage_serveur')
+    # Horloge du serveur (du tour à l'accusé) : la vue reçoit la commande pendant la requête du
+    # tour, avant que la console ait sa réponse ; le délai côté console peut donc être un peu < 3 s.
     record('ecran_en_retard', 'reponse_tardive', 'la vue atelier accuse 3 s après réception',
-           'reçu « affiché » seulement après l’accusé (≥ 3 000 ms)',
-           turn.get('recu', {}).get('affichage') == 'rendered' and shown is not None and shown >= 3000,
-           {'affichage_ms': shown, 'recu': turn.get('recu')})
+           'reçu « affiché » seulement après l’accusé (≥ 3 000 ms depuis le tour, horloge du serveur)',
+           turn.get('recu', {}).get('affichage') == 'rendered' and server is not None and server >= 3000,
+           {'affichage_serveur_ms': server, 'affichage_console_ms': shown, 'recu': turn.get('recu')})
 
     # Accusé tardif après changement de contexte : refusé, jamais compté comme affiché.
     atelier.retard = 2.0

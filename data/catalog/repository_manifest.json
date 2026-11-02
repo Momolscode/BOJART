@@ -374,8 +374,8 @@
     },
     {
       "path": "bojart_ops/banc_voix.py",
-      "bytes": 68941,
-      "sha256": "2c46974d502b81586ed143ef6914b1933759f76002c7f3e095b02a0ada4a6f90"
+      "bytes": 69288,
+      "sha256": "41494db43af60f69de5a2dc96a9a89873c629faa4b08339771c9924ec4a1e4de"
     },
     {
       "path": "bojart_ops/collecte.py",
