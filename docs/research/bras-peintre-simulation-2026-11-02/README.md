@@ -97,6 +97,11 @@ Le bras n'« apprend » pas comme un modèle de langage. Les trois semaines serv
 | 2 | Modèle de dépôt mesuré branché dans la boucle, photo et replanification ; petites toiles avec deux pinceaux. |
 | 3 | Trois pinceaux, toile de 50 cm en une demi-journée, styles « reproduction » et « empâtement » ; coupon STRATES mesuré. |
 
+Visuels associés (rendus hors dépôt, reproductibles) :
+
+- **Semaine 1** : `bojart_painter/calibration.py` peint 30 touches de référence (3 pinceaux × 10 pots) sur un carton, puis les mesure sur une photo bruitée. La largeur ×1,25 du dépôt caché est retrouvée pour les pinceaux de 20 et 8 mm, et ×1,33 pour 3 mm à cause de la résolution de la photo (0,5 mm). La couverture au milieu de la touche vaut environ 0,54 : opacité × stries × charge restante. Rapport : `calibration-semaine1-seed1.json`.
+- **Semaine 3** : `tools/render_painter_cell.py` rejoue, à l'identique, les touches exécutées par le peintre HD (`run(record=True)`) avec le modèle xArm 7 de MuJoCo Menagerie. La scène comprend une toile de 50 × 31 cm, 10 pots, trois pinceaux sur un support, un chiffon et une caméra sur potence. L'animation montre les recharges, l'essuyage et le changement de pinceau. Chaque lot est exécuté pinceau par pinceau puis pot par pot (`group_by_color=True`) : 93 changements de couleur au lieu de 4 371, pour un SSIM de 0,284 contre 0,287. Résultat : 5 189 touches, 903 recharges, environ 3 h 40 de bras estimées. La cinématique inverse atteint chaque point de la toile à moins de 0,9 mm (95 % sous 0,07 mm). Elle reste simplifiée (sans dynamique ni collisions) : c'est une illustration, pas une preuve d'accès. Rapport : `atelier-animation-seed1.json`.
+
 Hors de portée en trois semaines : mélange automatique des couleurs, détails sous 2–3 mm, relief, toile de 90 cm sans surveillance, copie indiscernable.
 
 ## Limites

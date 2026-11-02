@@ -16,7 +16,8 @@ from .loop import compare_open_closed, run_painting_loop
 from .targets import SYNTHETIC, load_ppm, make_target, save_ppm
 
 STYLES_PATH = ROOT / 'configs/painter/styles.json'
-CODE = ['bojart_painter/' + p for p in ('arms.py', 'canvas.py', 'coupon.py', 'hd.py', 'loop.py', 'planner.py', 'targets.py', '__main__.py')]
+CODE = ['bojart_painter/' + p for p in ('arms.py', 'calibration.py', 'canvas.py', 'coupon.py', 'hd.py', 'loop.py', 'planner.py',
+                                        'targets.py', '__main__.py')]
 
 
 def _fingerprints():
@@ -95,7 +96,7 @@ def cmd_hd(a):
     target = load_image(a.image, a.width_px)
     painter = HDPainter(target, a.style, a.mm_per_px, a.seed, hidden=Deposit(a.hidden_gain, a.hidden_opacity),
                         position_sigma_mm=a.position_sigma_mm, color_sigma=a.color_sigma)
-    res = painter.run(a.strokes, batches=a.batches)
+    res = painter.run(a.strokes, batches=a.batches, group_by_color=a.group_by_color)
     snaps = res.pop('snapshots')
     if a.save_png:
         from PIL import Image
@@ -105,7 +106,7 @@ def cmd_hd(a):
         for k, v in snaps.items():
             Image.fromarray((np.clip(v, 0, 1) * 255).astype('uint8')).save(out / f'{a.style}-{k:06d}.png')
     return {'command': 'hd', 'image': {'sha256': hashlib.sha256(raw).hexdigest(), 'path_in_git': False},
-            'style': a.style, 'seed': a.seed, 'requested_strokes': a.strokes,
+            'style': a.style, 'seed': a.seed, 'requested_strokes': a.strokes, 'group_by_color': a.group_by_color,
             'world': {'hidden_gain': a.hidden_gain, 'hidden_opacity': a.hidden_opacity,
                       'position_sigma_mm': a.position_sigma_mm, 'color_sigma': a.color_sigma}, **res}
 
@@ -136,6 +137,8 @@ def main(argv=None):
             s.add_argument('--position-sigma-mm', type=float, default=0.35)
             s.add_argument('--color-sigma', type=float, default=0.015)
             s.add_argument('--mm-per-px', type=float, default=2.0)
+            s.add_argument('--group-by-color', action='store_true',
+                           help='exécuter chaque lot pinceau par pinceau puis pot par pot (moins de rinçages)')
             s.add_argument('--save-png', help='dossier hors Git pour les rendus')
         if name == 'simulate':
             s.add_argument('--target', default='synthetic:paysage')

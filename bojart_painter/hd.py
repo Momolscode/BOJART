@@ -149,7 +149,15 @@ class HDPainter:
         noise = self.rng.normal(0, self.cam_sigma, self.world.shape).astype(np.float32)
         return np.clip(self.world + noise, 0, 1)
 
-    def run(self, n_strokes, batches=8, candidates=8, calibration_strokes=4, snapshots=(0.125, 1 / 3, 2 / 3)):
+    def run(self, n_strokes, batches=8, candidates=8, calibration_strokes=4, snapshots=(0.125, 1 / 3, 2 / 3),
+            record=False, group_by_color=False):
+        """`record=True` ajoute `executed` : chaque touche telle qu'exécutée (pixels, largeur, graine,
+        couleur), pour la rejouer à l'identique, par exemple dans une animation du bras.
+
+        `group_by_color=True` exécute chaque lot du plus gros au plus fin pinceau puis pot par pot, comme
+        un peintre qui limite les rinçages ; l'ordre des recouvrements change, la boucle fermée corrige
+        au lot suivant."""
+        executed = []
         gains = np.arange(0.85, 1.36, 0.05); ops = np.arange(0.6, 1.01, 0.05)
         table = np.zeros((len(gains), len(ops)))
         per = max(1, n_strokes // batches); done = 0; log = []; snaps = {}
@@ -174,6 +182,11 @@ class HDPainter:
                 y0, y1, x0, x1, _ = best[2]
                 err[y0:y1, x0:x1] = ((C[y0:y1, x0:x1] - self.T[y0:y1, x0:x1]) ** 2).sum(-1)
                 plan.append((best[1], best[3]))
+            if group_by_color and self.palette is not None:
+                sizes = self.style.get('brushes_mm')
+                brush = (lambda w: min(range(len(sizes)), key=lambda k: abs(sizes[k] - w))) if sizes else (lambda w: -round(w))  # noqa: E731
+                pot = lambda c: int(((self.palette - c) ** 2).sum(1).argmin())  # noqa: E731
+                plan.sort(key=lambda item: (brush(item[0][3]), pot(item[1])))
             for j, ((p0, p1, p2, w, seed), col) in enumerate(plan):
                 jit = self.rng.normal(0, self.pos_sigma / self.mm, 2)
                 colr = np.clip(col + self.rng.normal(0, self.color_sigma, 3), 0, 1)
@@ -181,6 +194,9 @@ class HDPainter:
                 before = self.observe() if j < calibration_strokes else None
                 if fp is not None:
                     self._apply(self.world, fp, colr)
+                    if record:
+                        executed.append({'batch': b, 'p': [p0 + jit, p1 + jit, p2 + jit], 'width_mm': float(w),
+                                         'seed': seed, 'color': colr.copy()})
                 if before is not None:
                     after = self.observe()
                     for gi, g in enumerate(gains):
@@ -204,7 +220,8 @@ class HDPainter:
                         'believed': self.believed.as_dict(),
                         'seconds': round(time.perf_counter() - t0, 1)})
         snaps[done] = self.world.copy()
-        return {'log': log, 'strokes': done, 'final_mse': log[-1]['mse'], 'psnr_db': log[-1]['psnr_db'],
+        extra = {'executed': executed} if record else {}
+        return {**extra, 'log': log, 'strokes': done, 'final_mse': log[-1]['mse'], 'psnr_db': log[-1]['psnr_db'],
                 'ssim': log[-1]['ssim'],
                 'hidden': self.hidden.as_dict(), 'learned': self.believed.as_dict(),
                 'grid_px': [self.W, self.H], 'mm_per_px': self.mm, 'snapshots': snaps}
