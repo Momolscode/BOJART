@@ -8,6 +8,8 @@ on:
       - 'jarvis/requirements-orchestration.txt'
       - 'tools/simulate_jarvis_workflows.py'
       - 'tests_workflows/**'
+      - 'data/knowledge/**'
+      - 'docs/COMMANDES_DASHBOARD.md'
       - '.github/workflows/workflow-simulations.yml'
 permissions:
   contents: read

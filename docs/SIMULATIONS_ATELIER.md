@@ -4,6 +4,8 @@
 
 ## Ce que tu peux dire pour l'affichage
 
+Le [catalogue de commandes courant](COMMANDES_DASHBOARD.md) est la référence concise indexée dans la mémoire. Les résultats expérimentaux détaillés sont indexés comme preuve datée, distincte de l'état courant du poste.
+
 | Transcription | Résultat logiciel |
 |---|---|
 | « Jarvis, affiche le dashboard atelier ! » | Planning **démonstratif** à gauche |

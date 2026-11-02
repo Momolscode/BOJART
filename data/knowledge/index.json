@@ -208,8 +208,14 @@
     "provenance": "Reproducible host measurements and explicit limits, 2026-11-02; raw reports and runtime/corpus fingerprints in docs/evidence/simulations-2026-11-02. No GPU or generative quality measured on the target."
   },
   {
-    "path": "docs/SIMULATIONS_ATELIER.md",
+    "path": "docs/COMMANDES_DASHBOARD.md",
     "project": "bojart.jarvis",
-    "provenance": "Measured software transcript trials and explicitly synthetic fleet planning, 2026-11-02; docs/evidence/workflows-2026-11-02; no target-PC, ASR, browser or printer qualification."
+    "provenance": "Current bounded display command catalogue, 2026-11-02; implementation jarvis/apps/jarvis/app/jarvis_runtime.py. Separate dated simulations do not qualify audio, physical displays, slicing or printers."
+  },
+  {
+    "path": "docs/evidence/workflows-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "session_log",
+    "provenance": "Dated experimental evidence, 2026-11-02. Actual Python/SQLite measurements with synthetic transcripts/receipts and fictitious fleet; historical test record, not current target-hardware qualification."
   }
 ]

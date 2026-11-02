@@ -48,6 +48,8 @@ Les [20 tests dédiés](tests.log) couvrent aussi les marges, les coins d'un pla
 
 ## Fichiers et reproduction
 
+La première intégration du long guide expérimental dans les références courantes a fait reculer `context/CURRENT.md` hors des cinq premiers résultats pour « LangGraph » : 13/14 cas de recherche passaient. La correction conserve un [catalogue d'usage actuel](../../COMMANDES_DASHBOARD.md) en référence canonique et ce compte rendu daté en journal de session. Le guide complet reste consultable. Aucun cas attendu ni seuil de test n'a changé ; aucune source n'est effacée. Les 14/14 cas passent à nouveau, avec citations vérifiées. Voir [la régression conservée](retrieval-regression.json) et [le nouveau contrôle](retrieval-after.json).
+
 - [summary.json](summary.json) : agrégats, portée et empreintes des trois rapports.
 - [run-1.json](run-1.json), [run-2.json](run-2.json), [run-3.json](run-3.json) : mesures individuelles, dialogues d'essai, résultats des gardes et plannings complets.
 - [Guide d'utilisation et limites](../../SIMULATIONS_ATELIER.md).

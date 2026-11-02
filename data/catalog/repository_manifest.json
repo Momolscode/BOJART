@@ -39,8 +39,8 @@
     },
     {
       "path": ".github/workflows/workflow-simulations.yml",
-      "bytes": 1774,
-      "sha256": "89894e681cf24ed7f5fd28c927d48fbf76b7442acafd68ef74d5bc407aa36e8a"
+      "bytes": 1840,
+      "sha256": "80d067e481b1d7763d60a012313a3f2918ec920f62d636341c43f11bb90a9f15"
     },
     {
       "path": ".gitignore",
@@ -344,8 +344,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 34215,
-      "sha256": "3e451b2b7b7af1a04559e37336615f40c183ad9982bb92133263688e074f7867"
+      "bytes": 34714,
+      "sha256": "a99076c958bb21d0bcb1b572448d3058e8a792441939547e6785af8e2ef1004a"
     },
     {
       "path": "creative/CURRENT.md",
@@ -444,8 +444,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 9990,
-      "sha256": "1af3154a1541e5d7031c39f73521512c1490368007b9042e09a46927365ef8cc"
+      "bytes": 10367,
+      "sha256": "de45254e196f8ffe891f72eccd91fb8e2889e9614e7980ff272b60a247db6df2"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -476,6 +476,11 @@
       "path": "docs/AUDIT_CONTINU_2026-11-01.md",
       "bytes": 5474,
       "sha256": "1cdfaec51e502641acaf3ab48dafcbc74aadee654dc4f759271ae7d490eec9c9"
+    },
+    {
+      "path": "docs/COMMANDES_DASHBOARD.md",
+      "bytes": 2353,
+      "sha256": "8c8dc24d458db82f638d5bd2a05551ebdf43520158a416e962be15c43f03bc88"
     },
     {
       "path": "docs/CREATIVE_PIPELINE_HISTORIQUE.md",
@@ -574,8 +579,8 @@
     },
     {
       "path": "docs/SIMULATIONS_ATELIER.md",
-      "bytes": 7010,
-      "sha256": "b00b2537007b79ad6211f95fadc61d9115127c4ff134c0f5c0f67ede039830ad"
+      "bytes": 7241,
+      "sha256": "7bba4f38be58e5ece9ffba6027241bcd33bf8219d913b33adf7911344a6bec0d"
     },
     {
       "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
@@ -794,13 +799,23 @@
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/README.md",
-      "bytes": 6594,
-      "sha256": "ff82c336f4b38e9755c1c97c40753a24db296e11934a9a55f0fa98451dcc0e15"
+      "bytes": 7250,
+      "sha256": "161b49a3a07ba78e1640fade240e94f609197802986a500b464a4e4a23a09a87"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/before.json",
       "bytes": 1990,
       "sha256": "6b573b8970fc2b69590f932094061b7f2a836029391ec4f002db902abc7d81e1"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/retrieval-after.json",
+      "bytes": 6339,
+      "sha256": "0f6bfc251ce97a3c061e8a770685d8b2c0ee51fa0db6ee3c126729d3fbd69f2c"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/retrieval-regression.json",
+      "bytes": 7196,
+      "sha256": "347c25266fdbe84f64bc1046a7d88300bf3f0e4f2d949818e4b98b912c0b3050"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/run-1.json",
