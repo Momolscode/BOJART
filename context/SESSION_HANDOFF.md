@@ -283,3 +283,5 @@ Suite du soir : la grille tarifaire se déclare par un formulaire (plus de JSON 
 - le SIRET de l'émetteur est contrôlé par sa clé (règle de python-stdnum 2.1, La Poste comprise).
 
 Tests : `test_atelier` 47/47, dont 5 nouveaux qui échouaient avant ; `jarvis/tests` 327 avec les 3 mêmes échecs que `main`. Parcours Chromium : SIRET faux refusé, deux versions de grille, brouillon périmé bloqué, révision, émission, PDF A4 d'une page. Banc #17 sur la fusion, trois passages : seul l'effectif des tests atelier change ; la répartition 429 / « EN ATTENTE » du scénario concurrent varie déjà de 2 à 8 refus sur le banc seul. Détail : `VALIDATION.json`, section `grille_declaree`.
+
+Point de vigilance trouvé par le banc : pour la question « LangGraph », `tools/evaluate_memory.py` attend `context/CURRENT.md`, classé 5e sur 5. Une phrase de plus dans la section Atelier de `CURRENT.md` l'a fait sortir sur l'arbre fusionné avec #17 (13/14 et un échec `tests_agent`). La phrase a été raccourcie : 14/14 sur les deux arbres. Tout ajout à `CURRENT.md` doit relancer cette évaluation.
