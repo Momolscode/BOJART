@@ -17,18 +17,18 @@ const status = {sources: 2, agent_episodes: 0, database_integrity: "ok", chat_co
 const fact = value => ({key: value, value, status: "proposal", observed_at: "fixture", source: "test"});
 const search = value => ({results: [{source_path: "test.md", start_line: 1, end_line: 1, text: value, citation: "test"}], semantic_status: "disabled"});
 
-async function harness() {
+async function harness(storage = new Map()) {
   const nodes = new Map(), requests = [];
   const get = id => { if (!nodes.has(id)) nodes.set(id, new Element()); return nodes.get(id); };
   get("domain").value = "bojart.jarvis";
   get("question").value = "Question";
   vm.runInNewContext(source, {
     document: {getElementById: get, createElement: () => new Element()},
-    localStorage: {getItem: () => "test-session", setItem() {}},
-    crypto: {randomUUID: () => "test-request"},
+    localStorage: {getItem: key => storage.get(key) || null, setItem(key,value) {storage.set(key,value)}, removeItem(key) {storage.delete(key)}},
+    crypto: {randomUUID: () => require("node:crypto").randomUUID()},
     navigator: {clipboard: {writeText: async () => {}}},
-    fetch: (url, options) => new Promise(resolve => requests.push({
-      url, options, respond: data => resolve({ok: true, json: async () => data})
+    fetch: (url, options) => new Promise((resolve,reject) => requests.push({
+      url, options, reject, respond: (data,ok=true) => resolve({ok, json: async () => data})
     }))
   });
   function reply(prefix, data) {
@@ -38,7 +38,7 @@ async function harness() {
   }
   reply("/api/memory/status", status); await tick();
   reply("/api/memory/facts", {facts: []}); await tick();
-  return {get, reply, requests};
+  return {get, reply, requests, storage};
 }
 
 test("changing domain clears results immediately and ignores a late search", async () => {
@@ -126,4 +126,38 @@ test("a generated answer without recognized citations is identified", async () =
   h.reply("/api/memory/status", status); await tick();
   h.reply("/api/memory/facts", {facts: []}); await pending;
   assert.match(h.get("results").textContent, /aucune référence reconnue/);
+});
+
+test("network loss and page reload reuse the same inference identifier", async () => {
+  const h=await harness();
+  let pending=h.get("ask").onclick();
+  const first=h.requests.shift(); const body=JSON.parse(first.options.body);
+  first.reject(new Error("offline")); await pending;
+  assert.match(h.get("notice").textContent,/identifiant est conservé/);
+  const reload=await harness(h.storage);
+  pending=reload.get("ask").onclick();
+  const retry=reload.requests.shift();
+  assert.equal(JSON.parse(retry.options.body).request_id,body.request_id);
+  retry.respond({error:"Résultat incertain",code:"UNKNOWN",state:"UNKNOWN"},false);await pending;
+  assert.match(reload.get("notice").textContent,/incertain/);
+  assert.equal(reload.requests.length,0,"no automatic retry");
+  reload.get("new-request").onclick();
+  pending=reload.get("ask").onclick();const fresh=reload.requests.shift();
+  assert.notEqual(JSON.parse(fresh.options.body).request_id,body.request_id);
+  fresh.respond({error:"En cours",code:"IN_PROGRESS"},false);await pending;
+});
+
+test("quick SQLite structure status does not claim full integrity", async () => {
+  const h=await harness();assert.equal(h.get("integrity").textContent,"Structure saine");
+  const pending=h.get("verify").onclick();
+  h.reply("/api/memory/verify",{ok:false,issues:["chunks_source_mismatch"]});await pending;
+  assert.match(h.get("results").textContent,/Incohérence mémoire/);
+  assert.match(h.get("results").textContent,/chunks_source_mismatch/);
+});
+
+test("omitted conflict is distinct from corrupt source", async () => {
+  const h=await harness();const pending=h.get("context").onclick();
+  h.reply("/api/memory/context",{text:"PACK",characters:4,citations:[],omitted:1,warnings:[{reason:"relevant_conflict_variants_omitted"}]});await pending;
+  assert.match(h.get("results").textContent,/conflit pertinent/);
+  assert.doesNotMatch(h.get("results").textContent,/sources sont absentes/);
 });

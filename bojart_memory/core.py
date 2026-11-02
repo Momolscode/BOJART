@@ -13,6 +13,9 @@ from uuid import uuid4
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
+from .integrity import (CLAIM_REGISTRY, EXTRACTORS, PROJECT_EXTRACTOR,
+                        TEXT_EXTRACTOR, choose_extractor, extract)
+
 PROJECTS = {'bojart.jarvis', 'bojart.creative', 'bojart.sites'}
 TEXT_EXT = {'.txt', '.md', '.json', '.jsonl', '.csv', '.tsv', '.vtt', '.srt'}
 IGNORED_PARTS = {'.git', '.env', 'node_modules', '.venv', '__pycache__', '.ssh', '.aws', '.config'}
@@ -190,7 +193,7 @@ class Memory:
             raise MemoryError('Empreinte invalide.')
         return self.state / 'objects' / sha
 
-    def ingest_file(self, path, *, root, project, collection, provenance, kind='session_export'):
+    def ingest_file(self, path, *, root, project, collection, provenance, kind='session_export', projection=None):
         project_ok(project)
         if self.readonly:
             raise MemoryError('Mémoire ouverte en lecture seule.')
@@ -230,9 +233,17 @@ class Memory:
             raise MemoryError('UTF-8 requis ; source non importée.') from e
         if '\x00' in text:
             raise MemoryError('Données binaires refusées.')
+        try:
+            extraction = choose_extractor(text, rel.as_posix(), projection)
+            extracted = extract(text, extraction, project, chunks)
+        except (ValueError, TypeError) as e:
+            raise MemoryError('Projection de projet invalide : ' + str(e)) from e
         sha = digest(data)
         source_id = digest(canonical([project, collection, rel.as_posix()]).encode())
-        version_id = digest(canonical([source_id, sha]).encode())
+        # Legacy text version identities remain stable. A new extraction
+        # contract creates a distinct derived version over the same original.
+        identity = [source_id, sha] if extraction == TEXT_EXTRACTOR else [source_id, sha, extraction]
+        version_id = digest(canonical(identity).encode())
         obj = self._object(sha)
         if obj.exists():
             if obj.is_symlink() or file_sha(obj) != sha:
@@ -251,21 +262,128 @@ class Memory:
         with self.transaction():
             previous = self.db.execute('SELECT current_version FROM sources WHERE source_id=?', (source_id,)).fetchone()
             if previous and previous[0] == version_id:
+                checked = self.validate_version(version_id)
+                if not checked['ok']:
+                    raise MemoryError('Index dérivé altéré ; reconstruction explicite requise : ' + ', '.join(checked['issues']))
                 return {'status':'unchanged', 'source_id':source_id, 'version_id':version_id, 'sha256':sha}
             self.db.execute('INSERT OR IGNORE INTO assets VALUES(?,?,?)', (sha, len(data), now()))
             self.db.execute('INSERT OR IGNORE INTO sources VALUES(?,?,?,?,NULL)', (source_id, project, collection, rel.as_posix()))
             exists = self.db.execute('SELECT 1 FROM versions WHERE version_id=?', (version_id,)).fetchone()
             if not exists:
-                self.db.execute('INSERT INTO versions VALUES(?,?,?,?,?,?,?)', (version_id, source_id, sha, now(), provenance, kind, 'utf8_lines_v1'))
-                for first, last, chunk in chunks(text):
+                self.db.execute('INSERT INTO versions VALUES(?,?,?,?,?,?,?)', (version_id, source_id, sha, now(), provenance, kind, extraction))
+                for first, last, chunk in extracted:
                     row = self.db.execute('INSERT INTO chunks(version_id,start_line,end_line,text) VALUES(?,?,?,?)', (version_id, first, last, chunk))
                     self.db.execute('INSERT INTO search(rowid,text) VALUES(?,?)', (row.lastrowid, chunk))
+            elif not self.validate_version(version_id)['ok']:
+                raise MemoryError('Ancien index dérivé altéré ; reconstruction explicite requise.')
             self.db.execute('UPDATE sources SET current_version=? WHERE source_id=?', (version_id, source_id))
             self.db.execute('INSERT INTO events(event_type,source_id,version_id,created_at) VALUES(?,?,?,?)', ('source_version_selected', source_id, version_id, now()))
         return {'status':'version_selected', 'source_id':source_id, 'version_id':version_id, 'sha256':sha, 'previous_version':previous[0] if previous else None}
 
-    def search(self, query, *, project, limit=6, history=False):
+    def _version_source(self, version_id):
+        """Verify original bytes and extraction metadata, independent of indexes."""
+        row = self.db.execute('''SELECT v.*,s.project,s.collection,s.source_path,
+            s.current_version,a.bytes FROM versions v
+            JOIN sources s ON s.source_id=v.source_id
+            JOIN assets a ON a.sha256=v.sha256 WHERE v.version_id=?''', (version_id,)).fetchone()
+        if row is None:
+            raise MemoryError('version_metadata_missing')
+        meta = dict(row)
+        project_ok(meta['project'])
+        safe_relative(meta['source_path'])
+        if (not re.fullmatch(r'[a-zA-Z0-9_.-]{1,80}', meta['collection'])
+                or meta['kind'] not in {'session_export', 'project_document', 'reference'}
+                or not isinstance(meta['provenance'], str) or not meta['provenance'].strip()
+                or meta['extraction'] not in EXTRACTORS):
+            raise MemoryError('extraction_or_source_metadata_invalid')
+        try:
+            observed = datetime.fromisoformat(meta['observed_at'])
+            if observed.tzinfo is None:
+                raise ValueError('Missing observation timezone.')
+        except (ValueError, TypeError):
+            raise MemoryError('observation_metadata_invalid') from None
+        sid = digest(canonical([meta['project'], meta['collection'], meta['source_path']]).encode())
+        identity = [sid, meta['sha256']]
+        if meta['extraction'] != TEXT_EXTRACTOR:
+            identity.append(meta['extraction'])
+        if sid != meta['source_id'] or digest(canonical(identity).encode()) != version_id:
+            raise MemoryError('source_or_version_identity_mismatch')
+        obj = self._object(meta['sha256'])
+        if obj.is_symlink() or not obj.is_file():
+            raise MemoryError('source_missing_or_changed')
+        data = obj.read_bytes()
+        if len(data) != meta['bytes'] or digest(data) != meta['sha256']:
+            raise MemoryError('source_missing_or_changed')
+        try:
+            text = data.decode('utf-8-sig')
+            if '\x00' in text:
+                raise ValueError('Binary source.')
+            expected = extract(text, meta['extraction'], meta['project'], chunks)
+            meta['project_projection_required'] = (meta['extraction'] == TEXT_EXTRACTOR
+                and choose_extractor(text, meta['source_path']) == PROJECT_EXTRACTOR)
+        except (ValueError, TypeError) as e:
+            raise MemoryError('extraction_source_invalid') from e
+        return meta, expected
+
+    def validate_version(self, version_id, *, cache=None):
+        """Check all derived rows against a verified original in this snapshot.
+
+        Cache is per operation and committed SQLite snapshot, never global.
+        Legacy unprojected ledgers remain valid historical storage, but are
+        withheld by validate_passage until an explicit index/import upgrades it.
+        """
+        if cache is not None and version_id in cache:
+            return cache[version_id]
+        result = {'ok': False, 'issues': [], 'metadata': None, 'chunks': []}
+        try:
+            meta, expected = self._version_source(version_id)
+            result['metadata'] = meta
+            rows = [dict(r) for r in self.db.execute('''SELECT id,version_id,start_line,end_line,text
+                FROM chunks WHERE version_id=? ORDER BY id''', (version_id,))]
+            result['chunks'] = rows
+            actual = [(r['start_line'], r['end_line'], r['text']) for r in rows]
+            if actual != expected:
+                result['issues'].append('chunks_source_mismatch')
+            for row in rows:
+                fts = self.db.execute('SELECT text FROM search WHERE rowid=?', (row['id'],)).fetchone()
+                if fts is None or fts['text'] != row['text']:
+                    result['issues'].append('fts_chunk_mismatch')
+                    break
+        except (MemoryError, ValueError, TypeError, OSError, sqlite3.DatabaseError) as e:
+            result['issues'].append(str(e) if isinstance(e, MemoryError) else type(e).__name__)
+        result['ok'] = not result['issues']
+        if cache is not None:
+            cache[version_id] = result
+        return result
+
+    def validate_passage(self, row, *, cache=None):
+        """Fail closed for lexical, semantic, embedding and conversation callers."""
+        row = dict(row)
+        required = ('version_id', 'start_line', 'end_line', 'text')
+        if any(key not in row for key in required):
+            return {'ok': False, 'issues': ['passage_metadata_missing'],
+                    'source_bytes_verified': False, 'excerpt_matches_source': False}
+        checked = self.validate_version(row['version_id'], cache=cache)
+        issues = list(checked['issues'])
+        meta = checked['metadata']
+        if meta:
+            for key in ('sha256', 'project', 'collection', 'source_path', 'extraction'):
+                if key in row and row[key] != meta[key]:
+                    issues.append('passage_metadata_mismatch:' + key)
+            if meta.get('project_projection_required'):
+                issues.append('legacy_project_projection_required')
+        matches = [c for c in checked['chunks'] if all(c[k] == row[k] for k in ('start_line', 'end_line', 'text'))
+                   and ('id' not in row or row['id'] == c['id'])]
+        if not matches:
+            issues.append('passage_not_in_verified_version')
+        return {'ok': not issues, 'issues': sorted(set(issues)),
+                'source_bytes_verified': meta is not None,
+                'excerpt_matches_source': not issues}
+
+    def search(self, query, *, project, limit=6, history=False, collection=None):
         project_ok(project)
+        if collection is not None and collection not in ('canonical', 'research', 'session_log'):
+            raise MemoryError('Filtre de collection inconnu.')
         if not isinstance(query, str) or len(query) > 2000 or not 1 <= limit <= 30:
             raise MemoryError('Recherche hors limites.')
         terms = re.findall(r'[^\W_]+', query, re.UNICODE)[:32]
@@ -277,27 +395,28 @@ class Memory:
         current = '' if history else 'AND s.current_version=v.version_id'
         rows = self.db.execute(f'''
             SELECT s.project,s.collection,s.source_path,v.version_id,v.sha256,v.observed_at,
-                   v.provenance,v.kind,c.start_line,c.end_line,c.text,
+                   v.provenance,v.kind,v.extraction,c.id,c.start_line,c.end_line,c.text,
                    s.current_version=v.version_id AS current_version, bm25(search) AS rank
             FROM search JOIN chunks c ON c.id=search.rowid
             JOIN versions v ON v.version_id=c.version_id
             JOIN sources s ON s.source_id=v.source_id
             WHERE search MATCH ? AND s.project=? {current}
+                  AND (? IS NULL OR s.collection=?)
             ORDER BY CASE WHEN s.collection='canonical' THEN 0 ELSE 1 END,
                      rank,v.observed_at DESC,c.start_line,c.id
-        ''', (match, project))
+        ''', (match, project, collection, collection))
         verified, warnings = {}, []
 
         def verified_rows():
             for row in rows:
-                sha = row['sha256']
-                if sha not in verified:
-                    obj = self._object(sha)
-                    verified[sha] = obj.is_file() and not obj.is_symlink() and file_sha(obj) == sha
-                    if not verified[sha]:
-                        warnings.append({'sha256':sha,'reason':'source_missing_or_changed'})
-                if verified[sha]:
-                    yield {**dict(row),'source_bytes_verified':True}
+                checked = self.validate_passage(row, cache=verified)
+                if checked['ok']:
+                    yield {**dict(row),'source_bytes_verified':True,'excerpt_matches_source':True}
+                else:
+                    warning = {'sha256':row['sha256'], 'version_id':row['version_id'],
+                               'reason':checked['issues'][0], 'issues':checked['issues']}
+                    if warning not in warnings:
+                        warnings.append(warning)
 
         results = distinct_sources(verified_rows(), limit)
         return {'project':project, 'query':query, 'retrieval':'sqlite_fts5_bm25', 'trusted_instructions':False,
@@ -325,18 +444,109 @@ class Memory:
         return retired
 
     def verify(self):
-        issues=[]
-        if self.db.execute('PRAGMA integrity_check').fetchone()[0]!='ok':
-            issues.append('sqlite_integrity')
-        if self.db.execute('PRAGMA foreign_key_check').fetchall():
-            issues.append('foreign_keys')
-        for row in self.db.execute('SELECT sha256,bytes FROM assets'):
-            p=self._object(row['sha256'])
-            if not p.is_file() or p.is_symlink() or p.stat().st_size!=row['bytes'] or file_sha(p)!=row['sha256']:
-                issues.append('object:'+row['sha256'])
-        return {'ok':not issues,'issues':issues,**self.stats()}
+        """Deep read-only verification of a committed snapshot and originals.
+
+        FTS5's integrity-check uses INSERT syntax. Run it only on an in-memory
+        SQLite backup; even a readonly=True caller never writes its live state.
+        Explicit pending writes must be committed/rolled back before this check.
+        """
+        if self.db.in_transaction and not self.readonly:
+            return {'ok':False, 'issues':['verification_requires_committed_state']}
+        own_snapshot = not self.db.in_transaction
+        if own_snapshot:
+            self.db.execute('BEGIN')
+        issues, warnings = [], []
+        try:
+            if self.db.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
+                issues.append('sqlite_integrity')
+            if self.db.execute('PRAGMA foreign_key_check').fetchall():
+                issues.append('foreign_keys')
+            for row in self.db.execute('SELECT sha256,bytes FROM assets'):
+                try:
+                    p = self._object(row['sha256'])
+                    valid = (p.is_file() and not p.is_symlink() and p.stat().st_size == row['bytes']
+                             and file_sha(p) == row['sha256'])
+                except (MemoryError, OSError):
+                    valid = False
+                if not valid:
+                    issues.append('object:' + row['sha256'])
+            for row in self.db.execute('SELECT version_id FROM versions'):
+                check = self.validate_version(row['version_id'])
+                issues.extend(issue + ':' + row['version_id'] for issue in check['issues'])
+                meta = check['metadata']
+                if meta and meta.get('project_projection_required'):
+                    warnings.append({'version_id':row['version_id'],
+                                     'reason':'legacy_project_projection_required',
+                                     'current':meta['current_version'] == row['version_id']})
+            if self.db.execute('''SELECT 1 FROM search LEFT JOIN chunks ON chunks.id=search.rowid
+                    WHERE chunks.id IS NULL LIMIT 1''').fetchone():
+                issues.append('fts_orphan_row')
+            if self.db.execute('''SELECT 1 FROM sources s LEFT JOIN versions v
+                    ON s.current_version=v.version_id WHERE s.current_version IS NOT NULL
+                    AND (v.version_id IS NULL OR v.source_id!=s.source_id) LIMIT 1''').fetchone():
+                issues.append('source_current_version_mismatch')
+            with closing(sqlite3.connect(':memory:')) as snapshot:
+                self.db.backup(snapshot)
+                try:
+                    snapshot.execute("INSERT INTO search(search) VALUES('integrity-check')")
+                except sqlite3.DatabaseError:
+                    issues.append('fts_internal_integrity')
+            stats = self.stats()
+        except sqlite3.DatabaseError as e:
+            issues.append('sqlite_error:' + type(e).__name__)
+            stats = {}
+        finally:
+            if own_snapshot:
+                self.db.rollback()
+        return {'ok':not issues, 'issues':sorted(set(issues)), 'warnings':warnings,
+                'scope':'objects_extraction_chunks_fts_committed_snapshot', **stats}
+
+    def rebuild_indexes(self):
+        """Explicit atomic repair from verified originals; preserve all history.
+
+        This never repairs unknown metadata by guessing or trusts existing
+        chunks/FTS. An active legacy project ledger first needs index()/ingest()
+        to select its new projected version. Historical legacy rows are retained
+        and remain withheld from search, including history=True.
+        """
+        if self.readonly:
+            raise MemoryError('Reconstruction en lecture seule refusée.')
+        with self.transaction():
+            plans = []
+            for row in self.db.execute('SELECT version_id FROM versions ORDER BY version_id'):
+                meta, expected = self._version_source(row['version_id'])
+                if meta.get('project_projection_required') and meta['current_version'] == row['version_id']:
+                    raise MemoryError('Projection de projet requise : lancer index()/ingest() sur les sources originales avant rebuild_indexes().')
+                plans.append((row['version_id'], expected))
+            has_vectors = self.db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='agent_vectors'").fetchone()
+            vectors = self.db.execute('SELECT count(*) FROM agent_vectors').fetchone()[0] if has_vectors else 0
+            if has_vectors:
+                self.db.execute('DELETE FROM agent_vectors')
+            # Recreate rather than trust a possibly damaged internal FTS index.
+            # SQLite rolls this DDL back with the rest of the explicit batch.
+            self.db.execute('DROP TABLE search')
+            self.db.execute("CREATE VIRTUAL TABLE search USING fts5(text, tokenize='unicode61 remove_diacritics 2')")
+            self.db.execute('DELETE FROM chunks')
+            for version_id, expected in plans:
+                for first, last, text in expected:
+                    row = self.db.execute('INSERT INTO chunks(version_id,start_line,end_line,text) VALUES(?,?,?,?)',
+                                          (version_id, first, last, text))
+                    self.db.execute('INSERT INTO search(rowid,text) VALUES(?,?)', (row.lastrowid, text))
+            for version_id, _ in plans:
+                checked = self.validate_version(version_id)
+                if not checked['ok']:
+                    raise MemoryError('Reconstruction non vérifiée : ' + ', '.join(checked['issues']))
+                self.db.execute('INSERT INTO events(event_type,source_id,version_id,created_at) VALUES(?,?,?,?)',
+                                ('derived_index_rebuilt', checked['metadata']['source_id'], version_id, now()))
+            self.db.execute("INSERT INTO search(search) VALUES('integrity-check')")
+            if self.db.execute('PRAGMA foreign_key_check').fetchall():
+                raise MemoryError('Reconstruction : références étrangères invalides.')
+        return {'rebuilt_versions':len(plans), 'invalidated_vectors':vectors,
+                'originals_preserved':True, 'episodes_preserved':True, 'atomic':True}
 
     def backup(self, destination):
+        if self.db.in_transaction:
+            raise MemoryError('Valider ou annuler la transaction avant sauvegarde.')
         destination=Path(destination).expanduser().absolute()
         if destination.exists() or destination.is_symlink() or destination.resolve().is_relative_to(self.state):
             raise MemoryError('La sauvegarde exige un nouveau dossier hors de la mémoire.')
@@ -354,6 +564,12 @@ class Memory:
                 if not p.is_file() or p.is_symlink() or file_sha(p)!=sha:
                     raise MemoryError('Sauvegarde interrompue : objet altéré.')
                 shutil.copy2(p,temp/'objects'/sha)
+            # Validate the copied snapshot, not a moving live database. This also
+            # catches corrupt derived rows even if every original hash is sound.
+            with Memory(temp, readonly=True) as saved:
+                verified = saved.verify()
+            if not verified['ok']:
+                raise MemoryError('Sauvegarde interrompue : index dérivé incohérent : ' + ', '.join(verified['issues']))
             files=[p for p in temp.rglob('*') if p.is_file()]
             manifest={'schema_version':1,'created_at':now(),'files':[{'path':p.relative_to(temp).as_posix(),'sha256':file_sha(p),'bytes':p.stat().st_size} for p in sorted(files)]}
             (temp/'snapshot.json').write_text(canonical(manifest)+'\n',encoding='utf-8')

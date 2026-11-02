@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-02",
+  "project": "bojart.jarvis",
+  "status": "documentary_audit_and_proposals_no_physical_measurement",
+  "public_repository_policy": "Originals stay outside this public repository (SECURITY.md, DATA_GOVERNANCE.md): confidential budget/investor figures, a named artistic partner, generated media with unverified character rights, and a private conversation.",
+  "originals": [
+    {
+      "id": "strates-audit-pdf",
+      "received_name": "STRATES_Audit_Robotique_IA_2026-11-02.pdf",
+      "kind": "pdf",
+      "sha256": "2a9830490b0ea15742678f74e305c8747fc79650153c0952c6c7938302a47e94",
+      "bytes": 109437,
+      "pages": 12,
+      "page_size": "A4",
+      "pdf_version": "1.4",
+      "document_info_dict": "absent",
+      "header": "BOJ.ART / MARWIN TECH — REVUE DE CONCEPTION",
+      "footer": "02 novembre 2026 | Audit documentaire | Aucune performance physique acquise",
+      "read": "all 12 pages read in this session",
+      "in_git": false,
+      "text_extraction_in_git": false,
+      "reason_not_in_git": "contains investor dossier and budget amounts, a named partner and a personal name"
+    },
+    {
+      "id": "strates-video-relief",
+      "received_name": "Photorealistic-cinematic-documentary-of.mp4",
+      "kind": "generated_video",
+      "sha256": "335303cc8dcdc65d36f78cf798fec9026661e0bd83051e91854104a8eab281ed",
+      "bytes": 22295616,
+      "duration_s": 10.041667,
+      "video": {
+        "codec": "h264",
+        "width": 1764,
+        "height": 1176,
+        "fps": 24,
+        "frames": 241
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 44100,
+        "channels": 2
+      },
+      "aigc_metadata": {
+        "ContentProducer": "kling",
+        "ProduceID": "KLingMuse_28699d48-56a4-45f3-ade5-82067b834b7b"
+      },
+      "observed_content": "Four sampled frames (1, 4, 7, 9 s): a dark robot arm holding a flat brush paints a blue band along a white stratified relief panel clamped on a metal frame, workshop setting with cameras and a transparent shield.",
+      "evidence_value": "art-direction concept only; not evidence of deposit, precision or repeatability",
+      "in_git": false
+    },
+    {
+      "id": "strates-video-figurine",
+      "received_name": "Photorealistic-10-second-practical-works.mp4",
+      "kind": "generated_video",
+      "sha256": "68ebcc909aa4772e824aabaec89ad0f65872f716dbcd7778ae027a183fb14c4f",
+      "bytes": 8697367,
+      "duration_s": 10.041667,
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 24,
+        "frames": 241
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": 44100,
+        "channels": 2
+      },
+      "aigc_metadata": {
+        "ContentProducer": "kling",
+        "ProduceID": "KLingMuse_21b664a6-37a0-4e08-81b6-8688921eb50c"
+      },
+      "observed_content": "Four sampled frames (1, 4, 7, 9 s): a robot arm with a fine-tip tool approaches the shoulder armour of a painted manga-style character figurine, shelves of paints behind.",
+      "rights": "character rights not verified; do not publish",
+      "evidence_value": "figurine-painting concept only; not evidence of the 0.5 mm figurine requirement",
+      "in_git": false
+    },
+    {
+      "id": "bras-robotique-chat",
+      "kind": "chatgpt_conversation",
+      "thread_id": "6ae7c762-6630-83eb-afde-680aa0c54b2e",
+      "title_as_listed_in_v5_chat_audit": "Bras robotique précis",
+      "access_check": {
+        "date": "2026-11-02",
+        "unauthenticated_https_status": 403
+      },
+      "body_read": false,
+      "previous_classification": "V5 chat audit: ambiguous candidate, association_to_BOJART_not_established, body_not_read",
+      "current_classification": "user states on 2026-11-02 that it is the BOJ.ART robotic-arm session to push",
+      "messages_reconstructed": 0,
+      "in_git": false
+    }
+  ],
+  "relation_inferred_not_verified": "The PDF is dated the same day and its internal references point to the user's ChatGPT library; it is likely an output of this conversation, but the conversation body was not read.",
+  "documents_cited_by_the_audit": {
+    "internal_not_received": [
+      {
+        "ref": "I1",
+        "title": "STRATES - Proposition artistique",
+        "version": "v1.1, 8 pages"
+      },
+      {
+        "ref": "I2",
+        "title": "BOJART - Dossier investisseur",
+        "version": "v1.0, 23 pages, figurines scope"
+      },
+      {
+        "ref": "I3",
+        "title": "BOJART - Budget",
+        "version": "3 sheets, 53 expense lines"
+      }
+    ],
+    "internal_locator_note": "I1-I3 are linked in the PDF as private ChatGPT library files; their identifiers are not reproduced here.",
+    "public_not_reopened_in_this_session": [
+      {
+        "ref": "R1",
+        "title": "Schaldenbrand, McCann, Oh. FRIDA, ICRA 2023",
+        "url": "https://pschaldenbrand.github.io/frida/"
+      },
+      {
+        "ref": "R2",
+        "title": "Wang et al. IMPASTO, ICRA 2026",
+        "url": "https://impasto-robopainting.github.io/"
+      },
+      {
+        "ref": "R3",
+        "title": "Shah et al. Sensors 2023, 23(8), 3816",
+        "url": "https://doi.org/10.3390/s23083816"
+      },
+      {
+        "ref": "R4",
+        "title": "UFACTORY 850 technical specifications",
+        "url": "https://docs.850.ufactory.cc/8.technical_specifications.html"
+      },
+      {
+        "ref": "R5",
+        "title": "UFACTORY 6-axis force/torque sensor specifications",
+        "url": "https://docs.accessories.ufactory.cc/6_Axis_Force_Torque_Sensor/5.Technical_Specifications.html"
+      },
+      {
+        "ref": "R6",
+        "title": "MoveIt 2 Planning Scene",
+        "url": "https://moveit.picknik.ai/main/api/html/planning_scene_overview.html"
+      },
+      {
+        "ref": "R7",
+        "title": "NIST Technical Note 2119 (Lu, 2020)",
+        "url": "https://doi.org/10.6028/NIST.TN.2119"
+      },
+      {
+        "ref": "R8",
+        "title": "ISO 10218-2:2025",
+        "url": "https://www.iso.org/standard/73934.html"
+      },
+      {
+        "ref": "R9",
+        "title": "Regulation (EU) 2023/1230, consolidated 2026-07-27",
+        "url": "https://eur-lex.europa.eu/eli/reg/2023/1230/2026-07-27/fra/pdf"
+      }
+    ]
+  },
+  "not_done": [
+    "no physical test",
+    "no supplier contact or quote",
+    "no robot simulation",
+    "no training corpus",
+    "no conformity assessment",
+    "conversation not read"
+  ]
+}

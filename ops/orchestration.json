@@ -69,7 +69,11 @@
     {
       "domain": "research",
       "patterns": [
-        "docs/research/*"
+        "docs/research/*",
+        "docs/preinstallation/knowledge/*",
+        "data/preinstallation/knowledge-cards.json",
+        "data/preinstallation/sources-curated.json",
+        "data/preinstallation/tool-registry.json"
       ],
       "reason": "Propositions sourcées ; installation et qualification distinctes."
     },
@@ -110,6 +114,8 @@
         "SECURITY.md",
         "context/*",
         "data/knowledge/*",
+        "data/preinstallation/requirements.json",
+        "data/preinstallation/target-profile.json",
         "data/catalog/*",
         "docs/ARCHITECTURE*",
         "docs/DATA_GOVERNANCE*",
@@ -130,6 +136,7 @@
         "tests_agent/*",
         "tests/test_memory*",
         "tests/test_installation.py",
+        "data/preinstallation/retrieval-cases.json",
         "tools/doctor.py",
         "tools/start_jarvis.py",
         "tools/prepare_installation.py",
@@ -197,6 +204,10 @@
         ".github/*",
         "bojart_ops/*",
         "tests_ops/*",
+        "data/preinstallation/target-inventory.template.json",
+        "skills/bojart-context-reconstruction/*",
+        "skills/bojart-evidence-audit/*",
+        "skills/bojart-tool-qualification/*",
         "tools/*",
         "configs/*",
         "ops/*",
@@ -427,6 +438,22 @@
         "reference_assets"
       ],
       "acceptance": "Cinq médias contrôlés par taille et SHA-256 dans une copie de travail externe ; aucune validation du G2 final, du master ou du poste cible."
+    },
+    {
+      "id": "strates-g0",
+      "title": "Signer la fiche d'acceptation STRATES (G0) avant toute mesure ou achat",
+      "domain": "research",
+      "priority": 1,
+      "status": "blocked",
+      "depends_on": [],
+      "blockers": [
+        "Motif, pinceau, support, peinture et rendus acceptable/inacceptable non fixés ni signés par l'utilisateur ; aucune mesure physique acquise."
+      ],
+      "evidence": [
+        "docs/research/strates-robotique-2026-11-02/README.md",
+        "docs/research/strates-robotique-2026-11-02/verification-calculs.json"
+      ],
+      "acceptance": "Fiche STRATES versionnée et signée, distincte des critères figurines ; puis coupons mesurés avec incertitude déclarée avant tout choix de capteur, de bras ou de cellule."
     }
   ],
   "context_audit": {

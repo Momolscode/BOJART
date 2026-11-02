@@ -1,0 +1,935 @@
+{
+  "schema_version": 1,
+  "repo_sha": "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
+  "checked_at": "2026-11-02",
+  "sources": [
+    {
+      "id": "asr",
+      "title": "faster-whisper — moteur et exigences",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Moteur, PyAV, Python >=3.9, CUDA optionnel ; benchmark amont distinct de Jarvis.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "ct2",
+      "title": "CTranslate2 4.8.4 — matériel",
+      "url": "https://opennmt.net/CTranslate2/hardware_support.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Binaries CPU x86-64 SSE4.1+ ou ARM64 ; compatibilité exacte à vérifier sur la tour.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "tts-web",
+      "title": "Web Speech API",
+      "url": "https://webaudio.github.io/web-speech-api/",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Spécification du 27 octobre 2026 ; localService n’est pas un benchmark de voix française.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "piper",
+      "title": "Piper OHF maintenu",
+      "url": "https://github.com/OHF-Voice/piper1-gpl",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Moteur GPL-3.0 ; poids de voix distincts.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "siwis",
+      "title": "Voix française siwis medium — model card",
+      "url": "https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/medium/MODEL_CARD",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "fr_FR, mono-locutrice, 22050 Hz ; dataset annoncé CC-BY 4.0. Ne pas étendre cette licence à toutes les voix.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "ollama-embed",
+      "title": "Ollama API embed",
+      "url": "https://docs.ollama.com/api/embed",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "truncate=false retourne une erreur si le contexte est dépassé.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "ollama-hardware",
+      "title": "Ollama matériel",
+      "url": "https://docs.ollama.com/gpu",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Support GPU dépend du modèle de carte et du pilote ; RAM totale dépend des modèles et du contexte.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "embeddinggemma",
+      "title": "EmbeddingGemma model card",
+      "url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "300M paramètres, multilingue ; qualité BOJ.ART non mesurée.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "gemma-terms",
+      "title": "Gemma Terms",
+      "url": "https://ai.google.dev/gemma/terms",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Conditions propres aux poids Gemma ; pas une licence Apache par défaut.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "embeddinggemma-ollama",
+      "title": "EmbeddingGemma dans Ollama",
+      "url": "https://ollama.com/library/embeddinggemma",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Variante officielle du catalogue Ollama ; épingler digest téléchargé.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "qwenchat",
+      "title": "Qwen3.5-4B — model card",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Licence Apache-2.0 ; candidat de réponse locale, pas modèle qualifié sur BOJ.ART.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "qwenchat-ollama",
+      "title": "Qwen3.5:4b dans Ollama",
+      "url": "https://ollama.com/library/qwen3.5:4b",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Disponibilité du tag pour /api/chat ; pas une preuve de respect des délais de Jarvis.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "qwenembed",
+      "title": "Qwen3 Embedding et Reranker",
+      "url": "https://qwenlm.github.io/blog/qwen3-embedding/",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Famille 0.6B/4B/8B, Apache-2.0 ; alternative de benchmark seulement.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "fts5",
+      "title": "SQLite FTS5",
+      "url": "https://www.sqlite.org/fts5.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Recherche lexicale, BM25, fragments cités ; pas une compréhension sémantique.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "sqlite-license",
+      "title": "SQLite copyright",
+      "url": "https://www.sqlite.org/copyright.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Code et documentation SQLite placés dans le domaine public.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "langgraph",
+      "title": "LangGraph persistance",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Checkpoints de conversation/exécution distincts du magasin documentaire du projet.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "mcp-old",
+      "title": "MCP 2025-06-18 lifecycle",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Révision annoncée par le serveur local du dépôt.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "mcp-current",
+      "title": "MCP 2026-07-28 versioning",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/versioning",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Révision courante publiée ; vérifier négociation et compatibilité réelle du client.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "mcp-security",
+      "title": "MCP security practices",
+      "url": "https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Réduire les droits et considérer les contenus retournés comme non fiables.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "cadquery",
+      "title": "CadQuery installation",
+      "url": "https://cadquery.readthedocs.io/en/latest/installation.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Dépendances natives ; environnement local isolé ; documentation conda/pip.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "cadquery-license",
+      "title": "CadQuery licence",
+      "url": "https://github.com/CadQuery/cadquery/blob/master/LICENSE",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Texte Apache Public License v2.0 lu ; GitHub API NOASSERTION ne signifie pas absence de licence.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "trimesh",
+      "title": "trimesh licence",
+      "url": "https://github.com/mikedh/trimesh/blob/main/LICENSE.md",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "MIT ; version du moteur et exports à qualifier ensemble avec CadQuery.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "blender-hardware",
+      "title": "Blender exigences",
+      "url": "https://www.blender.org/download/requirements/",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Extrait officiel moteur de recherche vérifié ; ouverture directe bloquée 402. Minimum général ne garantit pas un rendu lourd.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "blender-cli",
+      "title": "Blender 5.1 CLI",
+      "url": "https://docs.blender.org/manual/de/5.1/advanced/command_line/arguments.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Options background, disable-autoexec et python-exit-code ; confirmer --help sur binaire retenu.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "blender-lts",
+      "title": "Blender 5.2 LTS",
+      "url": "https://projects.blender.org/blender/blender/milestone/33",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Branche LTS maintenue jusqu’en juillet 2028 ; patch exact à sélectionner et vérifier lors préparation.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "blender-license",
+      "title": "Blender COPYING",
+      "url": "https://github.com/blender/blender/blob/main/COPYING",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "GNU GPL annoncé dans COPYING ; licence complète dans doc/license/GPL-license.txt.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "orca",
+      "title": "OrcaSlicer officiel",
+      "url": "https://github.com/OrcaSlicer/OrcaSlicer",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Dépôt officiel déplacé depuis SoftFever ; AGPL-3.0.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "orca-cli",
+      "title": "OrcaSlicer CLI",
+      "url": "https://github.com/OrcaSlicer/OrcaSlicer/wiki/cli_mode",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "CLI de tranchage local et profils ; tester la version binaire, les pages wiki peuvent devancer un tag stable.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "prusa",
+      "title": "PrusaSlicer officiel",
+      "url": "https://github.com/prusa3d/PrusaSlicer",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "AGPL-3.0 ; FDM/mSLA pris en charge pour les profils compatibles.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "prusa-profiles",
+      "title": "PrusaSlicer vendor bundles",
+      "url": "https://github.com/prusa3d/PrusaSlicer/wiki/Vendor-bundles-and-updating-process",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Profils et G-code personnalisés doivent être versionnés et relus.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "moonraker",
+      "title": "Moonraker API imprimante",
+      "url": "https://moonraker.readthedocs.io/en/latest/external_api/printer/",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Query/list/subscribe pour état. Un attribut absent peut être omis sans erreur.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "moonraker-auth",
+      "title": "Moonraker authentification",
+      "url": "https://moonraker.readthedocs.io/en/latest/external_api/authorization/",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Authentification documentée ; ne pas présumer qu’une clé est limitée en lecture.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "moonraker-queue",
+      "title": "Moonraker file",
+      "url": "https://moonraker.readthedocs.io/en/latest/external_api/job_queue/",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "File pouvant comporter plusieurs occurrences du même fichier ; pas un registre exactly-once.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "klipper-status",
+      "title": "Klipper objets état",
+      "url": "https://www.klipper3d.org/Status_Reference.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Signification des états pour télémétrie, selon composants chargés.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "klipper-checks",
+      "title": "Klipper vérifications de configuration",
+      "url": "https://www.klipper3d.org/Config_checks.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Contrôles matériels propres à l’imprimante à réaliser avec opérateur ; aucune commande de cette page exécutée.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "octoprint",
+      "title": "OctoPrint état imprimante",
+      "url": "https://docs.octoprint.org/en/main/api/printer.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Droits STATUS et CONTROL distincts.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "octoprint-access",
+      "title": "OctoPrint contrôle d’accès",
+      "url": "https://docs.octoprint.org/en/main/features/accesscontrol.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Permissions granulaires ; webcam extérieure à ce contrôle d’accès.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "octoprint-job",
+      "title": "OctoPrint job",
+      "url": "https://docs.octoprint.org/en/main/api/job.html",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Lire le job et démarrer un job sont des opérations distinctes.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "pla",
+      "title": "Prusa PLA",
+      "url": "https://help.prusa3d.com/article/pla_2062",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Synthèse des propriétés et limites ; températures de profil non transférées à toutes les machines.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "petg",
+      "title": "Prusa PETG",
+      "url": "https://help.prusa3d.com/article/petg_2059",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Matériau tenace ; compatibilité surface/adhérence à examiner.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "asa",
+      "title": "Prusa ASA",
+      "url": "https://help.prusa3d.com/article/asa_1809",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Candidat extérieur résistant aux UV ; retrait et conditions d’impression à maîtriser.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "maintenance-prusa",
+      "title": "Maintenance Prusa MK4/S MK3.9/S",
+      "url": "https://help.prusa3d.com/article/regular-printer-maintenance-mk4-s-mk3-9-s_419000",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Procédure spécifique à ces modèles ; ne pas la généraliser aux rails ou extrudeurs du parc inconnu.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "resin-sds",
+      "title": "Formlabs Safety Data Sheets",
+      "url": "https://formlabs.com/resources/safety/",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "FDS par produit ; les conditions de certification sont liées au matériel et au procédé cités.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "opus",
+      "title": "Anthropic Opus 5.5",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "note": "Existence officielle confirmée, annonce du 22 septembre 2026 ; claude-opus-5-5. Accès effectif du compte non vérifié.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-faster-whisper",
+      "title": "SYSTRAN/faster-whisper release v1.2.1",
+      "url": "https://github.com/SYSTRAN/faster-whisper/releases/tag/v1.2.1",
+      "api_url": "https://api.github.com/repos/SYSTRAN/faster-whisper/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2025-10-31T11:34:00Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-ctranslate2",
+      "title": "OpenNMT/CTranslate2 release v4.8.4",
+      "url": "https://github.com/OpenNMT/CTranslate2/releases/tag/v4.8.4",
+      "api_url": "https://api.github.com/repos/OpenNMT/CTranslate2/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-10-25T19:04:59Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-piper1-gpl",
+      "title": "OHF-Voice/piper1-gpl release v1.8.0",
+      "url": "https://github.com/OHF-Voice/piper1-gpl/releases/tag/v1.8.0",
+      "api_url": "https://api.github.com/repos/OHF-Voice/piper1-gpl/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-09-04T16:47:48Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-ollama",
+      "title": "ollama/ollama release v0.40.13",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.13",
+      "api_url": "https://api.github.com/repos/ollama/ollama/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-10-28T19:55:04Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-cadquery",
+      "title": "CadQuery/cadquery release v2.8.0",
+      "url": "https://github.com/CadQuery/cadquery/releases/tag/v2.8.0",
+      "api_url": "https://api.github.com/repos/CadQuery/cadquery/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-06-20T17:53:53Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-trimesh",
+      "title": "mikedh/trimesh release 5.2.0",
+      "url": "https://github.com/mikedh/trimesh/releases/tag/5.2.0",
+      "api_url": "https://api.github.com/repos/mikedh/trimesh/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-10-24T01:10:40Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-orcaslicer",
+      "title": "OrcaSlicer/OrcaSlicer release v2.4.2",
+      "url": "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.4.2",
+      "api_url": "https://api.github.com/repos/OrcaSlicer/OrcaSlicer/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-07-07T03:33:49Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-prusaslicer",
+      "title": "prusa3d/PrusaSlicer release version_2.9.6",
+      "url": "https://github.com/prusa3d/PrusaSlicer/releases/tag/version_2.9.6",
+      "api_url": "https://api.github.com/repos/prusa3d/PrusaSlicer/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-06-25T20:52:26Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-moonraker",
+      "title": "Arksine/moonraker release v0.1.0",
+      "url": "https://github.com/Arksine/moonraker/releases/tag/v0.1.0",
+      "api_url": "https://api.github.com/repos/Arksine/moonraker/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2020-09-01T15:49:03Z",
+      "note": "Dernière GitHub Release ancienne, impropre à identifier une installation actuelle : relever commit/version sur hôte autorisé.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "release-octoprint",
+      "title": "OctoPrint/OctoPrint release 1.11.8",
+      "url": "https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.8",
+      "api_url": "https://api.github.com/repos/OctoPrint/OctoPrint/releases/latest",
+      "publisher_type": "primary",
+      "checked_on": "2026-11-01",
+      "published_at": "2026-06-23T09:33:13Z",
+      "note": "Version observée ; ce n’est pas une prescription de mise à niveau.",
+      "checked_at": "2026-11-01"
+    },
+    {
+      "id": "arch-ortools-jobshop",
+      "title": "OR-Tools job shop",
+      "url": "https://developers.google.com/optimization/scheduling/job_shop",
+      "note": "Précédences et exclusivité des ressources ; exemple ne couvre pas seul les opérateurs et le déchargement BOJ.ART.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-ortools-status",
+      "title": "OR-Tools CP-SAT",
+      "url": "https://developers.google.com/optimization/cp/cp_solver",
+      "note": "Statuts OPTIMAL, FEASIBLE, INFEASIBLE, MODEL_INVALID, UNKNOWN distincts ; temps entier.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-ortools-repo",
+      "title": "OR-Tools dépôt",
+      "url": "https://github.com/google/or-tools",
+      "note": "Apache-2.0 ; v9.15 observée API officielle.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-ocr",
+      "title": "Tesseract manuel",
+      "url": "https://tesseract-ocr.github.io/tessdoc/",
+      "note": "OCR 5.x ; Apache-2.0 ; langues séparées ; v5.5.4 observée API.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-pdf",
+      "title": "pypdf extraction",
+      "url": "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+      "note": "PDF textuel distinct d’un scan ; la mémoire de traitement doit être bornée. Documentation 6.21.4.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-pdf-license",
+      "title": "pypdf licence",
+      "url": "https://github.com/py-pdf/pypdf/blob/main/LICENSE",
+      "note": "BSD 3 clauses lu.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-ffmpeg",
+      "title": "FFmpeg CLI",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "note": "Décodage/extraction de flux ; pas compréhension sémantique.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-ffmpeg-license",
+      "title": "FFmpeg licence",
+      "url": "https://ffmpeg.org/legal.html",
+      "note": "LGPL2.1+ par défaut, options GPL possibles ; vérifier build exact.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-vision",
+      "title": "Ollama vision",
+      "url": "https://docs.ollama.com/capabilities/vision",
+      "note": "Images en entrée API ; le chat textuel BOJ.ART n’en envoie actuellement pas.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-hunyuan",
+      "title": "Hunyuan3D 2.1 exigences",
+      "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "note": "Exigences amont déclarées 10 Go forme, 21 Go texture, 29 Go ensemble ; aucune mesure locale.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-hunyuan-license",
+      "title": "Hunyuan3D 2.1 licence",
+      "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/LICENSE",
+      "note": "Licence communautaire excluant UE, Royaume-Uni et Corée du Sud : référence non retenue pour la préparation BOJ.ART.",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "arch-release-or-tools",
+      "title": "google/or-tools v9.15",
+      "url": "https://github.com/google/or-tools/releases/tag/v9.15",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary",
+      "published_at": "2026-01-12T15:38:30Z"
+    },
+    {
+      "id": "arch-release-tesseract",
+      "title": "tesseract-ocr/tesseract 5.5.4",
+      "url": "https://github.com/tesseract-ocr/tesseract/releases/tag/5.5.4",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary",
+      "published_at": "2026-10-28T11:19:43Z"
+    },
+    {
+      "id": "arch-release-pypdf",
+      "title": "py-pdf/pypdf 6.21.4",
+      "url": "https://github.com/py-pdf/pypdf/releases/tag/6.21.4",
+      "checked_at": "2026-11-01",
+      "publisher_type": "primary",
+      "published_at": "2026-10-28T17:00:34Z"
+    },
+    {
+      "id": "v5-docling-release",
+      "title": "Docling release et manifeste Python",
+      "url": "https://github.com/docling-project/docling/releases/tag/v2.145.0",
+      "version": "2.145.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Release 2026-10-29 ; MIT code, licences des modèles séparées ; Python >=3.10, Windows déclaré.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-docling-doc",
+      "title": "DoclingDocument",
+      "url": "https://docling-project.github.io/docling/concepts/docling_document/",
+      "version": "v2",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Texte/tableaux/images, hiérarchie, boîtes si disponibles, provenance ; JSON structuré.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-docling-offline",
+      "title": "Options et limites Docling",
+      "url": "https://docling-project.github.io/docling/usage/advanced_options/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Services distants opt-in ; ceci ne bloque pas à lui seul les téléchargements de modèles. Limites pages/taille/files/concurrence disponibles.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-docling-rtx",
+      "title": "Docling RTX",
+      "url": "https://docling-project.github.io/docling/getting_started/rtx/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Windows 10/11 etRTX 40/50 listés ; aucun seuil RAM/VRAM ni gain pour4060 Ti démontré ici.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-opencv-release",
+      "title": "OpenCV release et licence",
+      "url": "https://github.com/opencv/opencv/releases/tag/5.0.0",
+      "version": "5.0.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Release 2026-06-06 ; Apache-2.0 vérifié dans LICENSE du tag.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-opencv-calibration",
+      "title": "Camera Calibration",
+      "url": "https://docs.opencv.org/4.13.0/dc/dbb/tutorial_py_calibration.html",
+      "version": "4.13.0 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Paramètres caméra, distorsion et motifs connus ; documentation4.x distincte du major5 observé.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-opencv-charuco",
+      "title": "ChArUco",
+      "url": "https://docs.opencv.org/4.13.0/df/d4a/tutorial_charuco_detection.html",
+      "version": "4.13.0 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Motif connu et calibration ; ne confère aucune précision métrologique sans validation.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-faster-whisper",
+      "title": "faster-whisper README épinglé",
+      "url": "https://github.com/SYSTRAN/faster-whisper/blob/v1.2.1/README.md",
+      "version": "1.2.1",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "README demande CUDA 12/cuDNN 9 pour CT2 récents ; code BOJART actuel : CPU/int8.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ct2-install",
+      "title": "CTranslate2 installation",
+      "url": "https://opennmt.net/CTranslate2/installation.html",
+      "version": "4.8.4 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Page mentionne encore cuDNN 8 pour CUDA 12 : contradiction documentaire conservée, pas recette GPU certifiée.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ct2-hardware",
+      "title": "CTranslate2 matériel",
+      "url": "https://opennmt.net/CTranslate2/hardware_support.html",
+      "version": "4.8.4 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Wheels Windows x86-64 ; backend AMD mentionné ; performances poste inconnues.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-pipecat-release",
+      "title": "Pipecat release",
+      "url": "https://github.com/pipecat-ai/pipecat/releases/tag/v1.15.0",
+      "version": "1.15.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "2026-10-29 ; BSD-2-Clause ; Python >=3.11 ; extra WebRTC opencv-python-headless >=4.11.0.86,<5.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-pipecat-turn",
+      "title": "Pipecat user turn strategies",
+      "url": "https://docs.pipecat.ai/api-reference/server/utilities/turn-management/user-turn-strategies",
+      "version": ">=1.0 API",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "VAD, interruption, stratégies de fin, SmartTurn local ; Jev distant optionnel, pas nécessaire pour tout tour.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-prusa-design",
+      "title": "Prusa conception pour impression",
+      "url": "https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Sections listées : parois, tolérances, orientation, supports, manifold. Aucun seuil numérique universel repris.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-prusa-materials",
+      "title": "Prusa matériaux",
+      "url": "https://help.prusa3d.com/filament-material-guide",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Point de départ fabricant ; pas preuve du produit possédé ni de son profil.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-formlabs-wall",
+      "title": "Formlabs parois",
+      "url": "https://formlabs.com/blog/minimum-wall-thickness-3d-printing/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Dépendance àusage, matériau, procédé et finitions ; guide fabricant, pas règle pour toutes machines.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-formlabs-safety",
+      "title": "Formlabs sécurité et fiches",
+      "url": "https://formlabs.com/resources/safety/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Portail fabricant ; sélectionner référence/révision exacte après inventaire.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ortools-release",
+      "title": "OR-Tools release et licence",
+      "url": "https://github.com/google/or-tools/releases/tag/v9.15",
+      "version": "9.15",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "2026-01-12 ; Apache-2.0 vérifié.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ortools-job",
+      "title": "OR-Tools Job Shop",
+      "url": "https://developers.google.com/optimization/scheduling/job_shop",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Précédences et exclusivité machine ; extension aux opérateurs = modélisation BOJART proposée.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ortools-status",
+      "title": "CP-SAT statuts",
+      "url": "https://developers.google.com/optimization/cp/cp_solver",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Contraintes entières ; OPTIMAL,FEASIBLE,INFEASIBLE,MODEL_INVALID,UNKNOWN distincts.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ffmpeg-release",
+      "title": "FFmpeg téléchargement officiel",
+      "url": "https://ffmpeg.org/download.html",
+      "version": "9.0.2",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Page courante propose sources9.0.2 ; builds Windows tiers, version installée inconnue.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ffmpeg-legal",
+      "title": "FFmpeg licence",
+      "url": "https://ffmpeg.org/legal.html",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "LGPL2.1+ ou GPL selon composants/build ; conserver configure et licences effectives.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ffprobe",
+      "title": "FFprobe",
+      "url": "https://ffmpeg.org/ffprobe.html",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Inspection flux/conteneur et sortie JSON.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-ffmpeg-filters",
+      "title": "FFmpeg filtres",
+      "url": "https://ffmpeg.org/ffmpeg-filters.html#loudnorm",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Normalisation loudnorm simple/doublepasse ; conserver métriques et fréquence de sortie.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-blender-security",
+      "title": "Blender scripting/security",
+      "url": "https://docs.blender.org/UATEST/manual/en/dev/advanced/scripting/security.html",
+      "version": "5.1 docindex",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Extrait officiel consulté ; ouverture latest402, pas de prétention revue entière5.2. Python embarqué non sandboxé ; --disable-autoexec n’isole pas un script explicitement exécuté.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-mcp-inspector",
+      "title": "MCP Inspector",
+      "url": "https://github.com/modelcontextprotocol/inspector/releases/tag/2.13.0",
+      "version": "2.13.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "2026-10-28 ; licence transition Apache-2.0/MIT, documentation CC-BY4.0 selon notice.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-mcp-tools",
+      "title": "MCP outils",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "version": "2026-07-28",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Schémas, contrat invocation et retours ; différence avec protocole BOJART2025-06-18 à tester, pas incompatibilité automatique.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-mcp-security",
+      "title": "MCP sécurité",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices",
+      "version": "2026-07-28",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Frontières stdio/proxy/autorisation ; minimisation des droits.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-skill-anthropic",
+      "title": "Anthropic skills commit",
+      "url": "https://github.com/anthropics/skills/commit/ca45fc496a3436251f191354091d557da31c15b5",
+      "version": "ca45fc4",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "HEAD inchangé depuis V3 ; mcp-builder relu, pas installé.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-skill-trailofbits",
+      "title": "Trail of Bits skills commit",
+      "url": "https://github.com/trailofbits/skills/commit/2be6433b39e009cd2b6fd3be1895f6b1faa5af9a",
+      "version": "2be6433",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "HEAD inchangé depuis V3 ; sélection initiale maintenue, pas de nouvel audit intégral.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-skill-openai",
+      "title": "OpenAI skills commit historique",
+      "url": "https://github.com/openai/skills/commit/49f948faa9258a0c61caceaf225e179651397431",
+      "version": "49f948f",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "HEAD inchangé depuis V3 ; dépréciation documentée dans rechercheV3, pas installation d’un successeur.",
+      "publisher_type": "primary"
+    },
+    {
+      "id": "v5-anthropic-context",
+      "title": "Anthropic context engineering",
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "version": "2025-09-29",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Contexte fini et sélection utile ; ne démontre pas les seuils de nos recettes.",
+      "publisher_type": "primary"
+    }
+  ]
+}

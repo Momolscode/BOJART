@@ -4,9 +4,10 @@ import sqlite3
 import uuid
 from urllib.parse import parse_qs
 from .agent import AgentMemory
+from .ask_requests import AskRequestError
 from .core import Memory, MemoryError
 
-GETS = {'/memory.css', '/api/memory/recall', '/api/memory/context', '/api/memory/facts', '/api/memory/status'}
+GETS = {'/memory.css', '/api/memory/recall', '/api/memory/context', '/api/memory/facts', '/api/memory/status', '/api/memory/verify', '/api/memory/request-status'}
 POSTS = {'/api/memory/note', '/api/memory/ask', '/api/memory/reindex', '/api/memory/backup'}
 
 
@@ -16,15 +17,22 @@ def get(h, parsed, app):
     try:
         if parsed.path == '/memory.css': return h.response(200, (app / 'memory.css').read_bytes(), 'text/css; charset=utf-8')
         q = parse_qs(parsed.query, keep_blank_values=True)
-        if set(q) - {'q', 'project'} or any(len(v) != 1 for v in q.values()):
+        allowed = {'request_id', 'session', 'project'} if parsed.path.endswith('/request-status') else {'q', 'project'}
+        if set(q) - allowed or any(len(v) != 1 for v in q.values()):
             raise MemoryError('Paramètres invalides.')
         m = AgentMemory(); project = q.get('project', ['bojart.jarvis'])[0]
-        if parsed.path.endswith('/status'): result = m.status()
+        if parsed.path.endswith('/request-status'):
+            if set(q) != allowed: raise MemoryError('Identité de demande complète requise.')
+            result = m.request_status(**{k: v[0] for k,v in q.items()})
+        elif parsed.path.endswith('/verify'):
+            with Memory(m.state, readonly=True) as db: result = db.verify()
+        elif parsed.path.endswith('/status'): result = m.status()
         elif parsed.path.endswith('/facts'): result = {'facts': m.facts(project)}
         else:
             fn = m.context if parsed.path.endswith('/context') else m.search
             result = fn(q.get('q', [''])[0], project)
         return h.j(result)
+    except AskRequestError as e: return h.j({'error': str(e), **e.to_dict()}, 409)
     except (MemoryError, ValueError, TypeError) as e: return h.j({'error': str(e)}, 400)
     except (OSError, sqlite3.Error): return h.j({'error': 'Mémoire locale indisponible.'}, 503)
 
@@ -60,5 +68,6 @@ def post(h):
             with Memory(m.state, readonly=True) as db: result = db.backup(destination)
             result['path'] = str(destination)
         return h.j(result)
+    except AskRequestError as e: return h.j({'error': str(e), **e.to_dict()}, 409)
     except (MemoryError, ValueError, TypeError, KeyError) as e: return h.j({'error': str(e)}, 400)
     except (OSError, sqlite3.Error): return h.j({'error': 'Mémoire ou modèle local indisponible.'}, 503)

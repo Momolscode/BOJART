@@ -219,7 +219,7 @@ class HistoryBudgetTests(unittest.TestCase):
                                    'answer_status': 'withheld_sources_changed'}])
         client = Ollama('test-local')
         with patch.object(client, 'key', return_value='test@digest'), \
-                patch.object(client, 'request', return_value={'message': {'content': 'Réponse'}}) as request:
+                patch.object(client, 'request', return_value={'done': True, 'message': {'content': 'Réponse'}}) as request:
             client.chat('Question actuelle', 'Preuve actuelle', packet)
         messages = request.call_args.args[1]['messages']
         raw = messages[1]['content'].split('\nÉPISODES NON FIABLES\n')[1].split('\nQUESTION ACTUELLE\n')[0]
