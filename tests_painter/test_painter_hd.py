@@ -31,6 +31,14 @@ class HDPainterTests(unittest.TestCase):
         self.assertAlmostEqual(ssim(t, t), 1.0, places=5)
         self.assertLess(ssim(np.ones_like(t), t), 0.9)
 
+    def test_workshop_style_uses_three_discrete_brushes(self):
+        from bojart_painter.hd import HDPainter
+        p = HDPainter(self.target(), 'atelier_3_semaines', mm_per_px=5.0, seed=2)
+        err = np.ones((40, 60))
+        widths = {round(p._propose(err, prog)[3]) for prog in (0.1, 0.4, 0.9) for _ in range(5)}
+        self.assertTrue(widths <= {19, 20, 21, 8, 3})
+        self.assertEqual(len(p.palette), 10)
+
     def test_palette_style_uses_palette(self):
         from bojart_painter.hd import HDPainter
         p = HDPainter(self.target(), 'empattement', mm_per_px=5.0, seed=1)

@@ -364,8 +364,8 @@
     },
     {
       "path": "bojart_painter/__main__.py",
-      "bytes": 8023,
-      "sha256": "aa93964240c2a8461e1623e2b605f83777c9956024106df8c7e742699bddca4b"
+      "bytes": 8688,
+      "sha256": "12c1303a26de27e7f79aa5e5853009e5e6a9ea66101b30e7e3de3d01db81be21"
     },
     {
       "path": "bojart_painter/arms.py",
@@ -384,8 +384,8 @@
     },
     {
       "path": "bojart_painter/hd.py",
-      "bytes": 10282,
-      "sha256": "5d406986ada601d2de00d49bd36e7b4783e0798d81e1449c6cfde4a36987c2c4"
+      "bytes": 10850,
+      "sha256": "f6124637de83287b5f0ba5d7229affb73c06091e0079e2f1a2d8c238e119ded0"
     },
     {
       "path": "bojart_painter/loop.py",
@@ -424,8 +424,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 44427,
-      "sha256": "2fd5bb2671eafc4b7b04cb676614a08c74a5c89924b9a310ece0fe51c4eba3aa"
+      "bytes": 44870,
+      "sha256": "bf4263d25ec1959a623c6c5310eb7203e7ca472186fa14fbc0eddfc60c74f9be"
     },
     {
       "path": "creative/CURRENT.md",
@@ -849,13 +849,18 @@
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/README.md",
-      "bytes": 2088,
-      "sha256": "e7d6c993e9e47aea9292791c4abba94ba138c42717fe499e1e80b8333f48c500"
+      "bytes": 2308,
+      "sha256": "7958f809f4d0257124e4ba25fb7365d3fdb85f040faf0f589138ce974802e3e2"
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/arms.json",
       "bytes": 9841,
       "sha256": "c73110b9f97f1cc21e2f0103ab3b1d9adbb7f932cba748048af6650a2f08b1a0"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/hd-nuit-etoilee-atelier-3-semaines-seed1.json",
+      "bytes": 3650,
+      "sha256": "cb087d0e7fec1da274f11c07c2db91c2c46ad4348ce8ea91d62ee8af78e71795"
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/hd-nuit-etoilee-empattement-seed1.json",
@@ -909,8 +914,8 @@
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/summary.json",
-      "bytes": 10207,
-      "sha256": "68896ec1c0ffa15a20a34ac72a4bb5a8933b2364e05638fc60cd367d902ef718"
+      "bytes": 11038,
+      "sha256": "c0b2efafc197f53872818c6231fce850badef21c2dcfd49bf3ae83e501ffbd33"
     },
     {
       "path": "docs/evidence/production-recovery-2026-11-02.json",
@@ -1289,8 +1294,8 @@
     },
     {
       "path": "docs/research/bras-peintre-simulation-2026-11-02/README.md",
-      "bytes": 10847,
-      "sha256": "930442dd6905706eb4f68d344228387ec3b728e542629076b2f8ba5ac072daa4"
+      "bytes": 12112,
+      "sha256": "80e4034747b79e40636881b8caf7a38ff36dcb15995736374d7cc5d2af539137"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -4689,8 +4694,8 @@
     },
     {
       "path": "tests_painter/test_painter_hd.py",
-      "bytes": 1656,
-      "sha256": "53adc975ab5a486a2373d11aeb36df376b355ff96e67836bf187b26af3aebe96"
+      "bytes": 2078,
+      "sha256": "0edfc9e8dee1dc622d0357790e3737a0a907a82cc1d1c03b8898aa2406e03063"
     },
     {
       "path": "tests_workflows/test_journeys.py",

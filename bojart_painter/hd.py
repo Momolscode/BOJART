@@ -17,6 +17,9 @@ HD_STYLES = {
     'fin': dict(width_mm=(30, 2.5), length_ratio=(1.0, 5.0), curvature=0.3, palette=None),
     'empattement': dict(width_mm=(24, 7), length_ratio=(1.2, 2.5), curvature=0.1, palette=12),
     'tres_fin': dict(width_mm=(30, 1.5), length_ratio=(1.0, 6.0), curvature=0.3, palette=None),
+    # Premier atelier réel : 10 peintures pré-mélangées, trois pinceaux, pas de mélange automatique.
+    'atelier_3_semaines': dict(width_mm=(20, 3), brushes_mm=(20, 8, 3), brush_phases=(0.25, 0.6),
+                               length_ratio=(1.0, 4.0), curvature=0.25, palette=10),
 }
 
 
@@ -118,8 +121,12 @@ class HDPainter:
     def _propose(self, err, progress):
         flat = err.ravel(); idx = self.rng.integers(0, flat.size, 48)
         y, x = divmod(int(idx[flat[idx].argmax()]), self.W)
-        w0, w1 = self.style['width_mm']
-        width = w0 * (w1 / w0) ** progress * self.rng.uniform(0.8, 1.2)
+        if 'brushes_mm' in self.style:  # pinceaux discrets : le grand, puis le moyen, puis le fin
+            phase = sum(progress >= x for x in self.style['brush_phases'])
+            width = self.style['brushes_mm'][phase] * self.rng.uniform(0.95, 1.05)
+        else:
+            w0, w1 = self.style['width_mm']
+            width = w0 * (w1 / w0) ** progress * self.rng.uniform(0.8, 1.2)
         length = width * self.rng.uniform(*self.style['length_ratio'])
         if self.mag[y, x] > 0.004:
             ang = math.atan2(self.gy[y, x], self.gx[y, x]) + math.pi / 2 + self.rng.normal(0, 0.12)

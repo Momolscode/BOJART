@@ -90,10 +90,12 @@ def cmd_coupon(a):
 
 
 def cmd_hd(a):
-    from .hd import HDPainter, load_image  # numpy et Pillow requis
+    from .hd import Deposit, HDPainter, load_image  # numpy et Pillow requis
     raw = Path(a.image).read_bytes()
     target = load_image(a.image, a.width_px)
-    res = HDPainter(target, a.style, a.mm_per_px, a.seed).run(a.strokes, batches=a.batches)
+    painter = HDPainter(target, a.style, a.mm_per_px, a.seed, hidden=Deposit(a.hidden_gain, a.hidden_opacity),
+                        position_sigma_mm=a.position_sigma_mm, color_sigma=a.color_sigma)
+    res = painter.run(a.strokes, batches=a.batches)
     snaps = res.pop('snapshots')
     if a.save_png:
         from PIL import Image
@@ -103,7 +105,9 @@ def cmd_hd(a):
         for k, v in snaps.items():
             Image.fromarray((np.clip(v, 0, 1) * 255).astype('uint8')).save(out / f'{a.style}-{k:06d}.png')
     return {'command': 'hd', 'image': {'sha256': hashlib.sha256(raw).hexdigest(), 'path_in_git': False},
-            'style': a.style, 'seed': a.seed, 'requested_strokes': a.strokes, **res}
+            'style': a.style, 'seed': a.seed, 'requested_strokes': a.strokes,
+            'world': {'hidden_gain': a.hidden_gain, 'hidden_opacity': a.hidden_opacity,
+                      'position_sigma_mm': a.position_sigma_mm, 'color_sigma': a.color_sigma}, **res}
 
 
 def main(argv=None):
@@ -123,10 +127,14 @@ def main(argv=None):
             s.add_argument('--sigma-divisor', type=float, default=2.0)
         if name == 'hd':
             s.add_argument('--image', required=True, help='image locale hors Git (domaine public ou droits vérifiés)')
-            s.add_argument('--style', default='fin', choices=['reproduction', 'fin', 'empattement', 'tres_fin'])
+            s.add_argument('--style', default='fin', choices=['reproduction', 'fin', 'empattement', 'tres_fin', 'atelier_3_semaines'])
             s.add_argument('--strokes', type=int, default=8000)
             s.add_argument('--width-px', type=int, default=450)
             s.add_argument('--batches', type=int, default=8)
+            s.add_argument('--hidden-gain', type=float, default=1.15)
+            s.add_argument('--hidden-opacity', type=float, default=0.82)
+            s.add_argument('--position-sigma-mm', type=float, default=0.35)
+            s.add_argument('--color-sigma', type=float, default=0.015)
             s.add_argument('--mm-per-px', type=float, default=2.0)
             s.add_argument('--save-png', help='dossier hors Git pour les rendus')
         if name == 'simulate':

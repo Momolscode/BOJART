@@ -87,6 +87,18 @@ C'est le niveau visé pour une œuvre pilote de 90 × 56 cm : une réinterpréta
 
 Le rendu 3D du bras (modèle xArm 7 de MuJoCo Menagerie, toile réduite à 40 × 29 cm) a été produit hors du dépôt. Les modèles Menagerie gardent leur licence propre et ne sont pas versés ici.
 
+## Après 2 à 3 semaines avec le matériel (projection)
+
+Le bras n'« apprend » pas comme un modèle de langage. Les trois semaines servent surtout à mesurer le vrai dépôt (quelques centaines de touches photographiées), à recaler la toile et la caméra, et à fixer la recette : peinture, dilution, recharge, essuyage. Projection simulée (`--style atelier_3_semaines`, `hd-nuit-etoilee-atelier-3-semaines-seed1.json`) : 10 peintures pré-mélangées, pinceaux de 20, 8 puis 3 mm, toile de 50 × 31 cm, erreur de position 0,5 mm. Résultat : 5 032 touches, environ 3 h 30 de bras estimées, PSNR 17,7 dB et SSIM 0,29 à 1 mm. Le dépôt caché (1,25 / 0,75) est retrouvé.
+
+| Semaine | Objectif réaliste |
+|---|---|
+| 1 | Montage, sécurité, recalage toile/caméra, bibliothèque de 200 à 500 touches mesurées ; aplats au gros pinceau. |
+| 2 | Modèle de dépôt mesuré branché dans la boucle, photo et replanification ; petites toiles avec deux pinceaux. |
+| 3 | Trois pinceaux, toile de 50 cm en une demi-journée, styles « reproduction » et « empâtement » ; coupon STRATES mesuré. |
+
+Hors de portée en trois semaines : mélange automatique des couleurs, détails sous 2–3 mm, relief, toile de 90 cm sans surveillance, copie indiscernable.
+
 ## Limites
 
 - Le monde « physique » est lui-même un modèle. Le recalage ne prouve que la logique de la boucle. La peinture réelle (charge du pinceau, séchage, mélange, relief) demande les mesures G1.
