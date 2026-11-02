@@ -73,4 +73,6 @@ Voir [les trois campagnes et le rapport](evidence/workflows-2026-11-02/README.md
 
 Ces temps mesurent des appels Python et SQLite. Pas de HTTP, navigateur, SSE, microphone, reconnaissance, synthèse vocale, Jev, LLM ou GPU dans cette mesure. Le reçu est injecté par un client d'essai, sans rendu visuel. Il ne faut pas appeler ces chiffres « latence vocale » ou « délai d'affichage physique ».
 
+**Complément Windows à ne pas masquer :** la CI passe fonctionnellement, mais son runner Windows atteint un p95 de 740,9 ms et un maximum de 17,96 secondes avec LangGraph actif (270 essais). Le repli en règles locales y atteint 375,1 ms au p95 et 419,9 ms au maximum. Ces séries séquentielles n'isolent pas la cause de la variation. La fluidité constante n'est donc pas qualifiée ; les rapports complets sont conservés dans le dossier de preuves. Les chiffres Linux ne doivent pas servir de promesse pour le PC de l'atelier.
+
 Pour le vrai Végéta : le prochain raccordement est modèle 3D vérifié → découpe/assemblage → profils slicer du parc → planning révisable → validation opérateur → connecteur qualifié. Aucune de ces étapes physiques n'est déclarée terminée par ce simulateur.

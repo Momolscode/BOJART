@@ -26,6 +26,23 @@ Le fichier [before.json](before.json) conserve l'observation avant correction : 
 
 ## Pannes et cohérence
 
+### Complément CI : variation importante sous Windows
+
+Sur le même code mesuré, SHA `13005fe924e0c092e87a99a82089c8ad15cf9b4c`, les deux runners ont terminé la recette. Chaque ligne ci-dessous contient 270 essais réussis fonctionnellement. Ils sont **séparés** des 810 essais locaux et ne mesurent toujours aucun rendu réel.
+
+| Runner et moteur | P50 jusqu'au reçu synthétique | P95 | Maximum |
+|---|---:|---:|---:|
+| Linux, règles locales | 15,179 ms | 31,767 ms | 34,164 ms |
+| Linux, LangGraph actif | 21,348 ms | 36,545 ms | 41,808 ms |
+| Windows, règles locales | 184,780 ms | 375,076 ms | 419,910 ms |
+| Windows, LangGraph actif | 158,254 ms | 740,895 ms | **17 964,718 ms** |
+
+La dernière ligne présente sept essais au-dessus d'une seconde, dont deux au-dessus de cinq secondes. Les deux plus longs concernent la scène des trois dashboards : 17,965 et 11,922 secondes. Le succès fonctionnel du workflow n'est **pas** une validation de fluidité. La cause de ces pauses n'est pas isolée ; on ne peut pas les attribuer avec certitude au moteur, au disque ou à la charge du runner. Ce test séquentiel n'est pas un essai causal contrôlé.
+
+La latence constante reste donc à qualifier, notamment sur la vraie tour Windows. La prochaine mesure doit instrumenter les écritures SQLite, checkpoints et reçus, puis répéter les scènes avec la charge habituelle du poste. Aucun modèle, pilote ou périphérique du PC BOJ.ART n'a été mis en cause par ces données.
+
+Les [observations CI](ci-observations.json) conservent les empreintes, le lien du workflow et les nombres exacts. Les quatre rapports `ci-linux-rules.json`, `ci-linux-langgraph.json`, `ci-windows-rules.json`, `ci-windows-langgraph.json` sont conservés ici, après téléchargement et vérification du SHA-256 des archives GitHub. Leur source exécutée correspond octet pour octet à celle des trois campagnes locales.
+
 **16 scénarios par campagne, 48/48 réussis :** dashboard non précisé ; modèle non sélectionné ; préparation de personnage non raccordée ; ordre physique non pris en charge ; négation ; action supplémentaire ; révision périmée ; contexte changé depuis l'écoute ; réponse perdue puis redémarrage sous le même identifiant ; identifiant réutilisé pour un autre contenu ; scène partiellement distribuée ; vue absente puis revenue ; vue en échec ; annulation ; vue d'un autre projet ; contexte changé avant le reçu.
 
 La scène reste à 2/3 jusqu'au troisième reçu. La reprise partielle réutilise les références des enfants. Trois soumissions séparées par un redémarrage du runtime produisent une seule commande. Ces essais ne sont pas des crashs brutaux du processus : ceux de la mémoire sont documentés séparément dans `../simulations-2026-11-02/`.

@@ -344,8 +344,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 34714,
-      "sha256": "a99076c958bb21d0bcb1b572448d3058e8a792441939547e6785af8e2ef1004a"
+      "bytes": 35414,
+      "sha256": "42e33f212fd43bb48c77e6195f56cbde0790fe1547af08cb1ad6a54dc8324e39"
     },
     {
       "path": "creative/CURRENT.md",
@@ -579,8 +579,8 @@
     },
     {
       "path": "docs/SIMULATIONS_ATELIER.md",
-      "bytes": 7241,
-      "sha256": "7bba4f38be58e5ece9ffba6027241bcd33bf8219d913b33adf7911344a6bec0d"
+      "bytes": 7775,
+      "sha256": "9d6341f1bff4e5d089c956ceebb86c0a42fe7e1416a2cc1d12f795807e12d10b"
     },
     {
       "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
@@ -799,13 +799,38 @@
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/README.md",
-      "bytes": 7250,
-      "sha256": "161b49a3a07ba78e1640fade240e94f609197802986a500b464a4e4a23a09a87"
+      "bytes": 9160,
+      "sha256": "d2e657468f692293bc635eaf3e42d3f195ba18ecefb71c4faf65f5a8808a38d5"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/before.json",
       "bytes": 1990,
       "sha256": "6b573b8970fc2b69590f932094061b7f2a836029391ec4f002db902abc7d81e1"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/ci-linux-langgraph.json",
+      "bytes": 98838,
+      "sha256": "98c0e57cdc825ae7cad8650b8e1f82bd4318ef16df4c1a261cd212ff86bfa3c9"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/ci-linux-rules.json",
+      "bytes": 98830,
+      "sha256": "5f3187b80db3bd056e417f1bac8b72bbec8492112dbb51443680fed44a29d1e5"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/ci-observations.json",
+      "bytes": 2589,
+      "sha256": "3b7a8c4116ab04567bcb916795caea093e13dffda93da8a166b77da4e84372c3"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/ci-windows-langgraph.json",
+      "bytes": 98267,
+      "sha256": "9912f138da2a07f8ed347c64961f173270229c05a5aada682a62719057953696"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/ci-windows-rules.json",
+      "bytes": 98305,
+      "sha256": "fb5d61ec15c07e7b87eb82d9103001c2587749133ab79c5a414e45b89e33a64e"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/retrieval-after.json",
