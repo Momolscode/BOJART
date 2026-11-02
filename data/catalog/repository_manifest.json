@@ -229,13 +229,13 @@
     },
     {
       "path": "bojart_memory/__main__.py",
-      "bytes": 2844,
-      "sha256": "b2c6769e28566613a7b044b27595cda20d9262332547047f3107e47b77badc25"
+      "bytes": 3584,
+      "sha256": "71679a69796be6ae18e889a4e76ee84773798018c5f60819fb43f789c352c4df"
     },
     {
       "path": "bojart_memory/agent.py",
-      "bytes": 21135,
-      "sha256": "faf7dd4acd339fab9fa703b4584ff8325a75b7524345a972c99361c91c951f4b"
+      "bytes": 22602,
+      "sha256": "548e28a9b7a89aae7478cb89c12e746f8970a9fb4266073fef59396ba9cd75a2"
     },
     {
       "path": "bojart_memory/agent_cli.py",
@@ -243,24 +243,34 @@
       "sha256": "c804536c7895f65028c2489461701a862d023ffdea0e947b571c76282e50c2a3"
     },
     {
+      "path": "bojart_memory/ask_requests.py",
+      "bytes": 14576,
+      "sha256": "3b20090128ae35983e365121f5267a624f477ccb59a5d4a3e810cced5947c102"
+    },
+    {
       "path": "bojart_memory/benchmarks.py",
       "bytes": 22718,
       "sha256": "190623bf26eb1ad262bff84e57014c13936f9a237c3056e79ac0aeff9722dd15"
     },
     {
+      "path": "bojart_memory/context_selection.py",
+      "bytes": 19010,
+      "sha256": "2166d07ff59732be077baa70dff9ea8fa06b027873dc93963544fb5e0676d87e"
+    },
+    {
       "path": "bojart_memory/conversation.py",
-      "bytes": 5856,
-      "sha256": "3a8b41f6efcd11635bdb350e7c75a32cc3dbcacb994015b0166e5a81d9ceeaf7"
+      "bytes": 6719,
+      "sha256": "9ad7cfa5cb95fe5888d0f9f875462332d96b1592e499bf73a3a138b4e5363d58"
     },
     {
       "path": "bojart_memory/core.py",
-      "bytes": 19605,
-      "sha256": "45384ba83825905b17cd85b33a8549d77d16da19e8c2e1d93e32e01ab86db7a7"
+      "bytes": 32824,
+      "sha256": "c93f90bf0647e4b81662b428bbf6d7b704235bf38807999ba1aa6c0a75d1ca30"
     },
     {
       "path": "bojart_memory/http_api.py",
-      "bytes": 3424,
-      "sha256": "ee6fdfa4b6988b3107902453058cc2759814e807833e151b8cdc274ca53be72b"
+      "bytes": 4138,
+      "sha256": "85781c9943e7b2370de1b381ab38f79f4e6826c724f4343ac696a39409fb1d32"
     },
     {
       "path": "bojart_memory/indexing.py",
@@ -273,9 +283,14 @@
       "sha256": "30b1e7efce342b076b3bc2ac74a71568af830fe0f0268136a2923155297a7cf4"
     },
     {
+      "path": "bojart_memory/integrity.py",
+      "bytes": 2809,
+      "sha256": "75f15ac0234f81b96aea83a623dca72e05d4a183d5800e68585f6546f7fb85f5"
+    },
+    {
       "path": "bojart_memory/mcp.py",
-      "bytes": 5830,
-      "sha256": "133e958c34c73aa814443aad4e2c747a793c5974ec7d616075bba907afcf8251"
+      "bytes": 7847,
+      "sha256": "37a35383bd3ae832d46755fe680dcf39b8c727a17a8d104f7f9f674389fb626e"
     },
     {
       "path": "bojart_memory/model_config.py",
@@ -289,8 +304,8 @@
     },
     {
       "path": "bojart_memory/ollama.py",
-      "bytes": 7971,
-      "sha256": "74cdf365803a4bef3711ca6cd469751bcf8e3c0d62c3080ab933667fec8d492c"
+      "bytes": 7974,
+      "sha256": "85306eaaedc8864b96c0f13e823950bf1ce32a25c6e77848b8962a22c413aeed"
     },
     {
       "path": "bojart_memory/paths.py",
@@ -326,6 +341,11 @@
       "path": "bojart_ops/orchestration.py",
       "bytes": 14221,
       "sha256": "691c3542bf52a4eee0402acf683e790f098d310bba04eea307bd17913813e41e"
+    },
+    {
+      "path": "bojart_ops/preinstallation.py",
+      "bytes": 13463,
+      "sha256": "2aad092a42e89794d7412eb0f9c6b88d084b9ae5d40db8e01cf6ef4c53220894"
     },
     {
       "path": "bojart_ops/production_recovery.py",
@@ -394,13 +414,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 9309,
-      "sha256": "18d72bd4bf88766a8891a8e642036443260bdfa1bc42ad442e99fe84717983e3"
+      "bytes": 12372,
+      "sha256": "62332692eb85bdfd77ee357bc61687aecbb44fbf4de3b51c954a6b041b65677a"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 38868,
-      "sha256": "2826860385132f7aee1add28164627387f242b94e67c1a1122fe09b32104c8a0"
+      "bytes": 43431,
+      "sha256": "2c4ab492b5198ca8de9980c93657cbe48bcf6aed4fa8b617a622687c128e9343"
     },
     {
       "path": "creative/CURRENT.md",
@@ -489,8 +509,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 10608,
-      "sha256": "9e4e113efb673ac896212477a80175ac448b3223a535efa07f949b3e64b4b885"
+      "bytes": 15301,
+      "sha256": "d0c8c8916f0eab6ce74f27a221b4c000c23bf13cfc01758958c347e577b05e89"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -499,8 +519,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 11098,
-      "sha256": "4de2a00f22e0302bff1946d591e294325bc9428d3a7b5e866603f91aff25229d"
+      "bytes": 18355,
+      "sha256": "be068fe71cbb5abc54623803e7c484b49b0e8d6a33afc5d3263c686efe657bdb"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -509,8 +529,43 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 10174,
-      "sha256": "b7cd210369c617d70929545a9f1485712fdda0c7556346f1ac8762988bb13a31"
+      "bytes": 12769,
+      "sha256": "1a86def90eec92154cca9bd1e9f9d772c4dc395f2cb0bf47501a06c3752e202d"
+    },
+    {
+      "path": "data/preinstallation/knowledge-cards.json",
+      "bytes": 5013,
+      "sha256": "e2b79e6e27dec5509cab9bb99ad3d6d3f063baa91af6677512ec8cb8d04fc6de"
+    },
+    {
+      "path": "data/preinstallation/requirements.json",
+      "bytes": 222293,
+      "sha256": "2b8475d1476b50958d893a8ab7137691a0955b409fbed1dfb1c4f19d9983402a"
+    },
+    {
+      "path": "data/preinstallation/retrieval-cases.json",
+      "bytes": 3707,
+      "sha256": "bf021ec65831b7c1547cbe73a3fba3fe1bd5f8f53bc6a56866099d80bf29352d"
+    },
+    {
+      "path": "data/preinstallation/sources-curated.json",
+      "bytes": 38690,
+      "sha256": "a8c2550174568f28a54eed3cead3c1bf0a1b7a916c5c762e80921a5b5306a062"
+    },
+    {
+      "path": "data/preinstallation/target-inventory.template.json",
+      "bytes": 578,
+      "sha256": "cc5db209593d9befe14d636226e7b3fbb44709240f747faaf2b9d3781219ee9c"
+    },
+    {
+      "path": "data/preinstallation/target-profile.json",
+      "bytes": 1133,
+      "sha256": "4603f4f144b13a3bd6df7ac77584debbd2df05995ad96fc181bd0dec4dbedec3"
+    },
+    {
+      "path": "data/preinstallation/tool-registry.json",
+      "bytes": 45171,
+      "sha256": "8cbb974e1083e1f2350f7bb8f99973b0541a5839d5599372a3ad24d8295c87a0"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -531,6 +586,11 @@
       "path": "docs/AUDIT_CONTINU_2026-11-01.md",
       "bytes": 5474,
       "sha256": "1cdfaec51e502641acaf3ab48dafcbc74aadee654dc4f759271ae7d490eec9c9"
+    },
+    {
+      "path": "docs/AUDIT_TRANSVERSAL_V5.txt",
+      "bytes": 2786,
+      "sha256": "ccee73322e33d39e4bafcacb5b568fe4030f7b677f9fca9eb8aaa533cc300872"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -741,6 +801,21 @@
       "path": "docs/evidence/deep-recovery-2026-11-01.json",
       "bytes": 1502,
       "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee"
+    },
+    {
+      "path": "docs/evidence/handoff-v5-2026-11-02/PACK_MANIFEST_SHA256.json",
+      "bytes": 246843,
+      "sha256": "b01d883943e26f566502f83a2436a44b4ff8861b795ad04419cb78be512f9e4e"
+    },
+    {
+      "path": "docs/evidence/handoff-v5-2026-11-02/README.md",
+      "bytes": 3326,
+      "sha256": "1b337f9ffb1534157b612a11472a172758d3cb4d10b496ad0f33bb2874bcf805"
+    },
+    {
+      "path": "docs/evidence/handoff-v5-2026-11-02/reception.json",
+      "bytes": 95694,
+      "sha256": "bfe7dfa609316eefbab9ff8e195fb28d9a0568df7fc1edef5e213f34a6d13894"
     },
     {
       "path": "docs/evidence/m07-baseline-tests.log",
@@ -1033,14 +1108,19 @@
       "sha256": "e9a77b143a9dc17fe8d8d016cce6d76a0460cef9aa13a50a6d5a44120f983b79"
     },
     {
+      "path": "docs/memory/HARDENING_2026-11-02.txt",
+      "bytes": 5838,
+      "sha256": "35aaaa13cf2948b87992250f8c9c5907c4c6a38e4c461a38a7fb66face5a2428"
+    },
+    {
       "path": "docs/memory/INSTALLATION_MODELES.md",
       "bytes": 6848,
       "sha256": "c492099f43dc9c657e9f42157d696b6799877682e631c7f30d834b451ce3878e"
     },
     {
       "path": "docs/memory/MCP.md",
-      "bytes": 2225,
-      "sha256": "ade32c9c0b63ede8eede87cc2350c46cdde2b314c5c0a31907adffe777fb98d3"
+      "bytes": 2726,
+      "sha256": "8036cfca489e4ab2ac8b01c08ad83020956318a085217420c7ffd9e7fe5a0d08"
     },
     {
       "path": "docs/memory/MODELES_LOCAUX.md",
@@ -1073,14 +1153,124 @@
       "sha256": "abf7809a9a684d6393a3e26f3d8fd554a3acdab68f65ebb3064918e45bf08e49"
     },
     {
+      "path": "docs/preinstallation/ARCHITECTURE_ET_REPRISE.txt",
+      "bytes": 5181,
+      "sha256": "bd164c6388fc435b1c693ed3a2a927c07b27173a9a705e7f45a13a0d52cca4af"
+    },
+    {
+      "path": "docs/preinstallation/DECISIONS_UTILISATEUR.txt",
+      "bytes": 1606,
+      "sha256": "feff12f25c206990894b2e476ec9032ca1500279f7ce3fa7919b495294002cf8"
+    },
+    {
+      "path": "docs/preinstallation/PREPARATION_WINDOWS.txt",
+      "bytes": 6405,
+      "sha256": "b01e5d255bde3dfbdea0e8566ce5950f00e9e7cfc05774c38a1ab1e698fc1fae"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/01-recherche-citee.txt",
+      "bytes": 1442,
+      "sha256": "07ee574ae44b3b48925dcde0fda02f3933c23b1182a5df1bf5fd2bb92d145b07"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/02-voix-francaise.txt",
+      "bytes": 1378,
+      "sha256": "bd03c2ab93d9d913516fd22107e769d219221b445b28f3c62eeacd1984539923"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/03-pile-locale-windows.txt",
+      "bytes": 1882,
+      "sha256": "c0e87420eccbf47f371cd46bdff35013f0645466160813167ef2633d0935a109"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/04-modele-memoire.txt",
+      "bytes": 1497,
+      "sha256": "3adb97aed534faa21a6562d21d70327c030da9be3aac06e5a63b452a1d699c84"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/05-cao-vers-tranchage.txt",
+      "bytes": 1629,
+      "sha256": "9336460245be646a0d059203e4797a7592afed5d9de4e371d315e6a50ad83ec3"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/06-materiaux-choix.txt",
+      "bytes": 1505,
+      "sha256": "e524797a2a9c6a4e82fff4618828b94c2254607f6178d39085f04abcdff84eb0"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/07-resine-documentation.txt",
+      "bytes": 1420,
+      "sha256": "d24be56fd22800024fd9afb5bb43e7e225520bc11803c66951bd2f6e35cc6a74"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/08-maintenance-par-modele.txt",
+      "bytes": 1478,
+      "sha256": "53db43efc65fdd2b2f6596201845b241bed8f9387c626704d74786e41864497a"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/09-telemetrie-inconnue.txt",
+      "bytes": 1582,
+      "sha256": "aa5fb0af1464b64e74a42cd596e8ec3e3761ea22a593d68255a356a55be82a15"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/10-reprise-effets.txt",
+      "bytes": 1535,
+      "sha256": "802285fc869d8cca05a368088b1cbbf74eee8e76192d844aaac82c06bd712705"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/11-blender-connecteur.txt",
+      "bytes": 1434,
+      "sha256": "1cfed4542408ee746b8a489a15d882874ec62e20545383395ebf306801980534"
+    },
+    {
+      "path": "docs/preinstallation/knowledge/12-mcp-interop.txt",
+      "bytes": 1415,
+      "sha256": "0c05defc18ba81fccd4d3f7075fcc5c7a086a449cc8b8db51144560e4d17a0e3"
+    },
+    {
       "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
       "bytes": 10383,
       "sha256": "f94482196d90e4deec1e7e00c29e9de34ff8c36eac7bebef59bd259329b41a7d"
     },
     {
+      "path": "docs/research/audit-transversal-2026-11-02/SCENARIO_VEGETA_1000MM.json",
+      "bytes": 4856,
+      "sha256": "ebbac4da984436ceb72977ea8de0addd2a706ba65d2f3b4c167df9e55bf1974a"
+    },
+    {
+      "path": "docs/research/audit-transversal-2026-11-02/datasets-qualification-v5.json",
+      "bytes": 14464,
+      "sha256": "100de150d9707341c437af8cd5b1aa64fd4012e014fb502d93e54618a61e5e22"
+    },
+    {
+      "path": "docs/research/audit-transversal-2026-11-02/donnees-terrain.txt",
+      "bytes": 6937,
+      "sha256": "5eba629e8badb884f3f94eb71f6e5e9c1fc19fdeaa598844691eb50f6f3f4d75"
+    },
+    {
+      "path": "docs/research/audit-transversal-2026-11-02/recherche-v5.json",
+      "bytes": 46063,
+      "sha256": "71460bd0eb95eaecd83d87972144d8ee8ec2f0a8d6656cb30965a1c15ca4ac10"
+    },
+    {
+      "path": "docs/research/audit-transversal-2026-11-02/recherche-v5.txt",
+      "bytes": 17480,
+      "sha256": "830bfddcda7c01eb73760cd747eeb1044175b11de56bb8d7e80ab8a0e590af91"
+    },
+    {
+      "path": "docs/research/audit-transversal-2026-11-02/skills-adaptation-v5.json",
+      "bytes": 6328,
+      "sha256": "edddb5b374a48c174746afeeed3d49270d8add3b5de9113e16178ff26b62efac"
+    },
+    {
+      "path": "docs/research/audit-transversal-2026-11-02/sources-recherche-v5.json",
+      "bytes": 11919,
+      "sha256": "a16941a1a2f302082125045b9321147be1aaa723d728c546859784ed04f57308"
+    },
+    {
       "path": "docs/research/bras-peintre-simulation-2026-11-02/README.md",
-      "bytes": 8531,
-      "sha256": "56973373e415c6d847acaf2edb9d1872b0b928a642cdebef46e77452765d19ff"
+      "bytes": 8506,
+      "sha256": "026025038d5ad78fdc601b49f901e283bd674a43ffa2e295c29a86216a8e6df5"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -1111,6 +1301,21 @@
       "path": "docs/research/launch-toolchain-2026-11-01/VALIDATION.json",
       "bytes": 1733,
       "sha256": "15cd726e48088d52ceb149ab6aea859c300c624557431f97ae3e73e8a7938c17"
+    },
+    {
+      "path": "docs/research/strates-robotique-2026-11-02/PROVENANCE.json",
+      "bytes": 6476,
+      "sha256": "00fef16e88e10a6b07ebde98168dd42f06d5bbaa7952a211009573c0f906dc78"
+    },
+    {
+      "path": "docs/research/strates-robotique-2026-11-02/README.md",
+      "bytes": 8307,
+      "sha256": "6b8d9a1700d2a4e4503bd02a3e8c5510068dbe34e96d80051e20152ebcd749fd"
+    },
+    {
+      "path": "docs/research/strates-robotique-2026-11-02/verification-calculs.json",
+      "bytes": 2213,
+      "sha256": "43b56d508aa290891e2041703ef364fa6e47b66c551978215ac624a99d2644ff"
     },
     {
       "path": "docs/validation/SHOT_REVIEW_TEMPLATE.md",
@@ -1199,8 +1404,8 @@
     },
     {
       "path": "jarvis/AGENTS.md",
-      "bytes": 4897,
-      "sha256": "bae96c4a6361c5503a80f7cdf16708c95ef4516bb2d116253f079f65207f3a33"
+      "bytes": 5392,
+      "sha256": "a86d22d411a91a613744616ae04f0380cc2299f3cbe89c2b8d2a67bc5c63d5e0"
     },
     {
       "path": "jarvis/BILAN_LIVRAISON.md",
@@ -1254,8 +1459,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/AGENTS.md",
-      "bytes": 1841,
-      "sha256": "892ad54bcf3ce1ae9940cd3ebbc5c104e83ec082c2d2a47d649591b8c134cc76"
+      "bytes": 2342,
+      "sha256": "b02a0f205a4ef61300d9fee07713a0a7d8fbdb187acb8d2473af565ef24539ed"
     },
     {
       "path": "jarvis/apps/jarvis/CONTEXTE_LISIBLE.md",
@@ -1289,13 +1494,13 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/capture.js",
-      "bytes": 4257,
-      "sha256": "fd64a0499739da2355dabe9d3e80ea1cce0b383b0c34e401b07f2761a7785204"
+      "bytes": 5216,
+      "sha256": "1ef361db5ddc266257e6dcd33b0462324860ec84cf8e7b51f573f355e0829b23"
     },
     {
       "path": "jarvis/apps/jarvis/app/console.html",
-      "bytes": 8327,
-      "sha256": "52388cc6acd75f65d317ff83d99d4e090e7ddf9a6e3e18d57d8615472f4eb70e"
+      "bytes": 8370,
+      "sha256": "46d851c027cf70e6c08c3c6a933c6a2bf44412d4a1d87deee34784b0077a4d83"
     },
     {
       "path": "jarvis/apps/jarvis/app/consolidated_workbench.py",
@@ -1359,8 +1564,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/index.html",
-      "bytes": 24012,
-      "sha256": "168c1e74e133be0cddb8678d2287722fb7fe0071592c2654d7c891d0a61918ce"
+      "bytes": 24070,
+      "sha256": "80b08172966db388f22721c9ddaf2dec5c9bbdeb39ea12af332dfd7326809a75"
     },
     {
       "path": "jarvis/apps/jarvis/app/jarvis_http.py",
@@ -1404,13 +1609,13 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.html",
-      "bytes": 3668,
-      "sha256": "845087eaf551b64e62fb591152b36ee199865aee5a793995fb7c3ef2920892f6"
+      "bytes": 3949,
+      "sha256": "5a0dadb5509b6d6559823b6a05c0ccdb55e0a222a039f4bb3a3960361be19d0f"
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.js",
-      "bytes": 6384,
-      "sha256": "24b3463eb8d275b99fa945359b2f55659709d2203c7360364d8ed28ea8d27276"
+      "bytes": 8701,
+      "sha256": "28c8fafd1fb74052fa34f03ee066f7d7d818f9a0f21e4f3e204baa65a0741669"
     },
     {
       "path": "jarvis/apps/jarvis/app/proposals.py",
@@ -1419,8 +1624,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/server.py",
-      "bytes": 9188,
-      "sha256": "8c677cdf53a95282567a965f498bec154c57d0fbf81b1fc8ef252327db4b9ca2"
+      "bytes": 9452,
+      "sha256": "e2643bf42a36b481371a1c44c688e8f0a4185943914f509521a60cf81f54b0a8"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
@@ -1439,8 +1644,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/studio_seed.py",
-      "bytes": 3374,
-      "sha256": "cee2a95cd9175a4b7945cd416a03a01b941ff327ae0d1ee80a6563c553166378"
+      "bytes": 4259,
+      "sha256": "035117e659d488ec33dd8b5a621d0701a38f37b46d322269b705c954fb7deada"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio_workbench.py",
@@ -1479,8 +1684,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/tower_voice.js",
-      "bytes": 9985,
-      "sha256": "f9a1d7ecd379b1b33a49e8f9f8333534491c0e0f8f91cbd26e978fd3b0225639"
+      "bytes": 10009,
+      "sha256": "c69ea4231bf0876cf542e23453b4c052e735283079e3380b010058cbc5dca2bf"
     },
     {
       "path": "jarvis/apps/jarvis/app/ui.css",
@@ -1509,8 +1714,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workbench.py",
-      "bytes": 10828,
-      "sha256": "8970379af9436a38ed8fcf26c2a12d89fb43ee8a11acb27e01f6ce4421ffa1ab"
+      "bytes": 11158,
+      "sha256": "cf29f746b8f8e0f2fd76e30f4c5cbe0180aaef60c821cd7922d94a67b27c197b"
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.css",
@@ -1859,8 +2064,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_mission01.py",
-      "bytes": 16220,
-      "sha256": "f509e526bb09056a4ed8460cf9c9da3a1f42ae353826b57a71d72b57c8e4ad9f"
+      "bytes": 16898,
+      "sha256": "eac46a98dee78cd380faa5daf9b86feba5b95a101e0255d4e89fcda47d78f907"
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_preview.py",
@@ -1924,8 +2129,8 @@
     },
     {
       "path": "jarvis/context/START_HERE.md",
-      "bytes": 6364,
-      "sha256": "29967443daf089fe9a6c8600f17e26d5dbb6ecf9852e1a82a818a23fb5ae1f7e"
+      "bytes": 6862,
+      "sha256": "aeab7f9b5116b5e2ec225527032516948b896c7accebc167ea26d0520f08cf6b"
     },
     {
       "path": "jarvis/docs/ARCHITECTURE.mmd",
@@ -2129,8 +2334,8 @@
     },
     {
       "path": "jarvis/knowledge/metier/app/base_metier.py",
-      "bytes": 10444,
-      "sha256": "6c83c4a7bcfdd5dff5e73580d7047b4e0a3d7d66cd9b160e39f83733ce3e3469"
+      "bytes": 10492,
+      "sha256": "1857edfa6e2acea957abf019d2a685f60e56f6613d268670259fd43b2d9b4611"
     },
     {
       "path": "jarvis/knowledge/metier/data/contexte.json",
@@ -2214,8 +2419,13 @@
     },
     {
       "path": "jarvis/knowledge/metier/tests/test_base_metier.py",
-      "bytes": 6894,
-      "sha256": "ce269d85a2edfe9d38a9c0dd13e9fbbe50983e4d16f4854c312a286057205e89"
+      "bytes": 6934,
+      "sha256": "3c1a3bdceafedc2d2eedfea513eb4f191a4d3445384234ec3d40f3a8d8238eaf"
+    },
+    {
+      "path": "jarvis/knowledge/metier/tests/test_export_lifetime.py",
+      "bytes": 1753,
+      "sha256": "2ed20548e6ec8df00cf0c4d773c64bcfce68989678d09c29af4508b5fcbfc555"
     },
     {
       "path": "jarvis/labs/planning/APERCU_PLANNING.html",
@@ -2444,8 +2654,13 @@
     },
     {
       "path": "jarvis/tests/memory_context.test.cjs",
-      "bytes": 6235,
-      "sha256": "5f25d6b470133b62ede23d3f9f831f9ec0bbbe88afc6f2394ce15fc9a4ffd794"
+      "bytes": 8327,
+      "sha256": "ac4c0f400e84ebf414e026d78685b096cc5957728aa163203125f1164a54b437"
+    },
+    {
+      "path": "jarvis/tests/preinstallation_ui.test.cjs",
+      "bytes": 7847,
+      "sha256": "07db69064fe314001199140174be3859158bffc97ac137850a39d7f47ec0be85"
     },
     {
       "path": "jarvis/tests/studio_growth.test.cjs",
@@ -2474,8 +2689,13 @@
     },
     {
       "path": "jarvis/tests/test_jarvis_m07.py",
-      "bytes": 9463,
-      "sha256": "bf35f4c154813d0455e601adb10792850dc3234630ebf6c491399cd1a29b4c2c"
+      "bytes": 9507,
+      "sha256": "25788c03ef482b445a1ca90e09d7dccbc693f8a3a27c1c0eeac0fffcff13c841"
+    },
+    {
+      "path": "jarvis/tests/test_preinstallation_guards.py",
+      "bytes": 4106,
+      "sha256": "d271e820df1d4d3808a8b79e87a969ba6fea742ec876faef2e624a232ac3fb10"
     },
     {
       "path": "jarvis/tests/test_preservation.py",
@@ -2494,8 +2714,13 @@
     },
     {
       "path": "jarvis/tests/test_workspace_m05.py",
-      "bytes": 21894,
-      "sha256": "985a040823ee2766298f5a48a04af3af5e031eae229a1d159fe137cb81d98a35"
+      "bytes": 21934,
+      "sha256": "40df9b3a5ff0b82f1e0feb3b5295fc2451fc037f37fc16ca766bb989ac30af01"
+    },
+    {
+      "path": "jarvis/tests/voice_cancel_generation.test.cjs",
+      "bytes": 4155,
+      "sha256": "3557c5f2dfc566ec16708352e6974951fbbcc6dc156278b0cde8377ad0edd4da"
     },
     {
       "path": "jarvis/tests/voice_endpoint.test.cjs",
@@ -2624,8 +2849,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 13371,
-      "sha256": "11ad68cb2bdd983f30e0b0597e3728885c45b764a5990007e154fd21ef48bcbd"
+      "bytes": 15412,
+      "sha256": "6e6098aee972fa1aed4a7d7b2aa9adeade9347ec5693d99c36fdd9cd0d4c2390"
     },
     {
       "path": "ops/request-example.json",
@@ -3066,6 +3291,16 @@
       "path": "sites/atelier/dist/vendor/THREE-LICENSE.txt",
       "bytes": 1081,
       "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "sites/atelier/dist/vendor/THREE-PROVENANCE.json",
+      "bytes": 2438,
+      "sha256": "c71ae4624f59e9527ecc1af411229968ac0194f36b2259a963b3abffbec07941"
+    },
+    {
+      "path": "sites/atelier/dist/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
     },
     {
       "path": "sites/atelier/dist/vendor/three.module.js",
@@ -4238,6 +4473,31 @@
       "sha256": "6f6d890794fbe23f3e35cceb327f49d5977432a5aaf715e040a6408932da395b"
     },
     {
+      "path": "skills/bojart-context-reconstruction/SKILL.md",
+      "bytes": 2502,
+      "sha256": "0c0b4fdf6c23f9bc7ba1ca5547740c628ae854e72a5b452f2267302e83650a75"
+    },
+    {
+      "path": "skills/bojart-evidence-audit/SKILL.md",
+      "bytes": 3117,
+      "sha256": "d2db15ed0ce49f6aadd6232dbe60a738e15b592f150134c54d9c7d068e2c422a"
+    },
+    {
+      "path": "skills/bojart-evidence-audit/references/acceptance.md",
+      "bytes": 1807,
+      "sha256": "86f99f158a31b7f26448c5135286f6ccdaaa6f09d6603fb6c1b876ecf6df3de9"
+    },
+    {
+      "path": "skills/bojart-evidence-audit/references/transversal.md",
+      "bytes": 3080,
+      "sha256": "64abf7a9e2ad0b687783cf541b37412c03d00ae8f64289de415ec8de05be594b"
+    },
+    {
+      "path": "skills/bojart-tool-qualification/SKILL.md",
+      "bytes": 2734,
+      "sha256": "016e04eacce8704b10c1d0a56dcdd510938b1c526bf80950eff1b4402e1b874c"
+    },
+    {
       "path": "tests/test_archive_recovery.py",
       "bytes": 3467,
       "sha256": "659388f705ed8987b90e8eb14cbb04b546a8437123712056376e1da6d781b437"
@@ -4259,8 +4519,8 @@
     },
     {
       "path": "tests/test_memory.py",
-      "bytes": 8640,
-      "sha256": "3459d0bdb04108f720b46bc3fc469aae18c7217cbcdc412031744fb2a6f21f5d"
+      "bytes": 8857,
+      "sha256": "a3c211de9bd8d6fdc9c07c5e211534505faeb3bcacbe2555dfa3cc38779554ed"
     },
     {
       "path": "tests/test_memory_http.py",
@@ -4271,6 +4531,11 @@
       "path": "tests/test_production_recovery.py",
       "bytes": 11153,
       "sha256": "0b1aac2277a1f3b9a882f2bc1d091a2fad16380bb8f25e920ff5ffafc5f19029"
+    },
+    {
+      "path": "tests/test_vendor_source_policy.py",
+      "bytes": 1013,
+      "sha256": "6b9c519748e6a0a486bb22e359381fc7272fd7b892b1af4e6efc42fc5a6750ef"
     },
     {
       "path": "tests/test_workspace_download.py",
@@ -4284,8 +4549,13 @@
     },
     {
       "path": "tests_agent/test_agent.py",
-      "bytes": 9403,
-      "sha256": "986498c2232c27ed44d8158c4a58b5c0d254c5aa53d6e74072abbc9ee31446dc"
+      "bytes": 9637,
+      "sha256": "2e4af8a53af6077f2b2892c07c84e7904203cc9089c1367fae7f8ba22e6b1973"
+    },
+    {
+      "path": "tests_agent/test_ask_requests.py",
+      "bytes": 20760,
+      "sha256": "dfe910fe2508085c2ca176d882664cf9fc9916aee1bc5ac3b5e26897e80bf735"
     },
     {
       "path": "tests_agent/test_atomic_memory.py",
@@ -4308,24 +4578,49 @@
       "sha256": "506d343668104721b65b4b4b3c3bb1f2352f60843b30606bd5a2f7ccfab460f0"
     },
     {
+      "path": "tests_agent/test_context_passage_ranking.py",
+      "bytes": 5429,
+      "sha256": "6ece715417a6094961f2aeff50650d9ec26146cb48ed82e51623eabdba9d7305"
+    },
+    {
+      "path": "tests_agent/test_context_selection.py",
+      "bytes": 18505,
+      "sha256": "487c2452753fd29390ed3b4654a61f940c18664f1a16bbd86553e368154e628b"
+    },
+    {
       "path": "tests_agent/test_conversation_context.py",
-      "bytes": 11884,
-      "sha256": "da36efb63fd51977b19faa936baa4b08cf16575f983d466920919fefb3d11d21"
+      "bytes": 11898,
+      "sha256": "01d83240821c262358a6044bfc60867438ca5691231d23f86b4a1d0fb2c51606"
+    },
+    {
+      "path": "tests_agent/test_hardening_integration.py",
+      "bytes": 4963,
+      "sha256": "44d104e41b4c9bfe22aa6f37727f6d80f35822a890a110d3a85f8ed64534aed4"
+    },
+    {
+      "path": "tests_agent/test_history_projection_review.py",
+      "bytes": 2557,
+      "sha256": "17bb7b9012dc767e5f0781e218f52c0dbb4e29cab0eec3d1083ce62b1ae69845"
     },
     {
       "path": "tests_agent/test_http_agent.py",
-      "bytes": 4392,
-      "sha256": "b75321abf69245e4bbe444d376c3fbc7a5cf80543b6537bd819b8cd1b9ad8d90"
+      "bytes": 6787,
+      "sha256": "256acc0e704fa51abdb3c204f13e75f57cf6948e0a9e3b66785519f947e26343"
+    },
+    {
+      "path": "tests_agent/test_memory_integrity.py",
+      "bytes": 17201,
+      "sha256": "eaeca9a490d57418f730a967cded663dd230b876e2966cfd872619d3e94a7b8e"
     },
     {
       "path": "tests_agent/test_model_qualification.py",
-      "bytes": 16256,
-      "sha256": "04fcd40a299c7b9d89c950f15a271a3a694e5576728fdd0c2cbcb8088e01def3"
+      "bytes": 17341,
+      "sha256": "aa8cbdd176f70528c2633eb78133698290365eda3e2914d51835d2d170a8d709"
     },
     {
       "path": "tests_agent/test_model_setup.py",
-      "bytes": 15594,
-      "sha256": "edba5af4753b8e65429d39c335846509aefba22d19d8508484302a3ede09d02a"
+      "bytes": 15627,
+      "sha256": "87fc08d1fdfe840ea26a75c35b31bc7cc8c3243e57f543de8c1100f6b17f71f8"
     },
     {
       "path": "tests_agent/test_research_indexing.py",
@@ -4349,13 +4644,18 @@
     },
     {
       "path": "tests_ops/test_ops.py",
-      "bytes": 12018,
-      "sha256": "7ccfeeab302fe4fa2ddf5e1d61a11d4d40c9395fbe817be33bc09f4a2aaeaf80"
+      "bytes": 12230,
+      "sha256": "f5c732d06da11646227993948fdb7249b2e9ebe82403253d1fad7932c1918dc0"
     },
     {
       "path": "tests_ops/test_orchestration.py",
-      "bytes": 10595,
-      "sha256": "5a292657ed783c74a90a4980aaa6979bd883b0f9b2c4636aa69adf1306671926"
+      "bytes": 12293,
+      "sha256": "90ad91f5030f1d096afed1e229f1db55878723d325d9d201c32230437cf2d3a4"
+    },
+    {
+      "path": "tests_ops/test_preinstallation.py",
+      "bytes": 8576,
+      "sha256": "46863d664dd65e6385f3504868fa763122805ddd736fb099eb094eb8b9423c07"
     },
     {
       "path": "tests_ops/test_qualification.py",
@@ -4409,8 +4709,8 @@
     },
     {
       "path": "tools/memory_browser.cjs",
-      "bytes": 4782,
-      "sha256": "5b3125bde3bc9efa986021f43e9e61380dc784e068c9f2ea0a2b040ce4d0fc79"
+      "bytes": 5283,
+      "sha256": "2333b12aea53fe84b54ae744ed3d59383ca9d652cbe397749517cb3de40237e7"
     },
     {
       "path": "tools/memory_mcp.py",
@@ -4426,6 +4726,11 @@
       "path": "tools/prepare_installation.py",
       "bytes": 3148,
       "sha256": "04da8d52217b050c2731b933d8e42520955cdd4a82e238e53205f57bf8d78622"
+    },
+    {
+      "path": "tools/prepare_jarvis.py",
+      "bytes": 1278,
+      "sha256": "87e9e187b6616aa00e71079c4ce0f1b2c5067bcb03a967392d4aeb4e8506fe7f"
     },
     {
       "path": "tools/prepare_production.py",
@@ -4464,8 +4769,8 @@
     },
     {
       "path": "tools/validate_repository.py",
-      "bytes": 7028,
-      "sha256": "f37760d05fe95155cd7429e00ed000f5ba8b4e472c678bbc3f2a574aba4660a9"
+      "bytes": 7610,
+      "sha256": "2ee6670d17ecfe7ae50441997d749c8cd0d62a159b16fa9cb405c2f17b08d9ca"
     },
     {
       "path": "tools/verify_manifest.py",

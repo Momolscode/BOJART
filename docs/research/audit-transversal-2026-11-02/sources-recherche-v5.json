@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T00:12:27.217Z",
+  "sources": [
+    {
+      "id": "docling-release",
+      "title": "Docling release et manifeste Python",
+      "url": "https://github.com/docling-project/docling/releases/tag/v2.145.0",
+      "version": "2.145.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Release 2026-10-29 ; MIT code, licences des modèles séparées ; Python >=3.10, Windows déclaré."
+    },
+    {
+      "id": "docling-doc",
+      "title": "DoclingDocument",
+      "url": "https://docling-project.github.io/docling/concepts/docling_document/",
+      "version": "v2",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Texte/tableaux/images, hiérarchie, boîtes si disponibles, provenance ; JSON structuré."
+    },
+    {
+      "id": "docling-offline",
+      "title": "Options et limites Docling",
+      "url": "https://docling-project.github.io/docling/usage/advanced_options/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Services distants opt-in ; ceci ne bloque pas à lui seul les téléchargements de modèles. Limites pages/taille/files/concurrence disponibles."
+    },
+    {
+      "id": "docling-rtx",
+      "title": "Docling RTX",
+      "url": "https://docling-project.github.io/docling/getting_started/rtx/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Windows 10/11 etRTX 40/50 listés ; aucun seuil RAM/VRAM ni gain pour4060 Ti démontré ici."
+    },
+    {
+      "id": "opencv-release",
+      "title": "OpenCV release et licence",
+      "url": "https://github.com/opencv/opencv/releases/tag/5.0.0",
+      "version": "5.0.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Release 2026-06-06 ; Apache-2.0 vérifié dans LICENSE du tag."
+    },
+    {
+      "id": "opencv-calibration",
+      "title": "Camera Calibration",
+      "url": "https://docs.opencv.org/4.13.0/dc/dbb/tutorial_py_calibration.html",
+      "version": "4.13.0 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Paramètres caméra, distorsion et motifs connus ; documentation4.x distincte du major5 observé."
+    },
+    {
+      "id": "opencv-charuco",
+      "title": "ChArUco",
+      "url": "https://docs.opencv.org/4.13.0/df/d4a/tutorial_charuco_detection.html",
+      "version": "4.13.0 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Motif connu et calibration ; ne confère aucune précision métrologique sans validation."
+    },
+    {
+      "id": "faster-whisper",
+      "title": "faster-whisper README épinglé",
+      "url": "https://github.com/SYSTRAN/faster-whisper/blob/v1.2.1/README.md",
+      "version": "1.2.1",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "README demande CUDA 12/cuDNN 9 pour CT2 récents ; code BOJART actuel : CPU/int8."
+    },
+    {
+      "id": "ct2-install",
+      "title": "CTranslate2 installation",
+      "url": "https://opennmt.net/CTranslate2/installation.html",
+      "version": "4.8.4 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Page mentionne encore cuDNN 8 pour CUDA 12 : contradiction documentaire conservée, pas recette GPU certifiée."
+    },
+    {
+      "id": "ct2-hardware",
+      "title": "CTranslate2 matériel",
+      "url": "https://opennmt.net/CTranslate2/hardware_support.html",
+      "version": "4.8.4 docs",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Wheels Windows x86-64 ; backend AMD mentionné ; performances poste inconnues."
+    },
+    {
+      "id": "pipecat-release",
+      "title": "Pipecat release",
+      "url": "https://github.com/pipecat-ai/pipecat/releases/tag/v1.15.0",
+      "version": "1.15.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "2026-10-29 ; BSD-2-Clause ; Python >=3.11 ; extra WebRTC opencv-python-headless >=4.11.0.86,<5."
+    },
+    {
+      "id": "pipecat-turn",
+      "title": "Pipecat user turn strategies",
+      "url": "https://docs.pipecat.ai/api-reference/server/utilities/turn-management/user-turn-strategies",
+      "version": ">=1.0 API",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "VAD, interruption, stratégies de fin, SmartTurn local ; Jev distant optionnel, pas nécessaire pour tout tour."
+    },
+    {
+      "id": "prusa-design",
+      "title": "Prusa conception pour impression",
+      "url": "https://help.prusa3d.com/article/modeling-with-3d-printing-in-mind_164135",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Sections listées : parois, tolérances, orientation, supports, manifold. Aucun seuil numérique universel repris."
+    },
+    {
+      "id": "prusa-materials",
+      "title": "Prusa matériaux",
+      "url": "https://help.prusa3d.com/filament-material-guide",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Point de départ fabricant ; pas preuve du produit possédé ni de son profil."
+    },
+    {
+      "id": "formlabs-wall",
+      "title": "Formlabs parois",
+      "url": "https://formlabs.com/blog/minimum-wall-thickness-3d-printing/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Dépendance àusage, matériau, procédé et finitions ; guide fabricant, pas règle pour toutes machines."
+    },
+    {
+      "id": "formlabs-safety",
+      "title": "Formlabs sécurité et fiches",
+      "url": "https://formlabs.com/resources/safety/",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Portail fabricant ; sélectionner référence/révision exacte après inventaire."
+    },
+    {
+      "id": "ortools-release",
+      "title": "OR-Tools release et licence",
+      "url": "https://github.com/google/or-tools/releases/tag/v9.15",
+      "version": "9.15",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "2026-01-12 ; Apache-2.0 vérifié."
+    },
+    {
+      "id": "ortools-job",
+      "title": "OR-Tools Job Shop",
+      "url": "https://developers.google.com/optimization/scheduling/job_shop",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Précédences et exclusivité machine ; extension aux opérateurs = modélisation BOJART proposée."
+    },
+    {
+      "id": "ortools-status",
+      "title": "CP-SAT statuts",
+      "url": "https://developers.google.com/optimization/cp/cp_solver",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Contraintes entières ; OPTIMAL,FEASIBLE,INFEASIBLE,MODEL_INVALID,UNKNOWN distincts."
+    },
+    {
+      "id": "ffmpeg-release",
+      "title": "FFmpeg téléchargement officiel",
+      "url": "https://ffmpeg.org/download.html",
+      "version": "9.0.2",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Page courante propose sources9.0.2 ; builds Windows tiers, version installée inconnue."
+    },
+    {
+      "id": "ffmpeg-legal",
+      "title": "FFmpeg licence",
+      "url": "https://ffmpeg.org/legal.html",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "LGPL2.1+ ou GPL selon composants/build ; conserver configure et licences effectives."
+    },
+    {
+      "id": "ffprobe",
+      "title": "FFprobe",
+      "url": "https://ffmpeg.org/ffprobe.html",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Inspection flux/conteneur et sortie JSON."
+    },
+    {
+      "id": "ffmpeg-filters",
+      "title": "FFmpeg filtres",
+      "url": "https://ffmpeg.org/ffmpeg-filters.html#loudnorm",
+      "version": null,
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Normalisation loudnorm simple/doublepasse ; conserver métriques et fréquence de sortie."
+    },
+    {
+      "id": "blender-security",
+      "title": "Blender scripting/security",
+      "url": "https://docs.blender.org/UATEST/manual/en/dev/advanced/scripting/security.html",
+      "version": "5.1 docindex",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Extrait officiel consulté ; ouverture latest402, pas de prétention revue entière5.2. Python embarqué non sandboxé ; --disable-autoexec n’isole pas un script explicitement exécuté."
+    },
+    {
+      "id": "mcp-inspector",
+      "title": "MCP Inspector",
+      "url": "https://github.com/modelcontextprotocol/inspector/releases/tag/2.13.0",
+      "version": "2.13.0",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "2026-10-28 ; licence transition Apache-2.0/MIT, documentation CC-BY4.0 selon notice."
+    },
+    {
+      "id": "mcp-tools",
+      "title": "MCP outils",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+      "version": "2026-07-28",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Schémas, contrat invocation et retours ; différence avec protocole BOJART2025-06-18 à tester, pas incompatibilité automatique."
+    },
+    {
+      "id": "mcp-security",
+      "title": "MCP sécurité",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices",
+      "version": "2026-07-28",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Frontières stdio/proxy/autorisation ; minimisation des droits."
+    },
+    {
+      "id": "skill-anthropic",
+      "title": "Anthropic skills commit",
+      "url": "https://github.com/anthropics/skills/commit/ca45fc496a3436251f191354091d557da31c15b5",
+      "version": "ca45fc4",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "HEAD inchangé depuis V3 ; mcp-builder relu, pas installé."
+    },
+    {
+      "id": "skill-trailofbits",
+      "title": "Trail of Bits skills commit",
+      "url": "https://github.com/trailofbits/skills/commit/2be6433b39e009cd2b6fd3be1895f6b1faa5af9a",
+      "version": "2be6433",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "HEAD inchangé depuis V3 ; sélection initiale maintenue, pas de nouvel audit intégral."
+    },
+    {
+      "id": "skill-openai",
+      "title": "OpenAI skills commit historique",
+      "url": "https://github.com/openai/skills/commit/49f948faa9258a0c61caceaf225e179651397431",
+      "version": "49f948f",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "HEAD inchangé depuis V3 ; dépréciation documentée dans rechercheV3, pas installation d’un successeur."
+    },
+    {
+      "id": "anthropic-context",
+      "title": "Anthropic context engineering",
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "version": "2025-09-29",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "authority": "primary",
+      "observation": "Contexte fini et sélection utile ; ne démontre pas les seuils de nos recettes."
+    }
+  ]
+}

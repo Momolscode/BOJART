@@ -157,7 +157,9 @@ class AgentTests(unittest.TestCase):
         self.assertIn('error', request('tools/list'))
         request('initialize', protocolVersion='2025-06-18')
         p.dispatch({'jsonrpc': '2.0', 'method': 'notifications/initialized'})
-        self.assertEqual(len(request('tools/list')['result']['tools']), 4)
+        self.assertEqual({t['name'] for t in request('tools/list')['result']['tools']},
+                         {'memory_search', 'memory_context', 'memory_status', 'memory_note',
+                          'jarvis_capabilities', 'jarvis_tool_catalog', 'jarvis_preparation_status', 'jarvis_research_search'})
         result = request('tools/call', name='memory_note', arguments={'key': 'a', 'value': 'b', 'source': 'c'})
         self.assertFalse(result['result']['isError']); self.assertEqual(self.m.facts(J)[0]['status'], 'proposal')
 
@@ -174,7 +176,7 @@ class AgentTests(unittest.TestCase):
         run = subprocess.run([sys.executable, str(REPO / 'tools/memory_mcp.py'), '--state', str(self.m.state)],
                              input=''.join(json.dumps(m) + '\n' for m in messages), capture_output=True, text=True, check=True)
         replies = [json.loads(line) for line in run.stdout.splitlines()]
-        self.assertEqual(len(replies), 2); self.assertEqual(len(replies[-1]['result']['tools']), 4)
+        self.assertEqual(len(replies), 2); self.assertEqual(len(replies[-1]['result']['tools']), 8)
 
 
 if __name__ == '__main__': unittest.main()

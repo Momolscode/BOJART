@@ -1,5 +1,24 @@
 # État courant — 2 novembre 2026
 
+## Audit transversal local V5 — 2 novembre 2026
+
+La copie de passation intègre le distant c71628cf20426dd8b4bdedbab2dcf403f5135667 et les corrections locales antérieures. Les anciens comptes de fichiers/tests ci-dessous restent rattachés à leurs recettes ; le manifeste et les preuves V5 décrivent la livraison actuelle. Elle est publiée par rejeu exact de ses 926 fichiers puis réconciliée avec `b49101e`. Voir `docs/evidence/handoff-v5-2026-11-02/README.md`. Les rapports détaillés et les recettes du paquet restent hors du dépôt public.
+
+Le profil matériel déclaré est dans `data/preinstallation/target-profile.json`. Les fonctions sont évaluées séparément : code, simulation, configuration disponible et qualification réelle. Les tableaux de bord ont des alias bornés ; le prototype de répartition de 1 m travaille sur 24 boîtes et 8 machines fictives, hors voix et sans géométrie réelle. Voir `docs/COMMANDES_DASHBOARD.md` et `docs/SIMULATIONS_ATELIER.md`.
+
+La recherche V5 ajoute 31 références officielles, 15 propositions et 10 contrats de qualification : `docs/research/audit-transversal-2026-11-02/`. Les recettes restent non exécutées tant qu’aucun reçu ne les qualifie. Les données terrain sont des gabarits historiques ; elles ne remplacent ni un inventaire ni une mesure. Le contexte actif est nettoyé sans supprimer les originaux.
+
+
+## Robotique — STRATES, 2 novembre 2026
+
+La session « bras robotique » porte sur la peinture au pinceau d’un relief mural stratifié. Elle est liée à l’atelier et à Jarvis. Un audit documentaire de 12 pages recommande un banc d’essai ciblé avant tout achat de cellule. Il faut d’abord figer une recette distincte des figurines, puis mesurer matière, contact et débordement ≤ 1 mm. Aucune performance physique n’est acquise.
+
+Deux vidéos générées illustrent la direction artistique ; elles ne prouvent ni le dépôt ni la précision. La conversation source n’a pas été lue. Le PDF, ses montants et les médias restent hors du dépôt public. Voir `docs/research/strates-robotique-2026-11-02/README.md`.
+
+La prochaine preuve est inscrite au registre de pilotage : tâche `strates-g0` dans `ops/orchestration.json`, bloquée tant que la fiche d’acceptation STRATES n’est pas signée. Elle ne déclenche ni mesure, ni achat, ni commande machine.
+
+## Projet
+
 BOJ.ART vise un atelier artistique augmenté : conception, FDM/résine, finition, contenus, devis et suivi, coordonnés par Jarvis sur trois écrans. Ce projet reste indépendant d’UNUM et de M-Tek.
 
 ## Logiciel
@@ -40,7 +59,11 @@ Sélection d'outils et de skills du 1 novembre : voir `docs/research/launch-tool
 2. Qualifier voix française, bruit, trois écrans, charge CAO et reprise après coupure.
 3. Inventorier le parc, qualifier une FDM et une résine avec opérateur, puis étendre.
 
-GPU : le 2 novembre, l'utilisateur indique une RTX 4060 Ti. Sa photo montre 8 Go de mémoire graphique, 16 Go de RAM, un Ryzen 5 5600G et Windows 11 Professionnel Insider Preview 25H2. Ces informations rapportées remplacent l'incertitude sur le poste ; elles ne prouvent ni pilote, ni VRAM libre, ni fonctionnement réel. Le stockage affiché de 932 GB n'est pas une mesure d'espace libre. Voir `docs/memory/POSTE_RTX4060TI.md`. Les modèles d'imprimantes et le nombre exact de machines restent inconnus ; les mentions 7–8 puis « une dizaine » ne remplacent pas un inventaire.
+GPU : le 2 novembre, l'utilisateur indique une RTX 4060 Ti. Sa photo montre 8 Go de mémoire graphique, 16 Go de RAM, un Ryzen 5 5600G et Windows 11 Professionnel Insider Preview 25H2. Ces informations rapportées remplacent l'incertitude sur le poste ; elles ne prouvent ni pilote, ni VRAM libre, ni fonctionnement réel. Le stockage affiché de 932 GB n'est pas une mesure d'espace libre. Passage à 32 Go de RAM décidé, pas encore constaté. Voir `docs/memory/POSTE_RTX4060TI.md` et les décisions directes dans `docs/preinstallation/DECISIONS_UTILISATEUR.txt`. Les modèles d'imprimantes et le nombre exact de machines restent inconnus ; les mentions 7–8 puis « une dizaine » ne remplacent pas un inventaire.
+
+## Mémoire : correction de reprise du 2 novembre
+
+La copie locale V4 corrige la réservation des inférences concurrentes, le contrôle des extraits dérivés, la saturation du contexte par des contradictions hors sujet et la projection du registre par projet. Voir `docs/memory/HARDENING_2026-11-02.txt`. Les rapports V3 qui les décrivent ouverts sont historiques. La réception locale de ces invariants ne qualifie ni les vrais modèles ni les machines. Le correctif est publié avec la révision V5.
 
 ## Complément de récupération vérifié
 
@@ -64,4 +87,4 @@ Pour la RTX 4060 Ti 8 Go rapportée, le profil retenu pour essai est `speed` : Q
 
 Demande : bras achetables avec modèle de simulation et boucle où le bras apprend à reproduire un tableau ou à peindre dans une manière donnée, pour un projet de galerie (partenaire non nommé ici). Recherche et prototype : `docs/research/bras-peintre-simulation-2026-11-02/README.md` ; code `bojart_painter/`, tests `tests_painter/`.
 
-Proposition : développer sur un modèle UFACTORY xArm 6 (700 mm, ±0,1 mm, pris en charge par FRIDA), PiPER en option économique, Lite 6 écarté pour 90 × 65 cm. En simulation, le recalage retrouve le modèle de dépôt caché ; la boucle fermée réduit l'erreur de 24 % sur le cas paysage/reproduction. Le coupon STRATES virtuel ne passe que si chaque poste du budget reste sous la moitié de son allocation. Aucun achat, robot, pinceau ni coupon mesuré ; les jalons G0/G1 de l'audit STRATES (PR #12) restent préalables.
+Proposition : développer sur un modèle UFACTORY xArm 6 (700 mm, ±0,1 mm, pris en charge par FRIDA), PiPER en option économique, Lite 6 écarté pour 90 × 65 cm. En simulation, le recalage retrouve le modèle de dépôt caché ; la boucle fermée réduit l'erreur de 24 % sur le cas paysage/reproduction. Le coupon STRATES virtuel ne passe que si chaque poste du budget reste sous la moitié de son allocation. Aucun achat, robot, pinceau ni coupon mesuré ; les jalons G0/G1 de l'audit STRATES restent préalables ; la tâche `painter-sim-mujoco` dépend de `strates-g0`.

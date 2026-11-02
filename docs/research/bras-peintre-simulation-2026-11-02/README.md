@@ -4,7 +4,7 @@ Statut : **recherche et prototype logiciel**. Aucun bras, pinceau, peinture ou c
 
 Demande (source `painter-request-20261102`) : trouver des bras robotiques achetables qui ont déjà un modèle de simulation, puis créer une boucle de simulation où le bras apprend à reproduire un tableau ou à peindre d'une certaine manière.
 
-Ce travail complète l'audit STRATES du même jour (PR #12, `docs/research/strates-robotique-2026-11-02/`, pas encore dans `main` au moment de l'écriture) : banc d'essai ciblé avant tout achat, trait nominal de 7 mm, débordement ≤ 1 mm, jalons G0 à G4. La simulation ci-dessous reprend ce budget d'erreur et ne remplace aucun jalon.
+Ce travail complète l'audit STRATES du même jour (`docs/research/strates-robotique-2026-11-02/README.md`, fusionné dans `main`) : banc d'essai ciblé avant tout achat, trait nominal de 7 mm, débordement ≤ 1 mm, jalons G0 à G4. La simulation ci-dessous reprend ce budget d'erreur et ne remplace aucun jalon.
 
 ## Comparatif court
 

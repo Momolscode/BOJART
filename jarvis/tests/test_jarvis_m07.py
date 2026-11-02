@@ -1,6 +1,7 @@
 """M07 scene reconciliation and scoped voice approval. No live provider calls."""
 import http.client, json, sqlite3, sys, tempfile, threading, unittest
 from pathlib import Path
+from contextlib import closing
 from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -67,7 +68,7 @@ class M07Tests(unittest.TestCase):
     def test_m06_schema_is_upgraded_without_replaying_old_command(self):
         original=self.request(text='Montre les dossiers au centre');self.runtime.submit(original)
         self.app.server_close()
-        with sqlite3.connect(self.root/'work/missions.sqlite3') as db:
+        with closing(sqlite3.connect(self.root/'work/missions.sqlite3')) as db, db:
             db.execute('ALTER TABLE jarvis_turns DROP COLUMN plan')
             db.execute('ALTER TABLE jarvis_turns DROP COLUMN approval_source')
         self.app=ConsolidatedWorkbench(('127.0.0.1',0),Store(self.root/'work'));self.runtime=self.app.jarvis

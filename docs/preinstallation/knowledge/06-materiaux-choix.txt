@@ -1,0 +1,16 @@
+Choisir une famille de matériau à partir de l’usage
+Identifiant : 06-materiaux-choix
+Projet : bojart.jarvis
+Statut : source_reported_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+PLA : candidat pour figurines détaillées, maquettes et prototypes peu sollicités ; la chaleur et les sollicitations sévères limitent son usage. PETG : candidat plus tenace pour certaines pièces techniques ; l’adhérence au plateau et la surface adaptée demandent attention. ASA : candidat pour extérieur/UV, mais son retrait et ses conditions d’impression demandent qualification.
+Ces propriétés de famille ne suffisent pas pour régler une machine BOJ.ART. Demander marque/référence exacte, lot, fiche technique, usage, dimensions, charge, environnement et finition. Reprendre un profil du fabricant pour la combinaison réelle, puis mesurer une éprouvette. Ne pas extrapoler la compatibilité alimentaire, peau ou sécurité structurelle à partir du nom du polymère. Aucun réglage de température, séchage ou vitesse universel n’est fixé ici.
+
+Sources primaires :
+pla — https://help.prusa3d.com/article/pla_2062
+petg — https://help.prusa3d.com/article/petg_2059
+asa — https://help.prusa3d.com/article/asa_1809
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

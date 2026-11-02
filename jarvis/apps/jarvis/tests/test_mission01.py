@@ -230,4 +230,17 @@ class HttpTests(unittest.TestCase):
         status,backup,_=self.request('GET',r['url'],headers={'Cookie':'boj_session=test-secret'})
         self.assertEqual(status,200);self.assertEqual(digest_bytes(backup),r['sha256'])
 
+    def test_63_live_listener_cannot_be_rebound_by_another_workspace(self):
+        import socket
+        if hasattr(socket,'SO_EXCLUSIVEADDRUSE'):
+            self.assertEqual(self.server.socket.getsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR),0)
+            self.assertEqual(self.server.socket.getsockopt(socket.SOL_SOCKET,socket.SO_EXCLUSIVEADDRUSE),1)
+        with tempfile.TemporaryDirectory() as other:
+            second=None
+            try:
+                with self.assertRaises(OSError):
+                    second=AppServer(self.server.server_address,Store(other),'another-session')
+            finally:
+                if second is not None:second.server_close()
+
 if __name__=='__main__':unittest.main(verbosity=2)

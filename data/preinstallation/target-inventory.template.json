@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "to_complete_on_target",
+  "observed_at": null,
+  "operator": null,
+  "os_build": null,
+  "python_version": null,
+  "cpu": null,
+  "ram_installed_GB": null,
+  "ram_free_GB": null,
+  "gpu_model": null,
+  "dedicated_vram_MiB": null,
+  "gpu_driver": null,
+  "disk_free_GB": null,
+  "microphone": null,
+  "local_voice": null,
+  "display_layout": [],
+  "installed_tools_and_versions": [],
+  "printers": [],
+  "measurements": [],
+  "qualified": false,
+  "note": "Blank means unknown. Never store API keys, serial identifiers or passwords here."
+}

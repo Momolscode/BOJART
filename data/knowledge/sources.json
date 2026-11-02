@@ -130,6 +130,50 @@
     "raw_content_in_git": false
   },
   {
+    "source_id": "jarvis-preinstallation-user-2026-11-01",
+    "evidence": "current_user_instruction_and_photo",
+    "path": "docs/preinstallation/DECISIONS_UTILISATEUR.txt",
+    "sha256": "feff12f25c206990894b2e476ec9032ca1500279f7ce3fa7919b495294002cf8",
+    "scope": "BOJART",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "handoff-v5-pack-20261102",
+    "path": "docs/evidence/handoff-v5-2026-11-02/reception.json",
+    "sha256": "bfe7dfa609316eefbab9ff8e195fb28d9a0568df7fc1edef5e213f34a6d13894",
+    "evidence": "pack_bytes_verified_source_tree_replayed_and_tests_executed_this_session",
+    "scope": "V5 handoff pack (two ZIP parts) received on 2026-11-02; 1316 listed files verified; 926 source files replayed; other files only identified by hash"
+  },
+  {
+    "source_id": "strates-audit-pdf-20261102",
+    "evidence": "user_supplied_pdf_read",
+    "description": "PDF « STRATES : verdict de l’audit », 12 pages, BOJ.ART / Marwin Tech, daté du 2 novembre 2026, lu intégralement. Audit documentaire : aucune performance physique acquise.",
+    "sha256": "2a9830490b0ea15742678f74e305c8747fc79650153c0952c6c7938302a47e94",
+    "scope": "Original and text extraction kept outside the public repository (budget figures, named partner); public summary in docs/research/strates-robotique-2026-11-02/README.md",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "strates-verification-20261102",
+    "path": "docs/research/strates-robotique-2026-11-02/verification-calculs.json",
+    "sha256": "43b56d508aa290891e2041703ef364fa6e47b66c551978215ac624a99d2644ff",
+    "evidence": "executed_this_session",
+    "scope": "Arithmetic recomputation of the STRATES audit figures only; no datasheet, price or physical measurement"
+  },
+  {
+    "source_id": "strates-kling-videos-20261102",
+    "path": "docs/research/strates-robotique-2026-11-02/PROVENANCE.json",
+    "sha256": "00fef16e88e10a6b07ebde98168dd42f06d5bbaa7952a211009573c0f906dc78",
+    "evidence": "user_supplied_videos_probed_and_frames_viewed",
+    "scope": "Two 10 s generated videos identified by SHA-256, container metadata (AIGC producer kling) and four sampled frames each; media kept outside Git",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "bras-robotique-chat-user-20261102",
+    "evidence": "user_instruction",
+    "description": "Le 2 novembre 2026, l’utilisateur désigne la conversation ChatGPT 6ae7c762-6630-83eb-afde-680aa0c54b2e comme « la session bras robotique » à pousser sur GitHub. Accès sans compte : HTTP 403 ; corps non lu.",
+    "raw_content_in_git": false
+  },
+  {
     "source_id": "painter-request-20261102",
     "evidence": "user_request",
     "observed_on": "2026-11-02",

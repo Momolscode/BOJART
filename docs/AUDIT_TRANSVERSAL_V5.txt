@@ -1,0 +1,17 @@
+PASSATION LOCALE V5 — 2 NOVEMBRE 2026
+
+Cette copie intègre la base distante c71628cf20426dd8b4bdedbab2dcf403f5135667 et conserve les corrections mémoire V4. Les reçus complets sont livrés dans le paquet JARVIS_V5, séparément des données actives. Aucun push, déploiement, poids téléchargé ou ordre physique n'est impliqué.
+
+Corrections locales V5 :
+- Le fichier Three.js core manquant du site Atelier a été restauré au commit officiel exact du module existant ; la provenance et la licence sont conservées. Imports, triangle STL et inspecteur de démonstration ont été essayés dans Chromium Windows.
+- La sortie d'une ancienne prise audio est ignorée après annulation avant de changer l'interface ou d'envoyer son WAV. La course a un test rouge avant, vert après.
+- La sélection des passages considère leur pertinence avant de départager par autorité documentaire ; pas d'élargissement des collections ni de filtre supprimant les candidats sémantiques. Les faits, contradictions et budgets restent conservés. Le test générique ne dépend pas des questions du benchmark historique.
+- L'interface et les notices de reprise distinguent configuration déclarée, passage prévu à 32 Go et qualification réelle. Le registre de modèles reflète le profil speed existant ; il ne prétend pas que les poids sont installés.
+
+Préparation : 91 exigences proposées, 23 domaines ; recherches supplémentaires dans docs/research/audit-transversal-2026-11-02/. Les jeux et seuils proposés ne sont pas des résultats exécutés. Les trois skills locaux sont portables au niveau des instructions, mais leur découverte et efficacité dans un véritable client Claude restent à qualifier.
+
+Les archives et cinq médias R03 ont une réception Windows distincte. La récupération ne fournit pas un G2 final ni une approbation artistique. Les documents terrain restent historiques et la mémoire les classe en research. Les originaux sélectionnés sont dans le paquet privé, pas ajoutés au dépôt public.
+
+Limites ouvertes : dépendances Studio et indépendance de sa QA ; chemins Windows et publication cohérente des sorties du script vidéo ; sélection de contexte à évaluer sur des questions nouvelles ; micro/ASR, modèles, GPU, moniteurs, parc et connecteurs physiques non qualifiés. Le prototype de répartition utilise un parc fictif et des boîtes ; il n'intègre pas la géométrie réelle ni les opérations humaines. Les mesures CI et les anciennes campagnes restent attachées à leurs révisions.
+
+Le prochain auditeur doit pouvoir réfuter les conclusions avec les octets, commandes et logs. Ne pas remplacer une couverture partielle par un pourcentage global flatteur. Ne pas réduire l'audit transversal à l'une de ses corrections locales.
