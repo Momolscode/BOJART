@@ -128,5 +128,92 @@
     "sha256": "f3de8799d7a5d8ff26a9e537913638ee70039ab992cb35f07e3864a1d2be8053",
     "scope": "Sanitized reported hardware only; no device/product identifiers or image in Git; no inference benchmark",
     "raw_content_in_git": false
+  },
+  {
+    "source_id": "painter-request-20261102",
+    "evidence": "user_request",
+    "observed_on": "2026-11-02",
+    "description": "Demande de l'utilisateur du 2 novembre 2026 : trouver des bras robotiques achetables avec simulation existante et créer une boucle de simulation pour reproduire des tableaux ou peindre d'une certaine manière, pour le projet de galerie d'un partenaire (nom tenu hors du dépôt public).",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-menagerie-20261102",
+    "url": "https://github.com/google-deepmind/mujoco_menagerie",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Liste des bras de MuJoCo Menagerie (dont ufactory_lite6, ufactory_xarm7, agilex_piper, universal_robots_ur5e, franka_fr3, robotstudio_so101) ; licences par modèle.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-frida-github-20261102",
+    "url": "https://github.com/cmubig/Frida",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "FRIDA (CMU) : peinture robotique avec simulation différentiable réel→sim→réel ; prend en charge UFactory xArm et Franka ; mode --simulate ; licence GPL-3.0 ; CoFRIDA.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-frida-paper-20261102",
+    "url": "https://arxiv.org/abs/2210.00664",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Article FRIDA : A Collaborative Robot Painter with a Differentiable, Real2Sim2Real Planning Environment (ICRA 2023).",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-ufactory-lite6-20261102",
+    "url": "https://ufactory.cc/lite-6-collaborative-robot",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Page constructeur Lite 6 : portée 440 mm, charge 600 g, répétabilité ±0,5 mm, vitesse TCP 0,5 m/s, prix à partir de 2 999 USD.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-robotshop-xarm6-20261102",
+    "url": "https://uk.robotshop.com/products/xarm-6-dof-robotic-arm",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Revendeur RobotShop UK, xArm 6 : portée 700 mm, charge 5 kg, répétabilité ±0,1 mm, 1 m/s, 8 122,24 GBP TTC.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-generationrobots-piper-20261102",
+    "url": "https://www.generationrobots.com/en/404258-6-axis-robotic-arm-piper.html",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Revendeur Génération Robots, AgileX PiPER : rayon 626 mm, répétabilité ±0,1 mm, charge 1,5 kg, 4,2 kg, 2 400 EUR TTC.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-ur5e-techsheet-20261102",
+    "url": "https://www.universal-robots.com/manuals/EN/TechSheets/UR5e_techsheet_pdf_online/UR5e_techsheet_en.pdf",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Fiche technique UR5e : portée 850 mm, charge 5 kg, répétabilité de pose ±0,03 mm (ISO 9283), TCP 1 m/s.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-franka-fr3-datasheet-20261102",
+    "url": "https://franka.de/hubfs/Datasheet%20Franka%20Research%203_R02212_2.3_EN.pdf",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Fiche Franka Research 3 : portée bride 855 mm, charge 3 kg, répétabilité de position < ±0,1 mm (ISO 9283, volume 0,4 m), jusqu'à 2 m/s.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-roboticscenter-pricing-20261102",
+    "url": "https://www.roboticscenter.ai/learn/robot-arm-pricing-2026",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Guide de prix 2026 d'un revendeur : SO-101 500 USD, PiPER 3 500 USD, Lite 6 3 500 USD, xArm 6 9 500 USD, xArm 7 11 000 USD ; Franka et UR sur devis.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "painter-simulation-20261102",
+    "path": "docs/evidence/painter-simulation-2026-11-02/summary.json",
+    "evidence": "reproducible_host_simulation",
+    "observed_on": "2026-11-02",
+    "description": "Simulation logicielle du bras peintre : boucle fermée/ouverte, recalage du modèle de dépôt, accès à une toile 90 × 65 cm, coupon STRATES virtuel. Aucun matériel mesuré.",
+    "raw_content_in_git": true
   }
 ]

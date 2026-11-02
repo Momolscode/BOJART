@@ -28,6 +28,11 @@
       "sha256": "d2a08acafd45e0860898926c1fbd812616dcc07defe0133d6981bb764adc3ca8"
     },
     {
+      "path": ".github/workflows/painter-simulation.yml",
+      "bytes": 1069,
+      "sha256": "f79cb456e012c77dbb9659e86b4304927d42a776232301450e4f2907a55adc65"
+    },
+    {
       "path": ".github/workflows/quality.yml",
       "bytes": 819,
       "sha256": "b360eea50d81efd1da8344e28019e7d59d4899d75d458c6f41232319106428f5"
@@ -333,19 +338,69 @@
       "sha256": "ee489bedf74506add484d3644f71273f0b7e8179674c586899589fcbd9527998"
     },
     {
+      "path": "bojart_painter/__init__.py",
+      "bytes": 707,
+      "sha256": "c0664d067d21b59eb99288a55885bd7e1322d25479ccfb6723b8e64775fdf1f4"
+    },
+    {
+      "path": "bojart_painter/__main__.py",
+      "bytes": 6217,
+      "sha256": "31d17021e5187b4dc99033d7b24ecb3ec9f3edaf0dc2579cbe3460cf97b88177"
+    },
+    {
+      "path": "bojart_painter/arms.py",
+      "bytes": 2900,
+      "sha256": "9f7a60bba19e83ff5a76a0b940f49f192a1ec12781c3eec5494e1938c99e8493"
+    },
+    {
+      "path": "bojart_painter/canvas.py",
+      "bytes": 5572,
+      "sha256": "7801661034bb1900e8bd3ba17a714d20c4d7420fd3ded35ebdd1b83f6b5ed422"
+    },
+    {
+      "path": "bojart_painter/coupon.py",
+      "bytes": 4615,
+      "sha256": "441a0ea64e4b0d6473a0b1e811ab194c8a83f1c27eb2a1cc60642f7e1a7ca7a4"
+    },
+    {
+      "path": "bojart_painter/loop.py",
+      "bytes": 6411,
+      "sha256": "bd66947d3394b291e2163cb9791fd9b1504647d03cb8a95fd7cc80ec4faa430f"
+    },
+    {
+      "path": "bojart_painter/planner.py",
+      "bytes": 4730,
+      "sha256": "dd8a4cb430f3efa9cb53563ace27f6d116d3a4130f7c09368fcf3990bafe23e1"
+    },
+    {
+      "path": "bojart_painter/targets.py",
+      "bytes": 3862,
+      "sha256": "e4110c6e65988c38ca0fad06ce2973f163ec73650098648199012d1518945676"
+    },
+    {
+      "path": "configs/painter/arms.json",
+      "bytes": 3404,
+      "sha256": "8be12cc5143764aaa722f0f7db89e7890abf66feb50cac15cab85d07b4f40e42"
+    },
+    {
+      "path": "configs/painter/styles.json",
+      "bytes": 1279,
+      "sha256": "1758b6e7ad09b9f45371e2691aa56b4fa29085f23aeecc4a4ff67bbfa439f4b0"
+    },
+    {
       "path": "configs/quality_gates.json",
       "bytes": 848,
       "sha256": "03b5d2e1a39f953a4e38a8bbaaadb79923b1be7244fe7ce6a5a3973708d267c7"
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 8389,
-      "sha256": "6795fe5bb272732735ba98d609d8993600a0bb95bf1314502e448bc4807b9ecf"
+      "bytes": 9309,
+      "sha256": "18d72bd4bf88766a8891a8e642036443260bdfa1bc42ad442e99fe84717983e3"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 37275,
-      "sha256": "de0fe6e20ad76aa58a0c2ce781b4528e810d8907588b9c0c19236977ad337165"
+      "bytes": 38558,
+      "sha256": "299396f1f7b6d42a2e058c99c56c44b61ec3511acdb6efb15347371a78272351"
     },
     {
       "path": "creative/CURRENT.md",
@@ -434,8 +489,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 8878,
-      "sha256": "6e744a5912934942df9e0dafa5052e4d9197bb74bd2500bd66aa6b76df36fcea"
+      "bytes": 10608,
+      "sha256": "9e4e113efb673ac896212477a80175ac448b3223a535efa07f949b3e64b4b885"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -444,8 +499,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 10367,
-      "sha256": "de45254e196f8ffe891f72eccd91fb8e2889e9614e7980ff272b60a247db6df2"
+      "bytes": 11098,
+      "sha256": "4de2a00f22e0302bff1946d591e294325bc9428d3a7b5e866603f91aff25229d"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -454,8 +509,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 5719,
-      "sha256": "d48296842f8f3e6f2dd2821226d574e46addb7dcd15525e808ed55b6695fe886"
+      "bytes": 10174,
+      "sha256": "b7cd210369c617d70929545a9f1485712fdda0c7556346f1ac8762988bb13a31"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -711,6 +766,51 @@
       "path": "docs/evidence/orchestration-integration-2026-11-01.json",
       "bytes": 40714,
       "sha256": "14b6bb3b485941e00e55d031107d717a93780831d9d831d65efb745c4c3d5fb9"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/README.md",
+      "bytes": 1466,
+      "sha256": "e38e292cd8039712728c3732e5ac008d1b8e4d34cf5b4222ebb70a4f2beffb60"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/arms.json",
+      "bytes": 9841,
+      "sha256": "c73110b9f97f1cc21e2f0103ab3b1d9adbb7f932cba748048af6650a2f08b1a0"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/simulate-composition-seed1.json",
+      "bytes": 10680,
+      "sha256": "46f05e6f7a9d5f6cd8927d1667d0fe653987674853dc618ecf8967a3f8578eae"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/simulate-composition-seed2.json",
+      "bytes": 10688,
+      "sha256": "79a2b929b82069045d90a31d06ad26b45c9cf8f41f0c28123c047f01d0e7543f"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/simulate-composition-seed3.json",
+      "bytes": 10685,
+      "sha256": "054d8bf75b59c00bdbab88209f73a8a173ce17dd079481f2bb59680a7d3db417"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/simulate-paysage-seed1.json",
+      "bytes": 21830,
+      "sha256": "d3ca0afb014500893e2013e985c2e53877dae499bb4edd80feba2760c361d5af"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/simulate-paysage-seed2.json",
+      "bytes": 10715,
+      "sha256": "cea7b42865cbb57032d720c9ee6bf74cf7c8d094ce00104bbc28f1db63b42de9"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/simulate-paysage-seed3.json",
+      "bytes": 10714,
+      "sha256": "fe3c5599df90c202bb9329bd10a94196bacf962c9fbde7574cc388028daa6423"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/summary.json",
+      "bytes": 5347,
+      "sha256": "5196f0d3cf907ab6d35c19485b791d935c62e84c1140b534517be4d7038eb939"
     },
     {
       "path": "docs/evidence/production-recovery-2026-11-02.json",
@@ -971,6 +1071,11 @@
       "path": "docs/research/MODELES_LOCAUX_2026-11-02.md",
       "bytes": 10383,
       "sha256": "f94482196d90e4deec1e7e00c29e9de34ff8c36eac7bebef59bd259329b41a7d"
+    },
+    {
+      "path": "docs/research/bras-peintre-simulation-2026-11-02/README.md",
+      "bytes": 8183,
+      "sha256": "846f9a6823a836d8dae5647c1497711b935cdb9e6e80639d8247af8a59009072"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -2514,8 +2619,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 13235,
-      "sha256": "318c66f5c41687ae25c1e1b05f84c1aebd97ba0cb3bae11a1c8f2e8af6000bd5"
+      "bytes": 13371,
+      "sha256": "11ad68cb2bdd983f30e0b0597e3728885c45b764a5990007e154fd21ef48bcbd"
     },
     {
       "path": "ops/request-example.json",
@@ -4251,6 +4356,11 @@
       "path": "tests_ops/test_qualification.py",
       "bytes": 6338,
       "sha256": "4ad49603f11f272621283bc01a894374979a2e09e82ec6e77ea47605e0fe0673"
+    },
+    {
+      "path": "tests_painter/test_painter.py",
+      "bytes": 4266,
+      "sha256": "29df866d3c9361c266a2bd2cebd63c4e4ce386c837ff57ad438e857c1733e6f3"
     },
     {
       "path": "tests_workflows/test_journeys.py",

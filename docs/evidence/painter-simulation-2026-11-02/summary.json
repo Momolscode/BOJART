@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-02",
+  "host": "conteneur Linux, Python 3.13, sans GPU ni robot",
+  "hidden_world_model": {
+    "width_gain": 1.2,
+    "opacity": 0.72,
+    "edge_mm": 6.0
+  },
+  "nominal_believed_model": {
+    "width_gain": 1.0,
+    "opacity": 0.9,
+    "edge_mm": 6.0
+  },
+  "painting_cases": [
+    {
+      "case": "composition/aplats_geometriques",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.006118,
+      "closed_loop_no_learning_mse_mean": 0.00836,
+      "open_loop_single_plan_mse_mean": 0.008791,
+      "learning_better_than_no_learning": "3/3",
+      "closed_learning_better_than_open": "3/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ],
+        [
+          1.2,
+          0.75
+        ]
+      ]
+    },
+    {
+      "case": "composition/reproduction",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.011157,
+      "closed_loop_no_learning_mse_mean": 0.011021,
+      "open_loop_single_plan_mse_mean": 0.011025,
+      "learning_better_than_no_learning": "1/3",
+      "closed_learning_better_than_open": "1/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/aplats_geometriques",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.003033,
+      "closed_loop_no_learning_mse_mean": 0.003569,
+      "open_loop_single_plan_mse_mean": 0.003862,
+      "learning_better_than_no_learning": "3/3",
+      "closed_learning_better_than_open": "3/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/gestuel",
+      "seeds": [
+        1
+      ],
+      "closed_loop_learning_mse_mean": 0.004968,
+      "closed_loop_no_learning_mse_mean": 0.004685,
+      "open_loop_single_plan_mse_mean": 0.004993,
+      "learning_better_than_no_learning": "0/1",
+      "closed_learning_better_than_open": "1/1",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/reproduction",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.004729,
+      "closed_loop_no_learning_mse_mean": 0.004902,
+      "open_loop_single_plan_mse_mean": 0.006241,
+      "learning_better_than_no_learning": "3/3",
+      "closed_learning_better_than_open": "3/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/touches_courtes",
+      "seeds": [
+        1
+      ],
+      "closed_loop_learning_mse_mean": 0.053959,
+      "closed_loop_no_learning_mse_mean": 0.054139,
+      "open_loop_single_plan_mse_mean": 0.05583,
+      "learning_better_than_no_learning": "1/1",
+      "closed_learning_better_than_open": "1/1",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "arm": "ufactory_xarm6",
+      "coverage_edge": 0.663,
+      "coverage_overhead": 0.987,
+      "coupon_nominal": "52/59",
+      "coupon_nominal_lower_bound_95": 0.7887,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "agilex_piper",
+      "coverage_edge": 0.544,
+      "coverage_overhead": 0.879,
+      "coupon_nominal": "56/59",
+      "coupon_nominal_lower_bound_95": 0.8738,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "ufactory_lite6",
+      "coverage_edge": 0.222,
+      "coverage_overhead": 0.268,
+      "coupon_nominal": "26/59",
+      "coupon_nominal_lower_bound_95": 0.3301,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "universal_robots_ur5e",
+      "coverage_edge": 0.886,
+      "coverage_overhead": 1.0,
+      "coupon_nominal": "58/59",
+      "coupon_nominal_lower_bound_95": 0.9221,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "franka_fr3",
+      "coverage_edge": 0.892,
+      "coverage_overhead": 1.0,
+      "coupon_nominal": "58/59",
+      "coupon_nominal_lower_bound_95": 0.9221,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "robotstudio_so101",
+      "coverage_edge": null,
+      "coverage_overhead": null,
+      "coupon_nominal": null,
+      "coupon_nominal_lower_bound_95": null,
+      "coupon_pessimistic": null
+    }
+  ],
+  "reports_sha256": {
+    "arms.json": "c73110b9f97f1cc21e2f0103ab3b1d9adbb7f932cba748048af6650a2f08b1a0",
+    "simulate-composition-seed1.json": "46f05e6f7a9d5f6cd8927d1667d0fe653987674853dc618ecf8967a3f8578eae",
+    "simulate-composition-seed2.json": "79a2b929b82069045d90a31d06ad26b45c9cf8f41f0c28123c047f01d0e7543f",
+    "simulate-composition-seed3.json": "054d8bf75b59c00bdbab88209f73a8a173ce17dd079481f2bb59680a7d3db417",
+    "simulate-paysage-seed1.json": "d3ca0afb014500893e2013e985c2e53877dae499bb4edd80feba2760c361d5af",
+    "simulate-paysage-seed2.json": "cea7b42865cbb57032d720c9ee6bf74cf7c8d094ce00104bbc28f1db63b42de9",
+    "simulate-paysage-seed3.json": "fe3c5599df90c202bb9329bd10a94196bacf962c9fbde7574cc388028daa6423"
+  },
+  "limits": "Le monde physique est lui-même un modèle simplifié. Ces chiffres valident la logique de la boucle et de l’estimation, pas une peinture réelle, un bras, un pinceau ni un coupon. Graines peu nombreuses : tendances, pas significativité."
+}

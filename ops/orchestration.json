@@ -69,7 +69,11 @@
     {
       "domain": "research",
       "patterns": [
-        "docs/research/*"
+        "docs/research/*",
+        "bojart_painter/*",
+        "tests_painter/*",
+        "configs/painter/*",
+        ".github/workflows/painter-simulation.yml"
       ],
       "reason": "Propositions sourcées ; installation et qualification distinctes."
     },

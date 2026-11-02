@@ -1,0 +1,303 @@
+{
+  "command": "arms",
+  "canvas_mm": [
+    900,
+    650
+  ],
+  "trials": 59,
+  "seed": 1,
+  "strates_budget_mm": {
+    "recalage": 0.1,
+    "calibration_pointe": 0.15,
+    "suivi_trajectoire": 0.1,
+    "deformation_pinceau": 0.2,
+    "etalement": 0.25,
+    "incertitude_mesure": 0.2
+  },
+  "recipe": {
+    "length_mm": 150.0,
+    "nominal_width_mm": 7.0,
+    "width_min_mm": 6.0,
+    "width_max_mm": 8.0,
+    "width_ok_fraction": 0.9,
+    "allowed_half_width_mm": 3.5,
+    "overflow_max_mm": 1.0,
+    "step_mm": 0.1
+  },
+  "arms": [
+    {
+      "arm": "ufactory_xarm6",
+      "name": "UFACTORY xArm 6",
+      "price_indicative": "9 500 USD (roboticscenter.ai, 2026) ; 8 122,24 GBP TTC (RobotShop UK)",
+      "simulation_models": [
+        "URDF/xacro xarm_ros2 (constructeur)",
+        "MuJoCo Menagerie : xArm7 seulement (ufactory_xarm7)",
+        "FRIDA (CMU) : xArm pris en charge"
+      ],
+      "reach": {
+        "arm": "ufactory_xarm6",
+        "known": true,
+        "canvas_mm": [
+          900,
+          650
+        ],
+        "usable_reach_mm": 595,
+        "coverage_edge": 0.663,
+        "coverage_overhead": 0.987,
+        "placements_estimate": 3,
+        "assumptions": "sphère de portée × marge, épaule 150 mm (bord) ou 300 mm (surplomb) au-dessus du plan, rayon mort 20 %"
+      },
+      "coupon_nominal": {
+        "arm": "ufactory_xarm6",
+        "known": true,
+        "trials": 59,
+        "passed": 52,
+        "lower_bound_95": 0.7887,
+        "overflow_median_mm": 0.659,
+        "overflow_max_mm": 1.03,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 2.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      },
+      "coupon_pessimistic": {
+        "arm": "ufactory_xarm6",
+        "known": true,
+        "trials": 59,
+        "passed": 0,
+        "lower_bound_95": 0.0,
+        "overflow_median_mm": 1.314,
+        "overflow_max_mm": 2.038,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 1.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      }
+    },
+    {
+      "arm": "agilex_piper",
+      "name": "AgileX PiPER",
+      "price_indicative": "2 400 EUR TTC (Génération Robots) ; 3 500 USD (roboticscenter.ai)",
+      "simulation_models": [
+        "MuJoCo Menagerie : agilex_piper",
+        "URDF constructeur (piper_ros)"
+      ],
+      "reach": {
+        "arm": "agilex_piper",
+        "known": true,
+        "canvas_mm": [
+          900,
+          650
+        ],
+        "usable_reach_mm": 532,
+        "coverage_edge": 0.544,
+        "coverage_overhead": 0.879,
+        "placements_estimate": 3,
+        "assumptions": "sphère de portée × marge, épaule 150 mm (bord) ou 300 mm (surplomb) au-dessus du plan, rayon mort 20 %"
+      },
+      "coupon_nominal": {
+        "arm": "agilex_piper",
+        "known": true,
+        "trials": 59,
+        "passed": 56,
+        "lower_bound_95": 0.8738,
+        "overflow_median_mm": 0.652,
+        "overflow_max_mm": 0.909,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 2.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      },
+      "coupon_pessimistic": {
+        "arm": "agilex_piper",
+        "known": true,
+        "trials": 59,
+        "passed": 0,
+        "lower_bound_95": 0.0,
+        "overflow_median_mm": 1.291,
+        "overflow_max_mm": 1.81,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 1.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      }
+    },
+    {
+      "arm": "ufactory_lite6",
+      "name": "UFACTORY Lite 6",
+      "price_indicative": "à partir de 2 999 USD (constructeur)",
+      "simulation_models": [
+        "MuJoCo Menagerie : ufactory_lite6",
+        "URDF/xacro xarm_ros2 (constructeur)"
+      ],
+      "reach": {
+        "arm": "ufactory_lite6",
+        "known": true,
+        "canvas_mm": [
+          900,
+          650
+        ],
+        "usable_reach_mm": 374,
+        "coverage_edge": 0.222,
+        "coverage_overhead": 0.268,
+        "placements_estimate": 5,
+        "assumptions": "sphère de portée × marge, épaule 150 mm (bord) ou 300 mm (surplomb) au-dessus du plan, rayon mort 20 %"
+      },
+      "coupon_nominal": {
+        "arm": "ufactory_lite6",
+        "known": true,
+        "trials": 59,
+        "passed": 26,
+        "lower_bound_95": 0.3301,
+        "overflow_median_mm": 0.819,
+        "overflow_max_mm": 1.155,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 2.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      },
+      "coupon_pessimistic": {
+        "arm": "ufactory_lite6",
+        "known": true,
+        "trials": 59,
+        "passed": 0,
+        "lower_bound_95": 0.0,
+        "overflow_median_mm": 1.363,
+        "overflow_max_mm": 2.146,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 1.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      }
+    },
+    {
+      "arm": "universal_robots_ur5e",
+      "name": "Universal Robots UR5e",
+      "price_indicative": "sur devis",
+      "simulation_models": [
+        "MuJoCo Menagerie : universal_robots_ur5e",
+        "URDF Universal_Robots_ROS2_Description",
+        "URSim (constructeur)"
+      ],
+      "reach": {
+        "arm": "universal_robots_ur5e",
+        "known": true,
+        "canvas_mm": [
+          900,
+          650
+        ],
+        "usable_reach_mm": 722,
+        "coverage_edge": 0.886,
+        "coverage_overhead": 1.0,
+        "placements_estimate": 1,
+        "assumptions": "sphère de portée × marge, épaule 150 mm (bord) ou 300 mm (surplomb) au-dessus du plan, rayon mort 20 %"
+      },
+      "coupon_nominal": {
+        "arm": "universal_robots_ur5e",
+        "known": true,
+        "trials": 59,
+        "passed": 58,
+        "lower_bound_95": 0.9221,
+        "overflow_median_mm": 0.642,
+        "overflow_max_mm": 0.842,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 2.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      },
+      "coupon_pessimistic": {
+        "arm": "universal_robots_ur5e",
+        "known": true,
+        "trials": 59,
+        "passed": 0,
+        "lower_bound_95": 0.0,
+        "overflow_median_mm": 1.283,
+        "overflow_max_mm": 1.682,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 1.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      }
+    },
+    {
+      "arm": "franka_fr3",
+      "name": "Franka Research 3",
+      "price_indicative": "sur devis",
+      "simulation_models": [
+        "MuJoCo Menagerie : franka_fr3",
+        "URDF franka_description",
+        "FRIDA (CMU) : Franka pris en charge"
+      ],
+      "reach": {
+        "arm": "franka_fr3",
+        "known": true,
+        "canvas_mm": [
+          900,
+          650
+        ],
+        "usable_reach_mm": 727,
+        "coverage_edge": 0.892,
+        "coverage_overhead": 1.0,
+        "placements_estimate": 1,
+        "assumptions": "sphère de portée × marge, épaule 150 mm (bord) ou 300 mm (surplomb) au-dessus du plan, rayon mort 20 %"
+      },
+      "coupon_nominal": {
+        "arm": "franka_fr3",
+        "known": true,
+        "trials": 59,
+        "passed": 58,
+        "lower_bound_95": 0.9221,
+        "overflow_median_mm": 0.638,
+        "overflow_max_mm": 0.813,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 2.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      },
+      "coupon_pessimistic": {
+        "arm": "franka_fr3",
+        "known": true,
+        "trials": 59,
+        "passed": 0,
+        "lower_bound_95": 0.0,
+        "overflow_median_mm": 1.269,
+        "overflow_max_mm": 1.599,
+        "width_bias_mm": 0.0,
+        "sigma_divisor": 1.0,
+        "status": "simulation sous hypothèses du budget STRATES, pas une mesure de coupon"
+      }
+    },
+    {
+      "arm": "robotstudio_so101",
+      "name": "SO-101 (The Robot Studio / LeRobot)",
+      "price_indicative": "500 USD (roboticscenter.ai)",
+      "simulation_models": [
+        "MuJoCo Menagerie : robotstudio_so101",
+        "LeRobot (Hugging Face)"
+      ],
+      "reach": {
+        "arm": "robotstudio_so101",
+        "known": false,
+        "reason": "portée non publiée"
+      },
+      "coupon_nominal": {
+        "arm": "robotstudio_so101",
+        "known": false,
+        "reason": "répétabilité non publiée"
+      },
+      "coupon_pessimistic": {
+        "arm": "robotstudio_so101",
+        "known": false,
+        "reason": "répétabilité non publiée"
+      }
+    }
+  ],
+  "runtime": {
+    "seconds": 2.18,
+    "python": "3.13.18",
+    "platform": "Linux",
+    "fingerprints": {
+      "bojart_painter/arms.py": "9f7a60bba19e83ff5a76a0b940f49f192a1ec12781c3eec5494e1938c99e8493",
+      "bojart_painter/canvas.py": "7801661034bb1900e8bd3ba17a714d20c4d7420fd3ded35ebdd1b83f6b5ed422",
+      "bojart_painter/coupon.py": "441a0ea64e4b0d6473a0b1e811ab194c8a83f1c27eb2a1cc60642f7e1a7ca7a4",
+      "bojart_painter/loop.py": "bd66947d3394b291e2163cb9791fd9b1504647d03cb8a95fd7cc80ec4faa430f",
+      "bojart_painter/planner.py": "dd8a4cb430f3efa9cb53563ace27f6d116d3a4130f7c09368fcf3990bafe23e1",
+      "bojart_painter/targets.py": "e4110c6e65988c38ca0fad06ce2973f163ec73650098648199012d1518945676",
+      "bojart_painter/__main__.py": "31d17021e5187b4dc99033d7b24ecb3ec9f3edaf0dc2579cbe3460cf97b88177",
+      "configs/painter/arms.json": "8be12cc5143764aaa722f0f7db89e7890abf66feb50cac15cab85d07b4f40e42",
+      "configs/painter/styles.json": "1758b6e7ad09b9f45371e2691aa56b4fa29085f23aeecc4a4ff67bbfa439f4b0"
+    },
+    "limits": "Simulation logicielle ; aucun bras, pinceau, peinture ni coupon réel mesuré."
+  }
+}

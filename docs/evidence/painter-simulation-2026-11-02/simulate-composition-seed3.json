@@ -1,0 +1,442 @@
+{
+  "command": "simulate",
+  "arm": "ufactory_xarm6",
+  "target": {
+    "kind": "synthetic",
+    "name": "composition"
+  },
+  "grid_px": [
+    90,
+    65
+  ],
+  "mm_per_px": 10.0,
+  "rounds": 4,
+  "strokes_per_round": 50,
+  "seed": 3,
+  "styles": {
+    "reproduction": {
+      "closed_loop_learning": {
+        "final_loss": 0.011306,
+        "blank_loss": 0.298613,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 50,
+            "loss": 0.054917,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 2,
+            "strokes": 50,
+            "loss": 0.025411,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 3,
+            "strokes": 48,
+            "loss": 0.017566,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 4,
+            "strokes": 50,
+            "loss": 0.011306,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 198,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.2,
+          "opacity": 0.7,
+          "edge_mm": 6.0
+        },
+        "learning": true,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 923,
+        "palette": null,
+        "psnr_db": 19.47
+      },
+      "closed_loop_no_learning": {
+        "final_loss": 0.010897,
+        "blank_loss": 0.298613,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 50,
+            "loss": 0.05457,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 2,
+            "strokes": 50,
+            "loss": 0.024829,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 3,
+            "strokes": 50,
+            "loss": 0.016452,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 4,
+            "strokes": 50,
+            "loss": 0.010897,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 200,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.0,
+          "opacity": 0.9,
+          "edge_mm": 6.0
+        },
+        "learning": false,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 947,
+        "palette": null,
+        "psnr_db": 19.63
+      },
+      "open_loop_single_plan": {
+        "final_loss": 0.011073,
+        "blank_loss": 0.298613,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 200,
+            "loss": 0.011073,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 200,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.0,
+          "opacity": 0.9,
+          "edge_mm": 6.0
+        },
+        "learning": false,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 939,
+        "palette": null,
+        "psnr_db": 19.56
+      }
+    },
+    "aplats_geometriques": {
+      "closed_loop_learning": {
+        "final_loss": 0.004928,
+        "blank_loss": 0.298613,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 50,
+            "loss": 0.041326,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 2,
+            "strokes": 46,
+            "loss": 0.018979,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 3,
+            "strokes": 46,
+            "loss": 0.009299,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 4,
+            "strokes": 43,
+            "loss": 0.004928,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 185,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.2,
+          "opacity": 0.7,
+          "edge_mm": 6.0
+        },
+        "learning": true,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 1041,
+        "palette": [
+          [
+            0.15,
+            0.3,
+            0.7
+          ],
+          [
+            0.95,
+            0.94,
+            0.9
+          ],
+          [
+            0.8,
+            0.18,
+            0.15
+          ],
+          [
+            0.95,
+            0.85,
+            0.2
+          ],
+          [
+            0.08,
+            0.08,
+            0.1
+          ]
+        ],
+        "psnr_db": 23.07
+      },
+      "closed_loop_no_learning": {
+        "final_loss": 0.007104,
+        "blank_loss": 0.298613,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 50,
+            "loss": 0.041589,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 2,
+            "strokes": 48,
+            "loss": 0.020007,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 3,
+            "strokes": 50,
+            "loss": 0.011362,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 4,
+            "strokes": 49,
+            "loss": 0.007104,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 197,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.0,
+          "opacity": 0.9,
+          "edge_mm": 6.0
+        },
+        "learning": false,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 1131,
+        "palette": [
+          [
+            0.15,
+            0.3,
+            0.7
+          ],
+          [
+            0.95,
+            0.94,
+            0.9
+          ],
+          [
+            0.8,
+            0.18,
+            0.15
+          ],
+          [
+            0.95,
+            0.85,
+            0.2
+          ],
+          [
+            0.08,
+            0.08,
+            0.1
+          ]
+        ],
+        "psnr_db": 21.48
+      },
+      "open_loop_single_plan": {
+        "final_loss": 0.010509,
+        "blank_loss": 0.298613,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 194,
+            "loss": 0.010509,
+            "believed_model": {
+              "width_gain": 1.0,
+              "opacity": 0.9,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 194,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.0,
+          "opacity": 0.9,
+          "edge_mm": 6.0
+        },
+        "learning": false,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 1137,
+        "palette": [
+          [
+            0.15,
+            0.3,
+            0.7
+          ],
+          [
+            0.95,
+            0.94,
+            0.9
+          ],
+          [
+            0.8,
+            0.18,
+            0.15
+          ],
+          [
+            0.95,
+            0.85,
+            0.2
+          ],
+          [
+            0.08,
+            0.08,
+            0.1
+          ]
+        ],
+        "psnr_db": 19.78
+      }
+    }
+  },
+  "reach": {
+    "arm": "ufactory_xarm6",
+    "known": true,
+    "canvas_mm": [
+      900,
+      650
+    ],
+    "usable_reach_mm": 595,
+    "coverage_edge": 0.663,
+    "coverage_overhead": 0.987,
+    "placements_estimate": 3,
+    "assumptions": "sphère de portée × marge, épaule 150 mm (bord) ou 300 mm (surplomb) au-dessus du plan, rayon mort 20 %"
+  },
+  "runtime": {
+    "seconds": 11.22,
+    "python": "3.13.18",
+    "platform": "Linux",
+    "fingerprints": {
+      "bojart_painter/arms.py": "9f7a60bba19e83ff5a76a0b940f49f192a1ec12781c3eec5494e1938c99e8493",
+      "bojart_painter/canvas.py": "7801661034bb1900e8bd3ba17a714d20c4d7420fd3ded35ebdd1b83f6b5ed422",
+      "bojart_painter/coupon.py": "441a0ea64e4b0d6473a0b1e811ab194c8a83f1c27eb2a1cc60642f7e1a7ca7a4",
+      "bojart_painter/loop.py": "bd66947d3394b291e2163cb9791fd9b1504647d03cb8a95fd7cc80ec4faa430f",
+      "bojart_painter/planner.py": "dd8a4cb430f3efa9cb53563ace27f6d116d3a4130f7c09368fcf3990bafe23e1",
+      "bojart_painter/targets.py": "e4110c6e65988c38ca0fad06ce2973f163ec73650098648199012d1518945676",
+      "bojart_painter/__main__.py": "31d17021e5187b4dc99033d7b24ecb3ec9f3edaf0dc2579cbe3460cf97b88177",
+      "configs/painter/arms.json": "8be12cc5143764aaa722f0f7db89e7890abf66feb50cac15cab85d07b4f40e42",
+      "configs/painter/styles.json": "1758b6e7ad09b9f45371e2691aa56b4fa29085f23aeecc4a4ff67bbfa439f4b0"
+    },
+    "limits": "Simulation logicielle ; aucun bras, pinceau, peinture ni coupon réel mesuré."
+  }
+}

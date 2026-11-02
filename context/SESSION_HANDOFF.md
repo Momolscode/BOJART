@@ -210,3 +210,12 @@ Une requête JSON authentifiée mais incomplète retenait le verrou global avant
 Un jeton de démarrage non ASCII provoquait aussi une coupure de connexion : il reçoit désormais un refus JSON 401. Les longueurs absentes, malformées ou dupliquées, les corps tronqués, les délais dépassés et la saturation sont refusés avant mutation. Treize nouveaux tests utilisent de vraies connexions HTTP et SQLite dans des dossiers temporaires, sans moteur vocal, modèle ni calcul géométrique. Le test de refus des liens symboliques dans les sauvegardes utilise maintenant une base toujours présente, sans dépendre des médias privés.
 
 Vérifications locales : 98 tests racine, 64 tests M06/M07, 38 tests de console consolidée, 31 tests M05 et 20 tests de parcours réussis. Les trois autres cas M05 exigent les médias privés absents et ne sont pas déclarés validés. Les tests de sauvegarde pendant une mutation acceptée et de fermeture pendant une mutation passent. La branche distante c71628cf20426dd8b4bdedbab2dcf403f5135667, dont ses mesures Windows, est préservée. Les contrôles CI et la liste restante de l'audit sont consignés séparément sur audit/context-results. Aucun navigateur ni poste cible n'est qualifié par cette recette.
+
+
+## 2 novembre 2026 — bras peintre simulé
+
+Demande de l'utilisateur : simulations de bras robotiques achetables et boucle d'apprentissage pour reproduire des tableaux ou peindre d'une certaine manière, pour la galerie projetée par un partenaire (nom gardé hors du dépôt public, comme dans le dossier STRATES de la PR #12).
+
+Six bras comparés sur pages constructeur ou revendeur relues le jour même (`configs/painter/arms.json`, sources `web-*-20261102`). Prototype `bojart_painter` en Python standard : toile, touches de Bézier, styles (palette k-means, largeur, orientation, courbure), monde physique simulé à dépôt caché, recalage largeur/opacité, replanification, accès à une toile 90 × 65 cm, coupon STRATES virtuel avec borne de Clopper-Pearson. Rapports bruts sur 3 graines dans `docs/evidence/painter-simulation-2026-11-02/`. Neuf tests dédiés (`tests_painter`) et un workflow Ubuntu/Windows. Rendus PPM hors Git.
+
+Limites : le monde physique est un modèle, l'accès est calculé par sphère de portée et non par cinématique constructeur, et aucun matériel n'est qualifié. Suite proposée : backend MuJoCo optionnel (Menagerie/URDF), mesures G1 pour remplacer le modèle de dépôt, puis politique apprise seulement face à la recette programmée.

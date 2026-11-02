@@ -1,0 +1,41 @@
+name: Painter arm simulation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'bojart_painter/**'
+      - 'tests_painter/**'
+      - 'configs/painter/**'
+      - '.github/workflows/painter-simulation.yml'
+  pull_request:
+    paths:
+      - 'bojart_painter/**'
+      - 'tests_painter/**'
+      - 'configs/painter/**'
+permissions:
+  contents: read
+env:
+  PYTHONUTF8: '1'
+jobs:
+  simulate:
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests_painter -v
+      - name: Arm comparison report
+        run: python -m bojart_painter arms --output .bojart-audit/painter-arms.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: painter-${{ matrix.os }}
+          path: .bojart-audit/painter-arms.json
+          retention-days: 30
