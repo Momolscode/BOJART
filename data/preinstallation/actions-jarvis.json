@@ -13,12 +13,13 @@
     {
       "id": "installation.dependances_windows",
       "domaine": "Installation",
-      "action": "Installer les dépendances épinglées sur Windows 11 / Python 3.12",
+      "action": "Installer exactement l'environnement testé (verrou Windows avec empreintes) sur Windows 11 / Python 3.12",
       "exemple": "Installer_BOJART.cmd",
       "etat_code": "code",
       "verifications": [
         "reseau:roues_windows",
         "statique:dependances_epinglees",
+        "statique:verrou_installation",
         "suite:tests"
       ],
       "hors_simulation": [
@@ -526,7 +527,7 @@
       "action": "Préparer un devis (matière, temps machine, finition, marge, TVA)",
       "exemple": "Devis d'une figurine de 30 cm",
       "etat_code": "absent",
-      "note": "Seul un calcul pédagogique existe dans la base métier (statut calcul_pedagogique_non_devis).",
+      "note": "Jarvis ne calcule pas de devis. Existent seulement un calcul pédagogique dans la base métier (calcul_pedagogique_non_devis) et un chiffrage manuel coût + marge dans le site Atelier (calculateQuote, sans temps machine ni TVA).",
       "verifications": [
         "suite:metier"
       ],

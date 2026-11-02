@@ -29,8 +29,8 @@
     },
     {
       "path": ".github/workflows/preinstall-bench.yml",
-      "bytes": 1667,
-      "sha256": "bd79c04a11dd66e70d1a5dcdd1d5a5c44f3cd06fa1650d678ce6f1430ea413a4"
+      "bytes": 2766,
+      "sha256": "cf3782e0f156af605a1b2f0b14d53c421f8ea2c7c916e462bc3c1100b4f257e7"
     },
     {
       "path": ".github/workflows/quality.yml",
@@ -64,8 +64,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 7210,
-      "sha256": "9c3ecb584a27b6e85273a18d26236b0be3d424f683ff59562772184b8dd07267"
+      "bytes": 7643,
+      "sha256": "9adfe241f384f0fe14ceeb2c700917aea2164a94f08d5bb5ec46a0c3abbbadbd"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -344,13 +344,13 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 30739,
-      "sha256": "4878645f3e38e5015779927df04b383b193f0263263e55c3db60d3d8752ae26e"
+      "bytes": 32106,
+      "sha256": "f0bb42de12a466e7e9a2c2462f9908b88cba0db225f05a3971acc105887c4323"
     },
     {
       "path": "bojart_ops/banc_statique.py",
-      "bytes": 19320,
-      "sha256": "ed03d558bef54b7d446249844fe05c44728090e3e9a80a350b14840748755b44"
+      "bytes": 19936,
+      "sha256": "a91a824016a022e154d54162fef4bb86211ff07c424e39d97ddc76707e9adcb8"
     },
     {
       "path": "bojart_ops/ledger.py",
@@ -376,6 +376,11 @@
       "path": "bojart_ops/qualification.py",
       "bytes": 8403,
       "sha256": "ee489bedf74506add484d3644f71273f0b7e8179674c586899589fcbd9527998"
+    },
+    {
+      "path": "bojart_ops/verrou_dependances.py",
+      "bytes": 9860,
+      "sha256": "bb26942e5569bd757b52127bb42ffc68015b8fb2df840cda4c2db5fc48d1c690"
     },
     {
       "path": "configs/quality_gates.json",
@@ -504,8 +509,8 @@
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
-      "bytes": 18867,
-      "sha256": "c61ec4660c6cfae2f81945a0f596b02dc0999670c16bba3b796295baed3cbdc9"
+      "bytes": 19079,
+      "sha256": "13f12c73b8e57a94a8449808c2dba7a7bbec0c9dda95882643108846de074a3c"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -569,8 +574,8 @@
     },
     {
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
-      "bytes": 7395,
-      "sha256": "2a9b01aa38ec144b7c0597946f9a3aaa06e6af72e2076de34f3cb03c96af053a"
+      "bytes": 8594,
+      "sha256": "d90eb708a892933cafdc544cf4542f781ace7f85d310a03b15bba8601d55f464"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -4618,6 +4623,11 @@
       "sha256": "4ad49603f11f272621283bc01a894374979a2e09e82ec6e77ea47605e0fe0673"
     },
     {
+      "path": "tests_ops/test_verrou_dependances.py",
+      "bytes": 5149,
+      "sha256": "3bce76ea5ccdc35fd0ddc576323bed64f9082aef15a8c3be7d67c5c1d156d6a9"
+    },
+    {
       "path": "tests_workflows/test_journeys.py",
       "bytes": 9098,
       "sha256": "679d6b1087140f62a7ce7e63c2771342b4b139f9df42364e23e276bc00d0200f"
@@ -4679,8 +4689,8 @@
     },
     {
       "path": "tools/prepare_installation.py",
-      "bytes": 3232,
-      "sha256": "70fe327ca5b4afbe7e9fa19d35726e35722f294f427d28317c76e41c8288d271"
+      "bytes": 4703,
+      "sha256": "4e6c35a320f765406fa76162abeb867f209dd0a50594f668b4cdea938ac4bb26"
     },
     {
       "path": "tools/prepare_jarvis.py",
@@ -4731,6 +4741,11 @@
       "path": "tools/verify_manifest.py",
       "bytes": 1849,
       "sha256": "b3c7237bee1c1b304a2c41e760ff1ea98b7d1c433386b8dfb4f39acd6e7af428"
+    },
+    {
+      "path": "tools/verrouiller_dependances.py",
+      "bytes": 1968,
+      "sha256": "1d71c3d43816d5a87ccc1889c9a480620188362ee6b8742cad70cddcedbcd19e"
     }
   ]
 }

@@ -52,8 +52,16 @@ Constats **conservés pour décision ou recette** :
 - Les scripts de recette navigateur hérités (`test_browser*.py`, `test_ui.py`, `test_preview*.py`) ne sont pas des tests `unittest` : ils visent `/usr/bin/chromium` et réécrivent leurs preuves dans `preuves/`. À ne pas lancer sur la tour sans adaptation.
 - Site Atelier : `three.core.js` est bien présent sur `main` (défaut signalé par la PR #15 déjà corrigé), mais le logo et les polices (`logo.webp`, `body.ttf`, `display.ttf`) sont exclus du dépôt : à hydrater avant tout rendu.
 - Sous charge (24 demandes simultanées), les tours arrivés pendant un traitement restent « EN ATTENTE » ; la console demande un clic « Reprendre ». Aucun tour n'est perdu ni dupliqué à la reprise. Une nouvelle tentative automatique de la même référence serait plus fluide en voix.
-- 95 paquets résolus en roues Windows cp312, aucun à compiler ; 83 dépendances transitives ne sont pas épinglées. Un fichier de contraintes Windows avec empreintes rendrait l'installation de la tour identique à celle testée.
+- 95 paquets résolus en roues Windows cp312, aucun à compiler ; 83 dépendances transitives n'étaient pas épinglées. Traité par le verrou d'installation Windows (ci-dessous).
 - Non codé dans `main` : figurine M08, découpe d'un mètre et tranchage (PR #15 en revue), inventaire et pilotage des imprimantes (volontairement absent), devis réel.
+
+## Verrou d'installation Windows
+
+`jarvis/locks/windows-cp312-moteurs.txt` et `windows-cp312-voice.txt` figent tout l'environnement de chaque profil : versions exactes, dépendances indirectes comprises, et empreinte SHA-256 de la roue Windows. `tools/prepare_installation.py` les installe sous Windows avec `pip install --require-hashes --no-deps` puis `pip check` : pip refuse toute roue dont l'empreinte diffère. La CI Windows du banc installe le même verrou avant d'exécuter le banc, puis le verrou voix par-dessus.
+
+- Générer : `python tools/verrouiller_dependances.py --sortie <dossier neuf>`, **sous Windows** (le workflow du banc le fait et joint le résultat à ses rapports). Depuis Linux, pip évalue les marqueurs `sys_platform` de l'hôte et oublierait des dépendances propres à Windows.
+- Vérifier hors ligne : `python tools/verrouiller_dependances.py --verifier`. Le banc fait le même contrôle (`statique:verrou_installation`) : verrou absent, périmé après une modification des requirements, version principale différente ou empreinte manquante.
+- Mettre à jour : changer un requirement rend le verrou périmé. Le regénérer sous Windows, puis le valider par un passage vert du banc avant de l'installer sur la tour.
 
 ## Limites
 

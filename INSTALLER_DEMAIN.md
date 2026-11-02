@@ -39,7 +39,7 @@ Les moteurs CAO/LangGraph, la voix et les modèles Ollama sont des installations
 py -3.12 tools/prepare_installation.py --engines
 ```
 
-Linux : remplacer `py -3.12` par `python3.12`. Ajouter `--voice` pour les bibliothèques voix ; les poids, FFmpeg, le micro et la configuration restent à préparer selon [INSTALLATION.md](docs/INSTALLATION.md). Les versions M07 sont fixées ; leur installation Windows n’a pas encore été essayée sur le poste.
+Linux : remplacer `py -3.12` par `python3.12`. Ajouter `--voice` pour les bibliothèques voix ; les poids, FFmpeg, le micro et la configuration restent à préparer selon [INSTALLATION.md](docs/INSTALLATION.md). Sous Windows, l’installateur installe le **verrou** `jarvis/locks/windows-cp312-<profil>.txt` : toutes les versions, dépendances indirectes comprises, avec l’empreinte SHA-256 de chaque roue (`pip install --require-hashes --no-deps`, puis `pip check`). C’est l’environnement installé et testé par la CI Windows du banc. Si le verrou manque ou ne correspond plus aux requirements, l’installateur le dit et revient aux versions principales épinglées. L’installation n’a pas encore été essayée sur le poste lui-même.
 
 ## 3. Installer les modèles locaux choisis
 

@@ -322,11 +322,19 @@ def run_windows_wheels(python, workdir):
         for line in (ROOT / 'jarvis' / req).read_text(encoding='utf-8').splitlines():
             m = re.match(r'^([A-Za-z0-9_.-]+)==', line.strip())
             if m:
-                pinned[m.group(1).lower().replace('_', '-')] = True
-    unpinned = [f'{n}=={v}' for n, v, _ in wheels if n.lower().replace('_', '-') not in pinned]
+                pinned[re.sub(r'[-_.]+', '-', m.group(1)).lower()] = True
+    from bojart_ops import verrou_dependances as vd
+    locked = {}
+    for lock in sorted((ROOT / 'jarvis/locks').glob('windows-cp312-*.txt')):
+        locked.update({k: e['version'] for k, e in vd.parse_lock(lock)[1].items()})
+    unpinned = [f'{n}=={v}' for n, v, _ in wheels if vd.canonical(n) not in pinned and vd.canonical(n) not in locked]
+    moved = sorted(f'{n} {locked[vd.canonical(n)]}→{v}' for n, v, _ in wheels if vd.canonical(n) in locked and locked[vd.canonical(n)] != v)
     return {'status': 'echec' if sdists else 'ok', 'fichiers': req_files, 'paquets': len(wheels), 'compilation_requise': sdists,
-            'dependances_transitives_non_epinglees': len(unpinned), 'resolution_du_jour': [f'{n}=={v}' for n, v, _ in wheels],
-            'limite': 'Résolution PyPI du jour pour win_amd64/cp312 ; pas une installation ni un essai d’import sous Windows.'}
+            'dependances_transitives_non_epinglees': len(unpinned), 'non_verrouillees': unpinned,
+            'verrou_windows': {'paquets': len(locked), 'nouvelles_versions_depuis_le_verrou': moved},
+            'resolution_du_jour': [f'{n}=={v}' for n, v, _ in wheels],
+            'limite': ('Résolution PyPI du jour pour win_amd64/cp312, marqueurs évalués sur l’hôte du banc ; pas une installation. '
+                       'L’installation réelle du verrou est faite par la CI Windows.')}
 
 
 # --- Catalogue et synthèse --------------------------------------------------------
@@ -413,8 +421,16 @@ def collect_findings(results):
                          'detail': 'Paquets sans roue Windows : ' + ', '.join(f'{n}=={v}' for n, v, _ in net['compilation_requise']), 'fix': ''})
     if net.get('dependances_transitives_non_epinglees'):
         findings.append({'check': 'reseau:roues_windows', 'severity': 'mineur', 'path': 'jarvis/requirements*.txt',
-                         'detail': f"{net['dependances_transitives_non_epinglees']} dépendances transitives non épinglées : l’installation de la tour peut résoudre d’autres versions que celles testées.",
-                         'fix': 'Générer un fichier de contraintes Windows cp312 avec empreintes.'})
+                         'detail': f"{net['dependances_transitives_non_epinglees']} dépendances transitives ni épinglées ni verrouillées : "
+                                   "l’installation de la tour peut résoudre d’autres versions que celles testées. "
+                                   + ', '.join(net.get('non_verrouillees', [])[:12]),
+                         'fix': 'Regénérer les verrous Windows (tools/verrouiller_dependances.py, workflow du banc).'})
+    if (net.get('verrou_windows') or {}).get('nouvelles_versions_depuis_le_verrou'):
+        moved = net['verrou_windows']['nouvelles_versions_depuis_le_verrou']
+        findings.append({'check': 'reseau:roues_windows', 'severity': 'info', 'path': 'jarvis/locks',
+                         'detail': f'{len(moved)} paquet(s) ont une version plus récente que le verrou (le verrou reste installé tel quel) : '
+                                   + ', '.join(moved[:12]),
+                         'fix': 'Mettre à jour seulement après un nouveau passage du banc.'})
     return sorted(findings, key=lambda f: (SEVERITY_ORDER.get(f['severity'], 9), f['check'], str(f['path'])))
 
 

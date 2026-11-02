@@ -36,12 +36,34 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install the repository-pinned runtime (LangGraph and CAD)
-        run: python -m pip install -r jarvis/requirements.txt pytest==9.0.2
-      - name: Bench contracts
-        run: python -m unittest discover -s tests_ops -p test_banc_simulation.py -v
+      - name: Install the runtime (Windows - the hashed lock, exactly as the tower)
+        shell: bash
+        run: |
+          lock=jarvis/locks/windows-cp312-moteurs.txt
+          if [ "$RUNNER_OS" = "Windows" ] && [ -f "$lock" ]; then
+            python -m pip install --require-hashes --no-deps -r "$lock"
+            python -m pip check
+          else
+            python -m pip install -r jarvis/requirements.txt
+          fi
+          python -m pip install pytest==9.0.2
+      - name: Bench and lock contracts
+        shell: bash
+        run: |
+          python -m unittest discover -s tests_ops -p test_banc_simulation.py -v
+          python -m unittest discover -s tests_ops -p test_verrou_dependances.py -v
       - name: Run every simulated Jarvis action
         run: python tools/banc_preinstallation.py --reseau --output .bojart-audit/banc.json --markdown .bojart-audit/banc.md
+      - name: Install the Windows voice lock on top, then check the environment
+        if: runner.os == 'Windows' && hashFiles('jarvis/locks/windows-cp312-voice.txt') != ''
+        shell: bash
+        run: |
+          python -m pip install --require-hashes --no-deps -r jarvis/locks/windows-cp312-voice.txt
+          python -m pip check
+          python -c "import faster_whisper, ctranslate2; print('voix importable')"
+      - name: Resolve today's lock on this platform (nothing installed)
+        if: always()
+        run: python tools/verrouiller_dependances.py --sortie .bojart-audit/verrous --comparer
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -49,6 +71,7 @@ jobs:
           path: |
             .bojart-audit/banc.json
             .bojart-audit/banc.md
+            .bojart-audit/verrous/
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 30

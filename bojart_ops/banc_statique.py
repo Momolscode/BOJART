@@ -383,8 +383,19 @@ def check_requirement_pins(files, root=ROOT):
     return out
 
 
+def check_install_lock(files, root=ROOT):
+    """The tower must install the exact environment the bench tested: hashed Windows lock, up to date with the requirements."""
+    from bojart_ops import verrou_dependances
+    if not (Path(root) / 'jarvis').is_dir():
+        return []
+    return [finding('verrou_installation', p['gravite'], p['verrou'], p['detail'],
+                    'Regénérer sous Windows : python tools/verrouiller_dependances.py --sortie <dossier neuf> (workflow du banc).')
+            for p in verrou_dependances.verify(Path(root), 'windows')]
+
+
 CHECKS = {
     'dependances_epinglees': check_requirement_pins,
+    'verrou_installation': check_install_lock,
     'chemins_windows': lambda files, root: check_windows_paths(files),
     'scripts_cmd': check_cmd_scripts,
     'python_syntaxe': check_python_syntax,
