@@ -429,8 +429,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 45595,
-      "sha256": "0e4f15ed4c7e7bb7a87fe9fc561338879d1de90dcdec8e4ad013b11b74466deb"
+      "bytes": 46137,
+      "sha256": "6beb09e5c82ab2eec77518cbaed2a49c9bffa59b44be1898ff28cf3ff1956235"
     },
     {
       "path": "creative/CURRENT.md",
@@ -519,8 +519,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 16031,
-      "sha256": "0d1bdfa7b93e7bfe6af3096ea7cf2e50bfe428d86ec2b5652dc8c762591f5f97"
+      "bytes": 16956,
+      "sha256": "5e90ffd8d3fc3adaeb9c9c8466116a573ea60975fa188fda96db1e45820255aa"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -539,8 +539,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 12769,
-      "sha256": "1a86def90eec92154cca9bd1e9f9d772c4dc395f2cb0bf47501a06c3752e202d"
+      "bytes": 14933,
+      "sha256": "8604ceac6150f86f6bc353268be9213e30013a29381a549fc29955fa74b82b0c"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -1309,8 +1309,8 @@
     },
     {
       "path": "docs/research/bras-peintre-simulation-2026-11-02/README.md",
-      "bytes": 13493,
-      "sha256": "c90e991c9070d5464e4f314e6bf6222405753429bd14021dee551390d26290f6"
+      "bytes": 15238,
+      "sha256": "a34ff8de3055ddc2e775498040ab487fb4de0444d3088251ab7dc05d6936e03a"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",

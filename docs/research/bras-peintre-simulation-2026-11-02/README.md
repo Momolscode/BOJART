@@ -104,6 +104,21 @@ Visuels associés (rendus hors dépôt, reproductibles) :
 
 Hors de portée en trois semaines : mélange automatique des couleurs, détails sous 2–3 mm, relief, toile de 90 cm sans surveillance, copie indiscernable.
 
+## Bases open source réutilisables
+
+Question de l'utilisateur : existe-t-il des entraînements open source à réutiliser ? Oui, en partie. Mais aucun modèle pré-entraîné ne connaît notre bras, nos pinceaux et notre peinture : le dépôt réel doit toujours être mesuré sur place (semaine 1). Pages relues le 2 novembre 2026 ; les licences sont à confirmer dans chaque fichier `LICENSE` avant usage.
+
+| Brique | Ce qu'elle apporte | Licence | Usage proposé |
+|---|---|---|---|
+| FRIDA (CMU) | Pilote xArm et Franka, simulation différentiable, boucle photo, CoFRIDA (co-peinture) ; GPU NVIDIA 8 Go (16 Go pour entraîner CoFRIDA) | GPL-3.0 | Base de la chaîne bras-caméra-boucle, en dépendance séparée |
+| Spline-FRIDA | Geste d'artiste appris à partir de 20 à 200 tracés montrés, moins de 20 pour l'ajuster | Code annoncé, lien non trouvé | Voie « peindre à la manière de » |
+| LearningToPaint (ICCV 2019) | Planificateur image → touches, modèles téléchargeables | MIT | Essai comme planificateur, touches projetées sur nos pinceaux |
+| Stylized Neural Painting (CVPR 2021) | Rendus de touches huile et aquarelle pré-entraînés | CC BY-NC-SA 4.0 selon le README | À écarter pour un usage commercial |
+| LeRobot (Hugging Face) | Apprentissage par démonstration (télé-opération) | Apache-2.0 | Seulement si l'on apprend des gestes ; aucun modèle de peinture |
+| IMPASTO (mars 2026) | Dynamique de peinture à l'huile apprise, commande prédictive avec effort | Code non confirmé | Référence pour l'empâtement |
+
+Sources : `web-frida-github-20261102`, `web-spline-frida-20261102`, `web-learningtopaint-20261102`, `web-stylized-neural-painting-20261102`, `web-lerobot-20261102`, `web-impasto-20261102`.
+
 ## Limites
 
 - Le monde « physique » est lui-même un modèle. Le recalage ne prouve que la logique de la boucle. La peinture réelle (charge du pinceau, séchage, mélange, relief) demande les mesures G1.

@@ -253,6 +253,46 @@
     "raw_content_in_git": false
   },
   {
+    "source_id": "web-spline-frida-20261102",
+    "url": "https://arxiv.org/abs/2412.00597",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Spline-FRIDA (arXiv 2412.00597) : modèle de touche différentiable appris à partir de 20 à 200 tracés d'artiste par dessin (moins de 20 pour l'ajustement) ; code annoncé open source, lien non trouvé.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-learningtopaint-20261102",
+    "url": "https://github.com/megvii-research/ICCV2019-LearningToPaint",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "LearningToPaint (ICCV 2019) : licence MIT, modèles renderer.pkl et actor.pkl téléchargeables ; planificateur de touches sans robot.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-stylized-neural-painting-20261102",
+    "url": "https://github.com/jiupinjia/stylized-neural-painting",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Stylized Neural Painting (CVPR 2021) : renderers pré-entraînés huile, aquarelle, feutre, rubans ; README sous CC BY-NC-SA 4.0 (non commercial), barre latérale CC0 : incohérence à lever avant tout usage.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-lerobot-20261102",
+    "url": "https://awesome.ecosyste.ms/projects/github.com%2Fhuggingface%2Flerobot",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "Fiche ecosyste.ms de huggingface/lerobot : licence Apache-2.0, apprentissage par imitation et par renforcement ; aucun modèle de peinture.",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "web-impasto-20261102",
+    "url": "https://arxiv.org/abs/2603.29315",
+    "evidence": "public_web_page_read",
+    "observed_on": "2026-11-02",
+    "description": "IMPASTO (arXiv 2603.29315, mars 2026) : dynamique de peinture à l'huile apprise par auto-jeu et commande prédictive sur un bras 7 axes avec contrôle d'effort ; publication du code non confirmée (site impasto-robopainting.github.io).",
+    "raw_content_in_git": false
+  },
+  {
     "source_id": "painter-simulation-20261102",
     "path": "docs/evidence/painter-simulation-2026-11-02/summary.json",
     "evidence": "reproducible_host_simulation",
