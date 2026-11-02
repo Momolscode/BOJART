@@ -12,6 +12,7 @@ from core import Rejected, canonical
 from display_contracts import ROUTES, norm
 from control_tower import safe_id
 from jev_decider import JevDecider
+from sqlite_sessions import SQLiteSessions
 
 COMMANDS = {
     'model': ('Affiche le modèle à droite', 'Afficher le modèle sélectionné sur la vue création'),
@@ -80,7 +81,9 @@ class VoiceLease:
 
 
 class JarvisRuntime:
-    def __init__(self, server, decider=None):
+    def __init__(self, server, decider=None, *, reuse_connections=True, checkpoint_durability='exit'):
+        if checkpoint_durability not in ('sync', 'exit'):
+            raise ValueError('Unsupported checkpoint durability.')
         self.server = server
         self.store = server.store
         self.decider = decider or JevDecider()
@@ -89,6 +92,25 @@ class JarvisRuntime:
         self.lock = threading.RLock()
         self.graph = None
         self.connection = None
+        self.checkpoint_durability = checkpoint_durability
+        self._sessions = []
+        owners = [(self.store, self.store.dbpath, True, True),
+                  (server.display, server.display.path, False, False),
+                  (server.tower, server.tower.path, True, False)]
+        if any(getattr(owner, '_command_sessions', None) is not None for owner, *_ in owners):
+            raise Rejected('Un runtime possède déjà ces connexions. Fermez-le avant la reprise.')
+        if reuse_connections:
+            for owner, path, rows, foreign_keys in owners:
+                pool = SQLiteSessions(path, rows=rows, foreign_keys=foreign_keys)
+                owner._command_sessions = pool
+                self._sessions.append((owner, pool))
+        try:
+            self._initialize()
+        except BaseException:
+            self.close()
+            raise
+
+    def _initialize(self):
         with self.store.connect() as db:
             db.execute('''CREATE TABLE IF NOT EXISTS jarvis_turns (
                 request_id TEXT PRIMARY KEY, fingerprint TEXT NOT NULL, payload TEXT NOT NULL,
@@ -125,6 +147,11 @@ class JarvisRuntime:
     def close(self):
         with self.run_lock:
             if self.connection: self.connection.close(); self.connection = None
+            for owner, pool in self._sessions:
+                if getattr(owner, '_command_sessions', None) is pool:
+                    del owner._command_sessions
+                pool.close()
+            self._sessions.clear()
 
     def status(self):
         return {'schema':'bojart.jarvis.m07.v1', 'langgraph':self.graph_status,
@@ -259,7 +286,10 @@ class JarvisRuntime:
                 # Explicitly disable external tracing even when a host has global LangSmith settings.
                 from langsmith import tracing_context
                 with tracing_context(enabled=False):
-                    self.graph.invoke(state,{'configurable':{'thread_id':'boj-m06-'+request_id},'recursion_limit':12},durability='sync')
+                    # Recovery replays the independently committed business journal:
+                    # input, provider-pending marker, decision, plan and receipts.
+                    # Intermediate graph state is deliberately not a recovery source.
+                    self.graph.invoke(state,{'configurable':{'thread_id':'boj-m06-'+request_id},'recursion_limit':12},durability=self.checkpoint_durability)
             else:
                 state.update(self._route(state));state.update(self._guard(state))
                 if state['status']=='ACCEPTED':state.update(self._dispatch(state))

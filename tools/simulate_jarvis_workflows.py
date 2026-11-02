@@ -53,10 +53,13 @@ def stats(values):
 
 class RuntimeFixture:
     """Only server peripherals are fixtures. Routing, guards and SQL are real."""
-    def __init__(self):
-        self.tmp = tempfile.TemporaryDirectory(prefix='bojart-workflow-simulation-')
-        root = Path(self.tmp.name)
-        context = root/'context.json';context.write_text('{"data_kind":"synthetic_test_context"}', encoding='utf-8')
+    def __init__(self, state_root=None, runtime_options=None):
+        self.runtime_options = runtime_options or {}
+        self.tmp = tempfile.TemporaryDirectory(prefix='bojart-workflow-simulation-') if state_root is None else None
+        root = Path(self.tmp.name) if self.tmp else Path(state_root)
+        root.mkdir(parents=True, exist_ok=True)
+        context = root/'context.json'
+        if not context.exists():context.write_text('{"data_kind":"synthetic_test_context"}', encoding='utf-8')
         store = Store(root/'state', context)
         display = DisplayProposals(store)
         self.server = SimpleNamespace(store=store, display=display, tower=ControlTower(store, display),
@@ -68,7 +71,7 @@ class RuntimeFixture:
 
     def restart(self):
         if hasattr(self, 'runtime'):self.runtime.close()
-        self.runtime = JarvisRuntime(self.server, decider=JevDecider(enabled=False, key=''))
+        self.runtime = JarvisRuntime(self.server, decider=JevDecider(enabled=False, key=''), **self.runtime_options)
 
     def request(self, text='Montre les dossiers au centre', **kw):
         data = dict(request_id='test_'+uuid.uuid4().hex, client_id='fixture', project_id='BOJ-PILOTE-001',
@@ -86,7 +89,8 @@ class RuntimeFixture:
         with self.server.tower.db() as db:return db.execute('SELECT COUNT(*) FROM commands').fetchone()[0]
 
     def close(self):
-        self.runtime.close();self.server.events.close();self.tmp.cleanup()
+        self.runtime.close();self.server.events.close()
+        if self.tmp:self.tmp.cleanup()
 
     def __enter__(self):return self
     def __exit__(self, *args):self.close()

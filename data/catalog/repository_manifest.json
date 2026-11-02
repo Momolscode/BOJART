@@ -39,8 +39,8 @@
     },
     {
       "path": ".github/workflows/workflow-simulations.yml",
-      "bytes": 1981,
-      "sha256": "23b8a4fa53564e9d9f670801a0258c2782d7489b51c9595c2a2309d693da2f1b"
+      "bytes": 3162,
+      "sha256": "d1ea5150b2cdb8fd2f8e2555a68f0d9493981b4f1463421948d1099deacd5e94"
     },
     {
       "path": ".gitignore",
@@ -1199,13 +1199,13 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/control_tower.py",
-      "bytes": 11659,
-      "sha256": "f610deef425543abdbccb8a4a072b41799d324a2107c04ddbb1139f4098ed16d"
+      "bytes": 11841,
+      "sha256": "17ac8908f2efe6b2a92d63cf061c8f6a03915194cfaa7261ca15ef5ffafdc623"
     },
     {
       "path": "jarvis/apps/jarvis/app/core.py",
-      "bytes": 23038,
-      "sha256": "ff79558a2a58f4321b54185783910f6dcfd874ec432d5ff49fe44611e8396eb1"
+      "bytes": 23294,
+      "sha256": "fa8972dd58cf6e1481af93fb17c8667a132588e59ed2b4efe423ebc68144bded"
     },
     {
       "path": "jarvis/apps/jarvis/app/diagnostics.py",
@@ -1219,8 +1219,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/display_contracts.py",
-      "bytes": 6877,
-      "sha256": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c"
+      "bytes": 7059,
+      "sha256": "e07bf9b75207655b8b7d7b8fdb4fcf7043cfe519058ecc391a792f3e85e7b1f6"
     },
     {
       "path": "jarvis/apps/jarvis/app/fleet_simulation.py",
@@ -1259,8 +1259,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/jarvis_runtime.py",
-      "bytes": 21366,
-      "sha256": "37c5ea4ace564634664eaa1f2ff08e40bdd3452eaad2996340b3da1767657e57"
+      "bytes": 22993,
+      "sha256": "7e10acbb2ff665a8a7f0f1cf3e01ac7f0ad03cfda1a5b1ba3ea57425bdba52d4"
     },
     {
       "path": "jarvis/apps/jarvis/app/jev_decider.py",
@@ -1311,6 +1311,11 @@
       "path": "jarvis/apps/jarvis/app/server.py",
       "bytes": 9188,
       "sha256": "8c677cdf53a95282567a965f498bec154c57d0fbf81b1fc8ef252327db4b9ca2"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/sqlite_sessions.py",
+      "bytes": 4257,
+      "sha256": "4d452168f2edc4c93a65a0bfaebcf7beaa3e2c22d0838542444d5143b9448206"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
@@ -4258,6 +4263,11 @@
       "sha256": "679d6b1087140f62a7ce7e63c2771342b4b139f9df42364e23e276bc00d0200f"
     },
     {
+      "path": "tests_workflows/test_latency_recovery.py",
+      "bytes": 10491,
+      "sha256": "1449501dc00f1e5d0ed1ca58d074fe2fe093af9ba2ac3fd259057b0801c2a4c3"
+    },
+    {
       "path": "tools/audit_repository.py",
       "bytes": 937,
       "sha256": "c17763734617bb272b412bb94913aeb31dde88325bec57a419e9994846dda118"
@@ -4266,6 +4276,11 @@
       "path": "tools/benchmark_jarvis.py",
       "bytes": 1990,
       "sha256": "fddb1f1277bf0ee974bbf60562dd8f6d016a8316a5cb6df26024d1a680bd7647"
+    },
+    {
+      "path": "tools/benchmark_jarvis_latency.py",
+      "bytes": 8807,
+      "sha256": "23dba645a72e35c50d58c1efd5f73cedcf044e003891199e6a8aafb8f70802b8"
     },
     {
       "path": "tools/check_startup.py",
@@ -4339,8 +4354,8 @@
     },
     {
       "path": "tools/simulate_jarvis_workflows.py",
-      "bytes": 15222,
-      "sha256": "4c151eb2aba48f4b17698a91baded6235f72b8fb7125144a7c24ebf93e838bbe"
+      "bytes": 15504,
+      "sha256": "e73f8531294efbb184f585123b692d5adb596be4295064879af7266b7ac2b773"
     },
     {
       "path": "tools/start_jarvis.py",

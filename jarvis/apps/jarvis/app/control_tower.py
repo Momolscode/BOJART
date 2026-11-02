@@ -46,6 +46,11 @@ class ControlTower:
 
     @contextmanager
     def db(self):
+        sessions = getattr(self, '_command_sessions', None)
+        if sessions is not None:
+            with sessions.connect() as con:
+                yield con
+            return
         with closing(sqlite3.connect(self.path, timeout=10)) as con:
             con.row_factory = sqlite3.Row
             with con:

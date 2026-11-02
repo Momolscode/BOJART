@@ -36,6 +36,11 @@ class DisplayProposals:
             con.execute('CREATE TABLE IF NOT EXISTS proposal_invalidations (request_id TEXT PRIMARY KEY,reason TEXT NOT NULL)')
     @contextmanager
     def db(self):
+        sessions = getattr(self, '_command_sessions', None)
+        if sessions is not None:
+            with sessions.connect() as con:
+                yield con
+            return
         # Transactions and resource lifetime are independent in sqlite3.
         with closing(sqlite3.connect(self.path, timeout=10)) as con:
             with con:

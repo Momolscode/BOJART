@@ -176,11 +176,17 @@ class Store:
 
     @contextmanager
     def connect(self):
-        """Commit/rollback a short transaction, then always close the connection.
+        """Commit/rollback a short transaction and expire its checkout.
 
         SQLite's own context manager does not close its resource. Keep this
-        separate from transaction control so exceptions still roll back.
+        separate from transaction control so exceptions still roll back. A live
+        runtime may own a bounded idle-handle cache; standalone callers close.
         """
+        sessions = getattr(self, '_command_sessions', None)
+        if sessions is not None:
+            with sessions.connect() as db:
+                yield db
+            return
         db = sqlite3.connect(self.dbpath, timeout=10)
         try:
             db.row_factory = sqlite3.Row

@@ -7,6 +7,7 @@ on:
       - 'jarvis/fixtures/**'
       - 'jarvis/requirements-orchestration.txt'
       - 'tools/simulate_jarvis_workflows.py'
+      - 'tools/benchmark_jarvis_latency.py'
       - 'tests_workflows/**'
       - 'data/knowledge/**'
       - 'docs/COMMANDES_DASHBOARD.md'
@@ -18,7 +19,7 @@ env:
   LANGSMITH_TRACING: 'false'
 jobs:
   simulations:
-    timeout-minutes: 15
+    timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
@@ -29,18 +30,33 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Checkout pinned latency baseline
+        uses: actions/checkout@v4
+        with:
+          ref: b49101e3acad6257e2d1a610dac5fb95ec0a8bfb
+          path: .bojart-audit/baseline
       - name: Rules fallback and synthetic planner contracts
         run: python -m unittest discover -s tests_workflows -v
       - name: Measure rules fallback
         run: python tools/simulate_jarvis_workflows.py --output .bojart-audit/workflows-rules.json
+      - name: Compare rules latency on the same host
+        run: python tools/benchmark_jarvis_latency.py --baseline .bojart-audit/baseline --output .bojart-audit/latency-rules.json --expected-engine missing_dependency
+      - name: Existing connection and HTTP boundary contracts
+        run: |
+          python -m unittest discover -s jarvis/tests -p 'test_connection_lifetime.py' -v
+          python -m unittest discover -s tests -p 'test_http_boundaries.py' -v
       - name: Install repository-pinned orchestration dependencies
         run: python -m pip install -r jarvis/requirements-orchestration.txt
       - name: LangGraph contracts
         run: python -m unittest discover -s tests_workflows -v
+      - name: Existing orchestration, scenes and backup restoration
+        run: python -m unittest discover -s jarvis/tests -p 'test_jarvis_m0[67].py' -v
       - name: Measure persisted LangGraph
         run: python tools/simulate_jarvis_workflows.py --output .bojart-audit/workflows-langgraph.json
       - name: Check the engine actually used
         run: python -c "import json; r=json.load(open('.bojart-audit/workflows-langgraph.json',encoding='utf-8')); assert r['transcripts']['engine']=='sqlite_ready'"
+      - name: Compare persisted LangGraph latency on the same host
+        run: python tools/benchmark_jarvis_latency.py --baseline .bojart-audit/baseline --output .bojart-audit/latency-langgraph.json --expected-engine sqlite_ready
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -48,6 +64,8 @@ jobs:
           path: |
             .bojart-audit/workflows-rules.json
             .bojart-audit/workflows-langgraph.json
+            .bojart-audit/latency-rules.json
+            .bojart-audit/latency-langgraph.json
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 30
