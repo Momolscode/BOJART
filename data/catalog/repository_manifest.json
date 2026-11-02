@@ -389,13 +389,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12500,
-      "sha256": "3cef20902a3566394ad51c644734e2204861be17c75021c43e0d98cae27d0daf"
+      "bytes": 12587,
+      "sha256": "f23b83396762e38d1fd21a7d542b2f06f08751073edfd57ac07490eb7082be0c"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 43545,
-      "sha256": "d227d97a85d310810f947ffde54db8f3117a4cd7f5f3d6d69e74a5ff289e820a"
+      "bytes": 43969,
+      "sha256": "71320d4a34d280d387412ba821785de07d3c8e43ed17f80c1712edf1fd7d7efa"
     },
     {
       "path": "creative/CURRENT.md",
@@ -574,8 +574,8 @@
     },
     {
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
-      "bytes": 8594,
-      "sha256": "d90eb708a892933cafdc544cf4542f781ace7f85d310a03b15bba8601d55f464"
+      "bytes": 8805,
+      "sha256": "c5257ccc90d20545d73b8771bfafc98494270171cef265d8508a8db7c11d94a3"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -614,8 +614,8 @@
     },
     {
       "path": "docs/INSTALLATION.md",
-      "bytes": 3584,
-      "sha256": "ee1726014a546a03668cd431cb3791c8b307293b6db6a664f478c93a61633feb"
+      "bytes": 3939,
+      "sha256": "6c11f048fe595cec930a3d757e2def8fe473915e0da77ec7a18c2fd796bd8222"
     },
     {
       "path": "docs/OPERATIONS.md",
@@ -779,8 +779,8 @@
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
-      "bytes": 8028,
-      "sha256": "0b4b48775d6222b0fe25b790c8390b16f65cc1ec6cff44618053f22ad3501f1d"
+      "bytes": 8834,
+      "sha256": "ff7455389dceca0f674e632b3b1bac691dd703c7e5cecb62a0c162add31acb05"
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",
@@ -2521,6 +2521,16 @@
       "path": "jarvis/labs/planning/prototype/test_planner.py",
       "bytes": 4333,
       "sha256": "19667899f5a7b3a5ff2146d062157ceed919429dafcb51d0c8d470f83f1dda97"
+    },
+    {
+      "path": "jarvis/locks/windows-cp312-moteurs.txt",
+      "bytes": 9083,
+      "sha256": "c114be5cbbf5f99b2eb23df648c9bbc0fc3e8657eabf1f2cd8d905895b12eafa"
+    },
+    {
+      "path": "jarvis/locks/windows-cp312-voice.txt",
+      "bytes": 2833,
+      "sha256": "7ccd85ff91321f277099e7c4fb2f2e28c1a457659723fed013f216785bd1491d"
     },
     {
       "path": "jarvis/requirements-orchestration.txt",

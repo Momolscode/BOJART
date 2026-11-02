@@ -61,6 +61,7 @@ Constats **conservés pour décision ou recette** :
 
 - Générer : `python tools/verrouiller_dependances.py --sortie <dossier neuf>`, **sous Windows** (le workflow du banc le fait et joint le résultat à ses rapports). Depuis Linux, pip évalue les marqueurs `sys_platform` de l'hôte et oublierait des dépendances propres à Windows.
 - Vérifier hors ligne : `python tools/verrouiller_dependances.py --verifier`. Le banc fait le même contrôle (`statique:verrou_installation`) : verrou absent, périmé après une modification des requirements, version principale différente ou empreinte manquante.
+- État au 2 novembre 2026 : verrous générés par la CI Windows (Python 3.12.10, 82 paquets moteurs, 24 voix) ; preuve dans `docs/evidence/banc-preinstallation-2026-11-02/`. Pas encore installés sur la tour.
 - Mettre à jour : changer un requirement rend le verrou périmé. Le regénérer sous Windows, puis le valider par un passage vert du banc avant de l'installer sur la tour.
 
 ## Limites

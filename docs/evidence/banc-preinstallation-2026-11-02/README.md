@@ -52,7 +52,7 @@ Appels locaux sur l'hôte de test, sans rendu ni micro. Ce ne sont ni des latenc
 - Navigateur : `test_preview_m03` et `test_studio_browser` visent `/usr/bin/chromium`, introuvable sous Windows.
 - Site Atelier et vitrine Studio : `logo.webp`, `body.ttf`, `display.ttf` exclus du dépôt.
 - 37 fichiers de tests et d'outils hérités lisent ou écrivent du texte sans encodage : mineur tant que les lanceurs gardent `PYTHONUTF8=1`.
-- 83 dépendances transitives non épinglées pour Windows.
+- 83 dépendances transitives non épinglées pour Windows. Traité : verrous Windows avec empreintes dans `jarvis/locks/` (CI ci-dessous).
 - La PR #15 épinglait `trimesh==5.2.0` contre `trimesh==4.11.1` sur `main` : installation conjointe impossible. Corrigé sur la PR #15 (`f42e3e2`, alignement sur 4.11.1) ; le contrôle `dependances_epinglees` du banc ne trouve plus de conflit sur sa tête.
 
 ## CI
@@ -65,6 +65,7 @@ Le workflow `Jarvis pre-installation bench` exécute le même banc sur `ubuntu-l
 
 - Windows après correction, au commit `678da4f` : [ci-windows-678da4f.json](ci-windows-678da4f.json), artefact zip SHA-256 `0d667dececbf613e2d7487ac0d5c32523ce882976c8b2b1ddc5d9cd370ec7fd7`. **Réussi : 954 tests sans régression, 0 bloquant, 16/16 scénarios HTTP** (1 réserve de charge), 7 scénarios et 5 suites en cp1252 natif sans défaut d'encodage, 96 roues sans compilation. Actions : 12 simulées OK, 18 partielles, 6 non codées ; la différence avec Linux vient de Playwright, absent du runner Windows (tests navigateur non exécutés, explicitement listés). Temps HTTP de ce passage : dashboard atelier 226 ms au dépôt et 300 ms à l'accusé, trois dashboards 758 ms, socle CAO 2,8 s ; ils varient fortement d'un runner partagé à l'autre et ne préjugent pas de la tour.
 - Linux au commit `678da4f` : réussi.
+- Verrous Windows : générés nativement par le passage `41419772446` au commit `1dda9c7` (Windows Server 2025, Python 3.12.10, pip 26.2.2), artefact zip SHA-256 `f4578867d4e430395c5cc1290867ba75f681dc6aa68f4b518a9f02f45b84c48f`, fichiers `verrous/` copiés tels quels dans `jarvis/locks/`. Profil moteurs : 82 paquets ; profil voix : 24, dont `colorama`, propre à Windows et absent d'une résolution Linux. Chaque requirement source porte la même empreinte que dans le dépôt ; `--verifier` ne signale rien. Mêmes versions que la résolution Linux pour les moteurs. Vérifié aussi sous Linux avec pip 24.0 : installation `--require-hashes --no-deps` puis `pip check` réussis, imports CAO, LangGraph et faster-whisper.
 
 ## Limites
 
