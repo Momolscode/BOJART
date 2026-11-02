@@ -68,9 +68,24 @@ def _accumulate_calibration(table, before: Canvas, after: Canvas, stroke):
             table[(g, o)] = table.get((g, o), 0.0) + sse
 
 
+def unpainted_fraction(canvas: Canvas, target: Canvas, background=(1.0, 1.0, 1.0), tol=0.05):
+    """Part de la toile encore vierge là où la cible demande de la peinture."""
+    n = canvas.width * canvas.height
+    bare = 0
+    for i in range(n):
+        c = canvas.data[3 * i:3 * i + 3]; t = target.data[3 * i:3 * i + 3]
+        if max(abs(a - b) for a, b in zip(c, background)) < tol and max(abs(a - b) for a, b in zip(t, background)) >= tol:
+            bare += 1
+    return bare / n
+
+
 def run_painting_loop(target: Canvas, style: dict, arm: dict, rounds=4, strokes_per_round=60,
                       calibration_strokes=4, seed=0, hidden=HIDDEN_WORLD, believed=NOMINAL,
-                      learn=True, episodes_path=None):
+                      learn=True, episodes_path=None, until_converged=False, max_strokes=3000,
+                      min_relative_gain=0.02, max_unpainted=0.005):
+    """`until_converged` : continuer par lots tant que la toile a des zones vierges ou que
+    l'erreur baisse d'au moins `min_relative_gain` par lot, dans la limite de `max_strokes`.
+    Sinon, exactement `rounds` lots. La progression du gros au fin suit les lots prévus."""
     rng = random.Random(f'{seed}:plan')
     world_rng = random.Random(f'{seed}:world')
     rep = arm.get('repeatability_mm') or 2.0
@@ -83,8 +98,12 @@ def run_painting_loop(target: Canvas, style: dict, arm: dict, rounds=4, strokes_
     episodes = open(episodes_path, 'w', encoding='utf-8') if episodes_path else None
     try:
         obs = world.observe()
-        for r in range(rounds):
-            plan = planner.plan(obs, model, strokes_per_round, r / rounds, (r + 1) / rounds)
+        r, stop_reason = 0, 'rounds'
+        while True:
+            if not until_converged and r >= rounds:
+                break
+            p0, p1 = min(1.0, r / rounds), min(1.0, (r + 1) / rounds)
+            plan = planner.plan(obs, model, strokes_per_round, p0, p1)
             for i, s in enumerate(plan):
                 isolate = learn and i < calibration_strokes
                 before = world.observe() if isolate else None
@@ -100,15 +119,28 @@ def run_painting_loop(target: Canvas, style: dict, arm: dict, rounds=4, strokes_
                 g, o = min(table, key=table.get)
                 model = BrushModel(g, o, model.edge_mm)
             obs = world.observe()
-            history.append({'round': r + 1, 'strokes': len(plan), 'loss': round(world.canvas.loss(target), 6),
-                            'believed_model': model.as_dict()})
+            loss = world.canvas.loss(target)
+            bare = unpainted_fraction(world.canvas, target)
+            history.append({'round': r + 1, 'strokes': len(plan), 'loss': round(loss, 6),
+                            'unpainted_fraction': round(bare, 4), 'believed_model': model.as_dict()})
+            r += 1
+            if until_converged:
+                prev = history[-2]['loss'] if len(history) > 1 else Canvas(target.width, target.height, target.mm_per_px).loss(target)
+                gain = (prev - loss) / prev if prev > 0 else 0.0
+                if not plan:
+                    stop_reason = 'aucune touche utile'; break
+                if len(all_strokes) >= max_strokes:
+                    stop_reason = 'max_strokes'; break
+                if r >= rounds and bare <= max_unpainted and gain < min_relative_gain:
+                    stop_reason = 'convergence'; break
     finally:
         if episodes:
             episodes.close()
     return {
         'final_loss': history[-1]['loss'] if history else world.canvas.loss(target),
         'blank_loss': round(Canvas(target.width, target.height, target.mm_per_px).loss(target), 6),
-        'rounds': history, 'strokes': len(all_strokes),
+        'rounds': history, 'strokes': len(all_strokes), 'stop_reason': stop_reason,
+        'unpainted_fraction': history[-1]['unpainted_fraction'] if history else 1.0,
         'hidden_model': hidden.as_dict(), 'learned_model': model.as_dict(), 'learning': learn,
         'position_sigma_mm': round(pos_sigma, 3),
         'execution_time_estimate_s': round(execution_time_s(all_strokes, arm)),

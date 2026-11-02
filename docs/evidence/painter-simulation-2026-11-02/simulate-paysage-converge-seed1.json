@@ -1,0 +1,966 @@
+{
+  "command": "simulate",
+  "arm": "ufactory_xarm6",
+  "target": {
+    "kind": "synthetic",
+    "name": "paysage"
+  },
+  "grid_px": [
+    90,
+    65
+  ],
+  "mm_per_px": 10.0,
+  "rounds": 4,
+  "strokes_per_round": 50,
+  "seed": 1,
+  "styles": {
+    "touches_courtes": {
+      "closed_loop_learning": {
+        "final_loss": 0.000392,
+        "blank_loss": 0.269117,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 50,
+            "loss": 0.166607,
+            "unpainted_fraction": 0.7779,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 2,
+            "strokes": 50,
+            "loss": 0.10206,
+            "unpainted_fraction": 0.6354,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 3,
+            "strokes": 50,
+            "loss": 0.068906,
+            "unpainted_fraction": 0.573,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 4,
+            "strokes": 50,
+            "loss": 0.053959,
+            "unpainted_fraction": 0.5263,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 5,
+            "strokes": 50,
+            "loss": 0.045292,
+            "unpainted_fraction": 0.4728,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 6,
+            "strokes": 50,
+            "loss": 0.038522,
+            "unpainted_fraction": 0.4051,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 7,
+            "strokes": 50,
+            "loss": 0.032839,
+            "unpainted_fraction": 0.3296,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 8,
+            "strokes": 50,
+            "loss": 0.028051,
+            "unpainted_fraction": 0.2737,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 9,
+            "strokes": 50,
+            "loss": 0.024053,
+            "unpainted_fraction": 0.2203,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 10,
+            "strokes": 50,
+            "loss": 0.020681,
+            "unpainted_fraction": 0.1752,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 11,
+            "strokes": 50,
+            "loss": 0.017623,
+            "unpainted_fraction": 0.1308,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 12,
+            "strokes": 50,
+            "loss": 0.014968,
+            "unpainted_fraction": 0.0971,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 13,
+            "strokes": 50,
+            "loss": 0.01252,
+            "unpainted_fraction": 0.0617,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 14,
+            "strokes": 50,
+            "loss": 0.010559,
+            "unpainted_fraction": 0.0385,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 15,
+            "strokes": 50,
+            "loss": 0.008862,
+            "unpainted_fraction": 0.0227,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 16,
+            "strokes": 50,
+            "loss": 0.007461,
+            "unpainted_fraction": 0.0156,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 17,
+            "strokes": 50,
+            "loss": 0.006271,
+            "unpainted_fraction": 0.008,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 18,
+            "strokes": 50,
+            "loss": 0.005306,
+            "unpainted_fraction": 0.0046,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 19,
+            "strokes": 50,
+            "loss": 0.004503,
+            "unpainted_fraction": 0.0027,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 20,
+            "strokes": 50,
+            "loss": 0.003847,
+            "unpainted_fraction": 0.0015,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 21,
+            "strokes": 50,
+            "loss": 0.00331,
+            "unpainted_fraction": 0.0005,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 22,
+            "strokes": 50,
+            "loss": 0.002851,
+            "unpainted_fraction": 0.0002,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 23,
+            "strokes": 50,
+            "loss": 0.002449,
+            "unpainted_fraction": 0.0002,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 24,
+            "strokes": 50,
+            "loss": 0.002138,
+            "unpainted_fraction": 0.0002,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 25,
+            "strokes": 50,
+            "loss": 0.00184,
+            "unpainted_fraction": 0.0002,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 26,
+            "strokes": 50,
+            "loss": 0.001593,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 27,
+            "strokes": 50,
+            "loss": 0.001397,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 28,
+            "strokes": 50,
+            "loss": 0.001249,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 29,
+            "strokes": 50,
+            "loss": 0.001116,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 30,
+            "strokes": 50,
+            "loss": 0.001012,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 31,
+            "strokes": 50,
+            "loss": 0.000913,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 32,
+            "strokes": 50,
+            "loss": 0.000837,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 33,
+            "strokes": 50,
+            "loss": 0.000762,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 34,
+            "strokes": 50,
+            "loss": 0.000708,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 35,
+            "strokes": 50,
+            "loss": 0.00067,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 36,
+            "strokes": 50,
+            "loss": 0.000631,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 37,
+            "strokes": 50,
+            "loss": 0.000601,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 38,
+            "strokes": 50,
+            "loss": 0.000557,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 39,
+            "strokes": 49,
+            "loss": 0.000534,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 40,
+            "strokes": 50,
+            "loss": 0.000516,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 41,
+            "strokes": 50,
+            "loss": 0.00049,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 42,
+            "strokes": 50,
+            "loss": 0.000475,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 43,
+            "strokes": 50,
+            "loss": 0.000462,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 44,
+            "strokes": 50,
+            "loss": 0.000451,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 45,
+            "strokes": 50,
+            "loss": 0.00044,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 46,
+            "strokes": 50,
+            "loss": 0.000423,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 47,
+            "strokes": 50,
+            "loss": 0.000408,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 48,
+            "strokes": 50,
+            "loss": 0.000398,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 49,
+            "strokes": 50,
+            "loss": 0.000392,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 2449,
+        "stop_reason": "convergence",
+        "unpainted_fraction": 0.0,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.2,
+          "opacity": 0.7,
+          "edge_mm": 6.0
+        },
+        "learning": true,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 9484,
+        "palette": [
+          [
+            0.586,
+            0.726,
+            0.95
+          ],
+          [
+            0.35,
+            0.25,
+            0.15
+          ],
+          [
+            0.98,
+            0.78,
+            0.25
+          ],
+          [
+            0.392,
+            0.345,
+            0.18
+          ],
+          [
+            0.651,
+            0.772,
+            0.95
+          ],
+          [
+            0.4,
+            0.55,
+            0.75
+          ],
+          [
+            0.265,
+            0.346,
+            0.18
+          ],
+          [
+            0.713,
+            0.816,
+            0.95
+          ]
+        ],
+        "psnr_db": 34.07
+      }
+    },
+    "reproduction": {
+      "closed_loop_learning": {
+        "final_loss": 0.000279,
+        "blank_loss": 0.269117,
+        "rounds": [
+          {
+            "round": 1,
+            "strokes": 50,
+            "loss": 0.038944,
+            "unpainted_fraction": 0.4046,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 2,
+            "strokes": 50,
+            "loss": 0.0155,
+            "unpainted_fraction": 0.1046,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 3,
+            "strokes": 50,
+            "loss": 0.007403,
+            "unpainted_fraction": 0.0178,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 4,
+            "strokes": 50,
+            "loss": 0.004664,
+            "unpainted_fraction": 0.0072,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 5,
+            "strokes": 50,
+            "loss": 0.003526,
+            "unpainted_fraction": 0.0027,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 6,
+            "strokes": 50,
+            "loss": 0.002706,
+            "unpainted_fraction": 0.0012,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 7,
+            "strokes": 50,
+            "loss": 0.002206,
+            "unpainted_fraction": 0.0005,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 8,
+            "strokes": 50,
+            "loss": 0.001724,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 9,
+            "strokes": 50,
+            "loss": 0.001414,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 10,
+            "strokes": 50,
+            "loss": 0.001169,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 11,
+            "strokes": 50,
+            "loss": 0.000991,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 12,
+            "strokes": 50,
+            "loss": 0.000847,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 13,
+            "strokes": 50,
+            "loss": 0.000721,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 14,
+            "strokes": 50,
+            "loss": 0.000634,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 15,
+            "strokes": 50,
+            "loss": 0.000557,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 16,
+            "strokes": 50,
+            "loss": 0.000484,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 17,
+            "strokes": 50,
+            "loss": 0.000439,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 18,
+            "strokes": 50,
+            "loss": 0.000404,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 19,
+            "strokes": 50,
+            "loss": 0.00038,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 20,
+            "strokes": 50,
+            "loss": 0.000358,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 21,
+            "strokes": 50,
+            "loss": 0.000348,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 22,
+            "strokes": 50,
+            "loss": 0.000324,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 23,
+            "strokes": 50,
+            "loss": 0.000306,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 24,
+            "strokes": 50,
+            "loss": 0.000297,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 25,
+            "strokes": 50,
+            "loss": 0.000282,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          },
+          {
+            "round": 26,
+            "strokes": 50,
+            "loss": 0.000279,
+            "unpainted_fraction": 0.0,
+            "believed_model": {
+              "width_gain": 1.2,
+              "opacity": 0.7,
+              "edge_mm": 6.0
+            }
+          }
+        ],
+        "strokes": 1300,
+        "stop_reason": "convergence",
+        "unpainted_fraction": 0.0,
+        "hidden_model": {
+          "width_gain": 1.2,
+          "opacity": 0.72,
+          "edge_mm": 6.0
+        },
+        "learned_model": {
+          "width_gain": 1.2,
+          "opacity": 0.7,
+          "edge_mm": 6.0
+        },
+        "learning": true,
+        "position_sigma_mm": 0.596,
+        "execution_time_estimate_s": 6365,
+        "palette": null,
+        "psnr_db": 35.54
+      }
+    }
+  },
+  "reach": {
+    "arm": "ufactory_xarm6",
+    "known": true,
+    "canvas_mm": [
+      900,
+      650
+    ],
+    "usable_reach_mm": 595,
+    "coverage_edge": 0.663,
+    "coverage_overhead": 0.987,
+    "placements_estimate": 3,
+    "assumptions": "sphère de portée × marge, épaule 150 mm (bord) ou 300 mm (surplomb) au-dessus du plan, rayon mort 20 %"
+  },
+  "runtime": {
+    "seconds": 25.73,
+    "python": "3.13.18",
+    "platform": "Linux",
+    "fingerprints": {
+      "bojart_painter/arms.py": "9f7a60bba19e83ff5a76a0b940f49f192a1ec12781c3eec5494e1938c99e8493",
+      "bojart_painter/canvas.py": "7801661034bb1900e8bd3ba17a714d20c4d7420fd3ded35ebdd1b83f6b5ed422",
+      "bojart_painter/coupon.py": "441a0ea64e4b0d6473a0b1e811ab194c8a83f1c27eb2a1cc60642f7e1a7ca7a4",
+      "bojart_painter/loop.py": "b021f1bfc8230438678a97fd3025ee38e7640fc09afc6bafa35b9e1ce2045e4a",
+      "bojart_painter/planner.py": "dd8a4cb430f3efa9cb53563ace27f6d116d3a4130f7c09368fcf3990bafe23e1",
+      "bojart_painter/targets.py": "e4110c6e65988c38ca0fad06ce2973f163ec73650098648199012d1518945676",
+      "bojart_painter/__main__.py": "44f8dbdf4f66105e920fd0cb9067abd966e1e405246e273c1007aed826eb1e85",
+      "configs/painter/arms.json": "8be12cc5143764aaa722f0f7db89e7890abf66feb50cac15cab85d07b4f40e42",
+      "configs/painter/styles.json": "1758b6e7ad09b9f45371e2691aa56b4fa29085f23aeecc4a4ff67bbfa439f4b0"
+    },
+    "limits": "Simulation logicielle ; aucun bras, pinceau, peinture ni coupon réel mesuré."
+  }
+}

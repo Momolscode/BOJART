@@ -53,7 +53,7 @@ Python standard, sans dépendance ni GPU. Il ne pilote aucun robot.
 ```bash
 python -m bojart_painter arms --output rapport-bras.json
 python -m bojart_painter simulate --target synthetic:paysage --style reproduction aplats_geometriques --compare --save-ppm hors-git/
-python -m bojart_painter simulate --target ppm:/chemin/oeuvre-domaine-public.ppm --style reproduction --episodes hors-git/episodes.jsonl
+python -m bojart_painter simulate --target ppm:/chemin/oeuvre-domaine-public.ppm --style reproduction --until-converged --episodes hors-git/episodes.jsonl
 python -m bojart_painter coupon --arm agilex_piper --trials 59
 python -m unittest discover -s tests_painter -v
 ```
@@ -72,7 +72,7 @@ Résultats (3 graines, 200 touches, toile 90 × 65 cm à 10 mm/pixel) :
 - Le recalage retrouve le dépôt caché : gain 1,2 et opacité 0,70–0,75, dans tous les cas.
 - Boucle fermée avec recalage contre plan unique en boucle ouverte : erreur plus basse 3/3 sur paysage/reproduction (−24 %), paysage/aplats et composition/aplats. Sur composition/reproduction, aucune différence nette (1/3).
 - Le recalage pèse surtout sur les aplats larges et opaques ; pour des touches fines, la replanification compense déjà une bonne part de l'erreur.
-- Le style « touches courtes » épuise le budget de 200 touches avant le ciel : la durée d'exécution et le nombre de touches sont de vraies contraintes artistiques.
+- Avec un budget fixe de 200 touches, le style « touches courtes » s'arrêtait avant le ciel. L'option `--until-converged` continue désormais par lots tant qu'il reste de la toile vierge ou que l'erreur baisse d'au moins 2 % par lot (plafond `--max-strokes`). Sur le paysage, graine 1 : touches courtes 2 449 touches, 0 % de toile vierge, PSNR 34,1 dB, environ 2 h 38 de bras estimées ; reproduction 1 300 touches, PSNR 35,5 dB, environ 1 h 46. Rapport : `simulate-paysage-converge-seed1.json`.
 
 ## Limites
 

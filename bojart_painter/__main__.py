@@ -77,7 +77,8 @@ def cmd_simulate(a):
             out['styles'][name] = {k: _clean(v, a.save_ppm, f'{name}-{k}') for k, v in res.items()}
         else:
             res = run_painting_loop(target, styles[name], arm, a.rounds, a.strokes_per_round, seed=a.seed,
-                                    episodes_path=a.episodes)
+                                    episodes_path=a.episodes, until_converged=a.until_converged,
+                                    max_strokes=a.max_strokes)
             out['styles'][name] = {'closed_loop_learning': _clean(res, a.save_ppm, name)}
     return out
 
@@ -109,6 +110,9 @@ def main(argv=None):
             s.add_argument('--mm-per-px', type=float, default=10.0)
             s.add_argument('--rounds', type=int, default=4); s.add_argument('--strokes-per-round', type=int, default=50)
             s.add_argument('--compare', action='store_true', help='comparer apprentissage, sans apprentissage et boucle ouverte')
+            s.add_argument('--until-converged', action='store_true',
+                           help="continuer jusqu'à couvrir la toile et stabiliser l'erreur")
+            s.add_argument('--max-strokes', type=int, default=3000)
             s.add_argument('--save-ppm', help='dossier hors Git pour les rendus PPM')
             s.add_argument('--episodes', help='journal JSONL des touches (hors Git)')
     a = p.parse_args(argv)

@@ -39,6 +39,15 @@ class PainterTests(unittest.TestCase):
         self.assertAlmostEqual(a['learned_model']['width_gain'], HIDDEN_WORLD.width_gain, delta=0.1)
         self.assertAlmostEqual(a['learned_model']['opacity'], HIDDEN_WORLD.opacity, delta=0.1)
 
+    def test_until_converged_leaves_no_bare_canvas(self):
+        res = run_painting_loop(self.target, STYLES['touches_courtes'], self.arms['ufactory_xarm6'], rounds=2,
+                                strokes_per_round=20, seed=2, learn=False, until_converged=True, max_strokes=1500)
+        self.assertEqual(res['stop_reason'], 'convergence')
+        self.assertLessEqual(res['unpainted_fraction'], 0.005)
+        fixed = run_painting_loop(self.target, STYLES['touches_courtes'], self.arms['ufactory_xarm6'], rounds=2,
+                                  strokes_per_round=20, seed=2, learn=False)
+        self.assertGreater(fixed['unpainted_fraction'], res['unpainted_fraction'])
+
     def test_palette_style_uses_only_palette_colours(self):
         res = run_painting_loop(self.target, STYLES['aplats_geometriques'], self.arms['agilex_piper'], 1, 10, seed=1, learn=False)
         self.assertEqual(len(res['palette']), STYLES['aplats_geometriques']['palette_size'])
