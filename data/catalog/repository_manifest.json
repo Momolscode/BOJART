@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/agent-memory.yml",
-      "bytes": 941,
-      "sha256": "9626c538562e8bce0e9ba77bff89758084391767db44aae4445646c2369b1c8d"
+      "bytes": 1725,
+      "sha256": "e23b15ff4d0c0cad4aa07f4063beba65704b4865a1fc444116b625775dee7946"
     },
     {
       "path": ".github/workflows/audit.yml",
@@ -53,9 +53,19 @@
       "sha256": "fd8e85189b4eccfde8b654fed82d23586f2860b15fab9551fc8c5745aebe8591"
     },
     {
+      "path": "Diagnostic_BOJART.cmd",
+      "bytes": 320,
+      "sha256": "8bb709f75beebd6e806ede7325d8cca345fdc6c52c3fc87b996f3262c4c727a5"
+    },
+    {
+      "path": "Diagnostic_BOJART.sh",
+      "bytes": 299,
+      "sha256": "af6ebdb22bf94f11a668fc15d397cb32e368cfaff609dc4322ffd2cf5acb155a"
+    },
+    {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 7210,
-      "sha256": "9c3ecb584a27b6e85273a18d26236b0be3d424f683ff59562772184b8dd07267"
+      "bytes": 7647,
+      "sha256": "09e47a5534d2ecde579a7eaec3f687a4b98d9ef28ed0a2e3085f577e25c75540"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -313,9 +323,19 @@
       "sha256": "22a376039be51e51d959a0239b85348d4a31b5d005f543427790a1bdeb00628f"
     },
     {
+      "path": "bojart_ops/environment.py",
+      "bytes": 11468,
+      "sha256": "6ec3b4c8341b8de1e74a8cee0349d7d2483d708b0d389101c37fd926cf66b087"
+    },
+    {
       "path": "bojart_ops/ledger.py",
       "bytes": 10884,
       "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31"
+    },
+    {
+      "path": "bojart_ops/media_check.py",
+      "bytes": 9351,
+      "sha256": "85ac92d4ed625056c38d0c1fdc6a1e227b8bd2c87afd22001fede4fca6ebeadb"
     },
     {
       "path": "bojart_ops/orchestration.py",
@@ -339,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 8389,
-      "sha256": "6795fe5bb272732735ba98d609d8993600a0bb95bf1314502e448bc4807b9ecf"
+      "bytes": 8810,
+      "sha256": "7ebc58d05518728bcb4fe8ca7fa59f7907c520931b84d22ab3f52f89139261a3"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 37275,
-      "sha256": "de0fe6e20ad76aa58a0c2ce781b4528e810d8907588b9c0c19236977ad337165"
+      "bytes": 41387,
+      "sha256": "600b18f4e01d156bc9459ac19e0ba5fb34e1987f1c3668f93b532fd9034dee82"
     },
     {
       "path": "creative/CURRENT.md",
@@ -494,8 +514,13 @@
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
-      "bytes": 5793,
-      "sha256": "c7ef0dc947213311a354a5e00c6162c0f8f6434ff49f7f27ae48a4b4dcbea7ac"
+      "bytes": 6112,
+      "sha256": "0adae3c30d71b6e5c363a3ea7c15238820f53ad255e0c544f99382da3e069f62"
+    },
+    {
+      "path": "docs/DIAGNOSTIC_OUTILS.md",
+      "bytes": 8562,
+      "sha256": "b4ea8085e2fd3a65bacd9dd4270eac09885c41dcc3aaeb5a65fab3c7291d07da"
     },
     {
       "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
@@ -688,6 +713,11 @@
       "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee"
     },
     {
+      "path": "docs/evidence/environment-diagnostic-2026-11-02.json",
+      "bytes": 4893,
+      "sha256": "e4444c1e622ad9232dcf7205c01b960fa17116e19382a92db2b4031341ee2e91"
+    },
+    {
       "path": "docs/evidence/m07-baseline-tests.log",
       "bytes": 32400,
       "sha256": "a92d4a53e20eb96cef9325e9854cd47dc1e8567b034545802dd76e2611fd6323"
@@ -796,6 +826,11 @@
       "path": "docs/evidence/startup-retrieval-2026-11-01.json",
       "bytes": 4144,
       "sha256": "b872839516aec06623c18dd3f99a289dbaec0465717e6704e044c93760c8248c"
+    },
+    {
+      "path": "docs/evidence/synthetic-media-check-2026-11-02.json",
+      "bytes": 2634,
+      "sha256": "b128b67a7915c3a3aea6f1f3f7be660c86d4b90865c8d1db000a90f1bdaab8ec"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/README.md",
@@ -2514,8 +2549,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 13235,
-      "sha256": "318c66f5c41687ae25c1e1b05f84c1aebd97ba0cb3bae11a1c8f2e8af6000bd5"
+      "bytes": 13303,
+      "sha256": "a8f417752f696ff9897065fdf82497105199d530d42e57ba489ced38543dfa81"
     },
     {
       "path": "ops/request-example.json",
@@ -4133,6 +4168,11 @@
       "sha256": "659388f705ed8987b90e8eb14cbb04b546a8437123712056376e1da6d781b437"
     },
     {
+      "path": "tests/test_environment_diagnostic.py",
+      "bytes": 11695,
+      "sha256": "04a660507feea53717d021120348bcdc4ff6c27260842c069a5d88a4a684581c"
+    },
+    {
       "path": "tests/test_http_boundaries.py",
       "bytes": 10236,
       "sha256": "d13f8c7f2446050a9fe16f92d1f048cf05afc37926cd49f8e3472d2892c60c96"
@@ -4146,6 +4186,11 @@
       "path": "tests/test_launchers.py",
       "bytes": 8427,
       "sha256": "d58388513d835465690efeb58fad1f6363a875e8a7ba1f9e611d371f8bf74e34"
+    },
+    {
+      "path": "tests/test_media_check.py",
+      "bytes": 9336,
+      "sha256": "5176b2d4046d43f582eace534305e82b3e6f9a1298f01c38b3ece73ca3e6ed63"
     },
     {
       "path": "tests/test_memory.py",
@@ -4273,9 +4318,14 @@
       "sha256": "d94d64ed1d71455d694ec06f75f688e6f57b3cb5f49d151324bea6fc504bb6a6"
     },
     {
+      "path": "tools/diagnose_environment.py",
+      "bytes": 5038,
+      "sha256": "cd4c6bcf8dc9d67edb545cfdd8a2a28986ab62f147c9c6999bf8d29d6ebbbc2d"
+    },
+    {
       "path": "tools/doctor.py",
-      "bytes": 8262,
-      "sha256": "f7d0ef37cd00d5a141fee14af4a766d8f073a7ff507291188501c03588037353"
+      "bytes": 8591,
+      "sha256": "a2a36c679f543d14ed0ebf05f29854396d9594e85d96d39e095d3de7104648bc"
     },
     {
       "path": "tools/download_remote_media.py",
@@ -4344,8 +4394,8 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 5335,
-      "sha256": "abd80dab005b96defe67ad81d5357d2cf1584db216c4016060a5ed558befc194"
+      "bytes": 5624,
+      "sha256": "721761e15ab2f18f96fe85923e07781579ca0c67323fc1a00a8a32fe611b0c44"
     },
     {
       "path": "tools/validate_repository.py",

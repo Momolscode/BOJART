@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 from bojart_memory import Memory, MemoryError
 from bojart_memory.paths import default_state
 from bojart_memory.model_config import inspect_models
+from bojart_ops.environment import report as environment_report
 
 PACKAGES = ('cadquery', 'trimesh', 'langgraph', 'langgraph-checkpoint-sqlite',
             'faster-whisper', 'ctranslate2')
@@ -77,7 +78,7 @@ def configuration(config=None):
 
 
 def report(*, config=None, memory_state=None, runtime_state=None,
-           probe_imports=False, verify_memory=False, check_models=False):
+           probe_imports=False, verify_memory=False, check_models=False, check_tools=False):
     versions = {}
     for name in PACKAGES:
         try:
@@ -127,7 +128,7 @@ def report(*, config=None, memory_state=None, runtime_state=None,
         if not available: workstation_blockers.append(name)
     if settings.get('voice_requested') and settings['voice']['status'] != 'available':
         workstation_blockers.append('requested_voice_unavailable')
-    return {'schema': 'bojart.installation-check.v2',
+    result = {'schema': 'bojart.installation-check.v2',
             'python': platform.python_version(), 'recommended_python': '3.12',
             'platform': platform.system(), 'sqlite': sqlite3.sqlite_version,
             'fts5': fts, 'packages': versions, 'imports': engines,
@@ -140,6 +141,9 @@ def report(*, config=None, memory_state=None, runtime_state=None,
             'workstation_blockers': workstation_blockers,
             'physical_hardware_qualified': False, 'production_ready': False,
             'models_installed_by_this_command': False, 'provider_calls': 0}
+    if check_tools:
+        result['environment'] = environment_report()
+    return result
 
 
 def main():
@@ -151,10 +155,11 @@ def main():
     parser.add_argument('--probe-imports', action='store_true')
     parser.add_argument('--verify-memory', action='store_true')
     parser.add_argument('--check-models', action='store_true', help='Lire les métadonnées des modèles Ollama locaux ; aucune inférence.')
+    parser.add_argument('--check-tools', action='store_true', help='Observer GPU, matériel et outils locaux sans rendu.')
     args = parser.parse_args()
     result = report(config=args.config, memory_state=args.memory_state, runtime_state=args.state,
                     probe_imports=args.probe_imports or args.profile == 'workstation', verify_memory=args.verify_memory,
-                    check_models=args.check_models)
+                    check_models=args.check_models, check_tools=args.check_tools)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     blockers = result['launch_blockers'] if args.profile == 'memory' else result['workstation_blockers']
     return 2 if blockers or (args.check_models and not result['models']['ok']) else 0

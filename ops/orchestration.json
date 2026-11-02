@@ -146,7 +146,8 @@
         "jarvis/tests/memory_*",
         "Installer_BOJART_4060Ti.cmd",
         "Mesurer_BOJART.cmd",
-        "tools/benchmark_jarvis.py"
+        "tools/benchmark_jarvis.py",
+        "Diagnostic_BOJART.*"
       ],
       "reason": "Mémoire persistante, isolation des domaines et reprise après interruption."
     },
@@ -262,7 +263,8 @@
       "evidence": [
         "context/CURRENT.md",
         "INSTALLER_DEMAIN.md",
-        "docs/memory/POSTE_RTX4060TI.md"
+        "docs/memory/POSTE_RTX4060TI.md",
+        "docs/DIAGNOSTIC_OUTILS.md"
       ],
       "acceptance": "Inventaire observé sur le poste ; choix de modèles fondé sur ses ressources.",
       "required_datasets": [
