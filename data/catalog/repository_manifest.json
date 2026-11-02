@@ -359,8 +359,8 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11160,
-      "sha256": "f840cb61233f8818f82e5718402956ff02ac69efc162daa217f20b2f6bccc73f"
+      "bytes": 11404,
+      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
@@ -2739,8 +2739,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 13792,
-      "sha256": "9723f83ce2a5a23d390eb682dde4b5327868ba75f44504499e2e500583e2426a"
+      "bytes": 14571,
+      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
     },
     {
       "path": "ops/request-example.json",
