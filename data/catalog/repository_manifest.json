@@ -4634,13 +4634,13 @@
     },
     {
       "path": "tests_ops/test_collecte.py",
-      "bytes": 7937,
-      "sha256": "220b1a3c1d0882aa69c3d8e1e03182acb6a41d8ef7af5be004c00083bbca21c2"
+      "bytes": 7975,
+      "sha256": "fc0b2071ed7a4db987d327e9c5ec91c82f4fd9e1bfea45b71e443717b2ab5461"
     },
     {
       "path": "tests_ops/test_installation_tout.py",
-      "bytes": 8324,
-      "sha256": "13e1c0009dc5c0c47a9bd7af5afe571bfe1ab4f628e9a4da0f77083b9e7639dc"
+      "bytes": 8430,
+      "sha256": "abbce7d3e101e786e5256bb7e25f6c60c4b821c34072652b07d6ebbf4c7fa91a"
     },
     {
       "path": "tests_ops/test_ops.py",

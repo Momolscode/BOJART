@@ -2,6 +2,7 @@
 import io
 import json
 import importlib.util
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -86,7 +87,8 @@ class Execute(Base):
         self.assertEqual({r['id']: r['statut'] for r in records},
                          dict.fromkeys(['ollama_installation', 'ffmpeg_installation', 'ollama_demarrage', 'jarvis', 'modeles', 'banc'], 'ok'))
         model_env = [env for cmd, env in calls if '--model-profile' in cmd][0]
-        self.assertTrue(model_env['PATH'].startswith('C:/O' + __import__('os').pathsep + 'C:/F/bin'))
+        dirs = [str(Path('C:/O/ollama.exe').parent), str(Path('C:/F/bin/ffmpeg.exe').parent)]  # backslashes under Windows
+        self.assertEqual(model_env['PATH'], os.pathsep.join(dirs + ['P']))
         self.assertEqual(model_env['PYTHONUTF8'], '1')
         self.assertTrue(it.summary(records)['termine'])
         saved = json.loads((self.home / 'j.json').read_text(encoding='utf-8'))

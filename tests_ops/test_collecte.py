@@ -44,6 +44,7 @@ class Sources(Base):
         self.assertTrue(self.c.add_source(self.src)['deja_designe'])
         self.c.close()
         self.c = co.Collecte(self.root / 'collecte', self.root / 'memoire')
+        self.addCleanup(self.c.close)
         self.assertEqual([s['id'] for s in self.c.sources()], [first['id']])
 
     def test_refuses_folders_overlapping_the_store_or_memory(self):
