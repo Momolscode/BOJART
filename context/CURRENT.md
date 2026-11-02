@@ -15,6 +15,8 @@ La session « bras robotique » porte sur la peinture au pinceau d’un relief m
 
 Deux vidéos générées illustrent la direction artistique ; elles ne prouvent ni le dépôt ni la précision. La conversation source n’a pas été lue. Le PDF, ses montants et les médias restent hors du dépôt public. Voir `docs/research/strates-robotique-2026-11-02/README.md`.
 
+La prochaine preuve est inscrite au registre de pilotage : tâche `strates-g0` dans `ops/orchestration.json`, bloquée tant que la fiche d’acceptation STRATES n’est pas signée. Elle ne déclenche ni mesure, ni achat, ni commande machine.
+
 ## Projet
 
 BOJ.ART vise un atelier artistique augmenté : conception, FDM/résine, finition, contenus, devis et suivi, coordonnés par Jarvis sur trois écrans. Ce projet reste indépendant d’UNUM et de M-Tek.
