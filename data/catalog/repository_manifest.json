@@ -354,8 +354,8 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 33645,
-      "sha256": "b445f522504d79e12e57fbbdce6c61f11217e02842034bf0da8c8a645767f407"
+      "bytes": 33673,
+      "sha256": "b290046dee049a2371367bff657ef90d708872ca5359fa1552bb52a861ede83f"
     },
     {
       "path": "bojart_ops/banc_statique.py",
@@ -799,8 +799,8 @@
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
-      "bytes": 9986,
-      "sha256": "d76e0418e9332b5c939c541e1dcb5a7c57e58a3e03424c988fc3c071ee026d3e"
+      "bytes": 10852,
+      "sha256": "16d9bff0232ff79e197242a706956ad3697b2d8e021218191670ef1e1b1d7ecb"
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",
@@ -2555,7 +2555,7 @@
     {
       "path": "jarvis/locks/windows-cp312-voice.txt",
       "bytes": 2833,
-      "sha256": "7ccd85ff91321f277099e7c4fb2f2e28c1a457659723fed013f216785bd1491d"
+      "sha256": "462d162a24b5e8b87d93d15883c46e5d474b51571a84e98fbeb31c8a3c5e95d5"
     },
     {
       "path": "jarvis/requirements-orchestration.txt",

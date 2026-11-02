@@ -1,11 +1,11 @@
 # Verrou BOJ.ART, profil « voice » : généré par tools/verrouiller_dependances.py, ne pas éditer.
 # plateforme Windows AMD64 ; Python 3.12.10 ; pip 26.2.2 ; date 2026-11-02
 # Installer : python -m pip install --require-hashes --no-deps -r <ce fichier> puis python -m pip check
-# source jarvis/requirements-voice.txt sha256=ed3facd220d69beafe6f66830124fa94dffbadc6bc053328609e2ff9b33ca75e
+# source jarvis/requirements-voice.txt sha256=8bf46aab2ab93c94d6ec88f91b842cc849daa4a72e30a97846be75bb30b7184a
 anyio==4.16.0 \
     --hash=sha256:c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026
-av==19.0.2 \
-    --hash=sha256:3ce5a1d7b916d13c16ac58f1756f0fee4af2d53f02bc1403e18550b50d375a22
+av==18.1.0 \
+    --hash=sha256:ea1480b7a8d5405cb5f382b344731bf125fd2c1c6fae3964f6c48595628387ff
 click==8.5.0 \
     --hash=sha256:255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360
 colorama==0.4.6 \

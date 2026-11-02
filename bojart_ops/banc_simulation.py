@@ -453,7 +453,7 @@ def collect_findings(results):
     if (net.get('verrou_windows') or {}).get('nouvelles_versions_depuis_le_verrou'):
         moved = net['verrou_windows']['nouvelles_versions_depuis_le_verrou']
         findings.append({'check': 'reseau:roues_windows', 'severity': 'info', 'path': 'jarvis/locks',
-                         'detail': f'{len(moved)} paquet(s) ont une version plus récente que le verrou (le verrou reste installé tel quel) : '
+                         'detail': f'{len(moved)} paquet(s) se résolvent aujourd’hui dans une autre version que le verrou (un verrou valide reste installé tel quel) : '
                                    + ', '.join(moved[:12]),
                          'fix': 'Mettre à jour seulement après un nouveau passage du banc.'})
     return sorted(findings, key=lambda f: (SEVERITY_ORDER.get(f['severity'], 9), f['check'], str(f['path'])))
