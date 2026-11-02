@@ -10,7 +10,6 @@ import hashlib
 import json
 import os
 import platform
-import resource
 import shutil
 import subprocess
 import sys
@@ -22,6 +21,11 @@ import numpy as np
 
 from . import checks, fabrication, sculpt, slicing
 from .spec import SpecRejected, parse_request
+
+try:
+    import resource  # POSIX seulement : absent sous Windows (tour de l'atelier)
+except ImportError:
+    resource = None
 
 PIPELINE_VERSION = 'bojart.figurine.pipeline.v1'
 MAX_ATTEMPTS = 3
@@ -66,6 +70,42 @@ def _git_commit():
         return {'head': None, 'pipeline_code_modified_since_commit': None}
 
 
+def _windows_peak_working_set_mb():
+    """Pic de mémoire physique du processus (GetProcessMemoryInfo). Non exécuté sous Windows
+    dans ce dépôt à ce jour : toute erreur rend None (non mesuré), jamais un chiffre inventé."""
+    import ctypes
+    from ctypes import wintypes
+
+    class Counters(ctypes.Structure):
+        _fields_ = [('cb', wintypes.DWORD), ('PageFaultCount', wintypes.DWORD)] + [
+            (n, ctypes.c_size_t) for n in ('PeakWorkingSetSize', 'WorkingSetSize', 'QuotaPeakPagedPoolUsage',
+                                           'QuotaPagedPoolUsage', 'QuotaPeakNonPagedPoolUsage',
+                                           'QuotaNonPagedPoolUsage', 'PagefileUsage', 'PeakPagefileUsage')]
+    counters = Counters(cb=ctypes.sizeof(Counters))
+    kernel32 = ctypes.WinDLL('kernel32')
+    kernel32.GetCurrentProcess.restype = wintypes.HANDLE
+    psapi = ctypes.WinDLL('psapi')
+    psapi.GetProcessMemoryInfo.argtypes = [wintypes.HANDLE, ctypes.POINTER(Counters), wintypes.DWORD]
+    if not psapi.GetProcessMemoryInfo(kernel32.GetCurrentProcess(), ctypes.byref(counters), counters.cb):
+        return None
+    return round(counters.PeakWorkingSetSize / 2 ** 20, 1)
+
+
+def peak_memory_mb():
+    """(processus, enfants) en Mo : pics CUMULÉS depuis le lancement, pas par étape.
+    None = non mesuré (enfants sous Windows, plateforme inconnue)."""
+    if resource is not None:
+        unit = 2 ** 20 if sys.platform == 'darwin' else 1024  # ru_maxrss : octets sous macOS, Kio sous Linux
+        return (round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / unit, 1),
+                round(resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss / unit, 1))
+    if sys.platform == 'win32':
+        try:
+            return _windows_peak_working_set_mb(), None
+        except Exception:
+            pass
+    return None, None
+
+
 def environment():
     def ver(dist):
         from importlib import metadata
@@ -79,6 +119,7 @@ def environment():
         'python': sys.version.split()[0], 'platform': platform.platform(), 'cpu_count': os.cpu_count(),
         'numpy': ver('numpy'), 'trimesh': ver('trimesh'), 'scikit-image': ver('scikit-image'),
         'manifold3d': ver('manifold3d'), 'scipy': ver('scipy'), 'rtree': ver('rtree'), 'matplotlib': ver('matplotlib'),
+        'lxml': ver('lxml'),
         'slicer': slicing.slicer_version(slicing.find_slicer()) if slicing.find_slicer() else None,
         'blender': subprocess.run([blender, '--version'], capture_output=True, text=True, timeout=60).stdout.splitlines()[0] if blender else None,
         'gpu': 'nvidia-smi présent' if gpu else 'aucun GPU détecté (calcul CPU uniquement)',
@@ -147,10 +188,10 @@ class FigurineRun:
             self._save(); raise
         status = result.pop('_status', 'DONE')
         outputs = result.pop('_outputs', [])
+        peak_process, peak_children = peak_memory_mb()
         st.update(status=status, seconds=round(time.perf_counter() - t0, 3), finished=_now(), result=result,
                   outputs={str(o): sha256_file(self.dir / o) for o in outputs},
-                  peak_rss_mb_process=round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024, 1),
-                  peak_rss_mb_children=round(resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss / 1024, 1))
+                  peak_rss_mb_process=peak_process, peak_rss_mb_children=peak_children)
         self._save()
         if f'interrupt_after:{name}' in self.faults and not self.state.get('interrupt_consumed', {}).get(name):
             self.state.setdefault('interrupt_consumed', {})[name] = True; self._save()

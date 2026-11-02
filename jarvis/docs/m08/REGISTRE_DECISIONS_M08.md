@@ -62,11 +62,18 @@ qualification sur la tour.
 
 ## D6. Visionneuse : three.js 0.180.0 réutilisé, copie complète
 
-- **Constat (défaut de l'existant)** : `sites/atelier/dist/vendor/three.module.js` est identique à
-  three 0.180.0 mais importe `./three.core.js`, absent du dossier. Dans Chromium, la requête
-  `three.core.js` répond 404 et la visionneuse ne démarre pas.
-- **Décision** : ne pas modifier la copie figée du site ; vendre une copie complète et épinglée
-  (`figurine/viewer/vendor/VENDOR.json`, empreintes SHA-256, licence MIT) pour la visionneuse figurine.
+- **Constat (corrigé le 2026-11-02)** : sur la base `b49101e` de cette branche, `sites/atelier/dist/vendor`
+  n'avait pas `three.core.js` ; dans Chromium, la requête répondait 404 et l'import three.js échouait
+  (`preuves/atelier_three_core_absent_2026-11-02.json`, 03:08 UTC). Ce défaut était **déjà corrigé sur
+  `main`** par `02be63c` (PR #12, fusionnée à 02:55 UTC avec `THREE-PROVENANCE.json` et une exception
+  de taille épinglée dans `tools/validate_repository.py`). Après fusion de `main` (`e1a08fe`), revérifié
+  dans Chromium : import réussi (r180), `three.core.js` servi
+  (`preuves/atelier_three_core_verifie_2026-11-02.json`). Restent des 404 sans lien avec three.js :
+  binaires exclus du dépôt (logo, polices, visuel) et API absente en service statique.
+- **Décision** : garder pour la visionneuse figurine sa propre copie épinglée
+  (`figurine/viewer/vendor/VENDOR.json`, empreintes SHA-256, licence MIT), en version minifiée : elle ne
+  dépend pas d'un dossier de publication du site et reste sous la limite de 1 Mo sans nouvelle exception.
+  Coût : deux copies de three 0.180.0 dans le dépôt (voir le backlog).
 - **Test** : `tools/figurine_viewer_check.cjs` (Chromium + SwiftShader) : chargement des deux pièces,
   rotation, zoom, quatre vues, pièces séparées, vue éclatée, maillage, absence d'erreur console.
 
@@ -90,3 +97,23 @@ qualification sur la tour.
 - Sans Embree, 1 500 rayons lancés d'un coup sur 180 k triangles montaient à ~4 Go de mémoire.
 - Variable modifiée : paquets de 100 rayons. Mêmes valeurs mesurées (min/p1 identiques), mémoire et
   durée réduites. Conservé. Détail : `preuves/boucles_2026-11-02.json`.
+
+## D10. Dépendances : une seule version de trimesh pour Jarvis (corrigé le 2026-11-02)
+
+- **Constat** : `requirements-figurine.txt` épinglait trimesh 5.2.0 alors que la CAO M01
+  (`apps/jarvis/requirements.txt`) épingle 4.11.1. Installer les deux fichiers ensemble échouait
+  (`ResolutionImpossible`, reproduit avec `pip install --dry-run` pour win_amd64 / CPython 3.12),
+  signalé par le banc d'essai d'un autre fil. Second écart trouvé en environnement isolé : l'export 3MF de
+  trimesh exige lxml (extra « easy » de trimesh), fourni jusque-là par le conteneur et absent du fichier.
+- **Options** : monter la CAO en 5.2.0 (il faudrait requalifier M01, CadQuery absent de ce conteneur) ;
+  séparer deux environnements (deux installations sur la tour) ; **aligner la figurine sur 4.11.1**.
+- **Décision** : aligner sur 4.11.1 et épingler lxml 6.1.3. La CAO M01 ne change pas de version.
+- **Tests** : résolution combinée des six fichiers de dépendances Jarvis pour win_amd64 / CPython 3.12,
+  roues binaires seules (108 paquets, sans installation sous Windows) ; 21 tests M08 dans un
+  environnement Python 3.12 isolé créé depuis les fichiers ; parcours complet relancé avec ces versions
+  (`preuves/environnement_aligne_2026-11-02.json`) ; `test_shared_pins_do_not_conflict` empêche le retour
+  d'une double version.
+- **Constat lié** : `pipeline.py` importait `resource` (POSIX seulement) et aurait échoué dès l'import sous
+  Windows. Import rendu facultatif ; mesure mémoire Windows par `GetProcessMemoryInfo` **non testée**
+  (pas de machine Windows ici), pic des processus enfants non mesuré sous Windows.
+- **Réexamen** : montée de version commune de trimesh avec requalification CAO M01 et M08 sur la tour.

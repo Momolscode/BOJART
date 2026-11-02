@@ -1,4 +1,5 @@
 {
+ "note_ajoutee_apres_constat": "Constat exact sur la base b49101e de la branche, mais déjà corrigé sur main par 02be63c (PR #12, 02:55 UTC). Revérifié après fusion : atelier_three_core_verifie_2026-11-02.json.",
  "checked": "2026-11-02T03:08:08.832Z",
  "not_found": [
   "/assets/logo.webp",

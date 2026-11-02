@@ -359,8 +359,8 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12225,
-      "sha256": "c1091baabfb81ed816d97116d299a45b3596601245816238549263af7710cbfd"
+      "bytes": 12403,
+      "sha256": "2be43c61dedc4ae096160884335693acc9f2c2e2b60538f2946bc9fbecb7066e"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
@@ -1294,8 +1294,8 @@
     },
     {
       "path": "jarvis/AGENTS.md",
-      "bytes": 6224,
-      "sha256": "6e4fc3e6d251267155f41b749e85f186e4ec38773767403ed6c0ab9cc2f0837a"
+      "bytes": 6398,
+      "sha256": "4a87a46126d8eb87abdea71a98aa6e2a54040364481897e74dd103489c354ec7"
     },
     {
       "path": "jarvis/BILAN_LIVRAISON.md",
@@ -1449,8 +1449,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/pipeline.py",
-      "bytes": 24234,
-      "sha256": "13f58d1aaac35f51941d3c05d3db1ede453560551ac914585775b0a7612b66b8"
+      "bytes": 26154,
+      "sha256": "eb23a0a547f156324c93ee2564d8d5cd1a395d9e05cc96b612019019b337d4a0"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/sculpt.py",
@@ -2239,28 +2239,38 @@
     },
     {
       "path": "jarvis/docs/m08/BACKLOG_ET_REPRISE_M08.md",
-      "bytes": 4988,
-      "sha256": "ba9e389e487a7feddabc11934de133fa4a8cc9f562d702179829f6d20d16201b"
+      "bytes": 5618,
+      "sha256": "24d6b76945d4fa0dca1c418cc15b58bf919057f3666858bc39daab17f3521c0a"
     },
     {
       "path": "jarvis/docs/m08/REGISTRE_DECISIONS_M08.md",
-      "bytes": 6893,
-      "sha256": "ee7f763e144236ae26155a28d8c142ffdc9d8a18f0fa772e5907d48db52f4261"
+      "bytes": 9331,
+      "sha256": "61a4e8670aa327b2cf99ae8ae51a9a4b198e7296452f7f654759f215252c5ff8"
     },
     {
       "path": "jarvis/docs/m08/RELEASE_M08.md",
-      "bytes": 9680,
-      "sha256": "1bb3dc28f4511bb3c96d5d816c4b38e8d8c8fd63dbe3b3012a835c7848e97ed6"
+      "bytes": 10996,
+      "sha256": "9f96627ac696beb6233560fe2e720e7f1d4f3f6bfe0356d7b6876c246132ddef"
     },
     {
       "path": "jarvis/docs/m08/preuves/atelier_three_core_absent_2026-11-02.json",
-      "bytes": 971,
-      "sha256": "6f290f89bf23159456500aa6f0b4aab295febdfd6d6b6caea921ff3f0dc51936"
+      "bytes": 1189,
+      "sha256": "b287b0999a2b43f024537f9c8df423be94f8aee8b3849b474fa92d1ae6d01123"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/atelier_three_core_verifie_2026-11-02.json",
+      "bytes": 1200,
+      "sha256": "aad0bdcce97e9dddd1d0019d88e5b65c9bdd689f7aa443200ccc3b32180945b1"
     },
     {
       "path": "jarvis/docs/m08/preuves/boucles_2026-11-02.json",
       "bytes": 4468,
       "sha256": "1a810a7709155d0386515daf42e3ec0f91854410eb8fe057f91cac0b8ab45a62"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/environnement_aligne_2026-11-02.json",
+      "bytes": 6138,
+      "sha256": "44d76bce671a223e639f1cbab6a6aa5c04cdb2fd03c7c22dbf3744e297a0228d"
     },
     {
       "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/manifest_partiel.json",
@@ -2649,8 +2659,8 @@
     },
     {
       "path": "jarvis/requirements-figurine.txt",
-      "bytes": 348,
-      "sha256": "c4f72986a574eac233efa3ecb8ae2d9b5ac52d916ebf6cd9d8f893c57793228a"
+      "bytes": 624,
+      "sha256": "ba2f911a6e0c721160b6d8590bef8e7af70a9b69280db9bb44f690327ff64efa"
     },
     {
       "path": "jarvis/requirements-orchestration.txt",
@@ -2764,8 +2774,8 @@
     },
     {
       "path": "jarvis/tests/test_figurine_m08.py",
-      "bytes": 13521,
-      "sha256": "b3e579cc87aa531fff2dd13790ae6ffc9d9ef31536a8dc4f3e8b5f09f98c4ec2"
+      "bytes": 14973,
+      "sha256": "402a10cd0f7afbd6a9c4dd1fecdbfafb6e0211470cf1f73c51057c62c70acfed"
     },
     {
       "path": "jarvis/tests/test_growth.py",

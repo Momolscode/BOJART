@@ -3,12 +3,13 @@
 ## Reprendre en 5 minutes
 
 1. Lire `RELEASE_M08.md` (niveaux de preuve) puis `REGISTRE_DECISIONS_M08.md` (choix sourcés).
-2. Dépendances : `pip install -r jarvis/requirements-figurine.txt`, PrusaSlicer et Blender (facultatif).
+2. Dépendances : `pip install -r jarvis/requirements-figurine.txt` (compatible avec `requirements.txt` dans
+   le même environnement, trimesh 4.11.1 commun), PrusaSlicer et Blender (facultatif).
 3. Parcours nominal (personnage original, ~2 min 30 sur 4 vCPU sans GPU) :
    `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable."`
    Résultats dans `runs/figurine/<id>/` (hors Git) : `manifest.json`, `checks.json`, `rendus/`, `tranchage/`.
 4. Visionneuse : `node jarvis/tools/figurine_viewer_check.cjs runs/figurine/<id>`.
-5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (18 tests, ~50 s).
+5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (21 tests, ~55 s).
 
 Règles à garder : un personnage tiers reste BLOQUÉ sans maillage fourni et fiche de provenance ;
 aucun G-code n'est envoyé ; une dépendance absente donne BLOQUÉ, jamais une réussite ; un doublon de
@@ -22,7 +23,9 @@ commande renvoie la tâche existante sans recalcul.
    Résultat : même parcours N2 sur la RTX 4060 Ti, temps et mémoire relevés.
    Dépendance : installation Python 3.12 + requirements-figurine + PrusaSlicer (version actuelle) + Blender.
    Test : `figurine_pipeline.py` DONE, `figurine_viewer_check.cjs` 13/13, tests M08 verts.
-   Preuve : manifeste de la tour (environnement, versions, durées par étape, pic mémoire).
+   Preuve : manifeste de la tour (environnement, versions, durées par étape, pic mémoire). La mesure
+   mémoire Windows (`GetProcessMemoryInfo`) n'a jamais été exécutée : vérifier qu'elle donne un chiffre ;
+   le pic de Blender et de PrusaSlicer n'y est pas mesuré.
 2. **Qualité artistique : comparer une génération image→3D locale au prototype procédural.**
    Résultat : un maillage original plus riche (anatomie, plis, visage) passé par les mêmes contrôles.
    Dépendance : tâche 1 ; TripoSG (8 Go VRAM annoncés, code MIT, licence des poids à relire) ; image
@@ -45,9 +48,10 @@ commande renvoie la tâche existante sans recalcul.
 5. **Raccorder la chaîne au tableau de bord Jarvis.** La proposition `create_figurine` existe au point
    d'entrée texte ; il manque la tâche de fond (progression, annulation, reprise) et la vue création
    sur l'écran droit avec la visionneuse. Test : parcours confirmé depuis l'interface, doublon refusé.
-6. **Réparer la copie three.js de l'Atelier** (`three.core.js` absent, 404 prouvé dans Chromium) dans une
-   nouvelle publication du site, la copie actuelle étant figée. Preuve :
-   `preuves/atelier_three_core_absent_2026-11-02.json`.
+6. **Une seule copie de three.js.** L'Atelier (réparé sur `main` par `02be63c`, revérifié dans
+   Chromium) et la visionneuse figurine portent chacun three 0.180.0 (complet et minifié). Choisir une
+   copie commune lors de la prochaine publication du site. Test : les deux visionneuses chargent dans
+   Chromium, `tools/validate_repository.py` valide.
 7. **Socle : hauteur de couche 0,25–0,3 mm** (pièce sans détail) puis règle de rayon plus serrée.
    Test : même figure, même profil hors cette variable ; garder si gain sans perte des critères.
 
@@ -65,6 +69,9 @@ commande renvoie la tâche existante sans recalcul.
 
 ## Ce qu'il ne faut pas refaire
 
-- Rechercher pourquoi la visionneuse ne charge pas : cause trouvée (three.core.js manquant).
+- Chercher pourquoi la 3D de l'Atelier ne chargeait pas : `three.core.js` manquait sur l'ancienne base,
+  déjà réparé sur `main` (`02be63c`). Les 404 restants (logo, polices, visuel, API) sont attendus en
+  service statique du dépôt.
+- Installer trimesh 5.x à côté de la CAO M01 : versions alignées sur 4.11.1 (fiche D10).
 - Comparer Hunyuan3D 2.1 : licence non applicable dans l'UE (vérifié le 2026-11-02).
 - Tester TRELLIS.2 sur la tour actuelle : 24 Go de VRAM exigés par la fiche officielle.

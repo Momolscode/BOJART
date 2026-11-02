@@ -21,14 +21,14 @@ Le résultat 3D est un **prototype procédural**, pas une figurine premium (voir
 | Voix `voice.LocalVoice` (faster-whisper local) | code présent ; poids et micro absents → **NON TESTÉ** |
 | CAO socle M01 (CadQuery) | présent ; CadQuery absent du conteneur → non réexécuté (échecs préexistants identiques avant/après) |
 | LangGraph M06, Jev, régie trois vues M04/M07 | présents, non modifiés ; non nécessaires à ce parcours |
-| Visionneuse 3D de l'Atelier (`sites/atelier/dist`) | **défaut** : `three.core.js` absent, l'import three.js échoue dans Chromium (`preuves/atelier_three_core_absent_2026-11-02.json`) |
+| Visionneuse 3D de l'Atelier (`sites/atelier/dist`) | `three.core.js` absent sur l'ancienne base de la branche (`b49101e`), déjà réparé sur `main` par `02be63c` ; revérifié après fusion : import three.js réussi dans Chromium (fiche D6) |
 | Connecteurs imprimantes, inventaire du parc | absents ; parc inconnu |
 
 ## Ce qui a été exécuté
 
 Point d'entrée : `python jarvis/tools/figurine_pipeline.py "<demande>"`. Code : `jarvis/apps/jarvis/app/figurine/`.
 
-| Étape | Exécution de preuve `d70b23ab2e4e3376` (commit `3cdeb3e`) | Durée | Pic mémoire |
+| Étape | Exécution de preuve `d70b23ab2e4e3376` (commit `3cdeb3e`) | Durée | Pic mémoire cumulé* |
 |---|---|---|---|
 | Réception + spécification | même point d'entrée que Jarvis, sans LLM | 0,02 s | 35 Mo |
 | Transcription | **NON TESTÉE** : texte injecté, aucun score fabriqué | — | — |
@@ -38,8 +38,12 @@ Point d'entrée : `python jarvis/tools/figurine_pipeline.py "<demande>"`. Code :
 | Contrôles | volumes, normales, arêtes, flottants, épaisseurs, surplombs, stabilité, ajustement | 10,7 s | 620 Mo |
 | Rendus | Blender 4.0.2 Cycles CPU : 4 vues argile + maillage + `.blend` | 39,3 s | 1 283 Mo (Blender) |
 | Exports | STL par pièce, 3MF multi-objets relu | 1,7 s | — |
-| Tranchage | PrusaSlicer 2.7.2, profil d'hypothèse, sans commande de chauffe | 32,1 s | 1 283 Mo (enfants) |
+| Tranchage | PrusaSlicer 2.7.2, profil d'hypothèse, sans commande de chauffe | 32,1 s | 982 Mo (Python) ; trancheur non isolé |
 | Manifeste | empreintes SHA-256 de tous les fichiers | 0,4 s | — |
+
+\* Pic depuis le lancement (`ru_maxrss`), pas par étape : une valeur qui monte est attribuable à l'étape.
+Le pic des processus enfants reste à 1 283 Mo (Blender) pendant le tranchage, donc celui de PrusaSlicer
+est inférieur ou égal sans être mesuré.
 
 Durée totale : **2 min 12 s** à froid, un seul essai (pas de moyenne). Commande en doublon : **0,16 s**,
 résultats existants renvoyés, aucune étape relancée. Visionneuse : chargement local 288 ms dans
@@ -67,6 +71,17 @@ Chromium 153 + SwiftShader (rendu logiciel).
 Profil : buse 0,4, PLA, couches 0,15 mm, gyroïde 15 %, volume d'hypothèse 250 × 210 × 220 mm
 (pas une machine du parc). Le G-code porte « NE PAS ENVOYER À UNE MACHINE », ne contient aucune
 commande M104/M109/M140/M190 (vérifié par test) et reste hors Git. Aucune machine n'a reçu d'ordre.
+
+## Dépendances alignées et contre-épreuve (fiche D10)
+
+La première version épinglait trimesh 5.2.0, incompatible avec la CAO M01 (4.11.1) dans un même
+environnement. Corrigé : trimesh 4.11.1 et lxml 6.1.3 (export 3MF, auparavant fourni par le conteneur).
+L'ensemble des fichiers de dépendances Jarvis se résout pour win_amd64 / CPython 3.12 (108 paquets, roues
+binaires, sans installation sous Windows). Dans un environnement Python 3.12 isolé : 21 tests réussis, et
+le parcours nominal relancé redonne la même tâche `d70b23ab2e4e3376` en 2 min 7 s avec maillages, contrôles
+et estimations de tranchage identiques à l'octet, rendus identiques au pixel
+(`preuves/environnement_aligne_2026-11-02.json`). `pipeline.py` n'importe plus `resource` sans garde :
+l'import aurait échoué sous Windows. La mesure mémoire Windows ajoutée n'est pas testée.
 
 ## Grille artistique (auto-évaluation, pas une validation indépendante)
 
@@ -103,7 +118,7 @@ Conclusion : la chaîne est qualifiée numériquement ; la figurine ne l'est pas
 | Réseau ou identifiant absent | non applicable : la chaîne n'appelle aucun service distant ; non testé réseau coupé | — |
 | Pose difficile (maillet levé) | évaluée à basse résolution seulement | `pose_study.json` |
 
-Tests : `python -m unittest tests.test_figurine_m08` → 19 réussis (~54 s). Suites existantes relancées
+Tests : `python -m unittest tests.test_figurine_m08` → 21 réussis (~55 s). Suites existantes relancées
 avant/après sur le même conteneur : mêmes échecs préexistants (dépendances absentes), aucune régression ;
 `tools/validate_repository.py` valide.
 
@@ -131,7 +146,8 @@ Détail chiffré : `preuves/boucles_2026-11-02.json`.
 ## Fichiers
 
 - Preuves versionnées (JSON) : `preuves/execution-d70b23ab2e4e3376/`, `preuves/execution-5aafd044cf97f6d3-vegeta-bloque/`,
-  `preuves/execution-f65591bfc2cc1f0a-1m-decoupe/`.
+  `preuves/execution-f65591bfc2cc1f0a-1m-decoupe/`, `preuves/environnement_aligne_2026-11-02.json`,
+  `preuves/atelier_three_core_verifie_2026-11-02.json`.
 - Fichiers lourds hors Git (dossier du projet, `figurine-m08/`) : `figurine.stl`, `socle.stl`, `projet.3mf`,
   `rendus/` (vues + `figurine.blend`), `visionneuse/` (captures), `tranchage/apercu_couches_figurine.png`.
 - Choix sourcés : `REGISTRE_DECISIONS_M08.md`. Suite : `BACKLOG_ET_REPRISE_M08.md`.

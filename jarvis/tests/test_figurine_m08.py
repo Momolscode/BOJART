@@ -247,5 +247,32 @@ class PipelineFaultTests(unittest.TestCase):
         self.assertEqual({k: v.get('finished') for k, v in before.items()}, {k: v.get('finished') for k, v in after.items()})
 
 
+class PortabilityTests(unittest.TestCase):
+    """Installation commune avec Jarvis et import sous Windows (tour), vérifiés sans réseau."""
+
+    def test_shared_pins_do_not_conflict(self):
+        pins = {}
+        for req in sorted(ROOT.glob('requirements*.txt')) + [ROOT / 'apps/jarvis/requirements.txt']:
+            for line in req.read_text(encoding='utf8').splitlines():
+                line = line.split('#')[0].strip()
+                if '==' in line:
+                    name, version = (part.strip() for part in line.split('==', 1))
+                    pins.setdefault(name.lower().replace('_', '-'), {})[version] = req.name
+        self.assertEqual({n: v for n, v in pins.items() if len(v) > 1}, {})
+
+    @unittest.skipUnless(HEAVY, 'dépendances géométriques absentes (requirements-figurine.txt)')
+    @unittest.skipIf(sys.platform == 'win32', 'vérifie le repli hors Windows')
+    def test_pipeline_imports_without_posix_resource_module(self):
+        import importlib.util
+        from unittest import mock
+        path = ROOT / 'apps/jarvis/app/figurine/pipeline.py'
+        spec = importlib.util.spec_from_file_location('figurine.pipeline_sans_resource', path)
+        module = importlib.util.module_from_spec(spec)
+        with mock.patch.dict(sys.modules, {'resource': None}):
+            spec.loader.exec_module(module)
+        self.assertIsNone(module.resource)
+        self.assertEqual(module.peak_memory_mb(), (None, None))
+
+
 if __name__ == '__main__':
     unittest.main()
