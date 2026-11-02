@@ -16,7 +16,7 @@ from .loop import compare_open_closed, run_painting_loop
 from .targets import SYNTHETIC, load_ppm, make_target, save_ppm
 
 STYLES_PATH = ROOT / 'configs/painter/styles.json'
-CODE = ['bojart_painter/' + p for p in ('arms.py', 'calibration.py', 'canvas.py', 'coupon.py', 'frida_bridge.py', 'hd.py', 'loop.py',
+CODE = ['bojart_painter/' + p for p in ('arms.py', 'atlas.py', 'calibration.py', 'canvas.py', 'coupon.py', 'frida_bridge.py', 'hd.py', 'loop.py',
                                         'planner.py', 'targets.py', '__main__.py')]
 
 

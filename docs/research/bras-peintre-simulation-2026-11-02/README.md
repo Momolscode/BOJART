@@ -128,6 +128,8 @@ Sources : `web-frida-github-20261102`, `web-spline-frida-20261102`, `web-learnin
 - **Rejeu du plan FRIDA par notre bras simulé** : 900 touches, 9 changements de couleur (FRIDA trie déjà par couleur), environ 43 min de bras estimées, et une cinématique inverse à moins de 0,3 mm. Notre modèle de dépôt, avec poils et charge, est plus transparent que la peinture acrylique apprise par FRIDA. Le rejeu est donc plus clair (SSIM 0,05). C'est un écart de modèle de dépôt : il ne dit rien de la qualité du plan.
 - **LearningToPaint non essayé** : ses poids sont sur Google Drive, et Google Drive, Hugging Face et download.pytorch.org sont refusés par le réseau du conteneur. À reprendre si ces hôtes sont autorisés, ou si les fichiers `actor.pkl` et `renderer.pkl` sont déposés dans le projet.
 
+- **Pinceau mesuré dans notre planificateur** : `bojart_painter/atlas.py` lit un atlas de touches, c'est-à-dire des masques d'opacité rangés par longueur, courbure et largeur. Le peintre HD peint alors avec ces masques (style `pinceau_mesure`). Un atlas de 344 touches a été tiré, hors dépôt, du modèle `small_brush` de FRIDA. Avec ce pinceau, notre planificateur atteint SSIM 0,125 à 900 touches en 19 s ; FRIDA seul atteint 0,095 en 48 min. À 3 000 touches, il atteint SSIM 0,24 en 55 s, pour environ 2 h 45 de bras estimées. Rapport : `atlas-pinceau-frida-seed1.json`. Le même format recevra les touches de notre pinceau photographiées en semaine 1.
+
 Conclusion : FRIDA sert de chaîne robot, caméra et modèle de touche mesuré. `bojart_painter` reste l'outil rapide pour itérer sans matériel, et la passerelle permet de passer de l'un à l'autre. Rapport : `docs/evidence/painter-simulation-2026-11-02/frida-essai-cpu-seed1.json`.
 
 ## Limites

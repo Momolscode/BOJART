@@ -92,6 +92,38 @@ class HDPainterTests(unittest.TestCase):
         self.assertEqual(res['strokes'], 2)
         self.assertLess(float(res['world'][20, 33].max()), 0.9)  # la première touche a bien été peinte
 
+    def test_stroke_atlas_places_measured_masks(self):
+        import tempfile
+        from bojart_painter.atlas import StrokeAtlas, synthetic_atlas
+        atlas = synthetic_atlas()
+        fp = atlas.footprint((10, 20), (20, 20), (40, 20), 6.0, 1.0, 1.0, 1.0, (40, 60))
+        y0, y1, x0, x1, a = fp
+        cover = np.zeros((40, 60)); cover[y0:y1, x0:x1] = a
+        self.assertGreater(cover[20, 25], 0.9)                       # sur le tracé
+        self.assertLess(cover[20, 45], 0.1)                          # après la fin de la touche
+        self.assertAlmostEqual(float((cover[:, 25] > 0.5).sum()), 6, delta=1)  # largeur 6 mm à 1 mm/px
+        up = atlas.footprint((10, 20), (25, 12), (40, 20), 6.0, 1.0, 1.0, 1.0, (40, 60))
+        cu = np.zeros((40, 60)); cu[up[0]:up[1], up[2]:up[3]] = up[4]
+        self.assertGreater(cu[15:19, 25].max(), 0.9)                 # milieu courbé vers le haut
+        wide = atlas.footprint((10, 20), (20, 20), (40, 20), 4.0, 1.0, 1.5, 1.0, (40, 60))
+        cw = np.zeros((40, 60)); cw[wide[0]:wide[1], wide[2]:wide[3]] = wide[4]
+        self.assertAlmostEqual(float((cw[:, 25] > 0.5).sum()), 6, delta=1)     # gain 1,5 sur 4 mm
+        with tempfile.TemporaryDirectory() as d:
+            atlas.save(d + '/a.npz'); again = StrokeAtlas.load(d + '/a.npz')
+        np.testing.assert_array_equal(again.masks, atlas.masks)
+
+    def test_hd_painter_paints_and_learns_with_an_atlas(self):
+        from bojart_painter.atlas import synthetic_atlas
+        from bojart_painter.hd import Deposit, HDPainter
+        with self.assertRaises(ValueError):
+            HDPainter(self.target(), 'pinceau_mesure', mm_per_px=5.0)
+        p = HDPainter(self.target(), 'pinceau_mesure', mm_per_px=5.0, seed=2, hidden=Deposit(1.2, 0.8),
+                      atlas=synthetic_atlas())
+        res = p.run(300, batches=3)
+        blank = float(((np.ones((40, 60, 3)) - self.target()) ** 2).mean())
+        self.assertLess(res['final_mse'], blank / 2)
+        self.assertAlmostEqual(res['learned']['opacity'], 0.8, delta=0.1)
+
     def test_palette_style_uses_palette(self):
         from bojart_painter.hd import HDPainter
         p = HDPainter(self.target(), 'empattement', mm_per_px=5.0, seed=1)

@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-02",
+  "host": "conteneur Linux, 4 cœurs, sans GPU ; Python 3.13, numpy 2.5.3, Pillow 12.3.0 ; atlas produit avec torch 2.15.0 sur CPU",
+  "atlas": {
+    "source": "FRIDA caches/small_brush (cmubig/Frida f42fa61, GPL-3.0), rendu hors dépôt",
+    "path_in_git": false,
+    "entries": 344,
+    "mask_shape_px": [
+      96,
+      204
+    ],
+    "mm_per_px": 0.5,
+    "grid": {
+      "z": "8 valeurs de 0,1 à 0,95",
+      "length_mm": [
+        5,
+        10,
+        20,
+        35,
+        50,
+        65,
+        80
+      ],
+      "bend_mm": [
+        -20,
+        -10,
+        -5,
+        0,
+        5,
+        10,
+        20
+      ]
+    },
+    "useful_width_mm_p5_p95": [
+      2.89,
+      7.85
+    ],
+    "max_length_mm": 80.0,
+    "width_measure": "aire du masque > 0,5 divisée par la longueur d'arc de la trajectoire",
+    "sha256": "eefcafb5d7d73f75288f1465d3069c83100a4c77298a19c3c919ad2c9d9c2589"
+  },
+  "image": {
+    "title": "La Nuit étoilée (Van Gogh, 1889, domaine public)",
+    "sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+    "canvas_mm": [
+      500,
+      312
+    ],
+    "path_in_git": false
+  },
+  "planner": {
+    "style": "pinceau_mesure",
+    "mm_per_px": 1.0,
+    "batches": 8,
+    "seed": 1,
+    "group_by_color": true,
+    "position_sigma_mm": 0.5,
+    "color_sigma": 0.03
+  },
+  "results": {
+    "900_opaque_world": {
+      "strokes": 896,
+      "ssim": 0.125,
+      "psnr_db": 11.92,
+      "learned": {
+        "width_gain": 1.0,
+        "opacity": 0.95
+      },
+      "seconds": 18.9
+    },
+    "900_hidden_world_1_25_0_75": {
+      "strokes": 896,
+      "ssim": 0.1166,
+      "psnr_db": 11.41,
+      "learned": {
+        "width_gain": 1.25,
+        "opacity": 0.7
+      },
+      "seconds": 19.1
+    },
+    "3000_opaque_world": {
+      "strokes": 2989,
+      "ssim": 0.2419,
+      "psnr_db": 16.83,
+      "learned": {
+        "width_gain": 1.0,
+        "opacity": 0.95
+      },
+      "seconds": 55.3
+    }
+  },
+  "reference_frida_alone_900": {
+    "ssim": 0.0948,
+    "psnr_db": 12.38,
+    "seconds_cpu": 2908.2,
+    "report": "frida-essai-cpu-seed1.json"
+  },
+  "arm_time_estimate_3000": {
+    "seconds": 9853,
+    "dips": 607,
+    "color_changes": 218,
+    "rule": "touche = longueur/80 mm/s + 1,1 s ; recharge 6 s ; essuyage 8 s (même règle que l'animation)"
+  },
+  "code_sha256": {
+    "bojart_painter/atlas.py": "c80119351599b103804e253accd8901633eb872025eb80477524ae067383c3d4",
+    "bojart_painter/hd.py": "114144e76a4e548fb219adc0777829ebe0a88d801b6ae09b76d160906b38656c"
+  },
+  "limits": "Modèle de pinceau appris par CMU sur son propre matériel, rendu par FRIDA hors dépôt ; ni notre pinceau ni notre peinture. Le format d'atlas est prévu pour recevoir nos touches photographiées en semaine 1."
+}

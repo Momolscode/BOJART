@@ -193,7 +193,8 @@
     "hd-nuit-etoilee-atelier-3-semaines-seed1.json": "cb087d0e7fec1da274f11c07c2db91c2c46ad4348ce8ea91d62ee8af78e71795",
     "calibration-semaine1-seed1.json": "ee36ac7ffe4da79757fa7e8da1a473655ad0e09631cf379ef71c67ed6ad1344c",
     "atelier-animation-seed1.json": "69a64de782b99631189f9950127c8fa7c030fdfcdf9730667dee7b85964536a2",
-    "frida-essai-cpu-seed1.json": "e33ee6b9aff5a9c365046ad2fe6343d445474fa91f2e560a95f724696617aa51"
+    "frida-essai-cpu-seed1.json": "e33ee6b9aff5a9c365046ad2fe6343d445474fa91f2e560a95f724696617aa51",
+    "atlas-pinceau-frida-seed1.json": "8ae73eead9e8ba54a7d7975dcd87bf537f396a9be0aa475a7fb41fbc51f7193f"
   },
   "limits": "Le monde physique est lui-même un modèle simplifié. Ces chiffres valident la logique de la boucle et de l’estimation, pas une peinture réelle, un bras, un pinceau ni un coupon. Graines peu nombreuses : tendances, pas significativité.",
   "until_converged_seed1": {
@@ -457,5 +458,20 @@
     "bridge_geometry_mean_overlap": 0.85,
     "animation_arm_time_estimate_s": 2579,
     "learningtopaint": "non essayé (poids inaccessibles depuis le conteneur)"
+  },
+  "measured_brush_atlas": {
+    "entries": 344,
+    "path_in_git": false,
+    "ssim": {
+      "900": 0.125,
+      "3000": 0.2419,
+      "frida_alone_900": 0.0948
+    },
+    "seconds": {
+      "900": 18.9,
+      "3000": 55.3,
+      "frida_alone_900": 2908.2
+    },
+    "arm_time_estimate_3000_s": 9853
   }
 }

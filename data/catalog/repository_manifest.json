@@ -364,13 +364,18 @@
     },
     {
       "path": "bojart_painter/__main__.py",
-      "bytes": 9016,
-      "sha256": "06622a5ae461951e000b252e4f23bd420cb4386121865655541cd7fac8296a72"
+      "bytes": 9028,
+      "sha256": "56241cdc0ff9508213b42a9c0e13b229d480448a393685b8b9bc29179a351375"
     },
     {
       "path": "bojart_painter/arms.py",
       "bytes": 2900,
       "sha256": "9f7a60bba19e83ff5a76a0b940f49f192a1ec12781c3eec5494e1938c99e8493"
+    },
+    {
+      "path": "bojart_painter/atlas.py",
+      "bytes": 6632,
+      "sha256": "c80119351599b103804e253accd8901633eb872025eb80477524ae067383c3d4"
     },
     {
       "path": "bojart_painter/calibration.py",
@@ -394,8 +399,8 @@
     },
     {
       "path": "bojart_painter/hd.py",
-      "bytes": 12069,
-      "sha256": "59a0e581e168abdff6e03b6531bfc16d25604bab61ef2c1a981f59672fe58f8b"
+      "bytes": 12967,
+      "sha256": "114144e76a4e548fb219adc0777829ebe0a88d801b6ae09b76d160906b38656c"
     },
     {
       "path": "bojart_painter/loop.py",
@@ -434,13 +439,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 13259,
-      "sha256": "56b043370488fee356d3832e8c7158d073df0b0ffc59e95489cc22b4b763d8d8"
+      "bytes": 13480,
+      "sha256": "c8cac63ba8e50b4268815f220d522fcfe8cf54b1231191d35c33f15b2d25f43f"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 46878,
-      "sha256": "3b303641b20b8b77fbf55faaa31f46121b7bc3c5f7557a834a115191354346cc"
+      "bytes": 47461,
+      "sha256": "45e24f5aef15a8cb3f3a27eb5732bfcbc2f0bdcd22c76b3af45a9d90c908fb10"
     },
     {
       "path": "creative/CURRENT.md",
@@ -529,8 +534,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 17781,
-      "sha256": "8a3dadb7707230d35b37f05c5d57ce9d9ba440dcb849755ff052af78b337963d"
+      "bytes": 18511,
+      "sha256": "51a3ca299f1dc976d9824b8126b60a5189aa969e4f28c98c7f6d458d35bdf4a9"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -864,8 +869,8 @@
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/README.md",
-      "bytes": 3075,
-      "sha256": "553b37eb7c27e478949aa25dd7d8b77f71bd2c28e48b0a44fcbd94c536bfdb92"
+      "bytes": 3266,
+      "sha256": "fc148797196ec1c460c9e1474d3000a0be16a3ac0587a487dce88fd6127ad86b"
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/arms.json",
@@ -876,6 +881,11 @@
       "path": "docs/evidence/painter-simulation-2026-11-02/atelier-animation-seed1.json",
       "bytes": 2288,
       "sha256": "69a64de782b99631189f9950127c8fa7c030fdfcdf9730667dee7b85964536a2"
+    },
+    {
+      "path": "docs/evidence/painter-simulation-2026-11-02/atlas-pinceau-frida-seed1.json",
+      "bytes": 2832,
+      "sha256": "8ae73eead9e8ba54a7d7975dcd87bf537f396a9be0aa475a7fb41fbc51f7193f"
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/calibration-semaine1-seed1.json",
@@ -944,8 +954,8 @@
     },
     {
       "path": "docs/evidence/painter-simulation-2026-11-02/summary.json",
-      "bytes": 13271,
-      "sha256": "b8b9fc944f087cb0ed5db771149361e300e4cb1f1f12a11fae18cdf79b1ce87f"
+      "bytes": 13683,
+      "sha256": "8d93d86e7b29179852c58cc5f8142791b667164cd79f7e7dd61127cf25f504a7"
     },
     {
       "path": "docs/evidence/production-recovery-2026-11-02.json",
@@ -1324,8 +1334,8 @@
     },
     {
       "path": "docs/research/bras-peintre-simulation-2026-11-02/README.md",
-      "bytes": 17915,
-      "sha256": "10db74556c50d13f6059f2fb4dd53f9fb39bb64a96fd97fa2e5dca780210ed8d"
+      "bytes": 18584,
+      "sha256": "9e11a40661c8d3c249e8573250a4a17788db46332f17116da8fae4f8be6e5f95"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -4724,8 +4734,8 @@
     },
     {
       "path": "tests_painter/test_painter_hd.py",
-      "bytes": 5339,
-      "sha256": "0d794578975c5d608e7caa2229f174f38dc76bcc265da12f4b3e2ea145fa7bc9"
+      "bytes": 7391,
+      "sha256": "3e597ae8fc2c424fccd7c321ed561891bf4f123acb7d85cf06350a2897561405"
     },
     {
       "path": "tests_workflows/test_journeys.py",

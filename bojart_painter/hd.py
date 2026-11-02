@@ -20,6 +20,8 @@ HD_STYLES = {
     # Premier atelier réel : 10 peintures pré-mélangées, trois pinceaux, pas de mélange automatique.
     'atelier_3_semaines': dict(width_mm=(20, 3), brushes_mm=(20, 8, 3), brush_phases=(0.25, 0.6),
                                length_ratio=(1.0, 4.0), curvature=0.25, palette=10),
+    # Pinceau mesuré : largeurs et longueur maximale lues dans l'atlas (`HDPainter(..., atlas=...)`).
+    'pinceau_mesure': dict(width_mm=None, length_ratio=(1.0, 10.0), curvature=0.3, palette=10),
 }
 
 
@@ -58,8 +60,11 @@ def load_image(path, width_px):
 class HDPainter:
     def __init__(self, target, style='reproduction', mm_per_px=2.0, seed=1,
                  hidden=Deposit(1.15, 0.82), believed=Deposit(1.0, 0.95),
-                 position_sigma_mm=0.35, color_sigma=0.015, camera_sigma=0.006):
+                 position_sigma_mm=0.35, color_sigma=0.015, camera_sigma=0.006, atlas=None):
         self.T = np.asarray(target, dtype=np.float32)
+        self.atlas = atlas
+        if self.style_needs_atlas(style) and atlas is None:
+            raise ValueError(f'le style {style!r} demande un atlas de touches mesurées')
         self.H, self.W = self.T.shape[:2]
         self.mm, self.style = mm_per_px, HD_STYLES[style]
         self.rng = np.random.default_rng(seed)
@@ -80,7 +85,13 @@ class HDPainter:
             c = np.array([px[lab == j].mean(0) if (lab == j).any() else c[j] for j in range(k)])
         return c
 
+    @staticmethod
+    def style_needs_atlas(style):
+        return HD_STYLES[style]['width_mm'] is None
+
     def footprint(self, p0, p1, p2, width_mm, dep, seed, bristle=True):
+        if self.atlas is not None:  # touche mesurée : sa texture remplace les stries modélisées
+            return self.atlas.footprint(p0, p1, p2, width_mm, self.mm, dep.gain, dep.opacity, (self.H, self.W))
         t = np.linspace(0, 1, 12)[:, None]
         P = (1 - t) ** 2 * p0 + 2 * (1 - t) * t * p1 + t ** 2 * p2
         half = width_mm * dep.gain / 2 / self.mm
@@ -125,9 +136,12 @@ class HDPainter:
             phase = sum(progress >= x for x in self.style['brush_phases'])
             width = self.style['brushes_mm'][phase] * self.rng.uniform(0.95, 1.05)
         else:
-            w0, w1 = self.style['width_mm']
+            w0, w1 = self.style['width_mm'] or self.atlas.width_range[::-1]
             width = w0 * (w1 / w0) ** progress * self.rng.uniform(0.8, 1.2)
         length = width * self.rng.uniform(*self.style['length_ratio'])
+        if self.atlas is not None:
+            width = float(np.clip(width, *self.atlas.width_range))
+            length = min(length, self.atlas.max_length_mm)
         if self.mag[y, x] > 0.004:
             ang = math.atan2(self.gy[y, x], self.gx[y, x]) + math.pi / 2 + self.rng.normal(0, 0.12)
         else:
