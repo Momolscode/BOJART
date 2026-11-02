@@ -2,15 +2,16 @@
 
 ## Reprendre en 5 minutes
 
-1. Lire `RELEASE_M08.md` (niveaux de preuve) puis `REGISTRE_DECISIONS_M08.md` (choix sourcés).
+1. Lire `RELEASE_M08.md` (niveaux de preuve) puis `REGISTRE_DECISIONS_M08.md` (choix sourcés). Avant de
+   sculpter : `GRILLE_CONCEPTION_FIGURINE.md` (proportions, taille minimale d'un détail, lisibilité).
 2. Dépendances : `pip install -r jarvis/requirements-figurine.txt` (compatible avec `requirements.txt` dans
    le même environnement, trimesh 4.11.1 commun), PrusaSlicer et Blender (facultatif).
-3. Parcours nominal (personnage original, ~2 min 30 sur 4 vCPU sans GPU) :
+3. Parcours nominal (personnage original, ~5 min sur 4 vCPU sans GPU, grille de 0,4 mm) :
    `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable."`
    (Ardoise, guerrier choisi par Olsen ; « la Sentinelle » reste le personnage de contrôle).
    Résultats dans `runs/figurine/<id>/` (hors Git) : `manifest.json`, `checks.json`, `rendus/`, `tranchage/`.
 4. Visionneuse : `node jarvis/tools/figurine_viewer_check.cjs runs/figurine/<id>`.
-5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (24 tests, ~75 s).
+5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (27 tests, ~80 s).
 
 Règles à garder : un personnage tiers reste BLOQUÉ sans maillage fourni et fiche de provenance ;
 aucun G-code n'est envoyé ; une dépendance absente donne BLOQUÉ, jamais une réussite ; un doublon de
@@ -35,10 +36,13 @@ commande renvoie la tâche existante sans recalcul.
    Test : grille artistique fixée d'avance + critères éliminatoires identiques ; revue par Olsen ou un
    sculpteur (évaluation indépendante), cas de contrôle tenus à l'écart des réglages.
    Preuve : vues argile avant/après, `checks.json` des deux maillages, fiche D1 mise à jour.
+   Référence procédurale à battre : Ardoise v6 (fiche D13), jugée sur la vue rapprochée du buste.
 3. **Inventorier le parc et calibrer l'ajustement réel.**
    Résultat : modèles d'imprimantes, volumes, profils matière ; jeu tenon/logement mesuré.
    Dépendance : accès aux machines avec opérateur (impression N3 autorisée explicitement).
    Test : coupon tenons Ø 4/5 mm avec jeux 0,10–0,30 mm ; jeu retenu = premier montage sans forcer.
+   Le tenon de Ø 4 mm est sous les 5 mm conseillés pour le FDM (grille, section 3) : le coupon dira
+   s'il faut l'épaissir.
    Preuve : photos du coupon, profil exporté, `ASSEMBLY_HYPOTHESES` remplacées par des valeurs mesurées.
 
 ### P2 — robustesse, voix, affichage
@@ -75,5 +79,8 @@ commande renvoie la tâche existante sans recalcul.
   déjà réparé sur `main` (`02be63c`). Les 404 restants (logo, polices, visuel, API) sont attendus en
   service statique du dépôt.
 - Installer trimesh 5.x à côté de la CAO M01 : versions alignées sur 4.11.1 (fiche D10).
+- Sculpter des doigts en anneaux autour d'un manche, des bords roulés en capsules, ou une paire de
+  petits reliefs sur une plaque frontale : lus comme des bagues, des « bouées » ou un visage (grille,
+  section 5).
 - Comparer Hunyuan3D 2.1 : licence non applicable dans l'UE (vérifié le 2026-11-02).
 - Tester TRELLIS.2 sur la tour actuelle : 24 Go de VRAM exigés par la fiche officielle.

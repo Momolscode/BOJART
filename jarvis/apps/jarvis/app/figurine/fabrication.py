@@ -7,6 +7,16 @@ from __future__ import annotations
 import numpy as np
 
 FAB_VERSION = 'bojart.fabrication.v3'
+# Styles de socle. « lisse » : cylindre chanfreiné de la v3, inchangé. « strates » : plaques d'ardoise
+# empilées (2 novembre 2026, passe « détails » d'Ardoise). Un style autre que « lisse » ajoute sa
+# version à celle de la fabrication dans l'identité de tâche : les tâches à socle lisse gardent leur
+# identifiant et restent comparables aux preuves publiées.
+SOCLE_STYLES = {'lisse': None, 'strates': 'bojart.socle.strates.v1'}
+
+
+def fab_version(style: str = 'lisse') -> str:
+    extra = SOCLE_STYLES[style]
+    return FAB_VERSION if extra is None else f'{FAB_VERSION}+{extra}'
 
 # Hypothèses FDM 0,4 mm / PLA, à remplacer par un profil mesuré (pièce test d'ajustement).
 ASSEMBLY_HYPOTHESES = {
@@ -58,8 +68,85 @@ def _feet_centres(mesh, sole_z=0.6):
     return left[:, :2].mean(axis=0), right[:, :2].mean(axis=0), v[:, :2]
 
 
-def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHESES):
-    """Retourne {'figurine': trimesh, 'socle': trimesh, 'info': dict} en mm, socle z ∈ [0, hb]."""
+def _slate_outline(rng, theta, radius, amp, vertices):
+    """Contour d'une plaque d'ardoise aux bords cassés, en rayon selon l'angle theta : polygone
+    étoilé (sommets à angles et rayons tirés avec une graine fixe), arêtes droites entre sommets."""
+    ang = (np.arange(vertices) + rng.uniform(-0.32, 0.32, vertices)) * (2 * np.pi / vertices)
+    rad = radius + rng.uniform(-amp, amp, vertices)
+    pts = np.stack([rad * np.cos(ang), rad * np.sin(ang)], axis=1)
+    th = np.mod(theta - ang[0], 2 * np.pi) + ang[0]
+    i = np.clip(np.searchsorted(np.append(ang, ang[0] + 2 * np.pi), th, side='right') - 1, 0, vertices - 1)
+    a, e = pts[i], pts[(i + 1) % vertices] - pts[i]
+    d = np.stack([np.cos(theta), np.sin(theta)], axis=1)
+    # Intersection du rayon issu du centre avec l'arête : rho = (a × e) / (d × e).
+    return (a[:, 0] * e[:, 1] - a[:, 1] * e[:, 0]) / (d[:, 0] * e[:, 1] - d[:, 1] * e[:, 0])
+
+
+def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720):
+    """Socle « en strates » : plaques d'ardoise empilées aux bords cassés, plus larges vers le bas,
+    avec des stries de clivage en V. Même repère que le socle lisse : dessus plat à z = 0 (plan de
+    joint des semelles), dessous à z = -hb.
+
+    Imprimable retourné (dessus sur le plateau) sans support : chaque élargissement vers le bas est un
+    chanfrein plus raide que 45° (pente 1,15), une plaque qui déborde de celle du dessous ne forme
+    qu'une contre-dépouille tournée vers le haut à l'impression, et les stries ont des flancs à 42°.
+    Le contour du dessus reste à r - ch/1,15 - amp au moins : la marge autour des pieds est gardée.
+    Retourne (maillage trimesh fermé, informations)."""
+    import trimesh
+    rng = np.random.default_rng(seed)
+    n = int(np.clip(round(hb / 3.6), 3, 6))
+    h = rng.uniform(0.8, 1.25, n)
+    h = hb * h / h.sum()
+    if h[-1] < ch + 1.2:                                  # la plaque du dessus porte le chanfrein du bord
+        h[:-1] *= (hb - ch - 1.2) / h[:-1].sum()
+        h[-1] = ch + 1.2
+    z = np.concatenate([[0.0], np.cumsum(h)])             # du dessous (0) au dessus (hb)
+    theta = np.arange(n_theta) * (2 * np.pi / n_theta)
+    step, amp, slope = 0.8 * k, 0.7 * k, 1.15
+    R = [_slate_outline(rng, theta, r + step * (n - 1 - i), amp, 17 + i % 3) for i in range(n)]
+    for i in range(n - 1):                                # chanfrein contenu dans 60 % de la plaque
+        R[i + 1] = np.maximum(R[i + 1], R[i] - 0.6 * h[i] / slope)
+    rings, grooves = [(np.zeros(n_theta), R[0])], 0
+    for i in range(n):
+        if i < n - 1:
+            c = np.maximum(slope * (R[i] - R[i + 1]), 0.3)
+            upper = (np.full(n_theta, z[i + 1]), R[i + 1])
+        else:
+            c = np.full(n_theta, ch)
+            upper = (np.full(n_theta, hb), R[i] - ch / slope)
+        band_top = z[i + 1] - c
+        if float(band_top.min()) - z[i] >= 2.0:           # strie de clivage, profondeur variable autour du socle
+            zg = z[i] + 0.55 * (float(band_top.min()) - z[i])
+            g = 0.45 * k * np.clip(1.6 * np.sin(2 * theta + rng.uniform(0, 2 * np.pi)) + 0.4, 0, 1)
+            rings += [(np.full(n_theta, zg - 0.5), R[i]), (np.full(n_theta, zg), R[i] - g), (np.full(n_theta, zg + 0.5), R[i])]
+            grooves += 1
+        rings += [(band_top, R[i]), upper]
+    Z = np.stack([zz for zz, _ in rings]) - hb
+    RR = np.stack([rr for _, rr in rings])
+    m = len(rings)
+    verts = np.concatenate([np.stack([centre[0] + RR * np.cos(theta), centre[1] + RR * np.sin(theta), Z], axis=-1).reshape(-1, 3),
+                            [[centre[0], centre[1], -hb], [centre[0], centre[1], 0.0]]])
+    idx = np.arange(m * n_theta).reshape(m, n_theta)
+    nxt = np.roll(idx, -1, axis=1)
+    a, b, c3, d = idx[:-1], nxt[:-1], nxt[1:], idx[1:]
+    faces = np.concatenate([np.stack([a, b, c3], -1).reshape(-1, 3), np.stack([a, c3, d], -1).reshape(-1, 3),
+                            np.stack([np.full(n_theta, m * n_theta), nxt[0], idx[0]], -1),
+                            np.stack([np.full(n_theta, m * n_theta + 1), idx[-1], nxt[-1]], -1)])
+    mesh = trimesh.Trimesh(verts, faces, process=True)
+    info = {'strata': n, 'strata_heights_mm': [round(float(x), 2) for x in h], 'cleavage_grooves': grooves,
+            'seed': seed, 'outline_jitter_mm': round(amp, 2), 'step_per_stratum_mm': round(step, 2),
+            'top_outline_min_radius_mm': round(float((R[-1] - ch / slope).min()), 2),
+            'bottom_outline_max_radius_mm': round(float(R[0].max()), 2),
+            'chamfer_slope': f'{slope} (plus raide que 45° dans le sens d’impression)'}
+    return mesh, info
+
+
+def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHESES, style: str = 'lisse'):
+    """Retourne {'figurine': trimesh, 'socle': trimesh, 'info': dict} en mm, socle z ∈ [0, hb].
+
+    style : « lisse » (cylindre chanfreiné) ou « strates » (plaques d'ardoise, voir _strata_base)."""
+    if style not in SOCLE_STYLES:
+        raise ValueError(f'Style de socle inconnu : {style}')
     import manifold3d as m3
     fig = figure_nominal.copy()
     hb = round(total_height_mm * hyp['base_height_ratio'], 3)
@@ -82,8 +169,13 @@ def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHES
     centre = (soles.min(axis=0) + soles.max(axis=0)) / 2
     r = float(np.max(np.linalg.norm(soles - centre, axis=1))) + hyp['base_margin_mm'] * k
     ch = min(1.5 * k, hb / 4)
-    base = (m3.Manifold.cylinder(hb - ch, r, r, 128).translate([centre[0], centre[1], -hb])
-            + m3.Manifold.cylinder(ch, r, r - ch, 128).translate([centre[0], centre[1], -ch]))
+    strata = None
+    if style == 'strates':
+        slab, strata = _strata_base(centre, r, hb, ch, k)
+        base = to_manifold(slab)
+    else:
+        base = (m3.Manifold.cylinder(hb - ch, r, r, 128).translate([centre[0], centre[1], -hb])
+                + m3.Manifold.cylinder(ch, r, r - ch, 128).translate([centre[0], centre[1], -ch]))
     c = hyp['clearance_per_side_mm']
     depth = L + hyp['hole_extra_depth_mm']
     holes = (m3.Manifold.cylinder(depth + 0.1, d_l / 2 + c, d_l / 2 + c, seg).translate([cl[0], cl[1], -depth])
@@ -112,6 +204,19 @@ def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHES
         'base_print_orientation': 'retourné (dessus sur le plateau) : évidement sans pont ni support' if recess_h else 'à plat',
         'hypotheses': hyp['status'],
     }
+    if strata is not None:
+        # Marges réelles du socle en strates : autour des pieds (dessus) et autour de l'évidement.
+        foot = float(np.max(np.linalg.norm(soles - centre, axis=1)))
+        strata['top_margin_beyond_feet_mm'] = round(strata['top_outline_min_radius_mm'] - foot, 2)
+        if recess_h:
+            # Paroi la plus mince autour de l'évidement : sommets du contour jusqu'à 1 mm au-dessus de
+            # son plafond (borne prudente : les arêtes entre anneaux sont droites).
+            v = slab.vertices
+            rad = np.linalg.norm(v[:, :2] - centre, axis=1)
+            low = (rad > 1.0) & (v[:, 2] <= -hb + recess_h + 1.0)
+            strata['recess_radius_mm'] = round(r - hyp['base_wall_mm'] * k, 2)
+            strata['recess_wall_min_mm'] = round(float(rad[low].min()) - (r - hyp['base_wall_mm'] * k), 2)
+        info['base_style'] = {'style': style, 'version': SOCLE_STYLES[style], **strata}
     return {'figurine': figure_mesh, 'socle': base_mesh, 'info': info}
 
 

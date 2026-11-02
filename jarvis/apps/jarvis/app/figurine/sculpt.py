@@ -105,13 +105,18 @@ SENTINELLE_BOUNDS = ((-75.0, -75.0, -6.0), (75.0, 75.0, 235.0))
 
 def characters():
     """Personnages originaux sculptables. « tight » : grille fine resserrée sur la figure (gain de
-    calcul) ; la Sentinelle garde sa grille fixe pour rester identique aux preuves publiées."""
+    calcul) ; la Sentinelle garde sa grille fixe pour rester identique aux preuves publiées. « voxel » et
+    « smooth_iterations » : pas de grille et lissage par défaut (les détails d'Ardoise demandent 0,4 mm).
+    « socle » : style de socle (fabrication.SOCLE_STYLES)."""
     from . import ardoise
     return {
         'sentinelle': {'version': SCULPT_VERSION, 'poses': POSES, 'sdf': figure_sdf, 'bounds': SENTINELLE_BOUNDS,
-                       'tight': False, 'intent_poses': {'combat': 'garde_basse', 'rest': 'repos_fier'}},
+                       'tight': False, 'intent_poses': {'combat': 'garde_basse', 'rest': 'repos_fier'},
+                       'voxel': 0.6, 'smooth_iterations': 6, 'socle': 'lisse'},
         'ardoise': {'version': ardoise.ARDOISE_VERSION, 'poses': ardoise.POSES, 'sdf': ardoise.ardoise_sdf,
-                    'bounds': ardoise.BOUNDS, 'tight': True, 'intent_poses': ardoise.INTENT_POSES},
+                    'bounds': ardoise.BOUNDS, 'tight': True, 'intent_poses': ardoise.INTENT_POSES,
+                    'voxel': ardoise.DETAIL['voxel'], 'smooth_iterations': ardoise.DETAIL['smooth_iterations'],
+                    'socle': ardoise.SOCLE},
     }
 
 
@@ -222,11 +227,15 @@ def grid_mb(lo, hi, voxel: float) -> float:
     return n[0] * n[1] * n[2] * 4 / 1e6 + n[0] * n[1] * 24 * 12 / 1e6
 
 
-def sculpt_figure(pose: str, voxel: float = 0.6, smooth_iterations: int = 6, cid: str = 'sentinelle', bounds=None):
+def sculpt_figure(pose: str, voxel: float = 0.6, smooth_iterations: int | None = None, cid: str = 'sentinelle',
+                  bounds=None):
     """Retourne un trimesh fermé de la figurine nominale (mm, semelles à z = 0)."""
     import trimesh
     from skimage import measure
-    sdf = character(cid)['sdf']
+    c = character(cid)
+    sdf = c['sdf']
+    if smooth_iterations is None:
+        smooth_iterations = c['smooth_iterations']
     lo, hi = bounds or figure_bounds(pose, cid)
     field, origin, _ = evaluate_grid(lambda q: sdf(q, pose), lo, hi, voxel)
     # Les bords de la grille sont à l'extérieur (sauf le plan z=0 coupé) : on ferme le volume.

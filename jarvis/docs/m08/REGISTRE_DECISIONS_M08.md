@@ -157,3 +157,32 @@ qualification sur la tour.
   4.11.1) : même tâche, mêmes sorties (`preuves/contre_epreuves_fabrication_v3_2026-11-02.json`).
 - **Lié** : les résidus du marching cubes (volume < 1 mm³, plus petits que deux voxels) sont retirés et
   comptés dans le résultat de l'étape géométrie ; un vrai élément flottant reste éliminatoire.
+
+## D13. Passe « détails » sur Ardoise et grille de conception (2 novembre 2026, 11:20 UTC)
+
+- **Contexte** : Olsen a redemandé Végéta « avec plus de détails ». Refus maintenu (D2) : un personnage
+  protégé n'est ni sculpté ni rendu, et plus il serait ressemblant, plus la contrefaçon serait nette à la
+  vente. La critique du niveau de détail est juste et retenue. Une carte propose : Ardoise détaillé
+  (recommandé, travail lancé en attendant), un combattant original style manga, ou Végéta seulement
+  depuis un fichier fourni avec une licence écrite qui autorise la vente.
+- **Options pour le détail** : sculpture numérique à la main (hors de portée d'un agent sans
+  interface) ; génération image → 3D sur la tour (D1, tour non disponible) ; génération dans un service
+  en ligne (crédits payants et envoi de données : autorisation d'Olsen nécessaire, non demandée ici) ;
+  **enrichir la sculpture procédurale selon une grille sourcée**.
+- **Décision** : grille `GRILLE_CONCEPTION_FIGURINE.md` (proportions de Loomis, détail imprimable
+  Formlabs et Protolabs, types de plis) ; module réutilisable `figurine/details.py` (poing de sculpteur,
+  rivets, gravure, plaque, poignée gainée, plis tuyaux, évaluation locale par boîte) ; Ardoise v6 à
+  7,4 têtes, visage construit, poings, musculature du bras nu, plis du manteau et du pantalon,
+  genouillères en strates, rivets et gravures ; grille de 0,4 mm et 3 itérations de lissage pour ce
+  personnage (registre `voxel` / `smooth_iterations`), la Sentinelle garde 0,6 mm et 6 itérations.
+  Socle « en strates » pour Ardoise (`fabrication._strata_base`, style `strates` du registre) : cinq
+  plaques d'ardoise aux bords cassés, plus larges vers le bas, imprimables retournées sans support
+  (chanfreins plus raides que 45°), dessus plat gardé comme plan de joint. Le socle lisse ne change
+  pas : sa version reste `bojart.fabrication.v3` dans l'identité, le style « strates » y ajoute la
+  sienne (`bojart.socle.strates.v1`).
+- **Écartés en cours de route (rendus)** : doigts en anneaux (lus comme des bagues), genouillères à
+  arête centrale ou à rivets côte à côte (lues comme des visages), orbites profondes (regard vide),
+  bords de brassards en capsules (une capsule s'étend d'un rayon de chaque côté : « bouées » sur les
+  avant-bras ; remplacées par des anneaux `details.ring`).
+- **Réexamen** : comparaison avec une génération image → 3D d'un dessin original d'Ardoise sur la tour
+  (backlog, tâche 2) et revue par Olsen ou un sculpteur.

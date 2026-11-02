@@ -134,11 +134,12 @@ def environment():
 
 class FigurineRun:
     def __init__(self, text, out_root: Path, *, source='typed', mesh: Path | None = None, audio: Path | None = None,
-                 provenance: Path | None = None, voxel=0.6, faults=(), max_grid_mb=1500, render_size=900,
+                 provenance: Path | None = None, voxel=None, faults=(), max_grid_mb=1500, render_size=900,
                  render_samples=32, task_id=None):
         self.text, self.source, self.mesh_in, self.audio = text, source, mesh, audio
         self.provenance = provenance
         self.voxel, self.faults, self.max_grid_mb = voxel, set(faults), max_grid_mb
+        self.socle_style = 'lisse'
         self.render_size, self.render_samples = render_size, render_samples
         self.out_root = Path(out_root)
         self.spec = None
@@ -151,9 +152,16 @@ class FigurineRun:
         mesh_hash = sha256_file(self.mesh_in) if self.mesh_in else None
         if self.mesh_in:
             spec['geometry_source'] = 'import'
+        cid = (spec.get('character') or {}).get('id')
+        entry = sculpt.characters().get(cid)
+        if self.voxel is None:                       # pas par défaut du personnage (0,6 mm hors registre)
+            self.voxel = entry['voxel'] if entry else 0.6
+        # Socle du personnage sculpté ; un maillage importé garde le socle lisse.
+        self.socle_style = entry['socle'] if entry and not self.mesh_in else 'lisse'
         ident = {'spec': {k: spec[k] for k in ('character', 'pose_intent', 'height_mm', 'material', 'process')},
                  'mesh_sha256': mesh_hash, 'voxel': self.voxel, 'pipeline': PIPELINE_VERSION,
-                 'sculpt': _sculpt_version(spec), 'fab': fabrication.FAB_VERSION, 'checks': checks.CHECKS_VERSION}
+                 'sculpt': _sculpt_version(spec), 'fab': fabrication.fab_version(self.socle_style),
+                 'checks': checks.CHECKS_VERSION}
         return hashlib.sha256(_canon(ident).encode()).hexdigest()[:16], ident
 
     def _save(self):
@@ -343,7 +351,7 @@ class FigurineRun:
     def _s_assembly(self):
         import trimesh
         nominal = trimesh.load(str(self.dir / 'nominal.stl'))
-        asm = fabrication.build_assembly(nominal, self.spec['height_mm'])
+        asm = fabrication.build_assembly(nominal, self.spec['height_mm'], style=self.socle_style)
         asm['figurine'].export(self.dir / 'figurine.stl'); asm['socle'].export(self.dir / 'socle.stl')
         (self.dir / 'assembly.json').write_text(json.dumps(asm['info'], ensure_ascii=False, indent=1), encoding='utf8')
         res = {'_outputs': ['figurine.stl', 'socle.stl', 'assembly.json']}
@@ -399,7 +407,7 @@ class FigurineRun:
             raise RuntimeError('Rendu Blender échoué : ' + (proc.stdout + proc.stderr)[-600:])
         outs = sorted(str(p.relative_to(self.dir)) for p in rd.iterdir() if p.suffix in ('.png', '.blend'))
         return {'_outputs': outs, 'engine': 'Cycles CPU', 'samples': self.render_samples,
-                'note': 'rendus argile sans texture + vue maillage ; appréciation visuelle, pas une mesure'}
+                'note': 'rendus argile sans texture, vue rapprochée du buste et vue maillage ; appréciation visuelle, pas une mesure'}
 
     def _s_exports(self):
         import trimesh

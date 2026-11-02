@@ -137,6 +137,52 @@ class GeometryTests(unittest.TestCase):
         self.assertTrue(np.allclose(left, (-20, 0), atol=0.05) and np.allclose(right, (20, 0), atol=0.05))
         self.assertLess(contacts[:, 1].min(), -31)  # la pointe compte pour la taille du socle
 
+    def test_slate_strata_base_prints_upside_down(self):
+        from figurine import checks, fabrication, sculpt
+        nominal, _ = sculpt.sculpt_figure('repos_fier', voxel=2.0, smooth_iterations=2)
+        asm = fabrication.build_assembly(nominal, 200.0, style='strates')
+        base, info = asm['socle'], asm['info']
+        st = info['base_style']
+        self.assertEqual(st['version'], 'bojart.socle.strates.v1')
+        self.assertGreaterEqual(st['strata'], 3)
+        self.assertGreaterEqual(st['top_margin_beyond_feet_mm'], 5.0)
+        self.assertGreaterEqual(st['recess_wall_min_mm'], 2.0)
+        self.assertAlmostEqual(base.bounds[1][2], info['base_height_mm'], places=4)   # dessus plat : plan de joint
+        printed = base.copy()
+        printed.apply_transform(trimesh.transformations.rotation_matrix(np.pi, [1, 0, 0]))
+        r = checks.check_part(printed, 'socle', thickness_samples=300)
+        self.assertEqual(r['eliminatory'], [])
+        self.assertLess(r['measured']['overhang_area_fraction'], 0.005)
+        self.assertTrue(checks.check_fit(asm['figurine'], base, info)['fit_ok'])
+        again = fabrication.build_assembly(nominal, 200.0, style='strates')['socle']
+        self.assertTrue(np.array_equal(again.vertices, base.vertices))                  # graine fixe
+        plain = fabrication.build_assembly(nominal, 200.0)
+        self.assertNotIn('base_style', plain['info'])                                    # socle lisse inchangé
+        self.assertEqual(fabrication.fab_version('lisse'), fabrication.FAB_VERSION)
+        self.assertNotEqual(fabrication.fab_version('strates'), fabrication.FAB_VERSION)
+        with self.assertRaises(ValueError):
+            fabrication.build_assembly(nominal, 200.0, style='inconnu')
+
+    def test_ring_detail_stays_within_its_band(self):
+        from figurine import details
+        axis = np.array([0.0, 0.0, 1.0], np.float32)
+        pts = np.array([[0, 0, 0.9], [5.4, 0, 0], [0, 6.2, 0], [5.0, 0, 0.5]], np.float32)
+        d = details.ring(pts, (0, 0, 0), axis, 6.0, 0.6, 0.3)
+        self.assertGreater(d[0], 0)    # une capsule de rayon 6 contiendrait ce point : pas de « bouée »
+        self.assertLess(d[1], 0); self.assertGreater(d[2], 0); self.assertLess(d[3], 0)
+
+    def test_character_defaults_keep_published_identities(self):
+        from figurine import fabrication, pipeline
+        from figurine.spec import parse_request
+        with tempfile.TemporaryDirectory() as d:
+            run = pipeline.FigurineRun(SENTINELLE, Path(d))
+            _, ident = run._identity(parse_request(SENTINELLE))
+            self.assertEqual((ident['voxel'], ident['fab']), (0.6, fabrication.FAB_VERSION))
+            run = pipeline.FigurineRun(ARDOISE, Path(d))
+            _, ident = run._identity(parse_request(ARDOISE))
+            self.assertEqual((ident['voxel'], run.socle_style), (0.4, 'strates'))
+            self.assertEqual(ident['fab'], fabrication.fab_version('strates'))
+
     def test_gcode_stats_parser(self):
         from figurine import slicing
         with tempfile.TemporaryDirectory() as d:

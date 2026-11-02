@@ -14,7 +14,9 @@ utilise « La Sentinelle de l'atelier », personnage original BOJ.ART créé pou
 Le résultat 3D est un **prototype procédural**, pas une figurine premium (voir la grille artistique).
 
 Après la remarque d'Olsen (« il ne ressemble pas du tout à Végéta »), un **guerrier original vendable**,
-« Ardoise, le duelliste des strates », passe par la même chaîne au même niveau N2 (section dédiée).
+« Ardoise, le duelliste des strates », passe par la même chaîne au même niveau N2 (section dédiée). Sa v6
+(passe « détails » après une deuxième remarque d'Olsen) suit une grille de conception sourcée et
+reste au même niveau N2 ; une demande de « Végéta plus détaillé » reste bloquée (fiche D13).
 
 ## Inventaire court de l'existant (vérifié dans ce dépôt le 2026-11-02)
 
@@ -115,6 +117,41 @@ Cinq versions jugées sur rendus argile (auto-évaluation, détail en fiche D11)
 procédural, visage stylisé, pas de sculpture de vitrine. Fichiers dans le dossier du projet
 `figurine-m08/ardoise/`.
 
+## Ardoise v6 : passe « détails » (fiche D13)
+
+Olsen a jugé le détail insuffisant. La v6 suit une grille de conception sourcée
+(`GRILLE_CONCEPTION_FIGURINE.md`) : tête à 7,4 têtes de haut, visage construit (arcades, paupières, nez,
+lèvres, pommettes, oreilles, cicatrice), poings de sculpteur à quatre jointures, musculature du bras nu,
+plis tuyaux du manteau, bourrelets du pantalon, rivets et filets gravés, lame à gouttière, poignée
+gainée, brassards à bords roulés, et un socle « en strates » d'ardoise imprimable retourné sans
+support. Grille de 0,4 mm et 3 itérations de lissage pour ce personnage ; la Sentinelle garde 0,6 mm,
+6 itérations et le socle lisse. Exécution `15546a650b8110ca` (preuves JSON :
+`preuves/execution-15546a650b8110ca-ardoise-v6/`), faite avec le code de ce commit avant son
+enregistrement (`pipeline_code_modified_since_commit` vrai dans le manifeste) :
+
+| Mesure | v5 (`2821f575afea00a7`) | v6 (`15546a650b8110ca`) |
+|---|---|---|
+| Pose retenue par la règle écrite | Défi | Défi (remplissage de face 0,491 ; Serment 0,692 ; Garde 0,656 ; toutes stables) |
+| Maillage de la figurine | 330 280 triangles, 114,4 cm³ | 771 006 triangles, 108,6 cm³, fermé, 0 arête non-manifold, 1 corps (14 résidus de moins de 1 mm³ retirés) |
+| Épaisseur min / p1 | 2,11 / 3,41 mm | 0,88 / 2,15 mm (seuils 0,8 et 1,2 mm ; 0,13 % de la surface sous 1,2 mm) |
+| Surplombs > 45° (figurine) | 6,3 % | 6,9 % |
+| Socle | cylindre Ø 85,5 × 18 mm | 5 strates, Ø 81 à 94 mm × 18 mm ; marge de 7,3 mm autour des pieds ; paroi d'évidement ≥ 2,9 mm ; surplombs à l'impression 0,19 % |
+| Stabilité, interférence | marge 36,2 mm, 0 mm³ | marge 37,2 mm, 0 mm³ |
+| Tranchage estimé (même profil d'hypothèse) | figurine 10 h 41, 89,5 g ; socle 3 h 16, 30,0 g | figurine 11 h 59, 98,6 g, 1 253 couches ; socle 3 h 44, 33,2 g |
+| Durée totale | 2 min 38 s | 4 min 55 s (géométrie 87,8 s, contrôles 58,1 s, rendus 84,4 s, tranchage 44,8 s) |
+| Pic mémoire cumulé | 1 253 Mo ; Blender 2 107 Mo | 2 282 Mo (contrôles sur 771 k triangles) ; Blender 4 342 Mo |
+| Visionneuse | 13/13 | 13/13 dans Chromium (771 006 + 21 054 triangles affichés) |
+
+Le rendu ajoute une vue rapprochée du buste (`vue_buste.png`), où le détail se juge. Planche avant /
+après et fichiers dans le dossier du projet : `figurine-m08/ardoise/comparaison_v5_v6.png` et
+`figurine-m08/ardoise/v6/` (la v5 reste à sa place). Non-régression de la Sentinelle :
+`preuves/contre_epreuves_details_v6_2026-11-02.json`.
+
+Limites : auto-évaluation sur rendus argile, sans revue indépendante ni impression. Restent faibles :
+les coudes en volumes ronds, le bout de la tresse en boule, des bras encore tubulaires. Les détails sous
+0,8 × 0,5 mm (bouche, gainage de la poignée, strie du socle) relèvent du niveau résine et peuvent
+s'effacer en FDM. Le procédural reste en dessous d'une sculpture faite à la main (backlog, tâche 2).
+
 ## Grille artistique (auto-évaluation, pas une validation indépendante)
 
 | Critère | Observation | Niveau |
@@ -180,7 +217,9 @@ Détail chiffré : `preuves/boucles_2026-11-02.json`.
 - Preuves versionnées (JSON) : `preuves/execution-d70b23ab2e4e3376/`, `preuves/execution-5aafd044cf97f6d3-vegeta-bloque/`,
   `preuves/execution-f65591bfc2cc1f0a-1m-decoupe/`, `preuves/execution-2821f575afea00a7-ardoise/`,
   `preuves/environnement_aligne_2026-11-02.json`, `preuves/atelier_three_core_verifie_2026-11-02.json`,
-  `preuves/contre_epreuves_fabrication_v3_2026-11-02.json`.
+  `preuves/contre_epreuves_fabrication_v3_2026-11-02.json`, `preuves/execution-15546a650b8110ca-ardoise-v6/`,
+  `preuves/contre_epreuves_details_v6_2026-11-02.json`.
 - Fichiers lourds hors Git (dossier du projet, `figurine-m08/`) : `figurine.stl`, `socle.stl`, `projet.3mf`,
   `rendus/` (vues + `figurine.blend`), `visionneuse/` (captures), `tranchage/apercu_couches_figurine.png`.
-- Choix sourcés : `REGISTRE_DECISIONS_M08.md`. Suite : `BACKLOG_ET_REPRISE_M08.md`.
+- Choix sourcés : `REGISTRE_DECISIONS_M08.md`. Grille de conception : `GRILLE_CONCEPTION_FIGURINE.md`.
+  Suite : `BACKLOG_ET_REPRISE_M08.md`.

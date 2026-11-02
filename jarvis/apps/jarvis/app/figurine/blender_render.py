@@ -1,4 +1,4 @@
-"""Rendu Blender sans interface : vues argile (sans texture) et vue maillage.
+"""Rendu Blender sans interface : vues argile (sans texture), vue rapprochée du buste et vue maillage.
 
 Usage : blender -b --factory-startup --python blender_render.py -- OUT_DIR SIZE SAMPLES part1.stl [part2.stl ...]
 Aucun matériau peint : la géométrie seule est jugée.
@@ -76,6 +76,19 @@ for name, d in VIEWS.items():
     cam.rotation_euler = (center - cam.location).to_track_quat('-Z', 'Y').to_euler()
     scene.render.filepath = f'{out_dir}/vue_{name}.png'
     bpy.ops.render.render(write_still=True)
+
+# Vue rapprochée du buste (tête, mains, armure) : les détails se jugent de près.
+fig = objs[0]
+flo = min((fig.matrix_world @ Vector(c)).z for c in fig.bound_box)
+fhi = max((fig.matrix_world @ Vector(c)).z for c in fig.bound_box)
+focus = Vector((center.x, center.y, flo + (fhi - flo) * 0.72))
+cam_data.ortho_scale = radius * 0.78
+d = Vector((-0.45, -1, 0.15)).normalized()
+cam.location = focus + d * radius * 4
+cam.rotation_euler = (focus - cam.location).to_track_quat('-Z', 'Y').to_euler()
+scene.render.filepath = f'{out_dir}/vue_buste.png'
+bpy.ops.render.render(write_still=True)
+cam_data.ortho_scale = radius * 2.15
 
 bpy.ops.wm.save_as_mainfile(filepath=f'{out_dir}/figurine.blend')
 
