@@ -1,5 +1,9 @@
 # État courant — 2 novembre 2026
 
+## Chaîne vocale simulée — 2 novembre 2026
+
+`tools/banc_voix.py` (ou `Mesurer_Voix_BOJART.cmd`) rejoue « Affiche le dashboard atelier » et ses variantes de l'audio au reçu d'affichage : 150 prises de synthèse Piper avec bruit d'atelier synthétique, passées par le vrai code navigateur (fin de prise, encodeur WAV), le vrai serveur, faster-whisper, `JarvisRuntime` (LangGraph, repli règles mesuré à part) et trois vues simulées ; chaque étape est chronométrée, 15 cas d'erreur et une sonde bruit seul. Sur conteneur Linux, `small` : aucune erreur critique (mauvaise vue, affichage non voulu) sur 830 prises, transcription ≈ 1 s, bout en bout ≈ 2,2 s au calme. Le vocabulaire de décodage ajouté à `voice.py` fait passer la commande cible de 12/80 à 65/80 sans élargir le routeur. Restent : fin de prise jamais automatique dès que le bruit est à 10 dB sous la parole (≈ 14 s), « dashboard dossiers » inaccessible à la voix (singulier entendu), voix de fond. Simulation seulement : ni la tour, ni un micro, ni une voix humaine. Voir `docs/BANC_VOIX.md` et `docs/evidence/voix-2026-11-02/README.md`.
+
 ## Banc de simulation pré-installation — 2 novembre 2026
 
 `tools/banc_preinstallation.py` (ou `Banc_BOJART.cmd`) rejoue les 38 actions de Jarvis cataloguées dans `data/preinstallation/actions-jarvis.json` : toutes les suites (dont les suites Jarvis M02–M07, absentes de la CI jusque-là), 16 scénarios HTTP contre le vrai serveur avec trois écrans simulés, arrêt brutal et base corrompue, contrôles de corruption et pièges Windows, encodage cp1252 et roues Windows cp312. Corrigés : lanceurs `.cmd` en CRLF, `PYTHONUTF8` manquant, E/S texte sans UTF-8 explicite, message de base corrompue, chemins Windows non canoniques (noms courts 8.3) dans la restauration d'archive. Restent : médias M07, logo et polices du site hors dépôt, dépendances transitives non épinglées (traité depuis par les verrous Windows `jarvis/locks/`, générés par la CI Windows), reprise manuelle d'un tour reçu pendant un autre. Non codé dans `main` : figurine/découpe/tranchage (PR #15), inventaire et pilotage des imprimantes, devis. Simulation uniquement : aucune qualification de la tour, de la voix, des moniteurs ou des machines. Voir `docs/BANC_SIMULATION_PREINSTALLATION.md`.
@@ -41,7 +45,7 @@ Le Studio gère un catalogue vide et permet de choisir une référence authentiq
 
 ## Voix et Jev
 
-Jev intervient après transcription sur texte et contexte structuré ; l’application vérifie ensuite ses choix. L’adaptateur vise le service TypeSafe `jev-1.14.0`, facultatif. Jev n’est ni ASR, ni TTS, ni autorité machine. Les ordres connus restent locaux. Micro, poids multilingues, précision française et moniteurs demandent une recette sur place. Pipecat est étudié, sans service actif.
+Jev intervient après transcription sur texte et contexte structuré ; l’application vérifie ensuite ses choix. L’adaptateur vise le service TypeSafe `jev-1.14.0`, facultatif. Jev n’est ni ASR, ni TTS, ni autorité machine. Les ordres connus restent locaux. Micro, poids multilingues, précision française et moniteurs demandent une recette sur place ; le banc vocal simulé fixe la référence à comparer (`docs/BANC_VOIX.md`). Pipecat est étudié, sans service actif.
 
 ## Création
 

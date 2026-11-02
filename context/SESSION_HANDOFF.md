@@ -1,5 +1,15 @@
 # Passation — consolidation du 1 novembre 2026
 
+## Chaîne vocale simulée — 2 novembre 2026
+
+Demande d'Olsen (option « chaîne vocale simulée ») : tester « Affiche le dashboard atelier » de bout en bout sans la tour, mesurer chaque étape (médiane, p95, max, erreurs, froid/chaud) pour comparer ensuite avec la tour, y compris bruit, commande inconnue, coupure et réponse tardive. Branche reposée sur la PR #17 (correctif PyAV 18.1.0, verrou voix, `tools/verifier_voix.py`) pour ne pas dupliquer son banc.
+
+Décision : ajouter au décodage de `voice.py` un vocabulaire (`initial_prompt`) avec les mots du catalogue. Raison : sans lui, `small` ne reconnaissait la commande cible que 12 fois sur 80 (« dash beau d'atelier », « Jarvi ») ; avec, 65/80, sans erreur critique, négations toujours refusées, aucune commande inventée sur du bruit seul. Le routeur reste exact. Proposé, non codé : accepter le singulier de « dossiers », « contenus », « trois dashboards » (+7 commandes par mesure, aucun affichage dangereux) ; fin de prise adaptée au bruit ; filtre des phrases fantômes de Whisper.
+
+Fichiers : `bojart_ops/banc_voix.py`, `bojart_ops/voix_corpus.py`, `tools/banc_voix.py`, `tools/banc_voix_navigateur.cjs`, `tests_ops/test_banc_voix.py` (17 tests), `Mesurer_Voix_BOJART.cmd`, `.github/workflows/voice-bench.yml`, `docs/BANC_VOIX.md`, `docs/evidence/voix-2026-11-02/`, `jarvis/apps/jarvis/app/voice.py`, `jarvis/apps/jarvis/tests/test_m02.py`. Corpus (WAV hors Git) déposé dans le dossier partagé du projet : `banc-voix/corpus-voix-2026-11-02.zip`.
+
+Résultat sur conteneur Linux (Xeon 2,1 GHz, 4 cœurs, sans GPU) : 830 prises, 0 erreur critique, 15/15 cas d'erreur à chaque mesure ; référence `small` au commit `dad184c` : transcription 1 001 ms, de la fin de prise au reçu 1 090 ms, bout en bout 2,2 s au calme, 13,9 s avec imprimante (prise arrêtée par la limite de 15 s). `base` : 0/80 ; `large-v3-turbo` sans vocabulaire : 43/80 en 3,9 s. Limites : voix de synthèse, bruit synthétique, traitements audio du navigateur non simulés, vues sans rendu. Prochaine preuve : `Mesurer_Voix_BOJART.cmd` sur la tour avec le même corpus, comparaison avec `small-reference.json`, puis prises au vrai micro dans l'atelier.
+
 ## Banc de simulation pré-installation — 2 novembre 2026
 
 Demande d'Olsen : simuler chaque action que Jarvis devra passer et trouver erreurs, corruptions et améliorations avant l'installation sur la tour. Base `3436f5352659554e4bac5af492b94af6c522ed2d` ; PR #15 (M08) et #16 (contenu) examinées, non modifiées. Le défaut `three.core.js` signalé par la PR #15 est déjà corrigé sur `main` (empreinte conforme à la provenance r180).

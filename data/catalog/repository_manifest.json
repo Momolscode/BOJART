@@ -43,6 +43,11 @@
       "sha256": "373c1e640cfda60f643bb3dee7a7b85224f19019c97ce1114056e3c0a2f7444e"
     },
     {
+      "path": ".github/workflows/voice-bench.yml",
+      "bytes": 4306,
+      "sha256": "c24f41fc2ea013a6e09d314fa1bc2fbb0ededa2cd3c177a5cb8f7f87b7ed468e"
+    },
+    {
       "path": ".github/workflows/workflow-simulations.yml",
       "bytes": 1981,
       "sha256": "23b8a4fa53564e9d9f670801a0258c2782d7489b51c9595c2a2309d693da2f1b"
@@ -106,6 +111,11 @@
       "path": "Mesurer_BOJART.cmd",
       "bytes": 709,
       "sha256": "ae0afe485bb36ee2170f182ac1bd2cf4e380a9ed12cc46f6d8f0e45b54c9d472"
+    },
+    {
+      "path": "Mesurer_Voix_BOJART.cmd",
+      "bytes": 1965,
+      "sha256": "03e6a0376cfdb77becd8b63b6db0974dad96510eab1f3816d2a6b1dbf3ef18f3"
     },
     {
       "path": "PRODUCTION.md",
@@ -363,6 +373,11 @@
       "sha256": "a91a824016a022e154d54162fef4bb86211ff07c424e39d97ddc76707e9adcb8"
     },
     {
+      "path": "bojart_ops/banc_voix.py",
+      "bytes": 67979,
+      "sha256": "c9cae777f254127b3bc8ed56f3a3459ed9ccd7441b292fed272b05ab4e3a4aef"
+    },
+    {
       "path": "bojart_ops/collecte.py",
       "bytes": 18371,
       "sha256": "6650814c47dfdc7dc3e2a3cd383314abe7f9bb360503b03487e13ad97b3d7a66"
@@ -403,19 +418,24 @@
       "sha256": "bb26942e5569bd757b52127bb42ffc68015b8fb2df840cda4c2db5fc48d1c690"
     },
     {
+      "path": "bojart_ops/voix_corpus.py",
+      "bytes": 19305,
+      "sha256": "f161a19a2d26d6e2c4ce598351af83477a7c986a69b62051945e02063a01958d"
+    },
+    {
       "path": "configs/quality_gates.json",
       "bytes": 848,
       "sha256": "03b5d2e1a39f953a4e38a8bbaaadb79923b1be7244fe7ce6a5a3973708d267c7"
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12587,
-      "sha256": "778af37839b7f096cbaa60348569412526da8cc2b95fd0340d4085c2af1a8ce4"
+      "bytes": 13794,
+      "sha256": "b9c1978786fbb48d623bb4d5ef9b5048b538a112fbea5041e987b7e503118bfc"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 45386,
-      "sha256": "ec5ae86138cbc6615ae52a20c11101c7e88bc116ce3ad6eb704d6d59baefdf41"
+      "bytes": 47600,
+      "sha256": "cf817182f8e8e6c9bd074fa894745837b2b43165dba107a97df7b6097e496a39"
     },
     {
       "path": "creative/CURRENT.md",
@@ -504,8 +524,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 13571,
-      "sha256": "c554890c02b7e9aaf1cfb9e659a8313a787d5cf74a54977c430883e112fa925f"
+      "bytes": 16415,
+      "sha256": "1db9080aee23e5d77b4f8d62d052d15ae68642e61b955eacbca2cdf9060d12de"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -514,8 +534,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 18011,
-      "sha256": "e2eaefc537ca0fdeec365db9a6de9f6a293ec92f43142d1c953302bb54c7c18d"
+      "bytes": 18774,
+      "sha256": "61fba7f21b5223f984b019ab414a94d29b4b9d954c2b2716e505acfb39cbbf13"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -524,8 +544,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 8314,
-      "sha256": "24ea61ea661b3b6fd5357692a1993701b81ce834493d63c4d81f722d68c576b9"
+      "bytes": 9608,
+      "sha256": "caa6a9fdb05fc4ccd6b6348c7978be0910efec95f370715caad7dc7f548e6c02"
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
@@ -596,6 +616,11 @@
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
       "bytes": 11719,
       "sha256": "424ab278d50e63b139c70fb813e675edd4e0e1ecf42dd1d1247e9aa53eda0c7a"
+    },
+    {
+      "path": "docs/BANC_VOIX.md",
+      "bytes": 6789,
+      "sha256": "98d9992671624d102313be12a32a31ac7781b851a3cff97e7e25c373e4db7274"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -966,6 +991,86 @@
       "path": "docs/evidence/startup-retrieval-2026-11-01.json",
       "bytes": 4144,
       "sha256": "b872839516aec06623c18dd3f99a289dbaec0465717e6704e044c93760c8248c"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/README.md",
+      "bytes": 12556,
+      "sha256": "6819bac59ca321678daa89dec130e4f17bc142acd7047fed7d62ae44078c1ed7"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/base-sans-vocabulaire.json",
+      "bytes": 322595,
+      "sha256": "2232299df5baff4411c1559bdd56d909faf5acbfbcfd340aaf0c4b2bc01bfefa"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/base-sans-vocabulaire.md",
+      "bytes": 9351,
+      "sha256": "956e6ef4b8fa28442f2d7a7f527bb2918541a5a71a42a6c1f8e64984a0a480d1"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/bruit-seul-small.json",
+      "bytes": 48145,
+      "sha256": "84210ad1e2b31e8e907d6292e4c5861bcc662784f7383229f1852e7f7b7cfe34"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/bruit-seul-small.md",
+      "bytes": 968,
+      "sha256": "aa33f5cae5089b5757cbd7c06c96df0daf1346ad83537e19fc1135d84189efcb"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/corpus-2026-11-02.json",
+      "bytes": 121752,
+      "sha256": "71d7020519c541bd6e4e1d245c2f281ed7465847e4358e915a73f588085043b2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/large-v3-turbo-sans-vocabulaire.json",
+      "bytes": 329339,
+      "sha256": "53da01d3aff7fdd52f49bded0d300d561cb9e85218da27a1d065f408ae505908"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/large-v3-turbo-sans-vocabulaire.md",
+      "bytes": 9128,
+      "sha256": "da032d1c32fcb022ecc23a4720233a8933934454477ecd853a3fa56f8b8a4b95"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-reference.json",
+      "bytes": 335995,
+      "sha256": "60069142de59febe24b2d325995ed25c7c20d29d10e4dfcbc72b0f3eb3dde9f2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-reference.md",
+      "bytes": 8255,
+      "sha256": "66a76a4c84b514bd17d87765b5a85b8c16254ab441289515f8d2e2f043dc1e2c"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire-repli-regles.json",
+      "bytes": 186908,
+      "sha256": "13a101394df877684b5ac93bdb074e9faf75601dc0aa450383732dd4e1c17ac9"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire-repli-regles.md",
+      "bytes": 9112,
+      "sha256": "8de8fead3541549ee1686d18ff09ce2e74c91f40207dac407d2bd27027d6de36"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire.json",
+      "bytes": 323849,
+      "sha256": "9675fc0b1c305060d8c1d9e5cc9b39330cd86837aa1799db2c977ff7db54875d"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire.md",
+      "bytes": 9297,
+      "sha256": "7b97422885920e8b18ffcb9748e5f2cfeb58b5d57ab0473a307f3374361ef3a8"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-variante-vocabulaire.json",
+      "bytes": 336225,
+      "sha256": "5e3439b4d6bd00710fefdb5753c9867351f8dc51bc6acd47108ba95b88081ba2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-variante-vocabulaire.md",
+      "bytes": 8283,
+      "sha256": "ee8bb9e6dda90d639747186cd39856cb2eda0be9c38bd281a5995bc412dcc544"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/README.md",
@@ -1689,8 +1794,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/voice.py",
-      "bytes": 4112,
-      "sha256": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d"
+      "bytes": 4488,
+      "sha256": "25681a6d046dd10a13221a667699af3dd8a9892fc53ce76ac5c2877dae57daca"
     },
     {
       "path": "jarvis/apps/jarvis/app/voice_endpoint.js",
@@ -2044,8 +2149,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_m02.py",
-      "bytes": 15737,
-      "sha256": "b54579d21efddcc470bd331fff7f298e7c8bef993cf573aeaabdbdabbb985c85"
+      "bytes": 15846,
+      "sha256": "0fb43985abb627ad31f63e7e899ff59e07a79c9f3534c5793813ad0319b81965"
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_mission01.py",
@@ -2844,8 +2949,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14790,
-      "sha256": "a6a156ae83d821bd13bf82af7b878f03845e7fd890a0f240f347b568f1044aec"
+      "bytes": 14854,
+      "sha256": "59ff931337e8fb34a8ca1f4416e3de64f0047179b8250f4db59540b57b5213f4"
     },
     {
       "path": "ops/request-example.json",
@@ -4643,6 +4748,11 @@
       "sha256": "ca6308dff0aaf95671dbe734d06de31d78fcfe872e10eaba720c4c81375850b4"
     },
     {
+      "path": "tests_ops/test_banc_voix.py",
+      "bytes": 13704,
+      "sha256": "9593008c0e2b86de59bca2150ecb1724710c5d794b9a622f8844779cb3542235"
+    },
+    {
       "path": "tests_ops/test_collecte.py",
       "bytes": 7975,
       "sha256": "fc0b2071ed7a4db987d327e9c5ec91c82f4fd9e1bfea45b71e443717b2ab5461"
@@ -4696,6 +4806,16 @@
       "path": "tools/banc_preinstallation.py",
       "bytes": 2895,
       "sha256": "80bf51132b0714b928bec7f15be31530ace7b205e5f2a15a5050bc1bcffb629d"
+    },
+    {
+      "path": "tools/banc_voix.py",
+      "bytes": 7347,
+      "sha256": "f0794bc0f1a4c67c7a04cf7ae9036c6cdd80af642ef1924a625cf3db26d724f0"
+    },
+    {
+      "path": "tools/banc_voix_navigateur.cjs",
+      "bytes": 3715,
+      "sha256": "0a4e3efac7c5552cf87b976310b222cdf93edc4bcd937c6207590560ed51233f"
     },
     {
       "path": "tools/benchmark_jarvis.py",

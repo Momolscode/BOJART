@@ -1,0 +1,4778 @@
+{
+ "schema": "bojart.banc_voix.corpus.v1",
+ "cree_le": "2026-11-02T14:43:43+00:00",
+ "nature": "synthèse vocale Piper + bruit synthétique ; pas une voix humaine ni un micro réel",
+ "flux_micro": {
+  "taux_hz": 48000,
+  "duree_s": 15.0,
+  "parole_dbfs": -24.0,
+  "debut_parole_s": 0.6,
+  "non_simule": [
+   "getUserMedia",
+   "AudioWorklet",
+   "annulation d’écho",
+   "réduction de bruit",
+   "gain automatique du navigateur"
+  ]
+ },
+ "code_navigateur": {
+  "node": "v22.23.4",
+  "sources_sha256": {
+   "voice_endpoint.js": "bc1a2847b9e85e5d209754deb082701ea757cb0dd6cc56639ba0a605efe1564b",
+   "capture.js": "1ef361db5ddc266257e6dcd33b0462324860ec84cf8e7b51f573f355e0829b23"
+  }
+ },
+ "outils": {
+  "piper_tts": "1.8.0",
+  "onnxruntime": "1.31.1",
+  "numpy": "2.5.4",
+  "python": "3.13.18",
+  "reechantillonnage": "FFT à bande limitée (numpy) vers 48 kHz"
+ },
+ "voix": {
+  "gilles": {
+   "fichier": "fr_FR-gilles-low.onnx",
+   "locuteur": 0,
+   "description": "gilles, voix masculine, 16 kHz",
+   "licence": "CC0",
+   "onnx_sha256": "5cd711846720e261c2a176f6924c198a7424d0a75dd4b0a5357a5fb9cb739285"
+  },
+  "siwis": {
+   "fichier": "fr_FR-siwis-medium.onnx",
+   "locuteur": 0,
+   "description": "siwis, voix féminine",
+   "licence": "CC-BY 4.0 (SIWIS, Université d’Édimbourg)",
+   "onnx_sha256": "641d1ab097da2b81128c076810edb052b385decc8be3381814802a64a73baf99"
+  },
+  "upmc-jessica": {
+   "fichier": "fr_FR-upmc-medium.onnx",
+   "locuteur": 0,
+   "description": "upmc jessica, voix féminine",
+   "licence": "CC-BY-SA 4.0 (UPMC)",
+   "onnx_sha256": "9abb3800c199148897a9ed64e100d224f3de83579f100044174ad19418f1786f"
+  },
+  "upmc-pierre": {
+   "fichier": "fr_FR-upmc-medium.onnx",
+   "locuteur": 1,
+   "description": "upmc pierre, voix masculine",
+   "licence": "CC-BY-SA 4.0 (UPMC)",
+   "onnx_sha256": "9abb3800c199148897a9ed64e100d224f3de83579f100044174ad19418f1786f"
+  }
+ },
+ "voix_de_fond": {
+  "voix": "gilles",
+  "phrase": "Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi.",
+  "synthese_sha256": "bd212e620d93064215e988c43dd7c5cb75a9f107930439df177d4e970e01b72c"
+ },
+ "conditions": {
+  "calme": {
+   "snr_db": null,
+   "description": "ambiance de pièce à -66 dBFS"
+  },
+  "ventilateur": {
+   "snr_db": 20.0,
+   "description": "souffle rose + ronflement 50 Hz (ventilation, PC)"
+  },
+  "imprimante": {
+   "snr_db": 10.0,
+   "description": "moteurs pas à pas variables + ventilateur"
+  },
+  "atelier_fort": {
+   "snr_db": 5.0,
+   "description": "imprimante et ventilateur proches du micro"
+  },
+  "parole_fond": {
+   "snr_db": 10.0,
+   "description": "une autre voix parle en fond"
+  }
+ },
+ "clips": [
+  {
+   "id": "A1-siwis-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1001,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.1573,
+    "delai_apres_parole_s": 1.0673,
+    "encodage_ms": 52.364
+   },
+   "envoi": {
+    "fichier": "envoi/A1-siwis-calme.wav",
+    "octets": 101078,
+    "sha256": "7b37f07445fd2cc1b4b0f3e115a44e40d9263eac5ce69a95b1766c549e7361ec"
+   }
+  },
+  {
+   "id": "A1-siwis-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "ventilateur",
+   "graine": 1002,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.1573,
+    "delai_apres_parole_s": 1.0673,
+    "encodage_ms": 47.512
+   },
+   "envoi": {
+    "fichier": "envoi/A1-siwis-ventilateur.wav",
+    "octets": 101078,
+    "sha256": "1e4aa3f300f25dfb26c4314c2f5a62a9302bfd0c941fdbb68ae9a40b75838b90"
+   }
+  },
+  {
+   "id": "A1-siwis-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1003,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.91,
+    "encodage_ms": 213.844
+   },
+   "envoi": {
+    "fichier": "envoi/A1-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "f122af6d545bb6e254a7d3dd4d3c7b61742e68b1cab301caa0fb8aec7178ba13"
+   }
+  },
+  {
+   "id": "A1-siwis-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "atelier_fort",
+   "graine": 1004,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.91,
+    "encodage_ms": 214.879
+   },
+   "envoi": {
+    "fichier": "envoi/A1-siwis-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "e119f386a398c7d3d9eb94ce5354e402ee5b78729615a0af55973cfb4b0003f7"
+   }
+  },
+  {
+   "id": "A1-siwis-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "parole_fond",
+   "graine": 1005,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.91,
+    "encodage_ms": 205.596
+   },
+   "envoi": {
+    "fichier": "envoi/A1-siwis-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "ee7fffa66517bd08dc110370edc49b4a84aa8040bdf01378343cc3a3e85123d1"
+   }
+  },
+  {
+   "id": "A1-upmc-jessica-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1006,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.35,
+   "synthese_sha256": "c4815afecec6c9ec988d82ab3e6ac06edf0a629c1ac0a41c94823cb0bda7c925",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3493,
+    "delai_apres_parole_s": 0.9993,
+    "encodage_ms": 47.338
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-jessica-calme.wav",
+    "octets": 107222,
+    "sha256": "c95d4a02220c8c0d86a6c21b659f0579384d1832f4f4f913441518d82035c60c"
+   }
+  },
+  {
+   "id": "A1-upmc-jessica-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "ventilateur",
+   "graine": 1007,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.35,
+   "synthese_sha256": "c4815afecec6c9ec988d82ab3e6ac06edf0a629c1ac0a41c94823cb0bda7c925",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.344,
+    "delai_apres_parole_s": 0.994,
+    "encodage_ms": 45.858
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-jessica-ventilateur.wav",
+    "octets": 107052,
+    "sha256": "4c0ce3c3ddde2ad1e1ae0e502559d57041afb244587743c5fb5e540fa2b89e6e"
+   }
+  },
+  {
+   "id": "A1-upmc-jessica-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1008,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.35,
+   "synthese_sha256": "c4815afecec6c9ec988d82ab3e6ac06edf0a629c1ac0a41c94823cb0bda7c925",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.65,
+    "encodage_ms": 262.939
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "a1a6320cd4c6db9e663b6055532131a38913c63783182665084aa272ae4052a4"
+   }
+  },
+  {
+   "id": "A1-upmc-jessica-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "atelier_fort",
+   "graine": 1009,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.35,
+   "synthese_sha256": "c4815afecec6c9ec988d82ab3e6ac06edf0a629c1ac0a41c94823cb0bda7c925",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.65,
+    "encodage_ms": 248.562
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-jessica-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "5379da716e7706f10cf53b16ca8f09da2c6f3681e663c8589299976d079b9645"
+   }
+  },
+  {
+   "id": "A1-upmc-jessica-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "parole_fond",
+   "graine": 1010,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.35,
+   "synthese_sha256": "c4815afecec6c9ec988d82ab3e6ac06edf0a629c1ac0a41c94823cb0bda7c925",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.65,
+    "encodage_ms": 264.612
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-jessica-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "ace3ecd3fd055fec13ac5a039527feddbc8a574072eafca587e3afbb898b42ef"
+   }
+  },
+  {
+   "id": "A1-upmc-pierre-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1011,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.54,
+   "synthese_sha256": "cec9392a993aa718222b9dfa5860ab961703cf14214e26d137989e92e6eed930",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.52,
+    "delai_apres_parole_s": 0.98,
+    "encodage_ms": 46.494
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-pierre-calme.wav",
+    "octets": 112684,
+    "sha256": "a3c63661810efcabf04ff2ed2a43bc4db1588c8e8b72aa4fc264d3f21eae71fd"
+   }
+  },
+  {
+   "id": "A1-upmc-pierre-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "ventilateur",
+   "graine": 1012,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.54,
+   "synthese_sha256": "cec9392a993aa718222b9dfa5860ab961703cf14214e26d137989e92e6eed930",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5307,
+    "delai_apres_parole_s": 0.9907,
+    "encodage_ms": 44.556
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-pierre-ventilateur.wav",
+    "octets": 113024,
+    "sha256": "fb010c9fa3975b58ea07db763d68ce111cca069d330167853b16dabe67a305ec"
+   }
+  },
+  {
+   "id": "A1-upmc-pierre-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1013,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.54,
+   "synthese_sha256": "cec9392a993aa718222b9dfa5860ab961703cf14214e26d137989e92e6eed930",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.46,
+    "encodage_ms": 202.333
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "f49792ffb881ae76c8696b2de6e32d5266487a6e3d339a40c3e94cf5db41daf1"
+   }
+  },
+  {
+   "id": "A1-upmc-pierre-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "atelier_fort",
+   "graine": 1014,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.54,
+   "synthese_sha256": "cec9392a993aa718222b9dfa5860ab961703cf14214e26d137989e92e6eed930",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.46,
+    "encodage_ms": 209.241
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-pierre-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "097b0d63133e59b3fca997633e1094ef6b8ae7e276ef836f6392dfb80178c939"
+   }
+  },
+  {
+   "id": "A1-upmc-pierre-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "parole_fond",
+   "graine": 1015,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.54,
+   "synthese_sha256": "cec9392a993aa718222b9dfa5860ab961703cf14214e26d137989e92e6eed930",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.46,
+    "encodage_ms": 218.259
+   },
+   "envoi": {
+    "fichier": "envoi/A1-upmc-pierre-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "fc650b74f278dade289e000c6097bdec6dfe19b577f33871629b5972ce9a62f2"
+   }
+  },
+  {
+   "id": "A1-gilles-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1016,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.56,
+   "synthese_sha256": "0a6feae97923553d28f1e146c5308a8163ab579b51bcc16535d13bb21b1f4dd9",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.6267,
+    "delai_apres_parole_s": 1.0667,
+    "encodage_ms": 53.262
+   },
+   "envoi": {
+    "fichier": "envoi/A1-gilles-calme.wav",
+    "octets": 116096,
+    "sha256": "db81dbe17524a4fdededf70947ac9ebbc8564a9137e2454e031f693fd5199c57"
+   }
+  },
+  {
+   "id": "A1-gilles-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "ventilateur",
+   "graine": 1017,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.56,
+   "synthese_sha256": "0a6feae97923553d28f1e146c5308a8163ab579b51bcc16535d13bb21b1f4dd9",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.6267,
+    "delai_apres_parole_s": 1.0667,
+    "encodage_ms": 50.133
+   },
+   "envoi": {
+    "fichier": "envoi/A1-gilles-ventilateur.wav",
+    "octets": 116096,
+    "sha256": "5635eee0670a2617e40c61da4dc78e63f977dea708a8c11a9dbee4bec1987eff"
+   }
+  },
+  {
+   "id": "A1-gilles-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1018,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.56,
+   "synthese_sha256": "0a6feae97923553d28f1e146c5308a8163ab579b51bcc16535d13bb21b1f4dd9",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.44,
+    "encodage_ms": 198.881
+   },
+   "envoi": {
+    "fichier": "envoi/A1-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "1ff1ed110c78f5fd2cc8283e324ae20c5425d4379b000455f58fdf63da57ecde"
+   }
+  },
+  {
+   "id": "A1-gilles-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "atelier_fort",
+   "graine": 1019,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.56,
+   "synthese_sha256": "0a6feae97923553d28f1e146c5308a8163ab579b51bcc16535d13bb21b1f4dd9",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.44,
+    "encodage_ms": 206.131
+   },
+   "envoi": {
+    "fichier": "envoi/A1-gilles-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "2bbdabed1de6b0c124891aabb279fa06812ac3dfe9a4440e21f33ff31f14ff00"
+   }
+  },
+  {
+   "id": "A1-gilles-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "parole_fond",
+   "graine": 1020,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.56,
+   "synthese_sha256": "0a6feae97923553d28f1e146c5308a8163ab579b51bcc16535d13bb21b1f4dd9",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.44,
+    "encodage_ms": 237.979
+   },
+   "envoi": {
+    "fichier": "envoi/A1-gilles-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "15e732e2483ee16e9e36e9e60a4c2d86d648eac03d76d607f7ded8da040da960"
+   }
+  },
+  {
+   "id": "A2-siwis-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1021,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.72,
+   "synthese_sha256": "cf51d9187adb43bbf54d5c08c25477ce3a65083da74906904929ec18af5be0a1",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7947,
+    "delai_apres_parole_s": 1.0747,
+    "encodage_ms": 56.47
+   },
+   "envoi": {
+    "fichier": "envoi/A2-siwis-calme.wav",
+    "octets": 121472,
+    "sha256": "ecd0c54c2160bd7679db66569227b48a3a031067d0eaca49856c02f6e3ae1f8f"
+   }
+  },
+  {
+   "id": "A2-siwis-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "ventilateur",
+   "graine": 1022,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.72,
+   "synthese_sha256": "cf51d9187adb43bbf54d5c08c25477ce3a65083da74906904929ec18af5be0a1",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 6.0853,
+    "delai_apres_parole_s": 3.3653,
+    "encodage_ms": 96.594
+   },
+   "envoi": {
+    "fichier": "envoi/A2-siwis-ventilateur.wav",
+    "octets": 194774,
+    "sha256": "fcaeea03ba226d9f0583455d5cdfa159d63b47e6e970b967e60b11ae9051f31f"
+   }
+  },
+  {
+   "id": "A2-siwis-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1023,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.72,
+   "synthese_sha256": "cf51d9187adb43bbf54d5c08c25477ce3a65083da74906904929ec18af5be0a1",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.28,
+    "encodage_ms": 214.645
+   },
+   "envoi": {
+    "fichier": "envoi/A2-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "5d24b380e3587896e92656799115b8f5288418d8ba78fce3801ef35e017d0eaa"
+   }
+  },
+  {
+   "id": "A2-siwis-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "atelier_fort",
+   "graine": 1024,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.72,
+   "synthese_sha256": "cf51d9187adb43bbf54d5c08c25477ce3a65083da74906904929ec18af5be0a1",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.28,
+    "encodage_ms": 223.96
+   },
+   "envoi": {
+    "fichier": "envoi/A2-siwis-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "3ffd629e8a966ee1578adf4cb4b03059980a040e282891841d068072760943c3"
+   }
+  },
+  {
+   "id": "A2-siwis-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "parole_fond",
+   "graine": 1025,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.72,
+   "synthese_sha256": "cf51d9187adb43bbf54d5c08c25477ce3a65083da74906904929ec18af5be0a1",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.28,
+    "encodage_ms": 187.19
+   },
+   "envoi": {
+    "fichier": "envoi/A2-siwis-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "28705a42352cc019784e387295c84ed84d37faf74f5dd82319be92a2e40b1580"
+   }
+  },
+  {
+   "id": "A2-upmc-jessica-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1026,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.87,
+   "synthese_sha256": "c9dd832eb5b2dbcc571d9dd7cc776912f150c5d9dd9ade8537fb239a54f4edf4",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.8933,
+    "delai_apres_parole_s": 1.0233,
+    "encodage_ms": 52.247
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-jessica-calme.wav",
+    "octets": 124630,
+    "sha256": "151a44286b21fc9acc54be2719375515b12dd832d28d066d890de0d1c4461d54"
+   }
+  },
+  {
+   "id": "A2-upmc-jessica-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "ventilateur",
+   "graine": 1027,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.87,
+   "synthese_sha256": "c9dd832eb5b2dbcc571d9dd7cc776912f150c5d9dd9ade8537fb239a54f4edf4",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.784,
+    "delai_apres_parole_s": 1.914,
+    "encodage_ms": 61.191
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-jessica-ventilateur.wav",
+    "octets": 153132,
+    "sha256": "fc1762d3be10c02d62c5fd2e2c05bf5ad1fcf0eab17ac9f4ee9ba207700f76b1"
+   }
+  },
+  {
+   "id": "A2-upmc-jessica-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1028,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.87,
+   "synthese_sha256": "c9dd832eb5b2dbcc571d9dd7cc776912f150c5d9dd9ade8537fb239a54f4edf4",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.13,
+    "encodage_ms": 188.112
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "25f61d2c4eea1030c9db188b33109849855c7266f7718015a7211a70d0f4e766"
+   }
+  },
+  {
+   "id": "A2-upmc-jessica-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "atelier_fort",
+   "graine": 1029,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.87,
+   "synthese_sha256": "c9dd832eb5b2dbcc571d9dd7cc776912f150c5d9dd9ade8537fb239a54f4edf4",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.13,
+    "encodage_ms": 189.447
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-jessica-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "84b46897db8a5ef1a2a4707b83aad98769e4c93bf089c16c80b2b25d6f37b24d"
+   }
+  },
+  {
+   "id": "A2-upmc-jessica-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "parole_fond",
+   "graine": 1030,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.87,
+   "synthese_sha256": "c9dd832eb5b2dbcc571d9dd7cc776912f150c5d9dd9ade8537fb239a54f4edf4",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.13,
+    "encodage_ms": 190.579
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-jessica-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "642bc4dd9e0cc0351db595d1b446b8e83d3c1edd640b2f55e8f2a055b0a0f2be"
+   }
+  },
+  {
+   "id": "A2-upmc-pierre-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1031,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 3.53,
+   "synthese_sha256": "7bdd6e364d41131da9df79e62b7d3b9c2e947a3042eb18e0fb750c8d4f54ec65",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.5547,
+    "delai_apres_parole_s": 1.0247,
+    "encodage_ms": 57.523
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-pierre-calme.wav",
+    "octets": 145792,
+    "sha256": "7bb11ed9d2a98fe915427fb96ae6c20574bfe957606b658d862e8432531d504f"
+   }
+  },
+  {
+   "id": "A2-upmc-pierre-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "ventilateur",
+   "graine": 1032,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 3.53,
+   "synthese_sha256": "7bdd6e364d41131da9df79e62b7d3b9c2e947a3042eb18e0fb750c8d4f54ec65",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.6587,
+    "delai_apres_parole_s": 1.1287,
+    "encodage_ms": 59.883
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-pierre-ventilateur.wav",
+    "octets": 149120,
+    "sha256": "23eed81745658747414ff53c36fd95c48ef24b82023e38522c3913812541440c"
+   }
+  },
+  {
+   "id": "A2-upmc-pierre-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1033,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 3.53,
+   "synthese_sha256": "7bdd6e364d41131da9df79e62b7d3b9c2e947a3042eb18e0fb750c8d4f54ec65",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 11.47,
+    "encodage_ms": 210.7
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "43a1ac6ed8d32c595c1453d2755c524389d7168d84ea0b9428a169d155e94871"
+   }
+  },
+  {
+   "id": "A2-upmc-pierre-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "atelier_fort",
+   "graine": 1034,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 3.53,
+   "synthese_sha256": "7bdd6e364d41131da9df79e62b7d3b9c2e947a3042eb18e0fb750c8d4f54ec65",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 11.47,
+    "encodage_ms": 203.904
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-pierre-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "5fefee6de08a66ba9bd3f086cb3d37dfe738b674a57b7efc6b45ba7a21b89984"
+   }
+  },
+  {
+   "id": "A2-upmc-pierre-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "parole_fond",
+   "graine": 1035,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 3.53,
+   "synthese_sha256": "7bdd6e364d41131da9df79e62b7d3b9c2e947a3042eb18e0fb750c8d4f54ec65",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 11.47,
+    "encodage_ms": 192.279
+   },
+   "envoi": {
+    "fichier": "envoi/A2-upmc-pierre-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "778e0914f61a3c1813121e5cb3f9cbf27dbecc948b74719fe6ba900e9553acef"
+   }
+  },
+  {
+   "id": "A2-gilles-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1036,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.92,
+   "synthese_sha256": "6b9a347346f11d1fce9a692cab2fc833f7c733b9b0186d46e96552541f87ef13",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.9893,
+    "delai_apres_parole_s": 1.0693,
+    "encodage_ms": 51.708
+   },
+   "envoi": {
+    "fichier": "envoi/A2-gilles-calme.wav",
+    "octets": 127702,
+    "sha256": "675bb6d303bfaf277ef089d2f14de6ca609a91089b2bf7e2d106c2b83c2edc23"
+   }
+  },
+  {
+   "id": "A2-gilles-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "ventilateur",
+   "graine": 1037,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.92,
+   "synthese_sha256": "6b9a347346f11d1fce9a692cab2fc833f7c733b9b0186d46e96552541f87ef13",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.9893,
+    "delai_apres_parole_s": 1.0693,
+    "encodage_ms": 51.732
+   },
+   "envoi": {
+    "fichier": "envoi/A2-gilles-ventilateur.wav",
+    "octets": 127702,
+    "sha256": "d05047a25c0f41e395a397e7b47113b35a86b8ad100eb7a0d65488b1522c5910"
+   }
+  },
+  {
+   "id": "A2-gilles-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1038,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.92,
+   "synthese_sha256": "6b9a347346f11d1fce9a692cab2fc833f7c733b9b0186d46e96552541f87ef13",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.08,
+    "encodage_ms": 190.07
+   },
+   "envoi": {
+    "fichier": "envoi/A2-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "34cf6155a899bb1c12a467cd18be9f11d65c3207e022653e0e635df6b8d5824f"
+   }
+  },
+  {
+   "id": "A2-gilles-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "atelier_fort",
+   "graine": 1039,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.92,
+   "synthese_sha256": "6b9a347346f11d1fce9a692cab2fc833f7c733b9b0186d46e96552541f87ef13",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.08,
+    "encodage_ms": 194.661
+   },
+   "envoi": {
+    "fichier": "envoi/A2-gilles-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "b965ff3b2169ca5ec3a6572ee6ed78889929755341dec91fe79b3f2e217f85b5"
+   }
+  },
+  {
+   "id": "A2-gilles-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "parole_fond",
+   "graine": 1040,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.92,
+   "synthese_sha256": "6b9a347346f11d1fce9a692cab2fc833f7c733b9b0186d46e96552541f87ef13",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.08,
+    "encodage_ms": 190.491
+   },
+   "envoi": {
+    "fichier": "envoi/A2-gilles-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "74a0297a0f756a73c3b1c54347d5020b9e23df17839223c47ba75f20d7b94017"
+   }
+  },
+  {
+   "id": "A3-siwis-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1041,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.33,
+   "synthese_sha256": "b61b8bd2cd1dfcb065a38c0b84427ffbe6a073e72ef010745a3d9678ad33b264",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3973,
+    "delai_apres_parole_s": 1.0673,
+    "encodage_ms": 42.289
+   },
+   "envoi": {
+    "fichier": "envoi/A3-siwis-calme.wav",
+    "octets": 108758,
+    "sha256": "4fcb5fe199800d5d343f2a247123a35089f3a85c8e8f64c2d3491696d50dd899"
+   }
+  },
+  {
+   "id": "A3-siwis-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "ventilateur",
+   "graine": 1042,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.33,
+   "synthese_sha256": "b61b8bd2cd1dfcb065a38c0b84427ffbe6a073e72ef010745a3d9678ad33b264",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.4667,
+    "delai_apres_parole_s": 1.1367,
+    "encodage_ms": 42.529
+   },
+   "envoi": {
+    "fichier": "envoi/A3-siwis-ventilateur.wav",
+    "octets": 110976,
+    "sha256": "257e89ea4ce4ec6a95550557ab2e37d79a5b4bed737abf33505dbcd8de148af4"
+   }
+  },
+  {
+   "id": "A3-siwis-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1043,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.33,
+   "synthese_sha256": "b61b8bd2cd1dfcb065a38c0b84427ffbe6a073e72ef010745a3d9678ad33b264",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.67,
+    "encodage_ms": 226.685
+   },
+   "envoi": {
+    "fichier": "envoi/A3-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "55ddb4af3b1cfd7ef9f10c60af19a3440b15df71cc7face61f13ee3d63ac68cd"
+   }
+  },
+  {
+   "id": "A3-siwis-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "atelier_fort",
+   "graine": 1044,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.33,
+   "synthese_sha256": "b61b8bd2cd1dfcb065a38c0b84427ffbe6a073e72ef010745a3d9678ad33b264",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.67,
+    "encodage_ms": 195.398
+   },
+   "envoi": {
+    "fichier": "envoi/A3-siwis-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "e41fd0f07010266e6a046e9d1a5bac628d149b6ac2877a5f6402682b28d83926"
+   }
+  },
+  {
+   "id": "A3-siwis-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "parole_fond",
+   "graine": 1045,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.33,
+   "synthese_sha256": "b61b8bd2cd1dfcb065a38c0b84427ffbe6a073e72ef010745a3d9678ad33b264",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.67,
+    "encodage_ms": 194.288
+   },
+   "envoi": {
+    "fichier": "envoi/A3-siwis-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "99b0405b754b6e7bb9b2fdc684302440eb9c0de737b5c030562d64bf54305409"
+   }
+  },
+  {
+   "id": "A3-upmc-jessica-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1046,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.82,
+   "synthese_sha256": "a0d518e8b7c932f3107e8bb53f084e86e87736aaf1484acced3667de40563888",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.8453,
+    "delai_apres_parole_s": 1.0253,
+    "encodage_ms": 52.024
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-jessica-calme.wav",
+    "octets": 123094,
+    "sha256": "5d85083e84eb9dad15612b686c7aa0200b6b53764b63aba3082404b521c0f534"
+   }
+  },
+  {
+   "id": "A3-upmc-jessica-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "ventilateur",
+   "graine": 1047,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.82,
+   "synthese_sha256": "a0d518e8b7c932f3107e8bb53f084e86e87736aaf1484acced3667de40563888",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.8453,
+    "delai_apres_parole_s": 1.0253,
+    "encodage_ms": 48.74
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-jessica-ventilateur.wav",
+    "octets": 123094,
+    "sha256": "f1aae69e0f3848598bece375d7ae1621fb7fad527f71d01d3ca32c4f8f124bc9"
+   }
+  },
+  {
+   "id": "A3-upmc-jessica-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1048,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.82,
+   "synthese_sha256": "a0d518e8b7c932f3107e8bb53f084e86e87736aaf1484acced3667de40563888",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.18,
+    "encodage_ms": 199.926
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "a65c1d8b8390b9ebc40100a9fb9294b6d7f408f2c2deef57420dfc0cd0d1896e"
+   }
+  },
+  {
+   "id": "A3-upmc-jessica-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "atelier_fort",
+   "graine": 1049,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.82,
+   "synthese_sha256": "a0d518e8b7c932f3107e8bb53f084e86e87736aaf1484acced3667de40563888",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.18,
+    "encodage_ms": 208.758
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-jessica-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "31dbdfcfea1d89c7f250e8aa848eff47075a6dd626532cd416d35f55aa22f847"
+   }
+  },
+  {
+   "id": "A3-upmc-jessica-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "parole_fond",
+   "graine": 1050,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.82,
+   "synthese_sha256": "a0d518e8b7c932f3107e8bb53f084e86e87736aaf1484acced3667de40563888",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.18,
+    "encodage_ms": 227.46
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-jessica-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "6b3e434014adf814861a803adc25b27b416585cbbda2b1adcfbacf96730aacf3"
+   }
+  },
+  {
+   "id": "A3-upmc-pierre-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1051,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.47,
+   "synthese_sha256": "892fdc7dd96509ee888836cf2c3e1557e5e41b3a3bece327b20117a9cd01e66f",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5093,
+    "delai_apres_parole_s": 1.0393,
+    "encodage_ms": 46.295
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-pierre-calme.wav",
+    "octets": 112342,
+    "sha256": "04c3ce034aeef0888cd66addd2f884c13a59c2605e56f34ff79d7e526d94dad6"
+   }
+  },
+  {
+   "id": "A3-upmc-pierre-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "ventilateur",
+   "graine": 1052,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.47,
+   "synthese_sha256": "892fdc7dd96509ee888836cf2c3e1557e5e41b3a3bece327b20117a9cd01e66f",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 5.4827,
+    "delai_apres_parole_s": 3.0127,
+    "encodage_ms": 69.457
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-pierre-ventilateur.wav",
+    "octets": 175488,
+    "sha256": "61a32eaa8945adf5486f3fddabeb458925675a5a590a2e2fc5a8339cba04cb85"
+   }
+  },
+  {
+   "id": "A3-upmc-pierre-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1053,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.47,
+   "synthese_sha256": "892fdc7dd96509ee888836cf2c3e1557e5e41b3a3bece327b20117a9cd01e66f",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.53,
+    "encodage_ms": 213.497
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "1cdb3554d53596c9f862063aa1b04cf7fb1b90d31a647210e7b7e1d9d90ed044"
+   }
+  },
+  {
+   "id": "A3-upmc-pierre-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "atelier_fort",
+   "graine": 1054,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.47,
+   "synthese_sha256": "892fdc7dd96509ee888836cf2c3e1557e5e41b3a3bece327b20117a9cd01e66f",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.53,
+    "encodage_ms": 202.571
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-pierre-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "81c5aac532b79ab923c5f253edf670e260444f1b1f52d7b3eb2d8962b93c591e"
+   }
+  },
+  {
+   "id": "A3-upmc-pierre-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "parole_fond",
+   "graine": 1055,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.47,
+   "synthese_sha256": "892fdc7dd96509ee888836cf2c3e1557e5e41b3a3bece327b20117a9cd01e66f",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.53,
+    "encodage_ms": 196.12
+   },
+   "envoi": {
+    "fichier": "envoi/A3-upmc-pierre-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "50cee6d8ca67d48b450920f55ee002b9880adfae432a7a3fe096a96657ee7491"
+   }
+  },
+  {
+   "id": "A3-gilles-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1056,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.44,
+   "synthese_sha256": "92b1ba2b92ffe03cf203d07c0cdc05e80ce691b9de1a15d797681f000f1ab6b3",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5307,
+    "delai_apres_parole_s": 1.0907,
+    "encodage_ms": 49.968
+   },
+   "envoi": {
+    "fichier": "envoi/A3-gilles-calme.wav",
+    "octets": 113024,
+    "sha256": "4c87470a02cd4a969e2b83c762e0f3ae653ce55ec915e6de76c2716c8d8dc655"
+   }
+  },
+  {
+   "id": "A3-gilles-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "ventilateur",
+   "graine": 1057,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.44,
+   "synthese_sha256": "92b1ba2b92ffe03cf203d07c0cdc05e80ce691b9de1a15d797681f000f1ab6b3",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.1653,
+    "delai_apres_parole_s": 1.7253,
+    "encodage_ms": 53.219
+   },
+   "envoi": {
+    "fichier": "envoi/A3-gilles-ventilateur.wav",
+    "octets": 133334,
+    "sha256": "1536eb4cf95fac6c5622637c5bb687119968f8270681ef9b158719871d034d24"
+   }
+  },
+  {
+   "id": "A3-gilles-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1058,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.44,
+   "synthese_sha256": "92b1ba2b92ffe03cf203d07c0cdc05e80ce691b9de1a15d797681f000f1ab6b3",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.56,
+    "encodage_ms": 217.907
+   },
+   "envoi": {
+    "fichier": "envoi/A3-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "fa592985514224f2b8653116191132a76433af357662f8e697eb9641d0cc7824"
+   }
+  },
+  {
+   "id": "A3-gilles-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "atelier_fort",
+   "graine": 1059,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.44,
+   "synthese_sha256": "92b1ba2b92ffe03cf203d07c0cdc05e80ce691b9de1a15d797681f000f1ab6b3",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.56,
+    "encodage_ms": 293.224
+   },
+   "envoi": {
+    "fichier": "envoi/A3-gilles-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "2e2c7e740ac36b5230f4b2541efa2717852e2b2b69c29c5a335621a929652a01"
+   }
+  },
+  {
+   "id": "A3-gilles-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "parole_fond",
+   "graine": 1060,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.44,
+   "synthese_sha256": "92b1ba2b92ffe03cf203d07c0cdc05e80ce691b9de1a15d797681f000f1ab6b3",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.56,
+    "encodage_ms": 195.03
+   },
+   "envoi": {
+    "fichier": "envoi/A3-gilles-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "8866b3c00f904e3c80a60f56e64ae65992ce269b8de717f6ab86679eefeb3ae0"
+   }
+  },
+  {
+   "id": "A4-siwis-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1061,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.97,
+   "synthese_sha256": "026f2e15caf79f7173f86b90400c0fd080c645d4bcebcadedeccc169c1f0953c",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.0267,
+    "delai_apres_parole_s": 1.0567,
+    "encodage_ms": 41.516
+   },
+   "envoi": {
+    "fichier": "envoi/A4-siwis-calme.wav",
+    "octets": 96896,
+    "sha256": "92f0630618e0645dc5105d016c2d22777943212ac6b49f3d0eceb3f4f3e3a4f8"
+   }
+  },
+  {
+   "id": "A4-siwis-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "ventilateur",
+   "graine": 1062,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.97,
+   "synthese_sha256": "026f2e15caf79f7173f86b90400c0fd080c645d4bcebcadedeccc169c1f0953c",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.4987,
+    "delai_apres_parole_s": 1.5287,
+    "encodage_ms": 47.5
+   },
+   "envoi": {
+    "fichier": "envoi/A4-siwis-ventilateur.wav",
+    "octets": 112000,
+    "sha256": "e495e3c810c1dc69605ab8869abc67395f2ee45b2d45389734d7d5f168c717d3"
+   }
+  },
+  {
+   "id": "A4-siwis-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1063,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.97,
+   "synthese_sha256": "026f2e15caf79f7173f86b90400c0fd080c645d4bcebcadedeccc169c1f0953c",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.03,
+    "encodage_ms": 197.903
+   },
+   "envoi": {
+    "fichier": "envoi/A4-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "44a7f2da0dc3c09c1f75191131ad8e41926770c14e2150d3c56ce6282c3626b0"
+   }
+  },
+  {
+   "id": "A4-siwis-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "atelier_fort",
+   "graine": 1064,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.97,
+   "synthese_sha256": "026f2e15caf79f7173f86b90400c0fd080c645d4bcebcadedeccc169c1f0953c",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.03,
+    "encodage_ms": 189.21
+   },
+   "envoi": {
+    "fichier": "envoi/A4-siwis-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "f77274c000a66e98a397ee34caa03e0ff73dd07398b829ef61d62b6252936d20"
+   }
+  },
+  {
+   "id": "A4-siwis-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "parole_fond",
+   "graine": 1065,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.97,
+   "synthese_sha256": "026f2e15caf79f7173f86b90400c0fd080c645d4bcebcadedeccc169c1f0953c",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.03,
+    "encodage_ms": 229.41
+   },
+   "envoi": {
+    "fichier": "envoi/A4-siwis-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "a9afa9fc325f28355a45388825aae8277d46b1cea910260fac75644fa719413b"
+   }
+  },
+  {
+   "id": "A4-upmc-jessica-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1066,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.3,
+   "synthese_sha256": "41367bcba3d774e3203b7181a52e85a5670f69de4dfd2894cf61ecdbbb726457",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.264,
+    "delai_apres_parole_s": 0.964,
+    "encodage_ms": 44.795
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-jessica-calme.wav",
+    "octets": 104492,
+    "sha256": "8d3b1594c1f4d22fd0063cee21e95a70d3886c608c8fab0c01f2ae47111d70e6"
+   }
+  },
+  {
+   "id": "A4-upmc-jessica-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "ventilateur",
+   "graine": 1067,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.3,
+   "synthese_sha256": "41367bcba3d774e3203b7181a52e85a5670f69de4dfd2894cf61ecdbbb726457",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 5.5627,
+    "delai_apres_parole_s": 3.2627,
+    "encodage_ms": 76.376
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-jessica-ventilateur.wav",
+    "octets": 178048,
+    "sha256": "f8ec4c3ef59410be3ccdb369a09cbb9bafab4f4691e7c8e9601bf604d00f06c0"
+   }
+  },
+  {
+   "id": "A4-upmc-jessica-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1068,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.3,
+   "synthese_sha256": "41367bcba3d774e3203b7181a52e85a5670f69de4dfd2894cf61ecdbbb726457",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.7,
+    "encodage_ms": 216.195
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "a52bca2e380f5ac732cbfbd9eef41bfc27dfeef37f164ed1614be91c6a51583b"
+   }
+  },
+  {
+   "id": "A4-upmc-jessica-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "atelier_fort",
+   "graine": 1069,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.3,
+   "synthese_sha256": "41367bcba3d774e3203b7181a52e85a5670f69de4dfd2894cf61ecdbbb726457",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.7,
+    "encodage_ms": 203.503
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-jessica-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "4cdd0d8f207a0a19b8aac298f8e1f794e7d70c2a7892827483c9963cfafbacc4"
+   }
+  },
+  {
+   "id": "A4-upmc-jessica-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "parole_fond",
+   "graine": 1070,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.3,
+   "synthese_sha256": "41367bcba3d774e3203b7181a52e85a5670f69de4dfd2894cf61ecdbbb726457",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.7,
+    "encodage_ms": 225.087
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-jessica-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "1fbb0fc74d8ccbc2015d1583a8990fb641a04c591ada36ac0046398c06eebce6"
+   }
+  },
+  {
+   "id": "A4-upmc-pierre-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1071,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.34,
+   "synthese_sha256": "78335c659fdcdb3f20fce69575edaf0ca41bcaf4f1d4d86cb71cc9990941c128",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3253,
+    "delai_apres_parole_s": 0.9853,
+    "encodage_ms": 49.3
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-pierre-calme.wav",
+    "octets": 106454,
+    "sha256": "cfc4a5118750d04a2c0194a8f2e005a97db6fc35f97f64170caf18ca11c7715a"
+   }
+  },
+  {
+   "id": "A4-upmc-pierre-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "ventilateur",
+   "graine": 1072,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.34,
+   "synthese_sha256": "78335c659fdcdb3f20fce69575edaf0ca41bcaf4f1d4d86cb71cc9990941c128",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3307,
+    "delai_apres_parole_s": 0.9907,
+    "encodage_ms": 42.86
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-pierre-ventilateur.wav",
+    "octets": 106624,
+    "sha256": "87ba5d55d6d0500bed6c7aa62120a886de3f98c6baadb516ae92358364a24d67"
+   }
+  },
+  {
+   "id": "A4-upmc-pierre-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1073,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.34,
+   "synthese_sha256": "78335c659fdcdb3f20fce69575edaf0ca41bcaf4f1d4d86cb71cc9990941c128",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.66,
+    "encodage_ms": 213.485
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "087be571b1ac46b033472547bacc1bfd78338aa61da7fd0f29cd7a28fc8e889f"
+   }
+  },
+  {
+   "id": "A4-upmc-pierre-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "atelier_fort",
+   "graine": 1074,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.34,
+   "synthese_sha256": "78335c659fdcdb3f20fce69575edaf0ca41bcaf4f1d4d86cb71cc9990941c128",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.66,
+    "encodage_ms": 200.117
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-pierre-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "460fc8a3a3b6c11f0fb5044d2782f166ad9cc6d2c5c45035bfc50a3561b0e35a"
+   }
+  },
+  {
+   "id": "A4-upmc-pierre-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "parole_fond",
+   "graine": 1075,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.34,
+   "synthese_sha256": "78335c659fdcdb3f20fce69575edaf0ca41bcaf4f1d4d86cb71cc9990941c128",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.66,
+    "encodage_ms": 205.697
+   },
+   "envoi": {
+    "fichier": "envoi/A4-upmc-pierre-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "5f9a5dbbd1ca2651fdfc9056a7b1d1763694284edbcb67d85cbf674e8404ee5a"
+   }
+  },
+  {
+   "id": "A4-gilles-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1076,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.59,
+   "synthese_sha256": "343335b9e9f621afbe51f2b21bf27ca8b3c98b31ec5f15a4076c1b401e056175",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.6613,
+    "delai_apres_parole_s": 1.0713,
+    "encodage_ms": 53.795
+   },
+   "envoi": {
+    "fichier": "envoi/A4-gilles-calme.wav",
+    "octets": 117206,
+    "sha256": "629fb8fa4ff64c92f586e6068b4b26be4603aff19695142963b6783c471c4827"
+   }
+  },
+  {
+   "id": "A4-gilles-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "ventilateur",
+   "graine": 1077,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.59,
+   "synthese_sha256": "343335b9e9f621afbe51f2b21bf27ca8b3c98b31ec5f15a4076c1b401e056175",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.84,
+    "delai_apres_parole_s": 1.25,
+    "encodage_ms": 53.997
+   },
+   "envoi": {
+    "fichier": "envoi/A4-gilles-ventilateur.wav",
+    "octets": 122924,
+    "sha256": "4b93e3601175bdde5d6a250fb3ac221c1942c015d2a0394c93a29caf21727de5"
+   }
+  },
+  {
+   "id": "A4-gilles-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1078,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.59,
+   "synthese_sha256": "343335b9e9f621afbe51f2b21bf27ca8b3c98b31ec5f15a4076c1b401e056175",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.41,
+    "encodage_ms": 202.473
+   },
+   "envoi": {
+    "fichier": "envoi/A4-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "79a5172fee55c5af41e8c4cfc0bf09fd57cb25f6bee240a4691a2a28785c8074"
+   }
+  },
+  {
+   "id": "A4-gilles-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "atelier_fort",
+   "graine": 1079,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.59,
+   "synthese_sha256": "343335b9e9f621afbe51f2b21bf27ca8b3c98b31ec5f15a4076c1b401e056175",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.41,
+    "encodage_ms": 191.806
+   },
+   "envoi": {
+    "fichier": "envoi/A4-gilles-atelier_fort.wav",
+    "octets": 480044,
+    "sha256": "03defd36a8cdb8e5e0bf728bcb4dc5ad0867b28050590b421aeb37489bcf6d39"
+   }
+  },
+  {
+   "id": "A4-gilles-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "parole_fond",
+   "graine": 1080,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.59,
+   "synthese_sha256": "343335b9e9f621afbe51f2b21bf27ca8b3c98b31ec5f15a4076c1b401e056175",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.41,
+    "encodage_ms": 212.05
+   },
+   "envoi": {
+    "fichier": "envoi/A4-gilles-parole_fond.wav",
+    "octets": 480044,
+    "sha256": "a4f757c5066a9b67d56036e1202c913eb94491946e1c29e7e23018d17ee172a1"
+   }
+  },
+  {
+   "id": "B1-siwis-calme",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1081,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.06,
+   "synthese_sha256": "fa52bf88984e0cbe05a29f15314c377d1424ce468d1ba5101048c7ca11a83fa1",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.12,
+    "delai_apres_parole_s": 1.06,
+    "encodage_ms": 47.111
+   },
+   "envoi": {
+    "fichier": "envoi/B1-siwis-calme.wav",
+    "octets": 99884,
+    "sha256": "57de46d01e43add9683d96bcb3b5eb18a31cd0228b5cccebc3bf3ab63dd9e4da"
+   }
+  },
+  {
+   "id": "B1-siwis-imprimante",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1082,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.06,
+   "synthese_sha256": "fa52bf88984e0cbe05a29f15314c377d1424ce468d1ba5101048c7ca11a83fa1",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.94,
+    "encodage_ms": 263.111
+   },
+   "envoi": {
+    "fichier": "envoi/B1-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "9f778eb0d1aa235af43dd32e4b6e9e095d3b880eb33b97b924d95a520bffd183"
+   }
+  },
+  {
+   "id": "B1-upmc-jessica-calme",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1083,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.4973,
+   "synthese_sha256": "bed78a8cb4387893bfb03e39c7165b16592218666a3c6e1c30e78ea2c7a1cae5",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3653,
+    "delai_apres_parole_s": 0.868,
+    "encodage_ms": 42.351
+   },
+   "envoi": {
+    "fichier": "envoi/B1-upmc-jessica-calme.wav",
+    "octets": 107734,
+    "sha256": "0ebd6673b3ba7c3b980cba66315b81fbe2c11a23a1c6272a0324deb322701e1a"
+   }
+  },
+  {
+   "id": "B1-upmc-jessica-imprimante",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1084,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.4973,
+   "synthese_sha256": "bed78a8cb4387893bfb03e39c7165b16592218666a3c6e1c30e78ea2c7a1cae5",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.5027,
+    "encodage_ms": 187.88
+   },
+   "envoi": {
+    "fichier": "envoi/B1-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "e933a27bb708e55ad9de94e95c2fcf804beca5c804f8697523e64318118a0f3c"
+   }
+  },
+  {
+   "id": "B1-upmc-pierre-calme",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1085,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.52,
+   "synthese_sha256": "a55cc33302e85a153b8c22ebbf51c45fd317a5078f96e457083caf29aefb04e9",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5227,
+    "delai_apres_parole_s": 1.0027,
+    "encodage_ms": 45.567
+   },
+   "envoi": {
+    "fichier": "envoi/B1-upmc-pierre-calme.wav",
+    "octets": 112768,
+    "sha256": "f387330b36efbd23935d4956c35d01b854c7587a75276fd9dc21733cc88eb580"
+   }
+  },
+  {
+   "id": "B1-upmc-pierre-imprimante",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1086,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.52,
+   "synthese_sha256": "a55cc33302e85a153b8c22ebbf51c45fd317a5078f96e457083caf29aefb04e9",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.48,
+    "encodage_ms": 221.401
+   },
+   "envoi": {
+    "fichier": "envoi/B1-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "0211a1d386b1fd08483c106996e7fa5a8b5b0f9ef9965609c25c3186df6011a6"
+   }
+  },
+  {
+   "id": "B1-gilles-calme",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1087,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.64,
+   "synthese_sha256": "e1419fbfdc9d970546fad4333d4790803fb68c09ad39194c571f1bc16f1b7393",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7173,
+    "delai_apres_parole_s": 1.0773,
+    "encodage_ms": 81.344
+   },
+   "envoi": {
+    "fichier": "envoi/B1-gilles-calme.wav",
+    "octets": 118998,
+    "sha256": "9e1e2c3035ea2bdbadfa0a644b933f00f582aa63defcd85e9339b477ea51cb74"
+   }
+  },
+  {
+   "id": "B1-gilles-imprimante",
+   "phrase_id": "B1",
+   "phrase": "Affiche le dashboard dossiers.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "workspace",
+    "vues": [
+     "pilotage"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1088,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.64,
+   "synthese_sha256": "e1419fbfdc9d970546fad4333d4790803fb68c09ad39194c571f1bc16f1b7393",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.36,
+    "encodage_ms": 224.367
+   },
+   "envoi": {
+    "fichier": "envoi/B1-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "9b708ee905840f50d84d30a73828375ce503512a4f99ace6027da7a4c207258e"
+   }
+  },
+  {
+   "id": "B2-siwis-calme",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1089,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.06,
+   "synthese_sha256": "f38cba0a818c2150ff62fd2ba153ba9ca118c94af4ff323b04d3dd935a43f4f1",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.12,
+    "delai_apres_parole_s": 1.06,
+    "encodage_ms": 49.958
+   },
+   "envoi": {
+    "fichier": "envoi/B2-siwis-calme.wav",
+    "octets": 99884,
+    "sha256": "a24a8cd698abbc6dff0aedc797f95724be69c374d31c2e4f210d18ab32159f52"
+   }
+  },
+  {
+   "id": "B2-siwis-imprimante",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1090,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.06,
+   "synthese_sha256": "f38cba0a818c2150ff62fd2ba153ba9ca118c94af4ff323b04d3dd935a43f4f1",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.94,
+    "encodage_ms": 219.235
+   },
+   "envoi": {
+    "fichier": "envoi/B2-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "c4b4e80fffb860d0c2bc320f1b3fbcddfc231a69a5c4dfc3fa29ba161b9f1f4f"
+   }
+  },
+  {
+   "id": "B2-upmc-jessica-calme",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1091,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.42,
+   "synthese_sha256": "b88b7002a7f5af1602ae2b6566771b5b88dc6eb3e85f57c536a2a588807a846b",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.392,
+    "delai_apres_parole_s": 0.972,
+    "encodage_ms": 51.498
+   },
+   "envoi": {
+    "fichier": "envoi/B2-upmc-jessica-calme.wav",
+    "octets": 108588,
+    "sha256": "98892b033f104f1fd991d0c5615c49ea34518428d3c96f1878a4684269da710f"
+   }
+  },
+  {
+   "id": "B2-upmc-jessica-imprimante",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1092,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.42,
+   "synthese_sha256": "b88b7002a7f5af1602ae2b6566771b5b88dc6eb3e85f57c536a2a588807a846b",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.58,
+    "encodage_ms": 239.074
+   },
+   "envoi": {
+    "fichier": "envoi/B2-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "8f38eee61674cdbe2e83469478eb0ad5a08f777229398effd0de14faa680bdaf"
+   }
+  },
+  {
+   "id": "B2-upmc-pierre-calme",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1093,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.46,
+   "synthese_sha256": "5f6d2716230dda79e9df790045bb73998097635e6e49bd8df2b49485cef78f6a",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.4747,
+    "delai_apres_parole_s": 1.0147,
+    "encodage_ms": 49.637
+   },
+   "envoi": {
+    "fichier": "envoi/B2-upmc-pierre-calme.wav",
+    "octets": 111232,
+    "sha256": "d2552c7bd185ade26661412d2b385cab8cd6a3d9cd34b74ef5a13a4b777452e7"
+   }
+  },
+  {
+   "id": "B2-upmc-pierre-imprimante",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1094,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.46,
+   "synthese_sha256": "5f6d2716230dda79e9df790045bb73998097635e6e49bd8df2b49485cef78f6a",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.54,
+    "encodage_ms": 230.222
+   },
+   "envoi": {
+    "fichier": "envoi/B2-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "4e947b6251c814b759038036373c7abf95db8a89f7fe53ab454c47b9fac5db04"
+   }
+  },
+  {
+   "id": "B2-gilles-calme",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1095,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.68,
+   "synthese_sha256": "7ed14751b5aa6eb0a7a6b69ce28a10fe9bec888550305daf14c614e6618c1958",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7653,
+    "delai_apres_parole_s": 1.0853,
+    "encodage_ms": 59.099
+   },
+   "envoi": {
+    "fichier": "envoi/B2-gilles-calme.wav",
+    "octets": 120534,
+    "sha256": "4c00c172354bdb9c9212caf193f600b8e1af01c25f7f3d347f0a60ee0494c9af"
+   }
+  },
+  {
+   "id": "B2-gilles-imprimante",
+   "phrase_id": "B2",
+   "phrase": "Affiche le dashboard Studio.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "studio",
+    "vues": [
+     "creation"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1096,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.68,
+   "synthese_sha256": "7ed14751b5aa6eb0a7a6b69ce28a10fe9bec888550305daf14c614e6618c1958",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.32,
+    "encodage_ms": 201.55
+   },
+   "envoi": {
+    "fichier": "envoi/B2-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "c3511a92e7a48a124d44be92f6422ae74a51317a90edcdb8cf0b1d4ac9b3b911"
+   }
+  },
+  {
+   "id": "B3-siwis-calme",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1097,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.96,
+   "synthese_sha256": "a405a33b58cfcecc035ea125ebbceaaa1a45850ac55c248fc677ed1172ad147f",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.0293,
+    "delai_apres_parole_s": 1.0693,
+    "encodage_ms": 37.746
+   },
+   "envoi": {
+    "fichier": "envoi/B3-siwis-calme.wav",
+    "octets": 96982,
+    "sha256": "e5dbfdd038486c6795a18edf6df3529d46c8b497f8ef29d9c5813c898d14ab42"
+   }
+  },
+  {
+   "id": "B3-siwis-imprimante",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1098,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.96,
+   "synthese_sha256": "a405a33b58cfcecc035ea125ebbceaaa1a45850ac55c248fc677ed1172ad147f",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.04,
+    "encodage_ms": 195.721
+   },
+   "envoi": {
+    "fichier": "envoi/B3-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "0d43394f5ce251b2ee09fb7d811d586ee3e805f27da1234f0a1ecf2bbf1ff862"
+   }
+  },
+  {
+   "id": "B3-upmc-jessica-calme",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1099,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "59210b3a9f7e21314eaa20a997aeef6e17f8845586e0c92e253d120510735523",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.1387,
+    "delai_apres_parole_s": 1.0487,
+    "encodage_ms": 40.526
+   },
+   "envoi": {
+    "fichier": "envoi/B3-upmc-jessica-calme.wav",
+    "octets": 100480,
+    "sha256": "dbeaeaa59a1cfc019e9a418cf2b4208f898e341c9465f574fb5563b878714113"
+   }
+  },
+  {
+   "id": "B3-upmc-jessica-imprimante",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1100,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "59210b3a9f7e21314eaa20a997aeef6e17f8845586e0c92e253d120510735523",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.91,
+    "encodage_ms": 193.092
+   },
+   "envoi": {
+    "fichier": "envoi/B3-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "f1c8df580378112873e5a6606d9af500072cddb7fe799dd5067ce3d3f8ad8b6e"
+   }
+  },
+  {
+   "id": "B3-upmc-pierre-calme",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1101,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.38,
+   "synthese_sha256": "3110edfdff1e1856cf134cd47fcddb5418eb0309d5f9696a4c6dd485dad7c354",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3867,
+    "delai_apres_parole_s": 1.0067,
+    "encodage_ms": 46.563
+   },
+   "envoi": {
+    "fichier": "envoi/B3-upmc-pierre-calme.wav",
+    "octets": 108416,
+    "sha256": "f65ec3b9da118d689bafb089523859741a5ce25122af638bff3463de6eaf102b"
+   }
+  },
+  {
+   "id": "B3-upmc-pierre-imprimante",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1102,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.38,
+   "synthese_sha256": "3110edfdff1e1856cf134cd47fcddb5418eb0309d5f9696a4c6dd485dad7c354",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.62,
+    "encodage_ms": 196.496
+   },
+   "envoi": {
+    "fichier": "envoi/B3-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "ba2873c32fd8df35bdb5a4a625b6109494b7a00b5d659184cefba67349187d07"
+   }
+  },
+  {
+   "id": "B3-gilles-calme",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1103,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.73,
+   "synthese_sha256": "5f02eb75be512a9c0f49bfe8ab4bdf49831d43c7a933dca520397ce809479604",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7227,
+    "delai_apres_parole_s": 0.9927,
+    "encodage_ms": 48.457
+   },
+   "envoi": {
+    "fichier": "envoi/B3-gilles-calme.wav",
+    "octets": 119168,
+    "sha256": "a55d8fa6a5a8559594e8c110e9823dce9975f4a0732992d81bd5329a2d8efe18"
+   }
+  },
+  {
+   "id": "B3-gilles-imprimante",
+   "phrase_id": "B3",
+   "phrase": "Affiche les trois dashboards.",
+   "groupe": "catalogue",
+   "attendu": {
+    "type": "affichage",
+    "choix": "tower",
+    "vues": [
+     "atelier",
+     "pilotage",
+     "creation"
+    ]
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1104,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.73,
+   "synthese_sha256": "5f02eb75be512a9c0f49bfe8ab4bdf49831d43c7a933dca520397ce809479604",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.27,
+    "encodage_ms": 200.773
+   },
+   "envoi": {
+    "fichier": "envoi/B3-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "a4e6e9a548c3064cfa71c8debf78a00777e86d6b994010bac5ce2ff659b26af8"
+   }
+  },
+  {
+   "id": "C1-siwis-calme",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1105,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.27,
+   "synthese_sha256": "275c6f95f6262e39b6832aab1d7d9ee613e6fd325a1d642ef96bf56b4a16c43a",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3387,
+    "delai_apres_parole_s": 1.0687,
+    "encodage_ms": 43.084
+   },
+   "envoi": {
+    "fichier": "envoi/C1-siwis-calme.wav",
+    "octets": 106880,
+    "sha256": "7e3430fb839400b74dfb8b476c23a607fe28553764f1233c56cfee4ebcee9aef"
+   }
+  },
+  {
+   "id": "C1-siwis-imprimante",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1106,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.27,
+   "synthese_sha256": "275c6f95f6262e39b6832aab1d7d9ee613e6fd325a1d642ef96bf56b4a16c43a",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.73,
+    "encodage_ms": 228.008
+   },
+   "envoi": {
+    "fichier": "envoi/C1-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "886414eaedc6cfb77c0965e2999456b2f89218146da03798c5b63532bf8cd5d7"
+   }
+  },
+  {
+   "id": "C1-upmc-jessica-calme",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1107,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.67,
+   "synthese_sha256": "2e006eeb5d8034203c77a51e49e7fba3455d8c23b703df707c489bb391a17af3",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7093,
+    "delai_apres_parole_s": 1.0393,
+    "encodage_ms": 52.153
+   },
+   "envoi": {
+    "fichier": "envoi/C1-upmc-jessica-calme.wav",
+    "octets": 118742,
+    "sha256": "37effc94366aad2db9ba9c254e7fdde33be6fc2e01c79647183dee6391a84a6d"
+   }
+  },
+  {
+   "id": "C1-upmc-jessica-imprimante",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1108,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.67,
+   "synthese_sha256": "2e006eeb5d8034203c77a51e49e7fba3455d8c23b703df707c489bb391a17af3",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.33,
+    "encodage_ms": 205.7
+   },
+   "envoi": {
+    "fichier": "envoi/C1-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "4c1ccafafc2f3fbea77667fa289e81e1b44b418ef98287aa56c6f660f6136fc0"
+   }
+  },
+  {
+   "id": "C1-upmc-pierre-calme",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1109,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.92,
+   "synthese_sha256": "e68ff7958c0e0c00eccc349f0aa91912a0f5ad5c29f6bbeae5b97d29de8ae65f",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.904,
+    "delai_apres_parole_s": 0.984,
+    "encodage_ms": 55.714
+   },
+   "envoi": {
+    "fichier": "envoi/C1-upmc-pierre-calme.wav",
+    "octets": 124972,
+    "sha256": "ac1c72c3754c287a8897fe217b154e27c77b604b582bdf8b8a56816f4f7de7bf"
+   }
+  },
+  {
+   "id": "C1-upmc-pierre-imprimante",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1110,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.92,
+   "synthese_sha256": "e68ff7958c0e0c00eccc349f0aa91912a0f5ad5c29f6bbeae5b97d29de8ae65f",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.08,
+    "encodage_ms": 226.139
+   },
+   "envoi": {
+    "fichier": "envoi/C1-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "058911e576a443ad359c69a4b61763bcca03ca14ea868773155fc2b271f9dccc"
+   }
+  },
+  {
+   "id": "C1-gilles-calme",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1111,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.65,
+   "synthese_sha256": "fc8abe951af55824ade9a7f2443c5a2da1f95480c43219a3dc3ed2db32174905",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7227,
+    "delai_apres_parole_s": 1.0727,
+    "encodage_ms": 78.097
+   },
+   "envoi": {
+    "fichier": "envoi/C1-gilles-calme.wav",
+    "octets": 119168,
+    "sha256": "1a420bf5c482967859c968f57bfc8cb21c173af981e40a8cb4fc148829194ec0"
+   }
+  },
+  {
+   "id": "C1-gilles-imprimante",
+   "phrase_id": "C1",
+   "phrase": "Affiche le dashboard de l’atelier.",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1112,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.65,
+   "synthese_sha256": "fc8abe951af55824ade9a7f2443c5a2da1f95480c43219a3dc3ed2db32174905",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.35,
+    "encodage_ms": 202.159
+   },
+   "envoi": {
+    "fichier": "envoi/C1-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "332877150eb3b6c820498120a71b3a76cb7a46b234915f1db3874b75f2d0311e"
+   }
+  },
+  {
+   "id": "C2-siwis-calme",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1113,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.3,
+   "synthese_sha256": "e80c2fac94224ad343f28ea12c609a1b3fb26d0df2ee42b6f1329d8bd2db41d4",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3573,
+    "delai_apres_parole_s": 1.0573,
+    "encodage_ms": 44.781
+   },
+   "envoi": {
+    "fichier": "envoi/C2-siwis-calme.wav",
+    "octets": 107478,
+    "sha256": "ab4e8909d502e6bbd1111bba3c693f93b0581d6b1b86e303db55aec8137e330b"
+   }
+  },
+  {
+   "id": "C2-siwis-imprimante",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1114,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.3,
+   "synthese_sha256": "e80c2fac94224ad343f28ea12c609a1b3fb26d0df2ee42b6f1329d8bd2db41d4",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.7,
+    "encodage_ms": 193.266
+   },
+   "envoi": {
+    "fichier": "envoi/C2-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "19062af88984059c2ba48d23acb991d77af92dc9a50460433c5f965457bde9ca"
+   }
+  },
+  {
+   "id": "C2-upmc-jessica-calme",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1115,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.45,
+   "synthese_sha256": "1d245a0ba40463c0efb2538a939341fc837b09658aaf106533c2ab0165def2a7",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.4907,
+    "delai_apres_parole_s": 1.0407,
+    "encodage_ms": 45.587
+   },
+   "envoi": {
+    "fichier": "envoi/C2-upmc-jessica-calme.wav",
+    "octets": 111744,
+    "sha256": "7d4cb127d7629ab84bab094ff78c7ab7f2b76aa1abb3da1334e1bd25aefcf3f1"
+   }
+  },
+  {
+   "id": "C2-upmc-jessica-imprimante",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1116,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.45,
+   "synthese_sha256": "1d245a0ba40463c0efb2538a939341fc837b09658aaf106533c2ab0165def2a7",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.55,
+    "encodage_ms": 200.966
+   },
+   "envoi": {
+    "fichier": "envoi/C2-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "a269fcbffa790543507188809501d5bf75b34f69398148b8333ca550f2623bd5"
+   }
+  },
+  {
+   "id": "C2-upmc-pierre-calme",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1117,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.52,
+   "synthese_sha256": "59675b4760210f6dbd8e66360f3501d6c283705d9574d6659fd8139372cf1b74",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5573,
+    "delai_apres_parole_s": 1.0373,
+    "encodage_ms": 46.191
+   },
+   "envoi": {
+    "fichier": "envoi/C2-upmc-pierre-calme.wav",
+    "octets": 113878,
+    "sha256": "3f4ff0ab7124113b4b5f54c2e7e4cfe857229116f39b6b5a74833957f6c7cf24"
+   }
+  },
+  {
+   "id": "C2-upmc-pierre-imprimante",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1118,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.52,
+   "synthese_sha256": "59675b4760210f6dbd8e66360f3501d6c283705d9574d6659fd8139372cf1b74",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.48,
+    "encodage_ms": 207.456
+   },
+   "envoi": {
+    "fichier": "envoi/C2-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "899299544ddee3caa5db20d4b32be9b479018404d3a39d62656f13016a61d533"
+   }
+  },
+  {
+   "id": "C2-gilles-calme",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1119,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.97,
+   "synthese_sha256": "e5db96e7f2a3d6cdce6e1762871e0eaec58a21d943d32c0fa31ba78d896b32a6",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.056,
+    "delai_apres_parole_s": 1.086,
+    "encodage_ms": 65
+   },
+   "envoi": {
+    "fichier": "envoi/C2-gilles-calme.wav",
+    "octets": 129836,
+    "sha256": "3ed1e85dabc2af68eca4804790d56d2da89ecb9915bbb6041dbe4a8dba8148b0"
+   }
+  },
+  {
+   "id": "C2-gilles-imprimante",
+   "phrase_id": "C2",
+   "phrase": "Tu peux m’afficher le dashboard atelier ?",
+   "groupe": "hors_catalogue",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "formulation_hors_catalogue"
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1120,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.97,
+   "synthese_sha256": "e5db96e7f2a3d6cdce6e1762871e0eaec58a21d943d32c0fa31ba78d896b32a6",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.03,
+    "encodage_ms": 292.913
+   },
+   "envoi": {
+    "fichier": "envoi/C2-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "e4575fdb3fe8d1e29903b7a0bade6c8914adddb844bf0982a6e982282b0a77eb"
+   }
+  },
+  {
+   "id": "D1-siwis-calme",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1121,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.67,
+   "synthese_sha256": "8b25b040789b1e1f7b9702bec9e5cfed665a301a7bcf3365daa4cf14791585d1",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7173,
+    "delai_apres_parole_s": 1.0473,
+    "encodage_ms": 52.718
+   },
+   "envoi": {
+    "fichier": "envoi/D1-siwis-calme.wav",
+    "octets": 118998,
+    "sha256": "4d60e9b349615f0bdedab57090e738f0ff7fc8d9710cded2f8ca3b2a952fd381"
+   }
+  },
+  {
+   "id": "D1-siwis-imprimante",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1122,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.67,
+   "synthese_sha256": "8b25b040789b1e1f7b9702bec9e5cfed665a301a7bcf3365daa4cf14791585d1",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.33,
+    "encodage_ms": 227.279
+   },
+   "envoi": {
+    "fichier": "envoi/D1-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "a32b1241417263472d3dd81884dfe836935fd8ba1c5108f635da568709c25797"
+   }
+  },
+  {
+   "id": "D1-upmc-jessica-calme",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1123,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.81,
+   "synthese_sha256": "c1381f174443700b1035d521268ab0aacddd2ed12a83a4dcfed6018c724ae3a7",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7067,
+    "delai_apres_parole_s": 0.8967,
+    "encodage_ms": 69.067
+   },
+   "envoi": {
+    "fichier": "envoi/D1-upmc-jessica-calme.wav",
+    "octets": 118656,
+    "sha256": "c537abc20a469a1ad29b287cbc370bae8b5e1c7daa7712fa95aae13e54a71587"
+   }
+  },
+  {
+   "id": "D1-upmc-jessica-imprimante",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1124,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.81,
+   "synthese_sha256": "c1381f174443700b1035d521268ab0aacddd2ed12a83a4dcfed6018c724ae3a7",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.19,
+    "encodage_ms": 206.543
+   },
+   "envoi": {
+    "fichier": "envoi/D1-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "9cb4cade53bc0b93fc797375192cbc7a39f2a15d16bfba51eb3dad5d2e9f02f7"
+   }
+  },
+  {
+   "id": "D1-upmc-pierre-calme",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1125,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.38,
+   "synthese_sha256": "f778de8ce6085e8753b0d77b17f67b2522262e96671b2c63a307533e9525bd31",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.392,
+    "delai_apres_parole_s": 1.012,
+    "encodage_ms": 43.802
+   },
+   "envoi": {
+    "fichier": "envoi/D1-upmc-pierre-calme.wav",
+    "octets": 108588,
+    "sha256": "c0d6628bc8bb18b6604f79c5f72cbf1bdac113d61608c1085497e306d92fed37"
+   }
+  },
+  {
+   "id": "D1-upmc-pierre-imprimante",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1126,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.38,
+   "synthese_sha256": "f778de8ce6085e8753b0d77b17f67b2522262e96671b2c63a307533e9525bd31",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.62,
+    "encodage_ms": 207.479
+   },
+   "envoi": {
+    "fichier": "envoi/D1-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "36ce2b8788e41b6ed3d8f371ea0f614a9d804e1ffbf808d1d48c0ce5e8707418"
+   }
+  },
+  {
+   "id": "D1-gilles-calme",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1127,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.61,
+   "synthese_sha256": "7b7842d557ebc20dcb0abe3b1870ce3cd4999bda53692f1ca29df44a41fde6b4",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.672,
+    "delai_apres_parole_s": 1.062,
+    "encodage_ms": 49.072
+   },
+   "envoi": {
+    "fichier": "envoi/D1-gilles-calme.wav",
+    "octets": 117548,
+    "sha256": "6b41411fecc0f9665543cc132a83a396f5203f8d00790f423199ee89bc54e4aa"
+   }
+  },
+  {
+   "id": "D1-gilles-imprimante",
+   "phrase_id": "D1",
+   "phrase": "Lance l’impression de la figurine.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "commande_inconnue_physique"
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1128,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.61,
+   "synthese_sha256": "7b7842d557ebc20dcb0abe3b1870ce3cd4999bda53692f1ca29df44a41fde6b4",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.39,
+    "encodage_ms": 301.305
+   },
+   "envoi": {
+    "fichier": "envoi/D1-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "399f8d27a0433e365601db16bcdd78db1dac318412a68644feab138d944dd265"
+   }
+  },
+  {
+   "id": "D2-siwis-calme",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1129,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.24,
+   "synthese_sha256": "078e6e7d8fbf819ca3ccc58e07f1c030825185cefe954154ff1a183bd5d4a2cc",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.2827,
+    "delai_apres_parole_s": 1.0427,
+    "encodage_ms": 43.373
+   },
+   "envoi": {
+    "fichier": "envoi/D2-siwis-calme.wav",
+    "octets": 105088,
+    "sha256": "0650f30b4114cab7659823992f60a7f19adac2fb965e851a7c83e01c1837964d"
+   }
+  },
+  {
+   "id": "D2-siwis-imprimante",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1130,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.24,
+   "synthese_sha256": "078e6e7d8fbf819ca3ccc58e07f1c030825185cefe954154ff1a183bd5d4a2cc",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.76,
+    "encodage_ms": 247.706
+   },
+   "envoi": {
+    "fichier": "envoi/D2-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "7aecbf6c33fc8fb7a2e75366f0f902e3fb5f743e0fa78ec1c071c7be978a53e0"
+   }
+  },
+  {
+   "id": "D2-upmc-jessica-calme",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1131,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.36,
+   "synthese_sha256": "b96d7c550ef7358cd1250b0e8c79df7e7ea61416223b8fb79325960add5f587a",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3467,
+    "delai_apres_parole_s": 0.9867,
+    "encodage_ms": 53.273
+   },
+   "envoi": {
+    "fichier": "envoi/D2-upmc-jessica-calme.wav",
+    "octets": 107136,
+    "sha256": "32685748bf6dce6b3babe53608a16b992881bdf44fc4fa4f58ad2726667a31a6"
+   }
+  },
+  {
+   "id": "D2-upmc-jessica-imprimante",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1132,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.36,
+   "synthese_sha256": "b96d7c550ef7358cd1250b0e8c79df7e7ea61416223b8fb79325960add5f587a",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.64,
+    "encodage_ms": 194.989
+   },
+   "envoi": {
+    "fichier": "envoi/D2-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "3746b5cd591330bcf2f1a16f4db035508faffad436e909d486a4a75b9864d8af"
+   }
+  },
+  {
+   "id": "D2-upmc-pierre-calme",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1133,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.4,
+   "synthese_sha256": "6a01e0e62dcc3c1bb1d65eea7d49db108d38053fc9b2adf1058b2346b33d2628",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.448,
+    "delai_apres_parole_s": 1.048,
+    "encodage_ms": 44.974
+   },
+   "envoi": {
+    "fichier": "envoi/D2-upmc-pierre-calme.wav",
+    "octets": 110380,
+    "sha256": "9e8597e8c490e15cee595bb4cf3bf616cc62e3dc91dcdcfd9790dfaf6fd4471d"
+   }
+  },
+  {
+   "id": "D2-upmc-pierre-imprimante",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1134,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.4,
+   "synthese_sha256": "6a01e0e62dcc3c1bb1d65eea7d49db108d38053fc9b2adf1058b2346b33d2628",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.6,
+    "encodage_ms": 193.011
+   },
+   "envoi": {
+    "fichier": "envoi/D2-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "188f3978daeabc830044d4232c9fc67dbe8bddebecbf9b3de80fde9f5d78da3a"
+   }
+  },
+  {
+   "id": "D2-gilles-calme",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1135,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.86,
+   "synthese_sha256": "d89bd65af370c52041888751c0d134bacabb81f58df28a62be843de251e88222",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.9413,
+    "delai_apres_parole_s": 1.0813,
+    "encodage_ms": 49.678
+   },
+   "envoi": {
+    "fichier": "envoi/D2-gilles-calme.wav",
+    "octets": 126166,
+    "sha256": "2d8358de4ff9c93d8937cbddd23a0e69615b1c063a266fa419985816a859026a"
+   }
+  },
+  {
+   "id": "D2-gilles-imprimante",
+   "phrase_id": "D2",
+   "phrase": "N’affiche pas le dashboard atelier.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "negation"
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1136,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.86,
+   "synthese_sha256": "d89bd65af370c52041888751c0d134bacabb81f58df28a62be843de251e88222",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.14,
+    "encodage_ms": 205.465
+   },
+   "envoi": {
+    "fichier": "envoi/D2-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "ffe173124f6f57cebc000376927083ff33d8fef017bc520864f6c50602752909"
+   }
+  },
+  {
+   "id": "D3-siwis-calme",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1137,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.77,
+   "synthese_sha256": "006c8dfbac6d19f0df515fb073ca4a66692e52e3dc19b8b9839560c3d83f8228",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 2.8347,
+    "delai_apres_parole_s": 1.0647,
+    "encodage_ms": 39.652
+   },
+   "envoi": {
+    "fichier": "envoi/D3-siwis-calme.wav",
+    "octets": 90752,
+    "sha256": "70c4100cbc9be220c7896e23929372afced6f359536ab732838c14b220a6f4b5"
+   }
+  },
+  {
+   "id": "D3-siwis-imprimante",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "siwis",
+   "condition": "imprimante",
+   "graine": 1138,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.77,
+   "synthese_sha256": "006c8dfbac6d19f0df515fb073ca4a66692e52e3dc19b8b9839560c3d83f8228",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.23,
+    "encodage_ms": 202.633
+   },
+   "envoi": {
+    "fichier": "envoi/D3-siwis-imprimante.wav",
+    "octets": 480044,
+    "sha256": "d4fee759d2d23ba667367a52d19bac32b0bef72da3a118191009368e42e31d76"
+   }
+  },
+  {
+   "id": "D3-upmc-jessica-calme",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "upmc-jessica",
+   "condition": "calme",
+   "graine": 1139,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.96,
+   "synthese_sha256": "c91d124e7d8c21819df17262976cf3224cb88e484056c53da394dd5eb519c810",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 2.968,
+    "delai_apres_parole_s": 1.008,
+    "encodage_ms": 44.234
+   },
+   "envoi": {
+    "fichier": "envoi/D3-upmc-jessica-calme.wav",
+    "octets": 95020,
+    "sha256": "24e9a7196ff56beef7b42633e660542a91541aa915c1cc43bf715b99e6a85d45"
+   }
+  },
+  {
+   "id": "D3-upmc-jessica-imprimante",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "upmc-jessica",
+   "condition": "imprimante",
+   "graine": 1140,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.96,
+   "synthese_sha256": "c91d124e7d8c21819df17262976cf3224cb88e484056c53da394dd5eb519c810",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.04,
+    "encodage_ms": 239.432
+   },
+   "envoi": {
+    "fichier": "envoi/D3-upmc-jessica-imprimante.wav",
+    "octets": 480044,
+    "sha256": "f354440ea1e7c816bfc41825a084837dec5a5d8b64fdbab03e89e79c0ebe4b3f"
+   }
+  },
+  {
+   "id": "D3-upmc-pierre-calme",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "upmc-pierre",
+   "condition": "calme",
+   "graine": 1141,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.12,
+   "synthese_sha256": "d3c465e35c3775a7c3aa7c1853bbddd01c32c1cd97fc373ae7512f4b66b8205e",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.1493,
+    "delai_apres_parole_s": 1.0293,
+    "encodage_ms": 45.905
+   },
+   "envoi": {
+    "fichier": "envoi/D3-upmc-pierre-calme.wav",
+    "octets": 100822,
+    "sha256": "77bf2f9f07b1d6337e9da998de8fec20ec12e4f1d8c9766b53ebca27d0c4df86"
+   }
+  },
+  {
+   "id": "D3-upmc-pierre-imprimante",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "upmc-pierre",
+   "condition": "imprimante",
+   "graine": 1142,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.12,
+   "synthese_sha256": "d3c465e35c3775a7c3aa7c1853bbddd01c32c1cd97fc373ae7512f4b66b8205e",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.88,
+    "encodage_ms": 203.184
+   },
+   "envoi": {
+    "fichier": "envoi/D3-upmc-pierre-imprimante.wav",
+    "octets": 480044,
+    "sha256": "a3f74b00c966607578b6b782590822c4a4b120645588b34b09207fca361adf92"
+   }
+  },
+  {
+   "id": "D3-gilles-calme",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "gilles",
+   "condition": "calme",
+   "graine": 1143,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.38,
+   "synthese_sha256": "6ce1c61eb3dbbd603e00c570bd83709c127b765a39545b6ccc6fd9ccf8cb237f",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.448,
+    "delai_apres_parole_s": 1.068,
+    "encodage_ms": 43.788
+   },
+   "envoi": {
+    "fichier": "envoi/D3-gilles-calme.wav",
+    "octets": 110380,
+    "sha256": "e1c96b8cd9b76d9af241037d3b1251dd78e46a3cc882fba23e3a13a5f85a42d7"
+   }
+  },
+  {
+   "id": "D3-gilles-imprimante",
+   "phrase_id": "D3",
+   "phrase": "Affiche le dashboard.",
+   "groupe": "interdit",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "tableau_non_precise"
+   },
+   "voix": "gilles",
+   "condition": "imprimante",
+   "graine": 1144,
+   "gain_db": 0.0,
+   "coupure": null,
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.38,
+   "synthese_sha256": "6ce1c61eb3dbbd603e00c570bd83709c127b765a39545b6ccc6fd9ccf8cb237f",
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.62,
+    "encodage_ms": 238.591
+   },
+   "envoi": {
+    "fichier": "envoi/D3-gilles-imprimante.wav",
+    "octets": 480044,
+    "sha256": "d4a964eac5bc02e8bede634c71473b636afbe8c44fc8fd7fa4e20b4e6198add7"
+   }
+  },
+  {
+   "id": "E-voix-faible-siwis",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "limite",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1145,
+   "gain_db": -16.0,
+   "coupure": null,
+   "description": "parole 16 dB plus faible que le niveau de référence",
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "no_speech",
+    "t_s": 6.0027,
+    "delai_apres_parole_s": 3.9127,
+    "encodage_ms": 105.311
+   },
+   "envoi": {
+    "fichier": "envoi/E-voix-faible-siwis.wav",
+    "octets": 192128,
+    "sha256": "6ba8fc4a3293b794813765bea687e49617e012ff33f7d0520f9de3d05b1601cb"
+   }
+  },
+  {
+   "id": "E-saturation-siwis",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "limite",
+   "attendu": {
+    "type": "refus_audio",
+    "raison": "saturation"
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1146,
+   "gain_db": 30.0,
+   "coupure": null,
+   "description": "gain excessif",
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 2.09,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.192,
+    "delai_apres_parole_s": 1.102,
+    "encodage_ms": 40.83
+   },
+   "envoi": {
+    "fichier": "envoi/E-saturation-siwis.wav",
+    "octets": 102188,
+    "sha256": "1fec0fe694e6e17ec53e87c6da11a3fd2dbc8429dca212d6c0cffa75cab79b32"
+   }
+  },
+  {
+   "id": "E-parole-coupee-siwis",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "limite",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "parole_coupee"
+   },
+   "voix": "siwis",
+   "condition": "calme",
+   "graine": 1147,
+   "gain_db": 0.0,
+   "coupure": 0.55,
+   "description": "prise interrompue à 55 % de la phrase",
+   "parole_debut_s": 0.6,
+   "parole_fin_s": 1.4195,
+   "synthese_sha256": "711505327022005bfbb18461ae97d992411f2109930745c058db003f5ce18a2d",
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 2.4933,
+    "delai_apres_parole_s": 1.0738,
+    "encodage_ms": 32.085
+   },
+   "envoi": {
+    "fichier": "envoi/E-parole-coupee-siwis.wav",
+    "octets": 79830,
+    "sha256": "af6d5ea34b12af9f56fd4c626d3474b487d6f2bd145b975cd6d5c1ddef5a9323"
+   }
+  },
+  {
+   "id": "E-silence",
+   "phrase_id": null,
+   "phrase": "",
+   "groupe": "limite",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "pas_de_parole"
+   },
+   "voix": null,
+   "condition": "calme",
+   "graine": 1148,
+   "gain_db": 0.0,
+   "coupure": null,
+   "description": "aucune parole, seulement l’ambiance",
+   "parole_debut_s": null,
+   "parole_fin_s": null,
+   "synthese_sha256": null,
+   "fin_de_prise": {
+    "raison": "no_speech",
+    "t_s": 6.0027,
+    "delai_apres_parole_s": null,
+    "encodage_ms": 82.176
+   },
+   "envoi": {
+    "fichier": "envoi/E-silence.wav",
+    "octets": 192128,
+    "sha256": "f18a7397b245212b6ce85acba21f7c830e1b6a9b5d4c73dabfb3e5d54030d5cc"
+   }
+  },
+  {
+   "id": "E-bruit-seul",
+   "phrase_id": null,
+   "phrase": "",
+   "groupe": "limite",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "pas_de_parole"
+   },
+   "voix": null,
+   "condition": "imprimante",
+   "graine": 1149,
+   "gain_db": 0.0,
+   "coupure": null,
+   "description": "aucune parole, seulement l’ambiance",
+   "parole_debut_s": null,
+   "parole_fin_s": null,
+   "synthese_sha256": null,
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": null,
+    "encodage_ms": 231.038
+   },
+   "envoi": {
+    "fichier": "envoi/E-bruit-seul.wav",
+    "octets": 480044,
+    "sha256": "f890e388b5e2b7aabba8a0842e9539eb5ac6fd1bceb11ded6b5886dce3c1a861"
+   }
+  },
+  {
+   "id": "E-bruit-fort-seul",
+   "phrase_id": null,
+   "phrase": "",
+   "groupe": "limite",
+   "attendu": {
+    "type": "aucun_affichage",
+    "raison": "pas_de_parole"
+   },
+   "voix": null,
+   "condition": "atelier_fort",
+   "graine": 1150,
+   "gain_db": 0.0,
+   "coupure": null,
+   "description": "aucune parole, seulement l’ambiance",
+   "parole_debut_s": null,
+   "parole_fin_s": null,
+   "synthese_sha256": null,
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": null,
+    "encodage_ms": 202.386
+   },
+   "envoi": {
+    "fichier": "envoi/E-bruit-fort-seul.wav",
+    "octets": 480044,
+    "sha256": "5e09c16bc394f4c641683d1f579789ad0f45eb53f12689db3667177d1bcfb20d"
+   }
+  }
+ ]
+}
