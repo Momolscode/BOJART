@@ -23,6 +23,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE_SHA = 'b49101e3acad6257e2d1a610dac5fb95ec0a8bfb'
+BASELINE_MANIFEST_SHA256 = '9073f8c0538660ddc147563a4d47884885813e17ccafcb826b86b5e4f0734b0a'
 
 
 def distribution(values):
@@ -106,6 +107,13 @@ def source_hashes(repo):
 
 
 def compare(baseline, repeats, expected_engine):
+    manifest_bytes = (baseline/'data/catalog/repository_manifest.json').read_bytes()
+    if hashlib.sha256(manifest_bytes).hexdigest() != BASELINE_MANIFEST_SHA256:
+        raise ValueError('Baseline manifest differs from the pinned commit.')
+    expected = {entry['path']:entry['sha256'] for entry in json.loads(manifest_bytes)['files']}
+    for path, digest in source_hashes(baseline).items():
+        if expected.get(path) != digest:
+            raise ValueError('Baseline source differs from the pinned manifest: '+path)
     rounds = []
     for index, (label, repo) in enumerate((('baseline',baseline),('candidate',ROOT),
                                           ('candidate',ROOT),('baseline',baseline))):

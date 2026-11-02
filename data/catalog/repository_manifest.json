@@ -1314,8 +1314,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/sqlite_sessions.py",
-      "bytes": 4257,
-      "sha256": "4d452168f2edc4c93a65a0bfaebcf7beaa3e2c22d0838542444d5143b9448206"
+      "bytes": 4447,
+      "sha256": "a87f4be493d56b9c279b3ef5e89aa704b434c0e328e696c5cbf1a17fdd63d868"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
@@ -4264,8 +4264,8 @@
     },
     {
       "path": "tests_workflows/test_latency_recovery.py",
-      "bytes": 10491,
-      "sha256": "1449501dc00f1e5d0ed1ca58d074fe2fe093af9ba2ac3fd259057b0801c2a4c3"
+      "bytes": 10901,
+      "sha256": "6308ab93f981e855f886a6a24002c4e8a4dbd6e1a8027722fa3b229240999904"
     },
     {
       "path": "tools/audit_repository.py",
@@ -4279,8 +4279,8 @@
     },
     {
       "path": "tools/benchmark_jarvis_latency.py",
-      "bytes": 8807,
-      "sha256": "23dba645a72e35c50d58c1efd5f73cedcf044e003891199e6a8aafb8f70802b8"
+      "bytes": 9425,
+      "sha256": "1647f484e3e39cafb334282e03844b13347b852894e501fb2fc2781a2f9e2fec"
     },
     {
       "path": "tools/check_startup.py",

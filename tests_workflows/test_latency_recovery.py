@@ -67,6 +67,13 @@ class SessionTests(unittest.TestCase):
                 self.assertEqual(inner.execute('SELECT COUNT(*) FROM items').fetchone()[0], 0)
         self.assertLessEqual(len(self.pool._idle), 2)
 
+    def test_checkout_cannot_be_shared_with_another_thread(self):
+        with self.pool.connect() as db:
+            with db as nested:self.assertIs(nested, db)
+            with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+                future = executor.submit(lambda:db.execute('SELECT 1').fetchone())
+                with self.assertRaises(sqlite3.ProgrammingError):future.result()
+
     def test_concurrent_borrowers_never_share_transaction(self):
         barrier = threading.Barrier(8)
         def work(i):

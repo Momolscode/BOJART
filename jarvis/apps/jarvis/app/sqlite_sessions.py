@@ -41,11 +41,14 @@ class _Lease:
     def __init__(self, connection):
         self._connection = connection
         self._active = True
+        self._thread_id = threading.get_ident()
         self._cursors = []
 
     def _check(self):
         if not self._active:
             raise sqlite3.ProgrammingError('SQLite checkout is closed.')
+        if threading.get_ident() != self._thread_id:
+            raise sqlite3.ProgrammingError('SQLite checkout belongs to another thread.')
 
     def __enter__(self):
         self._check()
