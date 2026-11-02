@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "proposal",
+  "note": "Profils de manière de peindre pour la simulation. Ce sont des contraintes de gestes et de palette, pas l'imitation d'un artiste nommé. Les retours de la direction artistique les remplaceront.",
+  "styles": {
+    "reproduction": {
+      "description": "Reproduire la cible au plus près : couleurs libres, touches de plus en plus fines, orientation le long des contours.",
+      "palette_size": null, "width_mm": [60, 12], "length_mm": [40, 160], "orientation": "contours", "curvature": 0.25
+    },
+    "touches_courtes": {
+      "description": "Touches courtes et épaisses, palette réduite à 8 couleurs mélangées d'avance.",
+      "palette_size": 8, "width_mm": [30, 16], "length_mm": [20, 45], "orientation": "contours", "curvature": 0.1
+    },
+    "aplats_geometriques": {
+      "description": "Longs aplats horizontaux ou verticaux, 5 couleurs, aucune courbure.",
+      "palette_size": 5, "width_mm": [50, 18], "length_mm": [80, 260], "orientation": "orthogonale", "curvature": 0.0
+    },
+    "gestuel": {
+      "description": "Grands gestes courbes, 6 couleurs, orientation libre.",
+      "palette_size": 6, "width_mm": [45, 15], "length_mm": [120, 320], "orientation": "libre", "curvature": 0.6
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_description": "Cellule BOJART pour FRIDA (cmubig/Frida, GPL-3.0, installé hors de ce dépôt) : xArm 6, toile 50 × 31 cm, 10 pots en deux rangées de 6 emplacements. Mètres depuis la base du robot, convention FRIDA : x latéral, y vers l'avant ; la toile s'étend de CANVAS_POSITION[1] à CANVAS_POSITION[1] + CANVAS_HEIGHT_M. Valeurs de départ à mesurer sur place avant toute exécution ; aucune commande machine ne doit partir de ce fichier sans contrôle humain.",
+  "WATER_POSITION": [-0.30, 0.16],
+  "RAG_POSTITION": [0.33, 0.20],
+  "PALLETTE_POSITION": [-0.42, 0.27],
+  "PAINT_DIFFERENCE": 0.04,
+  "INIT_TABLE_Z": 0.17,
+  "CANVAS_WIDTH_M": 0.50,
+  "CANVAS_HEIGHT_M": 0.312,
+  "CANVAS_POSITION": [0.0, 0.264],
+  "MAX_ALPHA": 0,
+  "MIN_STROKE_LENGTH": 0.004,
+  "MAX_STROKE_LENGTH": 0.08,
+  "MIN_STROKE_Z": 0.1,
+  "MAX_BEND": 0.02
+}

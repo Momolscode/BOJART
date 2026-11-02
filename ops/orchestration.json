@@ -73,7 +73,11 @@
         "docs/preinstallation/knowledge/*",
         "data/preinstallation/knowledge-cards.json",
         "data/preinstallation/sources-curated.json",
-        "data/preinstallation/tool-registry.json"
+        "data/preinstallation/tool-registry.json",
+        "bojart_painter/*",
+        "tests_painter/*",
+        "configs/painter/*",
+        ".github/workflows/painter-simulation.yml"
       ],
       "reason": "Propositions sourcées ; installation et qualification distinctes."
     },
@@ -454,6 +458,22 @@
         "docs/research/strates-robotique-2026-11-02/verification-calculs.json"
       ],
       "acceptance": "Fiche STRATES versionnée et signée, distincte des critères figurines ; puis coupons mesurés avec incertitude déclarée avant tout choix de capteur, de bras ou de cellule."
+    },
+    {
+      "id": "painter-sim-mujoco",
+      "title": "Raccorder la boucle de peinture simulée au modèle MuJoCo/URDF du bras retenu, puis au modèle de dépôt mesuré",
+      "domain": "research",
+      "priority": 2,
+      "status": "planned",
+      "depends_on": [
+        "strates-g0"
+      ],
+      "blockers": [],
+      "evidence": [
+        "docs/research/bras-peintre-simulation-2026-11-02/README.md",
+        "docs/evidence/painter-simulation-2026-11-02/summary.json"
+      ],
+      "acceptance": "Accès et orientation du pinceau vérifiés par cinématique inverse sur la toile 90 × 65 cm ; modèle de dépôt remplacé par les coupons G1 mesurés. Aucun achat ni commande machine."
     }
   ],
   "context_audit": {

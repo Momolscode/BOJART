@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-02",
+  "host": "conteneur Linux, Python 3.13, sans GPU ni robot",
+  "hidden_world_model": {
+    "width_gain": 1.2,
+    "opacity": 0.72,
+    "edge_mm": 6.0
+  },
+  "nominal_believed_model": {
+    "width_gain": 1.0,
+    "opacity": 0.9,
+    "edge_mm": 6.0
+  },
+  "painting_cases": [
+    {
+      "case": "composition/aplats_geometriques",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.006118,
+      "closed_loop_no_learning_mse_mean": 0.00836,
+      "open_loop_single_plan_mse_mean": 0.008791,
+      "learning_better_than_no_learning": "3/3",
+      "closed_learning_better_than_open": "3/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ],
+        [
+          1.2,
+          0.75
+        ]
+      ]
+    },
+    {
+      "case": "composition/reproduction",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.011157,
+      "closed_loop_no_learning_mse_mean": 0.011021,
+      "open_loop_single_plan_mse_mean": 0.011025,
+      "learning_better_than_no_learning": "1/3",
+      "closed_learning_better_than_open": "1/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/aplats_geometriques",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.003033,
+      "closed_loop_no_learning_mse_mean": 0.003569,
+      "open_loop_single_plan_mse_mean": 0.003862,
+      "learning_better_than_no_learning": "3/3",
+      "closed_learning_better_than_open": "3/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/gestuel",
+      "seeds": [
+        1
+      ],
+      "closed_loop_learning_mse_mean": 0.004968,
+      "closed_loop_no_learning_mse_mean": 0.004685,
+      "open_loop_single_plan_mse_mean": 0.004993,
+      "learning_better_than_no_learning": "0/1",
+      "closed_learning_better_than_open": "1/1",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/reproduction",
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "closed_loop_learning_mse_mean": 0.004729,
+      "closed_loop_no_learning_mse_mean": 0.004902,
+      "open_loop_single_plan_mse_mean": 0.006241,
+      "learning_better_than_no_learning": "3/3",
+      "closed_learning_better_than_open": "3/3",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    },
+    {
+      "case": "paysage/touches_courtes",
+      "seeds": [
+        1
+      ],
+      "closed_loop_learning_mse_mean": 0.053959,
+      "closed_loop_no_learning_mse_mean": 0.054139,
+      "open_loop_single_plan_mse_mean": 0.05583,
+      "learning_better_than_no_learning": "1/1",
+      "closed_learning_better_than_open": "1/1",
+      "learned_models": [
+        [
+          1.2,
+          0.7
+        ]
+      ]
+    }
+  ],
+  "arms": [
+    {
+      "arm": "ufactory_xarm6",
+      "coverage_edge": 0.663,
+      "coverage_overhead": 0.987,
+      "coupon_nominal": "52/59",
+      "coupon_nominal_lower_bound_95": 0.7887,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "agilex_piper",
+      "coverage_edge": 0.544,
+      "coverage_overhead": 0.879,
+      "coupon_nominal": "56/59",
+      "coupon_nominal_lower_bound_95": 0.8738,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "ufactory_lite6",
+      "coverage_edge": 0.222,
+      "coverage_overhead": 0.268,
+      "coupon_nominal": "26/59",
+      "coupon_nominal_lower_bound_95": 0.3301,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "universal_robots_ur5e",
+      "coverage_edge": 0.886,
+      "coverage_overhead": 1.0,
+      "coupon_nominal": "58/59",
+      "coupon_nominal_lower_bound_95": 0.9221,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "franka_fr3",
+      "coverage_edge": 0.892,
+      "coverage_overhead": 1.0,
+      "coupon_nominal": "58/59",
+      "coupon_nominal_lower_bound_95": 0.9221,
+      "coupon_pessimistic": "0/59"
+    },
+    {
+      "arm": "robotstudio_so101",
+      "coverage_edge": null,
+      "coverage_overhead": null,
+      "coupon_nominal": null,
+      "coupon_nominal_lower_bound_95": null,
+      "coupon_pessimistic": null
+    }
+  ],
+  "reports_sha256": {
+    "arms.json": "c73110b9f97f1cc21e2f0103ab3b1d9adbb7f932cba748048af6650a2f08b1a0",
+    "simulate-composition-seed1.json": "46f05e6f7a9d5f6cd8927d1667d0fe653987674853dc618ecf8967a3f8578eae",
+    "simulate-composition-seed2.json": "79a2b929b82069045d90a31d06ad26b45c9cf8f41f0c28123c047f01d0e7543f",
+    "simulate-composition-seed3.json": "054d8bf75b59c00bdbab88209f73a8a173ce17dd079481f2bb59680a7d3db417",
+    "simulate-paysage-seed1.json": "d3ca0afb014500893e2013e985c2e53877dae499bb4edd80feba2760c361d5af",
+    "simulate-paysage-seed2.json": "cea7b42865cbb57032d720c9ee6bf74cf7c8d094ce00104bbc28f1db63b42de9",
+    "simulate-paysage-seed3.json": "fe3c5599df90c202bb9329bd10a94196bacf962c9fbde7574cc388028daa6423",
+    "simulate-paysage-converge-seed1.json": "2085efa4daf8c9a7648b583889857da2cd65498b60d62ed3f3e19bc32d5a9e29",
+    "hd-nuit-etoilee-fin-seed1.json": "61baf9252ade5073757abd4a0b7fcd7d79aa441ca239457cdd91ea0c51f17456",
+    "hd-nuit-etoilee-empattement-seed1.json": "97443ba6df028653a1e97420f810509f92b84213e0d27e749d235ef470140c2b",
+    "hd-nuit-etoilee-tres-fin-1mm-seed1.json": "5774ce6d5d66a1f92a305ab23f39b4ac35fd408d5c057fc60a68bcf13ac5cc6d",
+    "hd-nuit-etoilee-atelier-3-semaines-seed1.json": "cb087d0e7fec1da274f11c07c2db91c2c46ad4348ce8ea91d62ee8af78e71795",
+    "calibration-semaine1-seed1.json": "ee36ac7ffe4da79757fa7e8da1a473655ad0e09631cf379ef71c67ed6ad1344c",
+    "atelier-animation-seed1.json": "69a64de782b99631189f9950127c8fa7c030fdfcdf9730667dee7b85964536a2",
+    "frida-essai-cpu-seed1.json": "e33ee6b9aff5a9c365046ad2fe6343d445474fa91f2e560a95f724696617aa51",
+    "atlas-pinceau-frida-seed1.json": "8ae73eead9e8ba54a7d7975dcd87bf537f396a9be0aa475a7fb41fbc51f7193f"
+  },
+  "limits": "Le monde physique est lui-même un modèle simplifié. Ces chiffres valident la logique de la boucle et de l’estimation, pas une peinture réelle, un bras, un pinceau ni un coupon. Graines peu nombreuses : tendances, pas significativité.",
+  "until_converged_seed1": {
+    "touches_courtes": {
+      "strokes": 2449,
+      "stop_reason": "convergence",
+      "unpainted_fraction": 0.0,
+      "psnr_db": 34.07,
+      "execution_time_estimate_s": 9484
+    },
+    "reproduction": {
+      "strokes": 1300,
+      "stop_reason": "convergence",
+      "unpainted_fraction": 0.0,
+      "psnr_db": 35.54,
+      "execution_time_estimate_s": 6365
+    }
+  },
+  "code_revision_note": "Les rapports à budget fixe ont été produits avant l'ajout de --until-converged (empreinte loop.py antérieure) ; le rapport converge porte l'empreinte courante.",
+  "hd_public_domain_painting": {
+    "target": "La Nuit étoilée (Van Gogh, 1889, domaine public) ; image hors Git",
+    "runs": {
+      "fin": {
+        "strokes": 13236,
+        "psnr_db": 19.41,
+        "learned": {
+          "width_gain": 1.15,
+          "opacity": 0.8
+        },
+        "hidden": {
+          "width_gain": 1.15,
+          "opacity": 0.82
+        },
+        "image_sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+        "seconds": 146.16
+      },
+      "empattement": {
+        "strokes": 4618,
+        "psnr_db": 17.95,
+        "learned": {
+          "width_gain": 1.15,
+          "opacity": 0.8
+        },
+        "hidden": {
+          "width_gain": 1.15,
+          "opacity": 0.82
+        },
+        "image_sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+        "seconds": 45.11
+      },
+      "tres_fin_1mm": {
+        "strokes": 41703,
+        "psnr_db_native_1mm": 16.86,
+        "ssim_native_1mm": 0.3039,
+        "compared_on_2mm_grid": {
+          "tres_fin_1mm_41703": {
+            "psnr_db": 21.04,
+            "ssim": 0.635
+          },
+          "fin_2mm_13236": {
+            "psnr_db": 19.42,
+            "ssim": 0.4434
+          }
+        },
+        "curve": [
+          {
+            "strokes": 1621,
+            "psnr_db": 14.84,
+            "ssim": 0.1066
+          },
+          {
+            "strokes": 2490,
+            "psnr_db": 15.04,
+            "ssim": 0.1157
+          },
+          {
+            "strokes": 3358,
+            "psnr_db": 15.15,
+            "ssim": 0.1213
+          },
+          {
+            "strokes": 4384,
+            "psnr_db": 15.27,
+            "ssim": 0.128
+          },
+          {
+            "strokes": 5537,
+            "psnr_db": 15.37,
+            "ssim": 0.1337
+          },
+          {
+            "strokes": 6892,
+            "psnr_db": 15.47,
+            "ssim": 0.1398
+          },
+          {
+            "strokes": 8375,
+            "psnr_db": 15.56,
+            "ssim": 0.1462
+          },
+          {
+            "strokes": 10121,
+            "psnr_db": 15.66,
+            "ssim": 0.1542
+          },
+          {
+            "strokes": 12080,
+            "psnr_db": 15.77,
+            "ssim": 0.164
+          },
+          {
+            "strokes": 14246,
+            "psnr_db": 15.87,
+            "ssim": 0.1733
+          },
+          {
+            "strokes": 16553,
+            "psnr_db": 15.98,
+            "ssim": 0.1845
+          },
+          {
+            "strokes": 19020,
+            "psnr_db": 16.08,
+            "ssim": 0.1967
+          },
+          {
+            "strokes": 21636,
+            "psnr_db": 16.19,
+            "ssim": 0.2091
+          },
+          {
+            "strokes": 24320,
+            "psnr_db": 16.29,
+            "ssim": 0.2223
+          },
+          {
+            "strokes": 27103,
+            "psnr_db": 16.39,
+            "ssim": 0.2356
+          },
+          {
+            "strokes": 29933,
+            "psnr_db": 16.49,
+            "ssim": 0.2494
+          },
+          {
+            "strokes": 32824,
+            "psnr_db": 16.58,
+            "ssim": 0.2624
+          },
+          {
+            "strokes": 35766,
+            "psnr_db": 16.68,
+            "ssim": 0.2771
+          },
+          {
+            "strokes": 38732,
+            "psnr_db": 16.77,
+            "ssim": 0.2909
+          },
+          {
+            "strokes": 41703,
+            "psnr_db": 16.86,
+            "ssim": 0.3039
+          }
+        ],
+        "seconds": 817.69,
+        "note": "PSNR/SSIM natifs à 1 mm non comparables aux runs à 2 mm (cible plus détaillée) ; comparaison faite après rééchantillonnage des deux rendus sur la grille 450 px. La courbe monte encore linéairement à 41 703 touches : pas de plateau observé."
+      },
+      "atelier_3_semaines": {
+        "strokes": 5032,
+        "psnr_db": 17.72,
+        "ssim": 0.2865,
+        "learned": {
+          "width_gain": 1.25,
+          "opacity": 0.75
+        },
+        "world": {
+          "hidden_gain": 1.25,
+          "hidden_opacity": 0.75,
+          "position_sigma_mm": 0.5,
+          "color_sigma": 0.03
+        },
+        "canvas_mm": [
+          500,
+          312
+        ],
+        "note": "Hypothèse de premier atelier : 10 peintures pré-mélangées, pinceaux 20/8/3 mm, erreur de position 0,5 mm, variation de teinte 0,03, dépôt caché 1,25/0,75. Les étapes semaine 1/2/3 sont une lecture des phases de pinceau, pas une mesure d'apprentissage réel."
+      }
+    }
+  },
+  "atelier_3_semaines": {
+    "calibration_week1": {
+      "hidden": {
+        "width_gain": 1.25,
+        "opacity": 0.75
+      },
+      "fit": {
+        "20.0": {
+          "width_gain_median": 1.25,
+          "opacity_median": 0.537,
+          "samples": 10
+        },
+        "8.0": {
+          "width_gain_median": 1.25,
+          "opacity_median": 0.54,
+          "samples": 10
+        },
+        "3.0": {
+          "width_gain_median": 1.333,
+          "opacity_median": 0.544,
+          "samples": 10
+        }
+      }
+    },
+    "order_comparison": {
+      "planner_order": {
+        "strokes": 5032,
+        "color_changes": 4371,
+        "psnr_db": 17.72,
+        "ssim": 0.2865
+      },
+      "grouped_by_brush_then_pot": {
+        "strokes": 5189,
+        "color_changes": 93,
+        "psnr_db": 17.69,
+        "ssim": 0.2836
+      }
+    },
+    "animation": {
+      "strokes": 5189,
+      "dips": 903,
+      "color_changes": 91,
+      "arm_time_estimate_s": 13236,
+      "ik_error_p95_m": 7.017859562837725e-05,
+      "ik_canvas_error_max_m": 0.0008437777566829667,
+      "learned": {
+        "width_gain": 1.25,
+        "opacity": 0.75
+      }
+    },
+    "limits": "Cinématique inverse sans dynamique ni collisions ; dépôt de peinture modélisé ; temps de bras estimé par règle simple, non mesuré. Illustration, pas preuve d'accès ni de cadence."
+  },
+  "frida_cpu_trial": {
+    "frida_commit": "f42fa61",
+    "license": "GPL-3.0",
+    "path_in_git": false,
+    "small_brush_width_mm": [
+      3.5,
+      7.5
+    ],
+    "comparison_900_strokes_ssim": {
+      "frida_own_render": 0.0948,
+      "bojart_same_brush": [
+        0.116,
+        0.1277
+      ],
+      "bojart_20_8_3_mm": 0.1721
+    },
+    "frida_seconds_cpu": 2908.2,
+    "bridge_geometry_mean_overlap": 0.85,
+    "animation_arm_time_estimate_s": 2579,
+    "learningtopaint": "non essayé (poids inaccessibles depuis le conteneur)"
+  },
+  "measured_brush_atlas": {
+    "entries": 344,
+    "path_in_git": false,
+    "ssim": {
+      "900": 0.125,
+      "3000": 0.2419,
+      "frida_alone_900": 0.0948
+    },
+    "seconds": {
+      "900": 18.9,
+      "3000": 55.3,
+      "frida_alone_900": 2908.2
+    },
+    "arm_time_estimate_3000_s": 9853
+  }
+}

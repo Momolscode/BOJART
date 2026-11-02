@@ -349,5 +349,17 @@
     "project": "bojart.jarvis",
     "collection": "session_log",
     "provenance": "Réception datée du paquet V5 le 2 novembre 2026 : octets vérifiés, rejeu exact et tests exécutés sur conteneur Linux ; ne qualifie pas la tour."
+  },
+  {
+    "path": "docs/research/bras-peintre-simulation-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Recherche et prototype du 2 novembre 2026 : bras achetables avec modèle de simulation (pages constructeur/revendeur citées) et boucle de peinture simulée ; proposition, aucun achat ni mesure physique. Sources web-*-20261102 et painter-simulation-20261102."
+  },
+  {
+    "path": "docs/evidence/painter-simulation-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "session_log",
+    "provenance": "Preuves datées du 2 novembre 2026 : rapports bruts de simulation logicielle du bras peintre, hors matériel ; ne qualifie ni bras ni peinture."
   }
 ]

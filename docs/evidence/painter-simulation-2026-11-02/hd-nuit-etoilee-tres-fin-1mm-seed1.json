@@ -1,0 +1,287 @@
+{
+  "command": "hd",
+  "image": {
+    "sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+    "path_in_git": false
+  },
+  "style": "tres_fin",
+  "seed": 1,
+  "requested_strokes": 60000,
+  "log": [
+    {
+      "batch": 1,
+      "strokes": 1621,
+      "mse": 0.03282,
+      "psnr_db": 14.84,
+      "ssim": 0.1066,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 105.8
+    },
+    {
+      "batch": 2,
+      "strokes": 2490,
+      "mse": 0.03137,
+      "psnr_db": 15.04,
+      "ssim": 0.1157,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 193.1
+    },
+    {
+      "batch": 3,
+      "strokes": 3358,
+      "mse": 0.03055,
+      "psnr_db": 15.15,
+      "ssim": 0.1213,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 262.9
+    },
+    {
+      "batch": 4,
+      "strokes": 4384,
+      "mse": 0.02973,
+      "psnr_db": 15.27,
+      "ssim": 0.128,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 327.3
+    },
+    {
+      "batch": 5,
+      "strokes": 5537,
+      "mse": 0.02904,
+      "psnr_db": 15.37,
+      "ssim": 0.1337,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 380.1
+    },
+    {
+      "batch": 6,
+      "strokes": 6892,
+      "mse": 0.02836,
+      "psnr_db": 15.47,
+      "ssim": 0.1398,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 430.0
+    },
+    {
+      "batch": 7,
+      "strokes": 8375,
+      "mse": 0.02777,
+      "psnr_db": 15.56,
+      "ssim": 0.1462,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 470.6
+    },
+    {
+      "batch": 8,
+      "strokes": 10121,
+      "mse": 0.02715,
+      "psnr_db": 15.66,
+      "ssim": 0.1542,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 511.9
+    },
+    {
+      "batch": 9,
+      "strokes": 12080,
+      "mse": 0.02649,
+      "psnr_db": 15.77,
+      "ssim": 0.164,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 547.7
+    },
+    {
+      "batch": 10,
+      "strokes": 14246,
+      "mse": 0.02588,
+      "psnr_db": 15.87,
+      "ssim": 0.1733,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 578.9
+    },
+    {
+      "batch": 11,
+      "strokes": 16553,
+      "mse": 0.02525,
+      "psnr_db": 15.98,
+      "ssim": 0.1845,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 608.3
+    },
+    {
+      "batch": 12,
+      "strokes": 19020,
+      "mse": 0.02465,
+      "psnr_db": 16.08,
+      "ssim": 0.1967,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 634.1
+    },
+    {
+      "batch": 13,
+      "strokes": 21636,
+      "mse": 0.02406,
+      "psnr_db": 16.19,
+      "ssim": 0.2091,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 660.8
+    },
+    {
+      "batch": 14,
+      "strokes": 24320,
+      "mse": 0.02351,
+      "psnr_db": 16.29,
+      "ssim": 0.2223,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 686.0
+    },
+    {
+      "batch": 15,
+      "strokes": 27103,
+      "mse": 0.02297,
+      "psnr_db": 16.39,
+      "ssim": 0.2356,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 709.3
+    },
+    {
+      "batch": 16,
+      "strokes": 29933,
+      "mse": 0.02246,
+      "psnr_db": 16.49,
+      "ssim": 0.2494,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 731.5
+    },
+    {
+      "batch": 17,
+      "strokes": 32824,
+      "mse": 0.02198,
+      "psnr_db": 16.58,
+      "ssim": 0.2624,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 753.0
+    },
+    {
+      "batch": 18,
+      "strokes": 35766,
+      "mse": 0.02149,
+      "psnr_db": 16.68,
+      "ssim": 0.2771,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 774.7
+    },
+    {
+      "batch": 19,
+      "strokes": 38732,
+      "mse": 0.02104,
+      "psnr_db": 16.77,
+      "ssim": 0.2909,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 795.9
+    },
+    {
+      "batch": 20,
+      "strokes": 41703,
+      "mse": 0.0206,
+      "psnr_db": 16.86,
+      "ssim": 0.3039,
+      "believed": {
+        "width_gain": 1.15,
+        "opacity": 0.8
+      },
+      "seconds": 816.5
+    }
+  ],
+  "strokes": 41703,
+  "final_mse": 0.0206,
+  "psnr_db": 16.86,
+  "ssim": 0.3039,
+  "hidden": {
+    "width_gain": 1.15,
+    "opacity": 0.82
+  },
+  "learned": {
+    "width_gain": 1.15,
+    "opacity": 0.8
+  },
+  "grid_px": [
+    900,
+    562
+  ],
+  "mm_per_px": 1.0,
+  "runtime": {
+    "seconds": 817.69,
+    "python": "3.13.18",
+    "platform": "Linux",
+    "fingerprints": {
+      "bojart_painter/arms.py": "9f7a60bba19e83ff5a76a0b940f49f192a1ec12781c3eec5494e1938c99e8493",
+      "bojart_painter/canvas.py": "7801661034bb1900e8bd3ba17a714d20c4d7420fd3ded35ebdd1b83f6b5ed422",
+      "bojart_painter/coupon.py": "441a0ea64e4b0d6473a0b1e811ab194c8a83f1c27eb2a1cc60642f7e1a7ca7a4",
+      "bojart_painter/hd.py": "5d406986ada601d2de00d49bd36e7b4783e0798d81e1449c6cfde4a36987c2c4",
+      "bojart_painter/loop.py": "b021f1bfc8230438678a97fd3025ee38e7640fc09afc6bafa35b9e1ce2045e4a",
+      "bojart_painter/planner.py": "dd8a4cb430f3efa9cb53563ace27f6d116d3a4130f7c09368fcf3990bafe23e1",
+      "bojart_painter/targets.py": "e4110c6e65988c38ca0fad06ce2973f163ec73650098648199012d1518945676",
+      "bojart_painter/__main__.py": "aa93964240c2a8461e1623e2b605f83777c9956024106df8c7e742699bddca4b",
+      "configs/painter/arms.json": "8be12cc5143764aaa722f0f7db89e7890abf66feb50cac15cab85d07b4f40e42",
+      "configs/painter/styles.json": "1758b6e7ad09b9f45371e2691aa56b4fa29085f23aeecc4a4ff67bbfa439f4b0"
+    },
+    "limits": "Simulation logicielle ; aucun bras, pinceau, peinture ni coupon réel mesuré."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-02",
+  "status": "proposal",
+  "note": "Caractéristiques relevées sur les pages constructeur ou revendeur citées le 2 novembre 2026. Prix indicatifs, hors porte-outil, capteur d'effort, sécurité et intégration ; aucun devis demandé. Les modèles de simulation cités sont des fichiers tiers sous leur propre licence, non vendus ni installés ici.",
+  "arms": [
+    {
+      "id": "ufactory_xarm6",
+      "name": "UFACTORY xArm 6",
+      "reach_mm": 700, "repeatability_mm": 0.1, "payload_kg": 5, "max_tcp_speed_mm_s": 1000,
+      "price_indicative": "9 500 USD (roboticscenter.ai, 2026) ; 8 122,24 GBP TTC (RobotShop UK)",
+      "simulation_models": ["URDF/xacro xarm_ros2 (constructeur)", "MuJoCo Menagerie : xArm7 seulement (ufactory_xarm7)", "FRIDA (CMU) : xArm pris en charge"],
+      "sources": ["web-robotshop-xarm6-20261102", "web-roboticscenter-pricing-20261102", "web-frida-github-20261102", "web-menagerie-20261102"]
+    },
+    {
+      "id": "agilex_piper",
+      "name": "AgileX PiPER",
+      "reach_mm": 626, "repeatability_mm": 0.1, "payload_kg": 1.5, "max_tcp_speed_mm_s": null,
+      "price_indicative": "2 400 EUR TTC (Génération Robots) ; 3 500 USD (roboticscenter.ai)",
+      "simulation_models": ["MuJoCo Menagerie : agilex_piper", "URDF constructeur (piper_ros)"],
+      "sources": ["web-generationrobots-piper-20261102", "web-roboticscenter-pricing-20261102", "web-menagerie-20261102"]
+    },
+    {
+      "id": "ufactory_lite6",
+      "name": "UFACTORY Lite 6",
+      "reach_mm": 440, "repeatability_mm": 0.5, "payload_kg": 0.6, "max_tcp_speed_mm_s": 500,
+      "price_indicative": "à partir de 2 999 USD (constructeur)",
+      "simulation_models": ["MuJoCo Menagerie : ufactory_lite6", "URDF/xacro xarm_ros2 (constructeur)"],
+      "sources": ["web-ufactory-lite6-20261102", "web-menagerie-20261102"]
+    },
+    {
+      "id": "universal_robots_ur5e",
+      "name": "Universal Robots UR5e",
+      "reach_mm": 850, "repeatability_mm": 0.03, "payload_kg": 5, "max_tcp_speed_mm_s": 1000,
+      "price_indicative": "sur devis",
+      "simulation_models": ["MuJoCo Menagerie : universal_robots_ur5e", "URDF Universal_Robots_ROS2_Description", "URSim (constructeur)"],
+      "sources": ["web-ur5e-techsheet-20261102", "web-menagerie-20261102"]
+    },
+    {
+      "id": "franka_fr3",
+      "name": "Franka Research 3",
+      "reach_mm": 855, "repeatability_mm": 0.1, "payload_kg": 3, "max_tcp_speed_mm_s": 2000,
+      "price_indicative": "sur devis",
+      "simulation_models": ["MuJoCo Menagerie : franka_fr3", "URDF franka_description", "FRIDA (CMU) : Franka pris en charge"],
+      "sources": ["web-franka-fr3-datasheet-20261102", "web-menagerie-20261102", "web-frida-github-20261102"]
+    },
+    {
+      "id": "robotstudio_so101",
+      "name": "SO-101 (The Robot Studio / LeRobot)",
+      "reach_mm": null, "repeatability_mm": null, "payload_kg": null, "max_tcp_speed_mm_s": null,
+      "price_indicative": "500 USD (roboticscenter.ai)",
+      "simulation_models": ["MuJoCo Menagerie : robotstudio_so101", "LeRobot (Hugging Face)"],
+      "sources": ["web-menagerie-20261102", "web-roboticscenter-pricing-20261102"],
+      "note": "Bras d'apprentissage à servomoteurs ; portée et répétabilité non publiées sur les pages relues. Utile pour développer la chaîne logicielle, pas pour la tolérance STRATES."
+    }
+  ]
+}

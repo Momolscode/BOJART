@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-02",
+  "host": "conteneur Linux, Python 3.13, numpy 2.5.3, Pillow 12.3.0, MuJoCo 3.17.0, Xvfb + GLFW, sans GPU ni robot",
+  "image": {
+    "title": "La Nuit étoilée (Van Gogh, 1889, domaine public)",
+    "sha256": "0592ab0f7b51b3ce72608a95e53880bd93971e5b48f93a0ce8dfd3cbccf3d098",
+    "path_in_git": false
+  },
+  "painter": {
+    "style": "atelier_3_semaines",
+    "canvas_mm": [
+      500,
+      312
+    ],
+    "mm_per_px": 1.0,
+    "requested_strokes": 6000,
+    "batches": 8,
+    "seed": 1,
+    "hidden": {
+      "width_gain": 1.25,
+      "opacity": 0.75
+    },
+    "position_sigma_mm": 0.5,
+    "color_sigma": 0.03
+  },
+  "order_comparison": {
+    "planner_order": {
+      "strokes": 5032,
+      "color_changes": 4371,
+      "psnr_db": 17.72,
+      "ssim": 0.2865
+    },
+    "grouped_by_brush_then_pot": {
+      "strokes": 5189,
+      "color_changes": 93,
+      "psnr_db": 17.69,
+      "ssim": 0.2836
+    }
+  },
+  "animation": {
+    "command": "DISPLAY=:99 MUJOCO_GL=glfw python tools/render_painter_cell.py --menagerie <ufactory_xarm7 hors Git> --image <hors Git> --out <hors Git> --strokes 6000 --detail 10",
+    "robot_model": "ufactory_xarm7 (MuJoCo Menagerie), illustration du xArm 6 recommandé",
+    "frames": 757,
+    "strokes": 5189,
+    "ik_error_p95_m": 7.017859562837725e-05,
+    "ik_error_max_m": 0.0008437777566829667,
+    "ik_canvas_error_max_m": 0.0008437777566829667,
+    "ik_retries": 2,
+    "grouped_by_color": true,
+    "dips": 903,
+    "color_changes": 91,
+    "arm_time_estimate_s": 13236,
+    "learned": {
+      "width_gain": 1.25,
+      "opacity": 0.75
+    },
+    "psnr_db": 17.69,
+    "ssim": 0.2836,
+    "video_seconds": 37.85,
+    "video_in_git": false,
+    "arm_time_model": "touche = longueur/80 mm/s + 1,1 s ; recharge 6 s ; essuyage 8 s ; changement de pinceau 30 s"
+  },
+  "code_sha256": {
+    "bojart_painter/hd.py": "59a0e581e168abdff6e03b6531bfc16d25604bab61ef2c1a981f59672fe58f8b",
+    "tools/render_painter_cell.py": "8298ce625cbda922b4445ced203cf14093702036e6191f3075b328ddef80b7a3"
+  },
+  "limits": "Cinématique inverse sans dynamique ni collisions ; dépôt de peinture modélisé ; temps de bras estimé par règle simple, non mesuré. Illustration, pas preuve d'accès ni de cadence."
+}
