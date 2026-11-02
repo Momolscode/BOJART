@@ -31,6 +31,8 @@ class LocalModelServer:
         self.truncated = False
         self.remote = False
         self.invalid_chat = False
+        self.done_value = True
+        self.omit_done = False
         owner = self
 
         class Handler(http.server.BaseHTTPRequestHandler):
@@ -73,7 +75,8 @@ class LocalModelServer:
                         answer = 'PIRATE : imprimé.'
                     if owner.after_chat:
                         owner.after_chat()
-                    self.reply([] if owner.invalid_chat else {'done': True,
+                    self.reply([] if owner.invalid_chat else {
+                        **({} if owner.omit_done else {'done': owner.done_value}),
                         'done_reason': 'length' if owner.truncated else 'stop',
                         'message': {'role': 'assistant', 'content': answer},
                         'load_duration': 1000, 'eval_count': 8, 'eval_duration': 200000000})
@@ -180,6 +183,22 @@ class QualificationTests(unittest.TestCase):
         self.service.invalid_chat = True
         with self.assertRaises(ValueError):
             Ollama(self.service.chat_model, self.service.url).chat('Question', 'Contexte')
+
+    def test_only_explicit_true_completion_can_qualify_and_activate(self):
+        before = self.config()
+        for label, value, omitted in [('missing', None, True), ('null', None, False),
+                                      ('string', 'true', False), ('false', False, False),
+                                      ('integer_one', 1, False)]:
+            with self.subTest(done=label):
+                self.service.done_value = value
+                self.service.omit_done = omitted
+                with self.assertRaises(ValueError):
+                    Ollama(self.service.chat_model, self.service.url).chat('Question', 'Contexte')
+                report = prepare(self.state, 'speed')
+                self.assertFalse(report['ok'])
+                self.assertFalse(report['activated'])
+                self.assertEqual((self.state / 'models.json').read_bytes(), before)
+                self.assertFalse((self.state / 'memory.sqlite').exists())
 
     def test_remote_alias_is_never_run_or_pulled(self):
         self.service.remote = True

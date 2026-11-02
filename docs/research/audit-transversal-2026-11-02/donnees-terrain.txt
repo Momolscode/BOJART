@@ -1,0 +1,44 @@
+BOJ.ART — DONNÉES TERRAIN À PRÉPARER POUR JARVIS
+Synthèse du 2 novembre 2026 de documents historiques, pour la collection research.
+Statut : propositions et modèles de collecte. Aucune mesure terrain, installation, validation artistique, connexion de compte ou action physique nouvelle n’est attestée par cette fiche.
+
+1. Inventaire et capacité réels
+Créer une fiche par machine : identifiant stable, modèle, firmware, procédé, volume utilisable, buse/plateau/configuration, formats et profils exacts. Ajouter les ressources de lavage, cure, séchage, assemblage, peinture et emballage ; une station combinée ne compte pas deux fois. Identifier matière, lot, ouverture et stock mesuré ou explicitement estimé. Les modèles d’imprimantes et les temps réels restent à renseigner.
+Source : BOJART_Guide_Terrain_Gestes_Tournage_Jarvis.pdf, édition 21/10/2026, p4 ; BOJ_ART_Audit_Skills_2026-10-18.pdf, p4 et p8. Les caractéristiques constructeur citées sont des références historiques, pas le parc confirmé.
+
+2. Une œuvre, sa révision et ses preuves
+Relier œuvre → révision du modèle → partie/lot → fichier et profil → machine/matière → résultat → contrôle. Consigner dimensions et unité, hauteur socle inclus ou non, masse, usage, finition, quantité, défauts et reprises. Séparer temps humain actif, temps machine et attente/séchage/cure ; séparer matière estimée, réservée et réellement consommée. Un raccord test traité complètement et mesuré précède une grande fabrication.
+Sources : Guide terrain, p5–6 et p12–14 ; BOJART_3_Fiches_Terrain_A_Imprimer.pdf, p1. Ce sont des champs à remplir, pas des données déjà acquises.
+
+3. Trois validations indépendantes
+Enregistrer l’accord technique, artistique et commercial avec auteur, date, pièce et révision concernés. Une impression terminée ne vaut ni conformité, ni disponibilité à vendre, ni machine prête au cycle suivant. Une case vide demeure non renseignée. L’artiste valide la finition ; le devis et la disponibilité reposent sur coûts, temps et capacité observés.
+Sources : Guide terrain, p5–6 ; Trois fiches, p1. Aucune préférence résine/FDM issue d’un ancien exemple ne dispense d’une qualification par pièce.
+
+4. Rushes et signature créative
+Conserver les originaux caméra, un identifiant œuvre/étape/prise, la prise préférée, des repères temporels, les restrictions de publication et une copie indépendante vérifiée. Les plans C01–C16 du guide sont des propositions : détail, geste, atelier, étude, impression, assemblage, peinture, échelle réelle, œuvre complète et emballage. Prévoir référence couleur neutre, ambiance distincte, son et huit vues photo utiles. Décrire ce qui a été réellement filmé et ce qui manque. Ne pas renommer les fichiers caméra si un index suffit.
+Sources : Guide terrain, p7–12 et p15. Les signatures, durées, couleurs et rôles des comptes sont proposés, pas déclarés approuvés. Le PDF « Trois fiches » renvoie p2 aux plans p14–21 d’une autre édition : avec le guide 16 pages sélectionné, utiliser p9–10 pour C01–C16.
+
+5. Recette du poste à renseigner sur place
+Consigner micro, distance, bruit normal, voix de l’opérateur, dossier/révision, écran demandé, résultat et écart. Essais : ouvrir le bon dossier ; afficher le bon modèle à droite ; clarifier « celle-là » si ambigu ; bloquer une réponse devenue périmée après changement de dossier ; répéter une réponse sans répéter une action ; comprendre une seconde voix. Enregistrer responsable et échéance de correction. La présence d’un bouton ou un test simulé ne remplit pas cette recette réelle.
+Sources : Guide terrain, p13 ; Trois fiches, p3. Fabrication pilote et manœuvres physiques restent un parcours distinct à qualifier sur le matériel.
+
+6. Studio Growth : vrai calendrier et vrais résultats
+Chaque contenu doit relier œuvre, source, compte, version du montage, droits, approbation, date, URL publiée et identifiant de campagne. Les métriques absentes sont « non connecté », pas zéro. L’état publié exige un reçu du fournisseur. Le calendrier historique contient 18 propositions relatives J+0 à J+28, toutes à produire ; ce n’est ni 30 contenus livrés ni une campagne planifiée. Les deux comptes éditoriaux cités ne prouvent pas leur connexion administrative.
+Sources : spec_growth_dashboard.md, L4–22 ; calendrier_30_jours.csv, L1–19. Pas de publication, budget publicitaire, collecte externe ou contact commercial déclenché par cette fiche.
+
+7. Bibliothèque vidéo existante, couverture à préserver
+Le rapport d’archive du 18/10/2026 décrit 31 publications publiques recensées, 29 MP4 sauvegardés et une vidéo manquante ; les quatre pistes de sous-titres ne concernent que deux vidéos. Cette lecture du README ne réexécute pas le décodage et ne constitue pas une analyse visuelle intégrale. L’indexation doit séparer origine, disponibilité, transcription, observations visuelles horodatées, droits et couverture effective. Utiliser des identifiants texte et des liens canoniques, pas des URL CDN expirantes.
+Sources : BOJ_ART_Archive_TikTok/README_FR.md, L7–21, L38–61 ; PLAN_INTEGRATION.md, édition 20/10/2026, L54–62.
+
+Règle d’intégration
+Ranger cette fiche et ses originaux comme références historiques ou gabarits de recherche. Les champs vides, exemples et recommandations ne deviennent jamais des faits opérationnels. Conserver date, page/ligne et SHA de la source ; les registres de données actuels et les preuves utilisateur plus récentes restent séparés. Exclure de la mémoire canonique BOJART les paramètres de l’ancien PC Linux, UNUM, M-Tek et la direction créative EAGLEMIC. Aucun nouveau choix utilisateur direct n’a été retrouvé dans ces documents.
+
+Provenance des originaux sélectionnés
+Guide terrain : SHA-256 5b8cbaa4131a6660b3247f0da56bb7b72c30d00c21286ce2bb1569fb50ca0542 ; 16 pages lues en texte.
+Trois fiches : SHA-256 ef73860e92f1b5338432d41ebb248fab1a3a7ceadbd48982f7ae755cd7f539dc ; 3 pages lues en texte ; date d’édition non établie.
+Audit Skills : SHA-256 d2bb986252043a4a841773be4af16a4351bbbdfd1b1d672bd917c95289f48df3 ; 10 pages lues en texte ; 18/10/2026.
+Plan IA : SHA-256 28a21df045795bdd45875da141fef4f759fba4556bfdfa040a105b5eaf5cc179 ; 20/10/2026.
+Growth : SHA-256 82abfef3387fa6bd92595c80e99d063dfcb62cf0c01d075c5290936cb3648055 ; date propre non établie.
+Calendrier : SHA-256 2768d7be163488a0d5357837edf199522bc74a36f70522a21e99f46591794128 ; date propre non établie.
+Archive TikTok README : SHA-256 042c8db650807729dd0143a02683b43706faa1e2e0b132e46ef20522c9bc61e1 ; 18/10/2026.
+Chemins exacts et contrôles : archives-selection.json et recovery-source-review.json, relatifs à BOJART_RECUPERATION_2026-11-01. Aucune référence à un répertoire temporaire nécessaire à la reprise.

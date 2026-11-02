@@ -19,7 +19,7 @@ class MemoryTests(unittest.TestCase):
         self.memory.close();self.tmp.cleanup()
 
     def put(self,name='note.md',text='Jev choisit une intention, ASR transcrit.',project='bojart.jarvis',collection='session'):
-        p=self.input/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
+        p=self.input/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text,encoding='utf-8')
         return self.memory.ingest_file(p,root=self.input,project=project,collection=collection,provenance='test fixture')
 
     def test_identical_import_is_idempotent(self):
@@ -91,7 +91,11 @@ class MemoryTests(unittest.TestCase):
         with self.assertRaises(MemoryError):self.memory.ingest_file(p,root=self.input,project='bojart.jarvis',collection='x',provenance='test')
 
     def test_symlink_rejected(self):
-        self.put();link=self.input/'link.md';link.symlink_to(self.input/'note.md')
+        self.put();link=self.input/'link.md'
+        try:link.symlink_to(self.input/'note.md')
+        except OSError as e:
+            if getattr(e,'winerror',None)==1314:self.skipTest('Windows ne permet pas la création de liens symboliques à cet utilisateur.')
+            raise
         with self.assertRaises(MemoryError):self.memory.ingest_file(link,root=self.input,project='bojart.jarvis',collection='x',provenance='test')
 
     def test_private_configuration_excluded(self):

@@ -50,7 +50,12 @@ class AuditTests(unittest.TestCase):
         self.assertNotIn(token,json.dumps(report))
 
     def test_symlink_outside_is_not_read(self):
-        (self.root/'x.txt').symlink_to(self.root.parent/'outside.txt')
+        try:
+            (self.root/'x.txt').symlink_to(self.root.parent/'outside.txt')
+        except OSError as exc:
+            if getattr(exc,'winerror',None)==1314:
+                self.skipTest('Windows: création de symlink non autorisée (WinError 1314).')
+            raise
         report=audit(self.root,['x.txt'],revision='fixture')
         self.assertFalse(report['ok'])
         self.assertEqual(report['issues'][0]['code'],'unsafe_path')

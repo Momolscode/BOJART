@@ -177,6 +177,10 @@ Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `
 
 Réconciliation avant publication : les corrections des lanceurs historiques et leurs quatorze tests, publiés sur `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Le guide d'installation et le journal ont été réunis ; le manifeste repart de cette tête.
 
+## Reprise mémoire locale V4 du 2 novembre 2026
+
+Base distante intégrée : `2025ac1c8f376341532fbd2df8a176b0b8fc3de4`. La copie locale ajoute les corrections des quatre défauts mémoire relevés en V3, avec nouvelles contre-épreuves. Lire `docs/memory/HARDENING_2026-11-02.txt` et la matrice de réception V4 livrée avant les audits historiques. Ne pas relancer automatiquement les demandes UNKNOWN et arrêter les anciens processus avant migration. Cette entrée ne prouve ni push GitHub ni recette du matériel.
+
 Réconciliation du dossier de production : les informations matérielles sourcées, l’installeur RTX 4060 Ti et les contrôles de contexte compact du commit `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` sont conservés avec la reconstruction des cinq médias R03. Le correctif de simulation de collision de dossiers est passé sous Windows et Linux au commit `0d853787285142292a70850a1e38c49ce45b385e`. Les contrôles de l’ensemble réuni sont consignés dans la preuve de récupération.
 
 ## Simulations mesurées — 2 novembre 2026
@@ -210,3 +214,31 @@ Une requête JSON authentifiée mais incomplète retenait le verrou global avant
 Un jeton de démarrage non ASCII provoquait aussi une coupure de connexion : il reçoit désormais un refus JSON 401. Les longueurs absentes, malformées ou dupliquées, les corps tronqués, les délais dépassés et la saturation sont refusés avant mutation. Treize nouveaux tests utilisent de vraies connexions HTTP et SQLite dans des dossiers temporaires, sans moteur vocal, modèle ni calcul géométrique. Le test de refus des liens symboliques dans les sauvegardes utilise maintenant une base toujours présente, sans dépendre des médias privés.
 
 Vérifications locales : 98 tests racine, 64 tests M06/M07, 38 tests de console consolidée, 31 tests M05 et 20 tests de parcours réussis. Les trois autres cas M05 exigent les médias privés absents et ne sont pas déclarés validés. Les tests de sauvegarde pendant une mutation acceptée et de fermeture pendant une mutation passent. La branche distante c71628cf20426dd8b4bdedbab2dcf403f5135667, dont ses mesures Windows, est préservée. Les contrôles CI et la liste restante de l'audit sont consignés séparément sur audit/context-results. Aucun navigateur ni poste cible n'est qualifié par cette recette.
+
+## Passation transversale locale V5 — 2 novembre 2026
+
+Le lot distant c71628cf20426dd8b4bdedbab2dcf403f5135667 est intégré avec les correctifs mémoire V4. Lire docs/AUDIT_TRANSVERSAL_V5.txt et docs/research/audit-transversal-2026-11-02/ pour les corrections, les données et les propositions. La réception détaillée, la couverture des chats et les sources sélectionnées restent dans le paquet JARVIS_V5. Une copie locale corrigée ne signifie ni push, ni installation sur la tour.
+
+## Publication du paquet V5 et session bras robotique — 2 novembre 2026
+
+Objectif : pousser ce qui n'avait pas été publié, dont la session « bras robotique ». Sources reçues le 2 novembre : les deux ZIP du paquet V5, le PDF `STRATES_Audit_Robotique_IA_2026-11-02.pdf`, deux vidéos générées et le lien de la conversation ChatGPT `6ae7c762-6630-83eb-afde-680aa0c54b2e`.
+
+Faits nouveaux. Le paquet est complet : 1 316 fichiers conformes à leur manifeste. La révision locale `754620639eef04835ec3be5fda71c8017a5958fe` n'existait pas sur GitHub. Ses 926 fichiers sont rejoués sur `c71628cf20426dd8b4bdedbab2dcf403f5135667` au commit `02be63cf7f7c8430cd09cb60adf7ef5122492b92`, sans écart d'empreinte. Ils sont ensuite fusionnés avec `b49101e3acad6257e2d1a610dac5fb95ec0a8bfb` : les deux sections de passation sont conservées, le manifeste est régénéré et le bit exécutable de l'installeur shell est restauré. L'utilisateur rattache la conversation « Bras robotique précis » à BOJ.ART ; l'audit des chats V5 la laissait ambiguë. Elle renvoie 403 sans compte et n'a pas été lue.
+
+Décisions. Le dépôt est public : le PDF STRATES, son texte, ses montants, le nom du partenaire et les vidéos restent hors Git. Il en va de même des 282 fichiers du paquet que V5 gardait déjà hors du dépôt. Une synthèse publique, l'identité des originaux et les calculs recalculés sont ajoutés. Cinq affirmations sont inscrites au registre :
+
+- publication observée ;
+- rattachement décidé par l'utilisateur ;
+- recommandation STRATES au statut de proposition ;
+- calculs vérifiés ;
+- portée limitée des vidéos.
+
+Fichiers : `docs/evidence/handoff-v5-2026-11-02/`, `docs/research/strates-robotique-2026-11-02/`, `context/CURRENT.md`, `data/knowledge/` et le manifeste du dépôt.
+
+Tests exécutés sur conteneur Linux, sans GPU. Réussis : `tests` 102, `tests_agent` 234, `tests_ops` 98, `tests_workflows` 20, Node 41, base métier 41, validateur. `jarvis/tests` et `jarvis/apps/jarvis/tests` ont les mêmes échecs que `main` non fusionné, faute de médias privés, de `cadquery`, de `playwright` et de `pytest`. Après ajout des deux documents indexés, ces suites repassent. L'évaluation de recherche garde ses 14 références sur 14 dans les cinq premiers résultats. Dans une mémoire temporaire indexée depuis le dépôt, la fiche STRATES sort au troisième rang pour « bras robotique STRATES peinture relief », après `CURRENT.md` et le registre. `verify` est OK.
+
+Limites. Le corps de la conversation n'est pas lu. Les documents internes I1–I3 et les sources R1–R9 ne sont pas rouverts. Aucun essai physique, devis ou achat. Les binaires reçus ne sont pas archivés sur GitHub sans accord.
+
+Prochaine preuve : fiche d'acceptation STRATES (G0) signée, puis coupons mesurés avec incertitude. Le choix d'un stockage privé pour le PDF, les vidéos, le texte de la conversation et les rapports V5 revient à l'utilisateur.
+
+Correctif CI Windows : `OwnerLock` comparait le chemin résolu du dossier `.ask-locks` à son chemin absolu non résolu. Sous Windows, un nom court 8.3 du dossier temporaire suffisait à signaler une redirection : trois tests `test_ask_requests` échouaient. Un parent lié produit le même faux positif sous Linux ou macOS. L'état est désormais résolu avant comparaison ; seul un `.ask-locks` lien ou jonction reste refusé. Deux tests sont ajoutés : un parent lié est accepté, un dossier de verrous redirigé est refusé sans réservation. Le premier échoue sans la correction.

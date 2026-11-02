@@ -28,6 +28,22 @@ TOOLS = [
      "annotations": {"readOnlyHint": False, "destructiveHint": False, "idempotentHint": True, "openWorldHint": False}},
 ]
 
+# These additions expose descriptions and evidence, never invoke the described tools.
+TOOLS += [
+    {"name": "jarvis_capabilities", "description": "Lire les fonctions attendues de Jarvis, leur provenance et leurs critères de réception. Une exigence n'est pas une capacité qualifiée.",
+     "inputSchema": schema({"query": {"type": "string"}}, []),
+     "annotations": {"readOnlyHint": True, "openWorldHint": False}},
+    {"name": "jarvis_tool_catalog", "description": "Consulter les outils intégrés ou candidats et leurs prérequis. N'exécute, n'installe ni ne connecte aucun outil.",
+     "inputSchema": schema({"query": {"type": "string"}}, []),
+     "annotations": {"readOnlyHint": True, "openWorldHint": False}},
+    {"name": "jarvis_preparation_status", "description": "Lire le profil cible déclaré et l'intégrité du corpus préparé. Ce n'est pas un diagnostic matériel en direct.",
+     "inputSchema": schema({}, []),
+     "annotations": {"readOnlyHint": True, "openWorldHint": False}},
+    {"name": "jarvis_research_search", "description": "Rechercher les fiches et propositions sourcées de recherche Jarvis dans la mémoire existante. Ces propositions ne sont pas des décisions validées.",
+     "inputSchema": schema({"query": {"type": "string"}}, ["query"]),
+     "annotations": {"readOnlyHint": True, "openWorldHint": False}},
+]
+
 
 class Protocol:
     def __init__(self, service):
@@ -69,7 +85,16 @@ class Protocol:
                 return {**response, "error": {"code": -32602, "message": "String arguments required"}}
             try:
                 name = tool["name"]
-                if name == "memory_status":
+                if name.startswith("jarvis_"):
+                    from bojart_ops.preinstallation import catalog, preparation_status, research_search
+                    if name == "jarvis_research_search":
+                        output = research_search(self.service.state, args['query'])
+                    elif name == "jarvis_preparation_status":
+                        output = preparation_status(self.service.repo)
+                    else:
+                        kind = "requirements" if name == "jarvis_capabilities" else "tools"
+                        output = catalog(kind, args.get("query", ""), root=self.service.repo)
+                elif name == "memory_status":
                     output = self.service.status()
                 elif name == "memory_note":
                     output = self.service.note(args["key"], args["value"], args["source"], args.get("project", "bojart.jarvis"))
@@ -77,7 +102,7 @@ class Protocol:
                     fn = self.service.search if name == "memory_search" else self.service.context
                     output = fn(args["query"], args.get("project", "bojart.jarvis"))
                 result = {"content": [{"type": "text", "text": json.dumps(output, ensure_ascii=False, allow_nan=False)}], "isError": False}
-            except (ValueError, OSError) as e:
+            except (ValueError, OSError, KeyError, TypeError) as e:
                 result = {"content": [{"type": "text", "text": str(e)}], "isError": True}
         else:
             return {**response, "error": {"code": -32601, "message": "Method not found"}}

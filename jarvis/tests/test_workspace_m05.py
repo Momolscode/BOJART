@@ -8,6 +8,7 @@ import concurrent.futures
 import http.client
 import json
 from pathlib import Path
+from contextlib import closing
 import shutil
 import sqlite3
 import stat
@@ -134,7 +135,7 @@ class WorkspaceTests(unittest.TestCase):
         with zipfile.ZipFile(archive) as z:
             self.assertTrue(set(DATABASES)<=set(z.namelist()))
             dbpath=self.root/'media-copy.sqlite';dbpath.write_bytes(z.read('studio/media.sqlite'))
-            with sqlite3.connect(dbpath) as db:self.assertTrue(all(p.startswith('media/') for p, in db.execute('SELECT path FROM locations')))
+            with closing(sqlite3.connect(dbpath)) as db:self.assertTrue(all(p.startswith('media/') for p, in db.execute('SELECT path FROM locations')))
         restored,receipt=self.restored(archive)
         self.assertEqual(restored.store.get(model['operation_id']),model)
         self.assertEqual(restored.store.list_projects(),self.app.store.list_projects())

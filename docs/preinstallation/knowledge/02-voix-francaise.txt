@@ -1,0 +1,16 @@
+Qualifier les nombres, unités et confirmations françaises
+Identifiant : 02-voix-francaise
+Projet : bojart.jarvis
+Statut : repo_observation_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+Au SHA a0ab8f4, voice.py utilise faster-whisper sur CPU, int8, quatre threads, langue fr, poids locaux seulement. La prise acceptée est WAV mono PCM 16 bits/16 kHz, de 0,25 à 15 secondes. Installer CUDA ne change pas ce choix de code.
+Essai proposé : phrases courtes sur socle, dimensions et écrans ; dix-huit versus quatre-vingts, millimètres versus centimètres, négation, correction, annulation. Rejouer en silence puis avec bruit réel d’atelier ; noter paramètres faux, refus et p50/p95. Le résultat ASR reste une transcription à relire. Tester aussi l’arrêt du TTS et la concurrence avec le micro. Une voix locale déclarée par le navigateur n’est qualifiée qu’après écoute et essai hors ligne.
+
+Sources primaires :
+asr — https://github.com/SYSTRAN/faster-whisper
+ct2 — https://opennmt.net/CTranslate2/hardware_support.html
+tts-web — https://webaudio.github.io/web-speech-api/
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

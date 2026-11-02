@@ -1,5 +1,7 @@
 # BOJ.ART — règles de reprise Mission 03
 
+Actualisation du 2 novembre 2026 : la configuration déclarée est Windows, Ryzen 5 5600G, RTX 4060 Ti, RAM 16 Go ; passage à 32 Go prévu. Voir `../../../data/preinstallation/target-profile.json` et le contexte courant à la racine BOJART. Les mentions ci-dessous « matériel inconnu » et budget 3 000–5 000 EUR décrivent les étapes historiques ; elles ne sont ni une mesure actuelle, ni un budget de mise à niveau reconfirmé. Le matériel, la voix et les imprimantes restent à qualifier.
+
 Le propriétaire veut un atelier 3D de 7–8 imprimantes, trois écrans et IA locale, indépendant d’UNUM/M-Tek. Budget tour 3000–5000 € avec réemploi. Matériel cible inconnu et non audité.
 
 Cette version ajoute une bibliothèque au poste Mission 02. Ne pas annoncer le système comme installé sur la tour. Ne pas modifier les sites publics ou les données commerciales sans outil et autorisation appropriés.
