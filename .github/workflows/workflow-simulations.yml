@@ -1,0 +1,47 @@
+name: Jarvis transcript and fleet simulations
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'jarvis/apps/jarvis/app/**'
+      - 'jarvis/fixtures/**'
+      - 'jarvis/requirements-orchestration.txt'
+      - 'tools/simulate_jarvis_workflows.py'
+      - 'tests_workflows/**'
+      - '.github/workflows/workflow-simulations.yml'
+permissions:
+  contents: read
+env:
+  PYTHONUTF8: '1'
+  LANGSMITH_TRACING: 'false'
+jobs:
+  simulations:
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rules fallback and synthetic planner contracts
+        run: python -m unittest discover -s tests_workflows -v
+      - name: Measure rules fallback
+        run: python tools/simulate_jarvis_workflows.py --output .bojart-audit/workflows-rules.json
+      - name: Install repository-pinned orchestration dependencies
+        run: python -m pip install -r jarvis/requirements-orchestration.txt
+      - name: LangGraph contracts
+        run: python -m unittest discover -s tests_workflows -v
+      - name: Measure persisted LangGraph
+        run: python tools/simulate_jarvis_workflows.py --output .bojart-audit/workflows-langgraph.json
+      - name: Check the engine actually used
+        run: python -c "import json; r=json.load(open('.bojart-audit/workflows-langgraph.json',encoding='utf-8')); assert r['transcripts']['engine']=='sqlite_ready'"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-simulations-${{ matrix.os }}
+          path: .bojart-audit/workflows-*.json
+          retention-days: 30

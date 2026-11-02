@@ -38,6 +38,11 @@
       "sha256": "373c1e640cfda60f643bb3dee7a7b85224f19019c97ce1114056e3c0a2f7444e"
     },
     {
+      "path": ".github/workflows/workflow-simulations.yml",
+      "bytes": 1774,
+      "sha256": "89894e681cf24ed7f5fd28c927d48fbf76b7442acafd68ef74d5bc407aa36e8a"
+    },
+    {
       "path": ".gitignore",
       "bytes": 723,
       "sha256": "873e188cad757388f6c256feb6c1248be3db513b34693bd9b3bb61167fdf2b3f"
@@ -96,6 +101,11 @@
       "path": "SECURITY.md",
       "bytes": 1058,
       "sha256": "93e9f7e9907ae40712b1aa9340814fdf34b5b53379fac00a91f4574cae3caa86"
+    },
+    {
+      "path": "Simuler_BOJART.cmd",
+      "bytes": 455,
+      "sha256": "7c7c843c1d463bd382173afb40a6762fc05e75cae6e8f22dd220384b9c1e7e25"
     },
     {
       "path": "archive/2026-11-01/MANIFEST.json",
@@ -334,8 +344,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 32739,
-      "sha256": "7ef7a7facf3c221be0b91b123b80c9fbec03ddfb5a8a5511bcc96c1ab96a529f"
+      "bytes": 34215,
+      "sha256": "3e451b2b7b7af1a04559e37336615f40c183ad9982bb92133263688e074f7867"
     },
     {
       "path": "creative/CURRENT.md",
@@ -434,8 +444,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 9708,
-      "sha256": "1f3e9229a9bcfff41507826a8be8113692662b98c5de592dea2aa809fd052c62"
+      "bytes": 9990,
+      "sha256": "1af3154a1541e5d7031c39f73521512c1490368007b9042e09a46927365ef8cc"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -561,6 +571,11 @@
       "path": "docs/RESEARCH_BACKLOG.md",
       "bytes": 1737,
       "sha256": "c66a97df9701e0c69b885a6e58b7c4b59af434ea16a9d9682b6c74beacdb12a1"
+    },
+    {
+      "path": "docs/SIMULATIONS_ATELIER.md",
+      "bytes": 7010,
+      "sha256": "b00b2537007b79ad6211f95fadc61d9115127c4ff134c0f5c0f67ede039830ad"
     },
     {
       "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
@@ -776,6 +791,41 @@
       "path": "docs/evidence/startup-retrieval-2026-11-01.json",
       "bytes": 4144,
       "sha256": "b872839516aec06623c18dd3f99a289dbaec0465717e6704e044c93760c8248c"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/README.md",
+      "bytes": 6594,
+      "sha256": "ff82c336f4b38e9755c1c97c40753a24db296e11934a9a55f0fa98451dcc0e15"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/before.json",
+      "bytes": 1990,
+      "sha256": "6b573b8970fc2b69590f932094061b7f2a836029391ec4f002db902abc7d81e1"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/run-1.json",
+      "bytes": 98842,
+      "sha256": "0ffa6d86c45bfc6439b853d19d80245315903dced69a670623077bfd057b0946"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/run-2.json",
+      "bytes": 98832,
+      "sha256": "c1c5702129b47043cd1eecc81adb3b6b2def6d19b1d30de8465365cfbcfe538a"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/run-3.json",
+      "bytes": 98848,
+      "sha256": "38d1bce059c682c72f4c5bc3be4eb60e0c334171b649833a6a764193e6101de5"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/summary.json",
+      "bytes": 1832,
+      "sha256": "1f1fe9d3287eaa8a6c3e7e9564f59245396453258801851f6060faedf18b512d"
+    },
+    {
+      "path": "docs/evidence/workflows-2026-11-02/tests.log",
+      "bytes": 2510,
+      "sha256": "9eaa0a56c5c5edc790098bf26a19907be96a481ee228f4e2a74d7755b1042333"
     },
     {
       "path": "docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
@@ -1133,6 +1183,11 @@
       "sha256": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c"
     },
     {
+      "path": "jarvis/apps/jarvis/app/fleet_simulation.py",
+      "bytes": 9818,
+      "sha256": "fe2d0f14ebca1c3ede4088d49683f01bc8dcdbdf80909b65e60c6cc5bf1b1eb1"
+    },
+    {
       "path": "jarvis/apps/jarvis/app/growth.css",
       "bytes": 3080,
       "sha256": "ac0b6d2f6c0f077d5929da0ae74247c2eab89a9615cc09f0d2b369b4b2b0f7eb"
@@ -1164,8 +1219,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/jarvis_runtime.py",
-      "bytes": 20152,
-      "sha256": "e0e3243ebf754f41f579b6fc073141a65d3c32744375b0748496ab688811b3a0"
+      "bytes": 21366,
+      "sha256": "37c5ea4ace564634664eaa1f2ff08e40bdd3452eaad2996340b3da1767657e57"
     },
     {
       "path": "jarvis/apps/jarvis/app/jev_decider.py",
@@ -1863,6 +1918,11 @@
       "sha256": "1c9da0646f25e21ae46233ca77c5996714499d0179d69cf03ab09acb36e2a8a0"
     },
     {
+      "path": "jarvis/fixtures/fleet_1000mm_synthetic.json",
+      "bytes": 15537,
+      "sha256": "ee9fba1e29ea56981136797b29c9389c09c1ab93d259bed35ca87aa89c034e86"
+    },
+    {
       "path": "jarvis/knowledge/growth/AUDIT_SKILLS.md",
       "bytes": 1515,
       "sha256": "f41ec8042032da92ea456af07dbf1e5be4297a0c234dabad665e6d9bd37e8f5c"
@@ -2414,8 +2474,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 13091,
-      "sha256": "58b11aed3b2b2cb5e015e473aa1b4a46c16084405c024c4a664ef0b95e0e2c80"
+      "bytes": 13235,
+      "sha256": "318c66f5c41687ae25c1e1b05f84c1aebd97ba0cb3bae11a1c8f2e8af6000bd5"
     },
     {
       "path": "ops/request-example.json",
@@ -4148,6 +4208,11 @@
       "sha256": "4ad49603f11f272621283bc01a894374979a2e09e82ec6e77ea47605e0fe0673"
     },
     {
+      "path": "tests_workflows/test_journeys.py",
+      "bytes": 9098,
+      "sha256": "679d6b1087140f62a7ce7e63c2771342b4b139f9df42364e23e276bc00d0200f"
+    },
+    {
       "path": "tools/audit_repository.py",
       "bytes": 937,
       "sha256": "c17763734617bb272b412bb94913aeb31dde88325bec57a419e9994846dda118"
@@ -4226,6 +4291,11 @@
       "path": "tools/setup_local_models.py",
       "bytes": 2464,
       "sha256": "8cc5082063f43562a67cba76a64777aa3a30a2e4cb745593bf6b700360d9e45d"
+    },
+    {
+      "path": "tools/simulate_jarvis_workflows.py",
+      "bytes": 15222,
+      "sha256": "4c151eb2aba48f4b17698a91baded6235f72b8fb7125144a7c24ebf93e838bbe"
     },
     {
       "path": "tools/start_jarvis.py",

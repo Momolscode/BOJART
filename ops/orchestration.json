@@ -181,7 +181,11 @@
     {
       "domain": "runtime",
       "patterns": [
-        "jarvis/*"
+        "jarvis/*",
+        "tests_workflows/*",
+        "Simuler_BOJART.cmd",
+        "tools/simulate_jarvis_workflows.py",
+        "docs/SIMULATIONS_ATELIER.md"
       ],
       "reason": "Runtime Jarvis, CAO, voix et atelier ; matériel à qualifier."
     },

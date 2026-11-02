@@ -206,5 +206,10 @@
     "path": "docs/memory/SIMULATIONS.md",
     "project": "bojart.jarvis",
     "provenance": "Reproducible host measurements and explicit limits, 2026-11-02; raw reports and runtime/corpus fingerprints in docs/evidence/simulations-2026-11-02. No GPU or generative quality measured on the target."
+  },
+  {
+    "path": "docs/SIMULATIONS_ATELIER.md",
+    "project": "bojart.jarvis",
+    "provenance": "Measured software transcript trials and explicitly synthetic fleet planning, 2026-11-02; docs/evidence/workflows-2026-11-02; no target-PC, ASR, browser or printer qualification."
   }
 ]

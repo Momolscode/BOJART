@@ -188,3 +188,12 @@ Résultats : 1 260 recherches, soit 14 questions répétées 90 fois, retrouvent
 Ajouts : banc sans dépendance supplémentaire, rapports bruts, guide de lecture des limites, essai facultatif des modèles déjà installés avec 30 appels et télémétrie Ollama, raccourci Windows `Mesurer_BOJART.cmd` et workflow Ubuntu/Windows. AIPerf est documenté comme piste pour mesurer la première réponse et les intervalles entre tokens ; aucune installation n'est revendiquée. Aucune inférence de modèle réel, latence de commande physique ou qualité artistique n'a été mesurée ici.
 
 Les corrections concurrentes de récupération des sources R03 publiées jusqu'à `70848b97dd59de037801628f6ec67c34b63e56d7` sont conservées. Leurs nouveaux documents restent distincts du corpus figé utilisé pour ces statistiques. Résultats et limites : `docs/evidence/simulations-2026-11-02/README.md`.
+
+
+## 2 novembre 2026 — simulations de demandes et de parc
+
+Les alias exacts « affiche le dashboard atelier/dossiers/Studio/contenus/conception/base métier » et « affiche les trois dashboards » rejoignent le routeur local M07 ; une demande de dashboard sans nom demande une précision sans appel Jev. Les autres contrôles et le circuit de confirmation sont conservés.
+
+Recette : docs/SIMULATIONS_ATELIER.md et docs/evidence/workflows-2026-11-02. Trois campagnes sur hôte Linux : 810 commandes (9 formulations répétées 90 fois), p95 dépôt 19,95 ms, p95 jusqu'au reçu synthétique 32,06 ms ; 16 scénarios de garde/reprise par campagne, tous passés. Ces mesures utilisent les vraies classes et SQLite avec un serveur minimal et des reçus factices, en repli sans LangGraph. Aucun son, navigateur, Jev, LLM ou GPU testé par cette recette. 20 tests dédiés passent localement.
+
+Le simulateur de parc est séparé du runtime vocal : 24 volumes et 8 imprimantes fictifs, 25 h 15 à tour de rôle contre 21 h 24 par heuristique sur ces seules durées supposées ; 23 h 33 sur 7 machines avant démarrage. Pièce trop grande, procédé incompatible, résultat inconnu et changement d'échelle bloquent correctement. Aucune géométrie Végéta, découpe, durée réelle de slicer ou impression produite. La demande vocale de figurine reste CLARIFY. Nouveau lanceur Simuler_BOJART.cmd et tests/CI reproductibles, sans installation automatique ni accès aux machines.
