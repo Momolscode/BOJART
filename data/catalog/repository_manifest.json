@@ -389,8 +389,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 43173,
-      "sha256": "a282872194fb3c685b2b0b3f6cdad329614cdb56c32a5664762f5c3733665dfb"
+      "bytes": 43390,
+      "sha256": "6408e28aeb4a539b8d0d58256defd45f1e3a37210ec6ce514c804ba4b4d92056"
     },
     {
       "path": "creative/CURRENT.md",
@@ -771,6 +771,21 @@
       "path": "docs/creative/THE_AWAKENING.md",
       "bytes": 1537,
       "sha256": "32f3c88e249582d9ad85c014c096f27373e73e36cdf140cb2f2567dded29b367"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
+      "bytes": 5536,
+      "sha256": "bd926ba1c1693421d003e35cd0efc63e8c8e30cc446910be510970339e5d23f8"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",
+      "bytes": 88790,
+      "sha256": "0646fcb4591b7fe54929167a8255aefe8d029ab5e3eb7bb82fa66f35e08965f5"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.md",
+      "bytes": 26055,
+      "sha256": "ee2fe7a66bf82ed624475281930797c1f9dbe79689dc70a39591be9b7b7585bb"
     },
     {
       "path": "docs/evidence/consolidation-2026-11-01.json",
