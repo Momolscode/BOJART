@@ -175,16 +175,40 @@ class RecoveryTests(unittest.TestCase):
                         self.assertEqual(len({r['request_id'] for r in final['displays']}), 3)
 
     def test_burst_24_distinct_commands_and_retries_preserve_every_id(self):
+        for iteration in range(8):
+            with self.subTest(iteration=iteration):self._burst_24_commands()
+
+    def _burst_24_commands(self):
         with RuntimeFixture() as fixture:
             requests = [fixture.request() for _ in range(24)]
+            graph_errors = []
+            if fixture.runtime.graph:
+                invoke = fixture.runtime.graph.invoke
+                def observed(*args, **kwargs):
+                    try:return invoke(*args, **kwargs)
+                    except Exception as error:
+                        graph_errors.append(type(error).__name__+': '+str(error))
+                        raise
+                fixture.runtime.graph.invoke = observed
             with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
                 first = list(executor.map(fixture.runtime.submit, requests))
-            self.assertTrue(all(r['status'] in ('NEW', 'RUNNING', 'QUEUED') for r in first))
+            self.assertTrue(all(r['status'] in ('NEW', 'RUNNING', 'QUEUED') for r in first),
+                            {'statuses':[r['status'] for r in first], 'graph_errors':graph_errors})
             for request in requests:
                 self.assertEqual(fixture.runtime.submit(request)['status'], 'QUEUED')
             self.assertEqual(fixture.count(), 24)
             for _ in requests:self.assertIsNotNone(fixture.receive('pilotage'))
             self.assertTrue(all(fixture.runtime.get(r['request_id'])['display']['state']=='rendered' for r in requests))
+
+    def test_checkpoint_read_needs_no_first_request_migration_under_writer_lock(self):
+        with RuntimeFixture() as fixture:
+            if fixture.runtime.graph is None:self.skipTest('LangGraph not installed')
+            fixture.runtime.connection.execute('PRAGMA busy_timeout=100')
+            with fixture.server.store.connect() as writer:
+                writer.execute('BEGIN IMMEDIATE')
+                state = fixture.runtime.graph.get_state({'configurable':{'thread_id':'never-used'}})
+                self.assertEqual(state.values, {})
+            fixture.runtime.connection.execute('PRAGMA busy_timeout=10000')
 
     def test_burst_same_scene_never_duplicates_children(self):
         with RuntimeFixture() as fixture:

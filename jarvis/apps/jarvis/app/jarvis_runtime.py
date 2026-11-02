@@ -132,6 +132,9 @@ class JarvisRuntime:
             self.connection = sqlite3.connect(self.store.dbpath, check_same_thread=False, timeout=10)
             saver = SqliteSaver(self.connection, serde=JsonPlusSerializer(
                 pickle_fallback=False, allowed_msgpack_modules=[], allowed_json_modules=[]))
+            # Initialize schema/WAL before the server accepts concurrent writers.
+            # Use the public read API; do not call the saver's internal setup().
+            saver.get_tuple({'configurable':{'thread_id':'boj-runtime-initialize'}})
             graph = StateGraph(TurnState)
             graph.add_node('route', self._route)
             graph.add_node('guard', self._guard)
