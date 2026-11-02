@@ -1,0 +1,128 @@
+{
+ "projet": "BOJ.ART — Veille, « Un seul trait » V1",
+ "date": "2026-11-02",
+ "statut": "V1.1 prête à poster, rien publié ; retour d'Olsen le 2026-11-02 : « on se rapproche de quelque chose de très premium », voix A conservée pour l'instant",
+ "personnage": "Veille — personnage original BOJ.ART (aucun emprunt à un personnage existant)",
+ "credits_depenses": 37.4,
+ "images": [
+  {
+   "id": "REF",
+   "role": "Image de référence d'identité",
+   "modele": "nano_banana_pro 2k 9:16",
+   "note": "Édition d'un premier essai : le trait en zigzag (trop proche d'un maquillage célèbre) remplacé par un trait courbe unique ; cheveux ajoutés.",
+   "prompt": "Edit the reference photograph and keep everything identical [...] replace the zigzag red mark on the face with ONE single smooth hand-painted carmine (#F13A54) brushstroke: a gently curved tapered calligraphic stroke that starts thick on the forehead above the left eyebrow, passes over the closed left eyelid and thins out to a fine dry-brush tail on the upper cheek [...] give the figure short, swept-back ash-ivory sculpted hair with crisp carved strands on top and shaved sides."
+  },
+  {
+   "id": "MACRO_DEBUT",
+   "role": "Image de début du plan A",
+   "modele": "nano_banana_pro 2k 9:16, référence REF",
+   "prompt": "Extreme macro [...] face still completely UNPAINTED [...] fine round sable paintbrush [...] tip just touches the forehead above the left eyebrow [...]"
+  },
+  {
+   "id": "MACRO_FIN",
+   "role": "Image de fin du plan A",
+   "modele": "nano_banana_pro 2k 9:16, références MACRO_DEBUT + REF",
+   "note": "Première version rejetée : cadrage différent, trait coupé, filet de peinture.",
+   "prompt": "Edit image 1 and keep its exact framing [...] ONE continuous, unbroken carmine calligraphic brushstroke with exactly the shape and position of the stroke in image 2 [...] brush lifted a few centimetres away [...]"
+  },
+  {
+   "id": "EVEIL",
+   "role": "Image de fin du plan B",
+   "modele": "nano_banana_pro 2k 9:16, référence REF",
+   "prompt": "Keep everything identical [...] Only change: the head is raised by about 15 degrees and the eyes are now OPEN [...] looking straight into the camera."
+  },
+  {
+   "id": "COUVERTURE",
+   "role": "Visuel fixe 4:5 avec espace titre",
+   "modele": "nano_banana_pro 2k 4:5, référence REF"
+  },
+  {
+   "id": "MAINS",
+   "role": "Visuel fixe 4:5 détail",
+   "modele": "nano_banana_pro 2k 4:5, référence REF"
+  }
+ ],
+ "videos": [
+  {
+   "id": "A",
+   "role": "Le trait",
+   "modele": "kling3_0 pro, 5 s, 9:16, sans son, start=MACRO_DEBUT end=MACRO_FIN",
+   "montage": "0,875 s → 5,0 s (4,125 s) : saut du pinceau à 0,83–0,87 s retiré",
+   "prompt": "Locked-off extreme macro shot [...] paints ONE single continuous calligraphic stroke [...] The paint is deposited exactly under the bristles [...] no extra brushes, no floating paint, no cuts."
+  },
+  {
+   "id": "B",
+   "role": "L'éveil",
+   "modele": "kling3_0 pro, 5 s, 9:16, sans son, start=REF end=EVEIL",
+   "montage": "1,5 s de pose (première image tenue) + 5 s, poussée numérique continue 1,14 → 1,24",
+   "prompt": "One continuous studio shot [...] the head lifts slowly with weight and restraint, the closed eyelids open [...] Only the head and eyelids move [...]"
+  }
+ ],
+ "voix": {
+  "texte": "Un seul trait... Et la pièce devient quelqu'un.",
+  "retenue": "elevenlabs_v4, voix préréglée « Celine », stabilité 0,6",
+  "rejet": "seed_audio (3 voix) : « Un seul trait » transcrit « Han Sol Trey » / « An-soul-tree » / « En seul tray » par Whisper small",
+  "controle": "Transcription Whisper small du mix final : langue fr (0,99), « Un seul trait. » puis « Et la pièce devient quelqu'un. »"
+ },
+ "son": "Nappe, frottement de pinceau, montée grave et impact synthétisés par sound.py (aucune source tierce)",
+ "controles_master": {
+  "format": "1080x1920 H.264 24 i/s + AAC 48 kHz stéréo",
+  "duree_s": 13.667,
+  "images": 328,
+  "decodage": "OK",
+  "loudness_lufs": -14.5,
+  "true_peak_dbtp": -1.5,
+  "lra_lu": 7.1
+ },
+ "v1_1": {
+  "date": "2026-11-02",
+  "scripts": [
+   "cards_v11.py",
+   "edit_v11.sh"
+  ],
+  "credits_depenses": 0,
+  "changements": [
+   "Textes dans la zone visible commune Reels/TikTok/Shorts : x 120–888, y 288–1248, x ≤ 780 sous y 840 (V1 : sous-titres à y 1560 et pied du carton à y 1640, sous l'interface)",
+   "Mention « Généré par IA » incrustée de la première à la dernière image, en haut à gauche, libellé court pour ne pas couvrir la tête dans le plan B (tête à x ≥ 443)",
+   "Accroche « Un seul trait. » dès la première image ; halo charbon serré pour la lisibilité sur peau claire",
+   "Carton ramené de 3 s à 2 s ; pied « VEILLE · CONCEPT ORIGINAL / PAS ENCORE SCULPTÉE »",
+   "Calques convertis en BT.709 et fichier étiqueté BT.709 : le carmin du carton V1 décodait en 255/73/81 sur téléphone au lieu de 241/58/84",
+   "Intermédiaires sans perte (qp 0) ; encodage final H.264 High 4.1, CRF 16, GOP fermé de 12 images, 2 images B, moov en tête, AAC 48 kHz 256 kb/s",
+   "Couverture 9:16 : image 4:5 centrée dans la bande 1080x1350 (survit aux recadrages 3:4 et 4:5), mention « Image générée par IA »"
+  ],
+  "controles_master": {
+   "format": "1080x1920 H.264 High 4.1 24 i/s BT.709 + AAC 48 kHz stéréo",
+   "duree_s": 12.667,
+   "images": 304,
+   "decodage": "OK",
+   "loudness_lufs": -14.5,
+   "true_peak_dbtp": -1.4,
+   "lra_lu": 7.2,
+   "transcription": "Whisper small : fr 0,99, « Un seul trait. » puis « Et la pièce devient quelqu’un. »",
+   "textes_hors_zone_visible": 0,
+   "contraste_pire_10_pourcent": {
+    "mention": 6.4,
+    "accroche": 3.1,
+    "phrase_2": 13.6
+   },
+   "carmin_carton_decode_bt709": [
+    245,
+    55,
+    83
+   ],
+   "sha256_fichier_livre": "65611054310be44b8170adf30d8f695e9740c52ac84d677c8a88b367b86d7bc3",
+   "note_sha256": "Empreinte du fichier du dossier projet, qui ajoute un manifeste C2PA signé par Anthropic (boîte uuid) ; la sortie brute de edit_v11.sh a une autre empreinte"
+  },
+  "publication": {
+   "obligations": [
+    "AI Act art. 50(4) (depuis le 2026-08-02) : mention incrustée + réglage IA de chaque plateforme",
+    "Instagram : « Ajouter une mention IA » dans l'app mobile",
+    "TikTok : contenu généré par l'IA + divulgation commerciale « Votre marque »",
+    "YouTube : Attributs > Utilisation de l'IA = Oui ; pas conçu pour les enfants",
+    "Légende : première ligne « Film réalisé avec l'IA : Veille est une pièce imaginée par BOJ.ART, pas encore sculptée. »",
+    "Pas de prix, de disponibilité, de lien d'achat ni de précommande tant que la pièce n'existe pas (C. conso L121-2, L121-3)"
+   ],
+   "statut": "Non publié ; publication soumise à l’accord d’Olsen (fichier, compte, texte, date, mentions)"
+  }
+ }
+}
