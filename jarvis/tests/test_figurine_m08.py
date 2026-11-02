@@ -156,6 +156,9 @@ class PipelineFaultTests(unittest.TestCase):
         self.assertFalse((Path(res['dir']) / 'nominal.stl').exists())
         self.assertFalse((Path(res['dir']) / 'rendus').exists())
         self.assertEqual(st['steps']['transcription']['status'], 'NOT_TESTED')
+        partial = json.loads((Path(res['dir']) / 'manifest_partiel.json').read_text(encoding='utf8'))
+        self.assertTrue(partial['evidence_level'].startswith('INCOMPLET — BLOCKED'))
+        self.assertEqual(set(partial['files']), {'spec.json'})
 
     def test_third_party_mesh_without_provenance_is_blocked(self):
         mesh = self.out / 'fourni.stl'

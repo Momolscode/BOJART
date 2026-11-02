@@ -1244,8 +1244,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/pipeline.py",
-      "bytes": 23742,
-      "sha256": "7286b8757b5fef5ecb990a3dbd6cdebc881219851141c5990be8d722e126e6c7"
+      "bytes": 24234,
+      "sha256": "13f58d1aaac35f51941d3c05d3db1ede453560551ac914585775b0a7612b66b8"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/sculpt.py",
@@ -2454,8 +2454,8 @@
     },
     {
       "path": "jarvis/tests/test_figurine_m08.py",
-      "bytes": 13269,
-      "sha256": "42ef7051c5bd01e558220c548cf7cede1490042dbb94d53d51495dba4561ad8e"
+      "bytes": 13521,
+      "sha256": "b3e579cc87aa531fff2dd13790ae6ffc9d9ef31536a8dc4f3e8b5f09f98c4ec2"
     },
     {
       "path": "jarvis/tests/test_growth.py",

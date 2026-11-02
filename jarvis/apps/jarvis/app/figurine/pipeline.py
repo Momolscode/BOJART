@@ -215,6 +215,9 @@ class FigurineRun:
             self.state['status'] = 'BLOCKED'; self.state['message'] = str(exc)
         except Exception as exc:
             self.state['status'] = 'FAILED'; self.state['message'] = f'{type(exc).__name__}: {exc}'
+        if self.state['status'] != 'DONE':
+            # Un parcours incomplet livre aussi ses étapes réelles, ses fichiers et son blocage exact.
+            self._write_manifest('manifest_partiel.json', partial=True)
         self._save()
         return {'status': self.state['status'], 'task_id': tid, 'dir': str(self.dir),
                 'message': self.state.get('message'), 'duplicate': not fresh}
@@ -395,9 +398,13 @@ class FigurineRun:
                 'sent_to_machine': False}
 
     def _s_manifest(self):
+        n = self._write_manifest('manifest.json')
+        return {'_outputs': ['manifest.json'], 'files': n}
+
+    def _write_manifest(self, name, partial=False):
         files = {}
         for p in sorted(self.dir.rglob('*')):
-            if p.is_file() and p.name not in ('state.json', 'state.json.tmp', 'manifest.json'):
+            if p.is_file() and p.name not in ('state.json', 'state.json.tmp', 'manifest.json', 'manifest_partiel.json'):
                 files[str(p.relative_to(self.dir))] = {'sha256': sha256_file(p), 'bytes': p.stat().st_size}
         steps = {k: {kk: v.get(kk) for kk in ('status', 'seconds', 'attempts', 'reason')}
                  for k, v in self.state['steps'].items() if k != 'manifest'}
@@ -411,8 +418,9 @@ class FigurineRun:
             'executed': [k for k, v in steps.items() if v['status'] == 'DONE'],
             'not_tested_or_simulated': [k for k, v in steps.items() if v['status'] in ('NOT_TESTED', 'SKIPPED')]
                                        + ['impression physique (N3)', 'affichage sur la tour réelle', 'reconnaissance vocale'],
-            'evidence_level': 'N2 — parcours numérique avec vrai maillage, rendus et tranchage réel ; pas d’impression',
+            'evidence_level': ('INCOMPLET — ' + str(self.state.get('status')) + ' : ' + str(self.state.get('message'))) if partial
+                              else 'N2 — parcours numérique avec vrai maillage, rendus et tranchage réel ; pas d’impression',
             'files': files,
         }
-        (self.dir / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding='utf8')
-        return {'_outputs': ['manifest.json'], 'files': len(files)}
+        (self.dir / name).write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding='utf8')
+        return len(files)
