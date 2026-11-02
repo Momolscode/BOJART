@@ -3,8 +3,8 @@
   "repository": "Momolscode/BOJART",
   "pull_requests": {
     "1": {
-      "head_sha": "6cda578030b619c7b459515e77a34b80b2b5f396",
-      "receipt_path": "ops/context-monitor/receipts/pr-1/6cda578030b619c7b459515e77a34b80b2b5f396.continuation-simulations.json",
+      "head_sha": "13005fe924e0c092e87a99a82089c8ad15cf9b4c",
+      "receipt_path": "ops/context-monitor/receipts/pr-1/13005fe924e0c092e87a99a82089c8ad15cf9b4c.json",
       "status": "partial",
       "pending_paths": [
         "archive/2026-11-01/chunks/BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4.part000",
@@ -72,17 +72,9 @@
         "jarvis/apps/jarvis/app/index.html",
         "jarvis/apps/jarvis/app/knowledge.html",
         "jarvis/apps/jarvis/app/knowledge.js",
-        "jarvis/apps/jarvis/app/server.py",
         "jarvis/apps/jarvis/app/tower.css",
-        "jarvis/apps/jarvis/app/tower.html",
-        "jarvis/apps/jarvis/app/tower.js",
-        "jarvis/apps/jarvis/app/tower_events.py",
-        "jarvis/apps/jarvis/app/tower_screen.html",
-        "jarvis/apps/jarvis/app/tower_screen.js",
         "jarvis/apps/jarvis/app/ui.css",
         "jarvis/apps/jarvis/app/ui.js",
-        "jarvis/apps/jarvis/app/viewer.js",
-        "jarvis/apps/jarvis/app/voice_endpoint.js",
         "jarvis/apps/jarvis/app/workspace.css",
         "jarvis/apps/jarvis/app/workspace.html",
         "jarvis/apps/jarvis/app/workspace.js",
@@ -595,7 +587,7 @@
         "1f46b0780f9bae831425924588a5926971e23f7a",
         "d5855c1e8c10f6ab57d7b362eb1d954c722b340b"
       ],
-      "updated_at": "2026-11-01T23:58:31Z"
+      "updated_at": "2026-11-02T00:19:43Z"
     },
     "2": {
       "head_sha": "3493092348fc39b95602bf294e66ca0c6adb6c75",
