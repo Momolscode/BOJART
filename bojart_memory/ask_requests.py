@@ -69,9 +69,12 @@ class OwnerLock:
     def __init__(self, state, owner):
         if not re.fullmatch(r'[0-9a-f]{32}', owner):
             raise MemoryError('Propriétaire de demande invalide.')
-        directory = Path(state) / '.ask-locks'
+        # Resolve the state first: 8.3 short names (Windows temp folders) or a
+        # linked ancestor are not a redirection. Only the lock folder itself
+        # must not be a link or junction.
+        directory = Path(state).resolve() / '.ask-locks'
         directory.mkdir(exist_ok=True)
-        if directory.resolve() != directory.absolute():
+        if directory.resolve() != directory:
             raise MemoryError('Répertoire de verrous redirigé.')
         self.path = directory / (owner + '.lock')
         self.owner = owner

@@ -2,6 +2,7 @@
 from concurrent.futures import ThreadPoolExecutor
 import json
 import multiprocessing
+import os
 from pathlib import Path
 import tempfile
 import threading
@@ -10,7 +11,7 @@ from unittest.mock import patch
 
 from bojart_memory.agent import AgentMemory
 from bojart_memory.ask_requests import AskRequestError, AskRequests, OwnerLock
-from bojart_memory.core import Memory
+from bojart_memory.core import Memory, MemoryError as MemoryRefusal
 from bojart_memory.ollama import Ollama
 
 PROJECT = 'bojart.jarvis'
@@ -251,6 +252,33 @@ class AskRequestTests(unittest.TestCase):
             self.assertEqual(len(self.rows()), 1)
         finally:
             guard.close()
+
+    def link_or_skip(self, link, target):
+        try:
+            os.symlink(target, link, target_is_directory=True)
+        except (OSError, NotImplementedError) as exc:
+            self.skipTest(f'symbolic links unavailable: {exc}')
+
+    def test_state_reached_through_linked_parent_is_not_a_redirection(self):
+        # Same class as Windows 8.3 temp names: the unresolved state path
+        # differs from its resolved form without the lock folder moving.
+        alias = self.root / 'alias'
+        self.link_or_skip(alias, self.root)
+        guard, _ = AskRequests(alias / 'state').claim('request', 'session', PROJECT, QUESTION)
+        try:
+            self.assertEqual(guard.path.parent, (self.state / '.ask-locks').resolve())
+            self.assertEqual(self.agent.request_status('request', 'session', PROJECT)['state'], 'RUNNING')
+        finally:
+            guard.close()
+
+    def test_redirected_lock_directory_is_refused_before_reservation(self):
+        elsewhere = self.root / 'elsewhere'
+        elsewhere.mkdir()
+        self.link_or_skip(self.state / '.ask-locks', elsewhere)
+        with self.assertRaisesRegex(MemoryRefusal, 'redirigé'):
+            AskRequests(self.state).claim('request', 'session', PROJECT, QUESTION)
+        self.assertEqual(list(elsewhere.iterdir()), [])
+        self.assertEqual(self.rows(), [])
 
     def test_missing_and_invalid_status_never_exposes_other_request(self):
         self.assert_code('NOT_FOUND', lambda: self.agent.request_status('missing', 'session', PROJECT))

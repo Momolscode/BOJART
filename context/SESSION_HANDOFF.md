@@ -240,3 +240,5 @@ Tests exécutés sur conteneur Linux, sans GPU. Réussis : `tests` 102, `tests_a
 Limites. Le corps de la conversation n'est pas lu. Les documents internes I1–I3 et les sources R1–R9 ne sont pas rouverts. Aucun essai physique, devis ou achat. Les binaires reçus ne sont pas archivés sur GitHub sans accord.
 
 Prochaine preuve : fiche d'acceptation STRATES (G0) signée, puis coupons mesurés avec incertitude. Le choix d'un stockage privé pour le PDF, les vidéos, le texte de la conversation et les rapports V5 revient à l'utilisateur.
+
+Correctif CI Windows : `OwnerLock` comparait le chemin résolu du dossier `.ask-locks` à son chemin absolu non résolu. Sous Windows, un nom court 8.3 du dossier temporaire suffisait à signaler une redirection : trois tests `test_ask_requests` échouaient. Un parent lié produit le même faux positif sous Linux ou macOS. L'état est désormais résolu avant comparaison ; seul un `.ask-locks` lien ou jonction reste refusé. Deux tests sont ajoutés : un parent lié est accepté, un dossier de verrous redirigé est refusé sans réservation. Le premier échoue sans la correction.
