@@ -1,0 +1,11 @@
+# Chaîne figurine (simulation N2). Versions exécutées le 2026-11-02 dans le conteneur Linux.
+# Outils système à part : PrusaSlicer (2.7.2 testé) et Blender (4.0.2 testé), facultatif pour les rendus.
+numpy==2.5.3
+scipy==1.18.1
+scikit-image==0.26.0
+trimesh==5.2.0
+manifold3d==3.5.4
+rtree==1.4.1
+shapely==2.2.0
+networkx==3.7
+matplotlib==3.11.2

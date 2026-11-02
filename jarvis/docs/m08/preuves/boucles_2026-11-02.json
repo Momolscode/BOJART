@@ -1,0 +1,34 @@
+{
+ "date": "2026-11-02",
+ "environnement": "conteneur Linux, 4 vCPU, 15 Go RAM, sans GPU ; pas la tour BOJ.ART",
+ "regle": "une variable modifiée à la fois ; conserver uniquement un gain mesuré sans perte des critères calculés ; 2 itérations sans gain = arrêt",
+ "boucles": [
+  {
+   "id": "perf-epaisseurs-rayons",
+   "type": "performance",
+   "defaut_detecte": "pic mémoire de l'étape contrôles : 4 252,9 Mo (exécution 0932c22a28428a7b)",
+   "variable_modifiee": "lancers de rayons par paquets de 100 au lieu d'un seul appel (checks.wall_thickness)",
+   "mesure_isolee_meme_maillage": {
+    "avant": {"secondes": 27.77, "pic_rss_mo": 4043, "epaisseur_min_mm": 3.99, "p1_mm": 6.669, "echantillons": 1500, "rayons_perdus": 0},
+    "apres": {"secondes": 10.93, "pic_rss_mo": 512, "epaisseur_min_mm": 3.99, "p1_mm": 6.669, "echantillons": 1500, "rayons_perdus": 0}
+   },
+   "dans_le_parcours": {"avant_0932c22a28428a7b": {"secondes": 25.255, "pic_rss_mo": 4252.9}, "apres_5368f3d7cdca9a69": {"secondes": 10.574, "pic_rss_mo": 620.2}},
+   "essais": 1,
+   "decision": "conservé : mêmes valeurs mesurées, mémoire ÷ 7,9 et durée ÷ 2,5 sur cet essai unique",
+   "retour_arriere": "paramètre batch de wall_thickness"
+  },
+  {
+   "id": "cout-socle-evide",
+   "type": "qualité de fabrication / coût",
+   "defaut_detecte": "socle plein : 9 h 30 min 31 s et 93,22 g estimés, plus long que la figurine elle-même à matière égale",
+   "variable_modifiee": "évidement du socle par dessous (parois 3 mm, plancher 2 mm sous les logements) + tranchage retourné",
+   "meme_trancheur_et_profil": "PrusaSlicer 2.7.2, profil_simulation.ini identique",
+   "avant_0932c22a28428a7b": {"temps_estime": "9h 30m 31s", "filament_g": 93.22, "filament_cm3": 75.18, "stabilite_marge_mm": 70.24, "epaisseur_min_socle_mm": 16.543},
+   "apres_5368f3d7cdca9a69": {"temps_estime": "8h 10m 9s", "filament_g": 73.77, "filament_cm3": 59.49, "stabilite_marge_mm": 69.12, "epaisseur_min_socle_mm": 1.999},
+   "gain": "-14 % de temps estimé, -21 % de matière estimée",
+   "criteres_conserves": "volume fermé, aucun élément flottant, ajustement sans interférence, stabilité estimée, épaisseur ≥ 0,8 mm",
+   "decision": "conservé ; prochaine variable à tester : hauteur de couche du socle (pièce sans détail)",
+   "nature": "estimations de tranchage, pas des durées d'impression mesurées"
+  }
+ ]
+}

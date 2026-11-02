@@ -1,0 +1,24 @@
+{
+ "checked": "2026-11-02T03:08:08.832Z",
+ "not_found": [
+  "/assets/logo.webp",
+  "/assets/body.ttf",
+  "/assets/display.ttf",
+  "/api/workshop/status",
+  "/api/workshop/assets/status",
+  "/assets/baki-hero.webp",
+  "/assets/logo.webp",
+  "/assets/logo.webp",
+  "/assets/baki-hero.webp",
+  "/vendor/three.core.js"
+ ],
+ "three_import": "échec : TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:36691/vendor/three.module.js",
+ "errors": [
+  "Failed to load resource: the server responded with a status of 404 (Not Found)",
+  "Failed to load resource: the server responded with a status of 404 (Not Found)",
+  "Failed to load resource: the server responded with a status of 404 (Not Found)",
+  "Failed to load resource: the server responded with a status of 404 (Not Found)",
+  "Failed to load resource: the server responded with a status of 404 (Not Found)",
+  "Failed to load resource: the server responded with a status of 404 (Not Found)"
+ ]
+}

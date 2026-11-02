@@ -1,0 +1,66 @@
+# M08 — Backlog priorisé et note de reprise (2 novembre 2026)
+
+## Reprendre en 5 minutes
+
+1. Lire `RELEASE_M08.md` (niveaux de preuve) puis `REGISTRE_DECISIONS_M08.md` (choix sourcés).
+2. Dépendances : `pip install -r jarvis/requirements-figurine.txt`, PrusaSlicer et Blender (facultatif).
+3. Parcours nominal (personnage original, ~2 min 30 sur 4 vCPU sans GPU) :
+   `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable."`
+   Résultats dans `runs/figurine/<id>/` (hors Git) : `manifest.json`, `checks.json`, `rendus/`, `tranchage/`.
+4. Visionneuse : `node jarvis/tools/figurine_viewer_check.cjs runs/figurine/<id>`.
+5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (18 tests, ~50 s).
+
+Règles à garder : un personnage tiers reste BLOQUÉ sans maillage fourni et fiche de provenance ;
+aucun G-code n'est envoyé ; une dépendance absente donne BLOQUÉ, jamais une réussite ; un doublon de
+commande renvoie la tâche existante sans recalcul.
+
+## Backlog (chaque tâche : résultat attendu → dépendance → test d'acceptation → preuve)
+
+### P1 — bloque la qualification réelle du parcours
+
+1. **Exécuter la chaîne sur la tour Windows.**
+   Résultat : même parcours N2 sur la RTX 4060 Ti, temps et mémoire relevés.
+   Dépendance : installation Python 3.12 + requirements-figurine + PrusaSlicer (version actuelle) + Blender.
+   Test : `figurine_pipeline.py` DONE, `figurine_viewer_check.cjs` 13/13, tests M08 verts.
+   Preuve : manifeste de la tour (environnement, versions, durées par étape, pic mémoire).
+2. **Qualité artistique : comparer une génération image→3D locale au prototype procédural.**
+   Résultat : un maillage original plus riche (anatomie, plis, visage) passé par les mêmes contrôles.
+   Dépendance : tâche 1 ; TripoSG (8 Go VRAM annoncés, code MIT, licence des poids à relire) ; image
+   de concept originale aux droits clairs.
+   Test : grille artistique fixée d'avance + critères éliminatoires identiques ; revue par Olsen ou un
+   sculpteur (évaluation indépendante), cas de contrôle tenus à l'écart des réglages.
+   Preuve : vues argile avant/après, `checks.json` des deux maillages, fiche D1 mise à jour.
+3. **Inventorier le parc et calibrer l'ajustement réel.**
+   Résultat : modèles d'imprimantes, volumes, profils matière ; jeu tenon/logement mesuré.
+   Dépendance : accès aux machines avec opérateur (impression N3 autorisée explicitement).
+   Test : coupon tenons Ø 4/5 mm avec jeux 0,10–0,30 mm ; jeu retenu = premier montage sans forcer.
+   Preuve : photos du coupon, profil exporté, `ASSEMBLY_HYPOTHESES` remplacées par des valeurs mesurées.
+
+### P2 — robustesse, voix, affichage
+
+4. **Voix réelle de la commande de référence.** Enregistrer Olsen (WAV 16 kHz, micro de la tour),
+   poids faster-whisper locaux, mesurer la transcription sur la commande et sur « Végéta / végétal ».
+   Test : transcription relue, confusion détectée → CLARIFY. Preuve : journaux, sans conserver l'audio
+   au dépôt.
+5. **Raccorder la chaîne au tableau de bord Jarvis.** La proposition `create_figurine` existe au point
+   d'entrée texte ; il manque la tâche de fond (progression, annulation, reprise) et la vue création
+   sur l'écran droit avec la visionneuse. Test : parcours confirmé depuis l'interface, doublon refusé.
+6. **Réparer la copie three.js de l'Atelier** (`three.core.js` absent, 404 prouvé dans Chromium) dans une
+   nouvelle publication du site, la copie actuelle étant figée. Preuve :
+   `preuves/atelier_three_core_absent_2026-11-02.json`.
+7. **Socle : hauteur de couche 0,25–0,3 mm** (pièce sans détail) puis règle de rayon plus serrée.
+   Test : même figure, même profil hors cette variable ; garder si gain sans perte des critères.
+
+### P3 — extensions
+
+8. **Variante d'un mètre** : clés d'assemblage sur les plans de coupe, répartition sur le parc réel
+   (après tâche 3). L'étude actuelle donne seulement le nombre de pièces pour le volume d'hypothèse.
+9. **Personnage sous licence** : schéma de fiche de provenance (source, licence, usages permis) et
+   contrôle automatique avant toute importation.
+10. **CI** : workflow GitHub qui installe PrusaSlicer et exécute les tests M08 (Blender facultatif).
+
+## Ce qu'il ne faut pas refaire
+
+- Rechercher pourquoi la visionneuse ne charge pas : cause trouvée (three.core.js manquant).
+- Comparer Hunyuan3D 2.1 : licence non applicable dans l'UE (vérifié le 2026-11-02).
+- Tester TRELLIS.2 sur la tour actuelle : 24 Go de VRAM exigés par la fiche officielle.
