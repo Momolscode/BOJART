@@ -446,5 +446,351 @@
    "erreurs_console": [],
    "note": "Grille déclarée fictive « Atelier fictif (essai) » utilisée seulement pour ce parcours ; PDF A4 d’une page généré par Chromium."
   }
+ },
+ "grille_declaree": {
+  "date": "2026-11-02",
+  "demande": "« Continue d’améliorer tout ça » (Olsen) : lever le premier frein à un vrai devis, la grille tarifaire saisie en JSON.",
+  "ajouts": [
+   "Formulaire « Déclarer la grille de BOJ.ART » : version, déclarant, date, validité, matières et sources, coûts par procédé, main-d’œuvre, marge, commission, TVA, émetteur.",
+   "Grille versionnée par SHA-256 avec historique ; un libellé de version ne désigne qu’un contenu ; déclaration concurrente refusée (empreinte lue exigée).",
+   "Chiffrage par empreinte de la grille courante (relue et vérifiée en base) ; choix exemple ou JSON collé conservé.",
+   "Brouillon calculé avec une grille déclarée remplacée : signalé dans la liste et le détail, émission refusée côté serveur.",
+   "SIRET : clé de contrôle, règle de python-stdnum 2.1 (Luhn SIRET et SIREN ; La Poste par somme des chiffres)."
+  ],
+  "source_siret": {
+   "fichier": "stdnum/fr/siret.py",
+   "paquet": "python_stdnum-2.1.tar.gz (PyPI, source)",
+   "sha256": "6b01645969eb3dfd55061a0114d593753cd9e653cea9083198b7eea12644397a",
+   "vecteurs_repris": {
+    "73282932000074": "valide",
+    "73282932000079": "refusé"
+   },
+   "dependance_ajoutee": false
+  },
+  "tests_en_echec_avant": [
+   "ERROR: test_a_draft_computed_with_a_replaced_grid_cannot_be_issued",
+   "ERROR: test_declared_grid_becomes_current_and_quotes_reference_it",
+   "ERROR: test_grid_declaration_is_guarded",
+   "FAIL: test_siret_check_key",
+   "FAIL: test_grid_routes",
+   "FAILED (failures=2, errors=3) — code précédent, même fichier de tests ; siret_ok substitué par « 14 chiffres suffisent » pour permettre l’import"
+  ],
+  "tests_apres": {
+   "jarvis/tests/test_atelier.py": {
+    "tests": 47,
+    "resultat": "OK"
+   },
+   "jarvis/tests (discover)": {
+    "tests": 327,
+    "echecs": 1,
+    "erreurs": 2,
+    "note": "mêmes 3 cas qu’avant le changement (médias M07 absents)"
+   },
+   "tests": 102,
+   "tests_agent": 236,
+   "tests_ops": 98,
+   "tests_workflows": 20,
+   "node": 30,
+   "conversions_pourcentages_js": "28 cas (node) : 30 → 0.30, 27,5 → 0.275, aller-retour exact, refus de -1, 1e3, 30 %, 1000"
+  },
+  "parcours_navigateur": {
+   "etapes": [
+    [
+     "avant",
+     "Aucune grille déclarée",
+     [
+      "exemple",
+      "json"
+     ]
+    ],
+    [
+     "siret_faux",
+     "SIRET : clé de contrôle invalide, vérifier la saisie."
+    ],
+    [
+     "declaration",
+     "Grille essai-navigateur-2026-11 déclarée : complète, elle permet d’émettre."
+    ],
+    [
+     "valeurs_exactes",
+     "0.30",
+     "0.00",
+     {
+      "regime": "assujetti",
+      "taux": "0.20"
+     },
+     {
+      "FDM": "0.05",
+      "RESINE": "0.10"
+     },
+     {
+      "FDM": "0.10",
+      "RESINE": "0.15"
+     },
+     "25.00",
+     "0.60",
+     "12345678200010",
+     []
+    ],
+    [
+     "etat_grille",
+     "Grille courante essai-navigateur-2026-11 COMPLÈTE Déclarée par Essai navigateur le 2026-11-02 · 2 matière(s) · marge 30 % · commission 0 % · TVA 20 % · empreinte 246d323682fd… Reprendre la grille courante dans le formulaire",
+     [
+      "courante",
+      "exemple",
+      "json"
+     ],
+     "courante"
+    ],
+    [
+     "brouillon_demo",
+     "DV-2026-0001 v1 · La Sentinelle de l'atelier — 200 mm (démonstration) BROUILLON Total HT 210,54 € · coût 147,38 € · TTC à définir Grille exemple-2026-11-02 (exemple) · valable jusqu’au 2026-12-02 Voir le détail"
+    ],
+    [
+     "calcul_formulaire",
+     "DV-2026-0002 v1 calculé : 66,46 € HT."
+    ],
+    [
+     "devis_par_empreinte",
+     true,
+     true,
+     "66.46",
+     "79.75"
+    ],
+    [
+     "reprise_formulaire",
+     "30",
+     "20",
+     "12345678200010",
+     2
+    ],
+    [
+     "declaration_2",
+     "Grille essai-navigateur-2026-11-b déclarée : complète, elle permet d’émettre."
+    ],
+    [
+     "brouillon_perime",
+     "DV-2026-0002 v1 · Figurine 200 mm (essai) BROUILLON GRILLE REMPLACÉE : RECALCULER Total HT 66,46 € · coût 46,52 € · TTC 79,75 € Grille essai-navigateur-2026-11 (declare) · valable jusqu’au 2026-12-02 Voir le détail"
+    ],
+    [
+     "detail_perime",
+     "DV-2026-0002 v1 — Figurine 200 mm (essai) BROUILLON",
+     [
+      "Grille remplacée depuis ce calcul : réviser pour recalculer avec la grille courante avant d’émettre."
+     ],
+     0
+    ],
+    [
+     "emission_refusee",
+     409,
+     {
+      "error": "La grille courante a changé depuis ce calcul : recalculer le devis avec la grille courante avant de l’émettre.",
+      "executed": false
+     }
+    ],
+    [
+     "revision",
+     "DV-2026-0002 v2 calculé : 68,41 € HT."
+    ],
+    [
+     "emission",
+     "DV-2026-0002 v2 émis et figé. Rien n’a été envoyé."
+    ],
+    [
+     "imprimable",
+     0,
+     true,
+     "Total HT 68,41 € TVA 20 % 13,68 € Total TTC 82,09 €",
+     true
+    ],
+    [
+     "pdf",
+     95912,
+     1
+    ],
+    [
+     "historique",
+     "Grille courante essai-navigateur-2026-11-b COMPLÈTE Déclarée par Essai navigateur le 2026-11-02 · 2 matière(s) · marge 32 % · commission 0 % · TVA 20 % · empreinte c1c887f3906b… Versions : essai-navigateur-2026-11-b (2026-11-02) ← essai-navigateur-2026-11 (2026-11-02) Reprendre la grille courante dans le formulaire"
+    ]
+   ],
+   "erreurs_console": [
+    "Failed to load resource: the server responded with a status of 409 (Conflict) @ http://127.0.0.1:41845/api/atelier/grille/declarer",
+    "Failed to load resource: the server responded with a status of 409 (Conflict) @ http://127.0.0.1:41845/api/atelier/devis/emettre"
+   ],
+   "note": "Les deux erreurs console sont les deux refus voulus du parcours (SIRET faux, émission d’un brouillon périmé) : réponses 409 du serveur. Grille et émetteur fictifs (« Atelier fictif (essai) », SIRET synthétique 12345678200010)."
+  },
+  "banc_pr17": {
+   "methode": "Branche du banc (04c8712) seule, puis fusionnée avec cette branche ; manifeste régénéré dans l’arbre fusionné ; tools/banc_preinstallation.py",
+   "passages": {
+    "seul_1": {
+     "commit": "04c8712",
+     "tests_executes": 976,
+     "jarvis_tests": {
+      "tests": 280,
+      "echecs": 1,
+      "erreurs": 2
+     },
+     "actions_par_statut": {
+      "partiel": 18,
+      "simule_ok": 13,
+      "echec": 1,
+      "non_code": 6
+     },
+     "constats_par_severite": {
+      "bloquant": 5,
+      "majeur": 12,
+      "mineur": 38
+     },
+     "http_concurrence": {
+      "statut": "ok_reserve",
+      "acceptees": 3,
+      "refus_429": 9,
+      "en_attente": 12,
+      "reprises_reussies": 21
+     }
+    },
+    "seul_2": {
+     "commit": "04c8712",
+     "tests_executes": 976,
+     "jarvis_tests": {
+      "tests": 280,
+      "echecs": 1,
+      "erreurs": 2
+     },
+     "actions_par_statut": {
+      "partiel": 18,
+      "simule_ok": 13,
+      "echec": 1,
+      "non_code": 6
+     },
+     "constats_par_severite": {
+      "bloquant": 5,
+      "majeur": 12,
+      "mineur": 38
+     },
+     "http_concurrence": {
+      "statut": "ok_reserve",
+      "acceptees": 3,
+      "refus_429": 7,
+      "en_attente": 14,
+      "reprises_reussies": 21
+     }
+    },
+    "fusion_49c0c26_1": {
+     "commit": "a7702f2",
+     "tests_executes": 1018,
+     "jarvis_tests": {
+      "tests": 322,
+      "echecs": 1,
+      "erreurs": 2
+     },
+     "actions_par_statut": {
+      "partiel": 18,
+      "simule_ok": 13,
+      "echec": 1,
+      "non_code": 6
+     },
+     "constats_par_severite": {
+      "bloquant": 5,
+      "majeur": 12,
+      "mineur": 38
+     },
+     "http_concurrence": {
+      "statut": "ok_reserve",
+      "acceptees": 4,
+      "refus_429": 2,
+      "en_attente": 18,
+      "reprises_reussies": 20
+     }
+    },
+    "fusion_49c0c26_2": {
+     "commit": "a7702f2",
+     "tests_executes": 1018,
+     "jarvis_tests": {
+      "tests": 322,
+      "echecs": 1,
+      "erreurs": 2
+     },
+     "actions_par_statut": {
+      "partiel": 18,
+      "simule_ok": 13,
+      "echec": 1,
+      "non_code": 6
+     },
+     "constats_par_severite": {
+      "bloquant": 5,
+      "majeur": 12,
+      "mineur": 38
+     },
+     "http_concurrence": {
+      "statut": "ok_reserve",
+      "acceptees": 2,
+      "refus_429": 2,
+      "en_attente": 20,
+      "reprises_reussies": 22
+     }
+    },
+    "fusion_a6e72af": {
+     "commit": "7f59823",
+     "tests_executes": 1023,
+     "jarvis_tests": {
+      "tests": 327,
+      "echecs": 1,
+      "erreurs": 2
+     },
+     "actions_par_statut": {
+      "partiel": 17,
+      "simule_ok": 11,
+      "echec": 4,
+      "non_code": 6
+     },
+     "constats_par_severite": {
+      "bloquant": 7,
+      "majeur": 12,
+      "mineur": 38
+     },
+     "http_concurrence": {
+      "statut": "ok_reserve",
+      "acceptees": 2,
+      "refus_429": 9,
+      "en_attente": 13,
+      "reprises_reussies": 22
+     }
+    },
+    "fusion_105260e": {
+     "commit": "ef04c66",
+     "tests_executes": 1023,
+     "jarvis_tests": {
+      "tests": 327,
+      "echecs": 1,
+      "erreurs": 2
+     },
+     "actions_par_statut": {
+      "partiel": 18,
+      "simule_ok": 13,
+      "echec": 1,
+      "non_code": 6
+     },
+     "constats_par_severite": {
+      "bloquant": 5,
+      "majeur": 12,
+      "mineur": 38
+     },
+     "http_concurrence": {
+      "statut": "ok_reserve",
+      "acceptees": 4,
+      "refus_429": 8,
+      "en_attente": 12,
+      "reprises_reussies": 20
+     }
+    }
+   },
+   "regression_trouvee_et_corrigee": {
+    "constat": "Sur la fusion avec a6e72af, tests_agent échoue (test_small_complete_simulation_keeps_live_memory_untouched) : evaluate_memory 13/14, la question « LangGraph » ne renvoie plus context/CURRENT.md dans les 5 premiers.",
+    "cause": "context/CURRENT.md est 5e sur 5 pour cette question ; la phrase atelier plus longue de CURRENT.md l’a fait sortir sur l’arbre fusionné.",
+    "correction": "105260e : phrase raccourcie ; evaluate_memory 14/14 sur la branche seule et sur l’arbre fusionné."
+   },
+   "lecture": "Après correction, seul l’effectif jarvis_tests change (280 → 322 → 327) ; statuts des actions et sévérités des constats identiques au banc seul. Le scénario http_concurrence reste « OK avec réserve » ; la répartition entre refus 429 et tours « EN ATTENTE » dépend de l’ordre d’arrivée de 24 fils : les preuves du banc seul en CI Windows donnent déjà 2, 6, 7 et 8 refus 429, et toutes les reprises réussissent."
+  }
  }
 }
