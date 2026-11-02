@@ -13,12 +13,23 @@ MANIFEST='data/catalog/repository_manifest.json'
 ARCHIVE_MANIFEST='archive/2026-11-01/MANIFEST.json'
 # Exact manifest already published in PR #3; no general binary exemption.
 ARCHIVE_MANIFEST_SHA256='062a8b216a324dc2c68d69051dd03cb020634b2c0c2a2860d4978054fead12ee'
+# Exact upstream r180 dependency restored for the existing Three.js module.
+# Only this byte sequence exceeds the ordinary text size limit; all other
+# UTF-8, secret and embedded-media checks still apply. Provenance and MIT
+# notice are retained beside the vendor files.
+LARGE_VENDOR_SOURCE={
+    'sites/atelier/dist/vendor/three.core.js': (1403455, 'eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20'),
+}
 PRIVATE_EXT={'.zip','.bundle','.mp4','.mov','.mp3','.wav','.sqlite','.sqlite3','.db','.pem','.key','.png','.jpg','.jpeg','.webp','.pdf','.ttf'}
 SECRET=[re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}'),re.compile(r'github_pat_[A-Za-z0-9_]{40,}'),re.compile(r'sk-proj-[A-Za-z0-9_-]{30,}'),re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),re.compile(r'https?://[^\s"<>]+[?&](?:X-Amz-Signature|sig)=[A-Za-z0-9%]{20,}')]
 
 def names(root=ROOT):
     data=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z'],cwd=root)
     return sorted(set(x for x in data.decode().split('\0') if x))
+
+
+def source_size_allowed(name, raw):
+    return len(raw)<=1_000_000 or LARGE_VENDOR_SOURCE.get(name)==(len(raw),hashlib.sha256(raw).hexdigest())
 
 def verified_archive_files(root):
     approved={};issues=[]
@@ -58,7 +69,7 @@ def validate(write_manifest=False):
         if p.suffix.lower() in PRIVATE_EXT or (p.name.startswith('.env') and p.name!='.env.example') or any(part in {'node_modules','.venv','private','objects'} for part in rel.parts):
             issues.append({'path':name,'error':'private_or_binary_in_public_git'});continue
         b=p.read_bytes()
-        if len(b)>1_000_000:issues.append({'path':name,'error':'file_over_source_limit'})
+        if not source_size_allowed(name,b):issues.append({'path':name,'error':'file_over_source_limit'})
         try:text=b.decode('utf-8')
         except UnicodeDecodeError:issues.append({'path':name,'error':'non_utf8'});continue
         if '\x00' in text or re.search(r'data:(?:video|image)/[a-zA-Z0-9.+-]+;base64,[A-Za-z0-9+/]{100,}',text):issues.append({'path':name,'error':'embedded_media'})

@@ -89,6 +89,34 @@ class OrchestrationTests(unittest.TestCase):
         self.assertEqual(unknown["priority"], 0)
         self.assertEqual(report["summary"]["unclassified"], 1)
 
+    def test_preinstallation_proposals_do_not_become_decisions_or_approval(self):
+        paths = {
+            "docs/preinstallation/knowledge/01-recherche-citee.txt": "research",
+            "data/preinstallation/knowledge-cards.json": "research",
+            "data/preinstallation/sources-curated.json": "research",
+            "data/preinstallation/tool-registry.json": "research",
+            "data/preinstallation/requirements.json": "continuity",
+            "data/preinstallation/target-profile.json": "continuity",
+            "data/preinstallation/retrieval-cases.json": "memory",
+            "data/preinstallation/target-inventory.template.json": "operations",
+            "skills/bojart-context-reconstruction/SKILL.md": "operations",
+            "skills/bojart-evidence-audit/SKILL.md": "operations",
+            "skills/bojart-evidence-audit/references/acceptance.md": "operations",
+            "skills/bojart-tool-qualification/SKILL.md": "operations",
+            "data/preinstallation/unreviewed-category.json": "unclassified",
+        }
+        self.audit["files"] += [entry(path) for path in paths]
+        report = plan(self.audit, self.config)
+        mapping = {f["path"]: f for f in report["files"]}
+        for path, domain in paths.items():
+            with self.subTest(path=path):
+                self.assertEqual(mapping[path]["domain"], domain)
+                self.assertEqual(mapping[path]["review_status"], "not_assessed_for_revision")
+                if domain == "research":
+                    self.assertIsNone(mapping[path]["project"])
+        self.assertFalse(report["classification_is_semantic_review"])
+        self.assertEqual(report["tasks_executed"], 0)
+
     def test_dependencies_block_installation_and_master(self):
         tasks = {t["id"]: t for t in plan(self.audit, self.config)["tasks"]}
         self.assertEqual(tasks["target-install"]["effective_status"], "blocked")

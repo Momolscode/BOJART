@@ -37,6 +37,12 @@ def load_config(path=None):
 class Workbench(ThreadingHTTPServer):
     daemon_threads=True
     request_queue_size=12
+    # Windows SO_REUSEADDR allows another listener to take the same port.
+    allow_reuse_address=not hasattr(socket,'SO_EXCLUSIVEADDRUSE')
+    def server_bind(self):
+        if hasattr(socket,'SO_EXCLUSIVEADDRUSE'):
+            self.socket.setsockopt(socket.SOL_SOCKET,socket.SO_EXCLUSIVEADDRUSE,1)
+        super().server_bind()
     def __init__(self,address,store,config=None,token=None,voice=None,provider=None):
         self.store=store;self.token=token or secrets.token_urlsafe(32)
         self.config=config or load_config();self.provider=provider or LocalOllama(self.config['ollama'])

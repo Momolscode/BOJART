@@ -1,0 +1,17 @@
+Lire un état ne donne pas le droit de piloter
+Identifiant : 09-telemetrie-inconnue
+Projet : bojart.jarvis
+Statut : source_reported_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+Sur Moonraker, lister les objets disponibles avant de demander leurs états. Un objet ou attribut absent peut être omis sans erreur ; l’afficher comme inconnu, jamais comme zéro ou prêt. Associer réception locale et temps de mesure ; après timeout, conserver le dernier état comme périmé.
+Sur OctoPrint, les permissions d’état et de commande sont distinctes ; choisir un compte minimal et bloquer les endpoints de commande. Pour Moonraker, ne pas supposer qu’une clé API est limitée en lecture : imposer une liste blanche d’appels dans le connecteur. Première recette : fixtures, puis un appareil explicitement autorisé, sans mouvement ni chauffe ni envoi. Une réponse HTTP réussie ne prouve pas l’état physique de la pièce ni la disponibilité du plateau.
+
+Sources primaires :
+moonraker — https://moonraker.readthedocs.io/en/latest/external_api/printer/
+moonraker-auth — https://moonraker.readthedocs.io/en/latest/external_api/authorization/
+octoprint — https://docs.octoprint.org/en/main/api/printer.html
+octoprint-access — https://docs.octoprint.org/en/main/features/accesscontrol.html
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

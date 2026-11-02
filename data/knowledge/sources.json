@@ -128,5 +128,13 @@
     "sha256": "f3de8799d7a5d8ff26a9e537913638ee70039ab992cb35f07e3864a1d2be8053",
     "scope": "Sanitized reported hardware only; no device/product identifiers or image in Git; no inference benchmark",
     "raw_content_in_git": false
+  },
+  {
+    "source_id": "jarvis-preinstallation-user-2026-11-01",
+    "evidence": "current_user_instruction_and_photo",
+    "path": "docs/preinstallation/DECISIONS_UTILISATEUR.txt",
+    "sha256": "feff12f25c206990894b2e476ec9032ca1500279f7ce3fa7919b495294002cf8",
+    "scope": "BOJART",
+    "raw_content_in_git": false
   }
 ]

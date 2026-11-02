@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T00:12:27.217Z",
+  "status": "instruction_portability_reviewed_not_runtime_qualified",
+  "prior_counts": {
+    "examined": 10,
+    "retained_reading_bundle": 4,
+    "local_skills": 3
+  },
+  "upstream_heads_unchanged_from_v3": {
+    "trailofbits/skills": "2be6433b39e009cd2b6fd3be1895f6b1faa5af9a",
+    "anthropics/skills": "ca45fc496a3436251f191354091d557da31c15b5",
+    "openai/skills": "49f948faa9258a0c61caceaf225e179651397431"
+  },
+  "local_skills": [
+    {
+      "path": "skills/bojart-context-reconstruction/SKILL.md",
+      "sha256": "0c0b4fdf6c23f9bc7ba1ca5547740c628ae854e72a5b452f2267302e83650a75",
+      "full_text_read": true,
+      "depends_on_client_specific_tool_names": false,
+      "embedded_scripts": false,
+      "frontmatter_name_present": true,
+      "frontmatter_description_present": true,
+      "client_discovery_tested_in_this_lot": false
+    },
+    {
+      "path": "skills/bojart-evidence-audit/SKILL.md",
+      "sha256": "d2db15ed0ce49f6aadd6232dbe60a738e15b592f150134c54d9c7d068e2c422a",
+      "full_text_read": true,
+      "depends_on_client_specific_tool_names": false,
+      "embedded_scripts": false,
+      "frontmatter_name_present": true,
+      "frontmatter_description_present": true,
+      "client_discovery_tested_in_this_lot": false
+    },
+    {
+      "path": "skills/bojart-tool-qualification/SKILL.md",
+      "sha256": "016e04eacce8704b10c1d0a56dcdd510938b1c526bf80950eff1b4402e1b874c",
+      "full_text_read": true,
+      "depends_on_client_specific_tool_names": false,
+      "embedded_scripts": false,
+      "frontmatter_name_present": true,
+      "frontmatter_description_present": true,
+      "client_discovery_tested_in_this_lot": false
+    }
+  ],
+  "retained_methods": [
+    "Trail of Bits audit-context-building",
+    "OpenAI security-threat-model historique",
+    "Trail of Bits differential-review",
+    "Trail of Bits sharp-edges"
+  ],
+  "not_installed": true,
+  "not_all_third_party_references_read_again": true,
+  "mcp_builder": {
+    "reused_not_new_eleventh_skill": true,
+    "skill_md_fully_reread": true,
+    "python_reference": "sections initiales et contrats relus, pas fichier entier",
+    "evaluation_guide": "principes initiaux relus ; ne pas exécuter scripts evaluator",
+    "license": "Apache-2.0 notice conservée",
+    "adaptations": [
+      "Préserver serveur Python existant, aucune migration TypeScript ou npx latest automatique.",
+      "Outils minimaux par besoin ; rejeter la préférence à couverture API exhaustive pour les machines.",
+      "Ne pas exiger plusieurs dizaines d’appels pour gonfler la difficulté ; questions utiles vérifiables, abstention comprise.",
+      "Lire les scripts et figer versions avant éventuelle exécution ; faux fournisseur et liste lecture seule imposés par le harness, pas par un prompt."
+    ]
+  },
+  "client_mapping": [
+    {
+      "concept": "lire un fichier",
+      "codex": "outil local de lecture disponible",
+      "claude": "outil local disponible ou pièce jointe ; vérifier effectivement accès",
+      "proof": "aucun nom de connecteur présumé"
+    },
+    {
+      "concept": "commande",
+      "codex": "PowerShell/subprocess argv Windows après lecture",
+      "claude": "même recette avec outil réellement exposé ; aucune commande Bash présumée",
+      "proof": "commandes attachées aux environnements, pas à la marque du modèle"
+    },
+    {
+      "concept": "sous-agent",
+      "codex": "délégation si disponible",
+      "claude": "délégation si disponible, sinon revue séparée séquentielle",
+      "proof": "aucun moteur propriétaire copié implicitement"
+    },
+    {
+      "concept": "MCP",
+      "codex": "découverte8 outils puis smoke sur état jetable",
+      "claude": "découverte8 outils et même smoke dans le vrai client",
+      "proof": "stdio local réussi dans V4 ne valide pas ces deux raccordements"
+    },
+    {
+      "concept": "autorité",
+      "codex": "instructions utilisateur et bornes du projet",
+      "claude": "idem, documents/skills subordonnés",
+      "proof": "readOnlyHint et prompt de skill ne sont pas ACL"
+    }
+  ],
+  "benchmark": {
+    "file": "datasets-qualification-v5.json",
+    "dataset_id": "DS-AGENT",
+    "execution_status": "not_run",
+    "procedure": "Comparer sans skill, avec une méthode puis avec trois skills BOJART, sur les mêmes fichiers et questions figés ; ordre aléatoire, traces des appels et effets, au moins trois répétitions par client. Évaluation humaine sur preuves, pas jugement automatique unique.",
+    "metrics": [
+      "rappel des défauts injectés",
+      "faux positifs",
+      "citations vérifiables",
+      "respect des inconnues/projets",
+      "effets non autorisés",
+      "temps/tokens/appels"
+    ]
+  },
+  "license_handling": "Conserver notices et provenance des sources tierces ; ne pas incorporer du texte CC-BY-SA aux skills locaux comme création originale. Le bundle V3 reste inchangé.",
+  "current_local_bundle": {
+    "files": 5,
+    "items": [
+      {
+        "path": "skills/bojart-context-reconstruction/SKILL.md",
+        "sha256": "0c0b4fdf6c23f9bc7ba1ca5547740c628ae854e72a5b452f2267302e83650a75",
+        "bytes": 2502,
+        "read_in_v5": true
+      },
+      {
+        "path": "skills/bojart-evidence-audit/references/acceptance.md",
+        "sha256": "86f99f158a31b7f26448c5135286f6ccdaaa6f09d6603fb6c1b876ecf6df3de9",
+        "bytes": 1807,
+        "read_in_v5": false
+      },
+      {
+        "path": "skills/bojart-evidence-audit/references/transversal.md",
+        "sha256": "64abf7a9e2ad0b687783cf541b37412c03d00ae8f64289de415ec8de05be594b",
+        "bytes": 3080,
+        "read_in_v5": true
+      },
+      {
+        "path": "skills/bojart-evidence-audit/SKILL.md",
+        "sha256": "d2db15ed0ce49f6aadd6232dbe60a738e15b592f150134c54d9c7d068e2c422a",
+        "bytes": 3117,
+        "read_in_v5": true
+      },
+      {
+        "path": "skills/bojart-tool-qualification/SKILL.md",
+        "sha256": "016e04eacce8704b10c1d0a56dcdd510938b1c526bf80950eff1b4402e1b874c",
+        "bytes": 2734,
+        "read_in_v5": true
+      }
+    ]
+  },
+  "local_change": "bojart-evidence-audit enrichi par le parent avec references/transversal.md ; texte du skill et nouvelle référence relus intégralement, hashes actualisés."
+}

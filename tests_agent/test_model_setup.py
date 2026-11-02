@@ -130,7 +130,7 @@ class ModelSetupTests(unittest.TestCase):
         directory = self.root / 'ledger/data/knowledge'
         directory.mkdir(parents=True)
         registry = directory / 'claims.jsonl'
-        registry.write_text('{}\n', encoding='utf-8')
+        registry.write_text(json.dumps({'project': PROJECT}) + '\n', encoding='utf-8')
         with Memory(self.state) as memory:
             source = memory.ingest_file(registry, root=self.root/'ledger', project=PROJECT,
                                         collection='canonical', provenance='fixture')

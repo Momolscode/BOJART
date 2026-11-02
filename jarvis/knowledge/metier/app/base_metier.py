@@ -9,6 +9,7 @@ import json
 import re
 import sqlite3
 import unicodedata
+from contextlib import closing
 from datetime import date
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
@@ -122,7 +123,7 @@ class KnowledgeBase:
     def export_index(self,path:Path|str):
         path=Path(path)
         if path.exists(): raise FileExistsError('Refus d’écraser un index existant.')
-        with sqlite3.connect(path) as target: self.con.backup(target)
+        with closing(sqlite3.connect(path)) as target, target: self.con.backup(target)
 
 
 def price_from_cost(cost:Any, margin:Any, fees:Any) -> dict[str,str]:

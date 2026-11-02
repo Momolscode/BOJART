@@ -2,7 +2,7 @@
 No external calls, no subprocess derived from a prompt, no printer endpoints.
 """
 from __future__ import annotations
-import argparse, hmac, http.cookies, importlib.util, json, mimetypes, os, secrets, sys, threading, urllib.parse, webbrowser
+import argparse, hmac, http.cookies, importlib.util, json, mimetypes, os, secrets, socket, sys, threading, urllib.parse, webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from core import APP_VERSION, Store, Rejected, IntegrityError, parse_command, verify_backup
@@ -24,6 +24,11 @@ def strict_loads(raw):
 
 class AppServer(ThreadingHTTPServer):
     daemon_threads=True
+    allow_reuse_address=not hasattr(socket,'SO_EXCLUSIVEADDRUSE')
+    def server_bind(self):
+        if hasattr(socket,'SO_EXCLUSIVEADDRUSE'):
+            self.socket.setsockopt(socket.SOL_SOCKET,socket.SO_EXCLUSIVEADDRUSE,1)
+        super().server_bind()
     def __init__(self,address,store,token=None):
         self.store=store;self.token=token or secrets.token_urlsafe(32)
         super().__init__(address,Handler)

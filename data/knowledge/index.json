@@ -208,6 +208,120 @@
     "provenance": "Reproducible host measurements and explicit limits, 2026-11-02; raw reports and runtime/corpus fingerprints in docs/evidence/simulations-2026-11-02. No GPU or generative quality measured on the target."
   },
   {
+    "path": "docs/preinstallation/knowledge/01-recherche-citee.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/02-voix-francaise.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/03-pile-locale-windows.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/04-modele-memoire.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/05-cao-vers-tranchage.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/06-materiaux-choix.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/07-resine-documentation.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/08-maintenance-par-modele.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/09-telemetrie-inconnue.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/10-reprise-effets.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/11-blender-connecteur.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/knowledge/12-mcp-interop.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/DECISIONS_UTILISATEUR.txt",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/PREPARATION_WINDOWS.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/preinstallation/ARCHITECTURE_ET_REPRISE.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Préparation 2026-11-01: décision directe ou proposition sourcée, pas capacité du poste; voir data/preinstallation/sources-curated.json et requirements.json."
+  },
+  {
+    "path": "docs/memory/HARDENING_2026-11-02.txt",
+    "project": "bojart.jarvis",
+    "collection": "canonical",
+    "provenance": "Contrat du correctif local V4 du 2 novembre 2026; preuves exécutées jointes au paquet, sans qualification matérielle ni publication GitHub implicite."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/recherche-v5.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Recherche V5 du 2 novembre 2026 : propositions et jeux de qualification non exécutés ; données physiques manquantes explicites ; sources officielles référencées. Aucun connecteur activé."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/datasets-qualification-v5.json",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Recherche V5 du 2 novembre 2026 : propositions et jeux de qualification non exécutés ; données physiques manquantes explicites ; sources officielles référencées. Aucun connecteur activé."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/SCENARIO_VEGETA_1000MM.json",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Recherche V5 du 2 novembre 2026 : propositions et jeux de qualification non exécutés ; données physiques manquantes explicites ; sources officielles référencées. Aucun connecteur activé."
+  },
+  {
     "path": "docs/COMMANDES_DASHBOARD.md",
     "project": "bojart.jarvis",
     "provenance": "Current bounded display command catalogue, 2026-11-02; implementation jarvis/apps/jarvis/app/jarvis_runtime.py. Separate dated simulations do not qualify audio, physical displays, slicing or printers."
@@ -217,5 +331,11 @@
     "project": "bojart.jarvis",
     "collection": "session_log",
     "provenance": "Dated experimental evidence, 2026-11-02. Actual Python/SQLite measurements with synthetic transcripts/receipts and fictitious fleet; historical test record, not current target-hardware qualification."
+  },
+  {
+    "path": "docs/research/audit-transversal-2026-11-02/donnees-terrain.txt",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Synthèse V5 de10 documents historiques vérifiés ; propositions de collecte, pas données réelles du poste. Huit originaux sont conservés dans le pack privé, hors Git public."
   }
 ]

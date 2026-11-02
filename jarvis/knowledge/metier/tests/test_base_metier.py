@@ -1,5 +1,6 @@
 import json,sys,unittest,tempfile,shutil,sqlite3
 from pathlib import Path
+from contextlib import closing
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'app'))
 from base_metier import KnowledgeBase,ROOT,tokens,price_from_cost
 
@@ -43,7 +44,7 @@ class CorpusTests(unittest.TestCase):
  def test_index_exports_and_no_overwrite(self):
   with tempfile.TemporaryDirectory() as d:
    p=Path(d)/'index.sqlite';self.k.export_index(p)
-   with sqlite3.connect(p) as c:self.assertEqual(c.execute('select count(*) from fiches').fetchone()[0],54)
+   with closing(sqlite3.connect(p)) as c:self.assertEqual(c.execute('select count(*) from fiches').fetchone()[0],54)
    with self.assertRaises(FileExistsError):self.k.export_index(p)
  def test_no_automatic_execution_from_search(self):self.assertFalse(self.k.search('Lance la machine')['allowed_to_execute'])
  def test_recipe_empty(self):

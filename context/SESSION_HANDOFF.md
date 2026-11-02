@@ -177,6 +177,10 @@ Le cas de recherche « GPU imprimantes » attend désormais le guide canonique `
 
 Réconciliation avant publication : les corrections des lanceurs historiques et leurs quatorze tests, publiés sur `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`, sont conservés. Le guide d'installation et le journal ont été réunis ; le manifeste repart de cette tête.
 
+## Reprise mémoire locale V4 du 2 novembre 2026
+
+Base distante intégrée : `2025ac1c8f376341532fbd2df8a176b0b8fc3de4`. La copie locale ajoute les corrections des quatre défauts mémoire relevés en V3, avec nouvelles contre-épreuves. Lire `docs/memory/HARDENING_2026-11-02.txt` et la matrice de réception V4 livrée avant les audits historiques. Ne pas relancer automatiquement les demandes UNKNOWN et arrêter les anciens processus avant migration. Cette entrée ne prouve ni push GitHub ni recette du matériel.
+
 Réconciliation du dossier de production : les informations matérielles sourcées, l’installeur RTX 4060 Ti et les contrôles de contexte compact du commit `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` sont conservés avec la reconstruction des cinq médias R03. Le correctif de simulation de collision de dossiers est passé sous Windows et Linux au commit `0d853787285142292a70850a1e38c49ce45b385e`. Les contrôles de l’ensemble réuni sont consignés dans la preuve de récupération.
 
 ## Simulations mesurées — 2 novembre 2026
@@ -201,3 +205,8 @@ Le simulateur de parc est séparé du runtime vocal : 24 volumes et 8 imprimante
 Intégration mémoire : le long guide de simulation initialement indexé en référence courante faisait reculer CURRENT hors du top 5 pour LangGraph (13/14 cas). Correction : docs/COMMANDES_DASHBOARD.md est le catalogue canonique concis ; le rapport d'essais est un journal daté, et le guide complet reste lié. Les 14/14 cas repassent, sans modifier le moteur de recherche, les seuils ou les attentes. Voir les preuves retrieval-regression.json et retrieval-after.json dans le dossier d'essais.
 
 Complément CI au SHA 13005fe924e0c092e87a99a82089c8ad15cf9b4c : 20 tests dédiés et 270 commandes dans chaque mode (règles puis LangGraph), sur Linux et Windows ; tous passent fonctionnellement. Attention à la latence Windows : LangGraph p95 740,895 ms, maximum 17 964,718 ms, sept essais > 1 s dont deux > 5 s. Règles seules : p95 375,076 ms, max 419,910 ms. Cause non isolée, aucune qualification de fluidité constante ni mesure du PC cible. Les quatre rapports CI et leurs empreintes sont conservés dans docs/evidence/workflows-2026-11-02 ; ne pas citer uniquement les chiffres Linux. Aucun changement du runtime de production n'est justifié par une attribution causale non démontrée.
+
+
+## Passation transversale locale V5 — 2 novembre 2026
+
+Le lot distant c71628cf20426dd8b4bdedbab2dcf403f5135667 est intégré avec les correctifs mémoire V4. Lire docs/AUDIT_TRANSVERSAL_V5.txt et docs/research/audit-transversal-2026-11-02/ pour les corrections, les données et les propositions. La réception détaillée, la couverture des chats et les sources sélectionnées restent dans le paquet JARVIS_V5. Une copie locale corrigée ne signifie ni push, ni installation sur la tour.

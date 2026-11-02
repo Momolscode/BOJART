@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT / 'jarvis/apps/jarvis/app'))
 from core import Store
 from consolidated_workbench import ConsolidatedWorkbench
 from bojart_memory.agent import AgentMemory
+from bojart_memory.core import Memory
 
 
 class AgentHttpTests(unittest.TestCase):
@@ -79,6 +80,43 @@ class AgentHttpTests(unittest.TestCase):
         self.assertIn(b'/memory.css', self.request('/memory')[1])
         self.assertIn(b'@media', self.request('/memory.css')[1])
         self.assertIn(b'textContent', self.request('/memory.js')[1])
+
+    def test_deep_verify_detects_derived_corruption_while_structure_remains_ok(self):
+        self.assertEqual(self.request('/api/memory/verify',auth=False)[0],401)
+        self.assertTrue(json.loads(self.request('/api/memory/verify')[1])['ok'])
+        with Memory(self.root/'memory') as m,m.db:
+            m.db.execute("UPDATE chunks SET text='tampered' WHERE id=(SELECT min(id) FROM chunks)")
+        status=json.loads(self.request('/api/memory/status')[1])
+        self.assertEqual(status['database_integrity'],'ok')
+        self.assertFalse(status['full_integrity_verified'])
+        self.assertFalse(json.loads(self.request('/api/memory/verify')[1])['ok'])
+
+    def test_http_concurrent_request_and_cached_replay(self):
+        entered=threading.Event();release=threading.Event();calls=[];answer=[]
+        class Model:
+            def __init__(self,*args,**kwargs):pass
+            def chat(self,*args,**kwargs):
+                calls.append(1);entered.set()
+                if not release.wait(5):raise TimeoutError('fixture')
+                return {'answer':'Réponse du double local.'}
+        (self.root/'memory/models.json').write_text(json.dumps({'chat_model':'fixture'}),encoding='utf-8')
+        body={'text':'Jev','project':'bojart.jarvis','session':'s','request_id':'http-concurrent'}
+        with patch('bojart_memory.agent.Ollama',Model):
+            t=threading.Thread(target=lambda:answer.append(self.request('/api/memory/ask',body)))
+            t.start()
+            try:
+                self.assertTrue(entered.wait(3))
+                code,raw=self.request('/api/memory/ask',body)
+                self.assertEqual(code,409);self.assertEqual(json.loads(raw)['code'],'IN_PROGRESS')
+                self.assertFalse(json.loads(raw)['automatic_retry'])
+                status='/api/memory/request-status?project=bojart.jarvis&session=s&request_id=http-concurrent'
+                self.assertEqual(json.loads(self.request(status)[1])['state'],'RUNNING')
+                self.assertEqual(self.request(status,auth=False)[0],401)
+                self.assertEqual(self.request(status.replace('session=s','session=other'))[0],409)
+            finally:release.set();t.join(6)
+            self.assertEqual(answer[0][0],200)
+            self.assertEqual(self.request('/api/memory/ask',body),answer[0])
+            self.assertEqual(calls,[1])
 
 
 if __name__ == '__main__': unittest.main()

@@ -129,7 +129,7 @@ class Ollama:
                                                   "num_ctx": options['num_ctx']}})
         elapsed = time.monotonic() - start
         self.key(refresh=True)
-        if not isinstance(r, dict) or not isinstance(r.get('message'), dict) or r.get('done') is False or r.get('error'):
+        if not isinstance(r, dict) or not isinstance(r.get('message'), dict) or r.get('done') is not True or r.get('error'):
             raise ValueError('Réponse locale incomplète ou invalide.')
         answer = r.get("message", {}).get("content")
         if not isinstance(answer, str) or not answer.strip():
