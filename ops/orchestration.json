@@ -318,7 +318,8 @@
       "blockers": [],
       "evidence": [
         "context/CURRENT.md",
-        "jarvis/context/START_HERE.md"
+        "jarvis/context/START_HERE.md",
+        "docs/BANC_VOIX.md"
       ],
       "acceptance": "Essais réels en bruit, latence mesurée et reçus de chargement/rendu sur les moniteurs.",
       "qualification_gates": [

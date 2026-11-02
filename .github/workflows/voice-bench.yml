@@ -1,0 +1,86 @@
+name: Jarvis voice chain bench
+# Corpus synthétique (Piper) -> vrai code navigateur (Node) -> vrai serveur + faster-whisper small (CPU)
+# -> routeur, garde, vues simulées, reçu. Mesures liées au SHA, à l'hôte GitHub et au corpus du job :
+# elles ne remplacent ni la tour ni un vrai micro.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'bojart_ops/banc_voix.py'
+      - 'bojart_ops/voix_corpus.py'
+      - 'tools/banc_voix.py'
+      - 'tools/banc_voix_navigateur.cjs'
+      - 'tools/verifier_voix.py'
+      - 'tests_ops/test_banc_voix.py'
+      - 'jarvis/apps/jarvis/app/voice.py'
+      - 'jarvis/apps/jarvis/app/voice_endpoint.js'
+      - 'jarvis/apps/jarvis/app/capture.js'
+      - 'jarvis/apps/jarvis/app/jarvis_runtime.py'
+      - 'jarvis/apps/jarvis/app/jarvis_http.py'
+      - 'jarvis/apps/jarvis/app/display_contracts.py'
+      - 'jarvis/requirements-voice.txt'
+      - '.github/workflows/voice-bench.yml'
+permissions:
+  contents: read
+env:
+  PYTHONUTF8: '1'
+  LANGSMITH_TRACING: 'false'
+  HF_HUB_DISABLE_TELEMETRY: '1'
+  PIPER_VOICES_REVISION: b4e358ffcb232591bf73a540e70f7de528e4174a
+jobs:
+  voice:
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install voice, orchestration and corpus tools
+        run: python -m pip install -r jarvis/requirements-voice.txt -r jarvis/requirements-orchestration.txt piper-tts==1.8.0
+      - name: Audio decoding as Jarvis does it (PyAV)
+        run: python tools/verifier_voix.py
+      - name: Bench contracts (double ASR, real server)
+        run: python -m unittest tests_ops.test_banc_voix -v
+      - name: Fetch pinned Piper voices
+        shell: python
+        run: |
+          from huggingface_hub import hf_hub_download
+          import os
+          for path in ('siwis/medium/fr_FR-siwis-medium', 'upmc/medium/fr_FR-upmc-medium', 'gilles/low/fr_FR-gilles-low'):
+              for suffix in ('.onnx', '.onnx.json'):
+                  hf_hub_download('rhasspy/piper-voices', 'fr/fr_FR/' + path + suffix,
+                                  revision=os.environ['PIPER_VOICES_REVISION'], local_dir='.bojart-voix/hf')
+          import shutil, pathlib
+          target = pathlib.Path('.bojart-voix/voix'); target.mkdir(parents=True)
+          for file in pathlib.Path('.bojart-voix/hf').rglob('*.onnx*'):
+              shutil.copy2(file, target / file.name)
+      - name: Fetch pinned faster-whisper small
+        run: python tools/banc_voix.py modele --nom small --dossier .bojart-voix/whisper-small --je-confirme-le-telechargement
+      - name: Generate corpus (3 voices)
+        run: python tools/banc_voix.py corpus --sortie .bojart-voix/corpus --piper piper --voix .bojart-voix/voix --locuteurs siwis upmc-pierre gilles
+      - name: Measure the voice chain
+        continue-on-error: true
+        run: python tools/banc_voix.py mesurer --corpus .bojart-voix/corpus --modele .bojart-voix/whisper-small --sortie .bojart-voix/rapport-${{ matrix.os }}.json --libelle "CI ${{ matrix.os }} small"
+      - name: Noise only must never trigger a command
+        run: python tools/banc_voix.py bruit --modele .bojart-voix/whisper-small --sortie .bojart-voix/rapport-bruit-${{ matrix.os }}.json --libelle "CI ${{ matrix.os }} small" --graines 4
+      - name: Error scenarios must all behave
+        run: python -c "import json,sys; r=json.load(open('.bojart-voix/rapport-${{ matrix.os }}.json',encoding='utf-8')); bad=[s['nom'] for s in r['scenarios'] if not s['reussi']]; print('moteur', r['moteur_orchestration'], 'critiques', r['synthese']['erreurs_critiques'], 'scenarios non conformes', bad); sys.exit(1 if bad or r['moteur_orchestration']!='sqlite_ready' else 0)"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: voice-bench-${{ matrix.os }}
+          path: |
+            .bojart-voix/rapport-*.json
+            .bojart-voix/rapport-*.md
+            .bojart-voix/corpus/corpus.json
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 30
