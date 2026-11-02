@@ -799,8 +799,8 @@
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
-      "bytes": 8834,
-      "sha256": "ff7455389dceca0f674e632b3b1bac691dd703c7e5cecb62a0c162add31acb05"
+      "bytes": 9986,
+      "sha256": "d76e0418e9332b5c939c541e1dcb5a7c57e58a3e03424c988fc3c071ee026d3e"
     },
     {
       "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",
@@ -821,6 +821,11 @@
       "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-678da4f.json",
       "bytes": 91517,
       "sha256": "bc5ae7dd5e09f6f0068b95f9c9c8f31e5d7964457f9945a35e14ab0368ebc9b7"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-bb78257.json",
+      "bytes": 94772,
+      "sha256": "c2eea00aa1309ba500934bd1dbef666ea6d95d30e0c441db296a38a8267115a0"
     },
     {
       "path": "docs/evidence/consolidation-2026-11-01.json",
