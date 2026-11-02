@@ -6,10 +6,11 @@
 2. Dépendances : `pip install -r jarvis/requirements-figurine.txt` (compatible avec `requirements.txt` dans
    le même environnement, trimesh 4.11.1 commun), PrusaSlicer et Blender (facultatif).
 3. Parcours nominal (personnage original, ~2 min 30 sur 4 vCPU sans GPU) :
-   `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable."`
+   `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable."`
+   (Ardoise, guerrier choisi par Olsen ; « la Sentinelle » reste le personnage de contrôle).
    Résultats dans `runs/figurine/<id>/` (hors Git) : `manifest.json`, `checks.json`, `rendus/`, `tranchage/`.
 4. Visionneuse : `node jarvis/tools/figurine_viewer_check.cjs runs/figurine/<id>`.
-5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (21 tests, ~55 s).
+5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (24 tests, ~75 s).
 
 Règles à garder : un personnage tiers reste BLOQUÉ sans maillage fourni et fiche de provenance ;
 aucun G-code n'est envoyé ; une dépendance absente donne BLOQUÉ, jamais une réussite ; un doublon de
@@ -28,8 +29,9 @@ commande renvoie la tâche existante sans recalcul.
    le pic de Blender et de PrusaSlicer n'y est pas mesuré.
 2. **Qualité artistique : comparer une génération image→3D locale au prototype procédural.**
    Résultat : un maillage original plus riche (anatomie, plis, visage) passé par les mêmes contrôles.
-   Dépendance : tâche 1 ; TripoSG (8 Go VRAM annoncés, code MIT, licence des poids à relire) ; image
-   de concept originale aux droits clairs.
+   Dépendance : tâche 1 ; TripoSG (8 Go VRAM annoncés, code MIT, licence des poids à relire) ; dessin
+   de concept original d'Ardoise (personnage choisi par Olsen, fiche D11) aux droits clairs, en gardant
+   ses garde-fous de distinction.
    Test : grille artistique fixée d'avance + critères éliminatoires identiques ; revue par Olsen ou un
    sculpteur (évaluation indépendante), cas de contrôle tenus à l'écart des réglages.
    Preuve : vues argile avant/après, `checks.json` des deux maillages, fiche D1 mise à jour.

@@ -100,8 +100,30 @@ POSES = {
 }
 
 
-def pose_names():
-    return list(POSES)
+SENTINELLE_BOUNDS = ((-75.0, -75.0, -6.0), (75.0, 75.0, 235.0))
+
+
+def characters():
+    """Personnages originaux sculptables. « tight » : grille fine resserrée sur la figure (gain de
+    calcul) ; la Sentinelle garde sa grille fixe pour rester identique aux preuves publiées."""
+    from . import ardoise
+    return {
+        'sentinelle': {'version': SCULPT_VERSION, 'poses': POSES, 'sdf': figure_sdf, 'bounds': SENTINELLE_BOUNDS,
+                       'tight': False, 'intent_poses': {'combat': 'garde_basse', 'rest': 'repos_fier'}},
+        'ardoise': {'version': ardoise.ARDOISE_VERSION, 'poses': ardoise.POSES, 'sdf': ardoise.ardoise_sdf,
+                    'bounds': ardoise.BOUNDS, 'tight': True, 'intent_poses': ardoise.INTENT_POSES},
+    }
+
+
+def character(cid: str = 'sentinelle') -> dict:
+    table = characters()
+    if cid not in table:
+        raise KeyError(f'Aucune sculpture procédurale pour « {cid} ».')
+    return table[cid]
+
+
+def pose_names(cid: str = 'sentinelle'):
+    return list(character(cid)['poses'])
 
 
 def _v(t):
@@ -179,12 +201,34 @@ def evaluate_grid(fn, lo, hi, voxel, chunk_z=24):
     return out, lo, n
 
 
-def sculpt_figure(pose: str, voxel: float = 0.6, smooth_iterations: int = 6):
+def figure_bounds(pose: str, cid: str = 'sentinelle', margin: float = 6.0):
+    """Grille de calcul : fixe, ou resserrée sur la figure repérée à 2 mm (+ marge, plan z = -6)."""
+    c = character(cid)
+    lo, hi = c['bounds']
+    if not c['tight']:
+        return lo, hi
+    field, origin, _ = evaluate_grid(lambda q: c['sdf'](q, pose), lo, hi, 2.0)
+    idx = np.argwhere(field <= 0)
+    if not len(idx):
+        raise ValueError(f'Pose « {pose} » vide pour « {cid} ».')
+    pts_lo = origin + idx.min(axis=0) * 2.0 - margin
+    pts_hi = origin + idx.max(axis=0) * 2.0 + margin
+    return ((float(max(pts_lo[0], lo[0])), float(max(pts_lo[1], lo[1])), lo[2]),
+            (float(min(pts_hi[0], hi[0])), float(min(pts_hi[1], hi[1])), float(min(pts_hi[2], hi[2]))))
+
+
+def grid_mb(lo, hi, voxel: float) -> float:
+    n = [int((h - l) / voxel) + 3 for l, h in zip(lo, hi)]
+    return n[0] * n[1] * n[2] * 4 / 1e6 + n[0] * n[1] * 24 * 12 / 1e6
+
+
+def sculpt_figure(pose: str, voxel: float = 0.6, smooth_iterations: int = 6, cid: str = 'sentinelle', bounds=None):
     """Retourne un trimesh fermé de la figurine nominale (mm, semelles à z = 0)."""
     import trimesh
     from skimage import measure
-    lo, hi = (-75, -75, -6), (75, 75, 235)
-    field, origin, _ = evaluate_grid(lambda q: figure_sdf(q, pose), lo, hi, voxel)
+    sdf = character(cid)['sdf']
+    lo, hi = bounds or figure_bounds(pose, cid)
+    field, origin, _ = evaluate_grid(lambda q: sdf(q, pose), lo, hi, voxel)
     # Les bords de la grille sont à l'extérieur (sauf le plan z=0 coupé) : on ferme le volume.
     field = np.pad(field, 1, constant_values=1.0)
     verts, faces, _n, _v2 = measure.marching_cubes(field, 0.0, spacing=(voxel, voxel, voxel), allow_degenerate=False)
@@ -196,13 +240,22 @@ def sculpt_figure(pose: str, voxel: float = 0.6, smooth_iterations: int = 6):
         flat = mesh.vertices[z0].copy()
         trimesh.smoothing.filter_taubin(mesh, lamb=0.5, nu=-0.53, iterations=smooth_iterations)
         mesh.vertices[z0] = flat  # garder les semelles planes pour le contact au socle
-    keep = mesh.split(only_watertight=False)
-    return mesh, len(keep)
+    parts = mesh.split(only_watertight=False)
+    # Résidus numériques du marching cubes : volume < 1 mm³ et plus petits que deux voxels. Retirés et
+    # comptés ; un vrai élément flottant (volume réel) reste et sera éliminatoire aux contrôles.
+    residue = [q for q in parts if abs(q.volume) < 1.0 and float(q.extents.max()) < 2 * voxel]
+    if residue and len(residue) < len(parts):
+        kept = [q for q in parts if not any(q is r for r in residue)]
+        mesh = kept[0] if len(kept) == 1 else trimesh.util.concatenate(kept)
+    mesh.metadata['marching_cubes_residue_removed'] = len(residue) if len(residue) < len(parts) else 0
+    return mesh, len(parts) - mesh.metadata['marching_cubes_residue_removed']
 
 
-def pose_proxy_metrics(pose: str, voxel: float = 2.0):
+def pose_proxy_metrics(pose: str, voxel: float = 2.0, cid: str = 'sentinelle'):
     """Mesures bon marché pour choisir une pose avant la génération fine."""
-    field, origin, n = evaluate_grid(lambda q: figure_sdf(q, pose), (-75, -75, -2), (75, 75, 235), voxel)
+    c = character(cid)
+    (x0, y0, _z0), (x1, y1, z1) = c['bounds']
+    field, origin, n = evaluate_grid(lambda q: c['sdf'](q, pose), (x0, y0, -2), (x1, y1, z1), voxel)
     inside = field <= 0
     vol = inside.sum() * voxel ** 3
     idx = np.argwhere(inside)
@@ -222,7 +275,7 @@ def pose_proxy_metrics(pose: str, voxel: float = 2.0):
     # Négatif : une silhouette trop pleine (bloc) se lit mal ; trop vide = fragile.
     z_top = float(pts[:, 2].max())
     return {
-        'pose': pose, 'label': POSES[pose]['label'], 'volume_cm3_nominal': round(vol / 1000, 1),
+        'pose': pose, 'label': c['poses'][pose]['label'], 'volume_cm3_nominal': round(vol / 1000, 1),
         'height_nominal_mm': round(z_top, 1),
         'center_of_mass_mm': [round(float(c), 1) for c in com],
         'com_inside_feet_hull': com_inside_feet,

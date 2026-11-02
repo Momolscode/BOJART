@@ -117,3 +117,43 @@ qualification sur la tour.
   Windows. Import rendu facultatif ; mesure mémoire Windows par `GetProcessMemoryInfo` **non testée**
   (pas de machine Windows ici), pic des processus enfants non mesuré sous Windows.
 - **Réexamen** : montée de version commune de trimesh avec requalification CAO M01 et M08 sur la tour.
+
+## D11. Deuxième personnage original : « Ardoise, le duelliste des strates » (2 novembre 2026)
+
+- **Contexte** : Olsen a noté que la figurine « ne ressemble pas du tout à Végéta ». C'est voulu (D2).
+  Sur la carte de décision du 2 novembre (09:10 UTC), Olsen a choisi « un guerrier original BOJ.ART »,
+  vendable, plutôt qu'un fichier sous licence ou le seul personnage de contrôle.
+- **Design** : crâne rasé et tresse passée sur l'épaule droite ; long manteau ouvert devant et fendu dans le
+  dos ; une seule épaulière en plaques empilées ; cuirasse en strates (les couches de l'impression FDM
+  deviennent un motif voulu, en écho au travail STRATES de BOJ.ART) ; grande lame à deux mains en gradins.
+- **Garde-fous de distinction, écrits avant de sculpter** : aucune chevelure dressée, aucune armure à
+  épaulettes symétriques ni combinaison, ni gants ni bottes blancs, aucune pose de tir d'énergie ni pose
+  signature empruntée. Un nom et une identité propres à BOJ.ART.
+- **Itérations sur rendus argile basse résolution (auto-évaluation)** : v1 trop maigre, manteau en
+  planches ; v2 carrure renforcée et manteau en coque conique ; v3 pose « Élan » cassée (10 corps)
+  remplacée par « Garde », bras renforcés ; v4 cuirasse à marches nettes, car les bandes se lisaient comme
+  des côtes.
+- **Pose** : trois intentions (Serment, Défi, Garde), même règle écrite que pour la Sentinelle. Une demande
+  « au repos » donne Serment, « combat » donne Garde.
+- **Limite** : prototype procédural, pas une sculpture de vitrine. La qualité vitrine passe par une
+  génération image → 3D à partir d'un dessin original d'Ardoise (D1), puis par les mêmes contrôles.
+
+## D12. Tenons sous les deux plus grands appuis (fabrication v3)
+
+- **Constat** : en pose Serment, la pointe de la lame touche le sol. L'ancienne règle séparait les appuis
+  par le signe de x : la pointe tirait les deux tenons vers l'avant (essai sur pièces simples : décalage de
+  1,6 mm en y et de 0,9 mm vers l'intérieur).
+- **Décision** : regrouper les appuis par voisinage (distance de liaison qui suit la résolution du
+  maillage) et poser les tenons sous les deux plus grands ; tous les appuis dimensionnent le socle.
+- **Tests** : `test_pegs_go_under_the_feet_not_under_a_third_contact`,
+  `test_original_warrior_rest_pose_until_renders`.
+- **Non-régression** : la Sentinelle relancée avec la fabrication v3 (nouvel identifiant de tâche
+  `702d5b9d10f7a9c1`, puisque la version de fabrication entre dans l'identité) redonne la preuve
+  `execution-d70b23ab2e4e3376` : `spec.json`, `pose_study.json`, `assembly.json`, `checks.json`,
+  `tranchage.json` et profil identiques octet pour octet, ainsi que les trois STL (comparés aux fichiers
+  de l'exécution d'origine, conservés hors Git) ; G-code identique hors la ligne
+  d'horodatage de PrusaSlicer ; rendus identiques au pixel ; 3MF identique hors les UUID aléatoires que
+  trimesh écrit à chaque export. Ardoise relancé dans l'environnement épinglé (Python 3.12, trimesh
+  4.11.1) : même tâche, mêmes sorties (`preuves/contre_epreuves_fabrication_v3_2026-11-02.json`).
+- **Lié** : les résidus du marching cubes (volume < 1 mm³, plus petits que deux voxels) sont retirés et
+  comptés dans le résultat de l'étape géométrie ; un vrai élément flottant reste éliminatoire.

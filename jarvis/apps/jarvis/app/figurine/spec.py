@@ -27,6 +27,7 @@ THIRD_PARTY = {
 }
 ORIGINAL = {
     'sentinelle': {'label': "La Sentinelle de l'atelier", 'franchise': None},
+    'ardoise': {'label': 'Ardoise, le duelliste des strates', 'franchise': None},
 }
 # Mots proches d'un nom de personnage : signe probable d'une transcription erronée.
 ASR_CONFUSIONS = {
@@ -93,13 +94,12 @@ def parse_request(text: str, *, source: str = 'typed') -> dict:
     if not wset & CREATE_WORDS:
         raise SpecRejected('Précisez ce que Jarvis doit créer.')
 
-    character = None
-    for key in THIRD_PARTY:
-        if key in wset:
-            character = {'id': key, **THIRD_PARTY[key], 'rights': 'third_party_licensed'}
-    for key in ORIGINAL:
-        if key in wset:
-            character = {'id': key, **ORIGINAL[key], 'rights': 'bojart_original'}
+    found = [{'id': k, **THIRD_PARTY[k], 'rights': 'third_party_licensed'} for k in THIRD_PARTY if k in wset]
+    found += [{'id': k, **ORIGINAL[k], 'rights': 'bojart_original'} for k in ORIGINAL if k in wset]
+    if len(found) > 1:
+        raise SpecRejected('Plusieurs personnages dans la demande (' + ', '.join(c['label'] for c in found)
+                           + ') : lequel ? Rien n’est lancé.')
+    character = found[0] if found else None
     if character is None:
         suspects = sorted(ASR_CONFUSIONS[w] for w in wset if w in ASR_CONFUSIONS)
         if suspects:

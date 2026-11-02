@@ -106,6 +106,12 @@ def peak_memory_mb():
     return None, None
 
 
+def _sculpt_version(spec):
+    """Version de la sculpture du personnage demandé (celle de la Sentinelle par défaut)."""
+    cid = spec['character']['id']
+    return sculpt.character(cid)['version'] if cid in sculpt.characters() else sculpt.SCULPT_VERSION
+
+
 def environment():
     def ver(dist):
         from importlib import metadata
@@ -147,7 +153,7 @@ class FigurineRun:
             spec['geometry_source'] = 'import'
         ident = {'spec': {k: spec[k] for k in ('character', 'pose_intent', 'height_mm', 'material', 'process')},
                  'mesh_sha256': mesh_hash, 'voxel': self.voxel, 'pipeline': PIPELINE_VERSION,
-                 'sculpt': sculpt.SCULPT_VERSION, 'fab': fabrication.FAB_VERSION, 'checks': checks.CHECKS_VERSION}
+                 'sculpt': _sculpt_version(spec), 'fab': fabrication.FAB_VERSION, 'checks': checks.CHECKS_VERSION}
         return hashlib.sha256(_canon(ident).encode()).hexdigest()[:16], ident
 
     def _save(self):
@@ -286,8 +292,9 @@ class FigurineRun:
     def _s_pose_study(self):
         if self.spec['geometry_source'] != 'procedural_sdf':
             return {'_status': 'SKIPPED', 'reason': 'pas de sculpture procédurale : la pose vient du fichier fourni'}
-        metrics = [sculpt.pose_proxy_metrics(p) for p in sculpt.pose_names()]
-        wanted = {'iconic': None, 'combat': 'garde_basse', 'rest': 'repos_fier'}[self.spec['pose_intent']]
+        cid = self.spec['character']['id']
+        metrics = [sculpt.pose_proxy_metrics(p, cid=cid) for p in sculpt.pose_names(cid)]
+        wanted = {'iconic': None, **sculpt.character(cid)['intent_poses']}[self.spec['pose_intent']]
         chosen, notes = sculpt.choose_pose(metrics)
         if wanted:
             chosen, notes = wanted, notes + [f'Pose imposée par la demande ({self.spec["pose_intent"]}).']
@@ -296,9 +303,6 @@ class FigurineRun:
         self.state['pose'] = chosen
         return {'_outputs': ['pose_study.json'], 'chosen': chosen}
 
-    def _grid_mb(self):
-        n = [int(150 / self.voxel) + 3, int(150 / self.voxel) + 3, int(241 / self.voxel) + 3]
-        return n[0] * n[1] * n[2] * 4 / 1e6 + n[0] * n[1] * 24 * 12 / 1e6
 
     def _s_geometry(self):
         import trimesh
@@ -322,15 +326,18 @@ class FigurineRun:
             return {'_outputs': ['nominal.stl'], 'source': 'import', 'repair': info,
                     'input_sha256': sha256_file(self.mesh_in),
                     'provenance_sha256': sha256_file(self.provenance) if self.provenance else None}
-        need = self._grid_mb()
+        cid = self.spec['character']['id']
+        bounds = sculpt.figure_bounds(self.state['pose'], cid)
+        need = sculpt.grid_mb(*bounds, self.voxel)
         budget = 1 if 'low_memory' in self.faults else self.max_grid_mb
         if need > budget:
             raise Blocked(f'Mémoire insuffisante : grille estimée {need:.0f} Mo > budget {budget} Mo. '
                           'Augmenter le pas de voxel (qualité moindre, à annoncer) ou la mémoire. Étape BLOQUÉE.')
-        mesh, bodies = sculpt.sculpt_figure(self.state['pose'], voxel=self.voxel)
+        mesh, bodies = sculpt.sculpt_figure(self.state['pose'], voxel=self.voxel, cid=cid, bounds=bounds)
         mesh.export(out)
-        return {'_outputs': ['nominal.stl'], 'source': 'procedural_sdf', 'pose': self.state['pose'],
+        return {'_outputs': ['nominal.stl'], 'source': 'procedural_sdf', 'character': cid, 'pose': self.state['pose'],
                 'voxel_mm': self.voxel, 'grid_estimate_mb': round(need), 'bodies': bodies,
+                'marching_cubes_residue_removed': mesh.metadata.get('marching_cubes_residue_removed', 0),
                 'triangles': int(len(mesh.faces))}
 
     def _s_assembly(self):

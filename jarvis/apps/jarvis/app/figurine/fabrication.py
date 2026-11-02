@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import numpy as np
 
-FAB_VERSION = 'bojart.fabrication.v2'
+FAB_VERSION = 'bojart.fabrication.v3'
 
 # Hypothèses FDM 0,4 mm / PLA, à remplacer par un profil mesuré (pièce test d'ajustement).
 ASSEMBLY_HYPOTHESES = {
@@ -40,10 +40,21 @@ def to_trimesh(man):
 
 
 def _feet_centres(mesh, sole_z=0.6):
+    """Centres des deux plus grands appuis (les pieds) ; tous les appuis (pieds, pointe de lame…)
+    dimensionnent le socle, mais les tenons ne vont que sous les pieds."""
+    from scipy.sparse.csgraph import connected_components
+    from scipy.spatial import cKDTree
     v = mesh.vertices[mesh.vertices[:, 2] < mesh.bounds[0][2] + sole_z]
-    left, right = v[v[:, 0] < 0], v[v[:, 0] >= 0]
-    if len(left) < 10 or len(right) < 10:
+    if len(v) < 20:
         raise ValueError('Deux appuis de pieds distincts sont requis pour les tenons détrompés.')
+    link_mm = max(2.5, 2.2 * float(np.median(mesh.edges_unique_length)))  # suit la résolution du maillage
+    graph = cKDTree(v[:, :2]).sparse_distance_matrix(cKDTree(v[:, :2]), link_mm, output_type='coo_matrix')
+    n, labels = connected_components(graph, directed=False)
+    sizes = np.bincount(labels, minlength=n)
+    feet = [v[labels == k] for k in np.argsort(-sizes)[:2] if sizes[k] >= 10]
+    if len(feet) < 2:
+        raise ValueError('Deux appuis de pieds distincts sont requis pour les tenons détrompés.')
+    left, right = sorted(feet, key=lambda f: f[:, 0].mean())
     return left[:, :2].mean(axis=0), right[:, :2].mean(axis=0), v[:, :2]
 
 

@@ -13,6 +13,9 @@ utilise « La Sentinelle de l'atelier », personnage original BOJ.ART créé pou
 
 Le résultat 3D est un **prototype procédural**, pas une figurine premium (voir la grille artistique).
 
+Après la remarque d'Olsen (« il ne ressemble pas du tout à Végéta »), un **guerrier original vendable**,
+« Ardoise, le duelliste des strates », passe par la même chaîne au même niveau N2 (section dédiée).
+
 ## Inventaire court de l'existant (vérifié dans ce dépôt le 2026-11-02)
 
 | Élément | État constaté |
@@ -83,6 +86,35 @@ et estimations de tranchage identiques à l'octet, rendus identiques au pixel
 (`preuves/environnement_aligne_2026-11-02.json`). `pipeline.py` n'importe plus `resource` sans garde :
 l'import aurait échoué sous Windows. La mesure mémoire Windows ajoutée n'est pas testée.
 
+## Ardoise, le duelliste des strates (guerrier original choisi par Olsen)
+
+Olsen a choisi un guerrier original BOJ.ART plutôt qu'un sosie de Végéta (fiche D11) : crâne rasé et
+tresse, long manteau, une seule épaulière et une cuirasse en strates, grande lame à gradins. Même chaîne,
+même règle de pose, mêmes seuils. Exécution `2821f575afea00a7` (preuves JSON :
+`preuves/execution-2821f575afea00a7-ardoise/`), dans le conteneur de référence :
+
+| Mesure | Valeur |
+|---|---|
+| Pose retenue par la règle écrite | Défi, lame sur l'épaule (remplissage de face 0,493 ; Serment 0,682 ; Garde 0,671 ; toutes stables) |
+| Maillage | 330 280 triangles, fermé, 0 arête non-manifold, 1 corps, 114,4 cm³, 83,0 × 74,4 × 188,0 mm |
+| Hauteur avec socle | 200,0 mm |
+| Épaisseur min / p1 | 2,11 / 3,41 mm (seuils 0,8 et 1,2 mm) ; surplombs > 45° : 6,3 % |
+| Socle | Ø 85,5 × 18 mm, tenons sous les deux pieds, marge de stabilité 36,2 mm, interférence 0 mm³ |
+| Tranchage estimé (même profil d'hypothèse) | figurine 10 h 41, 89,5 g ; socle 3 h 16, 30,0 g |
+| Durée totale | 2 min 38 s (géométrie 44,8 s sur grille resserrée, contrôles 21,3 s, rendus 44,0 s, tranchage 28,9 s) |
+| Pic mémoire cumulé | 1 253 Mo (contrôles sur 330 k triangles) ; Blender 2 107 Mo |
+| Visionneuse | 13/13 dans Chromium |
+
+Relancée dans l'environnement épinglé (Python 3.12.3, trimesh 4.11.1, lxml 6.1.3), la même tâche
+`2821f575afea00a7` redonne maillages, contrôles et estimations de tranchage identiques à l'octet, rendus
+identiques au pixel ; la Sentinelle relancée avec la fabrication v3 redonne ses sorties à l'octet
+(`preuves/contre_epreuves_fabrication_v3_2026-11-02.json`).
+
+Cinq versions jugées sur rendus argile (auto-évaluation, détail en fiche D11). La pose « Élan » donnait
+10 corps séparés : remplacée par « Garde », sans toucher à la règle de choix. Limite inchangée : prototype
+procédural, visage stylisé, pas de sculpture de vitrine. Fichiers dans le dossier du projet
+`figurine-m08/ardoise/`.
+
 ## Grille artistique (auto-évaluation, pas une validation indépendante)
 
 | Critère | Observation | Niveau |
@@ -118,7 +150,7 @@ Conclusion : la chaîne est qualifiée numériquement ; la figurine ne l'est pas
 | Réseau ou identifiant absent | non applicable : la chaîne n'appelle aucun service distant ; non testé réseau coupé | — |
 | Pose difficile (maillet levé) | évaluée à basse résolution seulement | `pose_study.json` |
 
-Tests : `python -m unittest tests.test_figurine_m08` → 21 réussis (~55 s). Suites existantes relancées
+Tests : `python -m unittest tests.test_figurine_m08` → 24 réussis (~75 s). Suites existantes relancées
 avant/après sur le même conteneur : mêmes échecs préexistants (dépendances absentes), aucune régression ;
 `tools/validate_repository.py` valide.
 
@@ -146,8 +178,9 @@ Détail chiffré : `preuves/boucles_2026-11-02.json`.
 ## Fichiers
 
 - Preuves versionnées (JSON) : `preuves/execution-d70b23ab2e4e3376/`, `preuves/execution-5aafd044cf97f6d3-vegeta-bloque/`,
-  `preuves/execution-f65591bfc2cc1f0a-1m-decoupe/`, `preuves/environnement_aligne_2026-11-02.json`,
-  `preuves/atelier_three_core_verifie_2026-11-02.json`.
+  `preuves/execution-f65591bfc2cc1f0a-1m-decoupe/`, `preuves/execution-2821f575afea00a7-ardoise/`,
+  `preuves/environnement_aligne_2026-11-02.json`, `preuves/atelier_three_core_verifie_2026-11-02.json`,
+  `preuves/contre_epreuves_fabrication_v3_2026-11-02.json`.
 - Fichiers lourds hors Git (dossier du projet, `figurine-m08/`) : `figurine.stl`, `socle.stl`, `projet.3mf`,
   `rendus/` (vues + `figurine.blend`), `visionneuse/` (captures), `tranchage/apercu_couches_figurine.png`.
 - Choix sourcés : `REGISTRE_DECISIONS_M08.md`. Suite : `BACKLOG_ET_REPRISE_M08.md`.

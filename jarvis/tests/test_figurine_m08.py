@@ -20,6 +20,7 @@ except ImportError:
 SLICER = shutil.which('prusa-slicer') is not None
 VEGETA = "Jarvis, crée-moi un Végéta 3D imprimable dans une position stylée, iconique et remarquable."
 SENTINELLE = "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable."
+ARDOISE = "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable."
 
 
 class SpecTests(unittest.TestCase):
@@ -52,6 +53,14 @@ class SpecTests(unittest.TestCase):
         self.assertIn('Végéta', str(c.exception)); self.assertEqual(c.exception.status, 'CLARIFY')
         with self.assertRaises(SpecRejected):
             parse_request("Jarvis, crée la Sentinelle 3D de 20 cm avec un socle de 8 cm")
+
+    def test_original_warrior_and_two_characters(self):
+        s = parse_request(ARDOISE)
+        self.assertEqual((s['character']['id'], s['character']['rights']), ('ardoise', 'bojart_original'))
+        self.assertEqual(s['geometry_source'], 'procedural_sdf')
+        with self.assertRaises(SpecRejected) as c:
+            parse_request("Jarvis, crée la Sentinelle et Ardoise en 3D")
+        self.assertEqual(c.exception.status, 'CLARIFY')
 
     def test_physical_actions_refused(self):
         for text in ("Jarvis, imprime la Sentinelle 3D", "Jarvis, crée la Sentinelle 3D et lance l'imprimante"):
@@ -116,6 +125,17 @@ class GeometryTests(unittest.TestCase):
         for p in plan['pieces']:
             self.assertTrue(all(e <= b + 1e-6 for e, b in zip(sorted(p['extents_mm']), sorted((250, 210, 220)))))
         self.assertAlmostEqual(sum(p['volume_cm3'] for p in plan['pieces']), big.volume / 1000, delta=big.volume / 1000 * 0.01)
+
+    def test_pegs_go_under_the_feet_not_under_a_third_contact(self):
+        from figurine import fabrication
+        def dense(box):
+            v, f = trimesh.remesh.subdivide_to_size(box.vertices, box.faces, max_edge=2.0)
+            return trimesh.Trimesh(v, f)
+        feet = [dense(trimesh.creation.box((16, 28, 10))).apply_translation((x, 0, 5)) for x in (-20, 20)]
+        tip = dense(trimesh.creation.box((14, 4, 60))).apply_translation((0, -30, 30))
+        left, right, contacts = fabrication._feet_centres(trimesh.util.concatenate(feet + [tip]))
+        self.assertTrue(np.allclose(left, (-20, 0), atol=0.05) and np.allclose(right, (20, 0), atol=0.05))
+        self.assertLess(contacts[:, 1].min(), -31)  # la pointe compte pour la taille du socle
 
     def test_gcode_stats_parser(self):
         from figurine import slicing
@@ -190,6 +210,16 @@ class PipelineFaultTests(unittest.TestCase):
         self.assertEqual(st['steps']['checks']['status'], 'DONE')
         self.assertEqual(st['steps']['renders']['status'], 'BLOCKED')
         self.assertEqual(second['status'], 'BLOCKED')
+
+    def test_original_warrior_rest_pose_until_renders(self):
+        res = self.run_(text="Jarvis, crée-moi Ardoise 3D au repos", faults=['no_blender'])
+        st = self.state(res)
+        self.assertEqual(st['pose'], 'serment')
+        self.assertEqual(st['steps']['geometry']['result']['bodies'], 1)
+        self.assertEqual(st['steps']['checks']['result']['verdict'], 'CONFORME_AUX_CRITERES_CALCULES')
+        self.assertEqual(st['steps']['renders']['status'], 'BLOCKED')
+        pegs = json.loads((Path(res['dir']) / 'assembly.json').read_text(encoding='utf8'))['pegs']
+        self.assertTrue(all(abs(p['xy'][0]) > 10 for p in pegs))  # sous les pieds, pas sous la lame plantée
 
     def test_retry_limit(self):
         from figurine.pipeline import FigurineRun

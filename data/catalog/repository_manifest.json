@@ -359,8 +359,8 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 12403,
-      "sha256": "2be43c61dedc4ae096160884335693acc9f2c2e2b60538f2946bc9fbecb7066e"
+      "bytes": 12613,
+      "sha256": "3d4d51159d01fb01ea5773b0e12ebe569612c1250c8e7cfcee7ab9c17075c04f"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
@@ -1294,8 +1294,8 @@
     },
     {
       "path": "jarvis/AGENTS.md",
-      "bytes": 6398,
-      "sha256": "4a87a46126d8eb87abdea71a98aa6e2a54040364481897e74dd103489c354ec7"
+      "bytes": 6608,
+      "sha256": "ef640760f6c678a966896389409702b49d440d6312b46269bc58fa71f1f8e580"
     },
     {
       "path": "jarvis/BILAN_LIVRAISON.md",
@@ -1433,6 +1433,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "jarvis/apps/jarvis/app/figurine/ardoise.py",
+      "bytes": 12612,
+      "sha256": "8128f7a28477984b7ffbe85f5e0416c2d2a8d238c3271c917f98d67da7b4f3ca"
+    },
+    {
       "path": "jarvis/apps/jarvis/app/figurine/blender_render.py",
       "bytes": 4054,
       "sha256": "7007e098ccbb479bf6d6e44f7ad49dac905bcd05097a5fa4702f76768b9be3dc"
@@ -1444,18 +1449,18 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/fabrication.py",
-      "bytes": 8470,
-      "sha256": "f925e3d8c1ebacbe296b069f6752df93f764d5170f5881a88a1e2fbff33d9942"
+      "bytes": 9250,
+      "sha256": "0c402c37e93046807f894837dba319accf726c0aace0fc83fcd9325b5294b293"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/pipeline.py",
-      "bytes": 26154,
-      "sha256": "eb23a0a547f156324c93ee2564d8d5cd1a395d9e05cc96b612019019b337d4a0"
+      "bytes": 26544,
+      "sha256": "74bfcfa55bad6da43817ee58763474f782aa8d02d12a8a81a4c47861fc8c3ecc"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/sculpt.py",
-      "bytes": 11807,
-      "sha256": "04373049ea1850fb046249c03ab5f40c92aa6bc0a7ff9c100e1b05faf3ed3290"
+      "bytes": 14563,
+      "sha256": "efec932ae657fea7a0973e222ada040a84aed0cbd54b360b87034f615e6269a8"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/slicing.py",
@@ -1464,8 +1469,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/spec.py",
-      "bytes": 6670,
-      "sha256": "c5939c1c247278c72c4f5adf08dcec9387c9888274673530eb0a9f04313e12a7"
+      "bytes": 6909,
+      "sha256": "9cd12052cf3a1b767db706c0178729d29b1859aac04a65017b5a89ef12fe5420"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/viewer/index.html",
@@ -2239,18 +2244,18 @@
     },
     {
       "path": "jarvis/docs/m08/BACKLOG_ET_REPRISE_M08.md",
-      "bytes": 5618,
-      "sha256": "24d6b76945d4fa0dca1c418cc15b58bf919057f3666858bc39daab17f3521c0a"
+      "bytes": 5804,
+      "sha256": "58bf09f134cdb074643cfeaf0b4e4e14f8bbd7fe580436573c6324218ca47ef1"
     },
     {
       "path": "jarvis/docs/m08/REGISTRE_DECISIONS_M08.md",
-      "bytes": 9331,
-      "sha256": "61a4e8670aa327b2cf99ae8ae51a9a4b198e7296452f7f654759f215252c5ff8"
+      "bytes": 12711,
+      "sha256": "e310624c8d70ba88b2416543a4d94ee147ffdb6cd7ab6f5ea8a32ebe62d36c61"
     },
     {
       "path": "jarvis/docs/m08/RELEASE_M08.md",
-      "bytes": 10996,
-      "sha256": "9f96627ac696beb6233560fe2e720e7f1d4f3f6bfe0356d7b6876c246132ddef"
+      "bytes": 13365,
+      "sha256": "5e67c45b1a525f08f5c4fd46fe49e0f9f9f131038d15105839cb1d3eebd4c774"
     },
     {
       "path": "jarvis/docs/m08/preuves/atelier_three_core_absent_2026-11-02.json",
@@ -2268,9 +2273,59 @@
       "sha256": "1a810a7709155d0386515daf42e3ec0f91854410eb8fe057f91cac0b8ab45a62"
     },
     {
+      "path": "jarvis/docs/m08/preuves/contre_epreuves_fabrication_v3_2026-11-02.json",
+      "bytes": 3123,
+      "sha256": "0c5ffe05d0d0ed627e927a74c115612dcdcc65064a0df9b2228845a12d554a9e"
+    },
+    {
       "path": "jarvis/docs/m08/preuves/environnement_aligne_2026-11-02.json",
       "bytes": 6138,
       "sha256": "44d76bce671a223e639f1cbab6a6aa5c04cdb2fd03c7c22dbf3744e297a0228d"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/assembly.json",
+      "bytes": 765,
+      "sha256": "4690128db057682d39d070155a5d48f65b4eb2a22b551c329b77601c74513a73"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/checks.json",
+      "bytes": 2450,
+      "sha256": "060cf9ba7b9079723dba7617c5da35f6b63a2f737808423396ebf7c261fa27f4"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/manifest.json",
+      "bytes": 6989,
+      "sha256": "e3df9d6f583776f5002605d4194da53099a8ee02ff4d3a4f47e21853ab3c616e"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/pose_study.json",
+      "bytes": 1330,
+      "sha256": "c1f036715cfc68eed61bc01dc5b4a5c5f7c54ae0a81bdf049af297e86ec1c3f9"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/spec.json",
+      "bytes": 953,
+      "sha256": "506484d4478f711dfc6d4e8acd7d73c93dc370b4296a9f90199f79da2292a7be"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/state.json",
+      "bytes": 7570,
+      "sha256": "fff905883a4a28fa58db8b873436740819743e0c5465d1f13653fa9fb70c8391"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/tranchage.json",
+      "bytes": 1963,
+      "sha256": "e4f6173e981dafd8b21c697a6c8c89b6ed2ff1ef67a4faf3b15e95c117629841"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/viewer_check.json",
+      "bytes": 1881,
+      "sha256": "f63495c8d384867ca89f415b393fe3222d4977a1aa8a9901a82d4eb28a1846cb"
     },
     {
       "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/manifest_partiel.json",
@@ -2774,8 +2829,8 @@
     },
     {
       "path": "jarvis/tests/test_figurine_m08.py",
-      "bytes": 14973,
-      "sha256": "402a10cd0f7afbd6a9c4dd1fecdbfafb6e0211470cf1f73c51057c62c70acfed"
+      "bytes": 16970,
+      "sha256": "f08d2bcfc95a19954fa7ac809c9654b2a83c975862275b0c6cdca5130a1cb469"
     },
     {
       "path": "jarvis/tests/test_growth.py",
@@ -2834,8 +2889,8 @@
     },
     {
       "path": "jarvis/tools/figurine_pipeline.py",
-      "bytes": 1508,
-      "sha256": "4d8becb037bbe2c9c3deedb25fe4442523d9e366a78290b93758c59e1d9da81d"
+      "bytes": 1755,
+      "sha256": "e702492f54e230401b55b2247d4e3190915d46c0efe51928a85327dc0a58fa18"
     },
     {
       "path": "jarvis/tools/figurine_viewer_check.cjs",

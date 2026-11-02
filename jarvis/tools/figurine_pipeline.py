@@ -3,7 +3,9 @@
 
 Exemples :
   python tools/figurine_pipeline.py "Jarvis, crée-moi la Sentinelle 3D imprimable dans une pose iconique"
+  python tools/figurine_pipeline.py "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable."
   python tools/figurine_pipeline.py "Jarvis, prépare la Sentinelle 3D de 30 cm" --mesh piece_fournie.stl
+Personnages originaux sculptés : la Sentinelle (contrôle) et Ardoise, le duelliste des strates (guerrier BOJ.ART).
 Un personnage tiers exige en plus --provenance (fiche de licence) ; sans elle, l'étape géométrie est BLOQUÉE.
 Aucune commande n'est envoyée à une imprimante.
 """
