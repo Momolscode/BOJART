@@ -40,11 +40,11 @@ jobs:
       - name: Rules fallback and synthetic planner contracts
         run: python -m unittest discover -s tests_workflows -v
       - name: Measure rules fallback
-        run: python tools/simulate_jarvis_workflows.py --output .bojart-audit/workflows-rules.json
+        run: python tools/simulate_jarvis_workflows.py --repeats 10 --output .bojart-audit/workflows-rules.json
       - name: Variable fleets and enumerated small optima
         run: python tools/stress_jarvis_fleet.py --output .bojart-audit/fleet-stress.json
       - name: Compare rules latency on the same host
-        run: python tools/benchmark_jarvis_latency.py --baseline .bojart-audit/baseline --output .bojart-audit/latency-rules.json --expected-engine missing_dependency
+        run: python tools/benchmark_jarvis_latency.py --baseline .bojart-audit/baseline --output .bojart-audit/latency-rules.json --repeats 10 --expected-engine missing_dependency
       - name: Existing connection and HTTP boundary contracts
         run: |
           python -m unittest discover -s jarvis/tests -p 'test_connection_lifetime.py' -v
@@ -56,11 +56,11 @@ jobs:
       - name: Existing orchestration, scenes and backup restoration
         run: python -m unittest discover -s jarvis/tests -p 'test_jarvis_m0[67].py' -v
       - name: Measure persisted LangGraph
-        run: python tools/simulate_jarvis_workflows.py --output .bojart-audit/workflows-langgraph.json
+        run: python tools/simulate_jarvis_workflows.py --repeats 10 --output .bojart-audit/workflows-langgraph.json
       - name: Check the engine actually used
         run: python -c "import json; r=json.load(open('.bojart-audit/workflows-langgraph.json',encoding='utf-8')); assert r['transcripts']['engine']=='sqlite_ready'"
       - name: Compare persisted LangGraph latency on the same host
-        run: python tools/benchmark_jarvis_latency.py --baseline .bojart-audit/baseline --output .bojart-audit/latency-langgraph.json --expected-engine sqlite_ready
+        run: python tools/benchmark_jarvis_latency.py --baseline .bojart-audit/baseline --output .bojart-audit/latency-langgraph.json --repeats 10 --expected-engine sqlite_ready
       - uses: actions/upload-artifact@v4
         if: always()
         with:

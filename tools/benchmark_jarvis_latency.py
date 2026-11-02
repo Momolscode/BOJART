@@ -65,7 +65,7 @@ def worker(repo, repeats, instrument=False, variant='default'):
         return connection
     with ExitStack() as stack:
         if variant != 'default':
-            options = {'pool_sync':{'checkpoint_durability':'sync'},
+            options = {'pool_sync':{'checkpoint_durability':'sync','reuse_connections':True},
                        'no_pool_exit':{'reuse_connections':False}}[variant]
             original = simulation.JarvisRuntime
             stack.enter_context(patch.object(simulation, 'JarvisRuntime',

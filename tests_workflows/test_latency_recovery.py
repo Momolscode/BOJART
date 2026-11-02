@@ -108,6 +108,16 @@ class SessionTests(unittest.TestCase):
             fixture.restart()
             self.assertEqual(fixture.runtime.submit(fixture.request())['status'], 'QUEUED')
 
+    def test_missing_engine_keeps_original_ephemeral_connections_by_default(self):
+        with patch.dict(sys.modules, {'langgraph.graph':None}), RuntimeFixture() as fixture:
+            self.assertEqual(fixture.runtime.graph_status, 'missing_dependency')
+            self.assertEqual(fixture.runtime._sessions, [])
+            for owner in (fixture.server.store, fixture.server.display, fixture.server.tower):
+                self.assertIsNone(getattr(owner, '_command_sessions', None))
+            with fixture.server.store.connect() as db:db.execute('SELECT 1')
+            with self.assertRaises(sqlite3.ProgrammingError):db.execute('SELECT 1')
+            self.assertEqual(fixture.runtime.submit(fixture.request())['status'], 'QUEUED')
+
 
 def crash_worker(root, point):
     fixture = RuntimeFixture(state_root=root)

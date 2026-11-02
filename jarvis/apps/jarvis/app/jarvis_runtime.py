@@ -81,9 +81,11 @@ class VoiceLease:
 
 
 class JarvisRuntime:
-    def __init__(self, server, decider=None, *, reuse_connections=True, checkpoint_durability='exit'):
+    def __init__(self, server, decider=None, *, reuse_connections=None, checkpoint_durability='exit'):
         if checkpoint_durability not in ('sync', 'exit'):
             raise ValueError('Unsupported checkpoint durability.')
+        if reuse_connections is not None and type(reuse_connections) is not bool:
+            raise ValueError('reuse_connections must be None, True or False.')
         self.server = server
         self.store = server.store
         self.decider = decider or JevDecider()
@@ -93,13 +95,14 @@ class JarvisRuntime:
         self.graph = None
         self.connection = None
         self.checkpoint_durability = checkpoint_durability
+        self._reuse_connections = reuse_connections
         self._sessions = []
         owners = [(self.store, self.store.dbpath, True, True),
                   (server.display, server.display.path, False, False),
                   (server.tower, server.tower.path, True, False)]
         if any(getattr(owner, '_command_sessions', None) is not None for owner, *_ in owners):
             raise Rejected('Un runtime possède déjà ces connexions. Fermez-le avant la reprise.')
-        if reuse_connections:
+        if reuse_connections is not False:
             for owner, path, rows, foreign_keys in owners:
                 pool = SQLiteSessions(path, rows=rows, foreign_keys=foreign_keys)
                 owner._command_sessions = pool
@@ -128,6 +131,10 @@ class JarvisRuntime:
         except ImportError:
             # A missing optional package must not break the recovered workshop.
             self.graph_status = 'missing_dependency'
+            # Auto mode keeps the original connection lifetime for rules fallback.
+            # Windows trials did not qualify its pooled tail latency. Explicit
+            # True is an experimental constructor override, never an HTTP option.
+            if self._reuse_connections is None:self._release_sessions()
         else:
             self.connection = sqlite3.connect(self.store.dbpath, check_same_thread=False, timeout=10)
             saver = SqliteSaver(self.connection, serde=JsonPlusSerializer(
@@ -150,11 +157,14 @@ class JarvisRuntime:
     def close(self):
         with self.run_lock:
             if self.connection: self.connection.close(); self.connection = None
-            for owner, pool in self._sessions:
-                if getattr(owner, '_command_sessions', None) is pool:
-                    del owner._command_sessions
-                pool.close()
-            self._sessions.clear()
+            self._release_sessions()
+
+    def _release_sessions(self):
+        for owner, pool in self._sessions:
+            if getattr(owner, '_command_sessions', None) is pool:
+                del owner._command_sessions
+            pool.close()
+        self._sessions.clear()
 
     def status(self):
         return {'schema':'bojart.jarvis.m07.v1', 'langgraph':self.graph_status,
