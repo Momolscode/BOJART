@@ -138,6 +138,7 @@
       "etat_code": "partiel",
       "verifications": [
         "http:http_voix_sans_moteur",
+        "outil:voix_decodage",
         "suite:jarvis_tests",
         "reseau:roues_windows"
       ],

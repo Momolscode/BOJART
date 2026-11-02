@@ -29,8 +29,8 @@
     },
     {
       "path": ".github/workflows/preinstall-bench.yml",
-      "bytes": 2923,
-      "sha256": "83d5ac81d5571a8d84bdcca96f683c61532c086fb0f7cd8d5a3434f0250f4082"
+      "bytes": 2939,
+      "sha256": "fcde7894e20c088867fd9230cc730ad413b04e7c2a5babcc1673e77807c53fdf"
     },
     {
       "path": ".github/workflows/quality.yml",
@@ -354,8 +354,8 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 33061,
-      "sha256": "7e81237ac7f548ab2427a94fb51430c5f5f2d1b46e9a9575aebb05263acdace4"
+      "bytes": 33645,
+      "sha256": "b445f522504d79e12e57fbbdce6c61f11217e02842034bf0da8c8a645767f407"
     },
     {
       "path": "bojart_ops/banc_statique.py",
@@ -414,8 +414,8 @@
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 44879,
-      "sha256": "c0f7a5faa919dc89e851166b4bbea8c350c7339cbed176ace801cbe38a9a4c88"
+      "bytes": 45233,
+      "sha256": "1b3d25d5a4d94342678ca8b6bcebfca8e48cd162a7d733985198471e9824a7a5"
     },
     {
       "path": "creative/CURRENT.md",
@@ -529,8 +529,8 @@
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
-      "bytes": 20669,
-      "sha256": "516c748957752799c99fc9cb089d6817726fea056e1cad268a4ade0bf361c676"
+      "bytes": 20700,
+      "sha256": "7c8c9d708171223a503d395dca3697e7e8d404f048c87dcaec327db87bd1dd6b"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -594,8 +594,8 @@
     },
     {
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
-      "bytes": 10954,
-      "sha256": "16dac7d50b6733201253a0a241ed037615a02971bcc9f14d5da7b7a6cb40eb3a"
+      "bytes": 11719,
+      "sha256": "424ab278d50e63b139c70fb813e675edd4e0e1ecf42dd1d1247e9aa53eda0c7a"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -2569,8 +2569,8 @@
     },
     {
       "path": "jarvis/requirements-voice.txt",
-      "bytes": 122,
-      "sha256": "ed3facd220d69beafe6f66830124fa94dffbadc6bc053328609e2ff9b33ca75e"
+      "bytes": 133,
+      "sha256": "8bf46aab2ab93c94d6ec88f91b842cc849daa4a72e30a97846be75bb30b7184a"
     },
     {
       "path": "jarvis/requirements.txt",
@@ -4634,8 +4634,8 @@
     },
     {
       "path": "tests_ops/test_banc_simulation.py",
-      "bytes": 13171,
-      "sha256": "b7bafa6f99d8ca79e0ad5190d50539425cf88d29d8debcbb4f6996ce992ff53a"
+      "bytes": 13232,
+      "sha256": "ca6308dff0aaf95671dbe734d06de31d78fcfe872e10eaba720c4c81375850b4"
     },
     {
       "path": "tests_ops/test_collecte.py",
@@ -4666,6 +4666,11 @@
       "path": "tests_ops/test_qualification.py",
       "bytes": 6338,
       "sha256": "4ad49603f11f272621283bc01a894374979a2e09e82ec6e77ea47605e0fe0673"
+    },
+    {
+      "path": "tests_ops/test_verifier_voix.py",
+      "bytes": 1750,
+      "sha256": "90487875838c7dd6e3fffe8af59967e65af83348001789dc48a2ad5431231750"
     },
     {
       "path": "tests_ops/test_verrou_dependances.py",
@@ -4791,6 +4796,11 @@
       "path": "tools/validate_repository.py",
       "bytes": 7704,
       "sha256": "5a2521d0652eb82062742bce32718eaacd0e98de0c52a6b590ad5bb23c1d587b"
+    },
+    {
+      "path": "tools/verifier_voix.py",
+      "bytes": 2290,
+      "sha256": "675fa66f2ab3efb15b4cd5f1ee7cdd4ff235ce5f08dc538e0832967ff4259501"
     },
     {
       "path": "tools/verify_manifest.py",

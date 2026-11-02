@@ -239,6 +239,16 @@ def run_tools(python, workdir):
         return {'controles': len(data['controles']), 'echecs': failed, 'premier_passage': data['premier_passage'],
                 'status': 'ok' if data['ok'] and not failed else 'echec'}
     out.append(run_tool('collecte_simulation', ['tools/collecte_guidee.py', 'simulation'], python, timeout=300, check_json=collection))
+
+    def voice(stdout):
+        data = json.loads(stdout)
+        return {'status': 'ok' if data['ok'] else 'echec', 'versions': data['versions'],
+                **({'detail': data['detail']} if data.get('detail') else {})}
+    if module_available(python, 'faster_whisper'):
+        out.append(run_tool('voix_decodage', ['tools/verifier_voix.py'], python, timeout=120, check_json=voice))
+    else:
+        out.append({'id': 'voix_decodage', 'status': 'non_execute',
+                    'detail': 'faster-whisper absent de l’interpréteur testé (jarvis/requirements-voice.txt).'})
     return out
 
 
