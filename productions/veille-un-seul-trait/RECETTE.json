@@ -1,0 +1,77 @@
+{
+ "projet": "BOJ.ART — Veille, « Un seul trait » V1",
+ "date": "2026-11-02",
+ "statut": "Proposition non validée par l'artiste ; rien publié",
+ "personnage": "Veille — personnage original BOJ.ART (aucun emprunt à un personnage existant)",
+ "credits_depenses": 37.4,
+ "images": [
+  {
+   "id": "REF",
+   "role": "Image de référence d'identité",
+   "modele": "nano_banana_pro 2k 9:16",
+   "note": "Édition d'un premier essai : le trait en zigzag (trop proche d'un maquillage célèbre) remplacé par un trait courbe unique ; cheveux ajoutés.",
+   "prompt": "Edit the reference photograph and keep everything identical [...] replace the zigzag red mark on the face with ONE single smooth hand-painted carmine (#F13A54) brushstroke: a gently curved tapered calligraphic stroke that starts thick on the forehead above the left eyebrow, passes over the closed left eyelid and thins out to a fine dry-brush tail on the upper cheek [...] give the figure short, swept-back ash-ivory sculpted hair with crisp carved strands on top and shaved sides."
+  },
+  {
+   "id": "MACRO_DEBUT",
+   "role": "Image de début du plan A",
+   "modele": "nano_banana_pro 2k 9:16, référence REF",
+   "prompt": "Extreme macro [...] face still completely UNPAINTED [...] fine round sable paintbrush [...] tip just touches the forehead above the left eyebrow [...]"
+  },
+  {
+   "id": "MACRO_FIN",
+   "role": "Image de fin du plan A",
+   "modele": "nano_banana_pro 2k 9:16, références MACRO_DEBUT + REF",
+   "note": "Première version rejetée : cadrage différent, trait coupé, filet de peinture.",
+   "prompt": "Edit image 1 and keep its exact framing [...] ONE continuous, unbroken carmine calligraphic brushstroke with exactly the shape and position of the stroke in image 2 [...] brush lifted a few centimetres away [...]"
+  },
+  {
+   "id": "EVEIL",
+   "role": "Image de fin du plan B",
+   "modele": "nano_banana_pro 2k 9:16, référence REF",
+   "prompt": "Keep everything identical [...] Only change: the head is raised by about 15 degrees and the eyes are now OPEN [...] looking straight into the camera."
+  },
+  {
+   "id": "COUVERTURE",
+   "role": "Visuel fixe 4:5 avec espace titre",
+   "modele": "nano_banana_pro 2k 4:5, référence REF"
+  },
+  {
+   "id": "MAINS",
+   "role": "Visuel fixe 4:5 détail",
+   "modele": "nano_banana_pro 2k 4:5, référence REF"
+  }
+ ],
+ "videos": [
+  {
+   "id": "A",
+   "role": "Le trait",
+   "modele": "kling3_0 pro, 5 s, 9:16, sans son, start=MACRO_DEBUT end=MACRO_FIN",
+   "montage": "0,875 s → 5,0 s (4,125 s) : saut du pinceau à 0,83–0,87 s retiré",
+   "prompt": "Locked-off extreme macro shot [...] paints ONE single continuous calligraphic stroke [...] The paint is deposited exactly under the bristles [...] no extra brushes, no floating paint, no cuts."
+  },
+  {
+   "id": "B",
+   "role": "L'éveil",
+   "modele": "kling3_0 pro, 5 s, 9:16, sans son, start=REF end=EVEIL",
+   "montage": "1,5 s de pose (première image tenue) + 5 s, poussée numérique continue 1,14 → 1,24",
+   "prompt": "One continuous studio shot [...] the head lifts slowly with weight and restraint, the closed eyelids open [...] Only the head and eyelids move [...]"
+  }
+ ],
+ "voix": {
+  "texte": "Un seul trait... Et la pièce devient quelqu'un.",
+  "retenue": "elevenlabs_v4, voix préréglée « Celine », stabilité 0,6",
+  "rejet": "seed_audio (3 voix) : « Un seul trait » transcrit « Han Sol Trey » / « An-soul-tree » / « En seul tray » par Whisper small",
+  "controle": "Transcription Whisper small du mix final : langue fr (0,99), « Un seul trait. » puis « Et la pièce devient quelqu'un. »"
+ },
+ "son": "Nappe, frottement de pinceau, montée grave et impact synthétisés par sound.py (aucune source tierce)",
+ "controles_master": {
+  "format": "1080x1920 H.264 24 i/s + AAC 48 kHz stéréo",
+  "duree_s": 13.667,
+  "images": 328,
+  "decodage": "OK",
+  "loudness_lufs": -14.5,
+  "true_peak_dbtp": -1.5,
+  "lra_lu": 7.1
+ }
+}
