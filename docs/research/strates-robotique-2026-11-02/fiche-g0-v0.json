@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "sheet": "Fiche d'acceptation STRATES G0",
+  "version": "0",
+  "recorded_on": "2026-11-02",
+  "project": "bojart.jarvis",
+  "status": "accepted_by_user_artistic_validation_pending",
+  "scope": "Premier essai au pinceau sur coupon, avant toute mesure de capteur, choix de bras ou achat de cellule. Critères distincts de ceux des figurines (0,50 mm), qui restent une ambition de recherche non validée.",
+  "how_decided": "Questions posées une par une dans le fil de projet. L'utilisateur a choisi le motif, puis a délégué les autres choix à l'assistant, qui a retenu les valeurs conseillées par l'audit STRATES ou, à défaut, les plus simples à mesurer.",
+  "user_messages": [
+    {"sent_at": "2026-11-02T04:14:17Z", "question": "motif", "text": "A"},
+    {"sent_at": "2026-11-02T09:13:08Z", "question": "pinceau", "text": "Je sais pas ce qu’est le mieux"},
+    {"sent_at": "2026-11-02T10:48:34Z", "question": "support, peinture, réussi ou raté, qui valide", "text": "Ok, je te laisse choisir à ma place le choix le plus stratégique"}
+  ],
+  "decisions": {
+    "motif": {
+      "value": "Un seul trait de pinceau de 10 à 15 cm de long, largeur nominale 7 mm, sur un coupon",
+      "chosen_by": "user",
+      "basis": "valeur proposée par l'audit STRATES (segment de 10 à 15 cm, trait nominal de 7 mm)"
+    },
+    "pinceau": {
+      "value": "Pinceau plat à fibres synthétiques d'environ 7 mm de large ; toujours le même exemplaire pour une série d'essais",
+      "chosen_by": "assistant_under_user_delegation",
+      "basis": "la largeur de trace d'un pinceau plat dépend moins de la pression que celle d'un pinceau rond ; référence exacte non choisie",
+      "to_confirm_with": "la personne qui peint STRATES"
+    },
+    "support": {
+      "value": "Petites plaques plates imprimées en 3D sur le parc BOJ.ART, recouvertes d'un apprêt blanc",
+      "chosen_by": "assistant_under_user_delegation",
+      "basis": "l'audit recommande d'utiliser le parc d'impression pour les coupons, gabarits et porte-outils",
+      "provisional_until": "la matière et la préparation réelles du relief STRATES sont connues"
+    },
+    "peinture": {
+      "value": "Acrylique noire du commerce : même marque, même lot si possible, même dilution à chaque essai",
+      "chosen_by": "assistant_under_user_delegation",
+      "basis": "un trait noir sur fond blanc se mesure facilement à la caméra ; la dilution exacte reste à fixer dans le protocole G1"
+    },
+    "reussi_ou_rate": {
+      "width_mm_min": 6,
+      "width_mm_max": 8,
+      "width_within_range_min_share_of_length": 0.9,
+      "overflow_max_mm": 1.0,
+      "decision_rule": "réussi si la largeur reste entre 6 et 8 mm sur au moins 90 % de la longueur et si le débordement mesuré, augmenté de son incertitude, ne dépasse pas 1 mm ; sinon raté",
+      "chosen_by": "assistant_under_user_delegation",
+      "basis": "valeurs et règle proposées par l'audit STRATES"
+    },
+    "qui_valide": {
+      "value": ["l'utilisateur", "la personne qui peint STRATES, pour le rendu"],
+      "chosen_by": "assistant_under_user_delegation",
+      "names_in_public_git": false
+    }
+  },
+  "open_items": [
+    "Validation du rendu par la personne qui peint STRATES, et confirmation du pinceau avec elle.",
+    "Référence exacte du pinceau et de la peinture.",
+    "À fixer dans le protocole G1 avant toute collecte : charge de peinture, essuyage, délais, dilution, température et humidité.",
+    "Instrument de mesure indépendant du système qui pilote le robot, avec son incertitude."
+  ],
+  "not_established": [
+    "Aucun coupon imprimé, peint ni mesuré.",
+    "Aucun bras, capteur ou cellule choisi ou acheté.",
+    "Aucune performance physique acquise."
+  ],
+  "next_proof": "G1 : imprimer les coupons, fixer le protocole de collecte, peindre des traits de référence à la main puis mesurer largeur et débordement avec leur incertitude."
+}

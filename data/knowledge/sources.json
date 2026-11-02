@@ -168,6 +168,14 @@
     "raw_content_in_git": false
   },
   {
+    "source_id": "strates-g0-user-20261102",
+    "path": "docs/research/strates-robotique-2026-11-02/fiche-g0-v0.json",
+    "sha256": "69a4d7f531cdce3f2d20283bd77206a08869a77a99ebc3217525566841a9ff38",
+    "evidence": "user_answers_in_project_thread",
+    "description": "Fiche d'acceptation STRATES G0, version 0. Réponses de l'utilisateur dans le fil de projet le 2 novembre 2026 : « A » pour le motif, « Je sais pas ce qu’est le mieux » pour le pinceau, puis « Ok, je te laisse choisir à ma place le choix le plus stratégique » pour les autres points, retenus par l'assistant.",
+    "scope": "Critères du premier essai au pinceau sur coupon ; aucune mesure, aucun choix de bras ni achat"
+  },
+  {
     "source_id": "bras-robotique-chat-user-20261102",
     "evidence": "user_instruction",
     "description": "Le 2 novembre 2026, l’utilisateur désigne la conversation ChatGPT 6ae7c762-6630-83eb-afde-680aa0c54b2e comme « la session bras robotique » à pousser sur GitHub. Accès sans compte : HTTP 403 ; corps non lu.",

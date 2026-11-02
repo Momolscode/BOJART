@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 11898,
+      "sha256": "f429a461bc7a4200c40c14a5da9915dac0134f6dca8d77025292435de9ee0fe6"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 43492,
+      "sha256": "1ba7c9ee8653822194dd83cc2b3bc14636f56ec87995da3b47d52179a1ef4d1f"
     },
     {
       "path": "creative/CURRENT.md",
@@ -454,8 +454,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 13571,
-      "sha256": "c554890c02b7e9aaf1cfb9e659a8313a787d5cf74a54977c430883e112fa925f"
+      "bytes": 14651,
+      "sha256": "1bea050e647bb869d6dc81188ed636f3f6038a6b7a2d893da2bad365ff97a00e"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -474,8 +474,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 8314,
-      "sha256": "24ea61ea661b3b6fd5357692a1993701b81ce834493d63c4d81f722d68c576b9"
+      "bytes": 9026,
+      "sha256": "5dd88e7363b19c6edc2591b25f21e4d29cad948df5cb6ff03158ca985f4a853e"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -1199,8 +1199,13 @@
     },
     {
       "path": "docs/research/strates-robotique-2026-11-02/README.md",
-      "bytes": 8307,
-      "sha256": "6b8d9a1700d2a4e4503bd02a3e8c5510068dbe34e96d80051e20152ebcd749fd"
+      "bytes": 10053,
+      "sha256": "ac870e2a5ad11b2c28ffc7ce8c00efdf01f6b190c8850a96adecd239ce294af0"
+    },
+    {
+      "path": "docs/research/strates-robotique-2026-11-02/fiche-g0-v0.json",
+      "bytes": 3957,
+      "sha256": "69a4d7f531cdce3f2d20283bd77206a08869a77a99ebc3217525566841a9ff38"
     },
     {
       "path": "docs/research/strates-robotique-2026-11-02/verification-calculs.json",
@@ -2739,8 +2744,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 14761,
+      "sha256": "f80e2f3940ad7489f1e0be92b62434550e72e9011af2842e5b8fc998321131ed"
     },
     {
       "path": "ops/request-example.json",
