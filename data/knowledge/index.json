@@ -337,5 +337,17 @@
     "project": "bojart.jarvis",
     "collection": "research",
     "provenance": "Synthèse V5 de10 documents historiques vérifiés ; propositions de collecte, pas données réelles du poste. Huit originaux sont conservés dans le pack privé, hors Git public."
+  },
+  {
+    "path": "docs/research/strates-robotique-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "research",
+    "provenance": "Session bras robotique STRATES, 2 novembre 2026 : synthèse publique d’un audit documentaire lu intégralement (original hors Git), propositions et calculs recalculés ; aucune performance physique, aucun achat ni connecteur."
+  },
+  {
+    "path": "docs/evidence/handoff-v5-2026-11-02/README.md",
+    "project": "bojart.jarvis",
+    "collection": "session_log",
+    "provenance": "Réception datée du paquet V5 le 2 novembre 2026 : octets vérifiés, rejeu exact et tests exécutés sur conteneur Linux ; ne qualifie pas la tour."
   }
 ]

@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 10263,
-      "sha256": "58d5ab40e22b72200c6dfa1021c1ffb10bdef8b3b7962a8fd9dc43474accdb33"
+      "bytes": 11160,
+      "sha256": "f840cb61233f8818f82e5718402956ff02ac69efc162daa217f20b2f6bccc73f"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 38287,
-      "sha256": "10b6bafb4387f9f348374c1a8544160cffffd74cd58afa3cca77b48b1f57abb2"
+      "bytes": 41250,
+      "sha256": "6d4ee72bd9c42834e7f68a67ae702e4dc63aa0d1564ba6f47e9c5bb54383a3d3"
     },
     {
       "path": "creative/CURRENT.md",
@@ -454,8 +454,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 10382,
-      "sha256": "da5905afa78f7eada01755adcae2f7cfd6746b5e4055c757fe3ef6486ce50fe7"
+      "bytes": 13571,
+      "sha256": "c554890c02b7e9aaf1cfb9e659a8313a787d5cf74a54977c430883e112fa925f"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -464,8 +464,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 17273,
-      "sha256": "2718d05b21dd2051de21defb54ea8acb4ea414268802bbabeabb9f822d547f39"
+      "bytes": 17977,
+      "sha256": "fc9c6ea6d92b3b1772be12863a6314513140ca73038a2d98966f684cdacd911b"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -474,8 +474,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 6040,
-      "sha256": "380dbdd37df37e17abc19d528920fd9635f2ae11812df59251a89d531ea27428"
+      "bytes": 8314,
+      "sha256": "24ea61ea661b3b6fd5357692a1993701b81ce834493d63c4d81f722d68c576b9"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -746,6 +746,21 @@
       "path": "docs/evidence/deep-recovery-2026-11-01.json",
       "bytes": 1502,
       "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee"
+    },
+    {
+      "path": "docs/evidence/handoff-v5-2026-11-02/PACK_MANIFEST_SHA256.json",
+      "bytes": 246843,
+      "sha256": "b01d883943e26f566502f83a2436a44b4ff8861b795ad04419cb78be512f9e4e"
+    },
+    {
+      "path": "docs/evidence/handoff-v5-2026-11-02/README.md",
+      "bytes": 3326,
+      "sha256": "1b337f9ffb1534157b612a11472a172758d3cb4d10b496ad0f33bb2874bcf805"
+    },
+    {
+      "path": "docs/evidence/handoff-v5-2026-11-02/reception.json",
+      "bytes": 95694,
+      "sha256": "bfe7dfa609316eefbab9ff8e195fb28d9a0568df7fc1edef5e213f34a6d13894"
     },
     {
       "path": "docs/evidence/m07-baseline-tests.log",
@@ -1176,6 +1191,21 @@
       "path": "docs/research/launch-toolchain-2026-11-01/VALIDATION.json",
       "bytes": 1733,
       "sha256": "15cd726e48088d52ceb149ab6aea859c300c624557431f97ae3e73e8a7938c17"
+    },
+    {
+      "path": "docs/research/strates-robotique-2026-11-02/PROVENANCE.json",
+      "bytes": 6476,
+      "sha256": "00fef16e88e10a6b07ebde98168dd42f06d5bbaa7952a211009573c0f906dc78"
+    },
+    {
+      "path": "docs/research/strates-robotique-2026-11-02/README.md",
+      "bytes": 8307,
+      "sha256": "6b8d9a1700d2a4e4503bd02a3e8c5510068dbe34e96d80051e20152ebcd749fd"
+    },
+    {
+      "path": "docs/research/strates-robotique-2026-11-02/verification-calculs.json",
+      "bytes": 2213,
+      "sha256": "43b56d508aa290891e2041703ef364fa6e47b66c551978215ac624a99d2644ff"
     },
     {
       "path": "docs/validation/SHOT_REVIEW_TEMPLATE.md",

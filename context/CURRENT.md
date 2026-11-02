@@ -2,12 +2,20 @@
 
 ## Audit transversal local V5 — 2 novembre 2026
 
-La copie de passation intègre le distant c71628cf20426dd8b4bdedbab2dcf403f5135667 et les corrections locales antérieures. Les anciens comptes de fichiers/tests ci-dessous restent rattachés à leurs recettes ; le manifeste et les preuves V5 décrivent la livraison actuelle. Cette copie n’est pas poussée implicitement sur GitHub.
+La copie de passation intègre le distant c71628cf20426dd8b4bdedbab2dcf403f5135667 et les corrections locales antérieures. Les anciens comptes de fichiers/tests ci-dessous restent rattachés à leurs recettes ; le manifeste et les preuves V5 décrivent la livraison actuelle. Elle est publiée par rejeu exact de ses 926 fichiers puis réconciliée avec `b49101e`. Voir `docs/evidence/handoff-v5-2026-11-02/README.md`. Les rapports détaillés et les recettes du paquet restent hors du dépôt public.
 
 Le profil matériel déclaré est dans `data/preinstallation/target-profile.json`. Les fonctions sont évaluées séparément : code, simulation, configuration disponible et qualification réelle. Les tableaux de bord ont des alias bornés ; le prototype de répartition de 1 m travaille sur 24 boîtes et 8 machines fictives, hors voix et sans géométrie réelle. Voir `docs/COMMANDES_DASHBOARD.md` et `docs/SIMULATIONS_ATELIER.md`.
 
 La recherche V5 ajoute 31 références officielles, 15 propositions et 10 contrats de qualification : `docs/research/audit-transversal-2026-11-02/`. Les recettes restent non exécutées tant qu’aucun reçu ne les qualifie. Les données terrain sont des gabarits historiques ; elles ne remplacent ni un inventaire ni une mesure. Le contexte actif est nettoyé sans supprimer les originaux.
 
+
+## Robotique — STRATES, 2 novembre 2026
+
+La session « bras robotique » porte sur la peinture au pinceau d’un relief mural stratifié. Elle est liée à l’atelier et à Jarvis. Un audit documentaire de 12 pages recommande un banc d’essai ciblé avant tout achat de cellule. Il faut d’abord figer une recette distincte des figurines, puis mesurer matière, contact et débordement ≤ 1 mm. Aucune performance physique n’est acquise.
+
+Deux vidéos générées illustrent la direction artistique ; elles ne prouvent ni le dépôt ni la précision. La conversation source n’a pas été lue. Le PDF, ses montants et les médias restent hors du dépôt public. Voir `docs/research/strates-robotique-2026-11-02/README.md`.
+
+## Projet
 
 BOJ.ART vise un atelier artistique augmenté : conception, FDM/résine, finition, contenus, devis et suivi, coordonnés par Jarvis sur trois écrans. Ce projet reste indépendant d’UNUM et de M-Tek.
 
@@ -53,7 +61,7 @@ GPU : le 2 novembre, l'utilisateur indique une RTX 4060 Ti. Sa photo montre 8 Go
 
 ## Mémoire : correction de reprise du 2 novembre
 
-La copie locale V4 corrige la réservation des inférences concurrentes, le contrôle des extraits dérivés, la saturation du contexte par des contradictions hors sujet et la projection du registre par projet. Voir `docs/memory/HARDENING_2026-11-02.txt`. Les rapports V3 qui les décrivent ouverts sont historiques. La réception locale de ces invariants ne qualifie pas les vrais modèles ni les machines et ne prouve pas une publication de ce correctif sur GitHub.
+La copie locale V4 corrige la réservation des inférences concurrentes, le contrôle des extraits dérivés, la saturation du contexte par des contradictions hors sujet et la projection du registre par projet. Voir `docs/memory/HARDENING_2026-11-02.txt`. Les rapports V3 qui les décrivent ouverts sont historiques. La réception locale de ces invariants ne qualifie ni les vrais modèles ni les machines. Le correctif est publié avec la révision V5.
 
 ## Complément de récupération vérifié
 

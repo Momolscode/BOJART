@@ -218,3 +218,25 @@ Vérifications locales : 98 tests racine, 64 tests M06/M07, 38 tests de console 
 ## Passation transversale locale V5 — 2 novembre 2026
 
 Le lot distant c71628cf20426dd8b4bdedbab2dcf403f5135667 est intégré avec les correctifs mémoire V4. Lire docs/AUDIT_TRANSVERSAL_V5.txt et docs/research/audit-transversal-2026-11-02/ pour les corrections, les données et les propositions. La réception détaillée, la couverture des chats et les sources sélectionnées restent dans le paquet JARVIS_V5. Une copie locale corrigée ne signifie ni push, ni installation sur la tour.
+
+## Publication du paquet V5 et session bras robotique — 2 novembre 2026
+
+Objectif : pousser ce qui n'avait pas été publié, dont la session « bras robotique ». Sources reçues le 2 novembre : les deux ZIP du paquet V5, le PDF `STRATES_Audit_Robotique_IA_2026-11-02.pdf`, deux vidéos générées et le lien de la conversation ChatGPT `6ae7c762-6630-83eb-afde-680aa0c54b2e`.
+
+Faits nouveaux. Le paquet est complet : 1 316 fichiers conformes à leur manifeste. La révision locale `754620639eef04835ec3be5fda71c8017a5958fe` n'existait pas sur GitHub. Ses 926 fichiers sont rejoués sur `c71628cf20426dd8b4bdedbab2dcf403f5135667` au commit `02be63cf7f7c8430cd09cb60adf7ef5122492b92`, sans écart d'empreinte. Ils sont ensuite fusionnés avec `b49101e3acad6257e2d1a610dac5fb95ec0a8bfb` : les deux sections de passation sont conservées, le manifeste est régénéré et le bit exécutable de l'installeur shell est restauré. L'utilisateur rattache la conversation « Bras robotique précis » à BOJ.ART ; l'audit des chats V5 la laissait ambiguë. Elle renvoie 403 sans compte et n'a pas été lue.
+
+Décisions. Le dépôt est public : le PDF STRATES, son texte, ses montants, le nom du partenaire et les vidéos restent hors Git. Il en va de même des 282 fichiers du paquet que V5 gardait déjà hors du dépôt. Une synthèse publique, l'identité des originaux et les calculs recalculés sont ajoutés. Cinq affirmations sont inscrites au registre :
+
+- publication observée ;
+- rattachement décidé par l'utilisateur ;
+- recommandation STRATES au statut de proposition ;
+- calculs vérifiés ;
+- portée limitée des vidéos.
+
+Fichiers : `docs/evidence/handoff-v5-2026-11-02/`, `docs/research/strates-robotique-2026-11-02/`, `context/CURRENT.md`, `data/knowledge/` et le manifeste du dépôt.
+
+Tests exécutés sur conteneur Linux, sans GPU. Réussis : `tests` 102, `tests_agent` 234, `tests_ops` 98, `tests_workflows` 20, Node 41, base métier 41, validateur. `jarvis/tests` et `jarvis/apps/jarvis/tests` ont les mêmes échecs que `main` non fusionné, faute de médias privés, de `cadquery`, de `playwright` et de `pytest`. Après ajout des deux documents indexés, ces suites repassent. L'évaluation de recherche garde ses 14 références sur 14 dans les cinq premiers résultats. Dans une mémoire temporaire indexée depuis le dépôt, la fiche STRATES sort au troisième rang pour « bras robotique STRATES peinture relief », après `CURRENT.md` et le registre. `verify` est OK.
+
+Limites. Le corps de la conversation n'est pas lu. Les documents internes I1–I3 et les sources R1–R9 ne sont pas rouverts. Aucun essai physique, devis ou achat. Les binaires reçus ne sont pas archivés sur GitHub sans accord.
+
+Prochaine preuve : fiche d'acceptation STRATES (G0) signée, puis coupons mesurés avec incertitude. Le choix d'un stockage privé pour le PDF, les vidéos, le texte de la conversation et les rapports V5 revient à l'utilisateur.
