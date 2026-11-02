@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 12960,
+      "sha256": "bb022797c8939927ca103b04252d4f5041b6937eb751526853fa5137881055e7"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 46780,
+      "sha256": "07ca2510053d81530d27eadeb4a388114763b143058f8fd4979bdd3e5cce5cba"
     },
     {
       "path": "creative/CURRENT.md",
@@ -526,6 +526,11 @@
       "path": "docs/ARCHIVE_RESTAURATION.md",
       "bytes": 1274,
       "sha256": "96f9edc86636410340e4448e675888a21619514bf41c75a0f60f2a458c2afe40"
+    },
+    {
+      "path": "docs/ATELIER_DEVIS_PARC.md",
+      "bytes": 13323,
+      "sha256": "a7e09a331c7d673ce06cb06e0ea2b7662f83c8dc2a1453e158d5343ee95ed4f7"
     },
     {
       "path": "docs/AUDIT_CONTINU_2026-11-01.md",
@@ -736,6 +741,11 @@
       "path": "docs/creative/THE_AWAKENING.md",
       "bytes": 1537,
       "sha256": "32f3c88e249582d9ad85c014c096f27373e73e36cdf140cb2f2567dded29b367"
+    },
+    {
+      "path": "docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json",
+      "bytes": 23044,
+      "sha256": "315d99f5da7ac28601a2b7fcecf4c3f671960312af3abc9de7f8166c72dadb23"
     },
     {
       "path": "docs/evidence/consolidation-2026-11-01.json",
@@ -1378,6 +1388,61 @@
       "sha256": "06074065efdb7f4409e4536dd871ef4d4f238506655834cf6a72fc5153be184c"
     },
     {
+      "path": "jarvis/apps/jarvis/app/atelier-devis.css",
+      "bytes": 2320,
+      "sha256": "362792c8a4cc81bd53fe35add3fa628999d278615c6ab38208791199898b1923"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier-devis.js",
+      "bytes": 201,
+      "sha256": "c7c5da79ae8fb8011f4703b266b73e0159f2e07cc3183ca5b3030621c26d2cc1"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier.css",
+      "bytes": 3563,
+      "sha256": "8d84574257d2de71bd15a4d6cf21e719c5c5b90cbaceb25b9758393fafd73f25"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier.html",
+      "bytes": 9878,
+      "sha256": "d14d2f2a1b644a30a4b815893ae48468da5b66707224626f05882ed4fb9c5ccb"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier.js",
+      "bytes": 35571,
+      "sha256": "00d1dde278ac990cc7bd7e16381c31ae748e3382af8a494c9ce715086fc2e9b9"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_commerce.py",
+      "bytes": 35730,
+      "sha256": "17929df76d05caa6f8720015da3808f13ec8644f68d5b37b4fd53064d9fabce3"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_devis.py",
+      "bytes": 20882,
+      "sha256": "78bd6ea18b73f3e4ba78d3fa11a73662632e316873b21ec8207cac618a8ce7f9"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_document.py",
+      "bytes": 8468,
+      "sha256": "8b0251a6e316a768c20a64cd979b56c3fee70f257709fd798f703b280d6adb39"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_estimation.py",
+      "bytes": 12767,
+      "sha256": "acbde40e72cdc0ea64f6865bbcb0cff394f9e5098cf776e25bbf92584f92d1f9"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_http.py",
+      "bytes": 8424,
+      "sha256": "7a44a35ee44fb86c04fa3b7fb4705e00e4c65f77edf111ae0ee80c09578e8777"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_parc.py",
+      "bytes": 28098,
+      "sha256": "c58fb76772ecbc94ef89e06338e6e25cfefc34593dcad470a6bfbe0edd38a339"
+    },
+    {
       "path": "jarvis/apps/jarvis/app/audio_worklet.js",
       "bytes": 392,
       "sha256": "ac15a58a87fd2c41134c63fb8e1ba72446421f5a1e82acfd5eb7dbfb161fbb52"
@@ -1394,8 +1459,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/consolidated_workbench.py",
-      "bytes": 19092,
-      "sha256": "025b098a9b27692b6e7dacb5e011b50bfeb5dbc06648507734522c7a50389172"
+      "bytes": 19488,
+      "sha256": "a0d5af24483afad5649912926593af15dca2da44e93ab32e7c0cd91405014a07"
     },
     {
       "path": "jarvis/apps/jarvis/app/context_guard.py",
@@ -1464,8 +1529,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/jarvis_runtime.py",
-      "bytes": 21366,
-      "sha256": "37c5ea4ace564634664eaa1f2ff08e40bdd3452eaad2996340b3da1767657e57"
+      "bytes": 21491,
+      "sha256": "f01a078493cc4a711d9300b87c2024f594c067631cbef01bda7c4e681d15dd8a"
     },
     {
       "path": "jarvis/apps/jarvis/app/jev_decider.py",
@@ -1569,8 +1634,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/tower_screen.js",
-      "bytes": 7179,
-      "sha256": "7454d70c4dee602957b86fb659d73a4c04697f6fb054f3a937ef0016cb18c921"
+      "bytes": 7829,
+      "sha256": "3a581075a2a7501076ab34e86c0ed31c537a0eade25c082d907d213236c8fac5"
     },
     {
       "path": "jarvis/apps/jarvis/app/tower_voice.js",
@@ -1614,8 +1679,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.html",
-      "bytes": 4073,
-      "sha256": "3aeb866cac14a58c2824c9d9feabe6583d3fd01aaf4b875e96b49d47714d8fcd"
+      "bytes": 4117,
+      "sha256": "689353b9694a28a7c4c598f3130cb6a26f6f8a2d181e10aee1e6513f6d7a7640"
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.js",
@@ -1624,8 +1689,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace_state.py",
-      "bytes": 22279,
-      "sha256": "9974501d5d337b59d546ad3f38adf964e1f084ae56339b2a4374cf3986684f1f"
+      "bytes": 23039,
+      "sha256": "562f1ab9fe94d99ca3011087bd5da9a1c88d031bc934715809425e1942d76efe"
     },
     {
       "path": "jarvis/apps/jarvis/config.example.json",
@@ -1996,6 +2061,21 @@
       "path": "jarvis/config/M04_INVENTAIRE_A_REMPLIR.json",
       "bytes": 1017,
       "sha256": "9a763deedc8dc219a850a7cd1906c1fd9fb7cdeb3bdba36ba4bf9d6da07ee261"
+    },
+    {
+      "path": "jarvis/config/atelier/demonstration.json",
+      "bytes": 3001,
+      "sha256": "7dca3f9705fb5824215debf7a335966280ca4af7a52e4b7f9fc3671c23d03a02"
+    },
+    {
+      "path": "jarvis/config/atelier/profil_resine.exemple.json",
+      "bytes": 203,
+      "sha256": "fa71fb669bd1688d4694c779e74f4f46e6a335c0f0169008022e03136995e4d8"
+    },
+    {
+      "path": "jarvis/config/atelier/tarifs.exemple.json",
+      "bytes": 1170,
+      "sha256": "2b305ce7fc4fd4adf1a34b2ea4656f7aae46f926997313c1868ba84cca4426cf"
     },
     {
       "path": "jarvis/context/CONTRADICTIONS_RESOLUES.md",
@@ -2543,6 +2623,16 @@
       "sha256": "76dab182f56e1cbad83103f0c0404a3fb1388a4d5897cf87e914b50f668be36d"
     },
     {
+      "path": "jarvis/tests/fixtures/atelier/PROVENANCE.json",
+      "bytes": 729,
+      "sha256": "2879421ed838dec7ca82c913b227e21c18f7593927604172ae61e56554517da1"
+    },
+    {
+      "path": "jarvis/tests/fixtures/atelier/prusaslicer-2.9.0-alpha1-metadonnees.gcode",
+      "bytes": 436,
+      "sha256": "4b18753036d9f6dfb4af8269fbc8fd06fbdeb951179ab6fb26d9a0f435db734e"
+    },
+    {
       "path": "jarvis/tests/memory_context.test.cjs",
       "bytes": 8327,
       "sha256": "ac4c0f400e84ebf414e026d78685b096cc5957728aa163203125f1164a54b437"
@@ -2556,6 +2646,11 @@
       "path": "jarvis/tests/studio_growth.test.cjs",
       "bytes": 11887,
       "sha256": "fbc3ac1dec071897f09f46818a567f2ad2ec1259e00ab14f9c31ce4116d0e601"
+    },
+    {
+      "path": "jarvis/tests/test_atelier.py",
+      "bytes": 48509,
+      "sha256": "a4119ae7a9c979c27336fac5823382b676b9d6731a1888d7b4dc0d03e9f44f8c"
     },
     {
       "path": "jarvis/tests/test_connection_lifetime.py",
@@ -2664,8 +2759,8 @@
     },
     {
       "path": "jarvis/tools/m07_browser.cjs",
-      "bytes": 8739,
-      "sha256": "168bbb8900577aee57f62bf18997eebdbfa78aaaa4a0a217936806da08d00207"
+      "bytes": 8732,
+      "sha256": "0ca8239b9a0b622c17087f346b031392355f1b9549868821b5bb36afca6a49f2"
     },
     {
       "path": "jarvis/tools/m07_smoke.py",
@@ -2739,8 +2834,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 14781,
+      "sha256": "aa746ef30b8cfd2e7b43b7cf00a48aa837914cb393a5f31925e55219c8931197"
     },
     {
       "path": "ops/request-example.json",

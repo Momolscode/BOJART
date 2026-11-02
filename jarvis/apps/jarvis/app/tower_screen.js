@@ -27,8 +27,12 @@ async function render(cmd){if(cmd.project_id!==projectId)throw Error('Dossier de
    for(const s of (data.segments||[]).slice(0,5))card(s.title||s.label||s.id, s.description||s.kind||s.media_kind||'Passage du catalogue local');
    $('visualLabel').textContent='BIBLIOTHÈQUE LOCALE';
  }else if(cmd.action==='show_planning_demo'){
-   showText('PLANNING DÉMONSTRATIF — machines et temps fictifs. Aucune disponibilité d’imprimante réelle connue.');
-   $('visualLabel').textContent='PLANNING / SIMULATION';
+   const data=await api('/api/atelier/etat'),r=data.resume;
+   showText('TABLEAU ATELIER — parc simulé et données de démonstration. Aucune imprimante réelle contactée.');
+   card('Parc',r.machines+' machine(s), dont '+r.machines_simulees+' simulée(s)'+(r.rapprochements?' · '+r.rapprochements+' état(s) à rapprocher avant tout ordre':'')+'.','/atelier','Ouvrir l’atelier');
+   for(const m of data.parc.machines.slice(0,4)){const o=m.observation;card(m.fiche.id+' · '+m.fiche.procede,o.lu?(o.etat+(o.fichier?' · '+o.fichier.nom+' '+o.progression_pct+' %':'')+' (simulation)'):o.raison);}
+   card('Demandes et devis',r.demandes_ouvertes+' demande(s) ouverte(s) · '+r.devis_brouillons+' brouillon(s) · '+r.devis_emis+' devis émis. Aucun envoi automatique.');
+   $('visualLabel').textContent='ATELIER / SIMULATION';
  }else if(cmd.action==='interrupt_speech'){
    window.speechSynthesis?.cancel();
    showText('Réponse vocale interrompue dans cette vue. Aucun ordre d’arrêt machine envoyé.');

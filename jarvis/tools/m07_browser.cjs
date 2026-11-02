@@ -30,7 +30,7 @@ const {chromium}=require('playwright');
    assert.equal(r.display.state,'rendered');assert.ok((await pending()).context_sha256);
    await views.pilotage.getByRole('heading',{name:'Dossiers et continuité'}).waitFor();
    await views.creation.getByRole('heading',{name:'Studio sources BOJ.ART'}).waitFor();
-   await views.atelier.getByText('PLANNING DÉMONSTRATIF',{exact:false}).waitFor();
+   await views.atelier.getByText('TABLEAU ATELIER',{exact:false}).waitFor();
   });
   await check('Jev proposal is confirmed by a scoped captured voice phrase',async()=>{
    await page.locator('#voiceText').fill('Le tableau des dossiers, merci');await page.locator('#voiceSend').click();
