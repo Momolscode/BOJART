@@ -28,7 +28,11 @@ THIRD_PARTY = {
 ORIGINAL = {
     'sentinelle': {'label': "La Sentinelle de l'atelier", 'franchise': None},
     'ardoise': {'label': 'Ardoise, le duelliste des strates', 'franchise': None},
+    'veille': {'label': 'Veille, la gardienne du trait', 'franchise': None},
 }
+# Noms de personnages qui sont aussi des mots courants (« mets-toi en veille », « la veille de Noël ») :
+# ils ne comptent que dans une demande qui parle d'une figurine, et jamais dans ces tournures.
+AMBIGUOUS_NAMES = {'veille': re.compile(r"\b(?:en|mode) veille\b|\bla veille (?:de|du|des|d')(?! ?[0-9])")}
 # Mots proches d'un nom de personnage : signe probable d'une transcription erronée.
 ASR_CONFUSIONS = {
     'vegetal': 'vegeta', 'vegetale': 'vegeta', 'vegetaux': 'vegeta', 'vegetarien': 'vegeta',
@@ -60,11 +64,21 @@ def normalize(text: str) -> str:
     return re.sub(r'\s+', ' ', s.replace('’', "'")).strip()
 
 
+def _names(s: str, words: set) -> set:
+    """Noms de personnages présents, sans les mots courants ambigus hors d'une demande de figurine."""
+    found = words & (set(THIRD_PARTY) | set(ORIGINAL))
+    for name, phrase in AMBIGUOUS_NAMES.items():
+        if name in found and (not words & FIGURINE_WORDS or phrase.search(s)):
+            found.discard(name)
+    return found
+
+
 def is_figurine_request(text: str) -> bool:
     if not isinstance(text, str):
         return False
-    words = set(re.findall(r'[a-z0-9]+', normalize(text)))
-    return bool(words & FIGURINE_WORDS) or bool(words & (set(THIRD_PARTY) | set(ORIGINAL)))
+    s = normalize(text)
+    words = set(re.findall(r'[a-z0-9]+', s))
+    return bool(words & FIGURINE_WORDS) or bool(_names(s, words))
 
 
 def _height(s: str):
@@ -94,8 +108,9 @@ def parse_request(text: str, *, source: str = 'typed') -> dict:
     if not wset & CREATE_WORDS:
         raise SpecRejected('Précisez ce que Jarvis doit créer.')
 
-    found = [{'id': k, **THIRD_PARTY[k], 'rights': 'third_party_licensed'} for k in THIRD_PARTY if k in wset]
-    found += [{'id': k, **ORIGINAL[k], 'rights': 'bojart_original'} for k in ORIGINAL if k in wset]
+    names = _names(s, wset)
+    found = [{'id': k, **THIRD_PARTY[k], 'rights': 'third_party_licensed'} for k in THIRD_PARTY if k in names]
+    found += [{'id': k, **ORIGINAL[k], 'rights': 'bojart_original'} for k in ORIGINAL if k in names]
     if len(found) > 1:
         raise SpecRejected('Plusieurs personnages dans la demande (' + ', '.join(c['label'] for c in found)
                            + ') : lequel ? Rien n’est lancé.')

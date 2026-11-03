@@ -108,7 +108,7 @@ def characters():
     calcul) ; la Sentinelle garde sa grille fixe pour rester identique aux preuves publiées. « voxel » et
     « smooth_iterations » : pas de grille et lissage par défaut (les détails d'Ardoise demandent 0,4 mm).
     « socle » : style de socle (fabrication.SOCLE_STYLES)."""
-    from . import ardoise
+    from . import ardoise, veille
     return {
         'sentinelle': {'version': SCULPT_VERSION, 'poses': POSES, 'sdf': figure_sdf, 'bounds': SENTINELLE_BOUNDS,
                        'tight': False, 'intent_poses': {'combat': 'garde_basse', 'rest': 'repos_fier'},
@@ -117,6 +117,10 @@ def characters():
                     'bounds': ardoise.BOUNDS, 'tight': True, 'intent_poses': ardoise.INTENT_POSES,
                     'voxel': ardoise.DETAIL['voxel'], 'smooth_iterations': ardoise.DETAIL['smooth_iterations'],
                     'socle': ardoise.SOCLE},
+        'veille': {'version': veille.VEILLE_VERSION, 'poses': veille.POSES, 'sdf': veille.veille_sdf,
+                   'bounds': veille.BOUNDS, 'tight': True, 'intent_poses': veille.INTENT_POSES,
+                   'voxel': veille.DETAIL['voxel'], 'smooth_iterations': veille.DETAIL['smooth_iterations'],
+                   'socle': veille.SOCLE},
     }
 
 

@@ -9,9 +9,12 @@
 3. Parcours nominal (personnage original, ~5 min sur 4 vCPU sans GPU, grille de 0,4 mm) :
    `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable."`
    (Ardoise, guerrier choisi par Olsen ; « la Sentinelle » reste le personnage de contrôle).
+   Veille, héroïne du film BOJ.ART « Un seul trait » (fiche D16) :
+   `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi la figurine Veille 3D imprimable dans une position stylée, iconique et remarquable."`
+   (« figurine » ou « 3D » est nécessaire : seul, « veille » est un mot courant).
    Résultats dans `runs/figurine/<id>/` (hors Git) : `manifest.json`, `checks.json`, `rendus/`, `tranchage/`.
 4. Visionneuse : `node jarvis/tools/figurine_viewer_check.cjs runs/figurine/<id>`.
-5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (30 tests, ~100 s).
+5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (34 tests, ~90 s).
 
 Règles à garder : un personnage tiers reste BLOQUÉ sans maillage fourni et fiche de provenance ;
 aucun G-code n'est envoyé ; une dépendance absente donne BLOQUÉ, jamais une réussite ; un doublon de
@@ -37,6 +40,8 @@ commande renvoie la tâche existante sans recalcul.
    sculpteur (évaluation indépendante), cas de contrôle tenus à l'écart des réglages.
    Preuve : vues argile avant/après, `checks.json` des deux maillages, fiche D1 mise à jour.
    Référence procédurale à battre : Ardoise v6 (fiche D13), jugée sur la vue rapprochée du buste.
+   Veille (fiche D16) a déjà ses images de référence originales (film « Un seul trait ») : c'est le
+   candidat le plus simple pour un premier essai image→3D.
 3. **Inventorier le parc et calibrer l'ajustement réel.**
    Résultat : modèles d'imprimantes, volumes, profils matière ; jeu tenon/logement mesuré.
    Dépendance : accès aux machines avec opérateur (impression N3 autorisée explicitement).

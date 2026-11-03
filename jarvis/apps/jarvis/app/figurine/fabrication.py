@@ -8,10 +8,11 @@ import numpy as np
 
 FAB_VERSION = 'bojart.fabrication.v3'
 # Styles de socle. « lisse » : cylindre chanfreiné de la v3, inchangé. « strates » : plaques d'ardoise
-# empilées (2 novembre 2026, passe « détails » d'Ardoise). Un style autre que « lisse » ajoute sa
-# version à celle de la fabrication dans l'identité de tâche : les tâches à socle lisse gardent leur
-# identifiant et restent comparables aux preuves publiées.
-SOCLE_STYLES = {'lisse': None, 'strates': 'bojart.socle.strates.v1'}
+# empilées (2 novembre 2026, passe « détails » d'Ardoise). « basalte » : prisme hexagonal irrégulier
+# (3 novembre 2026, Veille). Un style autre que « lisse » ajoute sa version à celle de la fabrication
+# dans l'identité de tâche : les tâches à socle lisse gardent leur identifiant et restent comparables
+# aux preuves publiées.
+SOCLE_STYLES = {'lisse': None, 'strates': 'bojart.socle.strates.v1', 'basalte': 'bojart.socle.basalte.v1'}
 
 
 def fab_version(style: str = 'lisse') -> str:
@@ -151,10 +152,74 @@ def _strata_base(centre, r, hb, ch, k, seed=23, n_theta=720, upright=False):
     return mesh, info
 
 
+def _offset_polygon(normals, offsets):
+    """Sommets du polygone convexe {x : n_i · x ≤ h_i} (normales triées par angle, toutes actives) :
+    le sommet i est l'intersection des côtés i et i + 1."""
+    n = len(offsets)
+    pts = []
+    for i in range(n):
+        a, b = normals[i], normals[(i + 1) % n]
+        pts.append(np.linalg.solve(np.array([a, b]), np.array([offsets[i], offsets[(i + 1) % n]])))
+    return np.array(pts)
+
+
+def _basalt_base(soles, centre, hb, k, margin, wall, seed=29):
+    """Socle « basalte » : prisme hexagonal irrégulier, biseau du dessus en facettes inégales, joint de
+    colonne en V sur la tranche, petit chanfrein du dessous. Même repère que les autres socles : dessus
+    plat à z = 0 (plan de joint des appuis), dessous à z = -hb.
+
+    Les six côtés serrent les appuis au lieu d'un cercle : chaque côté passe à `margin` mm au moins (plus
+    un écart tiré au sort de 0 à 3 mm) du point d'appui le plus avancé dans sa direction ; un sommet
+    regarde vers l'avant, comme sur les images de référence de Veille.
+    Imprimable retourné (dessus sur le plateau) sans support : biseau plus raide que 45° (pente de 1,2 à
+    1,5), flancs du joint à 42° de la verticale, chanfrein du dessous tourné vers le haut à l'impression.
+    Retourne (maillage trimesh fermé, informations, polygone de l'évidement à paroi `wall`)."""
+    import trimesh
+    rng = np.random.default_rng(seed)
+    n = 6
+    ang = np.radians(60.0 * np.arange(n) + rng.uniform(-6.0, 6.0, n))
+    normals = np.stack([np.cos(ang), np.sin(ang)], axis=1)
+    reach = (soles @ normals.T).max(axis=0)
+    h = reach + margin + rng.uniform(0.0, 3.0, n) * k
+    bevel_h = 0.38 * hb
+    slopes = rng.uniform(1.2, 1.5, n)
+    e = bevel_h / slopes
+    cb, gh = 0.6 * k, 0.5 * k
+    g = 0.9 * gh
+    zg = -hb + 0.45 * (hb - bevel_h)
+    rings = [(-hb, h + e - cb), (-hb + cb, h + e), (zg - gh, h + e), (zg, h + e - g), (zg + gh, h + e),
+             (-bevel_h, h + e), (0.0, h)]
+    polys = [_offset_polygon(normals, off) for _, off in rings]
+    m = len(rings)
+    centre = polys[-1].mean(axis=0)
+    verts = np.concatenate([np.concatenate([poly, np.full((n, 1), z)], axis=1) for (z, _), poly in zip(rings, polys)]
+                           + [np.array([[centre[0], centre[1], -hb], [centre[0], centre[1], 0.0]])])
+    idx = np.arange(m * n).reshape(m, n)
+    nxt = np.roll(idx, -1, axis=1)
+    a, b, c3, d = idx[:-1], nxt[:-1], nxt[1:], idx[1:]
+    faces = np.concatenate([np.stack([a, b, c3], -1).reshape(-1, 3), np.stack([a, c3, d], -1).reshape(-1, 3),
+                            np.stack([np.full(n, m * n), nxt[0], idx[0]], -1),
+                            np.stack([np.full(n, m * n + 1), idx[-1], nxt[-1]], -1)])
+    mesh = trimesh.Trimesh(verts, faces, process=True)
+    recess = _offset_polygon(normals, h + e - g - wall)
+    band = h + e
+    wall_min = float(min((band[i] - recess @ normals[i]).min() for i in range(n))) - g
+    info = {'sides': n, 'seed': seed, 'side_normals_deg': [round(float(x), 2) for x in np.degrees(ang)],
+            'top_margin_beyond_feet_mm': round(float((h - reach).min()), 2),
+            'top_inradius_mm': round(float((h - normals @ np.asarray(centre)).min()), 2),
+            'bevel_height_mm': round(bevel_h, 2), 'bevel_inset_mm': [round(float(e.min()), 2), round(float(e.max()), 2)],
+            'bevel_slope_min': round(float(slopes.min()), 3),
+            'column_joint': {'depth_mm': round(g, 2), 'height_mm': round(2 * gh, 2), 'flank_from_vertical_deg': 42},
+            'recess_wall_min_mm': round(wall_min, 2),
+            'chamfer_slope': 'biseau plus raide que 45° dans le sens d’impression'}
+    return mesh, info, recess
+
+
 def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHESES, style: str = 'lisse'):
     """Retourne {'figurine': trimesh, 'socle': trimesh, 'info': dict} en mm, socle z ∈ [0, hb].
 
-    style : « lisse » (cylindre chanfreiné) ou « strates » (plaques d'ardoise, voir _strata_base)."""
+    style : « lisse » (cylindre chanfreiné), « strates » (plaques d'ardoise, voir _strata_base) ou
+    « basalte » (prisme hexagonal serré sur les appuis, voir _basalt_base)."""
     if style not in SOCLE_STYLES:
         raise ValueError(f'Style de socle inconnu : {style}')
     import manifold3d as m3
@@ -179,10 +244,14 @@ def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHES
     centre = (soles.min(axis=0) + soles.max(axis=0)) / 2
     r = float(np.max(np.linalg.norm(soles - centre, axis=1))) + hyp['base_margin_mm'] * k
     ch = min(1.5 * k, hb / 4)
-    strata = None
+    strata = recess_poly = None
     if style == 'strates':
         slab, strata = _strata_base(centre, r, hb, ch, k)
         base = to_manifold(slab)
+    elif style == 'basalte':
+        slab, strata, recess_poly = _basalt_base(soles, centre, hb, k, hyp['base_margin_mm'] * k, hyp['base_wall_mm'] * k)
+        base = to_manifold(slab)
+        r = strata['top_inradius_mm']           # disque inscrit autour du centre des appuis : borne prudente
     else:
         base = (m3.Manifold.cylinder(hb - ch, r, r, 128).translate([centre[0], centre[1], -hb])
                 + m3.Manifold.cylinder(ch, r, r - ch, 128).translate([centre[0], centre[1], -ch]))
@@ -195,7 +264,12 @@ def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHES
     if hyp.get('hollow_base'):
         wall = hyp['base_wall_mm'] * k
         recess_h = hb - depth - hyp['base_floor_above_holes_mm'] * k
-        if recess_h > 2.0:
+        if recess_h > 2.0 and recess_poly is not None:
+            if -hb + recess_h > -strata['bevel_height_mm']:
+                raise ValueError('Évidement plus haut que le bas du biseau : paroi non garantie.')
+            recess = m3.CrossSection([recess_poly.tolist()]).extrude(recess_h + 0.01).translate([0, 0, -hb - 0.01])
+            base = base - recess
+        elif recess_h > 2.0:
             recess = m3.Manifold.cylinder(recess_h + 0.01, r - wall, r - wall, 128).translate([centre[0], centre[1], -hb - 0.01])
             base = base - recess
         else:
@@ -214,7 +288,12 @@ def build_assembly(figure_nominal, total_height_mm: float, hyp=ASSEMBLY_HYPOTHES
         'base_print_orientation': 'retourné (dessus sur le plateau) : évidement sans pont ni support' if recess_h else 'à plat',
         'hypotheses': hyp['status'],
     }
-    if strata is not None:
+    if strata is not None and style == 'basalte':
+        info['base_radius_mm'] = round(r, 2)
+        info['base_radius_note'] = 'disque inscrit dans le dessus hexagonal autour du centre des appuis'
+        info['joint_plane'] = 'appuis / dessus du socle (joint masqué par le contact des appuis)'
+        info['base_style'] = {'style': style, 'version': SOCLE_STYLES[style], **strata}
+    elif strata is not None:
         # Marges réelles du socle en strates : autour des pieds (dessus) et autour de l'évidement.
         foot = float(np.max(np.linalg.norm(soles - centre, axis=1)))
         strata['top_margin_beyond_feet_mm'] = round(strata['top_outline_min_radius_mm'] - foot, 2)

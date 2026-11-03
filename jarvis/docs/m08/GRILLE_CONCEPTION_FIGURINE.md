@@ -79,6 +79,11 @@ plaques d'ardoise empilées aux bords cassés (polygones de 17 à 19 sommets tir
 - **Dessus plat** : c'est le plan de joint des semelles, posé sur le plateau. La marge autour des
   pieds reste d'au moins 7 mm (mesurée à chaque exécution, `assembly.json`).
 - **Socle lisse** : le cylindre chanfreiné reste celui de la Sentinelle et des maillages importés.
+- **Socle « basalte »** (Veille, fiche D16) : prisme hexagonal irrégulier, un sommet vers l'avant. Ses
+  six côtés serrent les appuis au lieu d'un cercle : chacun passe à 10 mm au moins du point d'appui le
+  plus avancé dans sa direction (plus 0 à 3 mm tirés avec une graine fixe). Biseau du dessus en facettes
+  de pente 1,2 à 1,5, joint de colonne en V de 1 × 0,45 mm à flancs de 42°, chanfrein du dessous ;
+  évidement polygonal à paroi de 3 mm. Imprimé retourné, sans support, comme le socle en strates.
 
 ## 7. Application à Ardoise v6
 
@@ -97,7 +102,43 @@ plaques d'ardoise empilées aux bords cassés (polygones de 17 à 19 sommets tir
 | Bourrelets du pantalon au-dessus des bottes | 1,1 mm de haut, relief 0,6 mm, sillons de 0,7 mm | FDM limite |
 | Strates du socle | marches de 0,8 mm ± 0,7 mm, strie en V de 1 × 0,45 mm | FDM (strie : limite) |
 
-## 8. Limites
+## 8. Application à Veille (fiche D16)
+
+Tailles à la hauteur de 200 mm : le maillage nominal est agrandi de 10 %, la tête encore de 14 %.
+
+| Détail | Taille imprimée | Niveau |
+|---|---|---|
+| Sillons de peigne des cheveux | 0,9 × 0,6 mm | FDM |
+| Ligne des cils (yeux clos) | 0,7 × 0,44 mm | résine (FDM limite) |
+| Fente de la bouche | 0,8 × 0,4 mm | résine |
+| Bandages des avant-bras, en hélice | relief 0,5 mm, pas de 4 mm | FDM limite |
+| Bandes croisées sur le dos des mains | relief 0,55 mm | FDM limite |
+| Mèches de la touffe du pinceau | 0,8 × 0,4 mm | résine (FDM limite) |
+| Filet de la virole | 0,9 × 0,44 mm | FDM limite |
+| Pointe de la touffe, hampe | Ø 1,8 mm, Ø 5,5 mm | FDM |
+| Plis de la jupe et du pan du genou | 10 et 6 plis, 2,5 à 2,6 mm d'amplitude | FDM |
+| Joint de colonne du socle | V de 1 × 0,45 mm, flancs à 42° | FDM limite |
+
+Le trait carmin sur l'œil, signe du film, n'est pas sculpté : c'est de la peinture.
+
+Constats de lisibilité propres à Veille :
+
+- **Visage** : un devant de visage plat, large jusqu'aux tempes, puis une chute à pic vers l'oreille se
+  lit comme un masque (arête de l'œil à la mâchoire). Retenu : masse du visage ovale, pommettes et joues
+  orientées vers l'arrière, masse zygomatique entre la pommette et l'oreille, coin externe de l'œil en
+  retrait.
+- **Union douce** : là où deux surfaces se confondent (pan tombé du genou tangent à la rotule couverte),
+  l'union douce gonfle la jonction d'un bourrelet. Retenu : union franche à cet endroit.
+- **Bords fins** : un pli qui croise un bord coupé laisse une pointe ; une bande à arêtes vives finit en
+  lame là où la surface qu'elle suit s'éloigne ; un sillon plus profond que la mèche laisse un éclat ;
+  un drapé évasé finit en biseau au ras du socle. Retenu : plis effacés près des bords coupés, bande
+  qui s'amincit en pente bornée (moins raide que l'étoffe, sinon elle recreuse un surplomb), sillons
+  limités à 60 % de l'épaisseur de la mèche, ourlet d'aplomb sur les 1,5 derniers millimètres.
+  Attention : décaler une intersection de champs (max) ne l'arrondit pas.
+- **Contrôle** : 1 500 points tirés au hasard ne voient pas toujours une lame étroite. Pour une pièce
+  aux bords fins, contre-vérifier sur 12 000 points avant de livrer.
+
+## 9. Limites
 
 Auto-évaluation sur rendus argile : ni revue indépendante, ni impression. La sculpture procédurale
 reste en dessous d'une sculpture numérique faite à la main ou d'une génération image→3D (tâche 2 du

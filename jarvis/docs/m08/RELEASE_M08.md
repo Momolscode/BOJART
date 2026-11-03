@@ -18,6 +18,10 @@ Après la remarque d'Olsen (« il ne ressemble pas du tout à Végéta »), un *
 (passe « détails » après une deuxième remarque d'Olsen) suit une grille de conception sourcée et
 reste au même niveau N2 ; une demande de « Végéta plus détaillé » reste bloquée (fiche D13).
 
+Le 3 novembre, à la demande d'une figurine « d'après les œuvres existantes de Boj.art », **Veille**,
+l'héroïne du film BOJ.ART « Un seul trait », passe à son tour par la chaîne au niveau N2, sur un
+socle « basalte » (section dédiée, fiche D16).
+
 ## Inventaire court de l'existant (vérifié dans ce dépôt le 2026-11-02)
 
 | Élément | État constaté |
@@ -168,6 +172,35 @@ Essai sur cotes d'hypothèse (socle d'origine rond de 80 mm, en attendant les co
 fichier et rendus dans le dossier du projet, `figurine-m08/socle-vitrine/hypothese-ronde-80/`.
 Non testé : l'ajustement réel du socle d'origine dans l'empreinte (jeu de 0,4 mm par côté à calibrer).
 
+## Veille, la gardienne du trait (fiche D16)
+
+Le 2 novembre au soir, Olsen a demandé une figurine « en te basant sur les œuvres existantes de
+Boj.art ». Lecture retenue : Veille, l'héroïne du film BOJ.ART « Un seul trait », personnage original
+de la maison ; les pièces de la collection faites d'après des personnages protégés restent exclues.
+Veille passe par la même chaîne, au même niveau N2 : agenouillée, pied nu devant, yeux clos, robe
+tombée de l'épaule, avant-bras bandés, grand bâton-pinceau tenu à deux mains, sur un nouveau socle
+« basalte » hexagonal. Le trait carmin sur l'œil se peint : il n'est pas sculpté.
+
+Exécution `ed77ed8e1f71b0f4` (Python 3.12.3, trimesh 4.11.1, grille de 0,4 mm, 3 min 6 s ; pics
+mémoire 1 687 Mo, Blender 3 013 Mo) : 518 570 triangles, maillage fermé d'un seul corps,
+CONFORME_AUX_CRITERES_CALCULES. Épaisseur min / p1 1,92 / 3,71 mm ; surplombs sur 11,6 % de la
+surface (supports organiques) ; centre de gravité à 35 mm du bord du socle ; tenons Ø 4 sous le pied
+nu, Ø 5 sous la robe. Socle de 107 × 143 × 18 mm, imprimé retourné (surplombs 0,12 %). Tranchage
+estimé sous le profil d'hypothèse : figurine 12 h 22 et 103,7 g, socle 5 h 53 et 53,0 g. Visionneuse
+13/13. Preuves : `preuves/execution-ed77ed8e1f71b0f4-veille/` ; fichiers et rendus dans le dossier du
+projet, `figurine-m08/veille/` (le partage recompresse les PNG : pixels identiques, empreintes
+différentes de celles du manifeste).
+
+Un premier passage complet a été refusé par le contrôle d'épaisseur (0,3 % de la surface sous 0,8 mm,
+minimum 0,39 mm). Le contrôle de la chaîne ne tire que 1 500 points : la pièce finale a donc été
+contre-vérifiée sur 12 000 points, sans aucun point sous 1,2 mm (minimum 1,66 mm,
+`contre_verification_epaisseur.json`). Causes et corrections : fiche D16.
+
+Limites : auto-évaluation sur rendus argile, sans revue indépendante ni impression. Restent faibles :
+le pan tombé du genou garde une allure de cloche vu de trois quarts, les mains sont des poings
+génériques, le visage reste stylisé. La ligne des cils, la bouche et les mèches du pinceau relèvent de
+la résine (grille de conception, section 8).
+
 ## Grille artistique (auto-évaluation, pas une validation indépendante)
 
 | Critère | Observation | Niveau |
@@ -234,7 +267,8 @@ Détail chiffré : `preuves/boucles_2026-11-02.json`.
   `preuves/execution-f65591bfc2cc1f0a-1m-decoupe/`, `preuves/execution-2821f575afea00a7-ardoise/`,
   `preuves/environnement_aligne_2026-11-02.json`, `preuves/atelier_three_core_verifie_2026-11-02.json`,
   `preuves/contre_epreuves_fabrication_v3_2026-11-02.json`, `preuves/execution-15546a650b8110ca-ardoise-v6/`,
-  `preuves/contre_epreuves_details_v6_2026-11-02.json`, `preuves/socle-vitrine-hypothese-ronde-80/`.
+  `preuves/contre_epreuves_details_v6_2026-11-02.json`, `preuves/socle-vitrine-hypothese-ronde-80/`,
+  `preuves/execution-ed77ed8e1f71b0f4-veille/`.
 - Fichiers lourds hors Git (dossier du projet, `figurine-m08/`) : `figurine.stl`, `socle.stl`, `projet.3mf`,
   `rendus/` (vues + `figurine.blend`), `visionneuse/` (captures), `tranchage/apercu_couches_figurine.png`.
 - Choix sourcés : `REGISTRE_DECISIONS_M08.md`. Grille de conception : `GRILLE_CONCEPTION_FIGURINE.md`.

@@ -253,3 +253,58 @@ qualification sur la tour.
 - **Réexamen** : cotes réelles relevées au pied à coulisse, puis une bague d'essai imprimée pour
   calibrer le jeu (N3).
 
+## D16. Troisième personnage original : « Veille, la gardienne du trait » (3 novembre 2026)
+
+- **Contexte** : le 2 novembre à 23:46 UTC, Olsen a demandé une figurine « en te basant sur les œuvres
+  existantes de Boj.art ». Lecture retenue : Veille, l'héroïne du film BOJ.ART « Un seul trait »
+  (contenu premium V.02), personnage original de la maison. Les pièces de la collection faites d'après
+  des personnages protégés restent exclues (D2, D14).
+- **Design, d'après les images de référence du film** : figure androgyne agenouillée, genou gauche au
+  sol, pied droit nu posé devant ; yeux clos ; côtés du crâne rasés, dessus plaqué en arrière ; robe
+  tombée de l'épaule droite à bord roulé, haut col à gauche, bord croisé devant, jupe étalée au sol, pan
+  tombé du genou avant ; avant-bras bandés jusque sur le dos des mains ; grand bâton-pinceau tenu droit
+  à deux mains (virole, touffe à quatorze mèches) ; socle de basalte.
+- **Garde-fous** : aucun personnage existant ni sosie ; ni arme, ni armure, ni pose de combat (une
+  demande « combat » ou « repos » garde la pose de veille). Le trait carmin sur l'œil, signe du film,
+  est de la peinture : il n'est pas sculpté.
+- **Construction** : `figurine/veille.py`, même méthode que les autres personnages (champ de distance,
+  grille de 0,4 mm, 3 itérations de lissage). Les poses sont écrites dans un repère miroir en x : de
+  face, le bâton est à droite de l'image, comme sur les références. Un décalage de quelques micromètres
+  (`JITTER`) évite des zéros exacts du champ sur les nœuds de la grille, qui avaient produit une arête
+  non manifold au pas de 0,5 mm ; il ne touche que Veille. La robe est un volume plein, sauf le pan du
+  genou, en étoffe de 3,5 mm à la hauteur de 200 mm.
+- **Écartés en cours de route (rendus et contrôles)** : encolure en écharpe ; manche en boule au coude ;
+  cheveux en crête ; pan du genou en abat-jour avec rebord (l'union douce de deux surfaces confondues
+  gonfle un bourrelet : union franche à cet endroit) ; visage en masque, avec une arête de l'œil à la
+  mâchoire (le devant du visage tombait à pic : masse zygomatique, joues et pommettes orientées vers
+  l'arrière). Le premier passage complet a été refusé par le contrôle d'épaisseur (0,3 % de la surface
+  sous 0,8 mm). Une analyse sur 12 000 points a trouvé la pointe du pan du genou là où un pli croisait
+  la coupe, une lame au bout du bord roulé sur l'épaule couverte et un biseau de la jupe au ras du
+  sol ; une deuxième, la même lame (décaler une intersection ne l'arrondit pas) et des éclats au bord
+  des sillons de peigne, là où la mèche s'amincit vers la nuque. Corrigé par des plis effacés près des
+  bords coupés, un bord roulé qui s'amincit en pente bornée, des sillons jamais plus profonds que la
+  mèche et un ourlet d'aplomb sur les 1,5 derniers millimètres.
+- **Socle « basalte »** (`fabrication._basalt_base`, `bojart.socle.basalte.v1`) : prisme hexagonal
+  irrégulier, un sommet vers l'avant. Chaque côté passe à 10 mm au moins des appuis (plus 0 à 3 mm
+  tirés avec une graine fixe). Biseau du dessus en facettes de pente 1,2 à 1,5, joint de colonne en V
+  à flancs de 42°, chanfrein du dessous, évidement polygonal à paroi de 3 mm : imprimable retourné
+  sans support. `base_radius_mm` y est le rayon du disque inscrit autour du centre des appuis, une borne
+  prudente pour la stabilité. Les socles lisse et en strates donnent les mêmes octets qu'avant
+  (maillages et informations comparés au commit précédent).
+- **Tenons** : Ø 4 sous le pied nu, Ø 5 sous la robe posée ; la pointe du bâton est un troisième appui,
+  sans tenon (D12).
+- **Demande** : « veille » est aussi un mot courant. Le nom ne compte que dans une demande qui parle
+  d'une figurine (figurine, statuette, personnage, buste, 3D, sculpture), jamais dans « en veille »,
+  « mode veille » ou « la veille de/du/des/d' », sauf devant un nombre (« la Veille de 20 cm »).
+  « Jarvis, mets-toi en veille » ne lance donc aucune figurine.
+- **Exécution** (N2, conteneur Linux, Python 3.12.3, trimesh 4.11.1) : tâche `ed77ed8e1f71b0f4`,
+  518 570 triangles, un seul corps fermé, CONFORME_AUX_CRITERES_CALCULES, épaisseur min / p1
+  1,92 / 3,71 mm, aucun point sous 1,2 mm sur 12 000 à la contre-vérification, tranchage estimé à
+  12 h 22 et 103,7 g (figurine) et 5 h 53 et 53,0 g (socle), visionneuse 13/13
+  (`preuves/execution-ed77ed8e1f71b0f4-veille/`).
+- **Tests** : `test_veille_and_everyday_uses_of_the_word`, `test_standby_phrases_never_start_a_figurine`,
+  `test_basalt_base_hugs_the_contacts_and_prints_upside_down`,
+  `test_heroine_kneels_on_foot_and_robe_until_renders`, et `test_character_defaults_keep_published_identities`
+  étendu à Veille.
+- **Réexamen** : avis d'Olsen sur les rendus ; essai image→3D à partir des images du film sur la tour
+  (backlog, tâche 2) ; impression d'essai (N3).

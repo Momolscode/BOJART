@@ -1,0 +1,50 @@
+{
+ "objet": "Contre-vérification de l'épaisseur des parois de la figurine Veille (tâche ed77ed8e1f71b0f4), au-delà des 1 500 points du contrôle de la chaîne",
+ "date": "2026-11-03",
+ "methode": "checks.wall_thickness : rayon lancé vers l'intérieur depuis des points tirés au hasard sur la surface de figurine.stl (assemblée, 200 mm) ; deux graines de 6 000 points",
+ "seuils_mm": {
+  "paroi_minimale": 0.8,
+  "fragile": 1.2
+ },
+ "resultat_final": {
+  "5": {
+   "samples": 6000,
+   "misses": 0,
+   "min": 1.664,
+   "thin_lt_0.8": 0,
+   "fragile_lt_1.2": 0,
+   "p1": 3.786
+  },
+  "23": {
+   "samples": 6000,
+   "misses": 0,
+   "min": 1.844,
+   "thin_lt_0.8": 0,
+   "fragile_lt_1.2": 0,
+   "p1": 3.65
+  }
+ },
+ "historique": [
+  {
+   "passage": "premier passage complet",
+   "resultat": "REFUSÉ par le contrôle de la chaîne : 0,3 % de la surface sous 0,8 mm (z 18-40 mm), minimum 0,389 mm",
+   "causes": [
+    "pointe du pan du genou là où un pli croisait la coupe",
+    "biseau de la jupe au ras du socle (rayons tirés près de l'arête du dessous)"
+   ]
+  },
+  {
+   "passage": "deuxième passage (plis effacés près des bords coupés, ourlet d’aplomb sur 1,5 mm)",
+   "resultat": "conforme sur 1 500 points ; 4 points sur 6 000 sous 0,8 mm à la contre-vérification (graine 23), minimum 0,073 mm",
+   "causes": [
+    "lame au bout du bord roulé sur l'épaule couverte, au-dessus d'un creux",
+    "éclat au bord des sillons de peigne là où la mèche s’amincit vers la nuque"
+   ]
+  },
+  {
+   "passage": "passage final (bord roulé en pente bornée, mèches fondues dans la nuque, sillons jamais plus profonds que la mèche)",
+   "resultat": "0 point sous 1,2 mm sur 12 000"
+  }
+ ],
+ "limite": "échantillonnage aléatoire : une zone plus petite que l'écart entre deux points peut échapper ; ce n'est pas une mesure sur pièce imprimée"
+}

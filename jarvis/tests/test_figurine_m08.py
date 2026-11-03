@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'apps/jarvis/app'))
-from figurine.spec import SpecRejected, parse_request  # noqa: E402
+from figurine.spec import SpecRejected, is_figurine_request, parse_request  # noqa: E402
 
 try:
     import manifold3d, numpy as np, scipy, skimage, trimesh  # noqa: F401,E401
@@ -21,6 +21,7 @@ SLICER = shutil.which('prusa-slicer') is not None
 VEGETA = "Jarvis, crée-moi un Végéta 3D imprimable dans une position stylée, iconique et remarquable."
 SENTINELLE = "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable."
 ARDOISE = "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable."
+VEILLE = "Jarvis, crée-moi la figurine Veille 3D imprimable dans une position stylée, iconique et remarquable."
 
 
 class SpecTests(unittest.TestCase):
@@ -62,6 +63,22 @@ class SpecTests(unittest.TestCase):
             parse_request("Jarvis, crée la Sentinelle et Ardoise en 3D")
         self.assertEqual(c.exception.status, 'CLARIFY')
 
+    def test_veille_and_everyday_uses_of_the_word(self):
+        s = parse_request(VEILLE)
+        self.assertEqual((s['character']['id'], s['character']['rights']), ('veille', 'bojart_original'))
+        self.assertEqual(s['geometry_source'], 'procedural_sdf')
+        self.assertEqual(parse_request("Jarvis, crée-moi la figurine de Veille de 20 cm")['height_mm'], 200.0)
+        self.assertEqual(parse_request("Jarvis, crée la Veille de 15 cm en 3D")['character']['id'], 'veille')
+        noel = parse_request("Jarvis, prépare la Sentinelle 3D pour la veille de Noël")
+        self.assertEqual(noel['character']['id'], 'sentinelle')
+        for text in ("Jarvis, crée Veille", "Jarvis, crée Ardoise et Veille en 3D"):
+            with self.assertRaises(SpecRejected) as c:
+                parse_request(text)
+            self.assertEqual(c.exception.status, 'CLARIFY')
+        for text in ("Jarvis, mets-toi en veille", "Passe en mode veille", "Rappelle-moi la veille du salon"):
+            self.assertFalse(is_figurine_request(text), text)
+        self.assertTrue(is_figurine_request("Jarvis, sculpte Veille en statuette"))
+
     def test_physical_actions_refused(self):
         for text in ("Jarvis, imprime la Sentinelle 3D", "Jarvis, crée la Sentinelle 3D et lance l'imprimante"):
             with self.assertRaises(SpecRejected) as c:
@@ -78,6 +95,17 @@ class EntryPointTests(unittest.TestCase):
         self.assertEqual(d['provider'], 'rules_fr')
         # Le parcours socle existant reste inchangé.
         self.assertEqual(interpret('Crée un socle de 180 mm')['intent'], 'create_base')
+
+    def test_standby_phrases_never_start_a_figurine(self):
+        from core import Rejected
+        from dialogue import interpret
+        self.assertEqual(interpret(VEILLE)['intent'], 'create_figurine')
+        for text in ("Jarvis, mets-toi en veille", "Passe en mode veille"):
+            try:
+                intent = interpret(text)['intent']
+            except Rejected:
+                intent = None
+            self.assertNotEqual(intent, 'create_figurine', text)
 
 
 @unittest.skipUnless(HEAVY, 'dépendances géométriques absentes (requirements-figurine.txt)')
@@ -163,6 +191,45 @@ class GeometryTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             fabrication.build_assembly(nominal, 200.0, style='inconnu')
 
+    def test_basalt_base_hugs_the_contacts_and_prints_upside_down(self):
+        from shapely.geometry import MultiPoint, Point
+        from figurine import checks, fabrication, sculpt, veille
+        nominal, bodies = sculpt.sculpt_figure('veille', voxel=2.0, cid='veille')
+        self.assertEqual(bodies, 1)
+        asm = fabrication.build_assembly(nominal, 200.0, style='basalte')
+        base, info = asm['socle'], asm['info']
+        st = info['base_style']
+        self.assertEqual((st['version'], st['sides']), ('bojart.socle.basalte.v1', 6))
+        self.assertGreaterEqual(st['top_margin_beyond_feet_mm'], 10.0)
+        self.assertGreaterEqual(st['recess_wall_min_mm'], 3.0)
+        self.assertGreater(st['bevel_slope_min'], 1.0)                                    # biseau plus raide que 45°
+        front = np.angle(np.exp(1j * (np.radians(st['side_normals_deg']) + np.pi / 2)))
+        self.assertGreater(np.abs(front).min(), np.radians(20))                           # un sommet vers l'avant
+        # Tenons : Ø4 sous le pied nu, Ø5 sous l'étoffe posée ; la pointe du bâton n'en reçoit pas.
+        mirror, sc = np.array((-1.0, 1.0)), info['scale_from_nominal']
+        pose = veille.POSES['veille']
+        pegs = {p['diameter_mm']: np.array(p['xy']) for p in info['pegs']}
+        self.assertLess(np.linalg.norm(pegs[4.0] - np.array(pose['ankle_r'][:2]) * mirror * sc), 15.0)
+        self.assertLess(np.linalg.norm(pegs[5.0] - np.array(pose['drape']['pool_centre']) * mirror * sc), 15.0)
+        staff = np.array(pose['staff']['foot']) * mirror * sc
+        self.assertTrue(all(np.linalg.norm(xy - staff) > 20.0 for xy in pegs.values()))
+        top = base.vertices[np.abs(base.vertices[:, 2] - info['base_height_mm']) < 1e-4][:, :2]
+        outline = MultiPoint(top.tolist()).convex_hull                                   # dessus hexagonal convexe
+        self.assertEqual(len(outline.exterior.coords) - 1, 6)
+        for xy in pegs.values():
+            self.assertTrue(outline.contains(Point(xy)))
+            self.assertGreaterEqual(outline.exterior.distance(Point(xy)), 10.0)
+        self.assertAlmostEqual(base.bounds[1][2], info['base_height_mm'], places=4)       # dessus plat : plan de joint
+        printed = base.copy()
+        printed.apply_transform(trimesh.transformations.rotation_matrix(np.pi, [1, 0, 0]))
+        r = checks.check_part(printed, 'socle', thickness_samples=300)
+        self.assertEqual(r['eliminatory'], [])
+        self.assertLess(r['measured']['overhang_area_fraction'], 0.005)
+        self.assertTrue(checks.check_fit(asm['figurine'], base, info)['fit_ok'])
+        again = fabrication.build_assembly(nominal, 200.0, style='basalte')['socle']
+        self.assertTrue(np.array_equal(again.vertices, base.vertices))                   # graine fixe
+        self.assertEqual(fabrication.fab_version('basalte'), 'bojart.fabrication.v3+bojart.socle.basalte.v1')
+
     def test_ring_detail_stays_within_its_band(self):
         from figurine import details
         axis = np.array([0.0, 0.0, 1.0], np.float32)
@@ -231,6 +298,10 @@ class GeometryTests(unittest.TestCase):
             _, ident = run._identity(parse_request(ARDOISE))
             self.assertEqual((ident['voxel'], run.socle_style), (0.4, 'strates'))
             self.assertEqual(ident['fab'], fabrication.fab_version('strates'))
+            run = pipeline.FigurineRun(VEILLE, Path(d))
+            _, ident = run._identity(parse_request(VEILLE))
+            self.assertEqual((ident['voxel'], run.socle_style, ident['sculpt']), (0.4, 'basalte', 'bojart.veille.sdf.v1'))
+            self.assertEqual(ident['fab'], fabrication.fab_version('basalte'))
 
     def test_gcode_stats_parser(self):
         from figurine import slicing
@@ -336,6 +407,17 @@ class PipelineFaultTests(unittest.TestCase):
         self.assertEqual(st['steps']['renders']['status'], 'BLOCKED')
         pegs = json.loads((Path(res['dir']) / 'assembly.json').read_text(encoding='utf8'))['pegs']
         self.assertTrue(all(abs(p['xy'][0]) > 10 for p in pegs))  # sous les pieds, pas sous la lame plantée
+
+    def test_heroine_kneels_on_foot_and_robe_until_renders(self):
+        res = self.run_(text=VEILLE, faults=['no_blender'])
+        st = self.state(res)
+        self.assertEqual(st['pose'], 'veille')
+        self.assertEqual(st['steps']['geometry']['result']['bodies'], 1)
+        self.assertEqual(st['steps']['checks']['result']['verdict'], 'CONFORME_AUX_CRITERES_CALCULES')
+        self.assertEqual(st['steps']['renders']['status'], 'BLOCKED')
+        asm = json.loads((Path(res['dir']) / 'assembly.json').read_text(encoding='utf8'))
+        self.assertEqual(asm['base_style']['version'], 'bojart.socle.basalte.v1')
+        self.assertEqual(sorted(p['diameter_mm'] for p in asm['pegs']), [4.0, 5.0])
 
     def test_retry_limit(self):
         from figurine.pipeline import FigurineRun
