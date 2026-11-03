@@ -1,0 +1,264 @@
+{
+ "task_id": "2821f575afea00a7",
+ "created": "2026-11-02T09:34:54+00:00",
+ "finished": "2026-11-02T09:37:31+00:00",
+ "commit": {
+  "head": "f42e3e22893a12d08f547eb3541093d0ecf682b0",
+  "pipeline_code_modified_since_commit": true
+ },
+ "pipeline": "bojart.figurine.pipeline.v1",
+ "environment": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+  "cpu_count": 4,
+  "numpy": "2.5.3",
+  "trimesh": "5.2.0",
+  "scikit-image": "0.26.0",
+  "manifold3d": "3.5.4",
+  "scipy": "1.18.1",
+  "rtree": "1.4.1",
+  "matplotlib": "3.11.2",
+  "lxml": "6.1.3",
+  "slicer": "PrusaSlicer-2.7.2+UNKNOWN based on Slic3r (with GUI support)",
+  "blender": "Blender 4.0.2",
+  "gpu": "aucun GPU détecté (calcul CPU uniquement)"
+ },
+ "request": "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable.",
+ "spec": {
+  "version": "bojart.figurine.spec.v1",
+  "source": "typed",
+  "request_normalized": "jarvis, cree-moi ardoise 3d imprimable dans une position stylee, iconique et remarquable.",
+  "character": {
+   "id": "ardoise",
+   "label": "Ardoise, le duelliste des strates",
+   "franchise": null,
+   "rights": "bojart_original"
+  },
+  "variant": "v1 — référence BOJ.ART interne",
+  "pose_intent": "iconic",
+  "expression": "déterminée",
+  "height_mm": 200.0,
+  "base_included": true,
+  "detail_level": "figurine de vitrine (lisible à 30 cm)",
+  "process": "FDM",
+  "nozzle_mm": 0.4,
+  "material": "PLA",
+  "assembly": "socle séparé, tenons détrompés",
+  "field_origin": {
+   "height_mm": "hypothèse de simulation",
+   "base_included": "hypothèse de simulation",
+   "process": "hypothèse de simulation",
+   "nozzle_mm": "hypothèse de simulation",
+   "material": "hypothèse de simulation"
+  },
+  "geometry_source": "procedural_sdf",
+  "llm_used": false,
+  "asr_tested": false
+ },
+ "identity": {
+  "spec": {
+   "character": {
+    "id": "ardoise",
+    "label": "Ardoise, le duelliste des strates",
+    "franchise": null,
+    "rights": "bojart_original"
+   },
+   "pose_intent": "iconic",
+   "height_mm": 200.0,
+   "material": "PLA",
+   "process": "FDM"
+  },
+  "mesh_sha256": null,
+  "voxel": 0.6,
+  "pipeline": "bojart.figurine.pipeline.v1",
+  "sculpt": "bojart.ardoise.sdf.v5",
+  "fab": "bojart.fabrication.v3",
+  "checks": "bojart.checks.v2"
+ },
+ "hypotheses": {
+  "height_mm": "hypothèse de simulation",
+  "fdm_profile": "simulation, non vérifié",
+  "assembly": {
+   "clearance_per_side_mm": 0.2,
+   "peg_diameters_mm": [
+    4.0,
+    5.0
+   ],
+   "peg_length_mm": 6.0,
+   "hole_extra_depth_mm": 0.8,
+   "base_height_ratio": 0.09,
+   "base_margin_mm": 10.0,
+   "hollow_base": true,
+   "base_wall_mm": 3.0,
+   "base_floor_above_holes_mm": 2.0,
+   "status": "hypothèse à calibrer par une pièce test, pas un réglage de production"
+  },
+  "bed_mm": [
+   250.0,
+   210.0,
+   220.0
+  ]
+ },
+ "steps": {
+  "intake": {
+   "status": "DONE",
+   "seconds": 0.0,
+   "attempts": 1,
+   "reason": null
+  },
+  "transcription": {
+   "status": "NOT_TESTED",
+   "seconds": 0.0,
+   "attempts": 1,
+   "reason": null
+  },
+  "spec": {
+   "status": "DONE",
+   "seconds": 0.0,
+   "attempts": 1,
+   "reason": null
+  },
+  "pose_study": {
+   "status": "DONE",
+   "seconds": 13.03,
+   "attempts": 1,
+   "reason": null
+  },
+  "geometry": {
+   "status": "DONE",
+   "seconds": 44.835,
+   "attempts": 1,
+   "reason": null
+  },
+  "assembly": {
+   "status": "DONE",
+   "seconds": 1.328,
+   "attempts": 1,
+   "reason": null
+  },
+  "checks": {
+   "status": "DONE",
+   "seconds": 21.25,
+   "attempts": 1,
+   "reason": null
+  },
+  "renders": {
+   "status": "DONE",
+   "seconds": 44.046,
+   "attempts": 1,
+   "reason": null
+  },
+  "exports": {
+   "status": "DONE",
+   "seconds": 3.318,
+   "attempts": 1,
+   "reason": null
+  },
+  "slicing": {
+   "status": "DONE",
+   "seconds": 28.854,
+   "attempts": 1,
+   "reason": null
+  }
+ },
+ "executed": [
+  "intake",
+  "spec",
+  "pose_study",
+  "geometry",
+  "assembly",
+  "checks",
+  "renders",
+  "exports",
+  "slicing"
+ ],
+ "not_tested_or_simulated": [
+  "transcription",
+  "impression physique (N3)",
+  "affichage sur la tour réelle",
+  "reconnaissance vocale"
+ ],
+ "evidence_level": "N2 — parcours numérique avec vrai maillage, rendus et tranchage réel ; pas d’impression",
+ "files": {
+  "assembly.json": {
+   "sha256": "4690128db057682d39d070155a5d48f65b4eb2a22b551c329b77601c74513a73",
+   "bytes": 765
+  },
+  "checks.json": {
+   "sha256": "060cf9ba7b9079723dba7617c5da35f6b63a2f737808423396ebf7c261fa27f4",
+   "bytes": 2450
+  },
+  "figurine.stl": {
+   "sha256": "d739667091abb8bcb3969424b908bdc7ed97dca4c9c63436d8e5091dbb2d1493",
+   "bytes": 16514084
+  },
+  "nominal.stl": {
+   "sha256": "a37644831c1e2e5675b442ef932dc62451441806a05c2a9bba71d87cf3488e63",
+   "bytes": 16506284
+  },
+  "pose_study.json": {
+   "sha256": "c1f036715cfc68eed61bc01dc5b4a5c5f7c54ae0a81bdf049af297e86ec1c3f9",
+   "bytes": 1330
+  },
+  "projet.3mf": {
+   "sha256": "1b2d583de1504e1e21d948b9723e77f75315d66ed6ff833c99e4e0cc545ebe21",
+   "bytes": 6101207
+  },
+  "rendus/figurine.blend": {
+   "sha256": "376a0184e5683ca5229a6392d4170054c4bd0311341c858acf0c39641bfc8fed",
+   "bytes": 15706504
+  },
+  "rendus/vue_dos.png": {
+   "sha256": "7bb09e3f05c9ac0cb00e91d28008bfc41348d3dea7e130a7291adadcb2fd37ae",
+   "bytes": 795601
+  },
+  "rendus/vue_face.png": {
+   "sha256": "db598960e61027d9ea8791d46bcfdde2c12ff170fc74373c8d2ca7d67fc2c3d5",
+   "bytes": 820592
+  },
+  "rendus/vue_maillage_detail.png": {
+   "sha256": "9f57ebe731cd34d9826084259d6e869075c8b54151518376f39616465cc8f550",
+   "bytes": 1332763
+  },
+  "rendus/vue_profil_gauche.png": {
+   "sha256": "2d62d1c0bd2833e592e3d5e1b211449ae5bc5c17b53051ab6c08de4cbf06a67b",
+   "bytes": 780824
+  },
+  "rendus/vue_trois_quarts.png": {
+   "sha256": "a0ab4b9bae49e620f0612b865c2a309464128ba3d3c7076cfc555d66b169f559",
+   "bytes": 815795
+  },
+  "socle.stl": {
+   "sha256": "2a69585193cb8b32c757998be3eae6e222a2d7d5df5a3fe71ca91ad3eb55cfca",
+   "bytes": 83084
+  },
+  "spec.json": {
+   "sha256": "506484d4478f711dfc6d4e8acd7d73c93dc370b4296a9f90199f79da2292a7be",
+   "bytes": 953
+  },
+  "tranchage/apercu_couches_figurine.png": {
+   "sha256": "28895df46d1ac1e7a019249fdd7cd790f177de477adf292abd41e9e3b817e37e",
+   "bytes": 133268
+  },
+  "tranchage/figurine.SIMULATION-NE-PAS-IMPRIMER.gcode": {
+   "sha256": "fd8c95f4d32bccd08c44a08f7add1fa7fbb33112f5f39af529468f59d4f7929a",
+   "bytes": 43343331
+  },
+  "tranchage/profil_simulation.ini": {
+   "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb",
+   "bytes": 772
+  },
+  "tranchage/socle_impression.SIMULATION-NE-PAS-IMPRIMER.gcode": {
+   "sha256": "a086a04be9ad2e729de0b4766b9d2c8ed4e5752fd4a9be705fd2b2e819ad7d21",
+   "bytes": 6505262
+  },
+  "tranchage/socle_impression.stl": {
+   "sha256": "fcfb5530dc0d1690aacf60486e36d2eb56966bb19d5073c40a3af389bece6b8f",
+   "bytes": 83084
+  },
+  "tranchage/tranchage.json": {
+   "sha256": "e4f6173e981dafd8b21c697a6c8c89b6ed2ff1ef67a4faf3b15e95c117629841",
+   "bytes": 1963
+  }
+ }
+}

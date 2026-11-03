@@ -6,6 +6,7 @@ from dataclasses import asdict
 from decimal import Decimal, InvalidOperation
 import http.client, json, math, re, socket, urllib.parse
 from core import BaseSpec, Rejected, normalize_text
+from figurine.spec import SpecRejected, is_figurine_request, parse_request as parse_figurine
 
 VERSION = 'bojart.dialogue.fr.v2'
 SCHEMA = {
@@ -130,6 +131,11 @@ def inspect_intent(text):
     stripped=re.sub(r"^jarvis[ ,]*",'',s).rstrip(' .!?')
     if stripped in STATUS:return {'intent':'status','normalized':s}
     if stripped in SHOW:return {'intent':'show_model','normalized':s}
+    if 'socle' not in s.split() and is_figurine_request(s):
+        # Même point d'entrée que le socle ; spécification bornée, sans LLM ni exécution.
+        try:spec=parse_figurine(text,source='typed')
+        except SpecRejected as exc:raise Rejected(str(exc)) from exc
+        return {'intent':'create_figurine','normalized':s,'spec':spec}
     if 'socle' not in s.split():raise Rejected('Cette mission concerne uniquement un socle circulaire ou la consultation du dossier.')
     tokens=re.findall(r'[a-z]+',s)
     if not any(t in CREATE_WORDS for t in tokens):raise Rejected('Précisez ce que vous souhaitez préparer.')
@@ -212,6 +218,12 @@ class LocalOllama:
 def interpret(text,provider=None):
     grounded=inspect_intent(text)
     info={'provider':'rules_fr','model':None,'executed':False}
+    if grounded['intent']=='create_figurine':
+        # Le schéma du modèle local ne couvre pas cette intention : règles seules.
+        spec=grounded['spec']
+        return {**grounded,'engine':VERSION,**info,'requires_confirmation':True,
+                'message':f"Figurine « {spec['character']['label']} », {spec['height_mm']:g} mm, {spec['process']} {spec['material']}. "
+                          'Relisez la spécification ; la génération passe par la chaîne figurine.'}
     if provider and provider.config.get('enabled'):
         info=provider.interpret(text,grounded)
     result={**grounded,'engine':VERSION,**info,'requires_confirmation':grounded['intent']=='create_base'}

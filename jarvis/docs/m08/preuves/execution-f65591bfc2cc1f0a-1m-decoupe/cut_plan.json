@@ -1,0 +1,293 @@
+{
+ "bed_mm": [
+  250.0,
+  210.0,
+  220.0
+ ],
+ "pieces": [
+  {
+   "name": "Paaa",
+   "extents_mm": [
+    121.7,
+    180.2,
+    235.0
+   ],
+   "volume_cm3": 2164.3,
+   "bodies": 1
+  },
+  {
+   "name": "Paaba",
+   "extents_mm": [
+    119.8,
+    171.1,
+    235.0
+   ],
+   "volume_cm3": 1198.8,
+   "bodies": 1
+  },
+  {
+   "name": "Paabb",
+   "extents_mm": [
+    119.8,
+    164.1,
+    178.4
+   ],
+   "volume_cm3": 1357.8,
+   "bodies": 1
+  },
+  {
+   "name": "Paba",
+   "extents_mm": [
+    139.0,
+    180.2,
+    235.0
+   ],
+   "volume_cm3": 2207.7,
+   "bodies": 1
+  },
+  {
+   "name": "Pabba",
+   "extents_mm": [
+    159.7,
+    158.2,
+    117.5
+   ],
+   "volume_cm3": 953.1,
+   "bodies": 1
+  },
+  {
+   "name": "Pabbb",
+   "extents_mm": [
+    178.2,
+    180.0,
+    117.5
+   ],
+   "volume_cm3": 1589.2,
+   "bodies": 1
+  },
+  {
+   "name": "Pbaaaa",
+   "extents_mm": [
+    136.2,
+    159.2,
+    206.3
+   ],
+   "volume_cm3": 898.6,
+   "bodies": 1
+  },
+  {
+   "name": "Pbaaab",
+   "extents_mm": [
+    136.2,
+    159.2,
+    235.0
+   ],
+   "volume_cm3": 1151.1,
+   "bodies": 2
+  },
+  {
+   "name": "Pbaaba",
+   "extents_mm": [
+    133.0,
+    151.0,
+    235.0
+   ],
+   "volume_cm3": 1817.5,
+   "bodies": 1
+  },
+  {
+   "name": "Pbaabb",
+   "extents_mm": [
+    133.0,
+    159.2,
+    235.0
+   ],
+   "volume_cm3": 4223.4,
+   "bodies": 1
+  },
+  {
+   "name": "Pbabaa",
+   "extents_mm": [
+    135.9,
+    161.0,
+    201.2
+   ],
+   "volume_cm3": 821.5,
+   "bodies": 2
+  },
+  {
+   "name": "Pbabab",
+   "extents_mm": [
+    135.9,
+    163.9,
+    235.0
+   ],
+   "volume_cm3": 3000.7,
+   "bodies": 1
+  },
+  {
+   "name": "Pbabb",
+   "extents_mm": [
+    168.0,
+    163.9,
+    203.8
+   ],
+   "volume_cm3": 626.8,
+   "bodies": 2
+  },
+  {
+   "name": "Pbbaa",
+   "extents_mm": [
+    95.1,
+    178.8,
+    182.1
+   ],
+   "volume_cm3": 702.0,
+   "bodies": 2
+  },
+  {
+   "name": "Pbbaba",
+   "extents_mm": [
+    136.2,
+    225.8,
+    137.9
+   ],
+   "volume_cm3": 512.7,
+   "bodies": 2
+  },
+  {
+   "name": "Pbbabb",
+   "extents_mm": [
+    136.2,
+    122.5,
+    149.8
+   ],
+   "volume_cm3": 1375.1,
+   "bodies": 1
+  },
+  {
+   "name": "Pbbba",
+   "extents_mm": [
+    43.3,
+    110.9,
+    149.9
+   ],
+   "volume_cm3": 309.5,
+   "bodies": 1
+  },
+  {
+   "name": "Pbbbb",
+   "extents_mm": [
+    107.0,
+    238.5,
+    149.9
+   ],
+   "volume_cm3": 869.1,
+   "bodies": 2
+  }
+ ],
+ "cuts": [
+  {
+   "piece": "P",
+   "axis": "z",
+   "at_mm": 530.0,
+   "section_area_mm2": 29234.4
+  },
+  {
+   "piece": "Pb",
+   "axis": "x",
+   "at_mm": 82.44,
+   "section_area_mm2": 42571.0
+  },
+  {
+   "piece": "Pbb",
+   "axis": "y",
+   "at_mm": -49.82,
+   "section_area_mm2": 13721.0
+  },
+  {
+   "piece": "Pbbb",
+   "axis": "z",
+   "at_mm": 679.94,
+   "section_area_mm2": 1841.7
+  },
+  {
+   "piece": "Pbba",
+   "axis": "z",
+   "at_mm": 712.14,
+   "section_area_mm2": 6707.3
+  },
+  {
+   "piece": "Pbbab",
+   "axis": "x",
+   "at_mm": 218.67,
+   "section_area_mm2": 7515.6
+  },
+  {
+   "piece": "Pba",
+   "axis": "z",
+   "at_mm": 765.0,
+   "section_area_mm2": 36828.3
+  },
+  {
+   "piece": "Pbab",
+   "axis": "y",
+   "at_mm": 42.9,
+   "section_area_mm2": 8010.0
+  },
+  {
+   "piece": "Pbaba",
+   "axis": "x",
+   "at_mm": -53.5,
+   "section_area_mm2": 16459.0
+  },
+  {
+   "piece": "Pbaa",
+   "axis": "y",
+   "at_mm": -73.47,
+   "section_area_mm2": 40264.2
+  },
+  {
+   "piece": "Pbaab",
+   "axis": "x",
+   "at_mm": -50.56,
+   "section_area_mm2": 31242.2
+  },
+  {
+   "piece": "Pbaaa",
+   "axis": "x",
+   "at_mm": -53.78,
+   "section_area_mm2": 8569.6
+  },
+  {
+   "piece": "Pa",
+   "axis": "x",
+   "at_mm": -0.0,
+   "section_area_mm2": 9887.9
+  },
+  {
+   "piece": "Pab",
+   "axis": "z",
+   "at_mm": 295.0,
+   "section_area_mm2": 6640.7
+  },
+  {
+   "piece": "Pabb",
+   "axis": "z",
+   "at_mm": 412.5,
+   "section_area_mm2": 9270.5
+  },
+  {
+   "piece": "Paa",
+   "axis": "z",
+   "at_mm": 295.0,
+   "section_area_mm2": 5865.1
+  },
+  {
+   "piece": "Paab",
+   "axis": "x",
+   "at_mm": -119.85,
+   "section_area_mm2": 15701.9
+  }
+ ]
+}

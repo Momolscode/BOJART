@@ -1,0 +1,249 @@
+{
+ "task_id": "ed77ed8e1f71b0f4",
+ "identity": {
+  "spec": {
+   "character": {
+    "id": "veille",
+    "label": "Veille, la gardienne du trait",
+    "franchise": null,
+    "rights": "bojart_original"
+   },
+   "pose_intent": "iconic",
+   "height_mm": 200.0,
+   "material": "PLA",
+   "process": "FDM"
+  },
+  "mesh_sha256": null,
+  "voxel": 0.4,
+  "pipeline": "bojart.figurine.pipeline.v1",
+  "sculpt": "bojart.veille.sdf.v1",
+  "fab": "bojart.fabrication.v3+bojart.socle.basalte.v1",
+  "checks": "bojart.checks.v2"
+ },
+ "created": "2026-11-03T01:17:30+00:00",
+ "requests": [
+  {
+   "at": "2026-11-03T01:17:30+00:00",
+   "text": "Jarvis, crée-moi la figurine Veille 3D imprimable dans une position stylée, iconique et remarquable.",
+   "source": "typed",
+   "entry_point": {
+    "intent": "create_figurine",
+    "engine": "bojart.dialogue.fr.v2",
+    "provider": "rules_fr",
+    "requires_confirmation": true,
+    "message": "Figurine « Veille, la gardienne du trait », 200 mm, FDM PLA. Relisez la spécification ; la génération passe par la chaîne figurine."
+   },
+   "faults": [],
+   "duplicate_of_existing_task": false
+  }
+ ],
+ "steps": {
+  "intake": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:17:30+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-03T01:17:30+00:00",
+   "result": {
+    "received": "2026-11-03T01:17:30+00:00",
+    "source": "typed",
+    "text_length": 100
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 35.6,
+   "peak_rss_mb_children": 0.0
+  },
+  "transcription": {
+   "status": "NOT_TESTED",
+   "attempts": 1,
+   "started": "2026-11-03T01:17:30+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-03T01:17:30+00:00",
+   "result": {
+    "note": "Aucun enregistrement disponible : texte injecté au même point d’entrée. Reconnaissance vocale NON TESTÉE ; aucun score de confiance fabriqué."
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 35.6,
+   "peak_rss_mb_children": 0.0
+  },
+  "spec": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:17:30+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-03T01:17:30+00:00",
+   "result": {
+    "character": "Veille, la gardienne du trait",
+    "geometry_source": "procedural_sdf"
+   },
+   "outputs": {
+    "spec.json": "65b0717eed532f3137f27a1076b74c50cd1baac4d4d0470a53713ec44a962087"
+   },
+   "peak_rss_mb_process": 35.6,
+   "peak_rss_mb_children": 0.0
+  },
+  "pose_study": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:17:30+00:00",
+   "seconds": 1.023,
+   "finished": "2026-11-03T01:17:31+00:00",
+   "result": {
+    "chosen": "veille"
+   },
+   "outputs": {
+    "pose_study.json": "952bd3d79abbd7e817f559f172e137699eb3dc599a1664d449be1d5bcd47b087"
+   },
+   "peak_rss_mb_process": 69.1,
+   "peak_rss_mb_children": 0.0
+  },
+  "geometry": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:17:31+00:00",
+   "seconds": 69.325,
+   "finished": "2026-11-03T01:18:40+00:00",
+   "result": {
+    "source": "procedural_sdf",
+    "character": "veille",
+    "pose": "veille",
+    "voxel_mm": 0.4,
+    "grid_estimate_mb": 138,
+    "bodies": 1,
+    "marching_cubes_residue_removed": 2,
+    "triangles": 518518
+   },
+   "outputs": {
+    "nominal.stl": "7cc44fc4df195e43ae209b1a86592e862d4ecfcfe3376e81a8752328e91b299b"
+   },
+   "peak_rss_mb_process": 699.4,
+   "peak_rss_mb_children": 0.0
+  },
+  "assembly": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:18:40+00:00",
+   "seconds": 2.167,
+   "finished": "2026-11-03T01:18:42+00:00",
+   "result": {},
+   "outputs": {
+    "figurine.stl": "ad9b4d98d9ddb3015800e03fffb850794863cf703303d9b23eeaaa3b5f4a536d",
+    "socle.stl": "afd94815c679d7ec5d580356e3b1323c96ad24a77a8569190faacad21407bd0b",
+    "assembly.json": "6cf212a64fcb7970bf0f8aa380d2ae54961607544d26fe0bcad1d0afc9e7f2e9"
+   },
+   "peak_rss_mb_process": 864.1,
+   "peak_rss_mb_children": 0.0
+  },
+  "checks": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:18:42+00:00",
+   "seconds": 30.608,
+   "finished": "2026-11-03T01:19:13+00:00",
+   "result": {
+    "verdict": "CONFORME_AUX_CRITERES_CALCULES"
+   },
+   "outputs": {
+    "checks.json": "506c5b4a5ac79010f758e5e5043bc17da8192a1ff21619f1f480c54a92690c78"
+   },
+   "peak_rss_mb_process": 1567.3,
+   "peak_rss_mb_children": 0.0
+  },
+  "renders": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:19:13+00:00",
+   "seconds": 46.866,
+   "finished": "2026-11-03T01:20:00+00:00",
+   "result": {
+    "engine": "Cycles CPU",
+    "samples": 32,
+    "note": "rendus argile sans texture, vue rapprochée du buste et vue maillage ; appréciation visuelle, pas une mesure"
+   },
+   "outputs": {
+    "rendus/figurine.blend": "b4ba2d7f53bd6706c581b0ebf5de5f8e0c8d067afc72d2162ece15111c738343",
+    "rendus/vue_buste.png": "e37ee7b5b5f962ac35cec4ead81949d3e147a6df098def4b54fb92a908c10e86",
+    "rendus/vue_dos.png": "c0952de825ed59c6348af5cfa343823aa5047a11e9ad321d0b14ec97422fc78e",
+    "rendus/vue_face.png": "ee833ca2c6a902dff011dcdeb30dc106fd132200cf23b160c60fd6ea4e07df3a",
+    "rendus/vue_maillage_detail.png": "1db63761666e21958ebf432903796a0bb94304239645f46a3b5b70bbe8cde6fc",
+    "rendus/vue_profil_gauche.png": "977f4f8778c38c2ca997ff694a005063ff2375118c474565c2720a6248d7b900",
+    "rendus/vue_trois_quarts.png": "d5112c19cab0ddd28740944d2c83a7e18fd079eb4302069b74a5fa25c303ae97"
+   },
+   "peak_rss_mb_process": 1567.3,
+   "peak_rss_mb_children": 3013.1
+  },
+  "exports": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:20:00+00:00",
+   "seconds": 4.269,
+   "finished": "2026-11-03T01:20:04+00:00",
+   "result": {
+    "status": "DONE",
+    "objects_reread": 2,
+    "writer": "trimesh 4.11.1",
+    "slicer_settings_included": false
+   },
+   "outputs": {
+    "projet.3mf": "dd6329752a35966894b2475c2340b4d6013c15ba01ea5ab6e6f62812d32fa8ff"
+   },
+   "peak_rss_mb_process": 1567.3,
+   "peak_rss_mb_children": 3013.1
+  },
+  "slicing": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:20:04+00:00",
+   "seconds": 31.431,
+   "finished": "2026-11-03T01:20:35+00:00",
+   "result": {
+    "estimates": {
+     "socle": {
+      "estimated_time_normal": "5h 53m 3s",
+      "filament_mm": 17761.15,
+      "filament_cm3": 42.72,
+      "filament_g": 52.97,
+      "layer_count": 120,
+      "forbidden_header_present": true
+     },
+     "figurine": {
+      "estimated_time_normal": "12h 21m 37s",
+      "filament_mm": 34765.89,
+      "filament_cm3": 83.62,
+      "filament_g": 103.69,
+      "layer_count": 1252,
+      "forbidden_header_present": true
+     }
+    },
+    "sent_to_machine": false
+   },
+   "outputs": {
+    "tranchage/socle_impression.SIMULATION-NE-PAS-IMPRIMER.gcode": "212e1bef3ed8602d3b1605419ee706d2eeda9835c6247d3d789df61c975d4407",
+    "tranchage/figurine.SIMULATION-NE-PAS-IMPRIMER.gcode": "ef91380d921adce920c04c13d6141ef769eb57ca6dd0b9c1a22387eb853c2705",
+    "tranchage/apercu_couches_figurine.png": "c871b3957cdb758e4c4bf363a1b1d78589c72be53e75374f3b7e7cc7cd7e2feb",
+    "tranchage/profil_simulation.ini": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb",
+    "tranchage/tranchage.json": "d3abf0363cbcad66db77c74bb9a9e00be8f068e7c40b0e8faeecc277cd9bcf77"
+   },
+   "peak_rss_mb_process": 1686.5,
+   "peak_rss_mb_children": 3013.1
+  },
+  "manifest": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-03T01:20:36+00:00",
+   "seconds": 0.375,
+   "finished": "2026-11-03T01:20:36+00:00",
+   "result": {
+    "files": 21
+   },
+   "outputs": {
+    "manifest.json": "88270c3cfba6707ae377348db26973999393d13593f630f15bceb5d98538a3e3"
+   },
+   "peak_rss_mb_process": 1686.5,
+   "peak_rss_mb_children": 3013.1
+  }
+ },
+ "ack_seconds": 0.0294,
+ "pose": "veille",
+ "status": "DONE"
+}

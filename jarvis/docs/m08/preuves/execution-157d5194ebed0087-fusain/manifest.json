@@ -1,0 +1,268 @@
+{
+ "task_id": "157d5194ebed0087",
+ "created": "2026-11-03T12:43:18+00:00",
+ "finished": "2026-11-03T12:50:53+00:00",
+ "commit": {
+  "head": "6f87f5fd5c5ebb1ebdcb95ef0dd67478c6300e25",
+  "pipeline_code_modified_since_commit": true
+ },
+ "pipeline": "bojart.figurine.pipeline.v1",
+ "environment": {
+  "python": "3.12.3",
+  "platform": "Linux-6.18.44-fc-v230-x86_64-with-glibc2.39",
+  "cpu_count": 4,
+  "numpy": "2.5.3",
+  "trimesh": "4.11.1",
+  "scikit-image": "0.26.0",
+  "manifold3d": "3.5.4",
+  "scipy": "1.18.1",
+  "rtree": "1.4.1",
+  "matplotlib": "3.11.2",
+  "lxml": "6.1.3",
+  "slicer": "PrusaSlicer-2.7.2+UNKNOWN based on Slic3r (with GUI support)",
+  "blender": "Blender 4.0.2",
+  "gpu": "aucun GPU détecté (calcul CPU uniquement)"
+ },
+ "request": "Jarvis, crée-moi la figurine Fusain 3D imprimable dans une position stylée, iconique et remarquable.",
+ "spec": {
+  "version": "bojart.figurine.spec.v1",
+  "source": "typed",
+  "request_normalized": "jarvis, cree-moi la figurine fusain 3d imprimable dans une position stylee, iconique et remarquable.",
+  "character": {
+   "id": "fusain",
+   "label": "Fusain, le lutteur au trait de charbon",
+   "franchise": null,
+   "rights": "bojart_original"
+  },
+  "variant": "v1 — référence BOJ.ART interne",
+  "pose_intent": "iconic",
+  "expression": "déterminée",
+  "height_mm": 200.0,
+  "base_included": true,
+  "detail_level": "figurine de vitrine (lisible à 30 cm)",
+  "process": "FDM",
+  "nozzle_mm": 0.4,
+  "material": "PLA",
+  "assembly": "socle séparé, tenons détrompés",
+  "field_origin": {
+   "height_mm": "hypothèse de simulation",
+   "base_included": "hypothèse de simulation",
+   "process": "hypothèse de simulation",
+   "nozzle_mm": "hypothèse de simulation",
+   "material": "hypothèse de simulation"
+  },
+  "geometry_source": "procedural_sdf",
+  "llm_used": false,
+  "asr_tested": false
+ },
+ "identity": {
+  "spec": {
+   "character": {
+    "id": "fusain",
+    "label": "Fusain, le lutteur au trait de charbon",
+    "franchise": null,
+    "rights": "bojart_original"
+   },
+   "pose_intent": "iconic",
+   "height_mm": 200.0,
+   "material": "PLA",
+   "process": "FDM"
+  },
+  "mesh_sha256": null,
+  "voxel": 0.4,
+  "pipeline": "bojart.figurine.pipeline.v1",
+  "sculpt": "bojart.fusain.sdf.v1",
+  "fab": "bojart.fabrication.v3+bojart.socle.basalte.v1",
+  "checks": "bojart.checks.v2"
+ },
+ "hypotheses": {
+  "height_mm": "hypothèse de simulation",
+  "fdm_profile": "simulation, non vérifié",
+  "assembly": {
+   "clearance_per_side_mm": 0.2,
+   "peg_diameters_mm": [
+    4.0,
+    5.0
+   ],
+   "peg_length_mm": 6.0,
+   "hole_extra_depth_mm": 0.8,
+   "base_height_ratio": 0.09,
+   "base_margin_mm": 10.0,
+   "hollow_base": true,
+   "base_wall_mm": 3.0,
+   "base_floor_above_holes_mm": 2.0,
+   "status": "hypothèse à calibrer par une pièce test, pas un réglage de production"
+  },
+  "bed_mm": [
+   250.0,
+   210.0,
+   220.0
+  ]
+ },
+ "steps": {
+  "intake": {
+   "status": "DONE",
+   "seconds": 0.0,
+   "attempts": 1,
+   "reason": null
+  },
+  "transcription": {
+   "status": "NOT_TESTED",
+   "seconds": 0.0,
+   "attempts": 1,
+   "reason": null
+  },
+  "spec": {
+   "status": "DONE",
+   "seconds": 0.0,
+   "attempts": 1,
+   "reason": null
+  },
+  "pose_study": {
+   "status": "DONE",
+   "seconds": 2.087,
+   "attempts": 1,
+   "reason": null
+  },
+  "geometry": {
+   "status": "DONE",
+   "seconds": 239.909,
+   "attempts": 1,
+   "reason": null
+  },
+  "assembly": {
+   "status": "DONE",
+   "seconds": 5.173,
+   "attempts": 1,
+   "reason": null
+  },
+  "checks": {
+   "status": "DONE",
+   "seconds": 68.281,
+   "attempts": 1,
+   "reason": null
+  },
+  "renders": {
+   "status": "DONE",
+   "seconds": 84.366,
+   "attempts": 1,
+   "reason": null
+  },
+  "exports": {
+   "status": "DONE",
+   "seconds": 6.796,
+   "attempts": 1,
+   "reason": null
+  },
+  "slicing": {
+   "status": "DONE",
+   "seconds": 48.79,
+   "attempts": 1,
+   "reason": null
+  }
+ },
+ "executed": [
+  "intake",
+  "spec",
+  "pose_study",
+  "geometry",
+  "assembly",
+  "checks",
+  "renders",
+  "exports",
+  "slicing"
+ ],
+ "not_tested_or_simulated": [
+  "transcription",
+  "impression physique (N3)",
+  "affichage sur la tour réelle",
+  "reconnaissance vocale"
+ ],
+ "evidence_level": "N2 — parcours numérique avec vrai maillage, rendus et tranchage réel ; pas d’impression",
+ "files": {
+  "assembly.json": {
+   "sha256": "13e864011cf939487ad27f48a534a9c9c123b71e161f09167cb1e4e9ba3f838b",
+   "bytes": 1423
+  },
+  "checks.json": {
+   "sha256": "21d13ca434fc9c80c8f1923fc93d568d0e34e2196740f0b9a6a885031076aeb7",
+   "bytes": 2457
+  },
+  "figurine.stl": {
+   "sha256": "c691494871d73e9f5643a009d2128bdcd677b504f7aedbf7fb47fe767409e7d9",
+   "bytes": 33646284
+  },
+  "nominal.stl": {
+   "sha256": "4702f961abed4cc7fba6e187bddc58e124bf4f061c98f2f0cf2aae186cb0a046",
+   "bytes": 33642784
+  },
+  "pose_study.json": {
+   "sha256": "b9b10537c27710c4451f068f2cbce99f7da89f7f953257048f1bc483e2684b58",
+   "bytes": 639
+  },
+  "projet.3mf": {
+   "sha256": "d4ec8011f305cc9ac202315a3d76c2c980822f96301e99a99baf24091fff20bb",
+   "bytes": 12075113
+  },
+  "rendus/figurine.blend": {
+   "sha256": "ffbb5e9d2ba00ca2269d91fe14a11a06900a09649774405a305526290414f47b",
+   "bytes": 31414320
+  },
+  "rendus/vue_buste.png": {
+   "sha256": "3a70d0ccee8f2b4c115c7db1497eacd1bd2f960e326cc632d88770453cacb324",
+   "bytes": 990824
+  },
+  "rendus/vue_dos.png": {
+   "sha256": "b8a173b65009396f754f5ef1af52a76ef4f7d1449181d5b39b0c8c7530482f49",
+   "bytes": 825367
+  },
+  "rendus/vue_face.png": {
+   "sha256": "ae8b17bdec1575b01b5ec6cbf7202dde82e690c002852aba4dc409ebbc2f219b",
+   "bytes": 827756
+  },
+  "rendus/vue_maillage_detail.png": {
+   "sha256": "ee96616dcf94491c3e98d4903153f2ff20f1a335b8b70584280c49eda9b267bc",
+   "bytes": 1263799
+  },
+  "rendus/vue_profil_gauche.png": {
+   "sha256": "5f3ecbf44b11e55bbb8523ebce48393299d475eca8bef32203a712304e4d9c0d",
+   "bytes": 819716
+  },
+  "rendus/vue_trois_quarts.png": {
+   "sha256": "79c77682635d28f0b2afa80945e79c309076ccc7c9ce8127763c68a9e9b0833a",
+   "bytes": 829182
+  },
+  "socle.stl": {
+   "sha256": "83ac15c15374f02ddaec893da48a46143de2861d8e38a975d54140796b1ba9ab",
+   "bytes": 24584
+  },
+  "spec.json": {
+   "sha256": "a254c30c45288511b29f2c38b45a97802295202fdbadb6fdc14522d3efcb3c2b",
+   "bytes": 968
+  },
+  "tranchage/apercu_couches_figurine.png": {
+   "sha256": "96d344deaccd833ac4f507ee8d56e3e2afe6e44f802118e0ed9ead8520c89291",
+   "bytes": 94942
+  },
+  "tranchage/figurine.SIMULATION-NE-PAS-IMPRIMER.gcode": {
+   "sha256": "9f6a50057c4cc5e7fc7c593d9bae0919bb3a96bb77450fbbad5c63cda801a52e",
+   "bytes": 71943747
+  },
+  "tranchage/profil_simulation.ini": {
+   "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb",
+   "bytes": 772
+  },
+  "tranchage/socle_impression.SIMULATION-NE-PAS-IMPRIMER.gcode": {
+   "sha256": "75569a6df008631cb8fac79bff6db2f16a148d24347ae958e5a264c1c4ab6a7e",
+   "bytes": 12148603
+  },
+  "tranchage/socle_impression.stl": {
+   "sha256": "cb2523716c6288108742b3bd5ce74646141fc3dbe93830a7857d1473e9d592e1",
+   "bytes": 24584
+  },
+  "tranchage/tranchage.json": {
+   "sha256": "65bc67a7d1d8f15d7742f6d7b9087684b421869ad2ee12a0f01bb9af7ed36cad",
+   "bytes": 1966
+  }
+ }
+}
