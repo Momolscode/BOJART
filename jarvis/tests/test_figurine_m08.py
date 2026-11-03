@@ -22,6 +22,7 @@ VEGETA = "Jarvis, crée-moi un Végéta 3D imprimable dans une position stylée,
 SENTINELLE = "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable."
 ARDOISE = "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable."
 VEILLE = "Jarvis, crée-moi la figurine Veille 3D imprimable dans une position stylée, iconique et remarquable."
+FUSAIN = "Jarvis, crée-moi la figurine Fusain 3D imprimable dans une position stylée, iconique et remarquable."
 
 
 class SpecTests(unittest.TestCase):
@@ -79,6 +80,20 @@ class SpecTests(unittest.TestCase):
             self.assertFalse(is_figurine_request(text), text)
         self.assertTrue(is_figurine_request("Jarvis, sculpte Veille en statuette"))
 
+    def test_fusain_and_everyday_uses_of_the_word(self):
+        s = parse_request(FUSAIN)
+        self.assertEqual((s['character']['id'], s['character']['rights']), ('fusain', 'bojart_original'))
+        self.assertEqual(s['geometry_source'], 'procedural_sdf')
+        self.assertEqual(parse_request("Jarvis, prépare une figurine de Fusain de 30 cm")['height_mm'], 300.0)
+        # Sans mot de figurine, avec deux personnages, ou « au fusain » (la technique) : rien n'est lancé.
+        for text in ("Jarvis, crée Fusain", "Jarvis, crée Veille et Fusain en 3D", "Jarvis, fais une statuette au fusain"):
+            with self.assertRaises(SpecRejected) as c:
+                parse_request(text)
+            self.assertEqual(c.exception.status, 'CLARIFY')
+        for text in ("Jarvis, dessine un portrait au fusain", "Range les fusains de l'atelier", "Taille le fusain du jardin"):
+            self.assertFalse(is_figurine_request(text), text)
+        self.assertTrue(is_figurine_request("Jarvis, sculpte Fusain en statuette"))
+
     def test_physical_actions_refused(self):
         for text in ("Jarvis, imprime la Sentinelle 3D", "Jarvis, crée la Sentinelle 3D et lance l'imprimante"):
             with self.assertRaises(SpecRejected) as c:
@@ -135,6 +150,23 @@ class GeometryTests(unittest.TestCase):
         torn = trimesh.Trimesh(sphere.vertices, sphere.faces[: len(sphere.faces) // 2], process=False)
         rep = fabrication.guarded_repair(torn)
         self.assertFalse(rep['accepted'])
+
+    def test_open_residue_does_not_leave_the_figure_inside_out(self):
+        # Maillage du marching cubes retourné, avec un résidu ouvert accroché par un sommet : trimesh seul
+        # n'inverse rien (l'ensemble n'est pas fermé). La figure doit ressortir fermée et à l'endroit.
+        from figurine import sculpt
+        sphere = trimesh.creation.icosphere(subdivisions=2, radius=10).invert()
+        v0 = sphere.vertices[0]
+        sliver = np.array([v0, v0 + (0.1, 0.0, 0.0), v0 + (0.0, 0.1, 0.0)])
+        raw = trimesh.Trimesh(np.vstack([sphere.vertices, sliver]),
+                              np.vstack([sphere.faces, [[len(sphere.vertices), len(sphere.vertices) + 1,
+                                                         len(sphere.vertices) + 2]]]), process=True)
+        self.assertEqual(raw.body_count, 1)
+        self.assertLess(raw.copy().fix_normals().volume, 0)          # le piège : rien n'est inversé
+        mesh, bodies = sculpt.drop_residue_and_orient(raw, 0.4)
+        self.assertEqual((bodies, mesh.metadata['marching_cubes_residue_removed']), (1, 1))
+        self.assertTrue(mesh.is_watertight)
+        self.assertGreater(mesh.volume, 0)
 
     def test_keyed_assembly_and_cut_study(self):
         from figurine import checks, fabrication, sculpt
@@ -230,6 +262,44 @@ class GeometryTests(unittest.TestCase):
         self.assertTrue(np.array_equal(again.vertices, base.vertices))                   # graine fixe
         self.assertEqual(fabrication.fab_version('basalte'), 'bojart.fabrication.v3+bojart.socle.basalte.v1')
 
+    def test_fusain_stroke_carries_the_open_hand_from_the_rocks(self):
+        from figurine import fabrication, fusain, sculpt
+        nominal, bodies = sculpt.sculpt_figure('trait', voxel=2.0, cid='fusain')
+        self.assertEqual(bodies, 1)                                # trait, volutes et blocs tiennent à la figure
+        pose = fusain.POSES['trait']
+        foot = np.array(pose['stroke']['path'][0], np.float32)
+        probes = np.array([[foot[0], foot[1], 0.4], pose['palm']['centre'], pose['stroke']['path'][3]], np.float32)
+        self.assertTrue((fusain.fusain_sdf(probes, 'trait') < 0).all())     # du rocher à la paume, sans coupure
+        C, hw, ht, W = fusain.stroke_frames(pose['stroke'])
+        self.assertGreaterEqual(float(2 * ht.min()), 2.5)                   # ruban imprimable en FDM 0,4
+        self.assertLess(float(np.abs(np.einsum('ij,ij->i', W, np.gradient(C, axis=0))).max()), 1e-3)
+        asm = fabrication.build_assembly(nominal, 200.0, style='basalte')
+        info = asm['info']
+        sc = info['scale_from_nominal']
+        # Tenons sous les deux plus grands appuis : les blocs du trait (toujours le plus grand) et un pied
+        # (les deux semelles ont la même surface : lequel dépend du pas de grille).
+        pegs = [np.array(p['xy']) for p in info['pegs']]
+        def near(xy, pt):
+            return np.linalg.norm(xy - np.array(pt[:2]) * sc) < 15.0
+        on_rocks = [near(xy, foot) for xy in pegs]
+        self.assertEqual(sum(on_rocks), 1)
+        other = pegs[on_rocks.index(False)]
+        self.assertTrue(near(other, pose['ankle_l']) or near(other, pose['ankle_r']))
+        self.assertEqual(sorted(p['diameter_mm'] for p in info['pegs']), [4.0, 5.0])
+        self.assertEqual(info['base_style']['version'], 'bojart.socle.basalte.v1')
+
+    def test_fusain_bandage_ends_flush_with_the_wrist(self):
+        from figurine import fusain
+        # Coupée net, la bande (4 à 4,45 mm de rayon au poignet) dépassait du raccord du poing gauche
+        # (3,3 mm) en anneau à dents de scie : lèvre de 0,13 mm au contrôle local.
+        a, b = np.zeros(3, np.float32), np.array([0.0, 0.0, 13.5], np.float32)
+        th = np.linspace(0.0, 2.0 * np.pi, 72, endpoint=False)
+        def circle(r, z):
+            return np.stack([r * np.cos(th), r * np.sin(th), np.full_like(th, z)], -1).astype(np.float32)
+        for r_end in fusain.WRIST_R.values():
+            self.assertTrue((fusain._forearm_wrap(circle(r_end + 0.05, 13.45), a, b, r_end) > 0).all())
+            self.assertTrue((fusain._forearm_wrap(circle(3.0, 6.0), a, b, r_end) < 0).all())   # bande pleine
+
     def test_ring_detail_stays_within_its_band(self):
         from figurine import details
         axis = np.array([0.0, 0.0, 1.0], np.float32)
@@ -302,6 +372,9 @@ class GeometryTests(unittest.TestCase):
             _, ident = run._identity(parse_request(VEILLE))
             self.assertEqual((ident['voxel'], run.socle_style, ident['sculpt']), (0.4, 'basalte', 'bojart.veille.sdf.v1'))
             self.assertEqual(ident['fab'], fabrication.fab_version('basalte'))
+            run = pipeline.FigurineRun(FUSAIN, Path(d))
+            _, ident = run._identity(parse_request(FUSAIN))
+            self.assertEqual((ident['voxel'], run.socle_style, ident['sculpt']), (0.4, 'basalte', 'bojart.fusain.sdf.v1'))
 
     def test_gcode_stats_parser(self):
         from figurine import slicing
@@ -412,6 +485,19 @@ class PipelineFaultTests(unittest.TestCase):
         res = self.run_(text=VEILLE, faults=['no_blender'])
         st = self.state(res)
         self.assertEqual(st['pose'], 'veille')
+        self.assertEqual(st['steps']['geometry']['result']['bodies'], 1)
+        self.assertEqual(st['steps']['checks']['result']['verdict'], 'CONFORME_AUX_CRITERES_CALCULES')
+        self.assertEqual(st['steps']['renders']['status'], 'BLOCKED')
+        asm = json.loads((Path(res['dir']) / 'assembly.json').read_text(encoding='utf8'))
+        self.assertEqual(asm['base_style']['version'], 'bojart.socle.basalte.v1')
+        self.assertEqual(sorted(p['diameter_mm'] for p in asm['pegs']), [4.0, 5.0])
+
+    def test_wrestler_stands_on_his_stroke_until_renders(self):
+        # Pas de 1,5 mm : à 2 mm, les doigts de la main ouverte (Ø 2 à 2,4 mm) ne sont pas résolus et le
+        # contrôle d'épaisseur les signale à juste titre.
+        res = self.run_(text=FUSAIN, faults=['no_blender'], voxel=1.5)
+        st = self.state(res)
+        self.assertEqual(st['pose'], 'trait')
         self.assertEqual(st['steps']['geometry']['result']['bodies'], 1)
         self.assertEqual(st['steps']['checks']['result']['verdict'], 'CONFORME_AUX_CRITERES_CALCULES')
         self.assertEqual(st['steps']['renders']['status'], 'BLOCKED')

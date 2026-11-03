@@ -29,10 +29,15 @@ ORIGINAL = {
     'sentinelle': {'label': "La Sentinelle de l'atelier", 'franchise': None},
     'ardoise': {'label': 'Ardoise, le duelliste des strates', 'franchise': None},
     'veille': {'label': 'Veille, la gardienne du trait', 'franchise': None},
+    'fusain': {'label': 'Fusain, le lutteur au trait de charbon', 'franchise': None},
 }
-# Noms de personnages qui sont aussi des mots courants (« mets-toi en veille », « la veille de Noël ») :
-# ils ne comptent que dans une demande qui parle d'une figurine, et jamais dans ces tournures.
-AMBIGUOUS_NAMES = {'veille': re.compile(r"\b(?:en|mode) veille\b|\bla veille (?:de|du|des|d')(?! ?[0-9])")}
+# Noms de personnages qui sont aussi des mots courants (« mets-toi en veille », « la veille de Noël »,
+# « un portrait au fusain », « des fusains ») : ils ne comptent que dans une demande qui parle d'une
+# figurine, et jamais dans ces tournures.
+AMBIGUOUS_NAMES = {
+    'veille': re.compile(r"\b(?:en|mode) veille\b|\bla veille (?:de|du|des|d')(?! ?[0-9])"),
+    'fusain': re.compile(r"\b(?:au|en) fusain\b|\bfusains\b|\b(?:crayons?|batons?|batonnets?|mines?|fusain) (?:de |a )?fusain\b"),
+}
 # Mots proches d'un nom de personnage : signe probable d'une transcription erronée.
 ASR_CONFUSIONS = {
     'vegetal': 'vegeta', 'vegetale': 'vegeta', 'vegetaux': 'vegeta', 'vegetarien': 'vegeta',

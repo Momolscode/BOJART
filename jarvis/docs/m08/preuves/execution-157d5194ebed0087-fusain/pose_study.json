@@ -1,0 +1,25 @@
+{
+ "candidates": [
+  {
+   "pose": "trait",
+   "label": "Le trait : fente avant, paume droite ouverte devant, poing gauche à la hanche",
+   "volume_cm3_nominal": 151.5,
+   "height_nominal_mm": 158.0,
+   "center_of_mass_mm": [
+    3.6,
+    -4.0,
+    84.3
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.526,
+   "side_silhouette_fill": 0.358,
+   "stance_width_mm": 66.0
+  }
+ ],
+ "chosen": "trait",
+ "notes": [
+  "Retenue : trait (remplissage de face 0.526, cible 0,42 = geste lisible sans membres grêles). Critère artistique non validé par un tiers.",
+  "Pose imposée par la demande (iconic)."
+ ],
+ "voxel_mm": 2.0
+}

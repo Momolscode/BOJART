@@ -308,3 +308,100 @@ qualification sur la tour.
   étendu à Veille.
 - **Réexamen** : avis d'Olsen sur les rendus ; essai image→3D à partir des images du film sur la tour
   (backlog, tâche 2) ; impression d'essai (N3).
+
+## D17. Quatrième personnage original : « Fusain, le lutteur au trait de charbon » (3 novembre 2026)
+
+- **Contexte** : le 3 novembre à 10:18 UTC, Olsen a demandé une figurine d'après « les figurines qu'il a
+  faites » sur le compte TikTok @boj.art. Les huit vidéos lisibles (listes de lecture) montrent toutes
+  des personnages protégés : Baki Hanma de 60 cm, Aphrodite de Record of Ragnarok, Goku contre Freezer,
+  Mileena, Elfen Lied. Ni copie ni sosie (D2, D14). Carte posée (un original dans son style, ses
+  fichiers pour la maison sans image, un socle pour ses pièces) ; Olsen a choisi à 10:40 UTC « un
+  original dans son style ».
+- **Ce qui est repris de BOJ (savoir-faire, jamais le personnage)** : la grande pièce de vitrine, le
+  socle qui raconte l'action (chez lui, des rochers d'où monte un tourbillon de fumée), des volumes
+  faits pour la peinture à la main.
+- **Design** : lutteur en fente avant, jambe gauche fléchie devant ; paume droite ouverte tendue devant,
+  doigts vers le haut ; poing gauche ramené à la hanche ; veste sans manches ouverte en V, col en bande
+  autour de l'encolure, ceinture large nouée ; pantalon ample serré aux mollets par des bandes ; pieds
+  nus ; avant-bras bandés ; cheveux tirés en arrière en chignon bas torsadé, barbe courte en collier. Le
+  trait de pinceau, ruban de charbon en croissant, sort de colonnes de basalte et monte jusqu'au talon de
+  sa main (troisième appui du bras tendu) ; deux volutes de fumée enroulées montent des blocs. Même
+  univers que Veille (bandages, basalte, carmin).
+- **Garde-fous de distinction** : ni torse nu en short, ni garde de boxe poings levés, ni cheveux en
+  pointes ou ébouriffés, ni yeux rougeoyants, ni tatouage, ni chapelet, ni aura de fumée en anneaux
+  copiée d'un socle existant, ni pose signature d'un personnage protégé. Le trait de charbon en travers
+  des yeux est de la peinture.
+- **Construction** : `figurine/fusain.py`, même méthode (champ de distance, grille de 0,4 mm,
+  3 itérations de lissage, tête agrandie de 12 %, socle « basalte » de D16). Nouveau : un ruban continu
+  balayé le long d'un chemin (point le plus proche du chemin, repère interpolé, section rectangulaire
+  arrondie), qui sert au trait et aux volutes ; prismes hexagonaux pour les colonnes de basalte.
+- **Écartés en cours de route (rendus et contrôles)** : trait en chapelet de boîtes (festons à chaque
+  raccord), en ruban vu par la tranche (un fouet), puis strié régulièrement (tôle ondulée) ; fumée en
+  boules (un tentacule) puis en crochet (une crosse de fougère) ; col en V seul (un emblème) ; ceinture
+  en ellipsoïde (un dôme sous le V) ; barbe en couche coupée net (tablettes plates sur les joues), puis
+  d'épaisseur réglée sur |x| (la couche grandissait en s'éloignant du visage et se décollait en lame) :
+  barbe en collier le long de la mâchoire, épaisseur nulle sur ses bords ; cheveux en ellipsoïde seul
+  (plaques en œillères dans le creux des tempes) : couche bornée à 1,6 mm du visage. Un bord
+  d'emmanchure qui butait contre le deltoïde du bras tendu fermait une poche creuse, vue comme un
+  élément flottant au pas de 1 mm.
+- **Contrôle d'épaisseur refusé, puis corrigé** : la première version complète à 0,4 mm a été refusée
+  par la chaîne (0,27 % de la surface sous 0,8 mm, minimum 0,05 mm ; rien livré). La
+  contre-vérification sur 12 000 points, des coupes puis un contrôle local par régions ont trouvé six
+  causes : col d'encolure presque parallèle à la couche autour de la bosse des trapèzes (lame derrière
+  la nuque), ourlet d'emmanchure en capuchon au-dessus du deltoïde (bords « effilochés » au sommet des
+  épaules sur les rendus), ourlet en croissant le long du bras gauche couché dans le dos, stries du
+  trait qui se chevauchaient et perçaient le ruban près de la main, plis du pantalon en étoile sous le
+  genou gauche, et fentes de 0,2 à 0,3 mm entre les doigts. Corrections : coupes du vêtement lues au
+  pied de la normale sur le tronc sans le cou (chaque bord traverse l'étoffe d'équerre), emmanchure à
+  4 mm du bras mesurés sur le tronc, stries gravées en une passe et bornées à 30 % de la
+  demi-épaisseur (une sur deux s'efface quand le trait s'affine), plis effacés près de l'axe de la
+  cuisse, doigts serrés. Contrôle local par régions à 0,4 mm ensuite (buste, taille, tête, main,
+  trait, jambes, cuisses) : aucun point sous 1,2 mm (minimum 1,56 mm).
+- **Correction de la chaîne (toutes les figurines)** : la relance suivante a été refusée autrement
+  (« volume non fermé », 186 arêtes non-manifold, 186 éléments flottants). Le maillage nominal sortait
+  retourné (volume négatif) : un résidu ouvert du marching cubes, accroché à la figure, rendait
+  l'ensemble non fermé, et `fix_normals()` de trimesh n'inverse alors rien ; l'union des tenons rendait
+  des morceaux. `sculpt.drop_residue_and_orient` retire les résidus (moins de 1 mm³ et de deux pas de
+  grille) puis oriente chaque corps fermé (`fix_normals(multibody=True)`). Sans effet sur un maillage
+  d'un seul corps déjà fermé, comme ceux des figurines livrées ; test
+  `test_open_residue_does_not_leave_the_figure_inside_out`.
+- **Contre-vérification de la version conforme, puis corrigée** : la version suivante est passée
+  (CONFORME, aucun point sous 0,8 mm sur les 1 500 de la chaîne), mais sa contre-vérification sur
+  12 000 points a trouvé un point à 0,25 mm sur l'arête haute de la ceinture, côté droit : coupée par
+  deux plans dans l'espace, elle faisait un coin aigu de 67° là où la cage s'évase au-dessus de la
+  taille. Un contrôle local plus dense a trouvé ensuite une lèvre de 0,13 mm au bout du bandage du
+  poignet gauche : la bande, coupée net, dépassait du raccord du poing (3,3 mm de rayon) de 0,7 à
+  1,15 mm en anneau à dents de scie. Corrections : ceinture coupée au pied de la normale, comme la
+  veste (arête à 81°) ; deux derniers millimètres du bandage resserrés en cône jusqu'au rayon du
+  raccord. Cette version n'a pas été livrée. Deuxième passe par régions sur la version retenue
+  (onze régions, 69 468 points, autre graine) : aucun point sous 0,8 mm, sauf au pied du trait, où
+  trois points de 0,71 à 0,76 mm marquent la peau d'une fente entre la volute de gauche, le petit bloc
+  et l'appui du trait (0,04 % des points de la région, sous le seuil de 0,2 % ; imprimable en FDM, à
+  combler avant une version résine). Contrôle dense des bouts de bandage et de la ceinture : minimum
+  2,2 mm.
+- **Demande** : « fusain » est aussi un mot courant (la technique, le crayon, l'arbuste). Le nom ne
+  compte qu'avec un mot de figurine, et jamais dans « au fusain », « en fusain », « des fusains » ni
+  « crayon / bâton / mine de fusain ». « Jarvis, dessine un portrait au fusain » ne lance rien ;
+  « Jarvis, fais une statuette au fusain » demande quel personnage.
+- **Tenons** : sous les deux plus grands appuis (D12). Les colonnes du trait sont toujours le plus
+  grand ; les deux semelles ont presque la même surface, si bien que le second tenon peut passer d'un
+  pied à l'autre selon le pas de grille. À 0,4 mm : Ø 4 sous les colonnes du trait, Ø 5 sous le pied
+  droit, en arrière ; le pied gauche, devant, reste un appui sans tenon.
+- **Exécution** (N2, conteneur Linux, Python 3.12.3, trimesh 4.11.1) : tâche `157d5194ebed0087`
+  (l'identifiant dépend de la demande et des versions, pas de la géométrie : les relances le gardent),
+  géométrie en 4 min et chaîne complète en 7 min 36 s pendant que deux contrôles locaux tournaient en
+  parallèle (6 min 10 s seule, version précédente), 672 924 triangles, un seul corps fermé (un résidu du
+  marching cubes retiré), CONFORME_AUX_CRITERES_CALCULES, épaisseur min / p1 1,97 / 2,68 mm, aucun point
+  sous 0,8 mm sur 12 000 à la contre-vérification (un seul sous 1,2 mm : 0,93 mm, au pied du trait, dans
+  la fente notée plus haut ; `contre_verification_epaisseur.json`), surplombs sur 9,4 % de la surface,
+  centre de gravité à 44,5 mm du bord du socle, socle de 120 × 188 × 18 mm, tranchage estimé à 16 h 34
+  et 133,9 g (figurine) et 8 h 30 et 76,2 g (socle), visionneuse 13/13
+  (`preuves/execution-157d5194ebed0087-fusain/`).
+- **Tests** : `test_fusain_and_everyday_uses_of_the_word`, `test_fusain_stroke_carries_the_open_hand_from_the_rocks`,
+  `test_fusain_bandage_ends_flush_with_the_wrist`, `test_open_residue_does_not_leave_the_figure_inside_out`,
+  `test_wrestler_stands_on_his_stroke_until_renders` (pas de 1,5 mm : à 2 mm, les doigts de la main
+  ouverte ne sont pas résolus) et `test_character_defaults_keep_published_identities` étendu à Fusain.
+- **Réexamen** : avis d'Olsen et de BOJ sur les rendus ; grande échelle (à 20 cm, la figurine seule,
+  tenons compris, mesure 188 mm de haut ; au-delà d'environ 23 cm, elle dépasse les 220 mm de hauteur
+  du plateau d'hypothèse : découpe en pièces et clés d'assemblage à concevoir) ; essai image→3D sur la
+  tour (backlog, tâche 2) ; impression d'essai (N3).

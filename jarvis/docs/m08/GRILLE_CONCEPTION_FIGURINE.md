@@ -138,7 +138,74 @@ Constats de lisibilité propres à Veille :
 - **Contrôle** : 1 500 points tirés au hasard ne voient pas toujours une lame étroite. Pour une pièce
   aux bords fins, contre-vérifier sur 12 000 points avant de livrer.
 
-## 9. Limites
+## 9. Application à Fusain (fiche D17)
+
+Tailles à la hauteur de 200 mm : le maillage nominal est agrandi de 14 %, la tête encore de 12 %.
+
+| Détail | Taille imprimée | Niveau |
+|---|---|---|
+| Ruban du trait (épaisseur, largeur) | 3,0 à 4,1 mm, 6,6 à 17,7 mm | FDM |
+| Stries de poils du trait | 0,6 à 0,7 × 0,3 à 0,6 mm, crêtes ≥ 0,8 mm | résine (FDM limite) |
+| Strie des volutes de fumée | 0,45 × 0,34 mm | résine |
+| Mèches des cheveux (larges et douces) | pas de 4,9 mm, relief 0,6 mm | FDM |
+| Torsade du chignon | relief 0,75 mm | FDM limite |
+| Barbe en collier, mèches du menton | 1,6 mm d'épaisseur, relief 0,4 mm | FDM, mèches résine |
+| Fente de la bouche | 0,55 × 0,45 mm | résine |
+| Col de la veste, ourlet d'emmanchure | 4,5 × 1,1 mm, 1,8 × 0,8 mm | FDM |
+| Doigts de la main ouverte, serrés | Ø 2,6 à 2,7 mm, séparés par un pli | FDM (fragile) |
+| Colonnes de basalte au pied du trait | 10 à 16 mm de large, 5,7 à 13,6 mm de haut | FDM |
+
+Constats de lisibilité propres à Fusain :
+
+- **Trait** : un ruban fait de boîtes successives montre des festons à chaque raccord. Retenu : ruban
+  continu, balayé le long du chemin (point le plus proche, repère interpolé). Vu par la tranche, un
+  ruban se lit comme un fouet : il reste dans le plan moyen de son chemin, face au spectateur. Des stries
+  parallèles sur toute la longueur se lisent comme de la tôle ondulée : stries irrégulières et
+  interrompues, plus profondes vers le haut. Des sillons qui se chevauchent creusent deux fois et percent
+  le ruban : gravure en une seule passe (le sillon le plus proche décide), profondeur bornée à 30 % de la
+  demi-épaisseur, une strie sur deux s'efface quand le trait s'affine (crêtes d'au moins 0,8 mm).
+- **Fumée** : des boules en chapelet se lisent comme un tentacule, un petit crochet comme une crosse de
+  fougère. Retenu : volute enroulée sur elle-même, le motif de nuage de la peinture à l'encre.
+- **Vêtement** : une coque qui épouse le tronc ne se lit comme un vêtement que par ses bords. Retenu :
+  emmanchures dégagées avec ourlet, col en bande qui fait le tour du cou ; seule, une bande en V se
+  lisait comme un emblème. Une ceinture en ellipsoïde bombe en dôme : ceinture en couche qui épouse la
+  taille.
+- **Bords d'étoffe** : une coupe lue dans l'espace (cylindre autour du cou, ellipsoïde autour de
+  l'épaule, distance au bras) passe par endroits presque parallèle à la couche et y laisse une lame :
+  bord d'encolure autour de la bosse des trapèzes, ourlet en capuchon au-dessus du deltoïde, ourlet le
+  long du bras couché dans le dos (lames de 0,05 à 0,4 mm au contrôle à 0,4 mm). Retenu : chaque coupe
+  est lue au pied de la normale, sur le tronc (gradient par différences, quatre évaluations du tronc),
+  ce qui extrude chaque bord d'équerre à travers la couche. L'étoffe porte sur le tronc sans le cou.
+  L'étoffe ne doit pas toucher le bras : un bord qui bute contre lui ferme une poche creuse (élément
+  flottant) ou une lame ; emmanchure à 4 mm du bras mesurés sur le tronc et bords d'au plus 3 mm de
+  haut, il reste au moins 1 mm. La ceinture suit la même règle : coupée par deux plans dans l'espace,
+  son arête haute faisait un coin de 67° là où la cage s'évase au-dessus de la taille (0,25 mm à la
+  contre-vérification) ; lue au pied de la normale, l'arête passe à 81°.
+- **Plis tuyaux** : des plis réglés par l'angle autour d'un axe convergent en étoile de lames là où
+  l'axe ressort de la surface (axe de la cuisse prolongé sous un genou plié). Retenu : plis effacés à
+  moins de 7 mm de l'axe.
+- **Doigts** : une fente de 0,2 à 0,3 mm entre deux doigts ne s'imprime pas et se maille en voiles
+  minces. Retenu : doigts serrés qui se touchent, séparés par un pli.
+- **Bouts de bandage** : une bande coupée net qui dépasse de la pièce suivante (bande de 4 à 4,45 mm de
+  rayon sur le raccord de 3,3 mm du poing) laisse un anneau à dents de scie : lèvre de 0,13 mm au
+  contrôle local. Retenu : les deux derniers millimètres de la bande se resserrent en cône jusqu'au
+  rayon du raccord. Chez Veille, les bouts sont cachés par la manche et la main.
+- **Couches d'épaisseur variable (barbe, cheveux)** : une couche « champ moins e » dont l'épaisseur e
+  grandit quand on s'éloigne de la surface se décolle en lame. Régler e sur une grandeur qui ne croît
+  pas le long de la normale (distance à l'axe de la mâchoire, angle autour de la verticale) et l'annuler
+  sur les bords. Seul, un ellipsoïde de cheveux remplit les creux des tempes : borner la couche à
+  quelques millimètres du visage.
+- **Grille** : à 2 mm, les doigts d'une main ouverte (Ø 2 à 2,4 mm) ne sont pas résolus et le contrôle
+  d'épaisseur les signale à juste titre ; le parcours rapide de Fusain se teste à 1,5 mm.
+- **Contrôle** : la première version a été refusée par la chaîne à 0,4 mm (0,27 % de la surface sous
+  0,8 mm, minimum 0,05 mm). Un contrôle local par boîtes (maillage d'une région à 0,4 mm, 6 000 points)
+  localise ces lames en une à deux minutes par région, avant de relancer la chaîne complète. Un
+  défaut de quelques millimètres carrés passe entre les points : l'arête de ceinture est passée à
+  travers les 1 500 points de la chaîne, la lèvre du bandage à travers les 12 000 de la
+  contre-vérification. Avant de livrer : contrôle local dense de chaque région, avec une deuxième
+  graine.
+
+## 10. Limites
 
 Auto-évaluation sur rendus argile : ni revue indépendante, ni impression. La sculpture procédurale
 reste en dessous d'une sculpture numérique faite à la main ou d'une génération image→3D (tâche 2 du

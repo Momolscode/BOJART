@@ -22,6 +22,10 @@ Le 3 novembre, à la demande d'une figurine « d'après les œuvres existantes d
 l'héroïne du film BOJ.ART « Un seul trait », passe à son tour par la chaîne au niveau N2, sur un
 socle « basalte » (section dédiée, fiche D16).
 
+Le même jour, à la demande d'une figurine d'après les pièces que BOJ montre sur TikTok (toutes des
+personnages protégés), Olsen a choisi « un original dans son style » : **Fusain**, lutteur au trait de
+charbon, passe par la chaîne au niveau N2 (section dédiée, fiche D17).
+
 ## Inventaire court de l'existant (vérifié dans ce dépôt le 2026-11-02)
 
 | Élément | État constaté |
@@ -201,6 +205,50 @@ le pan tombé du genou garde une allure de cloche vu de trois quarts, les mains 
 génériques, le visage reste stylisé. La ligne des cils, la bouche et les mèches du pinceau relèvent de
 la résine (grille de conception, section 8).
 
+## Fusain, le lutteur au trait de charbon (fiche D17)
+
+Le 3 novembre, Olsen a demandé une figurine d'après « les figurines qu'il a faites » sur le compte
+TikTok @boj.art. Toutes celles qu'on a pu lire représentent des personnages protégés : ni copie ni
+sosie. Sur la carte de décision, Olsen a choisi « un original dans son style ». Fusain reprend le
+savoir-faire de BOJ (grande pièce de vitrine, socle qui raconte l'action, volumes faits pour la
+peinture à la main), jamais ses personnages : lutteur en fente avant, paume droite ouverte devant,
+poing gauche à la hanche, veste sans manches ouverte en V et ceinture nouée, pantalon ample bandé aux
+mollets, pieds nus, avant-bras bandés, barbe courte en collier et chignon bas torsadé. Un trait de
+pinceau, ruban de charbon en croissant, sort de colonnes de basalte et monte jusqu'au talon de sa
+main ; deux volutes de fumée enroulées montent des blocs.
+
+Exécution `157d5194ebed0087` (Python 3.12.3, trimesh 4.11.1, grille de 0,4 mm ; 7 min 36 s pendant que
+deux contrôles locaux tournaient en parallèle ; pics mémoire 2 248 Mo, Blender 3 778 Mo) :
+672 924 triangles, maillage fermé d'un seul corps, CONFORME_AUX_CRITERES_CALCULES. Épaisseur min / p1
+1,97 / 2,68 mm ; contre-vérification sur 12 000 points : aucun point sous 0,8 mm, un seul sous 1,2 mm
+(0,93 mm, au pied du trait ; `contre_verification_epaisseur.json`) ; surplombs sur 9,4 % de la surface
+(supports organiques) ; centre de gravité à 44,5 mm du bord du socle ; tenons Ø 4 sous les colonnes du
+trait, Ø 5 sous le pied droit (le pied gauche est un troisième appui). Socle « basalte » de
+120 × 188 × 18 mm, imprimé retourné (surplombs 0,08 %). Tranchage estimé sous le profil d'hypothèse :
+figurine 16 h 34 et 133,9 g, socle 8 h 30 et 76,2 g. Visionneuse 13/13. Preuves :
+`preuves/execution-157d5194ebed0087-fusain/` ; fichiers et rendus dans le dossier du projet,
+`figurine-m08/fusain/`.
+
+Trois versions ont été écartées avant celle-ci, sans rien livrer. La première par le contrôle
+d'épaisseur de la chaîne (0,27 % de la surface sous 0,8 mm, minimum 0,05 mm) : bords de veste coupés
+presque parallèlement à l'étoffe, stries du trait cumulées, plis en étoile sous le genou gauche, fentes
+entre les doigts. La deuxième par l'assemblage : la figure sortait retournée (résidu ouvert du marching
+cubes) et l'union des tenons rendait 187 morceaux ; corrigé dans la chaîne pour toutes les figurines
+(`sculpt.drop_residue_and_orient`, test dédié). La troisième, conforme pour la chaîne, par la
+contre-vérification sur 12 000 points (arête haute de la ceinture à 0,25 mm) puis un contrôle local
+plus dense (lèvre de 0,13 mm au bout du bandage du poignet gauche). Causes et corrections : fiche D17.
+
+Limites : auto-évaluation sur rendus argile, sans revue indépendante ni impression. Restent faibles :
+le visage reste stylisé (arcade, nez et barbe lisibles, sans traits fins) ; poing et main ouverte sont
+des blocs aux doigts serrés ; vu de profil, le trait se lit comme une tige fine (un ruban vu par la
+tranche) ; les plis convergent encore en étoile adoucie sous le genou gauche ; la fumée est un ruban
+enroulé, pas une matière vaporeuse ; au pied du trait, une fente entre la volute de gauche et le petit
+bloc garde une peau de 0,7 mm (imprimable en FDM, à combler avant une version résine). Les stries fines
+du trait et les mèches relèvent de la résine (grille de conception, section 9). Grande échelle : à
+20 cm, la figurine seule mesure 188 mm de haut, tenons compris ; au-delà d'environ 23 cm, elle dépasse
+les 220 mm de hauteur du plateau d'hypothèse et doit être découpée en pièces, clés d'assemblage à
+concevoir.
+
 ## Grille artistique (auto-évaluation, pas une validation indépendante)
 
 | Critère | Observation | Niveau |
@@ -268,7 +316,7 @@ Détail chiffré : `preuves/boucles_2026-11-02.json`.
   `preuves/environnement_aligne_2026-11-02.json`, `preuves/atelier_three_core_verifie_2026-11-02.json`,
   `preuves/contre_epreuves_fabrication_v3_2026-11-02.json`, `preuves/execution-15546a650b8110ca-ardoise-v6/`,
   `preuves/contre_epreuves_details_v6_2026-11-02.json`, `preuves/socle-vitrine-hypothese-ronde-80/`,
-  `preuves/execution-ed77ed8e1f71b0f4-veille/`.
+  `preuves/execution-ed77ed8e1f71b0f4-veille/`, `preuves/execution-157d5194ebed0087-fusain/`.
 - Fichiers lourds hors Git (dossier du projet, `figurine-m08/`) : `figurine.stl`, `socle.stl`, `projet.3mf`,
   `rendus/` (vues + `figurine.blend`), `visionneuse/` (captures), `tranchage/apercu_couches_figurine.png`.
 - Choix sourcés : `REGISTRE_DECISIONS_M08.md`. Grille de conception : `GRILLE_CONCEPTION_FIGURINE.md`.

@@ -25,7 +25,7 @@ ap.add_argument('--mesh', type=Path)
 ap.add_argument('--provenance', type=Path, help='fiche de provenance/licence du maillage fourni')
 ap.add_argument('--audio', type=Path)
 ap.add_argument('--voxel', type=float, default=None,
-                help='pas de grille en mm ; par défaut celui du personnage (Sentinelle 0,6, Ardoise et Veille 0,4)')
+                help='pas de grille en mm ; par défaut celui du personnage (Sentinelle 0,6 ; Ardoise, Veille et Fusain 0,4)')
 ap.add_argument('--fault', action='append', default=[], help='injection de panne (tests)')
 ap.add_argument('--render-size', type=int, default=900)
 a = ap.parse_args()

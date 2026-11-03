@@ -12,9 +12,12 @@
    Veille, héroïne du film BOJ.ART « Un seul trait » (fiche D16) :
    `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi la figurine Veille 3D imprimable dans une position stylée, iconique et remarquable."`
    (« figurine » ou « 3D » est nécessaire : seul, « veille » est un mot courant).
+   Fusain, lutteur original « dans le style de BOJ » (fiche D17) :
+   `python jarvis/tools/figurine_pipeline.py "Jarvis, crée-moi la figurine Fusain 3D imprimable dans une position stylée, iconique et remarquable."`
+   (« un portrait au fusain » ou « des fusains » ne lancent rien).
    Résultats dans `runs/figurine/<id>/` (hors Git) : `manifest.json`, `checks.json`, `rendus/`, `tranchage/`.
 4. Visionneuse : `node jarvis/tools/figurine_viewer_check.cjs runs/figurine/<id>`.
-5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (34 tests, ~90 s).
+5. Tests : `cd jarvis && python -m unittest tests.test_figurine_m08 -v` (39 tests, ~120 s).
 
 Règles à garder : un personnage tiers reste BLOQUÉ sans maillage fourni et fiche de provenance ;
 aucun G-code n'est envoyé ; une dépendance absente donne BLOQUÉ, jamais une réussite ; un doublon de

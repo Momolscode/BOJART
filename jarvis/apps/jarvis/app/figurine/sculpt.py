@@ -108,7 +108,7 @@ def characters():
     calcul) ; la Sentinelle garde sa grille fixe pour rester identique aux preuves publiées. « voxel » et
     « smooth_iterations » : pas de grille et lissage par défaut (les détails d'Ardoise demandent 0,4 mm).
     « socle » : style de socle (fabrication.SOCLE_STYLES)."""
-    from . import ardoise, veille
+    from . import ardoise, fusain, veille
     return {
         'sentinelle': {'version': SCULPT_VERSION, 'poses': POSES, 'sdf': figure_sdf, 'bounds': SENTINELLE_BOUNDS,
                        'tight': False, 'intent_poses': {'combat': 'garde_basse', 'rest': 'repos_fier'},
@@ -121,6 +121,10 @@ def characters():
                    'bounds': veille.BOUNDS, 'tight': True, 'intent_poses': veille.INTENT_POSES,
                    'voxel': veille.DETAIL['voxel'], 'smooth_iterations': veille.DETAIL['smooth_iterations'],
                    'socle': veille.SOCLE},
+        'fusain': {'version': fusain.FUSAIN_VERSION, 'poses': fusain.POSES, 'sdf': fusain.fusain_sdf,
+                   'bounds': fusain.BOUNDS, 'tight': True, 'intent_poses': fusain.INTENT_POSES,
+                   'voxel': fusain.DETAIL['voxel'], 'smooth_iterations': fusain.DETAIL['smooth_iterations'],
+                   'socle': fusain.SOCLE},
     }
 
 
@@ -253,13 +257,24 @@ def sculpt_figure(pose: str, voxel: float = 0.6, smooth_iterations: int | None =
         flat = mesh.vertices[z0].copy()
         trimesh.smoothing.filter_taubin(mesh, lamb=0.5, nu=-0.53, iterations=smooth_iterations)
         mesh.vertices[z0] = flat  # garder les semelles planes pour le contact au socle
+    return drop_residue_and_orient(mesh, voxel)
+
+
+def drop_residue_and_orient(mesh, voxel: float):
+    """Retire les résidus numériques du marching cubes (volume < 1 mm³ et plus petits que deux voxels,
+    comptés) puis oriente chaque corps fermé vers l'extérieur. Un vrai élément flottant (volume réel)
+    reste et sera éliminatoire aux contrôles. Renvoie (maillage, nombre de corps hors résidus).
+
+    L'orientation se vérifie corps par corps, après le retrait. Avant, trimesh n'inversait rien quand
+    l'ensemble n'était pas fermé : un résidu ouvert accroché à la figure suffisait à la laisser retournée
+    (volume négatif), et l'union des tenons rendait 187 morceaux (Fusain, 3 novembre 2026)."""
+    import trimesh
     parts = mesh.split(only_watertight=False)
-    # Résidus numériques du marching cubes : volume < 1 mm³ et plus petits que deux voxels. Retirés et
-    # comptés ; un vrai élément flottant (volume réel) reste et sera éliminatoire aux contrôles.
     residue = [q for q in parts if abs(q.volume) < 1.0 and float(q.extents.max()) < 2 * voxel]
     if residue and len(residue) < len(parts):
         kept = [q for q in parts if not any(q is r for r in residue)]
         mesh = kept[0] if len(kept) == 1 else trimesh.util.concatenate(kept)
+    mesh.fix_normals(multibody=True)
     mesh.metadata['marching_cubes_residue_removed'] = len(residue) if len(residue) < len(parts) else 0
     return mesh, len(parts) - mesh.metadata['marching_cubes_residue_removed']
 
