@@ -1,0 +1,893 @@
+{
+ "bench": "B3-controles-q12",
+ "status": "executed",
+ "executed_on": "2026-11-04T13:39:38Z",
+ "environment": {
+  "where": "conteneur Linux de session, sans GPU (pas la tour)",
+  "python": "3.13.18",
+  "trimesh": "4.11.1",
+  "manifold3d": "non exposé (épinglé 3.5.4)",
+  "m08_checks": "bojart.checks.v2",
+  "bed_hypothesis_mm": [
+   250.0,
+   210.0,
+   220.0
+  ]
+ },
+ "classes": [
+  "ILLISIBLE",
+  "A_REPRENDRE",
+  "A_REPARER",
+  "A_DECOUPER",
+  "A_CONFIRMER",
+  "PRET"
+ ],
+ "summary": {
+  "m08_alone": {
+   "ready_verdict_correct": 11,
+   "false_ready": [
+    "q08_piece_400mm.stl"
+   ],
+   "note": "M08 ne connaît que « prêt » / « non prêt » : on juge le verdict, pas la classe."
+  },
+  "proposed_gate": {
+   "class_correct": 12,
+   "false_ready": [],
+   "pass": true
+  },
+  "slicers_manifold_no": {
+   "prusaslicer_2_7_2": [
+    "q04_face_retiree.stl",
+    "q10_faces_dupliquees_degenerees.stl"
+   ],
+   "prusaslicer_2_9_7": [
+    "q04_face_retiree.stl",
+    "q10_faces_dupliquees_degenerees.stl"
+   ],
+   "orcaslicer_2_4_2": [
+    "q04_face_retiree.stl",
+    "q10_faces_dupliquees_degenerees.stl"
+   ]
+  },
+  "pass_rule": "12/12 bien classés, 0 déclaré prêt à tort (BANCS.json)"
+ },
+ "chain_probe": {
+  "q08_m08_slicing_stage": {
+   "status": "FAILED",
+   "returncode": 1,
+   "log_tail": "The object q08_piece_400mm.stl exceeds the maximum build volume height."
+  }
+ },
+ "files": [
+  {
+   "file": "q01_cube_20mm.stl",
+   "bytes": 684,
+   "sha256": "f98a52b98df45f3919af1834763c9899070dbaef6a847e8bd85ef366b14ee78b",
+   "expected": {
+    "class": "PRET",
+    "why": "cube fermé de 20 mm"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 12,
+    "ready": true,
+    "eliminatory": [],
+    "warnings": [],
+    "seconds": 0.034
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "PRET",
+    "reasons": [],
+    "seconds": 0.04,
+    "extents": [
+     20.0,
+     20.0,
+     20.0
+    ],
+    "m08_eliminatory": [],
+    "m08_warnings": []
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.08,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "8000.000488"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.08,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "8000.000488"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.08,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "8000.000488"
+    }
+   }
+  },
+  {
+   "file": "q02_cube_pouces.stl",
+   "bytes": 684,
+   "sha256": "dff25a44ff079f0800b0af2ab814fe7ef1bec7ca6d704670500e827f5e27121b",
+   "expected": {
+    "class": "A_CONFIRMER",
+    "why": "échelle : pouces probables (×25,4 → 20 mm)"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 12,
+    "ready": false,
+    "eliminatory": [
+     "100.0% de la surface sous 0.8 mm (z 0–1 mm)"
+    ],
+    "warnings": [],
+    "seconds": 0.031
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_CONFIRMER",
+    "reasons": [
+     "A_CONFIRMER : échelle suspecte (plus grande dimension 0.787) ; unités candidates : pouces (×25.4 → 20.0 mm) ; épaisseurs non évaluées avant confirmation"
+    ],
+    "seconds": 0.004,
+    "extents": [
+     0.7874,
+     0.7874,
+     0.7874
+    ]
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.04,
+     "size_x": "0.787402",
+     "size_y": "0.787402",
+     "size_z": "0.787402",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "0.488190"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "0.787402",
+     "size_y": "0.787402",
+     "size_z": "0.787402",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "0.488190"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.15,
+     "size_x": "0.787402",
+     "size_y": "0.787402",
+     "size_z": "0.787402",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "0.488190"
+    }
+   }
+  },
+  {
+   "file": "q03_cube_metres.stl",
+   "bytes": 684,
+   "sha256": "b2101c186a711dac72043ddcb093d1dae8ef91742063669c9c2b39599d47a350",
+   "expected": {
+    "class": "A_CONFIRMER",
+    "why": "échelle : mètres probables (×1000 → 20 mm)"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 12,
+    "ready": false,
+    "eliminatory": [
+     "100.0% de la surface sous 0.8 mm (z 0–0 mm)"
+    ],
+    "warnings": [],
+    "seconds": 0.03
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_CONFIRMER",
+    "reasons": [
+     "A_CONFIRMER : échelle suspecte (plus grande dimension 0.02) ; unités candidates : mètres (×1000 → 20.0 mm) ; épaisseurs non évaluées avant confirmation"
+    ],
+    "seconds": 0.003,
+    "extents": [
+     0.02,
+     0.02,
+     0.02
+    ]
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.04,
+     "size_x": "0.020000",
+     "size_y": "0.020000",
+     "size_z": "0.020000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "0.000008"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "0.020000",
+     "size_y": "0.020000",
+     "size_z": "0.020000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "0.000008"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.07,
+     "size_x": "0.020000",
+     "size_y": "0.020000",
+     "size_z": "0.020000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "0.000008"
+    }
+   }
+  },
+  {
+   "file": "q04_face_retiree.stl",
+   "bytes": 584,
+   "sha256": "b98fab01d1f4e644d2fcb92c34d3b43c68abf44c8c82ef303938ea920e4ebc0c",
+   "expected": {
+    "class": "A_REPARER",
+    "why": "trou : bords libres"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 10,
+    "ready": false,
+    "eliminatory": [
+     "volume non fermé",
+     "4 arêtes non-manifold"
+    ],
+    "warnings": [],
+    "seconds": 0.009
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_REPARER",
+    "reasons": [
+     "A_REPARER : 4 bord(s) libre(s) : trou à boucher avec accord"
+    ],
+    "seconds": 0.001,
+    "extents": [
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "10",
+     "manifold": "no",
+     "number_of_parts": "1",
+     "volume": "8000.000488",
+     "open_edges": "4"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "10",
+     "manifold": "no",
+     "number_of_parts": "1",
+     "volume": "8000.000488",
+     "open_edges": "4"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.08,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "10",
+     "manifold": "no",
+     "number_of_parts": "1",
+     "volume": "8000.000488",
+     "open_edges": "4"
+    }
+   }
+  },
+  {
+   "file": "q05_normales_inversees.stl",
+   "bytes": 684,
+   "sha256": "672723017339d66c1646c2f93115da01f3fb8f87faa9d42367e52e8d1cb526dc",
+   "expected": {
+    "class": "A_REPARER",
+    "why": "normales inversées"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 12,
+    "ready": false,
+    "eliminatory": [
+     "volume négatif (normales inversées)"
+    ],
+    "warnings": [],
+    "seconds": 0.018
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_REPARER",
+    "reasons": [
+     "A_REPARER : normales inversées (volume négatif) : retournement avec accord"
+    ],
+    "seconds": 0.003,
+    "extents": [
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.04,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "8000.000488",
+     "facets_reversed": "12"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "8000.000488",
+     "facets_reversed": "12"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.06,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "8000.000488"
+    }
+   }
+  },
+  {
+   "file": "q06_cubes_chevauchants.stl",
+   "bytes": 1284,
+   "sha256": "7ed8139b51e2c9bfd2525b942e68c2476d49e960d33c9dd3a739876462447bef",
+   "expected": {
+    "class": "A_REPARER",
+    "why": "corps qui se chevauchent : union à faire"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 24,
+    "ready": false,
+    "eliminatory": [
+     "1 élément(s) flottant(s)"
+    ],
+    "warnings": [],
+    "seconds": 0.028
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_REPARER",
+    "reasons": [
+     "A_REPARER : 2 corps qui se chevauchent (3000.0 mm³ en commun) : union avec accord"
+    ],
+    "seconds": 0.004,
+    "extents": [
+     30.0,
+     25.0,
+     20.0
+    ]
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.04,
+     "size_x": "30.000000",
+     "size_y": "25.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "16000.000977"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "30.000000",
+     "size_y": "25.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "16000.000977"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.09,
+     "size_x": "30.000000",
+     "size_y": "25.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "16000.000977"
+    }
+   }
+  },
+  {
+   "file": "q07_paroi_0_3mm.stl",
+   "bytes": 1484,
+   "sha256": "d1424cd2918c4edfd27a06d986e2ea0f62bb57c5387a93e5c32910cfb42391a2",
+   "expected": {
+    "class": "A_REPRENDRE",
+    "why": "paroi sous 0,8 mm"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 28,
+    "ready": false,
+    "eliminatory": [
+     "51.2% de la surface sous 0.8 mm (z 2–17 mm)"
+    ],
+    "warnings": [],
+    "seconds": 0.029
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_REPRENDRE",
+    "reasons": [
+     "A_REPRENDRE : paroi : 51.2% de la surface sous 0.8 mm (z 2–17 mm)"
+    ],
+    "seconds": 0.031,
+    "extents": [
+     20.0,
+     10.0,
+     17.0
+    ],
+    "m08_eliminatory": [
+     "51.2% de la surface sous 0.8 mm (z 2–17 mm)"
+    ],
+    "m08_warnings": []
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "20.000000",
+     "size_y": "10.000000",
+     "size_z": "17.000000",
+     "number_of_facets": "28",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "489.999939"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.06,
+     "size_x": "20.000000",
+     "size_y": "10.000000",
+     "size_z": "17.000000",
+     "number_of_facets": "28",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "489.999939"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.09,
+     "size_x": "20.000000",
+     "size_y": "10.000000",
+     "size_z": "17.000000",
+     "number_of_facets": "28",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "490.000000"
+    }
+   }
+  },
+  {
+   "file": "q08_piece_400mm.stl",
+   "bytes": 684,
+   "sha256": "1a19971ba8d62b7e45595340a10ac7c1946f5e721e5c2ae11f05bb41a50b0fc5",
+   "expected": {
+    "class": "A_DECOUPER",
+    "why": "hors du volume machine"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 12,
+    "ready": true,
+    "eliminatory": [],
+    "warnings": [],
+    "seconds": 0.029
+   },
+   "m08_alone_verdict_ok": false,
+   "proposed_gate": {
+    "class": "A_DECOUPER",
+    "reasons": [
+     "A_DECOUPER : 40×40×400 mm hors du volume 250×210×220 mm (rotation en Z comprise) : découpe B5"
+    ],
+    "seconds": 0.028,
+    "extents": [
+     40.0,
+     40.0,
+     400.0
+    ],
+    "m08_eliminatory": [],
+    "m08_warnings": []
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.15,
+     "size_x": "40.000000",
+     "size_y": "40.000000",
+     "size_z": "400.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "640000.000000"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.12,
+     "size_x": "40.000000",
+     "size_y": "40.000000",
+     "size_z": "400.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "640000.000000"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.08,
+     "size_x": "40.000000",
+     "size_y": "40.000000",
+     "size_z": "400.000000",
+     "number_of_facets": "12",
+     "manifold": "yes",
+     "number_of_parts": "1",
+     "volume": "640000.000000"
+    }
+   }
+  },
+  {
+   "file": "q09_arete_non_variete.stl",
+   "bytes": 1284,
+   "sha256": "fc5c0425b2f33cd4d62d67a6090003ded87d4f66acd0c6e754642cb2e752354d",
+   "expected": {
+    "class": "A_REPRENDRE",
+    "why": "arête partagée par plus de deux faces"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 24,
+    "ready": false,
+    "eliminatory": [
+     "volume non fermé",
+     "1 arêtes non-manifold",
+     "1 élément(s) flottant(s)"
+    ],
+    "warnings": [],
+    "seconds": 0.004
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_REPRENDRE",
+    "reasons": [
+     "A_REPRENDRE : 1 arête(s) partagée(s) par plus de deux faces : jonction à épaissir ou séparer"
+    ],
+    "seconds": 0.001,
+    "extents": [
+     40.0,
+     40.0,
+     20.0
+    ]
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.06,
+     "size_x": "40.000000",
+     "size_y": "40.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "16000.000977"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "40.000000",
+     "size_y": "40.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "16000.000977"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.07,
+     "size_x": "40.000000",
+     "size_y": "40.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "16000.000977"
+    }
+   }
+  },
+  {
+   "file": "q10_faces_dupliquees_degenerees.stl",
+   "bytes": 834,
+   "sha256": "1e4ef20f34f660234ab762717b8f4511cc56c23a1e3f029a11c093f042c45597",
+   "expected": {
+    "class": "A_REPARER",
+    "why": "faces dupliquées et dégénérées"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 15,
+    "ready": false,
+    "eliminatory": [
+     "volume non fermé",
+     "7 arêtes non-manifold",
+     "5 élément(s) flottant(s)"
+    ],
+    "warnings": [],
+    "seconds": 0.004
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_REPARER",
+    "reasons": [
+     "A_REPARER : 2 face(s) dupliquée(s), 1 dégénérée(s) : nettoyage avec accord"
+    ],
+    "seconds": 0.002,
+    "extents": [
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "15",
+     "manifold": "no",
+     "number_of_parts": "2",
+     "volume": "8000.000488",
+     "open_edges": "5"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "15",
+     "manifold": "no",
+     "number_of_parts": "2",
+     "volume": "8000.000488",
+     "open_edges": "5"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.07,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "15",
+     "manifold": "no",
+     "number_of_parts": "2",
+     "volume": "8000.000488",
+     "open_edges": "5"
+    }
+   }
+  },
+  {
+   "file": "q11_stl_tronque.stl",
+   "bytes": 38450,
+   "sha256": "f29937500a5cf495fc7fb5d98a55855cd25ecded98955cc10b5093d721b154a3",
+   "expected": {
+    "class": "ILLISIBLE",
+    "why": "STL binaire tronqué"
+   },
+   "m08_alone": {
+    "loaded": false,
+    "error": "ModuleNotFoundError: No module named 'charset_normalizer'",
+    "ready": false,
+    "seconds": 0.001
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "ILLISIBLE",
+    "reasons": [
+     "ILLISIBLE : STL binaire annonçant 1280 faces : 38450 octets au lieu de 64084"
+    ],
+    "seconds": 0.0
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 1,
+     "seconds": 0.04,
+     "messages": [
+      "[2026-11-04 13:39:38.344673] [0x00007f9092a1f180] [error]   stl_open_count_facets: The file <travail>/q11_stl_tronque.stl has the wrong size.",
+      "<travail>/q11_stl_tronque.stl: Loading of a model file failed."
+     ]
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 1,
+     "seconds": 0.05,
+     "messages": [
+      "[2026-11-04 13:39:38.395560] [0x00007fbb335fe100] [error]   stl_open_count_facets: The file <travail>/q11_stl_tronque.stl has the wrong size.",
+      "<travail>/q11_stl_tronque.stl: Loading of a model file failed."
+     ]
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 250,
+     "seconds": 0.07,
+     "messages": [
+      "run found error, return -6, exit...",
+      "<travail>/q11_stl_tronque.stl: Loading of a model file failed."
+     ]
+    }
+   }
+  },
+  {
+   "file": "q12_cavite_fermee.stl",
+   "bytes": 1284,
+   "sha256": "7fd95ae3f99ffdc675502914038dee29aee4ccc9d3da652f87ada479066968b9",
+   "expected": {
+    "class": "A_CONFIRMER",
+    "why": "cavité fermée : drainage en résine"
+   },
+   "m08_alone": {
+    "loaded": true,
+    "triangles_loaded": 24,
+    "ready": false,
+    "eliminatory": [
+     "1 élément(s) flottant(s)"
+    ],
+    "warnings": [],
+    "seconds": 0.035
+   },
+   "m08_alone_verdict_ok": true,
+   "proposed_gate": {
+    "class": "A_CONFIRMER",
+    "reasons": [
+     "A_CONFIRMER : 1 cavité(s) fermée(s) : sans effet en FDM, trous de drainage obligatoires en résine"
+    ],
+    "seconds": 0.045,
+    "extents": [
+     20.0,
+     20.0,
+     20.0
+    ],
+    "m08_eliminatory": [
+     "1 élément(s) flottant(s)"
+    ],
+    "m08_warnings": []
+   },
+   "proposed_gate_ok": true,
+   "slicers_info": {
+    "prusaslicer_2_7_2": {
+     "returncode": 0,
+     "seconds": 0.05,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "7000.000977"
+    },
+    "prusaslicer_2_9_7": {
+     "returncode": 0,
+     "seconds": 0.08,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "7000.000977"
+    },
+    "orcaslicer_2_4_2": {
+     "returncode": 0,
+     "seconds": 0.07,
+     "size_x": "20.000000",
+     "size_y": "20.000000",
+     "size_z": "20.000000",
+     "number_of_facets": "24",
+     "manifold": "yes",
+     "number_of_parts": "2",
+     "volume": "7000.000977"
+    }
+   }
+  }
+ ],
+ "limits": [
+  "fichiers synthétiques simples : un vrai scan ou une sortie IA cumule plusieurs défauts",
+  "la porte proposée est écrite pour ce banc, pas intégrée à la chaîne M08",
+  "classes attendues fixées avant exécution dans EXPECTED"
+ ],
+ "manual_observations": [
+  {
+   "what": "q11 (STL tronqué) dans la chaîne M08 avec charset_normalizer installé",
+   "how": "environnement à part (venv + charset_normalizer 3.5.1), trimesh 4.11.1 : trimesh.load(q11, force=\"mesh\") puis checks.check_part",
+   "observed": "trimesh charge un maillage VIDE (0 face) sans erreur ; check_part plante ensuite (TypeError: NoneType not iterable)",
+   "meaning": "sans charset_normalizer (requirements-figurine.txt), le chargement lève ModuleNotFoundError ; avec, il rend un maillage vide. Dans les deux cas la chaîne s’arrête par un plantage, pas par un refus motivé : il faut un contrôle d’octets avant trimesh."
+  }
+ ]
+}

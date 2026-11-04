@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "checked_on": "2026-11-04",
- "status_all": "not_executed",
+ "status_all": "B3, B4 et B5 exécutés le 2026-11-04 (conteneur, sans tour) ; B1 approuvé mais bloqué par le solde Higgsfield ; B2, B6, B7, B8 non exécutés",
  "common_protocol": "Entrée : un personnage ORIGINAL BOJ.ART (Veille, Ardoise ou Fusain), jamais un personnage protégé. PNG RGBA 1024 px détouré à la main ou par BiRefNet (MIT), jamais RMBG-1.4/2.0. Reçu par essai : version de l'outil, empreinte des poids ou identifiant de job, graine, paramètres, coût, durées, SHA-256 des sorties. Contrôles d'impression = ceux de la chaîne M08 (trimesh, manifold3d, PrusaSlicer CLI). Aucun temps H100/A100 repris comme performance de la tour.",
  "benches": [
   {
@@ -64,7 +64,18 @@
    "pass": "12/12 bien classés, 0 déclaré prêt à tort",
    "cost": "0 €",
    "requires": [],
-   "can_run_now": true
+   "can_run_now": true,
+   "status": "executed",
+   "executed_on": "2026-11-04",
+   "result_file": "bancs/B3-resultats.json",
+   "script": "bancs/b3_q12.py",
+   "verdict": "contrôles M08 seuls : 11/12 verdicts justes, 1 faux « prêt » (pièce de 400 mm, arrêtée plus loin par le trancheur) ; porte d’import proposée : 12/12, 0 faux « prêt », mais écrite en connaissant les pièges",
+   "findings": [
+    "unités : M08 refuse les cubes en pouces et en mètres pour une fausse raison (« paroi < 0,8 mm ») au lieu de signaler l’échelle",
+    "STL tronqué : M08 plante (ModuleNotFoundError charset_normalizer, ou maillage vide puis TypeError) au lieu de refuser",
+    "trancheurs en second avis (2.7.2, 2.9.7, Orca 2.4.2) : ne voient que 3 défauts sur 11 (trou, faces dupliquées, fichier tronqué) ; PrusaSlicer retourne les normales sans le dire, Orca ne le signale pas",
+    "chevauchement, arête non-variété et cavité fermée : « manifold = yes » pour les trois trancheurs"
+   ]
   },
   {
    "id": "B4-trancheurs",
@@ -83,7 +94,19 @@
    "pass": "0 erreur ; G-code accepté par le relecteur ; écarts expliqués",
    "cost": "0 €",
    "requires": [],
-   "can_run_now": true
+   "can_run_now": true,
+   "status": "executed",
+   "executed_on": "2026-11-04",
+   "result_file": "bancs/B4-resultats.json",
+   "script": "bancs/b4_trancheurs.py",
+   "verdict": "0 erreur, G-code accepté par le relecteur pour les trois, sorties déterministes ; 2.7.2 reproduit au chiffre près le tranchage M08 du 2 novembre ; écarts expliqués",
+   "findings": [
+    "Ardoise v6 : 2.7.2 11 h 58 min 43 s / 98,57 g ; 2.9.7 12 h 0 min 1 s / 98,55 g ; Orca 2.4.2 14 h 5 min 27 s / 110,85 g",
+    "écart Orca : supports organiques +49 % de filament (15 821 contre 10 609 mm), pleins −43 % ; parois et remplissage à 2 % près",
+    "tranchage d’Ardoise : médiane 28,4 s (2.7.2), 29,3 s (2.9.7), 35,5 s (Orca), conteneur 4 cœurs",
+    "Orca ajoute M190 et M104 sans M109 malgré un début personnalisé sans chauffe : extrusion possible buse froide sur une vraie machine ; le début de G-code de la tour devra porter M109",
+    "Orca applique ses propres vitesses si le profil ne les écrit pas (débit volumique 2 mm³/s par défaut) : profil traduit à écrire en clair"
+   ]
   },
   {
    "id": "B5-decoupe-1m",
@@ -103,7 +126,18 @@
    "requires": [
     "jeu réel à mesurer plus tard sur coupon imprimé (N3, opérateur)"
    ],
-   "can_run_now": true
+   "can_run_now": true,
+   "status": "executed",
+   "executed_on": "2026-11-04",
+   "result_file": "bancs/B5-resultats.json",
+   "script": "bancs/b5_decoupe_1m.py",
+   "verdict": "réussi en v2 : Ardoise à 1 000 mm, 18 pièces étanches dans le volume 240×200×220, 34 goujons (31 de 8 mm, 3 de 4 mm), écart de remontage 0,00003 mm, aucune interférence de goujon ; v1 échouait (trous débouchants, écart 2,5 mm)",
+   "findings": [
+    "2 joints sur 18 sans place pour graver le numéro : repère dans le manifeste",
+    "les alertes « paroi < 0,8 mm » de M08 sur 11 pièces viennent à 38 sur 39 du biseau le long des coupes",
+    "outil Couper en ligne de commande inutilisable comme secours : 2.7.2 n’écrit rien, 2.9.7 superpose les deux moitiés dans un STL et écrase l’entrée sans --output",
+    "jeu de 0,15 mm par côté et profondeurs = hypothèses à calibrer sur coupon imprimé (N3)"
+   ]
   },
   {
    "id": "B6-resine",

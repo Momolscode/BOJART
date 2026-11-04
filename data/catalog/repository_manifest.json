@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11563,
-      "sha256": "615c9ea6dc6d21bca4a31ec467b90d4a162cec8e2417ea504584d5539db73c2d"
+      "bytes": 11653,
+      "sha256": "6e3ea359c4afc6c70b8339bf8dd1c3c8ea34171cc145ee5db530e7dde90aba98"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 43770,
-      "sha256": "f67f9282017dd06adf83bb152fa9394f6f75f67ee3e508b7bcebab9255d0e0ec"
+      "bytes": 44849,
+      "sha256": "bce32d07403e3cbeeaa53cd341f82b4b3515a6ae7dca993f091c9546f1a2abfc"
     },
     {
       "path": "creative/CURRENT.md",
@@ -1164,8 +1164,8 @@
     },
     {
       "path": "docs/research/conception-3d-2026-11-04/BANCS.json",
-      "bytes": 5728,
-      "sha256": "6550751d2ba6ca69aea1c9087d485f28c5ac5897f8af37a5d014119e5254b943"
+      "bytes": 8795,
+      "sha256": "86b3ea1dd595a9e6172a038946478d734979fb94b4cba7986c6fe9121cef693e"
     },
     {
       "path": "docs/research/conception-3d-2026-11-04/CATALOGUE.json",
@@ -1174,13 +1174,43 @@
     },
     {
       "path": "docs/research/conception-3d-2026-11-04/README.md",
-      "bytes": 6384,
-      "sha256": "872445ea76e5cb7dc3558eff0789c9a3dc9711cadd42df8bc4f3b8409bff2847"
+      "bytes": 9967,
+      "sha256": "534c202c6e58dfe540aab5efc71b45a8b5afb2163a798ae66aaa621346dc1862"
     },
     {
       "path": "docs/research/conception-3d-2026-11-04/VERIFICATIONS.json",
       "bytes": 2049,
       "sha256": "47e3098d576c05bede98742b4e919bb3c5fa40ec0ad3cbfa1632e61d3f2be147"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B3-resultats.json",
+      "bytes": 22036,
+      "sha256": "aaa891265b255fe6b9365c88804f2848c6fc9d914dc50bf21b19e60bfecdf44c"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B4-resultats.json",
+      "bytes": 21427,
+      "sha256": "1fa6ff403b348acae41ae7d18358bd360370ae75dd0892f749160d09047b45f2"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B5-resultats.json",
+      "bytes": 27942,
+      "sha256": "c32ef219d71471dc0b5ace9afcc5a43b929e518e419b8e7aec15131c62773a01"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b3_q12.py",
+      "bytes": 17097,
+      "sha256": "00c3235c144fefb16d9670a405b964275afe51430741738d0d15be77e277d5d2"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b4_trancheurs.py",
+      "bytes": 19393,
+      "sha256": "b4667590548e4ba84dc1dabc6881b9d321a1742cdeeb85bd020cafbd2efb2ac6"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b5_decoupe_1m.py",
+      "bytes": 19891,
+      "sha256": "74d012d010a303e03842e5a4da1853a431563de643e642a0cb711359654e91df"
     },
     {
       "path": "docs/research/conception-3d-2026-11-04/higgsfield-couts-3d.json",
@@ -2789,8 +2819,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 15335,
-      "sha256": "654a29ba94368833a8a1c0008a482c169374305610bde8c6aee75b5b29f1478f"
+      "bytes": 15596,
+      "sha256": "188e6e1da4b77514d32ed6acf01910e70c60d219c1ccfb12a90cbc396229cdd5"
     },
     {
       "path": "ops/request-example.json",

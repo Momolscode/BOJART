@@ -48,6 +48,7 @@ Contre-vérifications faites par le fil principal : `VERIFICATIONS.json`.
 | `higgsfield-couts-3d.json` | Coûts en crédits relevés par préflight, sans job soumis |
 | `BANCS.json` | 8 bancs d'essai proposés avec mesures et seuils, tous non exécutés |
 | `VERIFICATIONS.json` | Affirmations recoupées par le fil principal |
+| `bancs/` | Scripts et résultats des bancs B3, B4 et B5 exécutés le 4 novembre (aucun maillage ni G-code versionné, empreintes seules) |
 
 Recommandations : 27 essais prioritaires, 43 candidats, 47 recherche seulement, 28 rejetés, 4 déjà présents, 12 conditionnés à l'inventaire. « Essai prioritaire » veut dire « à mesurer en premier », pas « adopté ».
 
@@ -58,8 +59,31 @@ Recommandations : 27 essais prioritaires, 43 candidats, 47 recherche seulement, 
 - Ce n'est pas un avis juridique. Relire les licences maison (Hi3D, DINOv3, Stability, CGU des services) avant une vente.
 - Aucun personnage protégé n'est utilisé ni proposé en entrée.
 
+## Bancs gratuits exécutés le 4 novembre 2026
+
+Exécutés dans le conteneur de session (Linux, 4 cœurs, sans GPU), pas sur la tour. PrusaSlicer 2.7.2 vient d'Ubuntu ; PrusaSlicer 2.9.7 et OrcaSlicer 2.4.2 viennent de Flathub, lancés hors bac à sable. Rien n'est imprimé ni envoyé à une machine.
+
+**B3, 12 fichiers piégés** (`bancs/B3-resultats.json`). Les contrôles M08 seuls donnent 11 verdicts justes sur 12 et un faux « prêt » : la pièce de 400 mm passe, puis le trancheur l'arrête. Trois verdicts justes le sont pour une mauvaise raison : les cubes en pouces et en mètres sont refusés pour « paroi < 0,8 mm » au lieu d'une échelle suspecte, et le STL tronqué fait planter la chaîne au lieu d'être refusé. Les trancheurs en second avis ne voient que 3 défauts sur 11. PrusaSlicer retourne des normales inversées sans le signaler. Chevauchement, arête non-variété et cavité fermée passent en « manifold = yes ». La porte d'import proposée (contrôle d'octets, échelle, volume machine, coques, puis contrôles M08) classe les 12 fichiers correctement, mais elle a été écrite en connaissant les pièges : elle reste à éprouver sur des fichiers réels (sorties B1, scans).
+
+**B4, trancheurs** (`bancs/B4-resultats.json`). Aucun des trois trancheurs ne fait d'erreur, chacun est déterministe et le relecteur de G-code accepte les trois sorties : liste blanche, bornes du volume, températures.
+
+| Ardoise v6, profil M08 | Temps estimé | Filament | Tranchage (médiane, n = 3) |
+|---|---|---|---|
+| PrusaSlicer 2.7.2 | 11 h 58 min 43 s | 98,57 g | 28,4 s |
+| PrusaSlicer 2.9.7 | 12 h 0 min 1 s | 98,55 g | 29,3 s |
+| OrcaSlicer 2.4.2, profil traduit | 14 h 5 min 27 s | 110,85 g | 35,5 s |
+
+La 2.7.2 reproduit au chiffre près le tranchage M08 du 2 novembre. La montée en 2.9.7 ne change presque rien sur ce profil. L'écart d'Orca vient de ses supports organiques (+49 % de filament) ; parois et remplissage restent à 2 % près. Deux pièges sont relevés pour Orca. Sans valeurs écrites en clair, il applique les siennes (débit plafonné à 2 mm³/s). Il ajoute aussi une chauffe M190 et M104 sans attente M109 : le début de G-code des vraies machines devra porter M109.
+
+**B5, découpe à 1 m** (`bancs/B5-resultats.json`). Ardoise passe à 1 000 mm (443 × 391 × 1 000 mm) et donne 18 pièces étanches qui tiennent dans 240 × 200 × 220 mm. Le banc place 34 goujons (31 de 8 mm, 3 de 4 mm) et grave le numéro de joint sur les deux faces, lisible de chaque côté. Après export STL et remontage virtuel, l'écart avec le modèle d'origine est de 0,00003 mm, sans interférence de goujon. La première exécution échouait avec 2,5 mm d'écart : des trous débouchaient là où la peau rentre près du plan de coupe. La position des goujons est maintenant vérifiée sur toute leur profondeur. Restent trois points :
+- deux joints n'ont pas la place d'un numéro gravé ;
+- les alertes « paroi fine » de M08 sur ces pièces viennent presque toutes du biseau le long des coupes ;
+- l'outil Couper de PrusaSlicer en ligne de commande ne sert pas de secours. La 2.7.2 n'écrit rien. La 2.9.7 superpose les deux moitiés dans un seul STL et, sans `--output`, écrase le fichier d'entrée.
+
+Le jeu des goujons (0,15 mm par côté) reste une hypothèse à mesurer sur un coupon imprimé.
+
 ## Prochaine preuve
 
-1. B3 (12 fichiers piégés), B4 (PrusaSlicer 2.7.2 contre 2.9.7 et OrcaSlicer 2.4.2) et B5 (découpe d'un personnage original à 1 m) peuvent tourner sans la tour ni dépense.
-2. B1 (IA en ligne sur Veille, 88 crédits Higgsfield) attend l'accord explicite de l'utilisateur.
-3. B2, B6, B7 et B8 attendent la tour, l'inventaire des machines ou des photos d'œuvre.
+1. B1 (IA en ligne sur Veille, 88 crédits Higgsfield) est approuvé par l'utilisateur et attend la recharge du compte.
+2. Intégrer à la chaîne M08, avec leurs tests, la porte d'import de B3 et la découpe de B5. Il faut aussi traiter à part le biseau des pièces découpées.
+3. B2, B6, B7 et B8 attendent la tour, l'inventaire des machines ou des photos d'œuvre. Sur la tour, rejouer B4 avec les installations Windows de PrusaSlicer 2.9.7 et d'OrcaSlicer 2.4.2.

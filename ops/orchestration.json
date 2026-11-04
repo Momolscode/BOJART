@@ -460,14 +460,17 @@
       "title": "Mesurer les outils de conception 3D candidats (bancs B1 à B8)",
       "domain": "research",
       "priority": 2,
-      "status": "planned",
+      "status": "in_progress",
       "depends_on": [],
       "blockers": [
-        "B1 attend l'accord de l'utilisateur sur la dépense (88 crédits) ; B2, B6, B7, B8 attendent la tour, l'inventaire des machines ou des photos d'œuvre."
+        "B1 approuvé par l'utilisateur le 2026-11-04, bloqué par le solde Higgsfield (0,65 crédit pour 88) ; B2, B6, B7, B8 attendent la tour, l'inventaire des machines ou des photos d'œuvre."
       ],
       "evidence": [
         "docs/research/conception-3d-2026-11-04/README.md",
-        "docs/research/conception-3d-2026-11-04/BANCS.json"
+        "docs/research/conception-3d-2026-11-04/BANCS.json",
+        "docs/research/conception-3d-2026-11-04/bancs/B3-resultats.json",
+        "docs/research/conception-3d-2026-11-04/bancs/B4-resultats.json",
+        "docs/research/conception-3d-2026-11-04/bancs/B5-resultats.json"
       ],
       "acceptance": "Chaque banc exécuté laisse versions, empreintes, durées et reçus ; un outil n'est adopté qu'après avoir passé son seuil. B3, B4 et B5 tournent sans tour ni dépense."
     }
