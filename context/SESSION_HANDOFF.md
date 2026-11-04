@@ -242,3 +242,19 @@ Limites. Le corps de la conversation n'est pas lu. Les documents internes I1–I
 Prochaine preuve : fiche d'acceptation STRATES (G0) signée, puis coupons mesurés avec incertitude. Le choix d'un stockage privé pour le PDF, les vidéos, le texte de la conversation et les rapports V5 revient à l'utilisateur.
 
 Correctif CI Windows : `OwnerLock` comparait le chemin résolu du dossier `.ask-locks` à son chemin absolu non résolu. Sous Windows, un nom court 8.3 du dossier temporaire suffisait à signaler une redirection : trois tests `test_ask_requests` échouaient. Un parent lié produit le même faux positif sous Linux ou macOS. L'état est désormais résolu avant comparaison ; seul un `.ask-locks` lien ou jonction reste refusé. Deux tests sont ajoutés : un parent lié est accepté, un dossier de verrous redirigé est refusé sans réservation. Le premier échoue sans la correction.
+
+## Veille des outils de conception 3D — 4 novembre 2026
+
+Objectif : demande d'Olsen du 4 novembre (« chercher les données nécessaires pour la conception 3D, tous les outils dont on pourrait avoir besoin »). Base : `main` à `3436f5352659554e4bac5af492b94af6c522ed2d`, plus la branche de la PR #15 (chaîne M08) relue pour ne pas dupliquer.
+
+Faits nouveaux. 161 fiches sourcées en cinq domaines : IA 3D locale, IA 3D en ligne et rig, modélisation et numérisation, préparation à l'impression, pilotage et données. Coûts 3D Higgsfield relevés par préflight sans job soumis : Tripo H3.1 de 6 à 12 crédits, Hunyuan3D v3 de 7 à 11, Meshy 7 de 25 à 38. Contradictions avec le dépôt : PrusaSlicer 2.7.2 contre 2.9.7 en amont ; Blender 4.0.2 contre 5.2.3 LTS (API Python changée en 5.2) ; TRELLIS.2 désormais natif dans ComfyUI sous Windows (int8 de 5,25 Go, 8 Go non mesurés) ; chemin par défaut de TripoSG non commercial (RMBG-1.4 et diso, vérifiés) ; exclusion UE de Hunyuan3D étendue à toute la famille ouverte. Les archives du site citent des Ender 5 Pro/Plus et Elegoo Saturn/Mars : indice, pas inventaire.
+
+Décisions. Aucune adoption : les fiches sont des candidats, et l'ordre des essais est une proposition. Huit bancs sont décrits dans `BANCS.json`, tous non exécutés. B1 (88 crédits) attend l'accord de l'utilisateur.
+
+Fichiers : `docs/research/conception-3d-2026-11-04/`, `data/knowledge/index.json`, `ops/orchestration.json` (tâche `conception-3d-bancs`), `context/CURRENT.md` et le manifeste du dépôt.
+
+Limites. Lecture web seulement, recoupement partiel (`VERIFICATIONS.json`). Plusieurs prix restent marqués non vérifiés. Rien d'installé, d'acheté, de généré ni de mesuré sur la tour. Pas un avis juridique.
+
+Prochaine preuve : B3, B4 et B5, qui tournent sans tour ni dépense ; puis l'inventaire réel des imprimantes, dont dépendent le trancheur, les profils et le pilotage.
+
+Suite du 4 novembre, bancs gratuits (conteneur Linux, sans GPU, pas la tour). B1 a été approuvé par l'utilisateur à 13:21 UTC, mais le compte Higgsfield n'a que 0,65 crédit : rien n'est lancé ni débité. B3 : les contrôles M08 laissent passer une pièce de 400 mm (arrêtée ensuite par le trancheur), refusent les erreurs d'unités pour une fausse raison et plantent sur un STL tronqué ; la porte d'import proposée classe les 12 pièges, mais elle a été écrite en les connaissant. B4 : PrusaSlicer 2.7.2 reproduit au chiffre près le tranchage d'Ardoise v6 du 2 novembre ; 2.9.7 donne +0,2 % de temps ; OrcaSlicer 2.4.2 avec profil traduit +17,6 % de temps et +12,5 % de filament, dus à ses supports ; Orca chauffe sans M109. B5 : Ardoise à 1 m en 18 pièces avec 34 goujons, écart de remontage 0,00003 mm après correction des trous débouchants de la première exécution. Scripts et résultats : `docs/research/conception-3d-2026-11-04/bancs/`. Prochaine preuve : B1 après recharge ; intégrer la porte d'import et la découpe à la chaîne M08 avec tests.

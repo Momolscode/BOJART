@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 11653,
+      "sha256": "6e3ea359c4afc6c70b8339bf8dd1c3c8ea34171cc145ee5db530e7dde90aba98"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 44849,
+      "sha256": "bce32d07403e3cbeeaa53cd341f82b4b3515a6ae7dca993f091c9546f1a2abfc"
     },
     {
       "path": "creative/CURRENT.md",
@@ -464,8 +464,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 17977,
-      "sha256": "fc9c6ea6d92b3b1772be12863a6314513140ca73038a2d98966f684cdacd911b"
+      "bytes": 18905,
+      "sha256": "4f3b0dc49698d7c2ae7ee4095a5fbc328991a5e806ffdea760a32c52ae7aa833"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -1161,6 +1161,86 @@
       "path": "docs/research/audit-transversal-2026-11-02/sources-recherche-v5.json",
       "bytes": 11919,
       "sha256": "a16941a1a2f302082125045b9321147be1aaa723d728c546859784ed04f57308"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/BANCS.json",
+      "bytes": 8795,
+      "sha256": "86b3ea1dd595a9e6172a038946478d734979fb94b4cba7986c6fe9121cef693e"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/CATALOGUE.json",
+      "bytes": 117404,
+      "sha256": "2753325288d371d7e234256947e33f5c65e68c33694504e34302b683a8c9d547"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/README.md",
+      "bytes": 9967,
+      "sha256": "534c202c6e58dfe540aab5efc71b45a8b5afb2163a798ae66aaa621346dc1862"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/VERIFICATIONS.json",
+      "bytes": 2049,
+      "sha256": "47e3098d576c05bede98742b4e919bb3c5fa40ec0ad3cbfa1632e61d3f2be147"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B3-resultats.json",
+      "bytes": 22036,
+      "sha256": "aaa891265b255fe6b9365c88804f2848c6fc9d914dc50bf21b19e60bfecdf44c"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B4-resultats.json",
+      "bytes": 21427,
+      "sha256": "1fa6ff403b348acae41ae7d18358bd360370ae75dd0892f749160d09047b45f2"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B5-resultats.json",
+      "bytes": 27942,
+      "sha256": "c32ef219d71471dc0b5ace9afcc5a43b929e518e419b8e7aec15131c62773a01"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b3_q12.py",
+      "bytes": 17097,
+      "sha256": "00c3235c144fefb16d9670a405b964275afe51430741738d0d15be77e277d5d2"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b4_trancheurs.py",
+      "bytes": 19393,
+      "sha256": "b4667590548e4ba84dc1dabc6881b9d321a1742cdeeb85bd020cafbd2efb2ac6"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b5_decoupe_1m.py",
+      "bytes": 19891,
+      "sha256": "74d012d010a303e03842e5a4da1853a431563de643e642a0cb711359654e91df"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/higgsfield-couts-3d.json",
+      "bytes": 2358,
+      "sha256": "adf233aa7974c1c36886f54551345f6904960f6e047129f6a9229bff1f8d144d"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/ia3d-en-ligne.json",
+      "bytes": 51051,
+      "sha256": "dfa7556a68a9c9a6f777b654fef3f679423d16306cec4cfc05b20385a6b96647"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/ia3d-local.json",
+      "bytes": 75502,
+      "sha256": "034a8badf0ea033e055cd29400c42db3ee082ced4708df4eabc7a234da2f6930"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/modelisation-numerisation.json",
+      "bytes": 86543,
+      "sha256": "56be49aef034fb9727c1ec1bada0351aad2214da933bfc6e10b24841caade575"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/pilotage-donnees.json",
+      "bytes": 89178,
+      "sha256": "14a1940b7eb3ad9c970b7e77ae34f6ffc34304d2d4e6160beb508cae41f309d8"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/preparation-impression.json",
+      "bytes": 72911,
+      "sha256": "0347de5ff6eb392653574ba7e6a5f2b475aa6394715c4c79703bf07a176c8eae"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -2739,8 +2819,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 15596,
+      "sha256": "188e6e1da4b77514d32ed6acf01910e70c60d219c1ccfb12a90cbc396229cdd5"
     },
     {
       "path": "ops/request-example.json",
