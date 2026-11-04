@@ -359,13 +359,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 11563,
+      "sha256": "615c9ea6dc6d21bca4a31ec467b90d4a162cec8e2417ea504584d5539db73c2d"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 43770,
+      "sha256": "f67f9282017dd06adf83bb152fa9394f6f75f67ee3e508b7bcebab9255d0e0ec"
     },
     {
       "path": "creative/CURRENT.md",
@@ -464,8 +464,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 17977,
-      "sha256": "fc9c6ea6d92b3b1772be12863a6314513140ca73038a2d98966f684cdacd911b"
+      "bytes": 18905,
+      "sha256": "4f3b0dc49698d7c2ae7ee4095a5fbc328991a5e806ffdea760a32c52ae7aa833"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -1161,6 +1161,56 @@
       "path": "docs/research/audit-transversal-2026-11-02/sources-recherche-v5.json",
       "bytes": 11919,
       "sha256": "a16941a1a2f302082125045b9321147be1aaa723d728c546859784ed04f57308"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/BANCS.json",
+      "bytes": 5728,
+      "sha256": "6550751d2ba6ca69aea1c9087d485f28c5ac5897f8af37a5d014119e5254b943"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/CATALOGUE.json",
+      "bytes": 117404,
+      "sha256": "2753325288d371d7e234256947e33f5c65e68c33694504e34302b683a8c9d547"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/README.md",
+      "bytes": 6384,
+      "sha256": "872445ea76e5cb7dc3558eff0789c9a3dc9711cadd42df8bc4f3b8409bff2847"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/VERIFICATIONS.json",
+      "bytes": 2049,
+      "sha256": "47e3098d576c05bede98742b4e919bb3c5fa40ec0ad3cbfa1632e61d3f2be147"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/higgsfield-couts-3d.json",
+      "bytes": 2358,
+      "sha256": "adf233aa7974c1c36886f54551345f6904960f6e047129f6a9229bff1f8d144d"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/ia3d-en-ligne.json",
+      "bytes": 51051,
+      "sha256": "dfa7556a68a9c9a6f777b654fef3f679423d16306cec4cfc05b20385a6b96647"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/ia3d-local.json",
+      "bytes": 75502,
+      "sha256": "034a8badf0ea033e055cd29400c42db3ee082ced4708df4eabc7a234da2f6930"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/modelisation-numerisation.json",
+      "bytes": 86543,
+      "sha256": "56be49aef034fb9727c1ec1bada0351aad2214da933bfc6e10b24841caade575"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/pilotage-donnees.json",
+      "bytes": 89178,
+      "sha256": "14a1940b7eb3ad9c970b7e77ae34f6ffc34304d2d4e6160beb508cae41f309d8"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/preparation-impression.json",
+      "bytes": 72911,
+      "sha256": "0347de5ff6eb392653574ba7e6a5f2b475aa6394715c4c79703bf07a176c8eae"
     },
     {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
@@ -2739,8 +2789,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 15335,
+      "sha256": "654a29ba94368833a8a1c0008a482c169374305610bde8c6aee75b5b29f1478f"
     },
     {
       "path": "ops/request-example.json",

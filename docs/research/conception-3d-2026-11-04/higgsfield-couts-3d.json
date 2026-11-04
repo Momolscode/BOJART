@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-04T13:05:00Z",
+  "method": "generate_3d avec get_cost=true (préflight, aucun job soumis, aucun crédit dépensé) ; catalogue lu par models_explore(type=3d)",
+  "account": "compte Higgsfield de l'atelier, plan rapporté « max »",
+  "currency": "crédits Higgsfield",
+  "rows": [
+    {"model": "tripo_h3_1_image_to_3d", "params": "texture=false, pbr=false, géométrie standard", "credits": 6},
+    {"model": "tripo_h3_1_image_to_3d", "params": "défaut (texture + PBR, standard)", "credits": 9},
+    {"model": "tripo_h3_1_image_to_3d", "params": "texture=false, pbr=false, geometry_quality=detailed", "credits": 12},
+    {"model": "tripo_h3_1_multiview_to_3d", "params": "texture=false, pbr=false, geometry_quality=detailed", "credits": 12},
+    {"model": "tripo_p2_image_to_3d", "params": "texture=false, pbr=false", "credits": 31},
+    {"model": "tripo_3d (texte)", "params": "défaut", "credits": 5},
+    {"model": "hunyuan3d_v3_image_to_3d", "params": "generate_type=Geometry", "credits": 7},
+    {"model": "hunyuan3d_v3_image_to_3d", "params": "défaut (Normal, texturé)", "credits": 11},
+    {"model": "hunyuan3d_v3_1_text_to_3d", "params": "mode=std", "credits": 7},
+    {"model": "hunyuan3d_v3_1_text_to_3d", "params": "mode=pro", "credits": 12},
+    {"model": "meshy_v7_image_to_3d", "params": "should_texture=false", "credits": 25},
+    {"model": "meshy_v7_image_to_3d", "params": "should_texture=false, ultra_mode=true", "credits": 31},
+    {"model": "meshy_v7_image_to_3d", "params": "défaut (texturé)", "credits": 38},
+    {"model": "meshy_v6_text_to_3d", "params": "défaut (full)", "credits": 25},
+    {"model": "meshy_rigging", "params": "sans animation", "credits": 5},
+    {"model": "meshy_v5_remesh", "params": "défaut", "credits": 6}
+  ],
+  "not_measured": [
+    "sam_3_3d, meshy_image_to_3d, meshy_multi_image_to_3d : le préflight exige une image téléversée ; non mesuré pour ne rien envoyer",
+    "le coût réel peut changer avec la résolution, le nombre de faces ou une révision des prix : refaire get_cost juste avant tout lot"
+  ],
+  "rights_note": "Hunyuan3D v3 via Higgsfield est un service en ligne ; l'exclusion UE de la licence des POIDS Hunyuan3D 2.1 ne se transpose pas automatiquement au service, et l'inverse non plus : conditions du service à vérifier avant usage commercial."
+}
