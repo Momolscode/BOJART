@@ -365,5 +365,17 @@
     "project": "bojart.jarvis",
     "collection": "session_log",
     "provenance": "Mesures datées de la chaîne vocale simulée sur un conteneur Linux le 2 novembre 2026 (small, base, large-v3-turbo, avec et sans vocabulaire, LangGraph et repli règles) ; ne qualifie pas la tour."
+  },
+  {
+    "path": "docs/research/conception-3d-2026-11-04/README.md",
+    "project": "bojart.jarvis",
+    "provenance": "Primary-source 3D design and print-preparation tool research, 2026-11-04; 161 candidate records across five domain files, Higgsfield cost preflights without submitted jobs, partial cross-checks in VERIFICATIONS.json. Candidates only: nothing installed, purchased, generated or qualified on the target.",
+    "collection": "research"
+  },
+  {
+    "path": "docs/research/conception-3d-2026-11-04/README.md",
+    "project": "bojart.creative",
+    "provenance": "Primary-source 3D design and print-preparation tool research, 2026-11-04; 161 candidate records across five domain files, Higgsfield cost preflights without submitted jobs, partial cross-checks in VERIFICATIONS.json. Candidates only: nothing installed, purchased, generated or qualified on the target.",
+    "collection": "research"
   }
 ]
