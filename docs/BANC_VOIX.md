@@ -62,3 +62,19 @@ Quinze scénarios au niveau de la voix, chacun avec son injection, son attendu e
 - Médiane, p95 au rang le plus proche, maximum et effectif `n` ; une mesure vaut pour son hôte, son SHA, son corpus et ses poids.
 
 Ce banc ne qualifie ni le micro de la tour, ni une voix humaine, ni le bruit réel de l'atelier, ni les moniteurs. Ces recettes restent la porte `speech_offline` de `launch_readiness.py`.
+
+## Fin de prise dans le bruit — 9 novembre 2026
+
+Constat du 2 novembre : dès que le bruit d'atelier dépasse le seuil fixe de la porte d'énergie, la prise ne s'arrête qu'à la limite de 15 s (≈ 12 s d'attente après la phrase). `voice_endpoint.js` garde sa règle d'origine, prise par prise, et ajoute une seconde façon de conclure : le fond est mesuré comme la trame de 20 ms la plus calme des 3 dernières secondes ; une fois qu'au moins 0,25 s de trames nettement au-dessus de ce fond (× 2,5) a été entendue, 1,1 s sans trame saillante vaut une pause, même si le bruit reste au-dessus du seuil fixe. Au calme et avec la ventilation, rien ne change.
+
+Mesure avant/après sur le même protocole (114 prises, trois voix Piper, `small` épinglé installé par l'installateur, conteneur Linux) : `docs/evidence/installation-2026-11-09/fin-de-prise-bruit.json`.
+
+| Condition | Prises | Fin médiane après la phrase (avant → après) | Fins ≤ 3 s (après) | Arrêtées par la limite (avant → après) | Correctes (avant → après) |
+|---|---:|---|---:|---|---|
+| calme | 39 | 1,03 s → 1,02 s | 39 | 0 → 0 | 27 → 29 sur 36 |
+| ventilateur | 12 | 1,08 s → 1,03 s | 12 | 0 → 0 | 11 → 10 sur 12 |
+| imprimante | 36 | 12,43 s → 3,83 s | 16 | 36 → 11 | 29 → 29 sur 36 |
+| atelier fort | 12 | 12,34 s → 2,89 s | 6 | 12 → 3 | 11 → 10 sur 12 |
+| voix de fond | 12 | 12,34 s → 12,38 s | 0 | 12 → 12 | 4 → 6 sur 12 |
+
+Erreurs critiques : 0 avant, 0 après ; 87 puis 90 prises correctes sur 114 (la synthèse Piper n'est pas identique au bit près d'une génération à l'autre : ± 2 prises est du bruit de mesure). Aucune prise ne se termine avant la fin de la phrase (délai minimal 0,63 s, voix faible). Sonde bruit seul refaite : 0 commande déclenchée sur 112 flux, comme le 2 novembre. Restent : un tiers des prises avec imprimante attend encore la limite (pas du moteur irréguliers), et une voix de fond est de la parole : elle tient toujours la prise ouverte. À confirmer au vrai micro dans l'atelier, avec les traitements du navigateur.
