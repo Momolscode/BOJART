@@ -1,0 +1,28 @@
+.panel{margin-top:20px}.list{display:grid;gap:10px;margin:14px 0}.item{padding:14px 16px;background:#121118;border:1px solid #493540;border-radius:10px}
+.item header{all:unset;display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}.item strong{font-size:16px;overflow-wrap:anywhere}
+.item p,.item small{color:var(--muted);margin:6px 0;overflow-wrap:anywhere}.item .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tag{border:1px solid #76505e;border-radius:100px;padding:2px 9px;font-size:10px;font-weight:800;letter-spacing:1px;color:#f6aabd;text-transform:uppercase}
+.tag.ok{border-color:#3f7f6d;color:var(--ok)}.tag.warn{border-color:#a8792e;color:#ffd38a}.tag.bad{border-color:#a43b4f;color:#ff8ea3}
+.funnel{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted)}.funnel b{color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.grid .wide{grid-column:1/-1}
+.grid label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted)}
+.grid input,.grid select,.grid textarea,.row input,.row select{padding:10px;border:1px solid #76505e;border-radius:8px;background:#111018;color:var(--text);font:inherit;min-width:0}
+.grid textarea{font-family:ui-monospace,Consolas,monospace;font-size:12px}fieldset{border:1px solid var(--line);border-radius:10px;padding:12px}legend{font-size:12px;color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px;align-items:end}.row input,.row select{flex:1 1 110px}.row small{flex-basis:100%;color:var(--muted)}
+table.lines{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}table.lines td,table.lines th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+table.lines td.num,table.lines th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}table.lines small{display:block;color:var(--muted)}
+.blockers{border-left:3px solid #a8792e;padding:6px 12px;margin:10px 0;color:#ffd38a;font-size:13px}.blockers li{margin:3px 0}
+.machines{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:14px 0}
+.bar{height:6px;border-radius:6px;background:#2a2230;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--accent)}
+.receipt{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--muted);overflow-wrap:anywhere;margin:4px 0}
+details{margin-top:14px}summary{cursor:pointer;font-size:13px}.intro aside button{margin-top:14px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.overview{grid-template-columns:repeat(2,1fr)}}
+.item .actions{align-items:center}.item .actions button,.row button{width:auto;flex:0 0 auto;margin:0;padding:8px 12px}
+.item .actions input,.item .actions select{padding:8px;border:1px solid #76505e;border-radius:8px;background:#111018;color:var(--text);font:inherit;font-size:12px;min-width:0;max-width:150px}
+.item .actions input[type=checkbox]{max-width:none}.item .actions label{font-size:12px;color:var(--muted)}.item .actions small{flex-basis:100%;margin:4px 0 0}
+.grid>button.primary{grid-column:1/-1}
+.item>small{display:block}
+h3.sub{margin:28px 0 4px;font-size:15px;letter-spacing:.04em}
+.row label.field{display:flex;flex-direction:column;gap:4px;font-size:inherit;color:inherit;flex:1 1 130px;min-width:0}.row label.field>span{font-size:11px;color:var(--muted)}
+.row label.field input,.row label.field select{flex:none;width:100%;box-sizing:border-box}
+.row.proc strong{flex:0 0 64px;align-self:center}

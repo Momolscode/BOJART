@@ -1,0 +1,50 @@
+BOJ.ART / JARVIS — MISSION 06 — 31 OCTOBRE 2026
+
+REPRISE
+Continuer depuis la branche improvement/m06-voice-orchestration-2026-10-31.
+Le paquet inclut le code et un bundle Git. Aucun push GitHub réalisé.
+Le chat complet reste indisponible. Ne pas fusionner ce projet avec UNUM/M-Tek.
+
+AJOUTS RÉELS
+- Point d’entrée commun commande écrite / transcription dans la régie.
+- LangGraph exécuté localement, checkpoints SQLite et journal des tours.
+- Adaptateur Jev 1.14 borné, désactivé sans configuration privée.
+- Neuf intentions visuelles, affichage par événement puis reçu navigateur.
+- Réservation unique du micro, annulation, refus des réponses périmées.
+- Commandes et reçus utilisables pendant un calcul CAO.
+- Sauvegardes M05 conservées ; checkpoints inclus dans la base existante.
+- Recherche sur Assist, OpenVoiceOS, Leon, Microsoft JARVIS, Jev et la voix.
+
+PREUVES
+556 tests réussis : 252 dépôt, 242 application (+ 5 sous-tests), 40 métier,
+22 planning. Parmi eux, 42 tests M06. Recette M06 : 13 contrôles Chromium,
+audio synthétique + faux ASR explicitement identifiés, vrai calcul CAO sous
+charge. Régression M05 : 13 contrôles Chromium, deux autres modèles réels,
+Studio/Growth et deux générations de sauvegarde/restauration.
+Commande texte -> affichage : dernière série au calme 66–98 ms ; six ordres
+pendant le calcul CAO 115–997 ms, tous reçus avant la fin de ce calcul.
+Une passe précédente avait un pic de 1,4 s, conservé dans les preuves.
+Ne pas présenter ces mesures comme une latence de voix réelle.
+
+ÉTAT DES INTÉGRATIONS
+LangGraph et faster-whisper sont installés/importés dans l’environnement de
+développement. Le paquet fournit leurs exigences de versions ; leur présence
+sur la tour réelle est inconnue. Les poids ASR et la clé Jev ne sont pas fournis.
+Pas d’appel Jev réel, pas de microphone réel testé, pas de mot d’éveil, pas de
+Pipecat actif, pas d’imprimante ni de compte social connecté.
+Le retour vocal dépend d’une voix française locale disponible dans le navigateur.
+Les choix Jev exigent une confirmation tant que leur qualité n’est pas mesurée.
+
+FICHIERS À LIRE
+docs/m06/RECHERCHE_ET_INTEGRATION.md : sources, décisions et limites.
+docs/m06/SCHEMA_M06.html : schéma autonome consultable hors ligne.
+docs/m06/PIPELINE_M06.mmd et ATELIER_COMPLET.mmd : schémas Mermaid éditables.
+docs/m06/INSTALLATION_M06.txt : environnement, configuration et lancement.
+docs/evidence/m06-2026-10-31 : résultats détaillés, y compris sous charge.
+
+PROCHAINE PREUVE ATTENDUE
+Configurer le modèle de transcription sur la tour, tester le vrai micro et
+les trois écrans, puis connecter Jev avec une clé privée et mesurer ses choix
+sur des formulations françaises. Garder un jeu de validation et les cas refusés.
+La conversation continue est une étape séparée ; privilégier une seule pile.
+Les intégrations physiques et sociales nécessitent leurs propres recettes.

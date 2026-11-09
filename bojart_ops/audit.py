@@ -107,18 +107,42 @@ def audit(root, paths=None, revision=None):
                 assert number(fps) and fps > 0 and type(frames) is int and frames > 0
                 assert isinstance(shots, list) and shots
                 cursor, ids = 0, set()
-                for shot in shots:
-                    assert isinstance(shot, dict) and isinstance(shot.get('shot'), str)
-                    assert shot['shot'] not in ids
-                    ids.add(shot['shot'])
-                    assert type(shot['frames']) is int and shot['frames'] > 0
-                    assert number(shot['in']) and shot['in'] >= 0
-                    assert shot['timeline_in_frame'] == cursor
-                    cursor += shot['frames']
-                    assert shot['timeline_out_frame_exclusive'] == cursor
-                assert cursor == frames
-                assert number(obj['duration_seconds']) and abs(obj['duration_seconds'] - frames/fps) < 1e-6
-            except (AssertionError, KeyError, TypeError):
+                if obj.get('format') == 'bojart.brand-film.v1':
+                    # Site recipes express ranges in seconds and declare crossfades.
+                    overlaps = []
+                    for shot in shots:
+                        assert isinstance(shot, dict) and isinstance(shot.get('id'), str) and shot['id']
+                        assert shot['id'] not in ids
+                        ids.add(shot['id'])
+                        start, end = shot['output']
+                        assert all(number(v) for v in (start, end, shot['duration'], shot['start']))
+                        assert start >= 0 and end > start and shot['start'] >= 0
+                        assert abs(end-start-shot['duration']) < 1e-6
+                        assert start <= cursor+1e-6 and end > cursor
+                        if start < cursor-1e-6: overlaps.append((start, cursor))
+                        cursor = end
+                    transitions = obj.get('transitions', [])
+                    assert isinstance(transitions, list) and len(transitions) == len(overlaps)
+                    for transition, expected in zip(transitions, overlaps):
+                        assert transition['type'] == 'crossfade'
+                        actual = transition['output_seconds']
+                        assert len(actual) == 2 and all(number(v) for v in actual)
+                        assert all(abs(a-b) < 1e-6 for a, b in zip(actual, expected))
+                    assert abs(cursor-frames/fps) < 1e-6
+                else:
+                    for shot in shots:
+                        assert isinstance(shot, dict) and isinstance(shot.get('shot'), str)
+                        assert shot['shot'] not in ids
+                        ids.add(shot['shot'])
+                        assert type(shot['frames']) is int and shot['frames'] > 0
+                        assert number(shot['in']) and shot['in'] >= 0
+                        assert shot['timeline_in_frame'] == cursor
+                        cursor += shot['frames']
+                        assert shot['timeline_out_frame_exclusive'] == cursor
+                    assert cursor == frames
+                durations = [obj[key] for key in ('duration_seconds', 'duration_s') if key in obj]
+                assert durations and all(number(v) and abs(v-frames/fps) < 1e-6 for v in durations)
+            except (AssertionError, KeyError, TypeError, ValueError):
                 issue('error', 'invalid_timeline', name, 'Check frame totals, unique shots, source offsets and contiguous cuts.');
         if name.endswith('ASSETS.json') and isinstance(obj.get('assets'), list):
             for item in obj['assets']:

@@ -1,0 +1,451 @@
+{
+  "format": "bojart.brand-film.v1",
+  "brand": "BOJ.ART",
+  "title": "Baki — Du détail à l’œuvre",
+  "version": 1,
+  "purpose": "Nouvel édit de démonstration silencieux, issu de deux publications de la même figurine Baki de 60 cm.",
+  "master_file": "brand-film-master.mp4",
+  "preview_file": "brand-film-preview.mp4",
+  "poster_file": "brand-film-poster.webp",
+  "duration_seconds": 22.7,
+  "fps": 30,
+  "frames": 681,
+  "audio_tracks": 0,
+  "master_dimensions": [
+    720,
+    1280
+  ],
+  "preview_dimensions": [
+    360,
+    640
+  ],
+  "music": "Aucune piste audio ajoutée. Les pistes des originaux restent conservées dans l’archive.",
+  "sources": [
+    {
+      "id": "7467517355535404310",
+      "label": "Baki fini, lumière UV puis lumière d’atelier",
+      "archive_file": "posts/7467517355535404310/video.mp4",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7467517355535404310",
+      "sha256": "27f922de227cd93c79ba5ca11f3adf9c08d883436ed27590d0abae2936ac44e8",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "nb_frames": "806"
+          },
+          {
+            "index": 1,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 576,
+            "height": 1024,
+            "r_frame_rate": "30/1",
+            "nb_frames": "1082"
+          }
+        ],
+        "format": {
+          "duration": "37.266667",
+          "size": "4387591"
+        }
+      },
+      "reviewed_sha256": "27f922de227cd93c79ba5ca11f3adf9c08d883436ed27590d0abae2936ac44e8",
+      "key": "reveal"
+    },
+    {
+      "id": "7464268707989114134",
+      "label": "Partie 2 du projet Baki Hanma de 60 cm : mise en peinture",
+      "archive_file": "posts/7464268707989114134/video.mp4",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7464268707989114134",
+      "sha256": "9ca3bd55f02e5841a1f8fba53adef40b4bd5c13954c6f8ff615dfe6ab3d56bf4",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "nb_frames": "788"
+          },
+          {
+            "index": 1,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 576,
+            "height": 1162,
+            "r_frame_rate": "30/1",
+            "nb_frames": "1077"
+          }
+        ],
+        "format": {
+          "duration": "36.433333",
+          "size": "4047799"
+        }
+      },
+      "reviewed_sha256": "9ca3bd55f02e5841a1f8fba53adef40b4bd5c13954c6f8ff615dfe6ab3d56bf4",
+      "key": "paint"
+    }
+  ],
+  "shots": [
+    {
+      "id": "detail-uv",
+      "source": "reveal",
+      "start": 8.9,
+      "source_duration": 3.0,
+      "duration": 3.0,
+      "output": [
+        0.0,
+        3.0
+      ],
+      "label": "Regard et surface sous lumière UV",
+      "crop": null,
+      "scaled_size": [
+        630,
+        1120
+      ],
+      "pad_offset": [
+        45,
+        80
+      ],
+      "source_id": "7467517355535404310"
+    },
+    {
+      "id": "detail-colour",
+      "source": "reveal",
+      "start": 24.0,
+      "source_duration": 2.2,
+      "duration": 2.2,
+      "output": [
+        3.0,
+        5.2
+      ],
+      "label": "Détail peint, lumière d’atelier",
+      "crop": null,
+      "scaled_size": [
+        630,
+        1120
+      ],
+      "pad_offset": [
+        45,
+        80
+      ],
+      "source_id": "7467517355535404310"
+    },
+    {
+      "id": "gesture-01",
+      "source": "paint",
+      "start": 3.8,
+      "source_duration": 1.6,
+      "duration": 1.6,
+      "output": [
+        5.2,
+        6.8
+      ],
+      "label": "Première touche de peinture",
+      "crop": {
+        "x": 0,
+        "y": 662,
+        "width": 576,
+        "height": 324
+      },
+      "scaled_size": [
+        640,
+        360
+      ],
+      "pad_offset": [
+        40,
+        460
+      ],
+      "source_id": "7464268707989114134"
+    },
+    {
+      "id": "gesture-02",
+      "source": "paint",
+      "start": 11.6,
+      "source_duration": 1.6,
+      "duration": 1.6,
+      "output": [
+        6.8,
+        8.4
+      ],
+      "label": "Mouvement du pinceau sur la pièce",
+      "crop": {
+        "x": 0,
+        "y": 662,
+        "width": 576,
+        "height": 324
+      },
+      "scaled_size": [
+        640,
+        360
+      ],
+      "pad_offset": [
+        40,
+        460
+      ],
+      "source_id": "7464268707989114134"
+    },
+    {
+      "id": "gesture-03",
+      "source": "paint",
+      "start": 20.5,
+      "source_duration": 2.4,
+      "duration": 2.4,
+      "output": [
+        8.4,
+        10.8
+      ],
+      "label": "Précision de la main et du pinceau",
+      "crop": {
+        "x": 0,
+        "y": 662,
+        "width": 576,
+        "height": 324
+      },
+      "scaled_size": [
+        640,
+        360
+      ],
+      "pad_offset": [
+        40,
+        460
+      ],
+      "source_id": "7464268707989114134"
+    },
+    {
+      "id": "reveal-full",
+      "source": "reveal",
+      "start": 16.5,
+      "source_duration": 3.8,
+      "duration": 3.8,
+      "output": [
+        10.6,
+        14.4
+      ],
+      "label": "Figurine et socle dans l’atelier",
+      "crop": null,
+      "scaled_size": [
+        630,
+        1120
+      ],
+      "pad_offset": [
+        45,
+        80
+      ],
+      "source_id": "7467517355535404310"
+    },
+    {
+      "id": "reveal-moving",
+      "source": "reveal",
+      "start": 29.2,
+      "source_duration": 5.0,
+      "duration": 5.0,
+      "output": [
+        14.4,
+        19.4
+      ],
+      "label": "Présentation mobile de l’œuvre finie",
+      "crop": null,
+      "scaled_size": [
+        630,
+        1120
+      ],
+      "pad_offset": [
+        45,
+        80
+      ],
+      "source_id": "7467517355535404310"
+    },
+    {
+      "id": "signature",
+      "source": "reveal",
+      "start": 35.2,
+      "source_duration": 1.5,
+      "duration": 3.6,
+      "output": [
+        19.1,
+        22.7
+      ],
+      "label": "Emblème original BOJ.ART",
+      "hold_last_frame_seconds": 2.1,
+      "crop": null,
+      "scaled_size": [
+        630,
+        1120
+      ],
+      "pad_offset": [
+        45,
+        80
+      ],
+      "source_id": "7467517355535404310"
+    }
+  ],
+  "chapters": [
+    {
+      "label": "LE DÉTAIL.",
+      "number": "01",
+      "start": 0.0,
+      "end": 5.2
+    },
+    {
+      "label": "LE GESTE.",
+      "number": "02",
+      "start": 5.2,
+      "end": 10.6
+    },
+    {
+      "label": "L’ŒUVRE.",
+      "number": "03",
+      "start": 10.6,
+      "end": 19.1
+    },
+    {
+      "label": "LA SIGNATURE.",
+      "number": "04",
+      "start": 19.1,
+      "end": 22.7
+    }
+  ],
+  "transitions": [
+    {
+      "type": "crossfade",
+      "output_seconds": [
+        10.6,
+        10.8
+      ]
+    },
+    {
+      "type": "crossfade",
+      "output_seconds": [
+        19.1,
+        19.4
+      ]
+    }
+  ],
+  "edit_decisions": {
+    "painting_derivation": "Extraction du seul bandeau vidéo 576×324, à x=0,y=662. Le geste et le cadre horizontal sont conservés ; la grande carte logo et l’ancienne incitation à s’abonner restent dans l’original archivé.",
+    "painting_display": "640×360 dans le master : agrandissement de 11,1 %, sans transformation générative.",
+    "portrait_display": "630×1120 : cadre entier et proportions des originaux 576×1024 conservés.",
+    "source_colours": "Couleurs d’origine conservées ; pas d’étalonnage sélectif.",
+    "speed": "Vitesse source inchangée. Cadence normalisée à 30 i/s ; maintien final du logo 2,1 s.",
+    "graphics": "Typographie BOJ.ART, quatre chapitres, entrées courtes, marges charbon et accent carmin.",
+    "reality": "Images de la figurine publiée comme 60 cm ; aucune relation à un modèle généré de 1 m ni à une impression actuelle."
+  },
+  "review_frames": [
+    {
+      "file": "brand-film-frame-01-detail.webp",
+      "output_time_seconds": 1.3,
+      "label": "detail"
+    },
+    {
+      "file": "brand-film-frame-02-geste.webp",
+      "output_time_seconds": 9.1,
+      "label": "geste"
+    },
+    {
+      "file": "brand-film-frame-03-oeuvre.webp",
+      "output_time_seconds": 12.3,
+      "label": "oeuvre"
+    },
+    {
+      "file": "brand-film-frame-04-signature.webp",
+      "output_time_seconds": 20.6,
+      "label": "signature"
+    }
+  ],
+  "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "outputs": {
+    "master": {
+      "sha256": "2c477cf195316bd8142d5fb7b4aa6594ba4bfd456bdc234ff1cdb13e2c757b3c",
+      "bytes": 7704372,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "30/1",
+            "nb_frames": "681"
+          }
+        ],
+        "format": {
+          "duration": "22.700000",
+          "size": "7704372"
+        }
+      }
+    },
+    "preview": {
+      "sha256": "25ef85fbb7059b116a4293f4c751b4da20ed4c51eebee8650781d18c5ccceb13",
+      "bytes": 1604340,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 360,
+            "height": 640,
+            "r_frame_rate": "30/1",
+            "nb_frames": "681"
+          }
+        ],
+        "format": {
+          "duration": "22.700000",
+          "size": "1604340"
+        }
+      }
+    },
+    "poster": {
+      "sha256": "d9d5d80286268afaa7b3b2bad678d1bc451e4c94c2b11964fd3d5512ebdc5255",
+      "bytes": 109186
+    }
+  },
+  "validation": {
+    "source_contact_sheets_reviewed": true,
+    "painting_band_reviewed": true,
+    "full_decode_exit_code": 0,
+    "full_decode_errors": "",
+    "browser_rendering_verified": false,
+    "output_stills_reviewed": true,
+    "output_stills_seconds": [
+      1.3,
+      9.1,
+      12.3,
+      20.6
+    ],
+    "transition_stills_reviewed": true,
+    "transition_stills_seconds": [
+      5.1,
+      5.2,
+      5.3,
+      10.567,
+      10.667,
+      10.8,
+      19.067,
+      19.2,
+      19.4
+    ],
+    "black_detection": {
+      "threshold_pixel": 0.05,
+      "threshold_picture": 0.98,
+      "minimum_duration_seconds": 0.06,
+      "detected_intervals_seconds": [
+        [
+          0,
+          0.066667
+        ]
+      ],
+      "interpretation": "Fondu d’entrée prévu ; aucun segment noir détecté aux raccords internes."
+    },
+    "review_note": "Quatre images propres et neuf images aux raccords inspectées ; décodage complet vérifié. Lecture dans un navigateur et appréciation à vitesse réelle non réalisées ici."
+  },
+  "download_name": "BOJ_ART_Edit_Signature_v1.mp4"
+}

@@ -1,0 +1,14 @@
+BOJ.ART / JARVIS — REPRISE DES INNOVATIONS
+
+Lis docs/INNOVATIONS_JARVIS.md puis docs/SOURCES.md. Ce dossier complète Mission 02 sans la remplacer. Ne confonds pas BOJ.ART avec UNUM/M-Tek.
+
+Avant toute installation sur le vrai PC : inventaire autorisé, sauvegarde des données et versions, comparaison des licences des poids/code/dépendances. Budget 3 000–5 000 € avec réemploi, pas autorisation d’achat.
+
+Ordre de travail :
+1) Inventaire des médias autorisés, empreintes, origines et timecodes. Comparer recherche textuelle à Qwen3-VL-Embedding sur un corpus annoté ; ne pas indexer tout le disque ni envoyer les données au cloud.
+2) Compléter les recettes et le contexte de sélection de Mission 02. Conserver la validation des unités et révisions. Comparer faster-whisper à Parakeet français sur bruit réel ; Parakeet v3 n’est pas du streaming natif dans le runtime étudié.
+3) Reproduire le laboratoire de planning. Remplacer ses hypothèses seulement après qualification. Intégrer un solveur OR-Tools dans une branche isolée, avec vérificateur indépendant ; ne pas transformer les réservations en ordres machine.
+4) Préparer une timeline OTIO versionnée, un validateur d’entrée vidéo et des portes de fidélité, de budget et d’approbation. Aucune relance payante automatique sur résultat inconnu.
+5) Ajouter le mécanisme durable de missions lorsque le journal existant ne suffit plus. Une commande externe ne devient pas idempotente par magie. Vérifier le destinataire avant tout retry.
+
+Critères de sortie : source retrouvable, révision vérifiée, absence de répétition d’un effet, résultat observable. Tests d’interface et tests réels de la tour distingués. Ne jamais annoncer microphone, imprimante ou modèle opérationnel à partir d’un exemple simulé.

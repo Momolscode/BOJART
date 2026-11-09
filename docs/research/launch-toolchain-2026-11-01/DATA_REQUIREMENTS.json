@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-01",
+  "scope": "Gap assessment from the reviewed repository; no claim of exhaustive absence across all archives or private devices.",
+  "private_values_included": false,
+  "datasets": [
+    {
+      "id": "target_hardware",
+      "status": "not_verified",
+      "required_fields": [
+        "os_version",
+        "cpu",
+        "ram_gib",
+        "gpu_model",
+        "vram_gib",
+        "driver",
+        "cuda_runtime",
+        "microphone",
+        "monitor_ids",
+        "blender_version",
+        "after_effects_version",
+        "plugins_and_fonts"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "printer_profiles",
+      "status": "not_qualified",
+      "required_fields": [
+        "printer_id",
+        "model",
+        "firmware",
+        "technology",
+        "build_volume_mm",
+        "accepted_file_formats",
+        "transport",
+        "authorized_endpoint_reference",
+        "qualified_profile_hash",
+        "last_qualification"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "material_profiles",
+      "status": "not_qualified",
+      "required_fields": [
+        "material_id",
+        "technology",
+        "brand",
+        "batch",
+        "nozzle_or_exposure_profile",
+        "layer_height_mm",
+        "temperature_or_exposure_limits",
+        "shrinkage",
+        "fit_coupon_result"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "voice_corpus",
+      "status": "synthetic_cases_exist_real_voice_missing",
+      "required_fields": [
+        "sample_id",
+        "audio_reference",
+        "speaker_permission",
+        "expected_text",
+        "expected_intent",
+        "negation",
+        "noise_condition",
+        "cancellation",
+        "latency_ms",
+        "observed_result"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "source_corpus",
+      "status": "partial_archives_and_curated_documents",
+      "required_fields": [
+        "source_id",
+        "source_hash",
+        "revision",
+        "project",
+        "rights",
+        "original_reference",
+        "extraction_engine",
+        "page",
+        "units",
+        "review_status",
+        "supersedes"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "reference_assets",
+      "status": "partial_g2_identity_and_rig_missing",
+      "required_fields": [
+        "asset_id",
+        "work_id",
+        "kind",
+        "authenticity",
+        "source_reference",
+        "sha256",
+        "angles",
+        "physical_dimensions_mm",
+        "rig_reference",
+        "textures",
+        "rights",
+        "artist_review"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "brand_bible",
+      "status": "partial_context_not_full_approved_bible",
+      "required_fields": [
+        "logo_master_reference",
+        "approved_palette",
+        "typeface_licenses",
+        "materials",
+        "motion_rules",
+        "sound_identity",
+        "approved_examples",
+        "rejected_examples",
+        "reviewer",
+        "version"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "shot_benchmarks",
+      "status": "partial_historical_trials",
+      "required_fields": [
+        "shot_id",
+        "goal",
+        "reference_asset_ids",
+        "engine_and_model",
+        "parameters",
+        "cost",
+        "elapsed_time",
+        "identity_review",
+        "contact_review",
+        "motion_review",
+        "audio_review",
+        "failure_reason"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "execution_receipts",
+      "status": "local_ledger_exists_provider_wiring_unqualified",
+      "required_fields": [
+        "job_id",
+        "idempotency_key",
+        "input_hashes",
+        "provider",
+        "model_version",
+        "parameters_hash",
+        "budget_ceiling",
+        "authorization_reference",
+        "provider_receipt",
+        "output_hashes",
+        "state",
+        "reconciliation"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "production_history",
+      "status": "not_available_in_reviewed_scope",
+      "required_fields": [
+        "job_id",
+        "printer_id",
+        "profile_hash",
+        "material_id",
+        "quantity",
+        "planned_minutes",
+        "actual_minutes",
+        "setup_minutes",
+        "finishing_minutes",
+        "waste",
+        "failure",
+        "maintenance"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "offer_catalog",
+      "status": "partial_offers_without_measured_capacity",
+      "required_fields": [
+        "offer_id",
+        "scope",
+        "materials",
+        "dimensions",
+        "capacity",
+        "lead_time",
+        "price_or_quote_policy",
+        "margin_inputs",
+        "rights",
+        "shipping_area",
+        "landing_page",
+        "validation"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "social_metrics",
+      "status": "not_connected_no_metrics_retrieved",
+      "required_fields": [
+        "platform",
+        "account_id",
+        "post_id",
+        "published_at",
+        "collected_at",
+        "window_start",
+        "window_end",
+        "timezone",
+        "metric_name",
+        "metric_value",
+        "unit",
+        "denominator",
+        "data_availability",
+        "source_reference",
+        "export_hash"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "site_measurement",
+      "status": "no_export_or_authenticated_measurement",
+      "required_fields": [
+        "property",
+        "page",
+        "query",
+        "country",
+        "device",
+        "search_type",
+        "window",
+        "clicks",
+        "impressions",
+        "ctr",
+        "position",
+        "export_filters",
+        "coverage_limit",
+        "missing_value_policy",
+        "source_reference"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    },
+    {
+      "id": "ad_measurement",
+      "status": "no_campaign_data_or_budget",
+      "required_fields": [
+        "platform",
+        "advertiser_id",
+        "campaign_id",
+        "creative_id",
+        "offer_id",
+        "window",
+        "attribution_window",
+        "currency",
+        "spend",
+        "qualified_leads",
+        "quotes",
+        "sales",
+        "margin",
+        "approved_budget",
+        "stop_rule",
+        "source_reference"
+      ],
+      "values": null,
+      "store_real_values": "Private operational state; publish only reviewed non-sensitive summaries.",
+      "minimum_evidence": "Dated source, identity, scope and explicit review; missing values remain null."
+    }
+  ]
+}

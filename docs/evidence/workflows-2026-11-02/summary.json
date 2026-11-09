@@ -1,0 +1,72 @@
+{
+  "schema": "bojart.workflow-summary.v1",
+  "base_commit": "6cda578030b619c7b459515e77a34b80b2b5f396",
+  "campaigns": 3,
+  "engine": "missing_dependency",
+  "scope": {
+    "transcripts": "synthetic post-ASR text",
+    "sqlite": "real temporary databases",
+    "server": "minimal fixture, no HTTP",
+    "display_receipts": "synthetic direct acknowledgements, no browser",
+    "audio_measured": false,
+    "llm_measured": false,
+    "jev_enabled": false,
+    "gpu_measured": false,
+    "printers": "fictitious, no network or device commands",
+    "vegeta_mesh_created": false,
+    "production_ready": false
+  },
+  "host": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "machine": "x86_64"
+  },
+  "host_limits": {
+    "cpu_quota_cores": 8,
+    "memory_gib": 8,
+    "target_pc": false
+  },
+  "reports": [
+    {
+      "path": "run-1.json",
+      "bytes": 98842,
+      "sha256": "0ffa6d86c45bfc6439b853d19d80245315903dced69a670623077bfd057b0946"
+    },
+    {
+      "path": "run-2.json",
+      "bytes": 98832,
+      "sha256": "c1c5702129b47043cd1eecc81adb3b6b2def6d19b1d30de8465365cfbcfe538a"
+    },
+    {
+      "path": "run-3.json",
+      "bytes": 98848,
+      "sha256": "38d1bce059c682c72f4c5bc3be4eb60e0c334171b649833a6a764193e6101de5"
+    }
+  ],
+  "unique_phrases": 9,
+  "trials": 810,
+  "guard_cases_per_campaign": 16,
+  "guard_passes": 48,
+  "unit_tests_passed": 20,
+  "synthetic_fleet": {
+    "parts": 24,
+    "printers": 8,
+    "baseline_minutes": 1515,
+    "balanced_minutes": 1284,
+    "one_machine_offline_minutes": 1413,
+    "improvement_percent": 15.247524752475247,
+    "real_duration_measured": false
+  },
+  "submit_ms": {
+    "n": 810,
+    "p50": 11.781479,
+    "p95": 19.950277,
+    "max": 45.30436
+  },
+  "synthetic_receipt_ms": {
+    "n": 810,
+    "p50": 15.749478,
+    "p95": 32.061587,
+    "max": 76.550746
+  }
+}

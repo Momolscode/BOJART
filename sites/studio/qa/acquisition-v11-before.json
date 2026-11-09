@@ -1,0 +1,94 @@
+{
+  "version": "bojart.acquisition.qa.v1",
+  "testedAt": "2026-10-19T18:57:23.317Z",
+  "engine": "v24.19.0",
+  "scope": "Actual generated SQL in Node SQLite, real Request/Response/WebCrypto, D1 API adapter; no deployed database or live SIWC asserted.",
+  "groups": 20,
+  "passed": 17,
+  "failed": 3,
+  "results": [
+    {
+      "name": "Strict portable contract, field bounds, real dates and public-reference URLs",
+      "status": "passed"
+    },
+    {
+      "name": "Every administrator operation checks SIWC identity and explicit allowlist",
+      "status": "passed"
+    },
+    {
+      "name": "HMAC form token, origin, expiry and absent configuration fail closed",
+      "status": "passed"
+    },
+    {
+      "name": "Receipt follows persisted SQLite row; identical retry returns the same receipt",
+      "status": "passed"
+    },
+    {
+      "name": "Changed body under the same request ID is rejected without overwriting",
+      "status": "passed"
+    },
+    {
+      "name": "Ambiguous response after commit is recovered by an identical retry",
+      "status": "passed"
+    },
+    {
+      "name": "An actual SQL insert failure never returns a successful receipt",
+      "status": "passed"
+    },
+    {
+      "name": "Concurrent duplicate submissions produce one row and one winning receipt",
+      "status": "passed"
+    },
+    {
+      "name": "Concurrent rate limiting is atomic, bounded and stores no raw network address",
+      "status": "passed"
+    },
+    {
+      "name": "Malformed JSON, non-JSON media and oversized streaming bodies are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Contact correction preserves creation hash, notice version and initial retry receipt",
+      "status": "passed"
+    },
+    {
+      "name": "Two administrators editing one revision cannot overwrite the winner",
+      "status": "passed"
+    },
+    {
+      "name": "Export is portable and checksum-verified; changed contents are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Deletion removes all customer payload and blocks stale public retries",
+      "status": "passed"
+    },
+    {
+      "name": "Failed deletion transaction leaves original row and no false tombstone",
+      "status": "passed"
+    },
+    {
+      "name": "Deleted or stale records cannot be exported or silently updated",
+      "status": "passed"
+    },
+    {
+      "name": "Administrative pagination is bounded, stable and excludes full contact payloads",
+      "status": "passed"
+    },
+    {
+      "name": "A client already limited cannot exhaust the shared allowance for other visitors",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n300 !== 6\n"
+    },
+    {
+      "name": "Concurrent over-limit attempts reserve only accepted quota and cannot poison other clients",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\n50 !== 6\n"
+    },
+    {
+      "name": "A clock correction cannot move the last modification before the preceding revision",
+      "status": "failed",
+      "error": "2026-10-19T12:00:30.000Z precedes 2026-10-19T12:01:00.000Z"
+    }
+  ]
+}

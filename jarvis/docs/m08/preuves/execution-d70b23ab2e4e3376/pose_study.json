@@ -1,0 +1,54 @@
+{
+ "candidates": [
+  {
+   "pose": "marteau_leve",
+   "label": "Maillet levé, main gauche tendue — geste de création",
+   "volume_cm3_nominal": 100.5,
+   "height_nominal_mm": 216.0,
+   "center_of_mass_mm": [
+    0.4,
+    1.3,
+    91.7
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.344,
+   "side_silhouette_fill": 0.298,
+   "stance_width_mm": 66.0
+  },
+  {
+   "pose": "garde_basse",
+   "label": "Garde basse, maillet en diagonale à deux mains",
+   "volume_cm3_nominal": 98.2,
+   "height_nominal_mm": 140.0,
+   "center_of_mass_mm": [
+    2.5,
+    -4.9,
+    74.7
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.398,
+   "side_silhouette_fill": 0.458,
+   "stance_width_mm": 82.0
+  },
+  {
+   "pose": "repos_fier",
+   "label": "Repos fier, maillet posé au sol",
+   "volume_cm3_nominal": 101.7,
+   "height_nominal_mm": 160.0,
+   "center_of_mass_mm": [
+    2.7,
+    -1.5,
+    79.6
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.522,
+   "side_silhouette_fill": 0.468,
+   "stance_width_mm": 46.0
+  }
+ ],
+ "chosen": "garde_basse",
+ "notes": [
+  "Retenue : garde_basse (remplissage de face 0.398, cible 0,42 = geste lisible sans membres grêles). Critère artistique non validé par un tiers."
+ ],
+ "voxel_mm": 2.0
+}

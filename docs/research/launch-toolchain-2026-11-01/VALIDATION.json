@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-01",
+  "reconciled_remote_base": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "environment": {
+    "os": "Linux",
+    "scope": "Managed execution environment, not BOJ.ART target tower",
+    "external_provider_calls_in_tests": 0
+  },
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -q",
+      "passed": 46,
+      "failed": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s tests_agent -q",
+      "passed": 44,
+      "failed": 0,
+      "includes_new_research_indexing_tests": 7
+    },
+    {
+      "command": "python3 -m unittest discover -s tests_ops -q",
+      "passed": 67,
+      "failed": 0
+    },
+    {
+      "command": "node --test jarvis/tests/memory_context.test.cjs",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "command": "python3 tools/evaluate_memory.py",
+      "cases": 14,
+      "hit_at_5": 14,
+      "all_citations_verified": true,
+      "original_cases_preserved": 10
+    }
+  ],
+  "initial_regression": {
+    "cases": 14,
+    "hit_at_5": 13,
+    "case": "LangGraph",
+    "reason": "The new report in the canonical collection displaced context/CURRENT.md.",
+    "resolution": "Separate research collection, shared indexing, reference priority in BM25 and fused semantic ranking; explicit proposal labels."
+  },
+  "limitations": [
+    "No target workstation, printers, live microphone, Adobe application or social account tested.",
+    "Semantic tests use a deterministic embedding fixture, not a real model.",
+    "External repository metadata and selected documents examined; no comprehensive code or dependency audit.",
+    "No complete installation, production readiness or artistic superiority asserted."
+  ]
+}

@@ -1,0 +1,1289 @@
+{
+  "résine creuse drainage": {
+    "query": "résine creuse drainage",
+    "method": "recherche_lexicale_fts5_pas_de_llm",
+    "as_of": "2026-10-30",
+    "items": [
+      {
+        "card": {
+          "id": "K23",
+          "domain": "resine",
+          "title": "Évidement : prévoir évacuation et accès",
+          "statement": "L’évidement économise matière et réduit certaines surfaces de séparation, mais peut emprisonner de la résine. La conception doit inclure des ouvertures de drainage adaptées.",
+          "bojart_application": "Examiner chaque cavité et l’accès de nettoyage. Contrôler le maillage après l’opération ; ne pas fermer une cavité avant son contrôle de traitement.",
+          "required_context": [
+            "cavites",
+            "orientation",
+            "evacuation",
+            "acces_interieur"
+          ],
+          "source_ids": [
+            "S13"
+          ],
+          "tags": [
+            "évidement",
+            "coque",
+            "trou",
+            "drainage",
+            "résine piégée"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [
+          {
+            "id": "S13",
+            "title": "Hollowing",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/article/hollowing_117285",
+            "scope": "Outil SLA PrusaSlicer ; géométrie après évidement à contrôler.",
+            "section": "Drainage; preview hollowed mesh",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K06",
+          "domain": "conception",
+          "title": "Une figurine de 1 m se reconçoit, elle ne s’agrandit pas seulement",
+          "statement": "À géométrie pleine semblable, multiplier toutes les dimensions par cinq multiplie le volume par 125. C’est un calcul géométrique, pas une estimation de matière après évidement.",
+          "bojart_application": "Revoir coques, renforts, centre de gravité, fixations et manutention. Ne pas reprendre automatiquement les parois d’une figurine de 20 cm.",
+          "required_context": [
+            "dimension_echelle",
+            "masse_estimee",
+            "fixation",
+            "transport"
+          ],
+          "source_ids": [],
+          "tags": [
+            "échelle",
+            "volume",
+            "poids",
+            "grand format",
+            "1m"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "regle_bojart_proposee",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel.",
+          "Règle de projet proposée, non prescription du fabricant."
+        ]
+      },
+      {
+        "card": {
+          "id": "K24",
+          "domain": "resine",
+          "title": "Effet ventouse : lire les cavités couche par couche",
+          "statement": "Des cavités peuvent provoquer une aspiration pendant la séparation et causer déformation ou échec. Formlabs relie ce risque à l’orientation et aux ouvertures.",
+          "bojart_application": "Contrôler orientation, cavités et supports ensemble ; relire l’aperçu des couches. Les angles publiés pour PreForm ne deviennent pas des réglages universels.",
+          "required_context": [
+            "orientation",
+            "cavites",
+            "preview_couches"
+          ],
+          "source_ids": [
+            "S14"
+          ],
+          "tags": [
+            "ventouse",
+            "suction",
+            "cavité",
+            "décollement"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [
+          {
+            "id": "S14",
+            "title": "Preventing suction cups in PreForm",
+            "publisher": "Formlabs",
+            "url": "https://formlabs.com/support/Preventing-suction-cups-in-PreForm/",
+            "scope": "PreForm et procédés résine ; orientation spécifique au fichier.",
+            "section": "Resolving suction cups",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K26",
+          "domain": "resine",
+          "title": "Lavage : produit, bain et géométrie",
+          "statement": "Le lavage enlève la résine non polymérisée ; sa qualité dépend notamment du solvant, de sa contamination et de l’accès aux cavités.",
+          "bojart_application": "Renseigner méthode autorisée, bain utilisé et contrôle de propreté. Séparer temps actif, durée de cycle et séchage dans la gamme.",
+          "required_context": [
+            "notice_resine",
+            "solvant",
+            "etat_bain",
+            "geometrie"
+          ],
+          "source_ids": [
+            "S17",
+            "S16"
+          ],
+          "tags": [
+            "lavage",
+            "solvant",
+            "IPA",
+            "bain",
+            "nettoyage"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [
+          {
+            "id": "S17",
+            "title": "Safety with the Form Wash",
+            "publisher": "Formlabs",
+            "url": "https://formlabs.com/support/Safety-with-Form-Wash/",
+            "scope": "Équipement et solvants Formlabs ; FDS du fournisseur prioritaire.",
+            "section": "Safety; solvent handling",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          },
+          {
+            "id": "S16",
+            "title": "Using the Form Cure V1",
+            "publisher": "Formlabs",
+            "url": "https://formlabs.com/support/Using-Form-Cure/",
+            "scope": "Form Cure V1 ; ne pas transposer les temps ou températures.",
+            "section": "Washed and fully dried parts",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      }
+    ],
+    "total_returned": 4,
+    "allowed_to_execute": false
+  },
+  "jeu assemblage": {
+    "query": "jeu assemblage",
+    "method": "recherche_lexicale_fts5_pas_de_llm",
+    "as_of": "2026-10-30",
+    "items": [
+      {
+        "card": {
+          "id": "K04",
+          "domain": "conception",
+          "title": "Jeux d’assemblage : aucun chiffre universel",
+          "statement": "L’ajustement dépend de la matière, de l’orientation, de la géométrie, de la calibration et des réglages. Prusa recommande de tester le jeu plutôt que de supposer une valeur universelle.",
+          "bojart_application": "Imprimer un coupon tenon/logement avec le procédé et le post-traitement retenus. Mesurer puis tester avec les épaisseurs de colle, apprêt et peinture prévues.",
+          "required_context": [
+            "matiere_sku",
+            "orientation",
+            "coupon",
+            "etat_finition"
+          ],
+          "source_ids": [
+            "S08"
+          ],
+          "tags": [
+            "jeu",
+            "tolérance",
+            "assemblage",
+            "tenon",
+            "raccord",
+            "peinture"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S08",
+            "title": "Modélisation en pensant à l’impression 3D",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/fr/article/modelisation-en-pensant-a-limpression-3d_164135",
+            "scope": "Conception FFF ; les exemples chiffrés constructeur ne sont pas des tolérances BOJ.ART.",
+            "section": "Tolérances; Orientation",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K31",
+          "domain": "qualite",
+          "title": "Montage à blanc avant finition irréversible",
+          "statement": "Une segmentation avec aligneurs doit tenir compte des variations dimensionnelles des pièces imprimées.",
+          "bojart_application": "Faire un montage à blanc après les traitements nécessaires, contrôler accès et jeux, puis noter les reprises. Préserver les surfaces de collage selon la méthode qualifiée.",
+          "required_context": [
+            "segments",
+            "post_traitement",
+            "mesures",
+            "montage"
+          ],
+          "source_ids": [
+            "S21"
+          ],
+          "tags": [
+            "assemblage",
+            "colle",
+            "montage blanc",
+            "raccord"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S21",
+            "title": "Modèles plus gros que le volume d’impression",
+            "publisher": "Formlabs",
+            "url": "https://formlabs.com/fr/blog/how-to-create-models-larger-than-your-3d-printers-build-volume/",
+            "scope": "Méthode de segmentation ; les performances Formlabs citées ne valent pas pour votre parc.",
+            "section": "Division; identifiants; aligneurs",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K05",
+          "domain": "conception",
+          "title": "Découper une grande sculpture pour l’assemblage",
+          "statement": "La segmentation peut intégrer aligneurs et identifiants ; leur efficacité dépend de la précision et de la déformation des pièces réelles.",
+          "bojart_application": "Placer les coupes selon accès, finition, efforts et emballage. Donner un identifiant à chaque segment, son ordre de montage et son interface avec le socle.",
+          "required_context": [
+            "hauteur_finale",
+            "volumes_utiles",
+            "plan_assemblage",
+            "transport"
+          ],
+          "source_ids": [
+            "S21"
+          ],
+          "tags": [
+            "figurine",
+            "1m",
+            "grande",
+            "segmentation",
+            "socle"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S21",
+            "title": "Modèles plus gros que le volume d’impression",
+            "publisher": "Formlabs",
+            "url": "https://formlabs.com/fr/blog/how-to-create-models-larger-than-your-3d-printers-build-volume/",
+            "scope": "Méthode de segmentation ; les performances Formlabs citées ne valent pas pour votre parc.",
+            "section": "Division; identifiants; aligneurs",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      }
+    ],
+    "total_returned": 3,
+    "allowed_to_execute": false
+  },
+  "débit vitesse": {
+    "query": "débit vitesse",
+    "method": "recherche_lexicale_fts5_pas_de_llm",
+    "as_of": "2026-10-30",
+    "items": [
+      {
+        "card": {
+          "id": "K17",
+          "domain": "fdm",
+          "title": "La vitesse utile dépend du débit volumique",
+          "statement": "Le débit maximal varie selon matière, machine, buse et extrudeur ; même une couleur ou une marque peut modifier le résultat.",
+          "bojart_application": "Comparer qualité à débit réel, pas seulement mm/s annoncés. Archiver la limite mesurée avec le couple buse/matière et le profil exact.",
+          "required_context": [
+            "sku",
+            "couleur",
+            "buse",
+            "hotend",
+            "test_debit"
+          ],
+          "source_ids": [
+            "S11"
+          ],
+          "tags": [
+            "débit",
+            "volumique",
+            "vitesse",
+            "mm3",
+            "sous extrusion"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S11",
+            "title": "Max Volumetric Speed Calibration",
+            "publisher": "OrcaSlicer",
+            "url": "https://github.com/OrcaSlicer/OrcaSlicer/wiki/volumetric_speed_calib",
+            "scope": "Calibration propre au filament, à la buse et au montage.",
+            "section": "Calibration overview",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K21",
+          "domain": "fdm",
+          "title": "Défaut FDM : chercher avant de modifier",
+          "statement": "La calibration comprend plusieurs facteurs interdépendants : température, débit, pression et rétraction. Une observation seule ne désigne pas toujours la cause.",
+          "bojart_application": "Sur fils ou sous-extrusion : enregistrer photos, matière, profil et humidité ; comparer un seul changement dans les limites autorisées. Préserver le profil qui fonctionnait.",
+          "required_context": [
+            "photo",
+            "profil_revision",
+            "lot",
+            "symptome",
+            "changement"
+          ],
+          "source_ids": [
+            "S10",
+            "S06"
+          ],
+          "tags": [
+            "stringing",
+            "fils",
+            "défaut",
+            "sous extrusion",
+            "diagnostic"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S10",
+            "title": "Calibration Guide",
+            "publisher": "OrcaSlicer",
+            "url": "https://github.com/OrcaSlicer/OrcaSlicer/wiki/calibration_guide",
+            "scope": "Documentation courante ; confirmer avec la version installée.",
+            "section": "Filament Calibration",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          },
+          {
+            "id": "S06",
+            "title": "Drying filament",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/article/drying-filament_332086",
+            "scope": "Table de séchage Prusament : ne pas transposer à une autre marque ou bobine.",
+            "section": "Prevention; Prusament spool types; Temperatures",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K16",
+          "domain": "fdm",
+          "title": "Calibrer dans un ordre reproductible",
+          "statement": "OrcaSlicer documente un parcours de calibration où température et débit conditionnent les essais suivants. Les menus doivent correspondre à la version installée.",
+          "bojart_application": "Conserver le résultat de chaque coupon et une modification à la fois. Partir des profils et limites constructeur ; ne pas transformer une recommandation générique en commande.",
+          "required_context": [
+            "binaire_slicer",
+            "profil",
+            "materiau",
+            "coupon"
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "tags": [
+            "calibration",
+            "température",
+            "flow",
+            "pression"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S10",
+            "title": "Calibration Guide",
+            "publisher": "OrcaSlicer",
+            "url": "https://github.com/OrcaSlicer/OrcaSlicer/wiki/calibration_guide",
+            "scope": "Documentation courante ; confirmer avec la version installée.",
+            "section": "Filament Calibration",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      }
+    ],
+    "total_returned": 3,
+    "allowed_to_execute": false
+  },
+  "maintenance lubrifiant": {
+    "query": "maintenance lubrifiant",
+    "method": "recherche_lexicale_fts5_pas_de_llm",
+    "as_of": "2026-10-30",
+    "items": [
+      {
+        "card": {
+          "id": "K38",
+          "domain": "securite",
+          "title": "Entretien : une procédure par modèle",
+          "statement": "La maintenance CORE One/+ distingue tiges, rails, surfaces et solvants ; certains lubrifiants y sont explicitement interdits sur certains organes.",
+          "bojart_application": "Importer la notice de chaque machine et sa révision. Une périodicité ou graisse d’une autre imprimante reste une hypothèse rejetée, même si le mécanisme semble similaire.",
+          "required_context": [
+            "modele",
+            "organe",
+            "notice_revision",
+            "historique"
+          ],
+          "source_ids": [
+            "S31"
+          ],
+          "tags": [
+            "maintenance",
+            "lubrifiant",
+            "graisse",
+            "rails",
+            "buse"
+          ],
+          "scope": "exemple_CORE_One_non_transferable",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [
+          {
+            "id": "S31",
+            "title": "Regular printer maintenance (CORE One/+)",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/article/regular-printer-maintenance-core-one_829710",
+            "scope": "CORE One/+ seulement ; ne pas copier lubrifiants ni périodicités vers un autre modèle.",
+            "section": "Rails; print sheet; electronics",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel.",
+          "Portée spécifique : exemple_CORE_One_non_transferable"
+        ]
+      },
+      {
+        "card": {
+          "id": "K36",
+          "domain": "securite",
+          "title": "Les opérations annexes comptent aussi",
+          "statement": "La notice INRS ED 148 souligne les expositions possibles à la préparation, au retrait, à la finition et à la maintenance, parfois plus importantes que pendant l’impression.",
+          "bojart_application": "Séparer zones propres et contaminées, rangement produits et captation vidéo. Ne jamais retirer une protection ou arrêter un captage pour améliorer une prise de vue.",
+          "required_context": [
+            "plan_zones",
+            "procedure",
+            "formation"
+          ],
+          "source_ids": [
+            "S20"
+          ],
+          "tags": [
+            "atelier",
+            "poussière",
+            "finition",
+            "tournage",
+            "prévention"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [
+          {
+            "id": "S20",
+            "title": "Fabrication additive utilisant des matières plastiques — ED 148",
+            "publisher": "INRS",
+            "url": "https://www.inrs.fr/media.html?refINRS=ED+148",
+            "scope": "Notice publique de la fiche ; résumé de la notice, pas analyse du PDF.",
+            "section": "Présentation des risques et opérations annexes",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "notice_html_consultee_PDF_non_analyse",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      }
+    ],
+    "total_returned": 2,
+    "allowed_to_execute": false
+  },
+  "coût devis": {
+    "query": "coût devis",
+    "method": "recherche_lexicale_fts5_pas_de_llm",
+    "as_of": "2026-10-30",
+    "items": [
+      {
+        "card": {
+          "id": "K45",
+          "domain": "economie",
+          "title": "Coût d’une pièce conforme, pas seulement de matière",
+          "statement": "Méthode proposée : inclure conception, matière des supports et reprises, occupation machine, travail actif, traitement, finition, contrôle, déchets, emballage et coûts imputés.",
+          "bojart_application": "Séparer prévision et constat. Une somme calculée avec des champs inconnus doit rester une estimation incomplète, jamais un devis prêt à accepter.",
+          "required_context": [
+            "matiere",
+            "temps_actif",
+            "machine",
+            "rebuts",
+            "emballage"
+          ],
+          "source_ids": [],
+          "tags": [
+            "coût",
+            "devis",
+            "rentabilité",
+            "rebuts",
+            "finition"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "regle_bojart_proposee",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel.",
+          "Règle de projet proposée, non prescription du fabricant."
+        ]
+      },
+      {
+        "card": {
+          "id": "K46",
+          "domain": "economie",
+          "title": "Marge et majoration : bases différentes",
+          "statement": "Si C est le coût complet hors frais proportionnels, m la marge sur prix de vente et f les frais sur la même base, P = C / (1 − m − f), seulement si m + f < 1.",
+          "bojart_application": "Formule de gestion, pas de conseil fiscal. Ne pas mélanger HT/TTC ni compter deux fois une commission. Enregistrer la méthode et les coûts manquants.",
+          "required_context": [
+            "base_fiscale_coherente",
+            "cout_complet",
+            "marge",
+            "commission"
+          ],
+          "source_ids": [],
+          "tags": [
+            "marge",
+            "majoration",
+            "prix",
+            "commission"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "regle_bojart_proposee",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel.",
+          "Règle de projet proposée, non prescription du fabricant."
+        ]
+      },
+      {
+        "card": {
+          "id": "K07",
+          "domain": "conception",
+          "title": "Choisir le procédé par fonction, pas par taille",
+          "statement": "La finesse, l’orientation, les interfaces et la matière participent à la faisabilité. Le guide de conception distingue notamment rendu des surfaces et comportement selon l’orientation.",
+          "bojart_application": "Comparaison FDM/résine/hybride par pièce : visibilité, charge, volume, temps de finition et coût conforme. La préférence initiale reste une intention à vérifier.",
+          "required_context": [
+            "usage",
+            "charge",
+            "detail_attendu",
+            "finition"
+          ],
+          "source_ids": [
+            "S08"
+          ],
+          "tags": [
+            "FDM",
+            "résine",
+            "hybride",
+            "choix",
+            "prototype"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S08",
+            "title": "Modélisation en pensant à l’impression 3D",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/fr/article/modelisation-en-pensant-a-limpression-3d_164135",
+            "scope": "Conception FFF ; les exemples chiffrés constructeur ne sont pas des tolérances BOJ.ART.",
+            "section": "Tolérances; Orientation",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      }
+    ],
+    "total_returned": 3,
+    "allowed_to_execute": false
+  },
+  "character fidélité figurine": {
+    "query": "character fidélité figurine",
+    "method": "recherche_lexicale_fts5_pas_de_llm",
+    "as_of": "2026-10-30",
+    "items": [
+      {
+        "card": {
+          "id": "K50",
+          "domain": "studio",
+          "title": "Les références réelles priment sur les concepts",
+          "statement": "Règle BOJ.ART issue du projet : l’œuvre physique et sa fiche d’identité priment sur une illustration réinterprétée.",
+          "bojart_application": "Relier chaque tournage et génération à une œuvre. Un plan rejeté pour short, visage ou proportions incorrects n’est jamais promu en référence principale du plan suivant.",
+          "required_context": [
+            "oeuvre_id",
+            "reference_reelle",
+            "character_lock",
+            "motif_rejet"
+          ],
+          "source_ids": [],
+          "tags": [
+            "character lock",
+            "fidélité",
+            "figurine",
+            "Baki",
+            "identité"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "regle_bojart_proposee",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel.",
+          "Règle de projet proposée, non prescription du fabricant."
+        ]
+      },
+      {
+        "card": {
+          "id": "K06",
+          "domain": "conception",
+          "title": "Une figurine de 1 m se reconçoit, elle ne s’agrandit pas seulement",
+          "statement": "À géométrie pleine semblable, multiplier toutes les dimensions par cinq multiplie le volume par 125. C’est un calcul géométrique, pas une estimation de matière après évidement.",
+          "bojart_application": "Revoir coques, renforts, centre de gravité, fixations et manutention. Ne pas reprendre automatiquement les parois d’une figurine de 20 cm.",
+          "required_context": [
+            "dimension_echelle",
+            "masse_estimee",
+            "fixation",
+            "transport"
+          ],
+          "source_ids": [],
+          "tags": [
+            "échelle",
+            "volume",
+            "poids",
+            "grand format",
+            "1m"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "regle_bojart_proposee",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel.",
+          "Règle de projet proposée, non prescription du fabricant."
+        ]
+      },
+      {
+        "card": {
+          "id": "K05",
+          "domain": "conception",
+          "title": "Découper une grande sculpture pour l’assemblage",
+          "statement": "La segmentation peut intégrer aligneurs et identifiants ; leur efficacité dépend de la précision et de la déformation des pièces réelles.",
+          "bojart_application": "Placer les coupes selon accès, finition, efforts et emballage. Donner un identifiant à chaque segment, son ordre de montage et son interface avec le socle.",
+          "required_context": [
+            "hauteur_finale",
+            "volumes_utiles",
+            "plan_assemblage",
+            "transport"
+          ],
+          "source_ids": [
+            "S21"
+          ],
+          "tags": [
+            "figurine",
+            "1m",
+            "grande",
+            "segmentation",
+            "socle"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S21",
+            "title": "Modèles plus gros que le volume d’impression",
+            "publisher": "Formlabs",
+            "url": "https://formlabs.com/fr/blog/how-to-create-models-larger-than-your-3d-printers-build-volume/",
+            "scope": "Méthode de segmentation ; les performances Formlabs citées ne valent pas pour votre parc.",
+            "section": "Division; identifiants; aligneurs",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K49",
+          "domain": "studio",
+          "title": "Métadonnées vidéo : preuve technique, pas licence",
+          "statement": "FFprobe lit les caractéristiques des fichiers et des flux. Leur durée, codec ou présence audio ne démontrent ni les droits de publication ni la fidélité de la sculpture.",
+          "bojart_application": "Réutiliser la séparation de Mission 03 : original, passage annoté, storyboard et génération. Conserver timecodes et empreintes ; valider la qualité en mouvement.",
+          "required_context": [
+            "media_sha",
+            "timecodes",
+            "categorie",
+            "droits",
+            "revue"
+          ],
+          "source_ids": [
+            "S35"
+          ],
+          "tags": [
+            "vidéo",
+            "rush",
+            "timecode",
+            "FFprobe",
+            "signature"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S35",
+            "title": "FFprobe Documentation",
+            "publisher": "FFmpeg",
+            "url": "https://www.ffmpeg.org/ffprobe.html",
+            "scope": "Mesures de fichiers médias ; pas de preuve des droits ni de qualité artistique.",
+            "section": "show_entries; formats; streams",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      }
+    ],
+    "total_returned": 4,
+    "allowed_to_execute": false
+  },
+  "exposition": {
+    "query": "exposition",
+    "method": "recherche_lexicale_fts5_pas_de_llm",
+    "as_of": "2026-10-30",
+    "items": [
+      {
+        "card": {
+          "id": "K22",
+          "domain": "resine",
+          "title": "Exposition : recette propre au couple machine-résine",
+          "statement": "La calibration résine Prusa montre que l’exposition et la hauteur de couche doivent correspondre au matériau ; pigments et viscosité influencent l’essai. Les valeurs SL1/SL1S ne sont pas universelles.",
+          "bojart_application": "Relier fabricant/modèle/firmware, résine/SKU/lot, couche, conditions thermiques, paramètres de mouvement et résultat. Aucune durée UV par défaut dans cette base.",
+          "required_context": [
+            "machine",
+            "firmware",
+            "sku",
+            "layer_height",
+            "temperature",
+            "coupon"
+          ],
+          "source_ids": [
+            "S12"
+          ],
+          "tags": [
+            "exposition",
+            "UV",
+            "résine",
+            "calibration",
+            "temps"
+          ],
+          "scope": "methode_documentee_valeurs_SL1_non_transferables",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [
+          {
+            "id": "S12",
+            "title": "Resin Calibration (SL1/SL1S)",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/article/resin-calibration-sl1-sl1s_112182",
+            "scope": "SL1/SL1S seulement pour les valeurs et menus ; méthode non directement portable.",
+            "section": "Exposure; calibration objects; layer height",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel.",
+          "Portée spécifique : methode_documentee_valeurs_SL1_non_transferables"
+        ]
+      },
+      {
+        "card": {
+          "id": "K28",
+          "domain": "resine",
+          "title": "Supports imprimés mais pièce absente",
+          "statement": "Un contrôle de fichier peut repérer des défauts géométriques ; l’exposition et le traitement doivent rester liés à une calibration appropriée.",
+          "bojart_application": "Consigner le défaut, inspecter selon la notice la zone de fabrication avant relance et examiner supports/orientation/profil. Ne pas simplement augmenter l’exposition à chaque échec.",
+          "required_context": [
+            "photo",
+            "profil",
+            "inspection_bac",
+            "couches",
+            "calibration"
+          ],
+          "source_ids": [
+            "S27",
+            "S12"
+          ],
+          "tags": [
+            "supports seuls",
+            "pièce absente",
+            "échec",
+            "résine"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S27",
+            "title": "UVtools",
+            "publisher": "UVtools — sn4k3",
+            "url": "https://github.com/sn4k3/UVtools",
+            "scope": "Formats résine explicitement supportés par la version retenue.",
+            "section": "File analysis; calibration; repair; conversion",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          },
+          {
+            "id": "S12",
+            "title": "Resin Calibration (SL1/SL1S)",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/article/resin-calibration-sl1-sl1s_112182",
+            "scope": "SL1/SL1S seulement pour les valeurs et menus ; méthode non directement portable.",
+            "section": "Exposure; calibration objects; layer height",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K08",
+          "domain": "materiaux",
+          "title": "PLA : candidat pour les volumes décoratifs",
+          "statement": "Le PLA est présenté comme facile à imprimer et adapté au détail ; il faut tenir compte de ses limites thermiques et de sa fragilité selon l’usage.",
+          "bojart_application": "Candidat pour prototypes de forme et éléments décoratifs. Demander exposition à la chaleur, au soleil et aux chocs avant sélection ; conserver la référence exacte.",
+          "required_context": [
+            "sku",
+            "usage",
+            "environnement"
+          ],
+          "source_ids": [
+            "S02"
+          ],
+          "tags": [
+            "PLA",
+            "socle",
+            "décoration",
+            "chaleur"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "moderate"
+        },
+        "sources": [
+          {
+            "id": "S02",
+            "title": "PLA",
+            "publisher": "Prusa Research",
+            "url": "https://help.prusa3d.com/article/pla_2062",
+            "scope": "Guide de famille PLA, pas une fiche de votre filament.",
+            "section": "Basic info; Description",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-04-28",
+            "review_policy_days": 180,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "page_ou_extrait_officiel_consulte",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      },
+      {
+        "card": {
+          "id": "K36",
+          "domain": "securite",
+          "title": "Les opérations annexes comptent aussi",
+          "statement": "La notice INRS ED 148 souligne les expositions possibles à la préparation, au retrait, à la finition et à la maintenance, parfois plus importantes que pendant l’impression.",
+          "bojart_application": "Séparer zones propres et contaminées, rangement produits et captation vidéo. Ne jamais retirer une protection ou arrêter un captage pour améliorer une prise de vue.",
+          "required_context": [
+            "plan_zones",
+            "procedure",
+            "formation"
+          ],
+          "source_ids": [
+            "S20"
+          ],
+          "tags": [
+            "atelier",
+            "poussière",
+            "finition",
+            "tournage",
+            "prévention"
+          ],
+          "scope": "principe_general",
+          "evidence_level": "documente",
+          "reviewed_on": "2026-10-30",
+          "site_validated": false,
+          "universal_machine_settings": false,
+          "execution_authority": false,
+          "risk": "high"
+        },
+        "sources": [
+          {
+            "id": "S20",
+            "title": "Fabrication additive utilisant des matières plastiques — ED 148",
+            "publisher": "INRS",
+            "url": "https://www.inrs.fr/media.html?refINRS=ED+148",
+            "scope": "Notice publique de la fiche ; résumé de la notice, pas analyse du PDF.",
+            "section": "Présentation des risques et opérations annexes",
+            "checked_on": "2026-10-30",
+            "next_review_on": "2027-01-28",
+            "review_policy_days": 90,
+            "review_policy_origin": "choix_documentaire_BOJART_non_delai_editeur",
+            "reading": "notice_html_consultee_PDF_non_analyse",
+            "published_on": null,
+            "source_snapshot_sha256": null,
+            "kind": "documentation_primaire",
+            "license_note": "Lien et synthèse originale ; aucun manuel complet redistribué."
+          }
+        ],
+        "review_overdue": [],
+        "warnings": [
+          "Documentation seulement ; aucune validation du parc réel."
+        ]
+      }
+    ],
+    "total_returned": 4,
+    "allowed_to_execute": false
+  }
+}

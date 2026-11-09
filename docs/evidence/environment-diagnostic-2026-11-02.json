@@ -1,0 +1,108 @@
+{
+  "schema": "bojart.environment-diagnostic-validation.v1",
+  "observed_at": "2026-11-01T23:43:13.613333+00:00",
+  "user_date": "2026-11-02",
+  "timezone": "Europe/Paris",
+  "base_commit": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+  "environment": {
+    "python": "3.12.14",
+    "os": "Linux",
+    "scope": "managed development host; not the BOJ.ART tower"
+  },
+  "unit_tests": {
+    "tests": 84,
+    "tests_agent": 128,
+    "tests_ops": 83,
+    "total": 295,
+    "new_environment_tests": 18,
+    "passed": true
+  },
+  "retrieval": {
+    "cases": 14,
+    "hits_at_5": 14,
+    "all_citations_verified": true,
+    "case_definitions_modified_by_this_change": false
+  },
+  "real_environment_command": {
+    "exit_code": 0,
+    "verified_version_tools": [
+      "ffmpeg",
+      "ffprobe",
+      "node"
+    ],
+    "raw_host_report_committed": false,
+    "gpu_qualification": false
+  },
+  "launcher_check_tools": {
+    "exit_code": 2,
+    "launch_blockers": [],
+    "workstation_blockers": [
+      "cad_runtime"
+    ],
+    "environment_section_present": true,
+    "no_state_created": true
+  },
+  "launcher_restart": {
+    "schema": "bojart.startup-acceptance.v1",
+    "observed_at": "2026-11-01T23:42:58.728648+00:00",
+    "python": "3.12.14",
+    "platform": "linux",
+    "launcher_started_twice": true,
+    "context_survives_restart": true,
+    "unclean_shutdown_tested": true,
+    "restart_method": "forced_process_kill",
+    "no_duplicate_versions_or_notes": true,
+    "backup_restore_verified": true,
+    "restored_without_source_repo": true,
+    "browser": null,
+    "provider_calls": 0,
+    "live_models_tested": false,
+    "physical_hardware_tested": false,
+    "data_scope": "temporary fixtures and selected public project context",
+    "tested_files_sha256": {
+      "tools/start_jarvis.py": "721761e15ab2f18f96fe85923e07781579ca0c67323fc1a00a8a32fe611b0c44",
+      "tools/doctor.py": "a2a36c679f543d14ed0ebf05f29854396d9594e85d96d39e095d3de7104648bc",
+      "bojart_memory/paths.py": "3f776181ca3ef620649fcc3017d74ecc34d0b24b7deee3883e46037b7bc7e1d6",
+      "bojart_memory/agent.py": "faf7dd4acd339fab9fa703b4584ff8325a75b7524345a972c99361c91c951f4b",
+      "bojart_memory/core.py": "45384ba83825905b17cd85b33a8549d77d16da19e8c2e1d93e32e01ab86db7a7",
+      "jarvis/apps/jarvis/app/consolidated_workbench.py": "6bb4d4162b658a9441b09969dfede320c9bd7f07b44ea2c7403775119e80bde4",
+      "jarvis/apps/jarvis/app/memory.html": "845087eaf551b64e62fb591152b36ee199865aee5a793995fb7c3ef2920892f6",
+      "jarvis/apps/jarvis/app/memory.js": "24b3463eb8d275b99fa945359b2f55659709d2203c7360364d8ed28ea8d27276",
+      "jarvis/apps/jarvis/app/memory.css": "9a406323d11db43094576a09e192de1ae7fdf13cd57750dbfcbbdf4721bfc1a5"
+    }
+  },
+  "tested_files_sha256": {
+    "bojart_ops/environment.py": "6ec3b4c8341b8de1e74a8cee0349d7d2483d708b0d389101c37fd926cf66b087",
+    "tools/diagnose_environment.py": "40ebe602040bbc6f125202ef28efd1fec19ae45e0064df56be4150cc2758695d",
+    "tools/doctor.py": "a2a36c679f543d14ed0ebf05f29854396d9594e85d96d39e095d3de7104648bc",
+    "tools/start_jarvis.py": "721761e15ab2f18f96fe85923e07781579ca0c67323fc1a00a8a32fe611b0c44",
+    "Diagnostic_BOJART.cmd": "8bb709f75beebd6e806ede7325d8cca345fdc6c52c3fc87b996f3262c4c727a5",
+    "Diagnostic_BOJART.sh": "af6ebdb22bf94f11a668fc15d397cb32e368cfaff609dc4322ffd2cf5acb155a",
+    "tests/test_environment_diagnostic.py": "04a660507feea53717d021120348bcdc4ff6c27260842c069a5d88a4a684581c",
+    "docs/DIAGNOSTIC_OUTILS.md": "eff44742ae4df505d671c84436c5cdd786d7a6fd10740edcd78e6bda340539bb"
+  },
+  "target_hardware_qualified": false,
+  "models_tested": false,
+  "gpu_fixtures_synthetic": true,
+  "provider_calls": 0,
+  "physical_commands": 0,
+  "third_party_installs": 0,
+  "publication_correction": {
+    "initial_commit": "acf6699880db226d00c68244880280c998a1c14e",
+    "workflow_run": 41363090720,
+    "failure": "Two new root diagnostic launchers were unclassified after manifest regeneration.",
+    "fix": "Add Diagnostic_BOJART.* to the existing memory routing rule; retain the zero-unclassified assertion.",
+    "operations_suite_rerun_after_manifest_refresh": true,
+    "windows_path_alias": {
+      "workflow_run": 41363100786,
+      "job_id": 125017480353,
+      "failure": "The test compared a resolved long Windows path with its short 8.3 alias.",
+      "fix": "Compare the returned canonical path with destination.resolve(); retain file-content, overwrite and repository-boundary checks."
+    }
+  },
+  "upstream_reconciliation": {
+    "commit": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+    "preserved": "RTX 4060 Ti declared by user, 8 GB shown in reported photo, dedicated installer and compact model context. These are source-reported facts, not a live diagnostic on the PC.",
+    "retrieval_case_update": "Preserved upstream hardware-aware expected source; no case changed by the diagnostic contribution."
+  }
+}

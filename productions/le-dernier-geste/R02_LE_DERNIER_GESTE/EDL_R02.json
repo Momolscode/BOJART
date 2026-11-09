@@ -1,0 +1,87 @@
+{
+  "title": "Le dernier geste — R02",
+  "duration_seconds": 10.5,
+  "fps": 24,
+  "frames": 252,
+  "output": "BOJART_LE_DERNIER_GESTE_R02.mp4",
+  "shots": [
+    {
+      "shot": "S01",
+      "input": 0,
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 9.9,
+      "frames": 10,
+      "role": "Regard réel",
+      "filters": "crop=256:455:216:150,scale=720:1280",
+      "timeline_in_frame": 0,
+      "timeline_out_frame_exclusive": 10
+    },
+    {
+      "shot": "S02",
+      "input": 1,
+      "source": "BOJART_G1_DERNIER_TRAIT_BRUT.mp4",
+      "in": 1.0,
+      "frames": 54,
+      "role": "Nouveau trait de pinceau",
+      "filters": "scale=720:1280",
+      "timeline_in_frame": 10,
+      "timeline_out_frame_exclusive": 64
+    },
+    {
+      "shot": "S03",
+      "input": 0,
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 9.8,
+      "frames": 12,
+      "role": "Détail de peinture authentique",
+      "filters": "crop=220:391:150:380,scale=720:1280",
+      "timeline_in_frame": 64,
+      "timeline_out_frame_exclusive": 76
+    },
+    {
+      "shot": "S04",
+      "input": 2,
+      "source": "TEST19_SOURCE.mp4",
+      "in": 0.125,
+      "frames": 89,
+      "role": "TEST19 existant — prévisualisation de l’éveil",
+      "filters": "scale=720:1280",
+      "timeline_in_frame": 76,
+      "timeline_out_frame_exclusive": 165
+    },
+    {
+      "shot": "S05",
+      "input": 0,
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 8.1,
+      "frames": 72,
+      "role": "Révélation authentique",
+      "filters": "crop=512:910:0:100,scale=720:1280",
+      "timeline_in_frame": 165,
+      "timeline_out_frame_exclusive": 237
+    },
+    {
+      "shot": "S06",
+      "input": 0,
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 0.2,
+      "frames": 15,
+      "role": "Emblème original",
+      "filters": "crop=512:550:0:100,scale=640:-2,pad=720:1280:(ow-iw)/2:(oh-ih)/2:black",
+      "timeline_in_frame": 237,
+      "timeline_out_frame_exclusive": 252
+    }
+  ],
+  "audio": {
+    "recorded_foley": "FOLEY_PINCEAU_BenDrain_preview.mp3",
+    "author": "BenDrain",
+    "page": "https://freesound.org/people/BenDrain/sounds/488027/",
+    "license_declared_by_page": "CC0",
+    "asset_quality": "Public high-quality MP3 preview, not original 24-bit WAV",
+    "brush_onset_timeline_s": 0.667,
+    "score_start_timeline_s": 3.167,
+    "score": "Original V21 existing composition, remixed",
+    "perceptual_listening": "not_certified"
+  },
+  "status": "Montage d’intention avec G1 terminé ; G2 définitif reste à produire"
+}

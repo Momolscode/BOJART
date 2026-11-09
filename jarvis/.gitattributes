@@ -1,0 +1,2 @@
+# Preserve source bytes across platforms; originals are hashed.
+* -text

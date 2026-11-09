@@ -21,6 +21,32 @@ archives/private/
 *.7z
 *.rar
 
-# Rapports régénérables et état local de l’audit
+
+# Active state and source media remain external
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.bundle
+*.mp4
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.pdf
+!docs/historical/BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf
+!docs/historical/BOJ_ART_Atelier_3D_Plan_de_mise_en_oeuvre.pdf
+*.ttf
+jarvis/apps/jarvis/studio_media/
+jarvis/apps/jarvis/studio_assets/
+.local/
+state/
+objects/
+
+# Rapports et état local de l’audit
 .bojart-audit/
 .bojart-state/
+runs/figurine/

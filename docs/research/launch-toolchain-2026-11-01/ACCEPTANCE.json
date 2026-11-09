@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "scope": "Proposed extension of existing release acceptance, not an executed suite.",
+  "existing_gates_source": "jarvis/apps/jarvis/app/launch_readiness.py",
+  "existing_french_cases": "jarvis/research/readiness-2026-10-30/RECETTE_FR_36_CAS.json",
+  "production_ready": false,
+  "tests": [
+    {
+      "gate_id": "restore_drill",
+      "title": "Rechercher et restaurer",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "source_corpus"
+      ],
+      "procedure": "Indexer le contexte, rechercher une recommandation avec citation ; sauvegarder puis restaurer les bases existantes dans de nouveaux dossiers.",
+      "pass_criteria": "Empreintes et références identiques ; aucun original perdu ; sources nouvelles retrouvables.",
+      "evidence": null
+    },
+    {
+      "gate_id": "speech_offline",
+      "title": "Voix dans l'atelier",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "voice_corpus",
+        "target_hardware"
+      ],
+      "procedure": "Exécuter la recette française existante avec voix réelles, silence, bruit, négation et annulation.",
+      "pass_criteria": "Aucune action physique issue d'une ambiguïté ; erreurs et latences mesurées ; annulation correctement respectée.",
+      "evidence": null
+    },
+    {
+      "gate_id": "llm_qualified",
+      "title": "Modèle local",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "target_hardware",
+        "voice_corpus"
+      ],
+      "procedure": "Charger le modèle exact choisi, tester demandes connues/inconnues et concurrence avec un rendu.",
+      "pass_criteria": "Modèle identifié, latences mesurées, repli visible ; pas d'inférence depuis la présence d'un paquet.",
+      "evidence": null
+    },
+    {
+      "gate_id": "jev_contract",
+      "title": "Décision Jev",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "execution_receipts"
+      ],
+      "procedure": "Tester réponse valide, invalide, expiration, indisponibilité et réponse perdue.",
+      "pass_criteria": "Intentions hors catalogue refusées ; contexte conservé ; pas de second appel lorsque l'état est inconnu.",
+      "evidence": null
+    },
+    {
+      "gate_id": "screen_physical",
+      "title": "Trois écrans",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "target_hardware"
+      ],
+      "procedure": "Appairer réellement les trois moniteurs, couper une vue et reprendre la scène.",
+      "pass_criteria": "Affichage observé sur le moniteur attendu ; trois reçus conservés ; reprise partielle sans changement d'enfants.",
+      "evidence": null
+    },
+    {
+      "gate_id": "cad_runtime",
+      "title": "Objet coté",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "printer_profiles",
+        "material_profiles"
+      ],
+      "procedure": "Créer un socle borné, exporter, relire le maillage et préparer un coupon.",
+      "pass_criteria": "Unités et cotes correctes ; limites machine respectées ; mesure physique liée au profil.",
+      "evidence": null
+    },
+    {
+      "gate_id": "printer_fdm",
+      "title": "Une FDM qualifiée",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "printer_profiles",
+        "material_profiles",
+        "production_history"
+      ],
+      "procedure": "Lire la machine autorisée, trancher un coupon, vérifier aperçu/profil puis effectuer un essai supervisé.",
+      "pass_criteria": "Bonne machine et bon fichier ; pièce inspectée ; pas de double envoi après incident.",
+      "evidence": null
+    },
+    {
+      "gate_id": "printer_resin",
+      "title": "Une résine qualifiée",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "printer_profiles",
+        "material_profiles",
+        "production_history"
+      ],
+      "procedure": "Vérifier format du slicer, défauts UVtools, supportage, essai et post-traitement.",
+      "pass_criteria": "Résultat physique vérifié ; exposition et matière connues ; capacités de lavage/cure et ventilation confirmées.",
+      "evidence": null
+    },
+    {
+      "gate_id": "production_safety",
+      "title": "Commande physique bornée",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "printer_profiles",
+        "execution_receipts"
+      ],
+      "procedure": "Tester les refus hors profil, l'arrêt matériel et le protocole de reprise avec opérateur.",
+      "pass_criteria": "Aucun mouvement imprévu ; pas de transition automatique non qualifiée ; autorisation liée au travail exact.",
+      "evidence": null
+    },
+    {
+      "gate_id": "studio_identity",
+      "title": "Plan fidèle et rendu",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "reference_assets",
+        "brand_bible",
+        "shot_benchmarks"
+      ],
+      "procedure": "Un plan sur vraie œuvre : rig 3D si nécessaire, contact, caméra, son, rendu et revue par l'artiste.",
+      "pass_criteria": "Identité, contact, mouvement, raccord et audio approuvés séparément ; master récupéré et décodable.",
+      "evidence": null
+    },
+    {
+      "gate_id": "social_publish",
+      "title": "Publication et mesure",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "social_metrics",
+        "brand_bible"
+      ],
+      "procedure": "Préparer un brouillon exportable ; sur autorisation distincte publier via la surface native disponible et relever les mesures.",
+      "pass_criteria": "Bon compte, bon fichier et reçu/lien public ; collecte à fenêtre documentée. Brouillon seul = gate non réussi.",
+      "evidence": null
+    },
+    {
+      "gate_id": "site_quotes",
+      "title": "Demande et devis",
+      "status": "not_run_on_target",
+      "required_datasets": [
+        "offer_catalog",
+        "site_measurement"
+      ],
+      "procedure": "Tester la page de l'offre, le formulaire et la réception d'une demande test autorisée.",
+      "pass_criteria": "Demande reçue sans doublon ; offre réalisable ; événement mesuré selon sa définition.",
+      "evidence": null
+    }
+  ]
+}

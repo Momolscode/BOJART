@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="2700" viewBox="0 0 2480 2700">
+<title>BOJ.ART Jarvis : orchestration réelle M07 et fonctions restant à raccorder</title>
+<desc>Le graphe route, guard, dispatch et receipt distribue des commandes visuelles. La mémoire, la CAO et les brouillons ont leurs circuits distincts. Les machines, la génération vidéo automatique et la publication ne sont pas connectées.</desc>
+<rect width="2480" height="2700" fill="#080F1D"/>
+<text x="80" y="75.2" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#60D7D0">BOJ.ART  /  JARVIS</text>
+<text x="80" y="161.6" font-family="DejaVu Sans, sans-serif" font-size="62" font-weight="700" fill="#F2F6FC">De ta demande à une action vérifiée</text>
+<text x="80" y="220.6" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#B3C1D3">Orchestration réelle M07 • GitHub Momolscode/BOJART • 1 novembre 2026 • main 3c288214</text>
+<rect x="80" y="261" width="2320" height="118" rx="18" fill="#102C2B" stroke="#245E59" stroke-width="2"/>
+<text x="112" y="309.6" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#60D7D0">INSTALLABLE EN LOCAL</text>
+<text x="112" y="354.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="400" fill="#F2F6FC">Mémoire et interface vérifiées. Le pilotage autonome de l’atelier reste à construire et à qualifier.</text>
+<circle cx="88" cy="423" r="8" fill="#60D7D0"/>
+<text x="110" y="430.2" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#B3C1D3">Implémenté dans le code</text>
+<circle cx="728" cy="423" r="8" fill="#FFC777"/>
+<text x="750" y="430.2" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#B3C1D3">Dépendances / configuration / recette</text>
+<circle cx="1638" cy="423" r="8" fill="#B7A6EC"/>
+<text x="1660" y="430.2" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#B3C1D3">Extension à raccorder</text>
+<text x="80" y="482.6" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#B3C1D3">10 intentions : modèle • sources • Studio • planning • dossiers • contenus • métier • conception • silence • trois vues</text>
+<polyline points="1220,612 1220,665" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1220.0,665.0 1213.1,651.7 1226.9,651.7" fill="#60D7D0"/>
+<polyline points="1220,771 1220,830" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1220.0,830.0 1213.1,816.7 1226.9,816.7" fill="#60D7D0"/>
+<polyline points="1220,940 1220,1020" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1220.0,1020.0 1213.1,1006.7 1226.9,1006.7" fill="#60D7D0"/>
+<polyline points="1220,1165 1220,1225" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1220.0,1225.0 1213.1,1211.7 1226.9,1211.7" fill="#60D7D0"/>
+<polyline points="1220,1335 1220,1410" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1220.0,1410.0 1213.1,1396.7 1226.9,1396.7" fill="#60D7D0"/>
+<polyline points="1760,605 1690,605 1690,718 1620,718" fill="none" stroke="#FFC777" stroke-width="3" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<polygon points="1620.0,718.0 1633.3,711.1 1633.3,724.9" fill="#FFC777"/>
+<polyline points="1620,885 1760,885" fill="none" stroke="#FFC777" stroke-width="3" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<polygon points="1760.0,885.0 1746.7,891.9 1746.7,878.1" fill="#FFC777"/>
+<polyline points="2080,985 2080,999 1680,999 1680,1082 1620,1082" fill="none" stroke="#FFC777" stroke-width="3" stroke-linejoin="round" stroke-dasharray="8 8"/>
+<polygon points="1620.0,1082.0 1633.3,1075.1 1633.3,1088.9" fill="#FFC777"/>
+<polyline points="820,1082 680,1082" fill="none" stroke="#FFC777" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="680.0,1082.0 693.3,1075.1 693.3,1088.9" fill="#FFC777"/>
+<polyline points="680,1125 775,1125 775,1435 820,1435" fill="none" stroke="#FFC777" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="820.0,1435.0 806.7,1441.9 806.7,1428.1" fill="#FFC777"/>
+<polyline points="820,1465 745,1465 745,1370 680,1370" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="680.0,1370.0 693.3,1363.1 693.3,1376.9" fill="#60D7D0"/>
+<polyline points="1620,1280 1700,1280 1700,1612 440,1612" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1700,1612 2040,1612" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="440,1612 440,1680" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="440.0,1680.0 433.1,1666.7 446.9,1666.7" fill="#60D7D0"/>
+<polyline points="1240,1612 1240,1680" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1240.0,1680.0 1233.1,1666.7 1246.9,1666.7" fill="#60D7D0"/>
+<polyline points="2040,1612 2040,1680" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="2040.0,1680.0 2033.1,1666.7 2046.9,1666.7" fill="#60D7D0"/>
+<polyline points="440,1870 440,1904 1240,1904" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1240,1870 1240,1904 1240,1904" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="2040,1870 2040,1904 1240,1904" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1240,1904 1240,1935" fill="none" stroke="#60D7D0" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1240.0,1935.0 1233.1,1921.7 1246.9,1921.7" fill="#60D7D0"/>
+<rect x="80" y="500" width="600" height="405" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="81" y="520" width="5" height="365" rx="2" fill="#60D7D0"/>
+<text x="108" y="548.8" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#F2F6FC">MÉMOIRE DOCUMENTAIRE</text>
+<text x="108" y="596.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Documents et exports choisis</text>
+<text x="108" y="631.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">→ originaux + versions + empreintes</text>
+<text x="108" y="666.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">→ recherche SQLite FTS5 avec sources</text>
+<text x="108" y="701.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">→ contexte cité, notes et sauvegardes</text>
+<text x="108" y="758.2" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#FFC777">OLLAMA FACULTATIF</text>
+<text x="108" y="798.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Recherche sémantique et chat local après</text>
+<text x="108" y="833.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">installation des modèles.</text>
+<text x="108" y="878.2" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#F2F6FC">Aucun ordre d’atelier exécuté ici.</text>
+<rect x="820" y="500" width="800" height="112" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="821" y="520" width="5" height="72" rx="2" fill="#60D7D0"/>
+<text x="848" y="549.6" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#F2F6FC">TOI  ·  CLAVIER / BOUTONS</text>
+<text x="848" y="596.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Une commande ou une sélection dans l’interface.</text>
+<rect x="1760" y="500" width="640" height="210" rx="20" fill="#111C2D" stroke="#FFC777" stroke-width="2"/>
+<rect x="1761" y="520" width="5" height="170" rx="2" fill="#FFC777"/>
+<text x="1788" y="547.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#F2F6FC">MICRO → TRANSCRIPTION</text>
+<text x="1788" y="596.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Capture limitée → faster-whisper → texte.</text>
+<text x="1788" y="631.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Poids et français en atelier à qualifier. Une</text>
+<text x="1788" y="666.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">seule session micro.</text>
+<rect x="820" y="665" width="800" height="106" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="821" y="685" width="5" height="66" rx="2" fill="#60D7D0"/>
+<text x="848" y="713.0" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700" fill="#F2F6FC">CONTEXTE FIGÉ</text>
+<text x="848" y="761.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Dossier + révision + modèle sélectionné + empreinte.</text>
+<rect x="820" y="830" width="800" height="110" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="821" y="850" width="5" height="70" rx="2" fill="#60D7D0"/>
+<text x="848" y="879.6" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#F2F6FC">01  ROUTE  ·  choisir l’intention</text>
+<text x="848" y="926.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Ordre connu : règles locales. Sinon : Jev facultatif.</text>
+<rect x="1760" y="800" width="640" height="185" rx="20" fill="#111C2D" stroke="#FFC777" stroke-width="2"/>
+<rect x="1761" y="820" width="5" height="145" rx="2" fill="#FFC777"/>
+<text x="1788" y="847.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#F2F6FC">JEV  ·  DÉCIDEUR TEXTE</text>
+<text x="1788" y="896.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Choisit parmi 10 intentions visuelles. Service</text>
+<text x="1788" y="931.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">distant TypeSafe ; clé requise. Proposition à</text>
+<text x="1788" y="966.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">confirmer.</text>
+<text x="1665" y="869.2" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#FFC777">?</text>
+<rect x="820" y="1020" width="800" height="145" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="821" y="1040" width="5" height="105" rx="2" fill="#60D7D0"/>
+<text x="848" y="1069.6" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#F2F6FC">02  GUARD  ·  vérifier</text>
+<text x="848" y="1116.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Contrat, dossier, contexte, délai, annulation et</text>
+<text x="848" y="1151.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">confirmation applicable.</text>
+<rect x="80" y="1000" width="600" height="150" rx="20" fill="#111C2D" stroke="#FFC777" stroke-width="2"/>
+<rect x="81" y="1020" width="5" height="110" rx="2" fill="#FFC777"/>
+<text x="108" y="1047.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#F2F6FC">REFUS / ATTENTE</text>
+<text x="108" y="1096.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Demande ambiguë ou périmée,</text>
+<text x="108" y="1131.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">annulation, confirmation encore attendue.</text>
+<text x="1190" y="1202.6" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#60D7D0">valide</text>
+<rect x="820" y="1225" width="800" height="110" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="821" y="1245" width="5" height="70" rx="2" fill="#60D7D0"/>
+<text x="848" y="1274.6" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#F2F6FC">03  DISPATCH  ·  distribuer</text>
+<text x="848" y="1321.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Prépare les vues et conserve les mêmes identifiants.</text>
+<rect x="1760" y="1030" width="640" height="270" rx="20" fill="#111C2D" stroke="#FFC777" stroke-width="2"/>
+<rect x="1761" y="1050" width="5" height="230" rx="2" fill="#FFC777"/>
+<text x="1788" y="1077.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#F2F6FC">CAO  ·  CIRCUIT DÉDIÉ</text>
+<text x="1788" y="1126.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Proposition de socle → confirmation →</text>
+<text x="1788" y="1161.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">CadQuery / Trimesh → contrôles → STL, STEP,</text>
+<text x="1788" y="1196.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">GLB.</text>
+<text x="1788" y="1231.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Dépendances à installer avec --engines.</text>
+<text x="1788" y="1278.6" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#F2F6FC">La voix de la régie ouvre ce poste.</text>
+<rect x="820" y="1410" width="800" height="110" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="821" y="1430" width="5" height="70" rx="2" fill="#60D7D0"/>
+<text x="848" y="1459.6" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#F2F6FC">04  RECEIPT  ·  journaliser</text>
+<text x="848" y="1506.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Enregistre refus, attente ou mise en file ; pas le rendu.</text>
+<rect x="80" y="1245" width="600" height="250" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="81" y="1265" width="5" height="210" rx="2" fill="#60D7D0"/>
+<text x="108" y="1292.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#F2F6FC">ÉTAT &amp; REPRISE</text>
+<text x="108" y="1341.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Tours, plans et identifiants persistants.</text>
+<text x="108" y="1376.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Checkpoints SQLite si LangGraph installé.</text>
+<text x="108" y="1411.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Mémoire et données M07 : sauvegardes</text>
+<text x="108" y="1446.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">distinctes.</text>
+<rect x="1760" y="1360" width="640" height="160" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="1761" y="1380" width="5" height="120" rx="2" fill="#60D7D0"/>
+<text x="1788" y="1407.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#F2F6FC">STUDIO &amp; GROWTH</text>
+<text x="1788" y="1456.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Médias annotés → brief → brouillons. Journal</text>
+<text x="1788" y="1491.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Higgsfield séparé ; aucun envoi automatique.</text>
+<text x="870" y="1570.2" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="400" fill="#B3C1D3">Fin du graphe • les reçus de rendu arrivent ensuite.</text>
+<text x="80" y="1580.6" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#60D7D0">EFFETS DE DISPATCH  ·  SSE + REPLI PAR INTERROGATION</text>
+<rect x="80" y="1680" width="720" height="190" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="81" y="1700" width="5" height="150" rx="2" fill="#60D7D0"/>
+<text x="108" y="1728.8" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#F2F6FC">GAUCHE  ·  ATELIER</text>
+<text x="108" y="1776.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Planning démonstratif. Les imprimantes et leurs</text>
+<text x="108" y="1811.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">états réels ne sont pas raccordés.</text>
+<rect x="880" y="1680" width="720" height="190" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="881" y="1700" width="5" height="150" rx="2" fill="#60D7D0"/>
+<text x="908" y="1728.8" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#F2F6FC">CENTRE  ·  PILOTAGE</text>
+<text x="908" y="1776.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Dossiers, sauvegardes, base métier et accès au</text>
+<text x="908" y="1811.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">poste de conception.</text>
+<rect x="1680" y="1680" width="720" height="190" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="1681" y="1700" width="5" height="150" rx="2" fill="#60D7D0"/>
+<text x="1708" y="1728.8" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#F2F6FC">DROITE  ·  CRÉATION</text>
+<text x="1708" y="1776.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Modèle explicitement sélectionné ; sinon Studio.</text>
+<text x="1708" y="1811.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Commande Growth possible.</text>
+<rect x="80" y="1935" width="2320" height="110" rx="18" fill="#102C2B" stroke="#245E59" stroke-width="2"/>
+<text x="111" y="1981.2" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700" fill="#60D7D0">« Ouvre la tour de contrôle » : succès complet = 3 reçus d’affichage</text>
+<text x="111" y="2024.6" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#F2F6FC">Ces reçus attestent les vues navigateur. Les trois moniteurs physiques et la synthèse vocale restent à tester.</text>
+<text x="80" y="2128.0" font-family="DejaVu Sans, sans-serif" font-size="35" font-weight="700" fill="#F2F6FC">CE QUI RESTE À RACCORDER AU JARVIS</text>
+<text x="80" y="2171.8" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#B3C1D3">Ces chaînes décrivent la cible ; elles ne sont pas actives dans le runtime M07.</text>
+<rect x="80" y="2205" width="720" height="245" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="81" y="2225" width="5" height="205" rx="2" fill="#B7A6EC"/>
+<text x="108" y="2253.8" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#F2F6FC">PRODUCTION 3D</text>
+<text x="108" y="2301.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Découpe des pièces → tranchage → file</text>
+<text x="108" y="2336.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">multi-imprimantes → envoi G-code → télémétrie →</text>
+<text x="108" y="2371.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">contrôle.</text>
+<text x="108" y="2406.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Connecteurs FDM / résine absents.</text>
+<rect x="880" y="2205" width="720" height="245" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="881" y="2225" width="5" height="205" rx="2" fill="#B7A6EC"/>
+<text x="908" y="2251.4" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" fill="#F2F6FC">GÉNÉRATION &amp; DIFFUSION</text>
+<text x="908" y="2301.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Higgsfield → suivi tâches / crédits → montage / VFX</text>
+<text x="908" y="2336.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">→ revue → export → publication.</text>
+<text x="908" y="2371.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Recettes et journal déjà présents, hors chaîne</text>
+<text x="908" y="2406.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">autonome.</text>
+<rect x="1680" y="2205" width="720" height="245" rx="20" fill="#111C2D" stroke="#2D4057" stroke-width="2"/>
+<rect x="1681" y="2225" width="5" height="205" rx="2" fill="#B7A6EC"/>
+<text x="1708" y="2252.2" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#F2F6FC">CONVERSATION CONTINUE</text>
+<text x="1708" y="2301.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Pipecat : transport audio, gestion des tours et</text>
+<text x="1708" y="2336.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">interruptions.</text>
+<text x="1708" y="2371.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">Option étudiée ; service non intégré. Qualification</text>
+<text x="1708" y="2406.0" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" fill="#B3C1D3">du micro indispensable.</text>
+<text x="80" y="2519.8" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#60D7D0">CHOIX CONSEILLÉ</text>
+<text x="80" y="2566.4" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="400" fill="#F2F6FC">Conserver LangGraph. Ajouter Pipecat pour la voix continue ; envisager Temporal seulement pour des tâches longues distribuées.</text>
+<text x="80" y="2645.6" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#B3C1D3">Vérification : installation minimale Linux, démarrage HTTP, restauration mémoire, 172 tests Python + 11 tests JavaScript.</text>
+<text x="80" y="2681.6" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#B3C1D3">Portée : repli local testé ici ; moteurs CAO / LangGraph complets et matériel BOJ.ART non qualifiés par cet audit.</text>
+</svg>

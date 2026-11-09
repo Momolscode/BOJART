@@ -1,0 +1,106 @@
+{
+  "schema": "bojart.synthetic-media-check.v1",
+  "observed_at": "2026-11-02T01:24:24.396226+00:00",
+  "scope": "host_running_this_command",
+  "status": "passed",
+  "expected_profile": {
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "frames": 48,
+    "duration_seconds": 2,
+    "video_codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "sample_rate": 48000,
+    "channels": 1
+  },
+  "tools": {
+    "ffmpeg": {
+      "detected": true,
+      "version": "6.1.1-3ubuntu5",
+      "version_probe": "verified",
+      "catalog_id": null,
+      "integration_qualified": false
+    },
+    "ffprobe": {
+      "detected": true,
+      "version": "6.1.1-3ubuntu5",
+      "version_probe": "verified",
+      "catalog_id": null,
+      "integration_qualified": false
+    }
+  },
+  "missing_tools": [],
+  "stages": [
+    {
+      "name": "encode",
+      "status": "passed",
+      "elapsed_ms": 315.402
+    },
+    {
+      "name": "artifact",
+      "status": "passed",
+      "elapsed_ms": 1.028
+    },
+    {
+      "name": "probe",
+      "status": "passed",
+      "elapsed_ms": 166.938
+    },
+    {
+      "name": "decode",
+      "status": "passed",
+      "elapsed_ms": 164.53
+    },
+    {
+      "name": "audio_signal",
+      "status": "passed",
+      "elapsed_ms": 75.631
+    },
+    {
+      "name": "unchanged_artifact",
+      "status": "passed",
+      "elapsed_ms": 0.593
+    }
+  ],
+  "synthetic_exports_created": 1,
+  "temporary_media_removed": true,
+  "production_ready": false,
+  "artistic_approval": false,
+  "physical_hardware_qualified": false,
+  "provider_calls": 0,
+  "limits": [
+    "Synthetic CPU export only; no production asset or project was rendered.",
+    "Signal measurement does not assess sound design or listening quality.",
+    "No Blender, After Effects, GPU, model, microphone or publishing test."
+  ],
+  "probe_source_sha256": "85ac92d4ed625056c38d0c1fdc6a1e227b8bd2c87afd22001fede4fca6ebeadb",
+  "artifact": {
+    "bytes": 625365,
+    "sha256": "cb335817bb4618f6b558240c497be7b4d317e343fa79d606766b6633ddbb03ea"
+  },
+  "metadata": {
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "frames": 48,
+    "duration_seconds": 2.0,
+    "video_codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "sample_rate": 48000,
+    "channels": 1,
+    "video_duration_seconds": 2.0,
+    "audio_duration_seconds": 2.0,
+    "start_delta_seconds": 0.0
+  },
+  "audio": {
+    "decoded_samples": 96256,
+    "rms_full_scale": 0.022037,
+    "peak_full_scale": 0.034363,
+    "non_silent": true
+  },
+  "elapsed_ms": 822.097,
+  "evidence_host": "development_environment_linux_not_target_pc"
+}

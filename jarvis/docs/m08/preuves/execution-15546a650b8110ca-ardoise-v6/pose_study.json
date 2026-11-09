@@ -1,0 +1,54 @@
+{
+ "candidates": [
+  {
+   "pose": "serment",
+   "label": "Serment : lame plantée devant, deux mains sur la poignée, menton levé",
+   "volume_cm3_nominal": 155.3,
+   "height_nominal_mm": 170.0,
+   "center_of_mass_mm": [
+    -0.6,
+    -0.0,
+    85.2
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.692,
+   "side_silhouette_fill": 0.457,
+   "stance_width_mm": 54.0
+  },
+  {
+   "pose": "defi",
+   "label": "Défi : lame posée sur l’épaule, main sur la hanche, appui sur une jambe",
+   "volume_cm3_nominal": 150.6,
+   "height_nominal_mm": 202.0,
+   "center_of_mass_mm": [
+    2.1,
+    2.3,
+    87.4
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.491,
+   "side_silhouette_fill": 0.415,
+   "stance_width_mm": 58.0
+  },
+  {
+   "pose": "garde",
+   "label": "Garde : lame tenue à deux mains, pointe vers l’avant, fente légère",
+   "volume_cm3_nominal": 147.2,
+   "height_nominal_mm": 166.0,
+   "center_of_mass_mm": [
+    -0.8,
+    -0.4,
+    81.0
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.656,
+   "side_silhouette_fill": 0.311,
+   "stance_width_mm": 62.0
+  }
+ ],
+ "chosen": "defi",
+ "notes": [
+  "Retenue : defi (remplissage de face 0.491, cible 0,42 = geste lisible sans membres grêles). Critère artistique non validé par un tiers."
+ ],
+ "voxel_mm": 2.0
+}

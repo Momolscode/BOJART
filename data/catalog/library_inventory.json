@@ -1,0 +1,1005 @@
+{
+  "scope": "100 returned candidates; query limit, not an exhaustive export. Metadata is not content evidence.",
+  "items": [
+    {
+      "library_file_id": "libfile_acf72ea54ce08191bedb401e0612a585",
+      "name": "BOJART_MARWIN_PRET_GITHUB_2026-11-01.zip",
+      "bytes": 49329375,
+      "version_id": null,
+      "modified_at": "2026-11-01T20:06:40.844871Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_806d9f5dd5b4819182740efb3ed51a2f",
+      "name": "BOJART_ATLAS_DASHBOARDS_2026-11-01.jpg",
+      "bytes": 433083,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:56:30.965863Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_d791c3e535788191b9b12650f4a78fc5",
+      "name": "BOJART_AUDIT_VISUELS_2026-11-01.zip",
+      "bytes": 259662674,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:56:30.946041Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_187ea89a29148191b4a9b43e17268e96",
+      "name": "BOJART_GALERIE_AUDIT_2026-11-01.html",
+      "bytes": 25496991,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:56:30.935833Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_49b7047b99508191a618fafff4371b3e",
+      "name": "BOJART_AUDIT_GLOBAL_2026-11-01.pdf",
+      "bytes": 7211348,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:56:30.923508Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_21d51e4917748191b6348b2ba41c7fbb",
+      "name": "BOJART_AUDIT_REPRISE_2026-11-01.txt",
+      "bytes": 5399,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:56:30.873594Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": true
+    },
+    {
+      "library_file_id": "libfile_8e568093974c81918b1927b1404dcc2f",
+      "name": "BOJART_REPRISE01_PROJET_SOURCES.zip",
+      "bytes": 42709174,
+      "version_id": "2",
+      "modified_at": "2026-11-01T19:40:10.232482Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_c3db67736dc0819182e3b573027006e1",
+      "name": "BOJART_DA_LE_DERNIER_GESTE_2026-11-01.txt",
+      "bytes": 13620,
+      "version_id": "2",
+      "modified_at": "2026-11-01T19:40:09.840704Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": true
+    },
+    {
+      "library_file_id": "libfile_49221f165bc88191a0249a9efec97a7f",
+      "name": "BOJART_REPRISE_RENDUS_2026-11-01.txt",
+      "bytes": 12239,
+      "version_id": "3",
+      "modified_at": "2026-11-01T19:40:09.675536Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": true
+    },
+    {
+      "library_file_id": "libfile_0fbedda531b481919952e674f6e3ac69",
+      "name": "BOJART_LE_DERNIER_GESTE_R03.mp4",
+      "bytes": 4830931,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:40:09.327657Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_62d2a528ce9c819180bd45e316d446b4",
+      "name": "BOJART_LE_DERNIER_GESTE_R02.mp4",
+      "bytes": 5629494,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:23:11.670441Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_fd6eaed4f5348191b59580df21fafb73",
+      "name": "BOJART_G1_DERNIER_TRAIT_BRUT.mp4",
+      "bytes": 2077736,
+      "version_id": null,
+      "modified_at": "2026-11-01T19:23:11.644598Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_3b98cb144fc88191afed0c568f615700",
+      "name": "BOJART_REPRISE01_L_ART_PREND_CORPS.mp4",
+      "bytes": 4623406,
+      "version_id": null,
+      "modified_at": "2026-11-01T18:52:02.873563Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_875f76c239cc8191a4c147a11293c9ff",
+      "name": "BOJART_JARVIS_M07_2026-11-01.zip",
+      "bytes": 76006066,
+      "version_id": null,
+      "modified_at": "2026-11-01T18:42:01.264907Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_ba66818c79f08191b43e50857cc8fffa",
+      "name": "BOJART_JARVIS_M07_SCHEMA_2026-11-01.html",
+      "bytes": 17777,
+      "version_id": null,
+      "modified_at": "2026-11-01T18:42:01.254941Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_81b20c5319a08191a9ec67bcde4a678b",
+      "name": "BOJART_JARVIS_M07_REPRISE_2026-11-01.txt",
+      "bytes": 16903,
+      "version_id": null,
+      "modified_at": "2026-11-01T18:42:01.253814Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": true
+    },
+    {
+      "library_file_id": "libfile_0ed9b47a61188191ba43349c21ab32f8",
+      "name": "BOJART_JARVIS_M06_REPRISE_2026-10-31.txt",
+      "bytes": 19492,
+      "version_id": null,
+      "modified_at": "2026-10-31T02:32:55.197629Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_f7a39a94c3d08191b5a35532715f431b",
+      "name": "BOJART_JARVIS_M06_2026-10-31.zip",
+      "bytes": 75856407,
+      "version_id": null,
+      "modified_at": "2026-10-31T02:32:55.155509Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_e723fed96bd48191a43fa00be4b23aa9",
+      "name": "BOJART_JARVIS_M06_SCHEMA_2026-10-31.html",
+      "bytes": 11369,
+      "version_id": null,
+      "modified_at": "2026-10-31T02:32:55.047502Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_adba0e8c304c8191aaca12a1ec5df215",
+      "name": "BOJART_JARVIS_M05_REPRISE_2026-10-31.txt",
+      "bytes": 2998,
+      "version_id": null,
+      "modified_at": "2026-10-31T02:21:58.762496Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_c03d6b1c496c8191810d5fdda3cbcff4",
+      "name": "BOJART_JARVIS_M05_2026-10-31.zip",
+      "bytes": 75721264,
+      "version_id": null,
+      "modified_at": "2026-10-31T02:21:58.706654Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_4c3908c20004819192495d824fa648d2",
+      "name": "BOJART_Jarvis_M04_Lancement_2026-10-31.zip",
+      "bytes": 78453456,
+      "version_id": null,
+      "modified_at": "2026-10-31T02:00:39.252318Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_755314514fa08191ab1852af4fdeac2b",
+      "name": "BOJART_Anatomy_Mecanisme_Demo_7s.mp4",
+      "bytes": 226415,
+      "version_id": null,
+      "modified_at": "2026-10-31T01:27:41.795222Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_5625d253f3948191a3aaa29fd1801bb6",
+      "name": "BOJART_Anatomy_Exporteur_Claude.zip",
+      "bytes": 4860,
+      "version_id": null,
+      "modified_at": "2026-10-31T01:27:39.298997Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_10f874d61cf88191972ba91c46988833",
+      "name": "BOJART_SEO_Publication_Apercu.png",
+      "bytes": 397704,
+      "version_id": null,
+      "modified_at": "2026-10-31T00:00:56.450981Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_220f4e49f1fc8191bd54b652b8589aa0",
+      "name": "BOJART_Jarvis_SEO_Publication_2026-10-31.zip",
+      "bytes": 908893,
+      "version_id": null,
+      "modified_at": "2026-10-31T00:00:48.534154Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_121df2e0da3c819184ccc0687d55f04a",
+      "name": "BOJART_Jarvis_Enrichissement_Integration_2026-10-30.zip",
+      "bytes": 73692,
+      "version_id": null,
+      "modified_at": "2026-10-30T22:55:49.847117Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_24514b5e1c5881919e926a099fdf5eb9",
+      "name": "BOJART_Jarvis_Publication_Momolscode.zip",
+      "bytes": 179254142,
+      "version_id": null,
+      "modified_at": "2026-10-30T22:36:12.159971Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_e6731126b75c81918ba0bbec4186f8f2",
+      "name": "BOJART_Bilan_Consolidation_GitHub_2026-10-30.md",
+      "bytes": 3316,
+      "version_id": null,
+      "modified_at": "2026-10-30T22:25:12.771909Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_e1b3d73f40588191982f85943797a65f",
+      "name": "BOJART_Jarvis_Consolidation_GitHub_Preservation_2026-10-30.zip",
+      "bytes": 179300812,
+      "version_id": null,
+      "modified_at": "2026-10-30T22:25:04.243679Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_42accf8b40488191b66d714860df88ee",
+      "name": "BOJART_BREAK_THE_FRAME_PREVISUAL_V1.mp4",
+      "bytes": 3922906,
+      "version_id": null,
+      "modified_at": "2026-10-30T21:49:46.573144Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_e72f58f42c84819188b098b5dea78acf",
+      "name": "BOJART_Jarvis_Voix_Jev_Architecture_Verifiee_2026-10-30.zip",
+      "bytes": 8104,
+      "version_id": null,
+      "modified_at": "2026-10-30T21:39:34.385259Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_d56374ccc65c81919653e750828eb58b",
+      "name": "BOJART_MARWIN_REPRISE_V6_2026-10-30.zip",
+      "bytes": 16809247,
+      "version_id": "3",
+      "modified_at": "2026-10-30T21:35:08.523146Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_227dc81926b48191b69c452de2feb6b2",
+      "name": "BOJART_MARWIN_MEDIA_RECUPERES_V7_2026-10-30.zip",
+      "bytes": 27083703,
+      "version_id": null,
+      "modified_at": "2026-10-30T21:35:01.031913Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_efbf33c24f0c81918128820033a3d301",
+      "name": "MARWIN_BOJART_ARCHIVE_CONSOLIDEE_V5_2026-10-30.zip",
+      "bytes": 16811558,
+      "version_id": null,
+      "modified_at": "2026-10-30T21:30:48.081538Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_dfa56861a3888191abca850f8f448e38",
+      "name": "MARWIN_BOJART_RECUPERATION_V4_2026-10-30.zip",
+      "bytes": 16802472,
+      "version_id": null,
+      "modified_at": "2026-10-30T21:29:36.076384Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_5546365105108191a55e2c0a48080986",
+      "name": "MARWIN_BOJART_RECUPERATION_V3_2026-10-30.zip",
+      "bytes": 19614237,
+      "version_id": null,
+      "modified_at": "2026-10-30T21:28:50.147389Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_7805849318608191ac9ca1f7ed6a3d7e",
+      "name": "MARWIN_BOJART_RECUPERATION_V2_2026-10-30.zip",
+      "bytes": 9798200,
+      "version_id": null,
+      "modified_at": "2026-10-30T21:24:26.539693Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_d19c962e17488191889e6bf34a167edb",
+      "name": "MARWIN_BOJART_CONTINUITE_2026-10-30.zip",
+      "bytes": 5559,
+      "version_id": "1",
+      "modified_at": "2026-10-30T20:42:51.965937Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_74ed17090dfc8191a98c3b9ed722bbe1",
+      "name": "BOJART_Base_Metier_Apercu.jpg",
+      "bytes": 172828,
+      "version_id": null,
+      "modified_at": "2026-10-30T20:28:42.487072Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_f96647f692ac8191ad9ac33858ee59a7",
+      "name": "BOJART_Base_Metier_Impression3D_Jarvis_2026-10-30.zip",
+      "bytes": 513293,
+      "version_id": null,
+      "modified_at": "2026-10-30T20:28:34.089927Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_dcbfad8b244c8191a5f1b28b2859789b",
+      "name": "BOJART_DEMANDE_SOURCES_ORIGINALES(1).txt",
+      "bytes": 1327,
+      "version_id": null,
+      "modified_at": "2026-10-30T19:31:30.034546Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_9ddc6cfaad748191a1473cc43c82da39",
+      "name": "BOJART_DEMANDE_SOURCES_ORIGINALES.txt",
+      "bytes": 1327,
+      "version_id": null,
+      "modified_at": "2026-10-30T19:31:24.901930Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_9090f9c3cc74819184bc4f2c5070cd8b",
+      "name": "BOJART_HERO_SHOT_2S_PLAN.md",
+      "bytes": 2575,
+      "version_id": null,
+      "modified_at": "2026-10-30T19:31:21.898223Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_8cd0ff7a2be88191a78742787bf47c83",
+      "name": "PROTOCOLE_CAPTURE_BOJART.md",
+      "bytes": 3524,
+      "version_id": null,
+      "modified_at": "2026-10-30T19:13:10.676061Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_51117743df708191ac79c9e8ddf1a633",
+      "name": "AUDIT_MASTER_BOJART_V2.md",
+      "bytes": 20549,
+      "version_id": null,
+      "modified_at": "2026-10-30T19:13:08.660830Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_32bdecba6b90819187411d8d46efc9bf",
+      "name": "BOJART_Audit_Integral_V2_2026.zip",
+      "bytes": 1335472,
+      "version_id": null,
+      "modified_at": "2026-10-30T19:13:06.248797Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_996117667134819195d6257f9391c0f8",
+      "name": "BOJART_Prompt_Hero_Shot(1).txt",
+      "bytes": 3299,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:52:42.785295Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_c7dd15861bec81918d3e39414e0e3081",
+      "name": "BOJART_Prompt_Hero_Shot.txt",
+      "bytes": 3299,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:52:37.323276Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_e31c4db4686c81919e820cd5107ce840",
+      "name": "BOJART_QC_Matrice.csv",
+      "bytes": 739,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:52:27.263148Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_9a75eb7b5eb081919d113cf9cf82f623",
+      "name": "BOJART_EDL_11s5.csv",
+      "bytes": 1097,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:52:21.767784Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_9c1cadfaeb3881919cc60c6c26e1bfdb",
+      "name": "BOJART_Bible_Edit_Premium_2026.md",
+      "bytes": 19642,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:52:17.912635Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_3027561f3e30819184e3b48fe5a771e0",
+      "name": "BOJART_Pack_Production_Premium_2026.zip",
+      "bytes": 11136,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:52:08.803118Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_08978b2dd5d8819189fadd4879d1f258",
+      "name": "BOJART_Jarvis_Mission03_Apercu.jpg",
+      "bytes": 340609,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:37:05.758059Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_2fece2cde2988191829070a83ac733fd",
+      "name": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip",
+      "bytes": 21911947,
+      "version_id": null,
+      "modified_at": "2026-10-30T18:36:58.086298Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_811bdfeaeb6c8191bf2d57fc99076a73",
+      "name": "BOJART_Jarvis_Innovations_Recherche_Planning_2026-10-30.zip",
+      "bytes": 419655,
+      "version_id": null,
+      "modified_at": "2026-10-30T17:29:34.736801Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_7ea1638eeab4819190438627f04d0416",
+      "name": "BOJART_V26_EYES_ALIVE_1080P.mp4",
+      "bytes": 7541600,
+      "version_id": "1",
+      "modified_at": "2026-10-30T03:51:54.423262Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_0f292c395bc08191906fd8745f5f794a",
+      "name": "BOJART_V26_MOBILE.mp4",
+      "bytes": 1027803,
+      "version_id": "1",
+      "modified_at": "2026-10-30T03:51:51.269486Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_ba92e1b9d56c81919957f4dcde057907",
+      "name": "BOJART_V26_ANIMATED_PREVIEW(1).gif",
+      "bytes": 1534281,
+      "version_id": null,
+      "modified_at": "2026-10-30T03:51:48.307034Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_bfe5b7aabf4c8191845d480f5f61c118",
+      "name": "BOJART_MANGA_OPENING_V25.mp4",
+      "bytes": 12059755,
+      "version_id": "3",
+      "modified_at": "2026-10-30T03:51:46.110229Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_8b4aca382fe0819197c7b1aa79fd4fc3",
+      "name": "BOJART_V25_MOBILE.mp4",
+      "bytes": 991977,
+      "version_id": "1",
+      "modified_at": "2026-10-30T03:51:42.751136Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_6864c7bf062081918c9222d4955a00c0",
+      "name": "BOJART_V26_ANIMATED_PREVIEW.gif",
+      "bytes": 1534281,
+      "version_id": null,
+      "modified_at": "2026-10-30T03:51:36.187247Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_440c5e05c720819191d099ca8a5fe40d",
+      "name": "BOJART_V26_PROJECT_SOURCE.zip",
+      "bytes": 6497368,
+      "version_id": null,
+      "modified_at": "2026-10-30T03:51:33.408745Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_653e6822dc848191b1f066f2619e7103",
+      "name": "BOJART_V25_PROJET_SOURCE.zip",
+      "bytes": 7473711,
+      "version_id": null,
+      "modified_at": "2026-10-30T00:14:14.722138Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_53cb13f6f37c8191b25224d74780c77a",
+      "name": "BOJART_V25_STORYBOARD.md",
+      "bytes": 2820,
+      "version_id": null,
+      "modified_at": "2026-10-30T00:14:12.528878Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_e5487a91080c8191abc3096208701458",
+      "name": "BOJART_MEMOIRE_DA_V24.md",
+      "bytes": 16436,
+      "version_id": null,
+      "modified_at": "2026-10-29T21:27:26.354579Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_c664f68eb564819186892d382d028d96",
+      "name": "BOJART_MANIFEST_V23.json",
+      "bytes": 1786,
+      "version_id": null,
+      "modified_at": "2026-10-29T19:53:08.361913Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_a8cdc2b02e3081918af2a4c957245b8b",
+      "name": "BOJART_MEMOIRE_DA_V23.md",
+      "bytes": 14063,
+      "version_id": null,
+      "modified_at": "2026-10-29T19:53:06.123455Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_2f2429ca97a08191ad23787334937a15",
+      "name": "BOJART_MEMOIRE_DA_V22.md",
+      "bytes": 10098,
+      "version_id": "1",
+      "modified_at": "2026-10-29T17:47:25.832908Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_365508c03fac8191b6edfc5280ae2092",
+      "name": "BOJART_MEMOIRE_DA_V22(1).md",
+      "bytes": 10098,
+      "version_id": null,
+      "modified_at": "2026-10-29T17:47:21.308775Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_50b331dfae0481918af5c5437d139b21",
+      "name": "BOJART_Jarvis_Mission02_Apercu.jpg",
+      "bytes": 261981,
+      "version_id": null,
+      "modified_at": "2026-10-28T14:32:49.279886Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_27dd649e8b9c8191a4ad7af24d50f2a2",
+      "name": "BOJART_Jarvis_Mission02_Dialogue_Vocal_2026-10-28.zip",
+      "bytes": 6697425,
+      "version_id": null,
+      "modified_at": "2026-10-28T14:32:40.200554Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_41a8da1df9f48191986bcebed01398ad",
+      "name": "BOJART_Jarvis_Mission01_Apercu.jpg",
+      "bytes": 254371,
+      "version_id": null,
+      "modified_at": "2026-10-28T12:35:09.316976Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_2b4654ea830481918b96d3e210c4b752",
+      "name": "BOJART_Jarvis_Mission01_Contexte_Sources_Tests_2026-10-28.zip",
+      "bytes": 2844728,
+      "version_id": null,
+      "modified_at": "2026-10-28T12:35:01.858606Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_8663268466108191a34b359eb181ad62",
+      "name": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip",
+      "bytes": 4767155,
+      "version_id": "1",
+      "modified_at": "2026-10-28T11:51:30.025701Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_52aa3a0fe4a88191ad0bc3b10245de78",
+      "name": "BOJART_Pack_Lancement_20-10-2026.zip",
+      "bytes": 5707418,
+      "version_id": "2",
+      "modified_at": "2026-10-28T11:51:20.376880Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_527b69f766088191a67396edf8bafae2",
+      "name": "BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT(1).pdf",
+      "bytes": 784472,
+      "version_id": null,
+      "modified_at": "2026-10-28T11:31:24.824487Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_e4b8f3e2eea48191a10444a0b209cb11",
+      "name": "BOJART_BREAK_THE_FRAME_V6_STORYBOARD_AUDIT.pdf",
+      "bytes": 784472,
+      "version_id": null,
+      "modified_at": "2026-10-28T11:31:12.115552Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_a695894bee248191b802720092d1efef",
+      "name": "BOJART_VFX_BREAK_FRAME_PROOF.mp4",
+      "bytes": 1314403,
+      "version_id": "1",
+      "modified_at": "2026-10-28T08:25:27.906035Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_d991e2f58ff48191b984a90bbcd22d5d",
+      "name": "BOJART_BREAK_THE_FRAME_V4_ANIMATIC_TEST.mp4",
+      "bytes": 763185,
+      "version_id": "1",
+      "modified_at": "2026-10-28T08:03:53.729143Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_88527a3cf2708191af84e002ef07e5a6",
+      "name": "BOJART_BREAK_THE_FRAME_V2_TEASER.mp4",
+      "bytes": 2859981,
+      "version_id": null,
+      "modified_at": "2026-10-28T07:43:42.291502Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_ca519b51ef9881918539488a39bcb5a3",
+      "name": "BOJART_SOURCE_KLING_8S.mp4",
+      "bytes": 2663637,
+      "version_id": "1",
+      "modified_at": "2026-10-27T19:21:40.566479Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_9b50fb4bf1fc81919bf5da2f25bc6665",
+      "name": "BOJART_EDIT_V02_CINEMATIC.mp4",
+      "bytes": 3952179,
+      "version_id": null,
+      "modified_at": "2026-10-27T16:31:56.241867Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_1710aa0c21a88191995153830b494efe",
+      "name": "BOJART_3_Fiches_Terrain_A_Imprimer.pdf",
+      "bytes": 64940,
+      "version_id": null,
+      "modified_at": "2026-10-20T22:46:06.998493Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_59ca5da055bc8191b7414d677d54def4",
+      "name": "BOJART_Apercu_Guide_Illustre.jpg",
+      "bytes": 240079,
+      "version_id": null,
+      "modified_at": "2026-10-20T22:45:59.261098Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_78267ffba1e08191bdefada7e54bc3b8",
+      "name": "BOJART_Guide_Illustre_Atelier_Tournage_Jarvis.pdf",
+      "bytes": 1154213,
+      "version_id": null,
+      "modified_at": "2026-10-20T22:45:53.874253Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_544ce8366a0c8191a0693492e2e84b0c",
+      "name": "BOJART_Fiches_Terrain_A_Imprimer.pdf",
+      "bytes": 48739,
+      "version_id": null,
+      "modified_at": "2026-10-20T22:25:37.705656Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_ca8a6b6e8d048191a443f40d483e5c57",
+      "name": "BOJART_Guide_Terrain_Gestes_Tournage_Jarvis.pdf",
+      "bytes": 88381,
+      "version_id": null,
+      "modified_at": "2026-10-20T22:25:31.607981Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_7586f7810c68819184b46f66c65f1e7f",
+      "name": "BOJART_Audit_Coherence_Corrections_V3.zip",
+      "bytes": 664834,
+      "version_id": null,
+      "modified_at": "2026-10-20T22:12:33.116166Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_60ffb6b1be2c81919a519912b3ab68ac",
+      "name": "BOJART_Growth_Dashboard_Demo.html",
+      "bytes": 8071,
+      "version_id": "1",
+      "modified_at": "2026-10-20T15:55:47.145180Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_ed28329ebfe8819184eb9c8dd2720793",
+      "name": "BOJART_Growth_Kit_V2.zip",
+      "bytes": 2969,
+      "version_id": null,
+      "modified_at": "2026-10-20T15:55:43.296693Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_caaba1524f10819193dd0f76ad5039fc",
+      "name": "BOJART_Demonstration_3D.html",
+      "bytes": 789488,
+      "version_id": null,
+      "modified_at": "2026-10-20T13:02:52.527679Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_ab4e94b1d1a48191963e1ea231d40e81",
+      "name": "BOJART_Apercu_Dossier.jpg",
+      "bytes": 148574,
+      "version_id": null,
+      "modified_at": "2026-10-20T13:02:46.522466Z",
+      "domain": "bojart.creative",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_40a93c0b68208191ab043b7f5b90c4b4",
+      "name": "BOJART_Jarvis_Kit_Preparation_PC.zip",
+      "bytes": 4639,
+      "version_id": null,
+      "modified_at": "2026-10-20T12:15:45.553347Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_fa730c2f64d48191b596c4942400dac7",
+      "name": "JARVIS5_REPRISE_VERIFIEE_2026-10-31.txt",
+      "bytes": 117992,
+      "version_id": "7",
+      "modified_at": "2026-11-01T19:56:31.262612Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": true
+    },
+    {
+      "library_file_id": "libfile_c88767057f3881918af433e6147d0181",
+      "name": "BOJ_ART_JARVIS_Dossier_Lancement_Associes_20-10-2026.pdf",
+      "bytes": 5690191,
+      "version_id": "1",
+      "modified_at": "2026-10-20T13:02:38.965860Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_212bf05e63b881919da802f4a8cb0a82",
+      "name": "BOJ_ART_JARVIS_Dossier_Associes_2026.pdf",
+      "bytes": 87650,
+      "version_id": null,
+      "modified_at": "2026-10-20T12:25:06.704411Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_035b4d984cb8819195e4c5c64f0e1cb6",
+      "name": "BOJ.ART — Jarvis, tour de contrôle.txt",
+      "bytes": 2037,
+      "version_id": "10",
+      "modified_at": "2026-10-19T19:20:17.414622Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_b51dd6f612048191ba713f28a32dd2f3",
+      "name": "JARVIS_ATELIER_3D_cahier_des_charges_V1.txt",
+      "bytes": 15327,
+      "version_id": null,
+      "modified_at": "2026-10-11T09:25:06.880923Z",
+      "domain": "bojart.jarvis",
+      "evidence": "metadata_only",
+      "content_read": false
+    },
+    {
+      "library_file_id": "libfile_6e0415b1c8d4819180fa22732b157e58",
+      "name": "MARWIN_Integration_2026-10-30.zip",
+      "bytes": 695444,
+      "version_id": "2",
+      "modified_at": "2026-10-31T07:54:07.059561Z",
+      "domain": "studio_shared_reference",
+      "evidence": "metadata_only",
+      "content_read": false
+    }
+  ]
+}

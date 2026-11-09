@@ -1,0 +1,35 @@
+test_backup_restore_includes_agent_tables_and_facts (test_agent.AgentTests.test_backup_restore_includes_agent_tables_and_facts) ... ok
+test_chat_keeps_exact_context_and_retry_response (test_agent.AgentTests.test_chat_keeps_exact_context_and_retry_response) ... ok
+test_chat_requires_local_configuration (test_agent.AgentTests.test_chat_requires_local_configuration) ... ok
+test_context_budget_provenance_and_claim_scope (test_agent.AgentTests.test_context_budget_provenance_and_claim_scope) ... ok
+test_embedding_model_digest_isolation (test_agent.AgentTests.test_embedding_model_digest_isolation) ... ok
+test_episode_idempotency_and_collision (test_agent.AgentTests.test_episode_idempotency_and_collision) ... ok
+test_episodes_persist_and_are_scoped (test_agent.AgentTests.test_episodes_persist_and_are_scoped) ... ok
+test_index_idempotent (test_agent.AgentTests.test_index_idempotent) ... ok
+test_mcp_initialization_and_proposal (test_agent.AgentTests.test_mcp_initialization_and_proposal) ... ok
+test_mcp_invalid_arguments (test_agent.AgentTests.test_mcp_invalid_arguments) ... ok
+test_model_outage_falls_back (test_agent.AgentTests.test_model_outage_falls_back) ... ok
+test_note_is_proposal_idempotent_and_conflict_visible (test_agent.AgentTests.test_note_is_proposal_idempotent_and_conflict_visible) ... ok
+test_notes_require_provenance_and_valid_project (test_agent.AgentTests.test_notes_require_provenance_and_valid_project) ... ok
+test_obsolete_vectors_not_retrieved (test_agent.AgentTests.test_obsolete_vectors_not_retrieved) ... ok
+test_ollama_rejects_remote_cloud_and_redirects (test_agent.AgentTests.test_ollama_rejects_remote_cloud_and_redirects) ... ok
+test_one_database_and_original_api_compatibility (test_agent.AgentTests.test_one_database_and_original_api_compatibility) ... ok
+test_real_mcp_stdio (test_agent.AgentTests.test_real_mcp_stdio) ... ok
+test_reference_facts_supersession (test_agent.AgentTests.test_reference_facts_supersession) ... ok
+test_semantic_scope (test_agent.AgentTests.test_semantic_scope) ... ok
+test_semantic_synonym_and_hybrid (test_agent.AgentTests.test_semantic_synonym_and_hybrid) ... ok
+test_tampered_source_excluded (test_agent.AgentTests.test_tampered_source_excluded) ... ok
+test_cli_and_agent_share_environment_path_and_explicit_override (test_context_export.ContextExportTests.test_cli_and_agent_share_environment_path_and_explicit_override) ... ok
+test_export_survives_restart_and_backup_without_duplicate_versions (test_context_export.ContextExportTests.test_export_survives_restart_and_backup_without_duplicate_versions) ... ok
+test_manifest_keeps_verified_source_versions_and_fact_registry (test_context_export.ContextExportTests.test_manifest_keeps_verified_source_versions_and_fact_registry) ... ok
+test_proposal_keeps_its_status_in_export (test_context_export.ContextExportTests.test_proposal_keeps_its_status_in_export) ... ok
+test_text_budget_is_exact_and_json_metadata_budget_is_explicit (test_context_export.ContextExportTests.test_text_budget_is_exact_and_json_metadata_budget_is_explicit) ... ok
+test_backup_and_ui_assets (test_http_agent.AgentHttpTests.test_backup_and_ui_assets) ... ok
+test_context_and_unknown_project (test_http_agent.AgentHttpTests.test_context_and_unknown_project) ... ok
+test_note_requires_origin_and_explicit_source (test_http_agent.AgentHttpTests.test_note_requires_origin_and_explicit_source) ... ok
+test_read_and_write_require_session (test_http_agent.AgentHttpTests.test_read_and_write_require_session) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 4.761s
+
+OK

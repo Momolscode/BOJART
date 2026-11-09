@@ -1,0 +1,13 @@
+/** Recovery is an explicit stop, never an empty replacement workshop. */
+export function renderIntegrityActions({icon}) {
+  return `<div class="integrity-actions"><button type="button" class="button button-red" data-action="integrity-export">${icon('save')} Conserver une copie de récupération</button><button type="button" class="button" data-action="integrity-recheck">${icon('rotate')} Relire le journal</button></div>`;
+}
+
+export function renderIntegrityBanner({reason,esc,icon}) {
+  return `<section class="integrity-banner" data-integrity-banner role="alert"><strong>Journal à vérifier · actions suspendues</strong><p>${esc(reason)}</p><p>Votre saisie reste dans ce panneau. Fermez-le pour voir l’état de récupération.</p>${renderIntegrityActions({icon})}</section>`;
+}
+
+export function renderIntegrityView({state,reason,esc,icon}) {
+  const retained=state.projects.length>0;
+  return `<section class="integrity-view" aria-labelledby="integrity-title"><div class="integrity-copy"><p class="eyebrow">BOJ.ART / LA CONTINUITÉ DE L’ATELIER</p><span class="integrity-marker">LECTURE INTERROMPUE</span><h1 id="integrity-title">L’HISTORIQUE<br>DEMANDE UNE<br><em>VÉRIFICATION.</em></h1><p class="integrity-lead">Une incohérence empêche de relire le journal complet. Les modifications et la synchronisation sont suspendues.</p><div class="integrity-reason" role="alert">${icon('info')}<p>${esc(reason)}</p></div>${renderIntegrityActions({icon})}</div><aside class="integrity-evidence"><img src="./assets/logo.webp" width="112" height="120" alt="Emblème BOJ.ART"><p class="eyebrow">CE QUE LE POSTE PEUT CONFIRMER</p><h2>${retained?'Le dernier état lisible reste en mémoire.':'Aucun état complet n’a pu être relu.'}</h2>${retained?`<div class="integrity-count"><strong>${state.projects.length}</strong><span>dossier(s) dans la dernière lecture cohérente.<br>Cet état ne confirme pas le contenu actuel du stockage.</span></div>`:'<p>Aucun atelier de démonstration n’a été créé pour remplacer vos données.</p>'}<ol><li><b>Conserver.</b> Télécharger les entrées brutes disponibles et, si elle existe, la dernière lecture cohérente.</li><li><b>Examiner.</b> Comparer cette copie à une sauvegarde connue avant de réparer le stockage.</li><li><b>Relire.</b> Le poste reprend seulement si le journal redevient cohérent.</li></ol><p class="micro-copy">La copie de récupération peut contenir des données de vos dossiers. Elle n’inclut pas les fichiers STL et n’est pas importable comme une sauvegarde normale. Une entrée effacée avant l’ouverture ne peut pas toujours être détectée sans une sauvegarde externe.</p></aside></section>`;
+}
