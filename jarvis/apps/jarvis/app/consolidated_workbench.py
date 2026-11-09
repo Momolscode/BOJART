@@ -2,7 +2,7 @@
 Single-user localhost; model calls require explicit configuration. No printer API.
 """
 from __future__ import annotations
-import argparse, hashlib, json, os, re, shutil, sys, webbrowser
+import argparse, hashlib, json, os, re, shutil, sqlite3, sys, webbrowser
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
 from core import Store, Rejected, IntegrityError
@@ -278,6 +278,11 @@ def main():
     if not 0<=a.port<=65535:raise SystemExit('Port invalide.')
     try:app=ConsolidatedWorkbench(('127.0.0.1',a.port),Store(a.state),config=load_config(a.config))
     except (Rejected,IntegrityError,OSError) as e:raise SystemExit('Lancement interrompu : '+str(e))
+    except sqlite3.DatabaseError as e:
+        # Never recreate or repair a damaged workspace implicitly: the user restores a verified backup.
+        raise SystemExit('Lancement interrompu : une base du dossier de travail est illisible ('+str(e)+'). '
+                         'Aucune base n’a été recréée. Restaurer une sauvegarde vérifiée dans un nouveau dossier '
+                         '(Restaurer_Jarvis.cmd) puis relancer avec ce dossier.')
     url=app.origin+'/?session='+app.token
     print('BOJ.ART — M07: commandes, dossiers et reprise locale. Voix et matériel à qualifier.')
     if a.no_browser:print('URL privée :',url)

@@ -172,5 +172,26 @@
     "evidence": "user_instruction",
     "description": "Le 2 novembre 2026, l’utilisateur désigne la conversation ChatGPT 6ae7c762-6630-83eb-afde-680aa0c54b2e comme « la session bras robotique » à pousser sur GitHub. Accès sans compte : HTTP 403 ; corps non lu.",
     "raw_content_in_git": false
+  },
+  {
+    "source_id": "voix-banc-reference-small-20261102",
+    "path": "docs/evidence/voix-2026-11-02/small-reference.json",
+    "sha256": "60069142de59febe24b2d325995ed25c7c20d29d10e4dfcbc72b0f3eb3dde9f2",
+    "evidence": "executed_this_session",
+    "scope": "Banc de la chaîne vocale, faster-whisper small avec le vocabulaire de voice.py, commit dad184c, 150 prises de synthèse Piper et bruit synthétique, conteneur Linux Xeon 4 cœurs ; ne qualifie ni la tour ni un micro réel"
+  },
+  {
+    "source_id": "voix-banc-sans-vocabulaire-small-20261102",
+    "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire.json",
+    "sha256": "9675fc0b1c305060d8c1d9e5cc9b39330cd86837aa1799db2c977ff7db54875d",
+    "evidence": "executed_this_session",
+    "scope": "Même banc et même corpus, réglage de décodage d'origine (sans vocabulaire), 3436f53 plus le banc non commité"
+  },
+  {
+    "source_id": "voix-banc-bruit-seul-small-20261102",
+    "path": "docs/evidence/voix-2026-11-02/bruit-seul-small.json",
+    "sha256": "84210ad1e2b31e8e907d6292e4c5861bcc662784f7383229f1852e7f7b7cfe34",
+    "evidence": "executed_this_session",
+    "scope": "56 flux de bruit synthétique sans parole, avec et sans vocabulaire, passés par le vrai code navigateur, LocalVoice et le routeur exact"
   }
 ]

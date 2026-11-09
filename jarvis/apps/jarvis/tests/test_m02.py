@@ -164,6 +164,7 @@ def test_audio_draft_only_and_in_memory(tmp_path):
  class M:
   def transcribe(self,stream,**kwargs):
    assert kwargs['language']=='fr';assert isinstance(stream,io.BytesIO)
+   assert kwargs['vad_filter'] and 'dashboard atelier' in kwargs['initial_prompt']  # voice bench vocabulary
    return iter([type('Segment',(),{'text':'Crée un socle de 18 cm'})()]),None
  v=LocalVoice({'enabled':True,'model_dir':str(tmp_path)},loader=lambda:M())
  r=v.transcribe(make_wav());assert r['status']=='draft' and r['needs_review'] and not r['executed']

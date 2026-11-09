@@ -28,6 +28,11 @@
       "sha256": "d2a08acafd45e0860898926c1fbd812616dcc07defe0133d6981bb764adc3ca8"
     },
     {
+      "path": ".github/workflows/preinstall-bench.yml",
+      "bytes": 2939,
+      "sha256": "fcde7894e20c088867fd9230cc730ad413b04e7c2a5babcc1673e77807c53fdf"
+    },
+    {
       "path": ".github/workflows/quality.yml",
       "bytes": 819,
       "sha256": "b360eea50d81efd1da8344e28019e7d59d4899d75d458c6f41232319106428f5"
@@ -36,6 +41,11 @@
       "path": ".github/workflows/simulations.yml",
       "bytes": 922,
       "sha256": "373c1e640cfda60f643bb3dee7a7b85224f19019c97ce1114056e3c0a2f7444e"
+    },
+    {
+      "path": ".github/workflows/voice-bench.yml",
+      "bytes": 4306,
+      "sha256": "c24f41fc2ea013a6e09d314fa1bc2fbb0ededa2cd3c177a5cb8f7f87b7ed468e"
     },
     {
       "path": ".github/workflows/workflow-simulations.yml",
@@ -53,14 +63,24 @@
       "sha256": "fd8e85189b4eccfde8b654fed82d23586f2860b15fab9551fc8c5745aebe8591"
     },
     {
+      "path": "Banc_BOJART.cmd",
+      "bytes": 801,
+      "sha256": "89a6873fbda9a7480e5fa386b2abfce20fdc1183694c598742360cdfd919b6bb"
+    },
+    {
+      "path": "Collecter_BOJART.cmd",
+      "bytes": 426,
+      "sha256": "10924269e304c31a69d212545cf6ab09e7c286eddf95b08ad2d50666d62b6981"
+    },
+    {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 7210,
-      "sha256": "9c3ecb584a27b6e85273a18d26236b0be3d424f683ff59562772184b8dd07267"
+      "bytes": 9842,
+      "sha256": "5f84042aa1bd2719955e6eda42aea0fbfadab0a2832efd7fd0f21dfb1069f9aa"
     },
     {
       "path": "Installer_BOJART.cmd",
-      "bytes": 248,
-      "sha256": "2a9801ecba1d92a75a72aceb4de757ba5de345465e168bc1be73cc75cce1d3b1"
+      "bytes": 259,
+      "sha256": "0af89a0aaccac45de4776e2b1a2cd4682a03fd480d82e9c616a99fce160fac9a"
     },
     {
       "path": "Installer_BOJART.sh",
@@ -69,13 +89,18 @@
     },
     {
       "path": "Installer_BOJART_4060Ti.cmd",
-      "bytes": 510,
-      "sha256": "d1421a61341a57bc3b409f402ee71daab12eec495e5325b51e8450e04da5038e"
+      "bytes": 526,
+      "sha256": "bd6298dd19ce4d9addf2f4b52178b2693ef0163582bc231ce7c58e4854f6036e"
+    },
+    {
+      "path": "Installer_Tout_BOJART.cmd",
+      "bytes": 1906,
+      "sha256": "a8280e2754a08389c4f077e195eee998595048421867dcd43311070015e81109"
     },
     {
       "path": "Lancer_BOJART.cmd",
-      "bytes": 276,
-      "sha256": "67b7a95a30bb4b49cf5d7416fac78241a5d632c1428d2dcf933460458f15132b"
+      "bytes": 288,
+      "sha256": "3b432423e23b4dd7b72b5d0149f7adbe9e6a25f3ba28c72b1f22f98bdf9fc416"
     },
     {
       "path": "Lancer_BOJART.sh",
@@ -84,8 +109,13 @@
     },
     {
       "path": "Mesurer_BOJART.cmd",
-      "bytes": 685,
-      "sha256": "94ef2a0ad13a717facc7d29bc73066f116818e9a99c859839f81b43fb16e9652"
+      "bytes": 709,
+      "sha256": "ae0afe485bb36ee2170f182ac1bd2cf4e380a9ed12cc46f6d8f0e45b54c9d472"
+    },
+    {
+      "path": "Mesurer_Voix_BOJART.cmd",
+      "bytes": 1965,
+      "sha256": "03e6a0376cfdb77becd8b63b6db0974dad96510eab1f3816d2a6b1dbf3ef18f3"
     },
     {
       "path": "PRODUCTION.md",
@@ -104,8 +134,8 @@
     },
     {
       "path": "Simuler_BOJART.cmd",
-      "bytes": 455,
-      "sha256": "7c7c843c1d463bd382173afb40a6762fc05e75cae6e8f22dd220384b9c1e7e25"
+      "bytes": 486,
+      "sha256": "b4ec218965672779621b8ad4fb86c36b1cc71b3a9097de99ed25ad1bd2825219"
     },
     {
       "path": "archive/2026-11-01/MANIFEST.json",
@@ -244,8 +274,8 @@
     },
     {
       "path": "bojart_memory/benchmarks.py",
-      "bytes": 22718,
-      "sha256": "190623bf26eb1ad262bff84e57014c13936f9a237c3056e79ac0aeff9722dd15"
+      "bytes": 22788,
+      "sha256": "893c21e471805f61bd23f46be7890ecd70a48a2d13c0a2f194a34e7af8338649"
     },
     {
       "path": "bojart_memory/context_selection.py",
@@ -328,6 +358,36 @@
       "sha256": "22a376039be51e51d959a0239b85348d4a31b5d005f543427790a1bdeb00628f"
     },
     {
+      "path": "bojart_ops/banc_http.py",
+      "bytes": 29890,
+      "sha256": "1414b457fa4f4e9b51a1347da781e747c9631974d2fa6e5864d32b4579e793f7"
+    },
+    {
+      "path": "bojart_ops/banc_simulation.py",
+      "bytes": 33673,
+      "sha256": "b290046dee049a2371367bff657ef90d708872ca5359fa1552bb52a861ede83f"
+    },
+    {
+      "path": "bojart_ops/banc_statique.py",
+      "bytes": 19936,
+      "sha256": "a91a824016a022e154d54162fef4bb86211ff07c424e39d97ddc76707e9adcb8"
+    },
+    {
+      "path": "bojart_ops/banc_voix.py",
+      "bytes": 70777,
+      "sha256": "289e29df54f56cc76700d850455a57ce9ca201d6272c6af0706d2a4b6a325b9e"
+    },
+    {
+      "path": "bojart_ops/collecte.py",
+      "bytes": 18371,
+      "sha256": "6650814c47dfdc7dc3e2a3cd383314abe7f9bb360503b03487e13ad97b3d7a66"
+    },
+    {
+      "path": "bojart_ops/installation_tout.py",
+      "bytes": 12517,
+      "sha256": "86673e72d92d4bd0cb9e7bc0b2e0b88f81478d1d050fb5c7a7d1dfd5a978f518"
+    },
+    {
       "path": "bojart_ops/ledger.py",
       "bytes": 10884,
       "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31"
@@ -339,8 +399,8 @@
     },
     {
       "path": "bojart_ops/preinstallation.py",
-      "bytes": 13463,
-      "sha256": "2aad092a42e89794d7412eb0f9c6b88d084b9ae5d40db8e01cf6ef4c53220894"
+      "bytes": 13499,
+      "sha256": "123fc2f17eb3ba2351e0723092ff241bc7a9949b8e2348c6bdda2249be4d635b"
     },
     {
       "path": "bojart_ops/production_recovery.py",
@@ -353,19 +413,29 @@
       "sha256": "ee489bedf74506add484d3644f71273f0b7e8179674c586899589fcbd9527998"
     },
     {
+      "path": "bojart_ops/verrou_dependances.py",
+      "bytes": 9860,
+      "sha256": "bb26942e5569bd757b52127bb42ffc68015b8fb2df840cda4c2db5fc48d1c690"
+    },
+    {
+      "path": "bojart_ops/voix_corpus.py",
+      "bytes": 19305,
+      "sha256": "f161a19a2d26d6e2c4ce598351af83477a7c986a69b62051945e02063a01958d"
+    },
+    {
       "path": "configs/quality_gates.json",
       "bytes": 848,
       "sha256": "03b5d2e1a39f953a4e38a8bbaaadb79923b1be7244fe7ce6a5a3973708d267c7"
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 13794,
+      "sha256": "b9c1978786fbb48d623bb4d5ef9b5048b538a112fbea5041e987b7e503118bfc"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 47600,
+      "sha256": "cf817182f8e8e6c9bd074fa894745837b2b43165dba107a97df7b6097e496a39"
     },
     {
       "path": "creative/CURRENT.md",
@@ -454,8 +524,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 13571,
-      "sha256": "c554890c02b7e9aaf1cfb9e659a8313a787d5cf74a54977c430883e112fa925f"
+      "bytes": 16415,
+      "sha256": "1db9080aee23e5d77b4f8d62d052d15ae68642e61b955eacbca2cdf9060d12de"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -464,8 +534,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 17977,
-      "sha256": "fc9c6ea6d92b3b1772be12863a6314513140ca73038a2d98966f684cdacd911b"
+      "bytes": 18774,
+      "sha256": "61fba7f21b5223f984b019ab414a94d29b4b9d954c2b2716e505acfb39cbbf13"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -474,8 +544,13 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 8314,
-      "sha256": "24ea61ea661b3b6fd5357692a1993701b81ce834493d63c4d81f722d68c576b9"
+      "bytes": 9608,
+      "sha256": "caa6a9fdb05fc4ccd6b6348c7978be0910efec95f370715caad7dc7f548e6c02"
+    },
+    {
+      "path": "data/preinstallation/actions-jarvis.json",
+      "bytes": 20700,
+      "sha256": "7c8c9d708171223a503d395dca3697e7e8d404f048c87dcaec327db87bd1dd6b"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -538,6 +613,16 @@
       "sha256": "ccee73322e33d39e4bafcacb5b568fe4030f7b677f9fca9eb8aaa533cc300872"
     },
     {
+      "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
+      "bytes": 11719,
+      "sha256": "424ab278d50e63b139c70fb813e675edd4e0e1ecf42dd1d1247e9aa53eda0c7a"
+    },
+    {
+      "path": "docs/BANC_VOIX.md",
+      "bytes": 6789,
+      "sha256": "98d9992671624d102313be12a32a31ac7781b851a3cff97e7e25c373e4db7274"
+    },
+    {
       "path": "docs/COMMANDES_DASHBOARD.md",
       "bytes": 2353,
       "sha256": "8c8dc24d458db82f638d5bd2a05551ebdf43520158a416e962be15c43f03bc88"
@@ -574,8 +659,8 @@
     },
     {
       "path": "docs/INSTALLATION.md",
-      "bytes": 3584,
-      "sha256": "ee1726014a546a03668cd431cb3791c8b307293b6db6a664f478c93a61633feb"
+      "bytes": 3939,
+      "sha256": "6c11f048fe595cec930a3d757e2def8fe473915e0da77ec7a18c2fd796bd8222"
     },
     {
       "path": "docs/OPERATIONS.md",
@@ -639,8 +724,8 @@
     },
     {
       "path": "docs/SIMULATIONS_ATELIER.md",
-      "bytes": 7775,
-      "sha256": "9d6341f1bff4e5d089c956ceebb86c0a42fe7e1416a2cc1d12f795807e12d10b"
+      "bytes": 7939,
+      "sha256": "469f93124350e5bda2736a179070daf416908f935987f3b97882f3bdc0bf2139"
     },
     {
       "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
@@ -736,6 +821,41 @@
       "path": "docs/creative/THE_AWAKENING.md",
       "bytes": 1537,
       "sha256": "32f3c88e249582d9ad85c014c096f27373e73e36cdf140cb2f2567dded29b367"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
+      "bytes": 11545,
+      "sha256": "9dc0e92e96308411d1b755f301dce8d87de755979f605449a9ae8b41d7ec53af"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",
+      "bytes": 88790,
+      "sha256": "0646fcb4591b7fe54929167a8255aefe8d029ab5e3eb7bb82fa66f35e08965f5"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.md",
+      "bytes": 26055,
+      "sha256": "ee2fe7a66bf82ed624475281930797c1f9dbe79689dc70a39591be9b7b7585bb"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-41c3f48.json",
+      "bytes": 94661,
+      "sha256": "1c71e8a9ddf97c2ecbe41c5c022642406d79b6b80940e05b9ed5ecfa22a06019"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-46a9df9.json",
+      "bytes": 95071,
+      "sha256": "0880f7e152b481e087f2a3930ef629fb5b9563b639780f2d947146d0904894ae"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-678da4f.json",
+      "bytes": 91517,
+      "sha256": "bc5ae7dd5e09f6f0068b95f9c9c8f31e5d7964457f9945a35e14ab0368ebc9b7"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-bb78257.json",
+      "bytes": 94772,
+      "sha256": "c2eea00aa1309ba500934bd1dbef666ea6d95d30e0c441db296a38a8267115a0"
     },
     {
       "path": "docs/evidence/consolidation-2026-11-01.json",
@@ -871,6 +991,86 @@
       "path": "docs/evidence/startup-retrieval-2026-11-01.json",
       "bytes": 4144,
       "sha256": "b872839516aec06623c18dd3f99a289dbaec0465717e6704e044c93760c8248c"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/README.md",
+      "bytes": 12556,
+      "sha256": "6819bac59ca321678daa89dec130e4f17bc142acd7047fed7d62ae44078c1ed7"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/base-sans-vocabulaire.json",
+      "bytes": 322595,
+      "sha256": "2232299df5baff4411c1559bdd56d909faf5acbfbcfd340aaf0c4b2bc01bfefa"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/base-sans-vocabulaire.md",
+      "bytes": 9351,
+      "sha256": "956e6ef4b8fa28442f2d7a7f527bb2918541a5a71a42a6c1f8e64984a0a480d1"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/bruit-seul-small.json",
+      "bytes": 48145,
+      "sha256": "84210ad1e2b31e8e907d6292e4c5861bcc662784f7383229f1852e7f7b7cfe34"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/bruit-seul-small.md",
+      "bytes": 968,
+      "sha256": "aa33f5cae5089b5757cbd7c06c96df0daf1346ad83537e19fc1135d84189efcb"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/corpus-2026-11-02.json",
+      "bytes": 121752,
+      "sha256": "71d7020519c541bd6e4e1d245c2f281ed7465847e4358e915a73f588085043b2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/large-v3-turbo-sans-vocabulaire.json",
+      "bytes": 329339,
+      "sha256": "53da01d3aff7fdd52f49bded0d300d561cb9e85218da27a1d065f408ae505908"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/large-v3-turbo-sans-vocabulaire.md",
+      "bytes": 9128,
+      "sha256": "da032d1c32fcb022ecc23a4720233a8933934454477ecd853a3fa56f8b8a4b95"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-reference.json",
+      "bytes": 335995,
+      "sha256": "60069142de59febe24b2d325995ed25c7c20d29d10e4dfcbc72b0f3eb3dde9f2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-reference.md",
+      "bytes": 8255,
+      "sha256": "66a76a4c84b514bd17d87765b5a85b8c16254ab441289515f8d2e2f043dc1e2c"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire-repli-regles.json",
+      "bytes": 186908,
+      "sha256": "13a101394df877684b5ac93bdb074e9faf75601dc0aa450383732dd4e1c17ac9"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire-repli-regles.md",
+      "bytes": 9112,
+      "sha256": "8de8fead3541549ee1686d18ff09ce2e74c91f40207dac407d2bd27027d6de36"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire.json",
+      "bytes": 323849,
+      "sha256": "9675fc0b1c305060d8c1d9e5cc9b39330cd86837aa1799db2c977ff7db54875d"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire.md",
+      "bytes": 9297,
+      "sha256": "7b97422885920e8b18ffcb9748e5f2cfeb58b5d57ab0473a307f3374361ef3a8"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-variante-vocabulaire.json",
+      "bytes": 336225,
+      "sha256": "5e3439b4d6bd00710fefdb5753c9867351f8dc51bc6acd47108ba95b88081ba2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-variante-vocabulaire.md",
+      "bytes": 8283,
+      "sha256": "ee8bb9e6dda90d639747186cd39856cb2eda0be9c38bd281a5995bc412dcc544"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/README.md",
@@ -1314,8 +1514,8 @@
     },
     {
       "path": "jarvis/Lancer_Jarvis.cmd",
-      "bytes": 789,
-      "sha256": "4bdc5131b87c59ff6b33f249ca73c92480efcf3622fd9e1635eac4e2b8b11668"
+      "bytes": 819,
+      "sha256": "811138bf4340d1726b1e2aae92e21698ecbb0ff4ce0e278e6730c9f8dd3944f8"
     },
     {
       "path": "jarvis/Lancer_Jarvis.sh",
@@ -1324,8 +1524,8 @@
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.cmd",
-      "bytes": 58,
-      "sha256": "1a9f9f6983eff4502e1f6071e417bdf0264d91e6c6ac995ee5437e5d8fbfcbe7"
+      "bytes": 60,
+      "sha256": "2adec82db3ce960b98d362eda7940f53aedd2fbc19448c01de954959e7ad180a"
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.sh",
@@ -1339,8 +1539,8 @@
     },
     {
       "path": "jarvis/Restaurer_Jarvis.cmd",
-      "bytes": 1049,
-      "sha256": "d7bc70e5b0e097cf97c3a334f29877278e401a9401dc6cfca86f3c9d5f58d0d4"
+      "bytes": 1093,
+      "sha256": "7ed76514d1a6df65312f1dfe2013364b0b38866bc8e5a9a5265247c5bedcbace"
     },
     {
       "path": "jarvis/Restaurer_Jarvis.sh",
@@ -1359,8 +1559,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.cmd",
-      "bytes": 928,
-      "sha256": "13504208cf7ef851cbec2eae3b99ce7c6cba2ffa4a6d663bba8d2299b5c61889"
+      "bytes": 963,
+      "sha256": "5fff1a9dacc84ec7d46b6ea4ef0fc00e428468640b267b6ad76b0020a2399a02"
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.sh",
@@ -1394,8 +1594,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/consolidated_workbench.py",
-      "bytes": 19092,
-      "sha256": "025b098a9b27692b6e7dacb5e011b50bfeb5dbc06648507734522c7a50389172"
+      "bytes": 19559,
+      "sha256": "9c8e32b464aa94639c51e325869cda80bef015724f8c2222606f1ea923c18a0e"
     },
     {
       "path": "jarvis/apps/jarvis/app/context_guard.py",
@@ -1489,8 +1689,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/media_library.py",
-      "bytes": 15103,
-      "sha256": "9afeff32fa7b03822f3c7addae8f648434210cf01552297d619402b44d639809"
+      "bytes": 15137,
+      "sha256": "03505a441fcc30c604dbee6a0c6221693c54e0c0f935971c5bda85c87836b8f7"
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.css",
@@ -1514,8 +1714,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/server.py",
-      "bytes": 9452,
-      "sha256": "e2643bf42a36b481371a1c44c688e8f0a4185943914f509521a60cf81f54b0a8"
+      "bytes": 9468,
+      "sha256": "f3691449334145f19830b1d3272dbd28c16c07b550231603359800b74744451f"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
@@ -1594,8 +1794,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/voice.py",
-      "bytes": 4112,
-      "sha256": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d"
+      "bytes": 4488,
+      "sha256": "25681a6d046dd10a13221a667699af3dd8a9892fc53ce76ac5c2877dae57daca"
     },
     {
       "path": "jarvis/apps/jarvis/app/voice_endpoint.js",
@@ -1949,8 +2149,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_m02.py",
-      "bytes": 15737,
-      "sha256": "b54579d21efddcc470bd331fff7f298e7c8bef993cf573aeaabdbdabbb985c85"
+      "bytes": 15846,
+      "sha256": "0fb43985abb627ad31f63e7e899ff59e07a79c9f3534c5793813ad0319b81965"
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_mission01.py",
@@ -1969,8 +2169,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/tests_m03/test_media_library.py",
-      "bytes": 9568,
-      "sha256": "bb4deae6e65965c0a15250f9cc4c705afa6285bf97f344ea3c5cefe58464d9a9"
+      "bytes": 9578,
+      "sha256": "1dc260b70a92705fd4d8a2f091867a7aa5cba913339ed3ecefb0701793aed663"
     },
     {
       "path": "jarvis/apps/jarvis/tests_m03/test_preview_m03.py",
@@ -2458,6 +2658,16 @@
       "sha256": "19667899f5a7b3a5ff2146d062157ceed919429dafcb51d0c8d470f83f1dda97"
     },
     {
+      "path": "jarvis/locks/windows-cp312-moteurs.txt",
+      "bytes": 9083,
+      "sha256": "c114be5cbbf5f99b2eb23df648c9bbc0fc3e8657eabf1f2cd8d905895b12eafa"
+    },
+    {
+      "path": "jarvis/locks/windows-cp312-voice.txt",
+      "bytes": 2833,
+      "sha256": "462d162a24b5e8b87d93d15883c46e5d474b51571a84e98fbeb31c8a3c5e95d5"
+    },
+    {
       "path": "jarvis/requirements-orchestration.txt",
       "bytes": 266,
       "sha256": "c6985cf9d0f5812699028cdec3325914d9bea906800429709b83bdb653df31d5"
@@ -2469,8 +2679,8 @@
     },
     {
       "path": "jarvis/requirements-voice.txt",
-      "bytes": 122,
-      "sha256": "ed3facd220d69beafe6f66830124fa94dffbadc6bc053328609e2ff9b33ca75e"
+      "bytes": 133,
+      "sha256": "8bf46aab2ab93c94d6ec88f91b842cc849daa4a72e30a97846be75bb30b7184a"
     },
     {
       "path": "jarvis/requirements.txt",
@@ -2739,8 +2949,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 14854,
+      "sha256": "59ff931337e8fb34a8ca1f4416e3de64f0047179b8250f4db59540b57b5213f4"
     },
     {
       "path": "ops/request-example.json",
@@ -4414,8 +4624,8 @@
     },
     {
       "path": "tests/test_memory_http.py",
-      "bytes": 3186,
-      "sha256": "bf8ddde9cdbc954d5b7cb33387d937a3fb087673732d96c9983ee34c1602a6c1"
+      "bytes": 3204,
+      "sha256": "5f611e413c7846fb5b1d794e7fd2ff0ea165387b34046c32dd51bdbccf1afdbe"
     },
     {
       "path": "tests/test_production_recovery.py",
@@ -4533,6 +4743,26 @@
       "sha256": "1c85859de6aa7145a6632313d792ebb72aefdec91dc6cf8949730dd4928d49cc"
     },
     {
+      "path": "tests_ops/test_banc_simulation.py",
+      "bytes": 13232,
+      "sha256": "ca6308dff0aaf95671dbe734d06de31d78fcfe872e10eaba720c4c81375850b4"
+    },
+    {
+      "path": "tests_ops/test_banc_voix.py",
+      "bytes": 16394,
+      "sha256": "cd8ccedcb1b1aa049cf8d61ec626fb845dbda5e8aa787bed2024f983d1828266"
+    },
+    {
+      "path": "tests_ops/test_collecte.py",
+      "bytes": 7975,
+      "sha256": "fc0b2071ed7a4db987d327e9c5ec91c82f4fd9e1bfea45b71e443717b2ab5461"
+    },
+    {
+      "path": "tests_ops/test_installation_tout.py",
+      "bytes": 8430,
+      "sha256": "abbce7d3e101e786e5256bb7e25f6c60c4b821c34072652b07d6ebbf4c7fa91a"
+    },
+    {
       "path": "tests_ops/test_ops.py",
       "bytes": 12230,
       "sha256": "f5c732d06da11646227993948fdb7249b2e9ebe82403253d1fad7932c1918dc0"
@@ -4553,6 +4783,16 @@
       "sha256": "4ad49603f11f272621283bc01a894374979a2e09e82ec6e77ea47605e0fe0673"
     },
     {
+      "path": "tests_ops/test_verifier_voix.py",
+      "bytes": 1750,
+      "sha256": "90487875838c7dd6e3fffe8af59967e65af83348001789dc48a2ad5431231750"
+    },
+    {
+      "path": "tests_ops/test_verrou_dependances.py",
+      "bytes": 5149,
+      "sha256": "3bce76ea5ccdc35fd0ddc576323bed64f9082aef15a8c3be7d67c5c1d156d6a9"
+    },
+    {
       "path": "tests_workflows/test_journeys.py",
       "bytes": 9098,
       "sha256": "679d6b1087140f62a7ce7e63c2771342b4b139f9df42364e23e276bc00d0200f"
@@ -4563,19 +4803,39 @@
       "sha256": "c17763734617bb272b412bb94913aeb31dde88325bec57a419e9994846dda118"
     },
     {
+      "path": "tools/banc_preinstallation.py",
+      "bytes": 2895,
+      "sha256": "80bf51132b0714b928bec7f15be31530ace7b205e5f2a15a5050bc1bcffb629d"
+    },
+    {
+      "path": "tools/banc_voix.py",
+      "bytes": 7347,
+      "sha256": "f0794bc0f1a4c67c7a04cf7ae9036c6cdd80af642ef1924a625cf3db26d724f0"
+    },
+    {
+      "path": "tools/banc_voix_navigateur.cjs",
+      "bytes": 3715,
+      "sha256": "0a4e3efac7c5552cf87b976310b222cdf93edc4bcd937c6207590560ed51233f"
+    },
+    {
       "path": "tools/benchmark_jarvis.py",
       "bytes": 1990,
       "sha256": "fddb1f1277bf0ee974bbf60562dd8f6d016a8316a5cb6df26024d1a680bd7647"
     },
     {
       "path": "tools/check_startup.py",
-      "bytes": 8047,
-      "sha256": "d94d64ed1d71455d694ec06f75f688e6f57b3cb5f49d151324bea6fc504bb6a6"
+      "bytes": 8065,
+      "sha256": "6042f0e33bdcf149696245819784e7c815bd481b92e5d36a342e4c7550cf0050"
+    },
+    {
+      "path": "tools/collecte_guidee.py",
+      "bytes": 13339,
+      "sha256": "cc4a50d26f7a01d6064a36443eeaff4d140eb2f72939b5a43a6badddbcdfbdde"
     },
     {
       "path": "tools/doctor.py",
-      "bytes": 8262,
-      "sha256": "f7d0ef37cd00d5a141fee14af4a766d8f073a7ff507291188501c03588037353"
+      "bytes": 8296,
+      "sha256": "22c0873fb6d4edb06f115be4e1f8be12eed889f994272769aac1c22a71203805"
     },
     {
       "path": "tools/download_remote_media.py",
@@ -4584,13 +4844,18 @@
     },
     {
       "path": "tools/evaluate_memory.py",
-      "bytes": 1270,
-      "sha256": "04e157a5843f21b6a4adf24a30883bfcdb2be000c2a21b1378adebf20b924480"
+      "bytes": 1286,
+      "sha256": "f6cff7b23600bb8f2eefabac98d27febba55b7ef4b61099ca3b6d71ee9cbeeb0"
     },
     {
       "path": "tools/hydrate_m07_media.py",
-      "bytes": 1982,
-      "sha256": "a94ea8ed0bd0a01046d7b6d5a79dcb3a2c0da549cbd4dcad8ae94d0118b85502"
+      "bytes": 1998,
+      "sha256": "4d3cfb982dcdb616199a093713ccca19f4391a8cff66a08bcd2c29c33575d53a"
+    },
+    {
+      "path": "tools/installer_tout.py",
+      "bytes": 5086,
+      "sha256": "6983163d3bbe07dc8f1b9b9cf4db87508a3744c09f1dcabefda68e0d35d325b2"
     },
     {
       "path": "tools/memory_browser.cjs",
@@ -4604,13 +4869,13 @@
     },
     {
       "path": "tools/orchestrate.py",
-      "bytes": 4123,
-      "sha256": "012d83cd6bf812b05a0a97b4f9dcc3ffa464a5ae027dbdbc5d88b6308b2269a3"
+      "bytes": 4141,
+      "sha256": "23dd0137b420e4a44ce242d64559d08a47f79078fe90e27f2d0e812becd1e6dc"
     },
     {
       "path": "tools/prepare_installation.py",
-      "bytes": 3148,
-      "sha256": "04da8d52217b050c2731b933d8e42520955cdd4a82e238e53205f57bf8d78622"
+      "bytes": 4703,
+      "sha256": "4e6c35a320f765406fa76162abeb867f209dd0a50594f668b4cdea938ac4bb26"
     },
     {
       "path": "tools/prepare_jarvis.py",
@@ -4629,8 +4894,8 @@
     },
     {
       "path": "tools/restore_archive_2026_11_01.py",
-      "bytes": 4495,
-      "sha256": "1c0ab7167d1b09089a74c4c7608d072107ac4852ab875802703203126d478256"
+      "bytes": 4628,
+      "sha256": "81af44963c48512e5f1ce47f77be9916b6cb84be8bf891f415d693f5fbd47e6f"
     },
     {
       "path": "tools/restore_recovery_2026_11_01.py",
@@ -4649,18 +4914,28 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 5335,
-      "sha256": "abd80dab005b96defe67ad81d5357d2cf1584db216c4016060a5ed558befc194"
+      "bytes": 5369,
+      "sha256": "ef7427c3d5c47b962d69c64589ecfd8b684dc4ea1663ccefb2588b676fff7a4d"
     },
     {
       "path": "tools/validate_repository.py",
-      "bytes": 7610,
-      "sha256": "2ee6670d17ecfe7ae50441997d749c8cd0d62a159b16fa9cb405c2f17b08d9ca"
+      "bytes": 7704,
+      "sha256": "5a2521d0652eb82062742bce32718eaacd0e98de0c52a6b590ad5bb23c1d587b"
+    },
+    {
+      "path": "tools/verifier_voix.py",
+      "bytes": 2290,
+      "sha256": "675fa66f2ab3efb15b4cd5f1ee7cdd4ff235ce5f08dc538e0832967ff4259501"
     },
     {
       "path": "tools/verify_manifest.py",
       "bytes": 1849,
       "sha256": "b3c7237bee1c1b304a2c41e760ff1ea98b7d1c433386b8dfb4f39acd6e7af428"
+    },
+    {
+      "path": "tools/verrouiller_dependances.py",
+      "bytes": 1968,
+      "sha256": "1d71c3d43816d5a87ccc1889c9a480620188362ee6b8742cad70cddcedbcd19e"
     }
   ]
 }

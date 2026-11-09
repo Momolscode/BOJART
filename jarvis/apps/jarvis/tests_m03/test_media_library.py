@@ -5,7 +5,7 @@ from media_library import MediaLibrary,Rejected,IntegrityError,MAX_FILE,verify_a
 
 class MediaTests(unittest.TestCase):
  def setUp(self):
-  self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name);self.media=self.root/'media';self.media.mkdir()
+  self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name).resolve();self.media=self.root/'media';self.media.mkdir()
   self.file=self.media/'original.mp4';self.file.write_bytes(b'original footage for unit tests')
   self.fake=lambda p: {'duration':15.1,'width':512,'height':1108,'fps':'30/1','codec':'h264','audio':True}
   self.lib=MediaLibrary(self.root/'state',[self.media],self.fake)

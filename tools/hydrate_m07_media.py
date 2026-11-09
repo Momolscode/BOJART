@@ -18,7 +18,7 @@ def sha(path):
 def hydrate(archive, destination=ROOT/'jarvis'):
     archive=Path(archive);destination=Path(destination).resolve()
     if sha(archive)!=EXPECTED_ARCHIVE:raise ValueError('Archive différente de la livraison M07 vérifiée.')
-    records=[json.loads(line) for line in (ROOT/'data/catalog/assets.jsonl').read_text().splitlines()]
+    records=[json.loads(line) for line in (ROOT/'data/catalog/assets.jsonl').read_text(encoding='utf-8').splitlines()]
     selected=[r for r in records if r['origin']=='library:libfile_875f76c239cc8191a4c147a11293c9ff' and r['source_path'].startswith(('apps/jarvis/studio_media/','apps/jarvis/studio_assets/'))]
     prepared=[]
     with zipfile.ZipFile(archive) as z:

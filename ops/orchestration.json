@@ -152,6 +152,10 @@
         "jarvis/apps/jarvis/app/memory.*",
         "jarvis/tests/memory_*",
         "Installer_BOJART_4060Ti.cmd",
+        "Installer_Tout_BOJART.cmd",
+        "tools/installer_tout.py",
+        "Collecter_BOJART.cmd",
+        "tools/collecte_guidee.py",
         "Mesurer_BOJART.cmd",
         "tools/benchmark_jarvis.py"
       ],
@@ -205,6 +209,9 @@
         "bojart_ops/*",
         "tests_ops/*",
         "data/preinstallation/target-inventory.template.json",
+        "data/preinstallation/actions-jarvis.json",
+        "Banc_BOJART.cmd",
+        "Mesurer_Voix_BOJART.cmd",
         "skills/bojart-context-reconstruction/*",
         "skills/bojart-evidence-audit/*",
         "skills/bojart-tool-qualification/*",
@@ -312,7 +319,8 @@
       "blockers": [],
       "evidence": [
         "context/CURRENT.md",
-        "jarvis/context/START_HERE.md"
+        "jarvis/context/START_HERE.md",
+        "docs/BANC_VOIX.md"
       ],
       "acceptance": "Essais réels en bruit, latence mesurée et reçus de chargement/rendu sur les moniteurs.",
       "qualification_gates": [

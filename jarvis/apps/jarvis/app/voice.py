@@ -8,6 +8,9 @@ from core import Rejected
 
 MAX_SECONDS=15
 MAX_BYTES=500000
+# Decoding vocabulary: steers spelling toward catalogue words ("dashboard", "Jarvis"); the router stays exact.
+# Voice bench 2026-11-02 (small, synthetic voices): 12/80 -> 65/80 target commands, negations kept, no command from noise.
+VOCABULARY='Jarvis, affiche le dashboard atelier, dossiers, Studio, contenus, conception.'
 
 def validate_audio(raw):
     if not isinstance(raw,bytes) or not 44<len(raw)<=MAX_BYTES:raise Rejected('Audio absent ou trop volumineux.')
@@ -55,7 +58,8 @@ class LocalVoice:
                     self.model=WhisperModel(str(Path(self.config['model_dir']).resolve()),device='cpu',
                            compute_type='int8',cpu_threads=4,local_files_only=True)
             segments,info=self.model.transcribe(io.BytesIO(raw),language='fr',beam_size=3,
-                        condition_on_previous_text=False,vad_filter=True,word_timestamps=False)
+                        condition_on_previous_text=False,vad_filter=True,word_timestamps=False,
+                        initial_prompt=VOCABULARY)
             # Iterate inside the lock: faster-whisper segments is a lazy generator.
             text=' '.join(s.text.strip() for s in segments).strip()
             if len(text)>500:raise Rejected('Phrase trop longue : reformulez en une demande courte.')

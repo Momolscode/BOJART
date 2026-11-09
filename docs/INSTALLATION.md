@@ -21,7 +21,7 @@ bash Lancer_BOJART.sh
 
 Windows : `py -3.12 -m venv .venv`, puis `.venv\Scripts\python -m pip install -r jarvis\requirements-tests.txt`, `.venv\Scripts\python tools\doctor.py` et `Lancer_BOJART.cmd`.
 
-Les dépendances directes M07 sont fixées dans les requirements. Ce n’est pas un verrou exhaustif des dépendances transitives ou une qualification des roues Windows. Conserver les versions installées après recette. La mémoire seule utilise Python standard/FTS5 ; CAO, LangGraph et voix ont leurs dépendances propres.
+Les dépendances directes M07 sont fixées dans les requirements. Sous Windows / Python 3.12, `tools/prepare_installation.py` installe en plus les verrous `jarvis/locks/windows-cp312-*.txt` : toutes les dépendances, indirectes comprises, avec l’empreinte SHA-256 de chaque roue, générées et testées par la CI Windows du banc (voir [BANC_SIMULATION_PREINSTALLATION.md](BANC_SIMULATION_PREINSTALLATION.md)). Ailleurs, seules les versions principales sont fixées. Ce n’est pas une qualification de la tour elle-même. Conserver les versions installées après recette. La mémoire seule utilise Python standard/FTS5 ; CAO, LangGraph et voix ont leurs dépendances propres.
 
 ## Données
 
