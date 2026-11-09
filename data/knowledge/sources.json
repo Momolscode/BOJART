@@ -214,5 +214,25 @@
     "sha256": "8636ad44a10f5cb96bc075fe33dcd20c89ab7f1745c025309b51b9069c6231bc",
     "evidence": "executed_this_session",
     "scope": "114 prises de synthèse Piper (trois voix) et bruit synthétique, code navigateur réel dans Node, faster-whisper small épinglé installé par l'installateur ; voice_endpoint.js avant (bc1a2847) et après (fe0eafd0) ; pas une voix humaine ni un micro réel"
+  },
+  {
+    "source_id": "debrief-github-user-20261109",
+    "evidence": "user_instruction",
+    "description": "Le 9 novembre 2026, Olsen demande si Jarvis pourra « pousser sur github » et publier le débrief de la tour, puis précise que cette capacité est requise (« faut qu'il puisse faire ça »).",
+    "raw_content_in_git": false
+  },
+  {
+    "source_id": "debrief-tour-essai-20261109",
+    "path": "docs/evidence/debrief-tour-2026-11-09/essai.json",
+    "sha256": "d7141e86baa429c40002e61747ed6943cef837108db43859b8447ed16b756fd1",
+    "evidence": "executed_this_session",
+    "scope": "Essai de bout en bout de tools/publier_debrief.py sur un faux dépôt distant local, conteneur Linux, sans réseau : 12 contrôles ; aucune poussée réelle vers GitHub, aucune connexion de la tour"
+  },
+  {
+    "source_id": "debrief-tour-simulation-20261109",
+    "path": "docs/evidence/debrief-tour-2026-11-09/simulation-depot-reel.json",
+    "sha256": "ced6b90faffe796e5ddb5217f84bd8f313e3fc8bf6444ebe783332aee0db8c1f",
+    "evidence": "executed_this_session",
+    "scope": "Simulation de publication face au vrai dépôt (lecture de main, arbre préparé, contrôle du dépôt, commit temporaire) : rien poussé"
   }
 ]

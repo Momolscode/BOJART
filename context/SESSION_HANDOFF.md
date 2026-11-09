@@ -10,6 +10,14 @@ Fichiers : `bojart_ops/banc_statique.py` (repli manifeste et `.gitignore`), `boj
 
 Tests exécutés : réinstallation complète depuis une copie sans Git de `3917f7a` (journal et banc dans `docs/evidence/installation-2026-11-09/`) : 1 148 tests sans régression, 16/16 HTTP, 2 actions en échec pour le seul verrou figurine ; voix avec les poids installés 37/40, 0 erreur critique, 15/15 cas d'erreur ; fin de prise avant/après sur 114 prises ; bruit seul 0 commande ; parcours navigateur des 8 pages. Limites : conteneur Linux, synthèse vocale, aucun matériel réel, Ollama non installé. Verrou figurine ajouté depuis l'artefact de la CI Windows de `db89f3a` (versions communes identiques aux verrous moteurs et voix). Prochaine preuve : installation et recette sur la tour (`Installer_Tout_BOJART.cmd`, `Banc_BOJART.cmd`, `Mesurer_Voix_BOJART.cmd`, vrai micro avec imprimante en marche).
 
+## Débrief de la tour vers GitHub — 9 novembre 2026
+
+Demande d'Olsen : Jarvis doit pouvoir pousser sur GitHub. Lecture retenue par l'assistant, à confirmer : Jarvis pousse son débrief, pas du code. Décisions : branche neuve `tour/debrief-AAAAMMJJ-HHMMSS`, jamais `main` (raison : le dépôt est public et un rapport de la tour ne vaut ni réception ni décision) ; seuls les rapports écrits par Jarvis partent (raison : aucun média, base ni donnée client hors de la tour) ; accord à l'écran, pas de déclenchement vocal (raison : une transcription n'est pas une instruction) ; la connexion reste celle de Git, aucun jeton lu ni gardé.
+
+Fichiers : `bojart_ops/debrief_tour.py`, `tools/publier_debrief.py`, `Publier_Debrief_BOJART.cmd`, `bojart_ops/installation_tout.py` (Git par winget), `bojart_ops/banc_simulation.py` (`outil:debrief_simulation`), `data/preinstallation/actions-jarvis.json` (39 actions), `Mesurer_Voix_BOJART.cmd` (réutilise les poids posés par l'installateur), `docs/DEBRIEF_TOUR.md` ; tests `tests_ops/test_debrief_tour.py` (22), `test_installation_tout.py` (19).
+
+Tests exécutés : `publier_debrief.py essai` 12/12 sur un faux dépôt distant ; `--simulation` face au vrai dépôt, rien poussé (`docs/evidence/debrief-tour-2026-11-09/`). Limites : aucune poussée réelle, ni connexion GitHub de la tour, ni `cmd.exe`. Prochaine étape : sur la tour, `Publier_Debrief_BOJART.cmd` après l'installation, puis lecture de la branche par un fil de travail.
+
 ## Chaîne vocale simulée — 2 novembre 2026
 
 Demande d'Olsen (option « chaîne vocale simulée ») : tester « Affiche le dashboard atelier » de bout en bout sans la tour, mesurer chaque étape (médiane, p95, max, erreurs, froid/chaud) pour comparer ensuite avec la tour, y compris bruit, commande inconnue, coupure et réponse tardive. Branche reposée sur la PR #17 (correctif PyAV 18.1.0, verrou voix, `tools/verifier_voix.py`) pour ne pas dupliquer son banc.

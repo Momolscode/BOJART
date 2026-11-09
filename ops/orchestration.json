@@ -213,6 +213,7 @@
         "data/preinstallation/actions-jarvis.json",
         "Banc_BOJART.cmd",
         "Mesurer_Voix_BOJART.cmd",
+        "Publier_Debrief_BOJART.cmd",
         "skills/bojart-context-reconstruction/*",
         "skills/bojart-evidence-audit/*",
         "skills/bojart-tool-qualification/*",

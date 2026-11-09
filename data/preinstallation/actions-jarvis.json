@@ -68,6 +68,24 @@
       "porte_reelle": null
     },
     {
+      "id": "debrief.publication_github",
+      "domaine": "Installation",
+      "action": "Pousser sur GitHub le débrief de la tour : seuls les rapports écrits par Jarvis (installation, banc, voix, mesures), nettoyés du dossier personnel, du nom de session et du nom du poste, sur une branche neuve tour/debrief-…, jamais main, après un accord à l'écran",
+      "exemple": "Publier_Debrief_BOJART.cmd",
+      "etat_code": "code",
+      "verifications": [
+        "outil:debrief_simulation",
+        "suite:tests_ops",
+        "statique:scripts_cmd"
+      ],
+      "hors_simulation": [
+        "Connexion GitHub réelle de la tour (fenêtre de Git, compte ayant le droit d'écrire)",
+        "Poussée réelle vers Momolscode/BOJART et lecture de la branche par un fil de travail",
+        "Contenu réel des rapports de la tour"
+      ],
+      "porte_reelle": null
+    },
+    {
       "id": "installation.lanceurs",
       "domaine": "Installation",
       "action": "Lancer, mesurer, simuler et restaurer par double-clic",
