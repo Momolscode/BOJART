@@ -1,0 +1,24 @@
+{
+ "candidates": [
+  {
+   "pose": "veille",
+   "label": "Veille : à genou, bâton-pinceau tenu droit à deux mains, yeux clos",
+   "volume_cm3_nominal": 136.4,
+   "height_nominal_mm": 162.0,
+   "center_of_mass_mm": [
+    0.2,
+    -0.1,
+    48.4
+   ],
+   "com_inside_feet_hull": true,
+   "front_silhouette_fill": 0.463,
+   "side_silhouette_fill": 0.42,
+   "stance_width_mm": 62.0
+  }
+ ],
+ "chosen": "veille",
+ "notes": [
+  "Retenue : veille (remplissage de face 0.463, cible 0,42 = geste lisible sans membres grêles). Critère artistique non validé par un tiers."
+ ],
+ "voxel_mm": 2.0
+}

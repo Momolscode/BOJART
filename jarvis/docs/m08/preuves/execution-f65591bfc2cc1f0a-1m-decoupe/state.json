@@ -1,0 +1,228 @@
+{
+ "task_id": "f65591bfc2cc1f0a",
+ "identity": {
+  "spec": {
+   "character": {
+    "id": "sentinelle",
+    "label": "La Sentinelle de l'atelier",
+    "franchise": null,
+    "rights": "bojart_original"
+   },
+   "pose_intent": "iconic",
+   "height_mm": 1000.0,
+   "material": "PLA",
+   "process": "FDM"
+  },
+  "mesh_sha256": null,
+  "voxel": 0.6,
+  "pipeline": "bojart.figurine.pipeline.v1",
+  "sculpt": "bojart.sentinelle.sdf.v1",
+  "fab": "bojart.fabrication.v2",
+  "checks": "bojart.checks.v2"
+ },
+ "created": "2026-11-02T03:15:01+00:00",
+ "requests": [
+  {
+   "at": "2026-11-02T03:15:01+00:00",
+   "text": "Jarvis, crée la Sentinelle 3D de 1 m",
+   "source": "typed",
+   "entry_point": {
+    "intent": "create_figurine",
+    "engine": "bojart.dialogue.fr.v2",
+    "provider": "rules_fr",
+    "requires_confirmation": true,
+    "message": "Figurine « La Sentinelle de l'atelier », 1000 mm, FDM PLA. Relisez la spécification ; la génération passe par la chaîne figurine."
+   },
+   "faults": [],
+   "duplicate_of_existing_task": false
+  },
+  {
+   "at": "2026-11-02T03:18:09+00:00",
+   "text": "Jarvis, crée la Sentinelle 3D de 1 m",
+   "source": "typed",
+   "entry_point": {
+    "intent": "create_figurine",
+    "engine": "bojart.dialogue.fr.v2",
+    "provider": "rules_fr",
+    "requires_confirmation": true,
+    "message": "Figurine « La Sentinelle de l'atelier », 1000 mm, FDM PLA. Relisez la spécification ; la génération passe par la chaîne figurine."
+   },
+   "faults": [],
+   "duplicate_of_existing_task": true
+  }
+ ],
+ "steps": {
+  "intake": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:15:01+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T03:15:01+00:00",
+   "result": {
+    "received": "2026-11-02T03:15:01+00:00",
+    "source": "typed",
+    "text_length": 36
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 34.8,
+   "peak_rss_mb_children": 0.0,
+   "reused": true
+  },
+  "transcription": {
+   "status": "NOT_TESTED",
+   "attempts": 1,
+   "started": "2026-11-02T03:15:01+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T03:15:01+00:00",
+   "result": {
+    "note": "Aucun enregistrement disponible : texte injecté au même point d’entrée. Reconnaissance vocale NON TESTÉE ; aucun score de confiance fabriqué."
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 34.8,
+   "peak_rss_mb_children": 0.0,
+   "reused": true
+  },
+  "spec": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:15:01+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T03:15:01+00:00",
+   "result": {
+    "character": "La Sentinelle de l'atelier",
+    "geometry_source": "procedural_sdf"
+   },
+   "outputs": {
+    "spec.json": "78f83a53f80a1e7782d7b8f24c3f4df7901d4481ce9d160a79e9337ef9721fb6"
+   },
+   "peak_rss_mb_process": 34.8,
+   "peak_rss_mb_children": 0.0,
+   "reused": true
+  },
+  "pose_study": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:15:01+00:00",
+   "seconds": 3.414,
+   "finished": "2026-11-02T03:15:04+00:00",
+   "result": {
+    "chosen": "garde_basse"
+   },
+   "outputs": {
+    "pose_study.json": "76493c3d77406584fdab463da726f1cb35ea7ebe54a53662fa8cf587e09ce824"
+   },
+   "peak_rss_mb_process": 85.1,
+   "peak_rss_mb_children": 0.0,
+   "reused": true
+  },
+  "geometry": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:15:04+00:00",
+   "seconds": 43.403,
+   "finished": "2026-11-02T03:15:47+00:00",
+   "result": {
+    "source": "procedural_sdf",
+    "pose": "garde_basse",
+    "voxel_mm": 0.6,
+    "grid_estimate_mb": 122,
+    "bodies": 1,
+    "triangles": 181536
+   },
+   "outputs": {
+    "nominal.stl": "aa6e1cae62740ee9d5a2118fd044a5d37544e2284ea5221c235358e9d3224291"
+   },
+   "peak_rss_mb_process": 344.6,
+   "peak_rss_mb_children": 0.0,
+   "reused": true
+  },
+  "assembly": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:15:47+00:00",
+   "seconds": 1.466,
+   "finished": "2026-11-02T03:15:49+00:00",
+   "result": {
+    "cut_pieces": 18
+   },
+   "outputs": {
+    "figurine.stl": "e171f1e46738c50ce0c1bf4785cdd6a5c150871ae17cf8e5672fc80a55eb97f6",
+    "socle.stl": "64352d40686fb00bfee7bb3a1f102ddae71aa8c1c6b77abaaafabfed1356b86f",
+    "assembly.json": "2f9e53fa238c774302892404a5ad3c902606a88eaeec992caff9497d5a547841",
+    "cut_plan.json": "4fbd447841ae948b4de85d29fbb61a58d7c56b29ec1ffdc8788de8d0831f9aca"
+   },
+   "peak_rss_mb_process": 364.6,
+   "peak_rss_mb_children": 0.0,
+   "reused": true
+  },
+  "checks": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:15:49+00:00",
+   "seconds": 10.741,
+   "finished": "2026-11-02T03:16:00+00:00",
+   "result": {
+    "verdict": "CONFORME_AUX_CRITERES_CALCULES"
+   },
+   "outputs": {
+    "checks.json": "c5338113da9c48d4f5695c54e07c367b2a09245fb2ba5f126f3fba10a9104471"
+   },
+   "peak_rss_mb_process": 633.1,
+   "peak_rss_mb_children": 0.0,
+   "reused": true
+  },
+  "renders": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:16:00+00:00",
+   "seconds": 13.621,
+   "finished": "2026-11-02T03:16:13+00:00",
+   "result": {
+    "engine": "Cycles CPU",
+    "samples": 32,
+    "note": "rendus argile sans texture + vue maillage ; appréciation visuelle, pas une mesure"
+   },
+   "outputs": {
+    "rendus/figurine.blend": "9c289f19e721a9a398df5eb641a671ed87f75f3ef7ebd8e7ad0f7ce6150fe813",
+    "rendus/vue_dos.png": "25c155686f2af08cb84a747126a54fe075dfb8a24d82703dd1922960c0a5d0c2",
+    "rendus/vue_face.png": "b69ba088f48fdadbe3c788b549940f03e41d8eeb79e75e552b830011b9b71bc1",
+    "rendus/vue_maillage_detail.png": "6e309879c4cdd3f79304e09912ee89fa94e766ab96210765aaba56b01cc3f9bf",
+    "rendus/vue_profil_gauche.png": "0a4ad3c87f42338065aa1f2cdf710a77eab4e80a59b0bfced7540ceac147585d",
+    "rendus/vue_trois_quarts.png": "f8bab8731a3eb9530bc954405c6ce2ee5650c84524a4228aa24b97add40fe42f"
+   },
+   "peak_rss_mb_process": 633.1,
+   "peak_rss_mb_children": 1274.8,
+   "reused": true
+  },
+  "exports": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:16:13+00:00",
+   "seconds": 1.849,
+   "finished": "2026-11-02T03:16:15+00:00",
+   "result": {
+    "status": "DONE",
+    "objects_reread": 2,
+    "writer": "trimesh 5.2.0",
+    "slicer_settings_included": false
+   },
+   "outputs": {
+    "projet.3mf": "67c8578f7aedd8d1b447dda54ba98b6bc5587e5e8a431740356ee40d692b4fae"
+   },
+   "peak_rss_mb_process": 633.1,
+   "peak_rss_mb_children": 1274.8,
+   "reused": true
+  },
+  "slicing": {
+   "status": "BLOCKED",
+   "attempts": 1,
+   "started": "2026-11-02T03:16:15+00:00",
+   "reason": "Figurine plus grande que le volume d’hypothèse (250.0, 210.0, 220.0) mm : étude de découpe en 18 pièces produite (cut_plan.json), clés d’assemblage et parc réel non définis. Tranchage par pièce non réalisé : étape BLOQUÉE.",
+   "seconds": 0.0
+  }
+ },
+ "ack_seconds": 0.0201,
+ "pose": "garde_basse",
+ "status": "BLOCKED",
+ "message": "Figurine plus grande que le volume d’hypothèse (250.0, 210.0, 220.0) mm : étude de découpe en 18 pièces produite (cut_plan.json), clés d’assemblage et parc réel non définis. Tranchage par pièce non réalisé : étape BLOQUÉE."
+}
