@@ -24,8 +24,18 @@ PRIVATE_EXT={'.zip','.bundle','.mp4','.mov','.mp3','.wav','.sqlite','.sqlite3','
 SECRET=[re.compile(r'gh[pousr]_[A-Za-z0-9]{30,}'),re.compile(r'github_pat_[A-Za-z0-9_]{40,}'),re.compile(r'sk-proj-[A-Za-z0-9_-]{30,}'),re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),re.compile(r'https?://[^\s"<>]+[?&](?:X-Amz-Signature|sig)=[A-Za-z0-9%]{20,}')]
 
 def names(root=ROOT):
-    data=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z'],cwd=root)
-    return sorted(set(x for x in data.decode().split('\0') if x))
+    """Files to check: Git's view of a checkout, or the published manifest for a ZIP copy / a tower without Git.
+
+    Without Git, untracked files cannot be told apart from local state (.venv, config.json), so only the
+    published paths are checked: their bytes must still match the manifest exactly."""
+    try:
+        data=subprocess.run(['git','ls-files','--cached','--others','--exclude-standard','-z'],cwd=root,capture_output=True,check=True).stdout
+        found=sorted(set(x for x in data.decode().split('\0') if x))
+    except (OSError,subprocess.CalledProcessError):
+        found=[]
+    if found:return found
+    manifest=json.loads((Path(root)/MANIFEST).read_text(encoding='utf-8'))
+    return sorted({f['path'] for f in manifest['files']}|{MANIFEST})
 
 
 def source_size_allowed(name, raw):

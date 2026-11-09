@@ -38,7 +38,8 @@ def install_commands(executable, requirements, os_name=os.name, root=ROOT):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--engines', action='store_true', help='Installer aussi CAO et LangGraph depuis les requirements M07.')
-    p.add_argument('--voice', action='store_true', help='Installer les bibliothèques voix ; poids à fournir séparément.')
+    p.add_argument('--voice', action='store_true', help='Installer les bibliothèques voix ; poids préparés par tools/preparer_voix.py.')
+    p.add_argument('--figurine', action='store_true', help='Installer la chaîne figurine M08 (maillage, découpe, contrôles).')
     p.add_argument('--no-venv', action='store_true', help='Utiliser cet interpréteur, pour recette isolée.')
     p.add_argument('--model-profile', choices=('speed', 'balanced', 'quality'), help='Tester et activer ce profil de modèles locaux.')
     p.add_argument('--download-models', action='store_true', help='Télécharger les modèles manquants du profil demandé.')
@@ -58,6 +59,7 @@ def main():
     requirements = []
     if a.engines: requirements.append(ROOT / 'jarvis/requirements.txt')
     if a.voice: requirements.append(ROOT / 'jarvis/requirements-voice.txt')
+    if a.figurine: requirements.append(ROOT / 'jarvis/requirements-figurine.txt')
     commands, notes = install_commands(executable, requirements)
     for note in notes:
         print(note)
@@ -69,7 +71,9 @@ def main():
         if a.download_models:
             command.append('--download')
         subprocess.run(command, cwd=ROOT, check=True)
-    report = subprocess.run([str(executable), str(ROOT / 'tools/doctor.py')], cwd=ROOT, check=True, capture_output=True, text=True,
+    # Import probe after an engine install: otherwise the report lists CAD as missing although it is installed.
+    doctor = [str(executable), str(ROOT / 'tools/doctor.py')] + (['--probe-imports'] if a.engines else [])
+    report = subprocess.run(doctor, cwd=ROOT, check=True, capture_output=True, text=True,
                             encoding='utf-8', env=dict(os.environ, PYTHONUTF8='1'))
     state = Path(os.environ.get('BOJART_MEMORY_STATE', str(Path.home() / 'BOJART/memory'))).expanduser()
     state.mkdir(parents=True, exist_ok=True)

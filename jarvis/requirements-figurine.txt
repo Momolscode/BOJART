@@ -3,7 +3,8 @@
 # 2026-11-02 pour win_amd64 / CPython 3.12 (roues binaires) ; tests M08 exécutés sous Linux, Python 3.12.
 # lxml : requis par trimesh pour l'export 3MF.
 # Outils système à part : PrusaSlicer (2.7.2 testé) et Blender (4.0.2 testé), facultatif pour les rendus.
-numpy==2.5.3
+# numpy aligné sur les verrous moteurs et voix (2.5.4) : installer la figurine après eux ne rétrograde rien.
+numpy==2.5.4
 scipy==1.18.1
 scikit-image==0.26.0
 trimesh==4.11.1

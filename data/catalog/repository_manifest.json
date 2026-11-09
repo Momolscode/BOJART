@@ -29,8 +29,8 @@
     },
     {
       "path": ".github/workflows/preinstall-bench.yml",
-      "bytes": 2939,
-      "sha256": "fcde7894e20c088867fd9230cc730ad413b04e7c2a5babcc1673e77807c53fdf"
+      "bytes": 3153,
+      "sha256": "b7d3e29489187e563af776aa5734f632d82df09e826a8239bcdacb74f8c0f9b9"
     },
     {
       "path": ".github/workflows/quality.yml",
@@ -74,8 +74,8 @@
     },
     {
       "path": "Diagnostic_BOJART.cmd",
-      "bytes": 320,
-      "sha256": "8bb709f75beebd6e806ede7325d8cca345fdc6c52c3fc87b996f3262c4c727a5"
+      "bytes": 332,
+      "sha256": "3afb8cf7692d21757d21947e66a1011af688c3c9958cd4115618fd3d0f25b3b3"
     },
     {
       "path": "Diagnostic_BOJART.sh",
@@ -84,8 +84,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 10279,
-      "sha256": "120b1f28eb099a2b120a049a6d5796998b1bb21a5c4caa40f5ff7f75840e96ca"
+      "bytes": 11173,
+      "sha256": "0dbd85b653e1f59aea6e720f27d69c53cc262226ea67d52c6dea282f467abfe1"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -104,8 +104,8 @@
     },
     {
       "path": "Installer_Tout_BOJART.cmd",
-      "bytes": 1906,
-      "sha256": "a8280e2754a08389c4f077e195eee998595048421867dcd43311070015e81109"
+      "bytes": 1970,
+      "sha256": "ec1fd9aebbeb98bad07b55c8f1ddbcea9611b1ecf3bd29bf43176fb36860d3a5"
     },
     {
       "path": "Lancer_BOJART.cmd",
@@ -379,8 +379,8 @@
     },
     {
       "path": "bojart_ops/banc_statique.py",
-      "bytes": 19936,
-      "sha256": "a91a824016a022e154d54162fef4bb86211ff07c424e39d97ddc76707e9adcb8"
+      "bytes": 22831,
+      "sha256": "198b2617b775f60804f3446bc0c80f9ce50e08cfde78499ec38be9f873b93054"
     },
     {
       "path": "bojart_ops/banc_voix.py",
@@ -399,8 +399,8 @@
     },
     {
       "path": "bojart_ops/installation_tout.py",
-      "bytes": 12517,
-      "sha256": "86673e72d92d4bd0cb9e7bc0b2e0b88f81478d1d050fb5c7a7d1dfd5a978f518"
+      "bytes": 13265,
+      "sha256": "e3b61ea24531dc70bacf153fd627d7c283c0b41b55c9d9ccbea39d24b61be303"
     },
     {
       "path": "bojart_ops/ledger.py",
@@ -441,6 +441,11 @@
       "path": "bojart_ops/voix_corpus.py",
       "bytes": 19305,
       "sha256": "f161a19a2d26d6e2c4ce598351af83477a7c986a69b62051945e02063a01958d"
+    },
+    {
+      "path": "bojart_ops/voix_installation.py",
+      "bytes": 5375,
+      "sha256": "b1373bb36dfcc74549683f839c77be4847c73846832eeafb1decd025736bd22e"
     },
     {
       "path": "configs/quality_gates.json",
@@ -569,8 +574,8 @@
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
-      "bytes": 20700,
-      "sha256": "7c8c9d708171223a503d395dca3697e7e8d404f048c87dcaec327db87bd1dd6b"
+      "bytes": 22110,
+      "sha256": "f195cb12d3ef9cd9d5ddbeca4e85724fe11d64c214b925032f94683119233664"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -644,8 +649,8 @@
     },
     {
       "path": "docs/BANC_VOIX.md",
-      "bytes": 6789,
-      "sha256": "98d9992671624d102313be12a32a31ac7781b851a3cff97e7e25c373e4db7274"
+      "bytes": 8787,
+      "sha256": "3b6893a48aa890e06533aa05fcb7773a4075db1c2359d2ec9e1a5e753e727274"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -1844,8 +1849,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/pipeline.py",
-      "bytes": 27919,
-      "sha256": "b6a543bea71a75c05565157f77fca92a4daf6501ead2ab6a34c8b9904b4447bf"
+      "bytes": 28063,
+      "sha256": "12daad67cdb0e2a63ebd4622a0abfb66e45aaf6b1bc7d6e1977a486ecbb643e1"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/sculpt.py",
@@ -1854,8 +1859,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/slicing.py",
-      "bytes": 6859,
-      "sha256": "627041fea9f1121e878064dd52a8059bd91a30cae798cd2d019786f220d64b1b"
+      "bytes": 6931,
+      "sha256": "a677fb676147387d3eb917cca63008689ad3bbfa3f7e44f8037ca81a2971ed17"
     },
     {
       "path": "jarvis/apps/jarvis/app/figurine/spec.py",
@@ -2074,8 +2079,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/voice_endpoint.js",
-      "bytes": 1193,
-      "sha256": "bc1a2847b9e85e5d209754deb082701ea757cb0dd6cc56639ba0a605efe1564b"
+      "bytes": 2741,
+      "sha256": "fe0eafd023805399df26ecf64a71b5c283dfc603d93e93791b10ff7690494bc1"
     },
     {
       "path": "jarvis/apps/jarvis/app/workbench.py",
@@ -2089,8 +2094,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.html",
-      "bytes": 4117,
-      "sha256": "689353b9694a28a7c4c598f3130cb6a26f6f8a2d181e10aee1e6513f6d7a7640"
+      "bytes": 4119,
+      "sha256": "db357289519c893fb57d6c89a53d3070651b8e713dc547a920525bd60989a58a"
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.js",
@@ -3299,8 +3304,8 @@
     },
     {
       "path": "jarvis/requirements-figurine.txt",
-      "bytes": 624,
-      "sha256": "ba2f911a6e0c721160b6d8590bef8e7af70a9b69280db9bb44f690327ff64efa"
+      "bytes": 736,
+      "sha256": "18736a084f735acb82b75275dcf7c97b0ed282e7d27e106ede8562fb859bfc3b"
     },
     {
       "path": "jarvis/requirements-orchestration.txt",
@@ -3479,8 +3484,8 @@
     },
     {
       "path": "jarvis/tests/voice_endpoint.test.cjs",
-      "bytes": 1540,
-      "sha256": "9a73a9452d77706974ea2673ddab851b3abc0d802742ac618d837f0a1041573f"
+      "bytes": 3268,
+      "sha256": "70675aa664cb09eafb75d6ad338d07da4fa0a3ac81c2f838565dfa9a649d834c"
     },
     {
       "path": "jarvis/tools/export_m07_graph.py",
@@ -5424,8 +5429,8 @@
     },
     {
       "path": "tests_ops/test_banc_simulation.py",
-      "bytes": 13232,
-      "sha256": "ca6308dff0aaf95671dbe734d06de31d78fcfe872e10eaba720c4c81375850b4"
+      "bytes": 13275,
+      "sha256": "c7f2f9984a7f8b5143c763c954c470ea64e85a3b3c17e60664de826f443e5d8d"
     },
     {
       "path": "tests_ops/test_banc_voix.py",
@@ -5438,9 +5443,14 @@
       "sha256": "fc0b2071ed7a4db987d327e9c5ec91c82f4fd9e1bfea45b71e443717b2ab5461"
     },
     {
+      "path": "tests_ops/test_installation_prete.py",
+      "bytes": 8579,
+      "sha256": "619d6ae07282e0ec2fd48e207d4a8263b709783b2910b7980d329299cbd4a516"
+    },
+    {
       "path": "tests_ops/test_installation_tout.py",
-      "bytes": 8430,
-      "sha256": "abbce7d3e101e786e5256bb7e25f6c60c4b821c34072652b07d6ebbf4c7fa91a"
+      "bytes": 9602,
+      "sha256": "2a130654a82ad4617a5f49a7c154ffb511365f0854702d55701cba0e3c8a991b"
     },
     {
       "path": "tests_ops/test_ops.py",
@@ -5539,8 +5549,8 @@
     },
     {
       "path": "tools/installer_tout.py",
-      "bytes": 5086,
-      "sha256": "6983163d3bbe07dc8f1b9b9cf4db87508a3744c09f1dcabefda68e0d35d325b2"
+      "bytes": 5289,
+      "sha256": "6bf9d4e6e252014da314fae2e5d4acc48dd9776ec35d410e7804643fb18b3c30"
     },
     {
       "path": "tools/memory_browser.cjs",
@@ -5559,8 +5569,8 @@
     },
     {
       "path": "tools/prepare_installation.py",
-      "bytes": 4703,
-      "sha256": "4e6c35a320f765406fa76162abeb867f209dd0a50594f668b4cdea938ac4bb26"
+      "bytes": 5106,
+      "sha256": "559efbfcea00e3c84edeb608372437412d98ee5e1eedb278fbe3bb60ac8acbe5"
     },
     {
       "path": "tools/prepare_jarvis.py",
@@ -5571,6 +5581,11 @@
       "path": "tools/prepare_production.py",
       "bytes": 1315,
       "sha256": "bd6c187ae2bdadf379f8b010b4e2714f5e1f99db5af02d2839de002821fa7c0c"
+    },
+    {
+      "path": "tools/preparer_voix.py",
+      "bytes": 1832,
+      "sha256": "4586a4900e52749b43acc93d079b9808d094bcd44873492c36a5fb1b7878ecdd"
     },
     {
       "path": "tools/quality_gate.py",
@@ -5604,8 +5619,8 @@
     },
     {
       "path": "tools/validate_repository.py",
-      "bytes": 7704,
-      "sha256": "5a2521d0652eb82062742bce32718eaacd0e98de0c52a6b590ad5bb23c1d587b"
+      "bytes": 8294,
+      "sha256": "48c551d1b667f04dbe2dad506803833588cebe19bead57e35a16d625903d5bc7"
     },
     {
       "path": "tools/verifier_voix.py",

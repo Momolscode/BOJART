@@ -44,7 +44,7 @@ def find_slicer():
 
 
 def slicer_version(exe):
-    out = subprocess.run([exe, '--help'], capture_output=True, text=True, timeout=60)
+    out = subprocess.run([exe, '--help'], capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=60)
     first = (out.stdout or out.stderr).splitlines()[0] if (out.stdout or out.stderr) else ''
     return first.strip()
 
@@ -89,7 +89,7 @@ def slice_part(stl: Path, out_dir: Path, *, exe=None, timeout=900, fault=None) -
             f'{SIM_BED_MM[0] / 2:g},{SIM_BED_MM[1] / 2:g}', '--output', str(gcode), str(stl)]
     if fault == 'slicer_fail':
         args = [exe, '--export-gcode', '--load', str(profile), '--output', str(gcode), str(out_dir / 'absent.stl')]
-    proc = subprocess.run(args, capture_output=True, text=True, timeout=timeout)
+    proc = subprocess.run(args, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=timeout)
     log = (proc.stdout + '\n' + proc.stderr).strip()
     warnings = [l for l in log.splitlines() if re.search(r'warn|attention|error', l, re.I)]
     if proc.returncode != 0 or not gcode.exists():

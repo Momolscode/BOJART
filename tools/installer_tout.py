@@ -6,7 +6,8 @@
   python tools/installer_tout.py --simulation    # plan seul, en JSON : rien n'est installé ni téléchargé
 
 Étapes : Ollama et FFmpeg (winget, si absents), démarrage d'Ollama, Jarvis complet depuis les
-verrous Windows, modèles locaux du profil, banc de contrôle. Journal : ~/BOJART/installation/.
+verrous Windows (voix et chaîne figurine comprises), poids de la voix et son activation, modèles
+locaux du profil, banc de contrôle. Journal : ~/BOJART/installation/.
 Aucune imprimante, publication, dépense ou suppression de données.
 """
 import argparse
@@ -25,7 +26,8 @@ def options(argv=None):
     p.add_argument('--oui', action='store_true', help='Accord donné à l’avance pour toutes les étapes du plan.')
     p.add_argument('--simulation', action='store_true', help='Détecter et planifier seulement ; sortie JSON.')
     p.add_argument('--profil', choices=('speed', 'balanced', 'quality'), default='speed', help='Profil de modèles (speed pour la 4060 Ti 8 Go).')
-    p.add_argument('--sans-voix', action='store_true', help='Ne pas installer les bibliothèques voix.')
+    p.add_argument('--sans-voix', action='store_true', help='Ni bibliothèques ni poids voix.')
+    p.add_argument('--sans-figurine', action='store_true', help='Ne pas installer la chaîne figurine M08.')
     p.add_argument('--sans-modeles', action='store_true', help='Ni Ollama ni modèles.')
     p.add_argument('--sans-banc', action='store_true', help='Ne pas lancer le banc à la fin.')
     p.add_argument('--journal', type=Path, help='Chemin d’un journal neuf (par défaut ~/BOJART/installation/).')
@@ -42,7 +44,7 @@ def main(argv=None):
     now = datetime.now()
     state = it.detect()
     steps = it.plan(state, profile=a.profil, voice=not a.sans_voix, models=not a.sans_modeles, bench=not a.sans_banc,
-                    stamp=f'{now:%Y%m%d-%H%M%S}')
+                    figurine=not a.sans_figurine, stamp=f'{now:%Y%m%d-%H%M%S}')
     notes = it.warnings(state, models=not a.sans_modeles, profile=a.profil)
     if a.simulation:
         result = {'simulation': True, 'etat': state, 'plan': [{k: s.get(k) for k in ('id', 'type', 'titre', 'depend_de')} for s in steps],

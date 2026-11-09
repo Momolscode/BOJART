@@ -6,8 +6,9 @@ echo ============================================================
 echo  BOJ.ART Jarvis : installation complete de la tour
 echo ============================================================
 echo Verifie puis installe, si besoin : Python 3.12, Ollama, FFmpeg,
-echo Jarvis complet (memoire, CAO, LangGraph, voix) depuis le verrou
-echo Windows, les modeles locaux du profil speed, puis lance le banc.
+echo Jarvis complet (memoire, CAO, LangGraph, voix, figurine) depuis le
+echo verrou Windows, la voix prete a l'emploi (poids small ~470 Mo),
+echo les modeles locaux du profil speed, puis lance le banc.
 echo Aucune imprimante pilotee, rien de publie, rien d'achete.
 echo.
 set "BOJ_PY="

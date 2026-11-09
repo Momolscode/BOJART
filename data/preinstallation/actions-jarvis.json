@@ -143,10 +143,11 @@
         "reseau:roues_windows"
       ],
       "hors_simulation": [
-        "Poids faster-whisper non livrés",
-        "Précision française et latence non mesurées"
+        "Micro réel, bruit de l'atelier et voix réelle",
+        "Précision française et latence sur la tour"
       ],
-      "porte_reelle": "speech_offline"
+      "porte_reelle": "speech_offline",
+      "note": "Poids faster-whisper « small » épinglés (révision 536b0662, empreinte de model.bin contrôlée) téléchargés par l'installateur complet, voix activée dans la configuration privée (tools/preparer_voix.py)."
     },
     {
       "id": "voix.synthese",
@@ -480,12 +481,15 @@
       "domaine": "Conception 3D",
       "action": "Préparer une figurine originale : maillage, contrôles, socle, rendus, visionneuse",
       "exemple": "Chaîne M08",
-      "etat_code": "absent",
-      "note": "Code présent uniquement sur la PR #15 (non fusionnée) ; non simulé par ce banc sur main.",
-      "verifications": [],
+      "etat_code": "partiel",
+      "note": "Chaîne M08 intégrée (ex-PR #15) : personnages originaux (Ardoise, Veille, Fusain), maillage, contrôles, socle, rendus et visionneuse ; dépendances lourdes installées par l'étape figurine de l'installateur (jarvis/requirements-figurine.txt). Un personnage protégé reste une spécification texte sans géométrie. Blender et PrusaSlicer sont des outils système facultatifs.",
+      "verifications": [
+        "suite:jarvis_tests"
+      ],
       "hors_simulation": [
         "Modèle génératif local (TripoSG à essayer)",
-        "Droits des personnages tiers"
+        "Blender et PrusaSlicer sur la tour",
+        "Validation artistique de BOJ"
       ],
       "porte_reelle": "cad_runtime"
     },
@@ -495,7 +499,7 @@
       "action": "Découper une sculpture d'un mètre en pièces imprimables avec assemblages",
       "exemple": "« Prépare une sculpture d'un mètre pour le parc »",
       "etat_code": "absent",
-      "note": "Étude de découpe présente sur la PR #15 ; main ne contient que des boîtes synthétiques.",
+      "note": "La chaîne M08 découpe une figurine en pièces avec tenons détrompés (hypothèses FDM à calibrer). La sculpture d'un mètre exige une étude de découpe, non codée : la demande reste bloquée avant fabrication.",
       "verifications": [],
       "hors_simulation": [
         "Géométrie réelle",
@@ -524,11 +528,14 @@
       "domaine": "Imprimantes",
       "action": "Trancher une pièce avec le profil réel de la machine",
       "exemple": "PrusaSlicer hors ligne",
-      "etat_code": "absent",
-      "note": "Tranchage d'hypothèse sur la PR #15 uniquement.",
-      "verifications": [],
+      "etat_code": "partiel",
+      "note": "PrusaSlicer en ligne de commande avec un profil d'hypothèse (plateau 250 × 210 × 220 mm, PLA 0,4 mm) ; le G-code porte un en-tête d'interdiction et n'est jamais envoyé. Lecture des métadonnées du trancheur pour le devis.",
+      "verifications": [
+        "suite:jarvis_tests"
+      ],
       "hors_simulation": [
-        "Profils réels du parc"
+        "Profils réels du parc",
+        "PrusaSlicer installé sur la tour"
       ],
       "porte_reelle": "printer_fdm"
     },
@@ -536,10 +543,12 @@
       "id": "imprimantes.inventaire",
       "domaine": "Imprimantes",
       "action": "Inventorier modèle, procédé, volume, matière, état et interface de chaque machine",
-      "exemple": "Gabarit jarvis/config/M04_INVENTAIRE_A_REMPLIR.json",
-      "etat_code": "absent",
-      "note": "Gabarit seulement ; le nombre exact de machines reste inconnu.",
-      "verifications": [],
+      "exemple": "Formulaire du parc dans /atelier",
+      "etat_code": "partiel",
+      "note": "Parc déclaré machine par machine dans « Demandes, devis, parc » (ex-PR #18), connecteur de simulation seulement. Le nombre exact et les modèles des machines restent inconnus tant que l'inventaire réel n'est pas saisi.",
+      "verifications": [
+        "suite:jarvis_tests"
+      ],
       "hors_simulation": [
         "Toutes les machines réelles"
       ],
@@ -551,7 +560,7 @@
       "action": "Lire l'état puis, avec autorisation propre, chauffer, téléverser, démarrer",
       "exemple": "Connecteur machine qualifié",
       "etat_code": "absent",
-      "note": "Volontairement non codé : aucune commande physique tant qu'une machine n'est pas inventoriée et autorisée. Le banc vérifie seulement le refus.",
+      "note": "Volontairement sans connecteur réel : seul le connecteur de simulation reçoit des ordres, avec une autorisation par machine et par capacité, un état inconnu à rapprocher et la confirmation du plateau libre (atelier_parc.py). Le banc vérifie le refus vocal.",
       "verifications": [
         "http:http_refus_physique_negation"
       ],
@@ -565,13 +574,15 @@
       "domaine": "Devis",
       "action": "Préparer un devis (matière, temps machine, finition, marge, TVA)",
       "exemple": "Devis d'une figurine de 30 cm",
-      "etat_code": "absent",
-      "note": "Jarvis ne calcule pas de devis. Existent seulement un calcul pédagogique dans la base métier (calcul_pedagogique_non_devis) et un chiffrage manuel coût + marge dans le site Atelier (calculateQuote, sans temps machine ni TVA).",
+      "etat_code": "partiel",
+      "note": "Devis versionnés et explicables (ex-PR #18) : temps trancheur, matière, finition, marge au taux de marque comme calculateQuote, TVA, document imprimable ; jamais d'envoi. Manquent les vrais chiffres : grille tarifaire, régime de TVA et émetteur, à déclarer par formulaire.",
       "verifications": [
+        "suite:jarvis_tests",
         "suite:metier"
       ],
       "hors_simulation": [
-        "Tarifs réels, temps trancheur, règles HT/TTC"
+        "Grille tarifaire réelle, TVA et émetteur",
+        "Temps de trancheur réels"
       ],
       "porte_reelle": "site_quotes"
     },

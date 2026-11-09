@@ -62,9 +62,9 @@ def _now():
 def _git_commit():
     """Commit courant et état du code de la chaîne (un code non commité est signalé)."""
     try:
-        head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=REPO, capture_output=True, text=True, timeout=10).stdout.strip()
+        head = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=REPO, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=10).stdout.strip()
         dirty = subprocess.run(['git', 'status', '--porcelain', '--', 'jarvis/apps/jarvis/app', 'jarvis/tools'],
-                               cwd=REPO, capture_output=True, text=True, timeout=10).stdout.strip()
+                               cwd=REPO, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=10).stdout.strip()
         return {'head': head or None, 'pipeline_code_modified_since_commit': bool(dirty)}
     except Exception:
         return {'head': None, 'pipeline_code_modified_since_commit': None}
@@ -127,7 +127,7 @@ def environment():
         'manifold3d': ver('manifold3d'), 'scipy': ver('scipy'), 'rtree': ver('rtree'), 'matplotlib': ver('matplotlib'),
         'lxml': ver('lxml'),
         'slicer': slicing.slicer_version(slicing.find_slicer()) if slicing.find_slicer() else None,
-        'blender': subprocess.run([blender, '--version'], capture_output=True, text=True, timeout=60).stdout.splitlines()[0] if blender else None,
+        'blender': subprocess.run([blender, '--version'], capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=60).stdout.splitlines()[0] if blender else None,
         'gpu': 'nvidia-smi présent' if gpu else 'aucun GPU détecté (calcul CPU uniquement)',
     }
 
@@ -411,7 +411,7 @@ class FigurineRun:
         rd = self.dir / 'rendus'; rd.mkdir(exist_ok=True)
         cmd = [blender, '-b', '--factory-startup', '--python', str(HERE / 'blender_render.py'), '--',
                str(rd), str(self.render_size), str(self.render_samples), str(self.dir / 'figurine.stl'), str(self.dir / 'socle.stl')]
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=1800)
+        proc = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=1800)
         if 'BOJART_RENDER_OK' not in proc.stdout:
             raise RuntimeError('Rendu Blender échoué : ' + (proc.stdout + proc.stderr)[-600:])
         outs = sorted(str(p.relative_to(self.dir)) for p in rd.iterdir() if p.suffix in ('.png', '.blend'))

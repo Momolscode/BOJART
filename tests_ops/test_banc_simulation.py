@@ -188,7 +188,7 @@ class Catalogue(unittest.TestCase):
         statuses = {a['id']: a for a in bs.evaluate_catalog(results)}
         self.assertEqual(statuses['ecrans.dashboard_atelier']['statut_banc'], 'echec')      # tests_workflows failed
         self.assertEqual(statuses['demarrage.securite_locale']['statut_banc'], 'partiel')   # checks not executed
-        self.assertEqual(statuses['devis.calcul']['statut_banc'], 'non_code')
+        self.assertEqual(statuses['imprimantes.pilotage']['statut_banc'], 'non_code')
         results['suites'].append({'id': 'tests_agent', 'status': 'ok'})
         self.assertEqual({a['id']: a for a in bs.evaluate_catalog(results)}['memoire.llm_local']['statut_banc'], 'partiel')
         self.assertEqual(statuses['ecrans.dashboard_atelier']['reserves'], ['http_dashboard_atelier'])
@@ -215,7 +215,7 @@ class Report(unittest.TestCase):
         text = bs.markdown(results)
         self.assertIn('Simulation logicielle uniquement.', text)
         self.assertIn('ne qualifie ni la tour', text)
-        self.assertRegex(text, re.compile(r'Devis .* Non codé', re.S))
+        self.assertRegex(text, re.compile(r'Lire l.état puis, avec autorisation propre[^\n]* Non codé'))
 
 
 if __name__ == '__main__':

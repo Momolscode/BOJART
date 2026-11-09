@@ -46,13 +46,17 @@ class Plan(Base):
     def test_bare_tower_installs_everything_in_order(self):
         steps = self.steps(state())
         self.assertEqual([s['id'] for s in steps],
-                         ['ollama_installation', 'ffmpeg_installation', 'ollama_demarrage', 'jarvis', 'modeles', 'banc'])
+                         ['ollama_installation', 'ffmpeg_installation', 'ollama_demarrage', 'jarvis', 'voix', 'modeles', 'banc'])
         self.assertEqual(steps[0]['commande'][:4], ['winget', 'install', '--id', 'Ollama.Ollama'])
         self.assertIn('Gyan.FFmpeg', steps[1]['commande'])
-        self.assertEqual(steps[3]['commande'][-2:], ['--engines', '--voice'])
-        self.assertEqual(steps[4]['commande'][-3:], ['--model-profile', 'speed', '--download-models'])
-        self.assertTrue(steps[5]['commande'][0].endswith(str(Path('.venv/Scripts/python.exe'))))
-        self.assertTrue(steps[5]['commande'][-1].endswith('banc-installation-S.md'))
+        self.assertEqual(steps[3]['commande'][-3:], ['--engines', '--voice', '--figurine'])
+        # The voice is prepared (pinned weights, setting) with the installed environment, after Jarvis.
+        self.assertEqual(steps[4]['depend_de'], ['jarvis'])
+        self.assertTrue(steps[4]['commande'][0].endswith(str(Path('.venv/Scripts/python.exe'))))
+        self.assertTrue(steps[4]['commande'][1].endswith('preparer_voix.py'))
+        self.assertEqual(steps[5]['commande'][-3:], ['--model-profile', 'speed', '--download-models'])
+        self.assertTrue(steps[6]['commande'][0].endswith(str(Path('.venv/Scripts/python.exe'))))
+        self.assertTrue(steps[6]['commande'][-1].endswith('banc-installation-S.md'))
 
     def test_present_tools_are_not_reinstalled(self):
         steps = self.steps(state(ollama='C:/o/ollama.exe', ollama_actif='0.12.6', ffmpeg='C:/f/ffmpeg.exe'))
@@ -67,6 +71,21 @@ class Plan(Base):
         steps = self.steps(state(), models=False, voice=False, bench=False)
         self.assertEqual([s['id'] for s in steps], ['ffmpeg_installation', 'jarvis'])
         self.assertNotIn('--voice', steps[1]['commande'])
+        self.assertIn('--figurine', steps[1]['commande'])
+
+    def test_without_figurine_the_heavy_mesh_stack_is_not_installed(self):
+        steps = self.steps(state(), figurine=False)
+        jarvis = next(s for s in steps if s['id'] == 'jarvis')
+        self.assertEqual(jarvis['commande'][-2:], ['--engines', '--voice'])
+        self.assertIn('voix', [s['id'] for s in steps])
+
+    def test_cli_flags_reach_the_plan(self):
+        out = io.StringIO()
+        with redirect_stdout(out):
+            self.assertEqual(cli.main(['--simulation', '--sans-figurine', '--sans-voix', '--sans-modeles', '--sans-banc']), 0)
+        plan = json.loads(out.getvalue())['plan']
+        self.assertEqual([s['id'] for s in plan][-1], 'jarvis')
+        self.assertNotIn('voix', [s['id'] for s in plan])
 
 
 class Execute(Base):
@@ -85,20 +104,20 @@ class Execute(Base):
         st = state()
         records, calls, journal = self.run_steps(st, {}, found={'ollama': 'C:/O/ollama.exe', 'ffmpeg': 'C:/F/bin/ffmpeg.exe'})
         self.assertEqual({r['id']: r['statut'] for r in records},
-                         dict.fromkeys(['ollama_installation', 'ffmpeg_installation', 'ollama_demarrage', 'jarvis', 'modeles', 'banc'], 'ok'))
+                         dict.fromkeys(['ollama_installation', 'ffmpeg_installation', 'ollama_demarrage', 'jarvis', 'voix', 'modeles', 'banc'], 'ok'))
         model_env = [env for cmd, env in calls if '--model-profile' in cmd][0]
         dirs = [str(Path('C:/O/ollama.exe').parent), str(Path('C:/F/bin/ffmpeg.exe').parent)]  # backslashes under Windows
         self.assertEqual(model_env['PATH'], os.pathsep.join(dirs + ['P']))
         self.assertEqual(model_env['PYTHONUTF8'], '1')
         self.assertTrue(it.summary(records)['termine'])
         saved = json.loads((self.home / 'j.json').read_text(encoding='utf-8'))
-        self.assertEqual(len(saved['etapes']), 6)
+        self.assertEqual(len(saved['etapes']), 7)
 
     def test_failed_ollama_only_stops_the_models(self):
         records, calls, _ = self.run_steps(state(), {'Ollama.Ollama': 1}, found={'ffmpeg': 'C:/F/ffmpeg.exe'})
         status = {r['id']: r['statut'] for r in records}
         self.assertEqual(status, {'ollama_installation': 'echec', 'ffmpeg_installation': 'ok', 'ollama_demarrage': 'non_lance',
-                                  'jarvis': 'ok', 'modeles': 'non_lance', 'banc': 'ok'})
+                                  'jarvis': 'ok', 'voix': 'ok', 'modeles': 'non_lance', 'banc': 'ok'})
         self.assertFalse(any('--model-profile' in cmd for cmd, _ in calls))
         self.assertEqual(len(it.summary(records)['reste_a_faire']), 3)
 

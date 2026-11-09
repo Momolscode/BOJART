@@ -4,9 +4,10 @@ Le programme détecte ce qui manque, montre le plan, demande un seul accord, pui
 
 1. installe Ollama et FFmpeg avec winget (Windows) s'ils manquent ;
 2. démarre Ollama s'il ne répond pas ;
-3. installe Jarvis complet (mémoire, CAO, LangGraph, voix) depuis les verrous Windows ;
-4. télécharge et qualifie les modèles locaux du profil choisi ;
-5. lance le banc de contrôle.
+3. installe Jarvis complet (mémoire, CAO, LangGraph, voix, chaîne figurine) depuis les verrous Windows ;
+4. prépare la voix : poids faster-whisper épinglés et activation dans la configuration privée ;
+5. télécharge et qualifie les modèles locaux du profil choisi ;
+6. lance le banc de contrôle.
 
 Chaque étape est écrite dans un journal neuf, au fil de l'eau. Une étape dont une autre dépend
 et qui échoue arrête seulement ses dépendantes. Rien ici ne pilote une imprimante, ne publie,
@@ -107,7 +108,7 @@ def detect(root=ROOT, env=None, which=shutil.which, os_name=os.name, probe=ollam
     }
 
 
-def plan(state, *, profile='speed', voice=True, models=True, bench=True, python=sys.executable, root=ROOT,
+def plan(state, *, profile='speed', voice=True, models=True, bench=True, figurine=True, python=sys.executable, root=ROOT,
          os_name=os.name, stamp='0', home=None):
     """Ordered steps. Each one says what it needs; nothing here runs anything."""
     home = Path(home) if home else home_dir()
@@ -131,10 +132,17 @@ def plan(state, *, profile='speed', voice=True, models=True, bench=True, python=
     if models:
         steps.append({'id': 'ollama_demarrage', 'type': 'demarrer_ollama', 'depend_de': ['ollama_installation'],
                       'titre': 'Ollama répond déjà' if state['ollama_actif'] else 'Démarrer Ollama et attendre sa réponse'})
-    jarvis = [str(python), str(Path(root) / 'tools/prepare_installation.py'), '--engines'] + (['--voice'] if voice else [])
+    jarvis = ([str(python), str(Path(root) / 'tools/prepare_installation.py'), '--engines'] + (['--voice'] if voice else [])
+              + (['--figurine'] if figurine else []))
+    extras = [label for wanted, label in ((voice, 'voix'), (figurine, 'chaîne figurine')) if wanted]
     steps.append({'id': 'jarvis', 'type': 'commande', 'commande': jarvis,
                   'titre': 'Installer Jarvis complet ' + ('depuis les verrous Windows' if os_name == 'nt' else '(versions épinglées)')
-                  + (', voix comprise' if voice else '')})
+                  + (', ' + ' et '.join(extras) + ' comprises' if extras else '')})
+    if voice:
+        # Without weights and a setting the voice stays off after installation: prepare both once.
+        steps.append({'id': 'voix', 'type': 'commande', 'depend_de': ['jarvis'],
+                      'commande': [str(venv_python(root, os_name)), str(Path(root) / 'tools/preparer_voix.py')],
+                      'titre': 'Préparer la voix : poids faster-whisper « small » épinglés (~470 Mo), puis activation'})
     if models:
         steps.append({'id': 'modeles', 'type': 'commande', 'depend_de': ['ollama_demarrage', 'jarvis'],
                       'commande': [str(python), str(Path(root) / 'tools/prepare_installation.py'), '--model-profile', profile,

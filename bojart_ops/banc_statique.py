@@ -12,6 +12,7 @@ périphérique. Chaque contrôle rend une liste de constats normalisés
 from __future__ import annotations
 
 import ast
+from fnmatch import fnmatchcase
 import hashlib
 import json
 import re
@@ -19,6 +20,7 @@ import subprocess
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
+MANIFEST = 'data/catalog/repository_manifest.json'
 
 WINDOWS_RESERVED = {'CON', 'PRN', 'AUX', 'NUL', *(f'COM{i}' for i in range(1, 10)), *(f'LPT{i}' for i in range(1, 10))}
 WINDOWS_INVALID = set('<>:"|?*') | {chr(i) for i in range(32)}
@@ -32,9 +34,24 @@ def finding(check, severity, path, detail, fix=''):
     return {'check': check, 'severity': severity, 'path': path, 'detail': detail, 'fix': fix}
 
 
+def manifest_files(root=ROOT):
+    """Public tree as published: every path of the repository manifest, plus the manifest itself."""
+    data = json.loads((Path(root) / MANIFEST).read_text(encoding='utf-8'))
+    return sorted({f['path'] for f in data['files']} | {MANIFEST})
+
+
 def tracked_files(root=ROOT):
-    out = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root)
-    return sorted(x for x in out.decode('utf-8').split('\0') if x)
+    """Files of the repository. Git when this folder is a checkout; otherwise the published manifest.
+
+    The tower may receive Jarvis as « Code → Download ZIP » or have no Git installed: the bench must
+    still examine the same files instead of stopping the installation.
+    """
+    try:
+        out = subprocess.run(['git', 'ls-files', '-z'], cwd=root, capture_output=True, check=True).stdout
+        files = sorted(x for x in out.decode('utf-8').split('\0') if x)
+    except (OSError, subprocess.CalledProcessError):
+        files = []
+    return files or manifest_files(root)
 
 
 def _read(root, name):
@@ -232,12 +249,58 @@ def _strip_js_comments(text):
     return re.sub(r'(^|[^:\\])//[^\n]*', r'\1', text)
 
 
-def _gitignored(root, paths):
+def _gitignore_rules(root, files):
+    """(base folder, pattern, negated, folder only, anchored) for each published .gitignore line, in Git order."""
+    rules = []
+    for name in sorted((f for f in files if PurePosixPath(f).name == '.gitignore'), key=lambda f: (f.count('/'), f)):
+        raw = _read(root, name)
+        if raw is None:
+            continue
+        base = str(PurePosixPath(name).parent)
+        base = '' if base == '.' else base
+        for line in raw.decode('utf-8', 'replace').splitlines():
+            line = line.rstrip()
+            if not line or line.startswith('#'):
+                continue
+            negated = line.startswith('!')
+            pattern = line[1:] if negated else line
+            folder_only = pattern.endswith('/')
+            anchored = pattern.startswith('/') or '/' in pattern.strip('/')
+            rules.append((base, pattern.strip('/'), negated, folder_only, anchored))
+    return rules
+
+
+def _ignored_by_rules(path, rules):
+    """Subset of .gitignore semantics used by this repository: globs, anchors, folders, negation; last rule wins."""
+    parts = PurePosixPath(path).parts
+    ignored = False
+    for base, pattern, negated, folder_only, anchored in rules:
+        prefix = PurePosixPath(base).parts if base else ()
+        if parts[:len(prefix)] != prefix:
+            continue
+        rel = parts[len(prefix):]
+        for i in range(1, len(rel) + 1):
+            is_folder = i < len(rel)  # every parent folder, then the file itself
+            if folder_only and not is_folder:
+                continue
+            if fnmatchcase('/'.join(rel[:i]) if anchored else rel[i - 1], pattern):
+                ignored = not negated
+                break
+    return ignored
+
+
+def _gitignored(root, paths, files=None):
     if not paths:
         return set()
-    proc = subprocess.run(['git', 'check-ignore', '--no-index', '--stdin', '-z'], cwd=root, input='\0'.join(paths).encode('utf-8'),
-                          capture_output=True)
-    return {x for x in proc.stdout.decode('utf-8').split('\0') if x}
+    try:
+        proc = subprocess.run(['git', 'check-ignore', '--no-index', '--stdin', '-z'], cwd=root,
+                              input='\0'.join(paths).encode('utf-8'), capture_output=True)
+        if proc.returncode in (0, 1):  # 1: nothing ignored; 128: not a Git checkout (ZIP copy)
+            return {x for x in proc.stdout.decode('utf-8').split('\0') if x}
+    except OSError:
+        pass  # Git absent from the tower
+    rules = _gitignore_rules(root, files if files is not None else manifest_files(root))
+    return {p for p in paths if _ignored_by_rules(p, rules)}
 
 
 def _site_root(name, files_set):
@@ -308,7 +371,7 @@ def check_web_references(files, root=ROOT):
             if resolved in files_set or (Path(root) / resolved).is_dir():
                 continue
             missing.append((name, resolved, kind, ref))
-    ignored = _gitignored(root, sorted({m[1] for m in missing}))
+    ignored = _gitignored(root, sorted({m[1] for m in missing}), files)
     for source, target, kind, ref in missing:
         if target in ignored:
             item = finding('web_references', 'majeur', source,

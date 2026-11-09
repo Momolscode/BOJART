@@ -36,16 +36,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Install engines and voice the way the tower does (Windows - the hashed locks)
+      - name: Install engines, voice and figurine the way the tower does (Windows - the hashed locks)
         shell: bash
         run: |
-          # Same function as tools/prepare_installation.py --engines --voice: on Windows each valid
+          # Same function as tools/prepare_installation.py --engines --voice --figurine: on Windows each valid
           # lock is installed with --require-hashes --no-deps, a stale one falls back visibly, then pip check.
           python - <<'PY'
           import subprocess, sys
           sys.path.insert(0, 'tools')
           import prepare_installation as p
-          commands, notes = p.install_commands(sys.executable, [p.ROOT / 'jarvis/requirements.txt', p.ROOT / 'jarvis/requirements-voice.txt'])
+          commands, notes = p.install_commands(sys.executable, [p.ROOT / 'jarvis/requirements.txt', p.ROOT / 'jarvis/requirements-voice.txt',
+                                                                p.ROOT / 'jarvis/requirements-figurine.txt'])
           for note in notes:
               print('::warning::' + note)
           for command in commands:
@@ -60,6 +61,7 @@ jobs:
           python -m unittest discover -s tests_ops -p test_installation_tout.py -v
           python -m unittest discover -s tests_ops -p test_collecte.py -v
           python -m unittest discover -s tests_ops -p test_verifier_voix.py -v
+          python -m unittest discover -s tests_ops -p test_installation_prete.py -v
       - name: Run every simulated Jarvis action
         run: python tools/banc_preinstallation.py --reseau --output .bojart-audit/banc.json --markdown .bojart-audit/banc.md
       - name: Resolve today's lock on this platform (nothing installed)
