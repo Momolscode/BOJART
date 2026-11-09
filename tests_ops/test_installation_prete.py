@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / 'jarvis/apps/jarvis/app'))
 
+from bojart_ops import banc_simulation as bs  # noqa: E402
 from bojart_ops import banc_statique as st  # noqa: E402
 from bojart_ops import voix_installation as vi  # noqa: E402
 
@@ -82,6 +83,16 @@ class SansGit(unittest.TestCase):
         expected = {x for x in proc.stdout.decode('utf-8').split('\0') if x}
         rules = st._gitignore_rules(ROOT, files)
         self.assertEqual({p for p in paths if st._ignored_by_rules(p, rules)}, expected)
+
+    def test_bench_names_a_copy_without_git_by_its_manifest(self):
+        zip_copy(self.tmp, [st.MANIFEST])
+        with mock.patch.object(bs.subprocess, 'run', no_git):
+            state = bs.repo_state(self.tmp)
+        digest = hashlib.sha256((self.tmp / st.MANIFEST).read_bytes()).hexdigest()
+        self.assertEqual(state['manifeste_sha256'], digest)
+        self.assertIsNone(state['modifications_locales'])
+        self.assertIn(digest, bs.revision_line(state))
+        self.assertIn('non vérifiables', bs.revision_line(state))
 
     def test_validator_checks_the_published_paths_without_git(self):
         (self.tmp / 'data/catalog').mkdir(parents=True)

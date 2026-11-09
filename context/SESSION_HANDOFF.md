@@ -1,5 +1,15 @@
 # Passation — consolidation du 1 novembre 2026
 
+## Installation prête — 9 novembre 2026
+
+Demande d'Olsen : « Audit l'ensemble du projet. Je veux qu'il soit fonctionnel à son installation ce Jarvis. » Base `main` `3436f53`. Intégration sur `claude/project-thread-m5t36k` : #20 (avec #17), #18, #11, #15, #21, conflits du manifeste régénérés, `SESSION_HANDOFF` réuni, `index.json` fusionné champ par champ. Laissées à part : #14 (bras peintre, conflits nombreux, sans effet sur l'installation), #16 (recettes Veille), #19 (fiche STRATES), #1 (surveillance de `main`).
+
+Décisions : installer depuis une copie sans Git doit marcher comme depuis un clone (raison : « Download ZIP » est le chemin documenté) ; la voix est préparée par l'installateur avec l'accord unique déjà demandé (raison : sans poids ni réglage, le micro ne servait à rien après installation) ; la fin de prise garde sa règle d'origine et n'ajoute qu'une seconde façon de conclure, relative au fond sonore (raison : ne rien changer au calme, mesuré bon). Remplace le constat `voix-fin-de-prise-bruit-20261102` par `voix-fin-de-prise-bruit-20261109`.
+
+Fichiers : `bojart_ops/banc_statique.py` (repli manifeste et `.gitignore`), `bojart_ops/banc_simulation.py` (révision d'une copie sans Git), `tools/validate_repository.py`, `bojart_ops/voix_installation.py`, `tools/preparer_voix.py`, `bojart_ops/installation_tout.py`, `tools/installer_tout.py` (`--sans-figurine`), `tools/prepare_installation.py` (`--figurine`, sonde des imports), `jarvis/requirements-figurine.txt`, `figurine/pipeline.py` et `slicing.py` (UTF-8), `jarvis/apps/jarvis/app/voice_endpoint.js`, `Installer_Tout_BOJART.cmd`, `Diagnostic_BOJART.cmd` (CRLF), `data/preinstallation/actions-jarvis.json`, `INSTALLER_DEMAIN.md` (trois gestes en tête), `docs/BANC_VOIX.md`, workflow du banc ; tests `tests_ops/test_installation_prete.py` (11), `test_installation_tout.py` (17), 4 tests de fin de prise.
+
+Tests exécutés : réinstallation complète depuis une copie sans Git de `3917f7a` (journal et banc dans `docs/evidence/installation-2026-11-09/`) : 1 148 tests sans régression, 16/16 HTTP, 2 actions en échec pour le seul verrou figurine ; voix avec les poids installés 37/40, 0 erreur critique, 15/15 cas d'erreur ; fin de prise avant/après sur 114 prises ; bruit seul 0 commande ; parcours navigateur des 8 pages. Limites : conteneur Linux, synthèse vocale, aucun matériel réel, Ollama non installé. Prochaine preuve : verrou figurine depuis l'artefact de la CI Windows, puis installation et recette sur la tour (`Installer_Tout_BOJART.cmd`, `Banc_BOJART.cmd`, `Mesurer_Voix_BOJART.cmd`, vrai micro avec imprimante en marche).
+
 ## Chaîne vocale simulée — 2 novembre 2026
 
 Demande d'Olsen (option « chaîne vocale simulée ») : tester « Affiche le dashboard atelier » de bout en bout sans la tour, mesurer chaque étape (médiane, p95, max, erreurs, froid/chaud) pour comparer ensuite avec la tour, y compris bruit, commande inconnue, coupure et réponse tardive. Branche reposée sur la PR #17 (correctif PyAV 18.1.0, verrou voix, `tools/verifier_voix.py`) pour ne pas dupliquer son banc.

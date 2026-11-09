@@ -374,8 +374,8 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 33673,
-      "sha256": "b290046dee049a2371367bff657ef90d708872ca5359fa1552bb52a861ede83f"
+      "bytes": 34437,
+      "sha256": "4c582ffea93586b9aa365306d3475de0677c8da4b3f3ca9cbd1880e80eda2c7c"
     },
     {
       "path": "bojart_ops/banc_statique.py",
@@ -454,13 +454,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 17906,
-      "sha256": "f8bc0f5822523b9e44ea401fdb900bb28372b2ecfd7478e0d752a3325164350c"
+      "bytes": 19553,
+      "sha256": "d025039081ff234605f31c564b2868ca03b7ec19a2650eeece4fa11f883a8fcd"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 59662,
-      "sha256": "a427b8c7ccc6d75971c1cad649a53ab42e81ddcf339245d769bbb90b88423efc"
+      "bytes": 62314,
+      "sha256": "6950637b91f6f475d34818d25dc0742753522988ea9271029088489ffe5a462b"
     },
     {
       "path": "creative/CURRENT.md",
@@ -549,8 +549,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 16415,
-      "sha256": "1db9080aee23e5d77b4f8d62d052d15ae68642e61b955eacbca2cdf9060d12de"
+      "bytes": 18064,
+      "sha256": "adb86f034af80c254743c8a0831aaa5e7603c29690cfc03be7a3aa5881812e22"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -569,8 +569,8 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 9608,
-      "sha256": "caa6a9fdb05fc4ccd6b6348c7978be0910efec95f370715caad7dc7f548e6c02"
+      "bytes": 11078,
+      "sha256": "802e94e9fc93f1ab430dad4ac1146f89cfe4661d4cae3000eead981fe95c12a4"
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
@@ -926,6 +926,46 @@
       "path": "docs/evidence/handoff-v5-2026-11-02/reception.json",
       "bytes": 95694,
       "sha256": "bfe7dfa609316eefbab9ff8e195fb28d9a0568df7fc1edef5e213f34a6d13894"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/README.md",
+      "bytes": 5016,
+      "sha256": "e11c5e5dfa83159eabe6e02cb4d5457b894e449cbaaaf647077dcb79f6aa624c"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/banc-apres-installation.md",
+      "bytes": 28389,
+      "sha256": "0de922e0ba0a1a72026ae56b09e740787990d2e46e7960f5eada7c7a6f720457"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/bruit-seul-apres.md",
+      "bytes": 1018,
+      "sha256": "e8acdd6adfd4bd773362e6a75209ec2fb5137d72d04a9debc56a14520124451e"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/fin-de-prise-bruit.json",
+      "bytes": 54985,
+      "sha256": "8636ad44a10f5cb96bc075fe33dcd20c89ab7f1745c025309b51b9069c6231bc"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/journal-installation.json",
+      "bytes": 1739,
+      "sha256": "ca584aefa98a4369e5399d85f7258893505ee4d87c90cd9b21c427d4af313a76"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/voix-apres-fin-adaptee.md",
+      "bytes": 7758,
+      "sha256": "b5744785b555af7b722a5de630c13061f0aebbc8bacf4fb5e8140e3366f98c69"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/voix-avant-fin-adaptee.md",
+      "bytes": 8042,
+      "sha256": "c89a9426a9054d1971a3b3ebf498899c383c7e4e16df0e7cf156b1ff45c87c28"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/voix-poids-installes.md",
+      "bytes": 5817,
+      "sha256": "424ff2db5ad750e60d280947e2864611b824f2f3b4310d5a9eb603c43b9985a1"
     },
     {
       "path": "docs/evidence/m07-baseline-tests.log",
@@ -5444,8 +5484,8 @@
     },
     {
       "path": "tests_ops/test_installation_prete.py",
-      "bytes": 8579,
-      "sha256": "619d6ae07282e0ec2fd48e207d4a8263b709783b2910b7980d329299cbd4a516"
+      "bytes": 9177,
+      "sha256": "12a87c1c3589b5d1c50973d6df16322dc0c505ee1bab5e6d3e29217957e8322b"
     },
     {
       "path": "tests_ops/test_installation_tout.py",

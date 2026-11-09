@@ -1,0 +1,2296 @@
+{
+ "schema": "bojart.fin-de-prise-bruit.v1",
+ "date": "2026-11-09",
+ "nature": "Même protocole que le banc vocal du 2 novembre : synthèse Piper (gilles, upmc-jessica, upmc-pierre) + bruit synthétique, code navigateur réel dans Node, vrai serveur, faster-whisper small épinglé installé par l'installateur. Pas une voix humaine ni un micro réel.",
+ "avant": {
+  "voice_endpoint_sha256": "bc1a2847b9e85e5d209754deb082701ea757cb0dd6cc56639ba0a605efe1564b",
+  "corpus": {
+   "schema": "bojart.banc_voix.corpus.v1",
+   "manifeste_sha256": "d11aeb0bc6b74a177926f43ed279761355dc806ecc7711f5957239565da8b85b",
+   "cree_le": "2026-11-09T22:24:25+00:00",
+   "nature": "synthèse vocale Piper + bruit synthétique ; pas une voix humaine ni un micro réel",
+   "clips": 114,
+   "code_navigateur": {
+    "node": "v22.23.4",
+    "sources_sha256": {
+     "voice_endpoint.js": "bc1a2847b9e85e5d209754deb082701ea757cb0dd6cc56639ba0a605efe1564b",
+     "capture.js": "1ef361db5ddc266257e6dcd33b0462324860ec84cf8e7b51f573f355e0829b23"
+    }
+   }
+  },
+  "erreurs_critiques": 0
+ },
+ "apres": {
+  "voice_endpoint_sha256": "fe0eafd023805399df26ecf64a71b5c283dfc603d93e93791b10ff7690494bc1",
+  "corpus": {
+   "schema": "bojart.banc_voix.corpus.v1",
+   "manifeste_sha256": "daf6342acf518dd7defd08d9fd75d2f50974fc01d1cc7ea5294af4a80bfa7b9a",
+   "cree_le": "2026-11-09T22:28:26+00:00",
+   "nature": "synthèse vocale Piper + bruit synthétique ; pas une voix humaine ni un micro réel",
+   "clips": 114,
+   "code_navigateur": {
+    "node": "v22.23.4",
+    "sources_sha256": {
+     "voice_endpoint.js": "fe0eafd023805399df26ecf64a71b5c283dfc603d93e93791b10ff7690494bc1",
+     "capture.js": "1ef361db5ddc266257e6dcd33b0462324860ec84cf8e7b51f573f355e0829b23"
+    }
+   }
+  },
+  "erreurs_critiques": 0
+ },
+ "reserve": "La synthèse Piper n'est pas identique au bit près d'une génération à l'autre : un écart de 1 ou 2 prises correctes par condition est du bruit de mesure.",
+ "prises_correctes_sur_114": {
+  "avant": 87,
+  "apres": 90
+ },
+ "par_condition": [
+  {
+   "condition": "calme",
+   "prises_avec_parole": 39,
+   "avant": {
+    "fin_mediane_s": 1.03,
+    "fin_sous_3_s": 39,
+    "arretees_par_limite": 0,
+    "correctes": 27
+   },
+   "apres": {
+    "fin_mediane_s": 1.02,
+    "fin_sous_3_s": 39,
+    "arretees_par_limite": 0,
+    "correctes": 29
+   }
+  },
+  {
+   "condition": "ventilateur",
+   "prises_avec_parole": 12,
+   "avant": {
+    "fin_mediane_s": 1.08,
+    "fin_sous_3_s": 10,
+    "arretees_par_limite": 0,
+    "correctes": 11
+   },
+   "apres": {
+    "fin_mediane_s": 1.03,
+    "fin_sous_3_s": 12,
+    "arretees_par_limite": 0,
+    "correctes": 10
+   }
+  },
+  {
+   "condition": "imprimante",
+   "prises_avec_parole": 36,
+   "avant": {
+    "fin_mediane_s": 12.43,
+    "fin_sous_3_s": 0,
+    "arretees_par_limite": 36,
+    "correctes": 29
+   },
+   "apres": {
+    "fin_mediane_s": 3.83,
+    "fin_sous_3_s": 16,
+    "arretees_par_limite": 11,
+    "correctes": 29
+   }
+  },
+  {
+   "condition": "atelier_fort",
+   "prises_avec_parole": 12,
+   "avant": {
+    "fin_mediane_s": 12.34,
+    "fin_sous_3_s": 0,
+    "arretees_par_limite": 12,
+    "correctes": 11
+   },
+   "apres": {
+    "fin_mediane_s": 2.89,
+    "fin_sous_3_s": 6,
+    "arretees_par_limite": 3,
+    "correctes": 10
+   }
+  },
+  {
+   "condition": "parole_fond",
+   "prises_avec_parole": 12,
+   "avant": {
+    "fin_mediane_s": 12.34,
+    "fin_sous_3_s": 0,
+    "arretees_par_limite": 12,
+    "correctes": 4
+   },
+   "apres": {
+    "fin_mediane_s": 12.38,
+    "fin_sous_3_s": 0,
+    "arretees_par_limite": 12,
+    "correctes": 6
+   }
+  }
+ ],
+ "prises": [
+  {
+   "prise": "A1-gilles-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0853,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard à l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0713,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2581
+   }
+  },
+  {
+   "prise": "A1-gilles-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0853,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard à l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0713,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2746
+   }
+  },
+  {
+   "prise": "A1-gilles-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.36,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard à l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.49,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14428
+   }
+  },
+  {
+   "prise": "A1-gilles-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.36,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard à la tenue.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 4.41,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 6097
+   }
+  },
+  {
+   "prise": "A1-gilles-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.36,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de l'atelier à vérifier la livraison avant-midi. Le collier de Rézenarib, demain matin, pense à vérifier la livraison avant-midi. Le collier de Rézenarib, demain matin, pense à vérifier la livraison avant-midi.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.49,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard atelier, pense à vérifier la livraison avant midi. Le collid résine à la vive demain matin, pense à vérifier la livraison avant midi. Le collid résine à la vive demain matin, pense à vérifier la livraison avant midi.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A1-upmc-jessica-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0333,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0047,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard à deux.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A1-upmc-jessica-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0333,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2487
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0047,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A1-upmc-jessica-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.66,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.01,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A1-upmc-jessica-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.66,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14428
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9913,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A1-upmc-jessica-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.66,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.89,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A1-upmc-pierre-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0033,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2792
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0187,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2608
+   }
+  },
+  {
+   "prise": "A1-upmc-pierre-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0487,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2417
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0187,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2590
+   }
+  },
+  {
+   "prise": "A1-upmc-pierre-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.47,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14314
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9813,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2548
+   }
+  },
+  {
+   "prise": "A1-upmc-pierre-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.47,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14088
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9813,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2818
+   }
+  },
+  {
+   "prise": "A1-upmc-pierre-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.47,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14592
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.6,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14557
+   }
+  },
+  {
+   "prise": "A2-gilles-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.074,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2623
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.06,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2704
+   }
+  },
+  {
+   "prise": "A2-gilles-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.074,
+    "classement": "correct",
+    "texte": "Jarvis affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2557
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.076,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2547
+   }
+  },
+  {
+   "prise": "A2-gilles-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.93,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 13699
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.9613,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 3636
+   }
+  },
+  {
+   "prise": "A2-gilles-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.93,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 13702
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 11.98,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 13788
+   }
+  },
+  {
+   "prise": "A2-gilles-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.93,
+    "classement": "commande_manquee",
+    "texte": "Jarvis, affiche le dashboard atelier, le collier de résignation avant midi. Le collier de résignation arrivent demain matin, pense à vérifier la livraison avant midi. Le collier de résignation arrivent demain matin, pense à vérifier la livraison avant midi.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 11.98,
+    "classement": "commande_manquee",
+    "texte": "Jarvis affiche le dashboard atelier, la livraison avant midi. Le collide résine à la vive demain matin pense à vérifier la livraison avant midi.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A2-upmc-jessica-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9367,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2341
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0173,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2507
+   }
+  },
+  {
+   "prise": "A2-upmc-jessica-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 3.3553,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 4811
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.02,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2480
+   }
+  },
+  {
+   "prise": "A2-upmc-jessica-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.27,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14054
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.3,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14072
+   }
+  },
+  {
+   "prise": "A2-upmc-jessica-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.27,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14057
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.06,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2613
+   }
+  },
+  {
+   "prise": "A2-upmc-jessica-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.27,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier,",
+    "bout_en_bout_ms": 14030
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.3,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 14219
+   }
+  },
+  {
+   "prise": "A2-upmc-pierre-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0333,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2655
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0413,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2561
+   }
+  },
+  {
+   "prise": "A2-upmc-pierre-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.604,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 3125
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0413,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 2586
+   }
+  },
+  {
+   "prise": "A2-upmc-pierre-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.82,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 13442
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 11.82,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 13525
+   }
+  },
+  {
+   "prise": "A2-upmc-pierre-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.82,
+    "classement": "correct",
+    "texte": "Jarvis affiche le dashboard atelier.",
+    "bout_en_bout_ms": 13566
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 9.4813,
+    "classement": "correct",
+    "texte": "Jarvis, affiche le dashboard atelier.",
+    "bout_en_bout_ms": 10985
+   }
+  },
+  {
+   "prise": "A2-upmc-pierre-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.82,
+    "classement": "correct",
+    "texte": "Jarvis affiche le dashboard atelier.",
+    "bout_en_bout_ms": 13598
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 11.82,
+    "classement": "commande_manquee",
+    "texte": "Jarvis, affiche le dashboard à l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A3-gilles-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0767,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2628
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0713,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2572
+   }
+  },
+  {
+   "prise": "A3-gilles-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.8687,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 3581
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0713,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2480
+   }
+  },
+  {
+   "prise": "A3-gilles-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.21,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 13963
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.29,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 14005
+   }
+  },
+  {
+   "prise": "A3-gilles-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.21,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 13773
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.29,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 14009
+   }
+  },
+  {
+   "prise": "A3-gilles-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.21,
+    "classement": "commande_manquee",
+    "texte": "Affiche le tableau de bord à atelier, vérifiez la livraison avant midi. Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi. Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.29,
+    "classement": "commande_manquee",
+    "texte": "Affiche le tableau de bord à tevier, à vérifier la livraison avant midi. Le collide résine à la vive demain matin pense à vérifier la livraison avant midi.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A3-upmc-jessica-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9073,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2340
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0473,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2448
+   }
+  },
+  {
+   "prise": "A3-upmc-jessica-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9153,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2342
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0473,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2453
+   }
+  },
+  {
+   "prise": "A3-upmc-jessica-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.79,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 13473
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 3.81,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 5365
+   }
+  },
+  {
+   "prise": "A3-upmc-jessica-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.79,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 13444
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.37,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2742
+   }
+  },
+  {
+   "prise": "A3-upmc-jessica-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.79,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 13774
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.17,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 14081
+   }
+  },
+  {
+   "prise": "A3-upmc-pierre-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0073,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2546
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9913,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2366
+   }
+  },
+  {
+   "prise": "A3-upmc-pierre-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0153,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2506
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.01,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2401
+   }
+  },
+  {
+   "prise": "A3-upmc-pierre-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.37,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 14186
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 2.65,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 4115
+   }
+  },
+  {
+   "prise": "A3-upmc-pierre-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.37,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 14096
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.97,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 2325
+   }
+  },
+  {
+   "prise": "A3-upmc-pierre-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.37,
+    "classement": "commande_manquee",
+    "texte": "Affiche le tableau de bord à tolier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.17,
+    "classement": "correct",
+    "texte": "Affiche le tableau de bord atelier.",
+    "bout_en_bout_ms": 16437
+   }
+  },
+  {
+   "prise": "A4-gilles-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.07,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard àelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.06,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A4-gilles-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0753,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 2303
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.06,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A4-gilles-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.31,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 13850
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 4.5213,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A4-gilles-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.31,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 13969
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.2013,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard de l'Atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A4-gilles-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.31,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard atelier, vérifiez la livraison avant midi. Le collier de résénarie, demain matin, pense à vérifier la livraison avant midi. Le collier de résénarie, demain matin, pense à vérifier la livraison avant midi.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.46,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard de l'atelier, pense à vérifier la livraison avant midi. Le collide résine en arrive demain matin, pense à vérifier la livraison avant midi. Le collide résine en arrive demain matin, pense à vérifier la livraison avant midi.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "A4-upmc-jessica-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0273,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 2467
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.92,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 2411
+   }
+  },
+  {
+   "prise": "A4-upmc-jessica-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 3.1527,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 4646
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9413,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 2394
+   }
+  },
+  {
+   "prise": "A4-upmc-jessica-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.67,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 14222
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 7.9413,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 9629
+   }
+  },
+  {
+   "prise": "A4-upmc-jessica-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.67,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 14352
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 8.84,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 10616
+   }
+  },
+  {
+   "prise": "A4-upmc-jessica-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.67,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard d'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.6,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 14344
+   }
+  },
+  {
+   "prise": "A4-upmc-pierre-calme",
+   "groupe": "cible",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0353,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 2428
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0113,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 2369
+   }
+  },
+  {
+   "prise": "A4-upmc-pierre-ventilateur",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.8753,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 3412
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0113,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 2436
+   }
+  },
+  {
+   "prise": "A4-upmc-pierre-imprimante",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.71,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 14436
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 5.2913,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 6847
+   }
+  },
+  {
+   "prise": "A4-upmc-pierre-atelier_fort",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.71,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 14457
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.51,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 14349
+   }
+  },
+  {
+   "prise": "A4-upmc-pierre-parole_fond",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.71,
+    "classement": "commande_manquee",
+    "texte": "Montre le dashboard d'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.51,
+    "classement": "correct",
+    "texte": "Montre le dashboard atelier.",
+    "bout_en_bout_ms": 14366
+   }
+  },
+  {
+   "prise": "B1-gilles-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0707,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.076,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B1-gilles-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.38,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.26,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de dossier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B1-upmc-jessica-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0573,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.8113,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B1-upmc-jessica-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.58,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.59,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B1-upmc-pierre-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0033,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.06,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B1-upmc-pierre-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.43,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 3.8413,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard dossier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B2-gilles-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0727,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de Studio.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.08,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de Studio.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B2-gilles-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.31,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 13863
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.72,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard de Studio.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B2-upmc-jessica-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.942,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 2451
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.94,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 2472
+   }
+  },
+  {
+   "prise": "B2-upmc-jessica-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.51,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 14160
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 2369
+   }
+  },
+  {
+   "prise": "B2-upmc-pierre-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.032,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 2362
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.94,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 2416
+   }
+  },
+  {
+   "prise": "B2-upmc-pierre-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.52,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 14088
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.22,
+    "classement": "correct",
+    "texte": "Affiche le dashboard Studio.",
+    "bout_en_bout_ms": 14079
+   }
+  },
+  {
+   "prise": "B3-gilles-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0533,
+    "classement": "commande_manquee",
+    "texte": "Affiche les trois dashes longues.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.86,
+    "classement": "commande_manquee",
+    "texte": "Affiche les trois dashes ondes.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B3-gilles-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.32,
+    "classement": "commande_manquee",
+    "texte": "Affiche les trois d'Archelon.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.8413,
+    "classement": "commande_manquee",
+    "texte": "Affiche les trois dash-longs.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "B3-upmc-jessica-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9113,
+    "classement": "correct",
+    "texte": "Affiche les trois dashboards.",
+    "bout_en_bout_ms": 2462
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0413,
+    "classement": "correct",
+    "texte": "Affiche les trois dashboards.",
+    "bout_en_bout_ms": 2446
+   }
+  },
+  {
+   "prise": "B3-upmc-jessica-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.77,
+    "classement": "correct",
+    "texte": "Affiche les trois dashboards.",
+    "bout_en_bout_ms": 14493
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 2.6013,
+    "classement": "correct",
+    "texte": "Affiche les trois dashboards.",
+    "bout_en_bout_ms": 4225
+   }
+  },
+  {
+   "prise": "B3-upmc-pierre-calme",
+   "groupe": "catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.964,
+    "classement": "commande_manquee",
+    "texte": "Affiche et 3 dashboards.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0213,
+    "classement": "correct",
+    "texte": "Affiche les trois dashboards.",
+    "bout_en_bout_ms": 2502
+   }
+  },
+  {
+   "prise": "B3-upmc-pierre-imprimante",
+   "groupe": "catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.38,
+    "classement": "commande_manquee",
+    "texte": "Affiche et 3 dashboards.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 3.04,
+    "classement": "correct",
+    "texte": "Affiche les trois dashboards.",
+    "bout_en_bout_ms": 4533
+   }
+  },
+  {
+   "prise": "C1-gilles-calme",
+   "groupe": "hors_catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0727,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0807,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C1-gilles-imprimante",
+   "groupe": "hors_catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.51,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de Nathalie.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.23,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C1-upmc-jessica-calme",
+   "groupe": "hors_catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.986,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de la toille.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C1-upmc-jessica-imprimante",
+   "groupe": "hors_catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.53,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 2.9813,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de la tenue.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C1-upmc-pierre-calme",
+   "groupe": "hors_catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9853,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9387,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C1-upmc-pierre-imprimante",
+   "groupe": "hors_catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.26,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.92,
+    "classement": "correct",
+    "texte": "Affiche le dashboard de l'atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C2-gilles-calme",
+   "groupe": "hors_catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0767,
+    "classement": "correct",
+    "texte": "Je peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.07,
+    "classement": "correct",
+    "texte": "Je peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C2-gilles-imprimante",
+   "groupe": "hors_catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 11.81,
+    "classement": "correct",
+    "texte": "Je peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.99,
+    "classement": "correct",
+    "texte": "Je peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C2-upmc-jessica-calme",
+   "groupe": "hors_catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9193,
+    "classement": "correct",
+    "texte": "Tu peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0273,
+    "classement": "correct",
+    "texte": "Tu peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C2-upmc-jessica-imprimante",
+   "groupe": "hors_catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.33,
+    "classement": "correct",
+    "texte": "Tu peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.87,
+    "classement": "correct",
+    "texte": "Tu peux m'afficher le Dash Botatelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C2-upmc-pierre-calme",
+   "groupe": "hors_catalogue",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0427,
+    "classement": "correct",
+    "texte": "Tu peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0113,
+    "classement": "correct",
+    "texte": "Tu peux n'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "C2-upmc-pierre-imprimante",
+   "groupe": "hors_catalogue",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.52,
+    "classement": "correct",
+    "texte": "Je peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 4.8513,
+    "classement": "correct",
+    "texte": "Tu peux m'afficher le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D1-gilles-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0487,
+    "classement": "correct",
+    "texte": "Lance l'impression de la figurine.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0213,
+    "classement": "correct",
+    "texte": "Lance l'impression de la figurine.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D1-gilles-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.43,
+    "classement": "correct",
+    "texte": "L'ancienne impression de la figurine.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9013,
+    "classement": "correct",
+    "texte": "Lance l'impression de la figurée.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D1-upmc-jessica-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9647,
+    "classement": "correct",
+    "texte": "Lance impression de la figurine.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.8657,
+    "classement": "correct",
+    "texte": "Lancez l'impression de la figurine.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D1-upmc-jessica-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.29,
+    "classement": "correct",
+    "texte": "Lance impression de la figurine.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.1644,
+    "classement": "correct",
+    "texte": "Lancez l'impression de la figurine.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D1-upmc-pierre-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9572,
+    "classement": "correct",
+    "texte": "Lance l'impression de la figurine.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.9973,
+    "classement": "correct",
+    "texte": "Lance impression de la figurine.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D1-upmc-pierre-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.6372,
+    "classement": "correct",
+    "texte": "Lance l'impression de la figurine.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.8,
+    "classement": "correct",
+    "texte": "Lance impression de la figurine.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D2-gilles-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0533,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.058,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D2-gilles-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.12,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.33,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D2-upmc-jessica-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0273,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.8882,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D2-upmc-jessica-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.59,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 2.7495,
+    "classement": "correct",
+    "texte": "M'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D2-upmc-pierre-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9747,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.02,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D2-upmc-pierre-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.516,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 2.4813,
+    "classement": "correct",
+    "texte": "N'affiche pas le dashboard atelier.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D3-gilles-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.054,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.0787,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D3-gilles-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.75,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": 12.7,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D3-upmc-jessica-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.9387,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.95,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D3-upmc-jessica-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 13.24,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 11.95,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D3-upmc-pierre-calme",
+   "groupe": "interdit",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.0347,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.93,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "D3-upmc-pierre-imprimante",
+   "groupe": "interdit",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": 12.96,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 7.45,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "E-voix-faible-gilles",
+   "groupe": "limite",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 0.72,
+    "classement": "commande_manquee",
+    "texte": "Affiche le dashboard à l'atelier.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 0.6313,
+    "classement": "correct",
+    "texte": "Affiche le dashboard atelier.",
+    "bout_en_bout_ms": 1972
+   }
+  },
+  {
+   "prise": "E-saturation-gilles",
+   "groupe": "limite",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.1013,
+    "classement": "correct",
+    "texte": null,
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.1033,
+    "classement": "correct",
+    "texte": null,
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "E-parole-coupee-gilles",
+   "groupe": "limite",
+   "condition": "calme",
+   "avant": {
+    "fin": "pause",
+    "delai_s": 1.102,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": 1.1015,
+    "classement": "correct",
+    "texte": "Affiche le dashboard.",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "E-silence",
+   "groupe": "limite",
+   "condition": "calme",
+   "avant": {
+    "fin": "no_speech",
+    "delai_s": null,
+    "classement": "correct",
+    "texte": "",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "no_speech",
+    "delai_s": null,
+    "classement": "correct",
+    "texte": "",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "E-bruit-seul",
+   "groupe": "limite",
+   "condition": "imprimante",
+   "avant": {
+    "fin": "limit",
+    "delai_s": null,
+    "classement": "correct",
+    "texte": "",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "pause",
+    "delai_s": null,
+    "classement": "correct",
+    "texte": "",
+    "bout_en_bout_ms": null
+   }
+  },
+  {
+   "prise": "E-bruit-fort-seul",
+   "groupe": "limite",
+   "condition": "atelier_fort",
+   "avant": {
+    "fin": "limit",
+    "delai_s": null,
+    "classement": "correct",
+    "texte": "",
+    "bout_en_bout_ms": null
+   },
+   "apres": {
+    "fin": "limit",
+    "delai_s": null,
+    "classement": "correct",
+    "texte": "",
+    "bout_en_bout_ms": null
+   }
+  }
+ ]
+}

@@ -16,6 +16,7 @@ Aucun micro, écran physique, imprimante, modèle ou service payant n'est sollic
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import platform
@@ -76,6 +77,17 @@ def git(*args):
         return subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, encoding='utf-8', check=True).stdout.strip()
     except (OSError, subprocess.CalledProcessError):
         return None
+
+
+def repo_state(root=ROOT):
+    """Revision of the tested tree. A copy without Git (Download ZIP) is named by the digest of its
+    manifest, the same digest as the installation journal."""
+    sha = git('rev-parse', 'HEAD')
+    if sha:
+        return {'sha': sha, 'branche': git('rev-parse', '--abbrev-ref', 'HEAD'), 'modifications_locales': bool(git('status', '--porcelain'))}
+    manifest = Path(root) / 'data/catalog/repository_manifest.json'
+    digest = hashlib.sha256(manifest.read_bytes()).hexdigest() if manifest.is_file() else None
+    return {'sha': None, 'branche': None, 'modifications_locales': None, 'copie_sans_git': True, 'manifeste_sha256': digest}
 
 
 def module_available(python, module):
@@ -477,8 +489,7 @@ def run_bench(python=sys.executable, *, suites=True, http=True, static=True, too
     from bojart_ops import banc_statique, banc_http
     started = utc_now()
     results = {'schema': 'bojart.banc-preinstallation.v1', 'debut': started,
-               'depot': {'sha': git('rev-parse', 'HEAD'), 'branche': git('rev-parse', '--abbrev-ref', 'HEAD'),
-                         'modifications_locales': bool(git('status', '--porcelain'))},
+               'depot': repo_state(),
                'environnement': {'os': platform.platform(), 'python_banc': sys.version.split()[0], 'python_teste': python,
                                  'langgraph': module_available(python, 'langgraph'), 'cadquery': module_available(python, 'cadquery'),
                                  'playwright': module_available(python, 'playwright'), 'node': shutil.which('node') is not None},
@@ -512,10 +523,16 @@ LABELS = {'simule_ok': 'Simulé OK', 'echec': 'ÉCHEC', 'partiel': 'Partiel', 'n
           'ok': 'OK', 'ok_reserve': 'OK avec réserve'}
 
 
+def revision_line(depot):
+    if depot.get('sha'):
+        return f"Révision `{depot['sha']}` ({depot['branche']}), modifications locales : {'oui' if depot['modifications_locales'] else 'non'}."
+    return f"Copie sans Git : manifeste `{depot.get('manifeste_sha256')}` (même empreinte que le journal d'installation) ; modifications locales non vérifiables sans Git."
+
+
 def markdown(results):
     s = results['synthese']
     lines = [f"# Banc de simulation pré-installation — {results['debut'][:10]}", '',
-             f"Révision `{results['depot']['sha']}` ({results['depot']['branche']}), modifications locales : {'oui' if results['depot']['modifications_locales'] else 'non'}.",
+             revision_line(results['depot']),
              f"Hôte : {results['environnement']['os']} ; Python testé : `{results['environnement']['python_teste']}` ; LangGraph : {results['environnement']['langgraph']} ; CadQuery : {results['environnement']['cadquery']}.",
              '', results['perimetre'], '', '## Synthèse', '',
              f"- {s['tests_executes']} tests exécutés ; scénarios HTTP : {s['scenarios_http']}.",

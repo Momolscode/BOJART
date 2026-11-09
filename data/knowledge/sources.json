@@ -193,5 +193,26 @@
     "sha256": "84210ad1e2b31e8e907d6292e4c5861bcc662784f7383229f1852e7f7b7cfe34",
     "evidence": "executed_this_session",
     "scope": "56 flux de bruit synthétique sans parole, avec et sans vocabulaire, passés par le vrai code navigateur, LocalVoice et le routeur exact"
+  },
+  {
+    "source_id": "installation-copie-sans-git-20261109",
+    "path": "docs/evidence/installation-2026-11-09/journal-installation.json",
+    "sha256": "ca584aefa98a4369e5399d85f7258893505ee4d87c90cd9b21c427d4af313a76",
+    "evidence": "executed_this_session",
+    "scope": "Installateur complet (tools/installer_tout.py --oui --sans-modeles) sur une copie sans Git du commit 3917f7a, HOME et environnement neufs, conteneur Linux 4 cœurs sans GPU ; ne qualifie ni la tour Windows ni ses périphériques"
+  },
+  {
+    "source_id": "installation-banc-20261109",
+    "path": "docs/evidence/installation-2026-11-09/banc-apres-installation.md",
+    "sha256": "0de922e0ba0a1a72026ae56b09e740787990d2e46e7960f5eada7c7a6f720457",
+    "evidence": "executed_this_session",
+    "scope": "Banc de pré-installation lancé par l'installateur sur cette copie : 1 148 tests, 16 scénarios HTTP, 38 actions ; simulation logicielle uniquement"
+  },
+  {
+    "source_id": "voix-fin-de-prise-bruit-20261109",
+    "path": "docs/evidence/installation-2026-11-09/fin-de-prise-bruit.json",
+    "sha256": "8636ad44a10f5cb96bc075fe33dcd20c89ab7f1745c025309b51b9069c6231bc",
+    "evidence": "executed_this_session",
+    "scope": "114 prises de synthèse Piper (trois voix) et bruit synthétique, code navigateur réel dans Node, faster-whisper small épinglé installé par l'installateur ; voice_endpoint.js avant (bc1a2847) et après (fe0eafd0) ; pas une voix humaine ni un micro réel"
   }
 ]
