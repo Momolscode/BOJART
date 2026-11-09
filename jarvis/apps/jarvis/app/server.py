@@ -83,7 +83,7 @@ class Handler(BaseHTTPRequestHandler):
                 self.response(200,(ROOT/'app/index.html').read_bytes(),'text/html; charset=utf-8');return
             if parsed.path=='/api/state':
                 self.j({'version':APP_VERSION,'project_id':'BOJ-PILOTE-001','revision':self.server.store.project_revision(),
-                        'jobs':self.server.store.list_jobs(), 'context':json.loads(self.server.store.context_path.read_text()),
+                        'jobs':self.server.store.list_jobs(), 'context':json.loads(self.server.store.context_path.read_text(encoding='utf-8')),
                         'capabilities':{'cadquery_available':importlib.util.find_spec('cadquery') is not None,
                           'local_model_connected':False,'voice_connected':False,'printers_connected':False,'paid_services_connected':False}});return
             if parsed.path.startswith('/api/jobs/'):

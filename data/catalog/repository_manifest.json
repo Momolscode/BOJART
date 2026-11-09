@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/agent-memory.yml",
-      "bytes": 941,
-      "sha256": "9626c538562e8bce0e9ba77bff89758084391767db44aae4445646c2369b1c8d"
+      "bytes": 1725,
+      "sha256": "e23b15ff4d0c0cad4aa07f4063beba65704b4865a1fc444116b625775dee7946"
     },
     {
       "path": ".github/workflows/audit.yml",
@@ -28,6 +28,11 @@
       "sha256": "d2a08acafd45e0860898926c1fbd812616dcc07defe0133d6981bb764adc3ca8"
     },
     {
+      "path": ".github/workflows/preinstall-bench.yml",
+      "bytes": 3153,
+      "sha256": "b7d3e29489187e563af776aa5734f632d82df09e826a8239bcdacb74f8c0f9b9"
+    },
+    {
       "path": ".github/workflows/quality.yml",
       "bytes": 819,
       "sha256": "b360eea50d81efd1da8344e28019e7d59d4899d75d458c6f41232319106428f5"
@@ -38,14 +43,19 @@
       "sha256": "373c1e640cfda60f643bb3dee7a7b85224f19019c97ce1114056e3c0a2f7444e"
     },
     {
+      "path": ".github/workflows/voice-bench.yml",
+      "bytes": 4306,
+      "sha256": "c24f41fc2ea013a6e09d314fa1bc2fbb0ededa2cd3c177a5cb8f7f87b7ed468e"
+    },
+    {
       "path": ".github/workflows/workflow-simulations.yml",
       "bytes": 1981,
       "sha256": "23b8a4fa53564e9d9f670801a0258c2782d7489b51c9595c2a2309d693da2f1b"
     },
     {
       "path": ".gitignore",
-      "bytes": 723,
-      "sha256": "873e188cad757388f6c256feb6c1248be3db513b34693bd9b3bb61167fdf2b3f"
+      "bytes": 738,
+      "sha256": "13941e263839ad884d7adac7a670bde13bf674fd9746805f0e15f12b1416e527"
     },
     {
       "path": "AGENTS.md",
@@ -53,14 +63,34 @@
       "sha256": "fd8e85189b4eccfde8b654fed82d23586f2860b15fab9551fc8c5745aebe8591"
     },
     {
+      "path": "Banc_BOJART.cmd",
+      "bytes": 801,
+      "sha256": "89a6873fbda9a7480e5fa386b2abfce20fdc1183694c598742360cdfd919b6bb"
+    },
+    {
+      "path": "Collecter_BOJART.cmd",
+      "bytes": 426,
+      "sha256": "10924269e304c31a69d212545cf6ab09e7c286eddf95b08ad2d50666d62b6981"
+    },
+    {
+      "path": "Diagnostic_BOJART.cmd",
+      "bytes": 332,
+      "sha256": "3afb8cf7692d21757d21947e66a1011af688c3c9958cd4115618fd3d0f25b3b3"
+    },
+    {
+      "path": "Diagnostic_BOJART.sh",
+      "bytes": 299,
+      "sha256": "af6ebdb22bf94f11a668fc15d397cb32e368cfaff609dc4322ffd2cf5acb155a"
+    },
+    {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 7210,
-      "sha256": "9c3ecb584a27b6e85273a18d26236b0be3d424f683ff59562772184b8dd07267"
+      "bytes": 11173,
+      "sha256": "0dbd85b653e1f59aea6e720f27d69c53cc262226ea67d52c6dea282f467abfe1"
     },
     {
       "path": "Installer_BOJART.cmd",
-      "bytes": 248,
-      "sha256": "2a9801ecba1d92a75a72aceb4de757ba5de345465e168bc1be73cc75cce1d3b1"
+      "bytes": 259,
+      "sha256": "0af89a0aaccac45de4776e2b1a2cd4682a03fd480d82e9c616a99fce160fac9a"
     },
     {
       "path": "Installer_BOJART.sh",
@@ -69,13 +99,18 @@
     },
     {
       "path": "Installer_BOJART_4060Ti.cmd",
-      "bytes": 510,
-      "sha256": "d1421a61341a57bc3b409f402ee71daab12eec495e5325b51e8450e04da5038e"
+      "bytes": 526,
+      "sha256": "bd6298dd19ce4d9addf2f4b52178b2693ef0163582bc231ce7c58e4854f6036e"
+    },
+    {
+      "path": "Installer_Tout_BOJART.cmd",
+      "bytes": 1970,
+      "sha256": "ec1fd9aebbeb98bad07b55c8f1ddbcea9611b1ecf3bd29bf43176fb36860d3a5"
     },
     {
       "path": "Lancer_BOJART.cmd",
-      "bytes": 276,
-      "sha256": "67b7a95a30bb4b49cf5d7416fac78241a5d632c1428d2dcf933460458f15132b"
+      "bytes": 288,
+      "sha256": "3b432423e23b4dd7b72b5d0149f7adbe9e6a25f3ba28c72b1f22f98bdf9fc416"
     },
     {
       "path": "Lancer_BOJART.sh",
@@ -84,8 +119,13 @@
     },
     {
       "path": "Mesurer_BOJART.cmd",
-      "bytes": 685,
-      "sha256": "94ef2a0ad13a717facc7d29bc73066f116818e9a99c859839f81b43fb16e9652"
+      "bytes": 709,
+      "sha256": "ae0afe485bb36ee2170f182ac1bd2cf4e380a9ed12cc46f6d8f0e45b54c9d472"
+    },
+    {
+      "path": "Mesurer_Voix_BOJART.cmd",
+      "bytes": 1965,
+      "sha256": "03e6a0376cfdb77becd8b63b6db0974dad96510eab1f3816d2a6b1dbf3ef18f3"
     },
     {
       "path": "PRODUCTION.md",
@@ -104,8 +144,8 @@
     },
     {
       "path": "Simuler_BOJART.cmd",
-      "bytes": 455,
-      "sha256": "7c7c843c1d463bd382173afb40a6762fc05e75cae6e8f22dd220384b9c1e7e25"
+      "bytes": 486,
+      "sha256": "b4ec218965672779621b8ad4fb86c36b1cc71b3a9097de99ed25ad1bd2825219"
     },
     {
       "path": "archive/2026-11-01/MANIFEST.json",
@@ -244,8 +284,8 @@
     },
     {
       "path": "bojart_memory/benchmarks.py",
-      "bytes": 22718,
-      "sha256": "190623bf26eb1ad262bff84e57014c13936f9a237c3056e79ac0aeff9722dd15"
+      "bytes": 22788,
+      "sha256": "893c21e471805f61bd23f46be7890ecd70a48a2d13c0a2f194a34e7af8338649"
     },
     {
       "path": "bojart_memory/context_selection.py",
@@ -328,9 +368,49 @@
       "sha256": "22a376039be51e51d959a0239b85348d4a31b5d005f543427790a1bdeb00628f"
     },
     {
+      "path": "bojart_ops/banc_http.py",
+      "bytes": 29890,
+      "sha256": "1414b457fa4f4e9b51a1347da781e747c9631974d2fa6e5864d32b4579e793f7"
+    },
+    {
+      "path": "bojart_ops/banc_simulation.py",
+      "bytes": 34437,
+      "sha256": "4c582ffea93586b9aa365306d3475de0677c8da4b3f3ca9cbd1880e80eda2c7c"
+    },
+    {
+      "path": "bojart_ops/banc_statique.py",
+      "bytes": 22831,
+      "sha256": "198b2617b775f60804f3446bc0c80f9ce50e08cfde78499ec38be9f873b93054"
+    },
+    {
+      "path": "bojart_ops/banc_voix.py",
+      "bytes": 70777,
+      "sha256": "289e29df54f56cc76700d850455a57ce9ca201d6272c6af0706d2a4b6a325b9e"
+    },
+    {
+      "path": "bojart_ops/collecte.py",
+      "bytes": 18371,
+      "sha256": "6650814c47dfdc7dc3e2a3cd383314abe7f9bb360503b03487e13ad97b3d7a66"
+    },
+    {
+      "path": "bojart_ops/environment.py",
+      "bytes": 11468,
+      "sha256": "6ec3b4c8341b8de1e74a8cee0349d7d2483d708b0d389101c37fd926cf66b087"
+    },
+    {
+      "path": "bojart_ops/installation_tout.py",
+      "bytes": 13265,
+      "sha256": "e3b61ea24531dc70bacf153fd627d7c283c0b41b55c9d9ccbea39d24b61be303"
+    },
+    {
       "path": "bojart_ops/ledger.py",
       "bytes": 10884,
       "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31"
+    },
+    {
+      "path": "bojart_ops/media_check.py",
+      "bytes": 9351,
+      "sha256": "85ac92d4ed625056c38d0c1fdc6a1e227b8bd2c87afd22001fede4fca6ebeadb"
     },
     {
       "path": "bojart_ops/orchestration.py",
@@ -339,8 +419,8 @@
     },
     {
       "path": "bojart_ops/preinstallation.py",
-      "bytes": 13463,
-      "sha256": "2aad092a42e89794d7412eb0f9c6b88d084b9ae5d40db8e01cf6ef4c53220894"
+      "bytes": 13499,
+      "sha256": "123fc2f17eb3ba2351e0723092ff241bc7a9949b8e2348c6bdda2249be4d635b"
     },
     {
       "path": "bojart_ops/production_recovery.py",
@@ -353,19 +433,34 @@
       "sha256": "ee489bedf74506add484d3644f71273f0b7e8179674c586899589fcbd9527998"
     },
     {
+      "path": "bojart_ops/verrou_dependances.py",
+      "bytes": 9860,
+      "sha256": "bb26942e5569bd757b52127bb42ffc68015b8fb2df840cda4c2db5fc48d1c690"
+    },
+    {
+      "path": "bojart_ops/voix_corpus.py",
+      "bytes": 19305,
+      "sha256": "f161a19a2d26d6e2c4ce598351af83477a7c986a69b62051945e02063a01958d"
+    },
+    {
+      "path": "bojart_ops/voix_installation.py",
+      "bytes": 5375,
+      "sha256": "b1373bb36dfcc74549683f839c77be4847c73846832eeafb1decd025736bd22e"
+    },
+    {
       "path": "configs/quality_gates.json",
       "bytes": 848,
       "sha256": "03b5d2e1a39f953a4e38a8bbaaadb79923b1be7244fe7ce6a5a3973708d267c7"
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 11404,
-      "sha256": "405080607ae010a3af7c3dcb98586b2bf6b5f7dff79411e3737a3730babd6c60"
+      "bytes": 19596,
+      "sha256": "9438f1cb709ac57ab684a6b2272d315b57900de6161422034fdd6428cadc7153"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 41838,
-      "sha256": "ae6d8be2dffad9319f01090c5eeee50ccf0fc2d995026239adec301ba5e7fd3a"
+      "bytes": 62389,
+      "sha256": "0e6c27c46ca2529530a230d3c36477205285afca611ebbc6fc4397fe621424b6"
     },
     {
       "path": "creative/CURRENT.md",
@@ -454,8 +549,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 13571,
-      "sha256": "c554890c02b7e9aaf1cfb9e659a8313a787d5cf74a54977c430883e112fa925f"
+      "bytes": 18064,
+      "sha256": "adb86f034af80c254743c8a0831aaa5e7603c29690cfc03be7a3aa5881812e22"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -464,8 +559,8 @@
     },
     {
       "path": "data/knowledge/index.json",
-      "bytes": 17977,
-      "sha256": "fc9c6ea6d92b3b1772be12863a6314513140ca73038a2d98966f684cdacd911b"
+      "bytes": 19690,
+      "sha256": "5334b43f9e9b5fce38250a03944e1d5e08af310982c2723e1c6a883749010296"
     },
     {
       "path": "data/knowledge/retrieval_cases.json",
@@ -474,8 +569,13 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 8314,
-      "sha256": "24ea61ea661b3b6fd5357692a1993701b81ce834493d63c4d81f722d68c576b9"
+      "bytes": 11078,
+      "sha256": "802e94e9fc93f1ab430dad4ac1146f89cfe4661d4cae3000eead981fe95c12a4"
+    },
+    {
+      "path": "data/preinstallation/actions-jarvis.json",
+      "bytes": 22110,
+      "sha256": "f195cb12d3ef9cd9d5ddbeca4e85724fe11d64c214b925032f94683119233664"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -528,6 +628,11 @@
       "sha256": "96f9edc86636410340e4448e675888a21619514bf41c75a0f60f2a458c2afe40"
     },
     {
+      "path": "docs/ATELIER_DEVIS_PARC.md",
+      "bytes": 13323,
+      "sha256": "a7e09a331c7d673ce06cb06e0ea2b7662f83c8dc2a1453e158d5343ee95ed4f7"
+    },
+    {
       "path": "docs/AUDIT_CONTINU_2026-11-01.md",
       "bytes": 5474,
       "sha256": "1cdfaec51e502641acaf3ab48dafcbc74aadee654dc4f759271ae7d490eec9c9"
@@ -536,6 +641,16 @@
       "path": "docs/AUDIT_TRANSVERSAL_V5.txt",
       "bytes": 2786,
       "sha256": "ccee73322e33d39e4bafcacb5b568fe4030f7b677f9fca9eb8aaa533cc300872"
+    },
+    {
+      "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
+      "bytes": 11719,
+      "sha256": "424ab278d50e63b139c70fb813e675edd4e0e1ecf42dd1d1247e9aa53eda0c7a"
+    },
+    {
+      "path": "docs/BANC_VOIX.md",
+      "bytes": 8873,
+      "sha256": "c47e4e359b6488a1c9258295ea3c3cd685ca23e39a0f79c37a06bc8a61a40631"
     },
     {
       "path": "docs/COMMANDES_DASHBOARD.md",
@@ -554,8 +669,13 @@
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
-      "bytes": 5793,
-      "sha256": "c7ef0dc947213311a354a5e00c6162c0f8f6434ff49f7f27ae48a4b4dcbea7ac"
+      "bytes": 6112,
+      "sha256": "0adae3c30d71b6e5c363a3ea7c15238820f53ad255e0c544f99382da3e069f62"
+    },
+    {
+      "path": "docs/DIAGNOSTIC_OUTILS.md",
+      "bytes": 8562,
+      "sha256": "b4ea8085e2fd3a65bacd9dd4270eac09885c41dcc3aaeb5a65fab3c7291d07da"
     },
     {
       "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
@@ -574,8 +694,8 @@
     },
     {
       "path": "docs/INSTALLATION.md",
-      "bytes": 3584,
-      "sha256": "ee1726014a546a03668cd431cb3791c8b307293b6db6a664f478c93a61633feb"
+      "bytes": 3939,
+      "sha256": "6c11f048fe595cec930a3d757e2def8fe473915e0da77ec7a18c2fd796bd8222"
     },
     {
       "path": "docs/OPERATIONS.md",
@@ -639,8 +759,8 @@
     },
     {
       "path": "docs/SIMULATIONS_ATELIER.md",
-      "bytes": 7775,
-      "sha256": "9d6341f1bff4e5d089c956ceebb86c0a42fe7e1416a2cc1d12f795807e12d10b"
+      "bytes": 7939,
+      "sha256": "469f93124350e5bda2736a179070daf416908f935987f3b97882f3bdc0bf2139"
     },
     {
       "path": "docs/SURVEILLANCE_CONTEXTUELLE.md",
@@ -738,6 +858,46 @@
       "sha256": "32f3c88e249582d9ad85c014c096f27373e73e36cdf140cb2f2567dded29b367"
     },
     {
+      "path": "docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json",
+      "bytes": 23044,
+      "sha256": "315d99f5da7ac28601a2b7fcecf4c3f671960312af3abc9de7f8166c72dadb23"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/README.md",
+      "bytes": 11545,
+      "sha256": "9dc0e92e96308411d1b755f301dce8d87de755979f605449a9ae8b41d7ec53af"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.json",
+      "bytes": 88790,
+      "sha256": "0646fcb4591b7fe54929167a8255aefe8d029ab5e3eb7bb82fa66f35e08965f5"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/banc-linux.md",
+      "bytes": 26055,
+      "sha256": "ee2fe7a66bf82ed624475281930797c1f9dbe79689dc70a39591be9b7b7585bb"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-41c3f48.json",
+      "bytes": 94661,
+      "sha256": "1c71e8a9ddf97c2ecbe41c5c022642406d79b6b80940e05b9ed5ecfa22a06019"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-46a9df9.json",
+      "bytes": 95071,
+      "sha256": "0880f7e152b481e087f2a3930ef629fb5b9563b639780f2d947146d0904894ae"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-678da4f.json",
+      "bytes": 91517,
+      "sha256": "bc5ae7dd5e09f6f0068b95f9c9c8f31e5d7964457f9945a35e14ab0368ebc9b7"
+    },
+    {
+      "path": "docs/evidence/banc-preinstallation-2026-11-02/ci-windows-bb78257.json",
+      "bytes": 94772,
+      "sha256": "c2eea00aa1309ba500934bd1dbef666ea6d95d30e0c441db296a38a8267115a0"
+    },
+    {
       "path": "docs/evidence/consolidation-2026-11-01.json",
       "bytes": 4037,
       "sha256": "0c84f14b115c2d9bec3798f1868add0cd6e63b25d47d605c0683ba8a0bd4899a"
@@ -746,6 +906,11 @@
       "path": "docs/evidence/deep-recovery-2026-11-01.json",
       "bytes": 1502,
       "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee"
+    },
+    {
+      "path": "docs/evidence/environment-diagnostic-2026-11-02.json",
+      "bytes": 4893,
+      "sha256": "e4444c1e622ad9232dcf7205c01b960fa17116e19382a92db2b4031341ee2e91"
     },
     {
       "path": "docs/evidence/handoff-v5-2026-11-02/PACK_MANIFEST_SHA256.json",
@@ -761,6 +926,51 @@
       "path": "docs/evidence/handoff-v5-2026-11-02/reception.json",
       "bytes": 95694,
       "sha256": "bfe7dfa609316eefbab9ff8e195fb28d9a0568df7fc1edef5e213f34a6d13894"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/README.md",
+      "bytes": 5996,
+      "sha256": "ddf8c9fc127f904febfce2deaa3df9426fa211daab6be2fefbad4007c1599714"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/banc-apres-installation.md",
+      "bytes": 28389,
+      "sha256": "0de922e0ba0a1a72026ae56b09e740787990d2e46e7960f5eada7c7a6f720457"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/bruit-seul-apres.md",
+      "bytes": 1018,
+      "sha256": "e8acdd6adfd4bd773362e6a75209ec2fb5137d72d04a9debc56a14520124451e"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/ci-windows-db89f3a.json",
+      "bytes": 102772,
+      "sha256": "731e421dd9a9ce4d909b3ba482047d7724482d947208ee32a740bbfde9d5d4e6"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/fin-de-prise-bruit.json",
+      "bytes": 54985,
+      "sha256": "8636ad44a10f5cb96bc075fe33dcd20c89ab7f1745c025309b51b9069c6231bc"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/journal-installation.json",
+      "bytes": 1739,
+      "sha256": "ca584aefa98a4369e5399d85f7258893505ee4d87c90cd9b21c427d4af313a76"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/voix-apres-fin-adaptee.md",
+      "bytes": 7758,
+      "sha256": "b5744785b555af7b722a5de630c13061f0aebbc8bacf4fb5e8140e3366f98c69"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/voix-avant-fin-adaptee.md",
+      "bytes": 8042,
+      "sha256": "c89a9426a9054d1971a3b3ebf498899c383c7e4e16df0e7cf156b1ff45c87c28"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/voix-poids-installes.md",
+      "bytes": 5817,
+      "sha256": "424ff2db5ad750e60d280947e2864611b824f2f3b4310d5a9eb603c43b9985a1"
     },
     {
       "path": "docs/evidence/m07-baseline-tests.log",
@@ -871,6 +1081,91 @@
       "path": "docs/evidence/startup-retrieval-2026-11-01.json",
       "bytes": 4144,
       "sha256": "b872839516aec06623c18dd3f99a289dbaec0465717e6704e044c93760c8248c"
+    },
+    {
+      "path": "docs/evidence/synthetic-media-check-2026-11-02.json",
+      "bytes": 2634,
+      "sha256": "b128b67a7915c3a3aea6f1f3f7be660c86d4b90865c8d1db000a90f1bdaab8ec"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/README.md",
+      "bytes": 12556,
+      "sha256": "6819bac59ca321678daa89dec130e4f17bc142acd7047fed7d62ae44078c1ed7"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/base-sans-vocabulaire.json",
+      "bytes": 322595,
+      "sha256": "2232299df5baff4411c1559bdd56d909faf5acbfbcfd340aaf0c4b2bc01bfefa"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/base-sans-vocabulaire.md",
+      "bytes": 9351,
+      "sha256": "956e6ef4b8fa28442f2d7a7f527bb2918541a5a71a42a6c1f8e64984a0a480d1"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/bruit-seul-small.json",
+      "bytes": 48145,
+      "sha256": "84210ad1e2b31e8e907d6292e4c5861bcc662784f7383229f1852e7f7b7cfe34"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/bruit-seul-small.md",
+      "bytes": 968,
+      "sha256": "aa33f5cae5089b5757cbd7c06c96df0daf1346ad83537e19fc1135d84189efcb"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/corpus-2026-11-02.json",
+      "bytes": 121752,
+      "sha256": "71d7020519c541bd6e4e1d245c2f281ed7465847e4358e915a73f588085043b2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/large-v3-turbo-sans-vocabulaire.json",
+      "bytes": 329339,
+      "sha256": "53da01d3aff7fdd52f49bded0d300d561cb9e85218da27a1d065f408ae505908"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/large-v3-turbo-sans-vocabulaire.md",
+      "bytes": 9128,
+      "sha256": "da032d1c32fcb022ecc23a4720233a8933934454477ecd853a3fa56f8b8a4b95"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-reference.json",
+      "bytes": 335995,
+      "sha256": "60069142de59febe24b2d325995ed25c7c20d29d10e4dfcbc72b0f3eb3dde9f2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-reference.md",
+      "bytes": 8255,
+      "sha256": "66a76a4c84b514bd17d87765b5a85b8c16254ab441289515f8d2e2f043dc1e2c"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire-repli-regles.json",
+      "bytes": 186908,
+      "sha256": "13a101394df877684b5ac93bdb074e9faf75601dc0aa450383732dd4e1c17ac9"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire-repli-regles.md",
+      "bytes": 9112,
+      "sha256": "8de8fead3541549ee1686d18ff09ce2e74c91f40207dac407d2bd27027d6de36"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire.json",
+      "bytes": 323849,
+      "sha256": "9675fc0b1c305060d8c1d9e5cc9b39330cd86837aa1799db2c977ff7db54875d"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-sans-vocabulaire.md",
+      "bytes": 9297,
+      "sha256": "7b97422885920e8b18ffcb9748e5f2cfeb58b5d57ab0473a307f3374361ef3a8"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-variante-vocabulaire.json",
+      "bytes": 336225,
+      "sha256": "5e3439b4d6bd00710fefdb5753c9867351f8dc51bc6acd47108ba95b88081ba2"
+    },
+    {
+      "path": "docs/evidence/voix-2026-11-02/small-variante-vocabulaire.md",
+      "bytes": 8283,
+      "sha256": "ee8bb9e6dda90d639747186cd39856cb2eda0be9c38bd281a5995bc412dcc544"
     },
     {
       "path": "docs/evidence/workflows-2026-11-02/README.md",
@@ -1163,6 +1458,86 @@
       "sha256": "a16941a1a2f302082125045b9321147be1aaa723d728c546859784ed04f57308"
     },
     {
+      "path": "docs/research/conception-3d-2026-11-04/BANCS.json",
+      "bytes": 8795,
+      "sha256": "86b3ea1dd595a9e6172a038946478d734979fb94b4cba7986c6fe9121cef693e"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/CATALOGUE.json",
+      "bytes": 117404,
+      "sha256": "2753325288d371d7e234256947e33f5c65e68c33694504e34302b683a8c9d547"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/README.md",
+      "bytes": 9967,
+      "sha256": "534c202c6e58dfe540aab5efc71b45a8b5afb2163a798ae66aaa621346dc1862"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/VERIFICATIONS.json",
+      "bytes": 2049,
+      "sha256": "47e3098d576c05bede98742b4e919bb3c5fa40ec0ad3cbfa1632e61d3f2be147"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B3-resultats.json",
+      "bytes": 22036,
+      "sha256": "aaa891265b255fe6b9365c88804f2848c6fc9d914dc50bf21b19e60bfecdf44c"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B4-resultats.json",
+      "bytes": 21427,
+      "sha256": "1fa6ff403b348acae41ae7d18358bd360370ae75dd0892f749160d09047b45f2"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/B5-resultats.json",
+      "bytes": 27942,
+      "sha256": "c32ef219d71471dc0b5ace9afcc5a43b929e518e419b8e7aec15131c62773a01"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b3_q12.py",
+      "bytes": 17097,
+      "sha256": "00c3235c144fefb16d9670a405b964275afe51430741738d0d15be77e277d5d2"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b4_trancheurs.py",
+      "bytes": 19393,
+      "sha256": "b4667590548e4ba84dc1dabc6881b9d321a1742cdeeb85bd020cafbd2efb2ac6"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/bancs/b5_decoupe_1m.py",
+      "bytes": 19891,
+      "sha256": "74d012d010a303e03842e5a4da1853a431563de643e642a0cb711359654e91df"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/higgsfield-couts-3d.json",
+      "bytes": 2358,
+      "sha256": "adf233aa7974c1c36886f54551345f6904960f6e047129f6a9229bff1f8d144d"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/ia3d-en-ligne.json",
+      "bytes": 51051,
+      "sha256": "dfa7556a68a9c9a6f777b654fef3f679423d16306cec4cfc05b20385a6b96647"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/ia3d-local.json",
+      "bytes": 75502,
+      "sha256": "034a8badf0ea033e055cd29400c42db3ee082ced4708df4eabc7a234da2f6930"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/modelisation-numerisation.json",
+      "bytes": 86543,
+      "sha256": "56be49aef034fb9727c1ec1bada0351aad2214da933bfc6e10b24841caade575"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/pilotage-donnees.json",
+      "bytes": 89178,
+      "sha256": "14a1940b7eb3ad9c970b7e77ae34f6ffc34304d2d4e6160beb508cae41f309d8"
+    },
+    {
+      "path": "docs/research/conception-3d-2026-11-04/preparation-impression.json",
+      "bytes": 72911,
+      "sha256": "0347de5ff6eb392653574ba7e6a5f2b475aa6394715c4c79703bf07a176c8eae"
+    },
+    {
       "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
       "bytes": 6182,
       "sha256": "73fd9f07d1598d0ca0f5d2623a1aa6727a796fdfa4b0214e350c40d1d30ef181"
@@ -1294,8 +1669,8 @@
     },
     {
       "path": "jarvis/AGENTS.md",
-      "bytes": 5392,
-      "sha256": "a86d22d411a91a613744616ae04f0380cc2299f3cbe89c2b8d2a67bc5c63d5e0"
+      "bytes": 8032,
+      "sha256": "dbc7234fd23077c21be79f5bee8842e093e4cef3a16a70e174a4f241bd3395d2"
     },
     {
       "path": "jarvis/BILAN_LIVRAISON.md",
@@ -1314,8 +1689,8 @@
     },
     {
       "path": "jarvis/Lancer_Jarvis.cmd",
-      "bytes": 789,
-      "sha256": "4bdc5131b87c59ff6b33f249ca73c92480efcf3622fd9e1635eac4e2b8b11668"
+      "bytes": 819,
+      "sha256": "811138bf4340d1726b1e2aae92e21698ecbb0ff4ce0e278e6730c9f8dd3944f8"
     },
     {
       "path": "jarvis/Lancer_Jarvis.sh",
@@ -1324,8 +1699,8 @@
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.cmd",
-      "bytes": 58,
-      "sha256": "1a9f9f6983eff4502e1f6071e417bdf0264d91e6c6ac995ee5437e5d8fbfcbe7"
+      "bytes": 60,
+      "sha256": "2adec82db3ce960b98d362eda7940f53aedd2fbc19448c01de954959e7ad180a"
     },
     {
       "path": "jarvis/Ouvrir_un_dossier_Jarvis.sh",
@@ -1339,8 +1714,8 @@
     },
     {
       "path": "jarvis/Restaurer_Jarvis.cmd",
-      "bytes": 1049,
-      "sha256": "d7bc70e5b0e097cf97c3a334f29877278e401a9401dc6cfca86f3c9d5f58d0d4"
+      "bytes": 1093,
+      "sha256": "7ed76514d1a6df65312f1dfe2013364b0b38866bc8e5a9a5265247c5bedcbace"
     },
     {
       "path": "jarvis/Restaurer_Jarvis.sh",
@@ -1359,8 +1734,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.cmd",
-      "bytes": 928,
-      "sha256": "13504208cf7ef851cbec2eae3b99ce7c6cba2ffa4a6d663bba8d2299b5c61889"
+      "bytes": 963,
+      "sha256": "5fff1a9dacc84ec7d46b6ea4ef0fc00e428468640b267b6ad76b0020a2399a02"
     },
     {
       "path": "jarvis/apps/jarvis/Lancer_Jarvis.sh",
@@ -1376,6 +1751,61 @@
       "path": "jarvis/apps/jarvis/REPRISE_CLAUDE.txt",
       "bytes": 1902,
       "sha256": "06074065efdb7f4409e4536dd871ef4d4f238506655834cf6a72fc5153be184c"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier-devis.css",
+      "bytes": 2320,
+      "sha256": "362792c8a4cc81bd53fe35add3fa628999d278615c6ab38208791199898b1923"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier-devis.js",
+      "bytes": 201,
+      "sha256": "c7c5da79ae8fb8011f4703b266b73e0159f2e07cc3183ca5b3030621c26d2cc1"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier.css",
+      "bytes": 3563,
+      "sha256": "8d84574257d2de71bd15a4d6cf21e719c5c5b90cbaceb25b9758393fafd73f25"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier.html",
+      "bytes": 9878,
+      "sha256": "d14d2f2a1b644a30a4b815893ae48468da5b66707224626f05882ed4fb9c5ccb"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier.js",
+      "bytes": 35571,
+      "sha256": "00d1dde278ac990cc7bd7e16381c31ae748e3382af8a494c9ce715086fc2e9b9"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_commerce.py",
+      "bytes": 35730,
+      "sha256": "17929df76d05caa6f8720015da3808f13ec8644f68d5b37b4fd53064d9fabce3"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_devis.py",
+      "bytes": 20882,
+      "sha256": "78bd6ea18b73f3e4ba78d3fa11a73662632e316873b21ec8207cac618a8ce7f9"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_document.py",
+      "bytes": 8468,
+      "sha256": "8b0251a6e316a768c20a64cd979b56c3fee70f257709fd798f703b280d6adb39"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_estimation.py",
+      "bytes": 12767,
+      "sha256": "acbde40e72cdc0ea64f6865bbcb0cff394f9e5098cf776e25bbf92584f92d1f9"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_http.py",
+      "bytes": 8424,
+      "sha256": "7a44a35ee44fb86c04fa3b7fb4705e00e4c65f77edf111ae0ee80c09578e8777"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/atelier_parc.py",
+      "bytes": 28098,
+      "sha256": "c58fb76772ecbc94ef89e06338e6e25cfefc34593dcad470a6bfbe0edd38a339"
     },
     {
       "path": "jarvis/apps/jarvis/app/audio_worklet.js",
@@ -1394,8 +1824,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/consolidated_workbench.py",
-      "bytes": 19092,
-      "sha256": "025b098a9b27692b6e7dacb5e011b50bfeb5dbc06648507734522c7a50389172"
+      "bytes": 19955,
+      "sha256": "2df42aaad34891b8c25f268a55045854207a7fff4309c9916af7d5761198adbe"
     },
     {
       "path": "jarvis/apps/jarvis/app/context_guard.py",
@@ -1419,13 +1849,108 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/dialogue.py",
-      "bytes": 14157,
-      "sha256": "86deccfd1c8b3813709666bb31d7ddbaf93dd8d43b4faf6e8b6c4d4131ed3842"
+      "bytes": 15084,
+      "sha256": "53e70a56c6794745ac2e7323bfa55324a4902661aad13fa48d95dead48a6733e"
     },
     {
       "path": "jarvis/apps/jarvis/app/display_contracts.py",
       "bytes": 6877,
       "sha256": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/ardoise.py",
+      "bytes": 24327,
+      "sha256": "b799b69f5e5dcb169d5a60fe00c0918136769b8acdca81c22ace9178a733e453"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/blender_render.py",
+      "bytes": 4703,
+      "sha256": "1c73c485c3963530e691e3099f40950733f7aad7c6e3a4e302a36e36cfb3659f"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/checks.py",
+      "bytes": 6768,
+      "sha256": "d4b18ea404667433d3afc0aacac10c72af169854d27107e32b9452c6b75ca2c8"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/details.py",
+      "bytes": 6298,
+      "sha256": "d6b0de0acf254d1ffb8a2588cfa0d07d554f89ff5f852fa5a77cc4c68dc9bb7f"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/fabrication.py",
+      "bytes": 26794,
+      "sha256": "be8700d336d0f177fbfd809bb0ef8f803704023185c97c149fc95938c194075e"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/fusain.py",
+      "bytes": 32695,
+      "sha256": "d83ad51e45fde3a0064ee93dbab7a3c1e7f8c8de2599256649c9daf4bdc604ed"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/pipeline.py",
+      "bytes": 28063,
+      "sha256": "12daad67cdb0e2a63ebd4622a0abfb66e45aaf6b1bc7d6e1977a486ecbb643e1"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/sculpt.py",
+      "bytes": 16395,
+      "sha256": "f01a45822f355f3655a8236cb7d70ef4f2b03e158a587bb407d9ce80f8710c31"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/slicing.py",
+      "bytes": 6931,
+      "sha256": "a677fb676147387d3eb917cca63008689ad3bbfa3f7e44f8037ca81a2971ed17"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/spec.py",
+      "bytes": 7964,
+      "sha256": "dc70acad31373a889f5e35c0b3cc1460eb0dd0d83b026b3f2879de30327f7462"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/veille.py",
+      "bytes": 24415,
+      "sha256": "6bb2830b8d99f01b0b8453724f0cab939b1d8224721711d024564b41eb9f1d1c"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/viewer/index.html",
+      "bytes": 6416,
+      "sha256": "c7c0ec61eda0c045406087b529f320e905178317cdbdb4bf17cffa64abda8f18"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/viewer/vendor/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/viewer/vendor/STLLoader.js",
+      "bytes": 10715,
+      "sha256": "023ed97f848b633d8bcd53d4db3b996d29d0c644088700691297c552257d480b"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/viewer/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/viewer/vendor/VENDOR.json",
+      "bytes": 1427,
+      "sha256": "4a4322903bb367842056ae8b7c04e9c6b5fbba1aab64457831cdb3ac83d24f12"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/viewer/vendor/three.core.min.js",
+      "bytes": 381124,
+      "sha256": "61ba0df005b05991361d040d8ff670e1aadfd0ce7aeebd1fdb0725957a8957de"
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/figurine/viewer/vendor/three.module.min.js",
+      "bytes": 338908,
+      "sha256": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6"
     },
     {
       "path": "jarvis/apps/jarvis/app/fleet_simulation.py",
@@ -1464,8 +1989,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/jarvis_runtime.py",
-      "bytes": 21366,
-      "sha256": "37c5ea4ace564634664eaa1f2ff08e40bdd3452eaad2996340b3da1767657e57"
+      "bytes": 21491,
+      "sha256": "f01a078493cc4a711d9300b87c2024f594c067631cbef01bda7c4e681d15dd8a"
     },
     {
       "path": "jarvis/apps/jarvis/app/jev_decider.py",
@@ -1489,8 +2014,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/media_library.py",
-      "bytes": 15103,
-      "sha256": "9afeff32fa7b03822f3c7addae8f648434210cf01552297d619402b44d639809"
+      "bytes": 15137,
+      "sha256": "03505a441fcc30c604dbee6a0c6221693c54e0c0f935971c5bda85c87836b8f7"
     },
     {
       "path": "jarvis/apps/jarvis/app/memory.css",
@@ -1509,13 +2034,13 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/proposals.py",
-      "bytes": 5758,
-      "sha256": "9fcc59d14548958a1844162228cd5bcac70d778a325119a3523f170fb2abe8f6"
+      "bytes": 6109,
+      "sha256": "97518d4b482854e67abfc9d3c85c9416e1fc8bcf14fc94ca6784ed1fcd3fd151"
     },
     {
       "path": "jarvis/apps/jarvis/app/server.py",
-      "bytes": 9452,
-      "sha256": "e2643bf42a36b481371a1c44c688e8f0a4185943914f509521a60cf81f54b0a8"
+      "bytes": 9468,
+      "sha256": "f3691449334145f19830b1d3272dbd28c16c07b550231603359800b74744451f"
     },
     {
       "path": "jarvis/apps/jarvis/app/studio.css",
@@ -1569,8 +2094,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/tower_screen.js",
-      "bytes": 7179,
-      "sha256": "7454d70c4dee602957b86fb659d73a4c04697f6fb054f3a937ef0016cb18c921"
+      "bytes": 7829,
+      "sha256": "3a581075a2a7501076ab34e86c0ed31c537a0eade25c082d907d213236c8fac5"
     },
     {
       "path": "jarvis/apps/jarvis/app/tower_voice.js",
@@ -1594,13 +2119,13 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/voice.py",
-      "bytes": 4112,
-      "sha256": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d"
+      "bytes": 4488,
+      "sha256": "25681a6d046dd10a13221a667699af3dd8a9892fc53ce76ac5c2877dae57daca"
     },
     {
       "path": "jarvis/apps/jarvis/app/voice_endpoint.js",
-      "bytes": 1193,
-      "sha256": "bc1a2847b9e85e5d209754deb082701ea757cb0dd6cc56639ba0a605efe1564b"
+      "bytes": 2741,
+      "sha256": "fe0eafd023805399df26ecf64a71b5c283dfc603d93e93791b10ff7690494bc1"
     },
     {
       "path": "jarvis/apps/jarvis/app/workbench.py",
@@ -1614,8 +2139,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.html",
-      "bytes": 4073,
-      "sha256": "3aeb866cac14a58c2824c9d9feabe6583d3fd01aaf4b875e96b49d47714d8fcd"
+      "bytes": 4119,
+      "sha256": "db357289519c893fb57d6c89a53d3070651b8e713dc547a920525bd60989a58a"
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace.js",
@@ -1624,8 +2149,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/app/workspace_state.py",
-      "bytes": 22279,
-      "sha256": "9974501d5d337b59d546ad3f38adf964e1f084ae56339b2a4374cf3986684f1f"
+      "bytes": 23039,
+      "sha256": "562f1ab9fe94d99ca3011087bd5da9a1c88d031bc934715809425e1942d76efe"
     },
     {
       "path": "jarvis/apps/jarvis/config.example.json",
@@ -1949,8 +2474,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_m02.py",
-      "bytes": 15737,
-      "sha256": "b54579d21efddcc470bd331fff7f298e7c8bef993cf573aeaabdbdabbb985c85"
+      "bytes": 15846,
+      "sha256": "0fb43985abb627ad31f63e7e899ff59e07a79c9f3534c5793813ad0319b81965"
     },
     {
       "path": "jarvis/apps/jarvis/tests/test_mission01.py",
@@ -1969,8 +2494,8 @@
     },
     {
       "path": "jarvis/apps/jarvis/tests_m03/test_media_library.py",
-      "bytes": 9568,
-      "sha256": "bb4deae6e65965c0a15250f9cc4c705afa6285bf97f344ea3c5cefe58464d9a9"
+      "bytes": 9578,
+      "sha256": "1dc260b70a92705fd4d8a2f091867a7aa5cba913339ed3ecefb0701793aed663"
     },
     {
       "path": "jarvis/apps/jarvis/tests_m03/test_preview_m03.py",
@@ -1996,6 +2521,21 @@
       "path": "jarvis/config/M04_INVENTAIRE_A_REMPLIR.json",
       "bytes": 1017,
       "sha256": "9a763deedc8dc219a850a7cd1906c1fd9fb7cdeb3bdba36ba4bf9d6da07ee261"
+    },
+    {
+      "path": "jarvis/config/atelier/demonstration.json",
+      "bytes": 3001,
+      "sha256": "7dca3f9705fb5824215debf7a335966280ca4af7a52e4b7f9fc3671c23d03a02"
+    },
+    {
+      "path": "jarvis/config/atelier/profil_resine.exemple.json",
+      "bytes": 203,
+      "sha256": "fa71fb669bd1688d4694c779e74f4f46e6a335c0f0169008022e03136995e4d8"
+    },
+    {
+      "path": "jarvis/config/atelier/tarifs.exemple.json",
+      "bytes": 1170,
+      "sha256": "2b305ce7fc4fd4adf1a34b2ea4656f7aae46f926997313c1868ba84cca4426cf"
     },
     {
       "path": "jarvis/context/CONTRADICTIONS_RESOLUES.md",
@@ -2161,6 +2701,346 @@
       "path": "jarvis/docs/m07/SOURCES.json",
       "bytes": 1509,
       "sha256": "1c9da0646f25e21ae46233ca77c5996714499d0179d69cf03ab09acb36e2a8a0"
+    },
+    {
+      "path": "jarvis/docs/m08/BACKLOG_ET_REPRISE_M08.md",
+      "bytes": 8072,
+      "sha256": "68e7c6ce47097d08a367a7472ef8a4bfe1a90976457cd8d6c5341fbcaeb1d0ed"
+    },
+    {
+      "path": "jarvis/docs/m08/GRILLE_CONCEPTION_FIGURINE.md",
+      "bytes": 15746,
+      "sha256": "110107828bd70eef23484ed88aa58953a9e591f1805d4a55b633480f93aab949"
+    },
+    {
+      "path": "jarvis/docs/m08/REGISTRE_DECISIONS_M08.md",
+      "bytes": 35372,
+      "sha256": "afdff773097306b2d6204005ed92b1c81c3daf52ef10722270f8adfdad262a91"
+    },
+    {
+      "path": "jarvis/docs/m08/RELEASE_M08.md",
+      "bytes": 24618,
+      "sha256": "37552a361a81dea9e0a0f1134758264a1575d98f7e5fabfe02a54d6f39037b57"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/atelier_three_core_absent_2026-11-02.json",
+      "bytes": 1189,
+      "sha256": "b287b0999a2b43f024537f9c8df423be94f8aee8b3849b474fa92d1ae6d01123"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/atelier_three_core_verifie_2026-11-02.json",
+      "bytes": 1200,
+      "sha256": "aad0bdcce97e9dddd1d0019d88e5b65c9bdd689f7aa443200ccc3b32180945b1"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/boucles_2026-11-02.json",
+      "bytes": 4468,
+      "sha256": "1a810a7709155d0386515daf42e3ec0f91854410eb8fe057f91cac0b8ab45a62"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/contre_epreuves_details_v6_2026-11-02.json",
+      "bytes": 2340,
+      "sha256": "811635be223d9648c58acceef196847686bfe781d75e99aed196be6d241e4e88"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/contre_epreuves_fabrication_v3_2026-11-02.json",
+      "bytes": 3123,
+      "sha256": "0c5ffe05d0d0ed627e927a74c115612dcdcc65064a0df9b2228845a12d554a9e"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/environnement_aligne_2026-11-02.json",
+      "bytes": 6138,
+      "sha256": "44d76bce671a223e639f1cbab6a6aa5c04cdb2fd03c7c22dbf3744e297a0228d"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/assembly.json",
+      "bytes": 1282,
+      "sha256": "fdb593c168a6dad0a509095defc15b2ab07d588262b899d1b0e16cc6ccace965"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/checks.json",
+      "bytes": 2460,
+      "sha256": "5dc0fae05573cadbdf3f89be8547af0b90a1e0141bb4bd2f6d44ad7374299cc5"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/manifest.json",
+      "bytes": 7153,
+      "sha256": "922497e1f7caf8e3129f2ba7f452ea3bb94bc0be455223629010e1cc492ee883"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/pose_study.json",
+      "bytes": 1330,
+      "sha256": "e0aa9c2ff48cff9315cb36fb18a3c2aacac44d383372a1f3b044c984cdd195f7"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/spec.json",
+      "bytes": 953,
+      "sha256": "506484d4478f711dfc6d4e8acd7d73c93dc370b4296a9f90199f79da2292a7be"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/state.json",
+      "bytes": 7721,
+      "sha256": "0bacdfa9f4dbdbe7a350b2e475733896da6caa53d3ba9c37fa6b7317d252cdfe"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/tranchage.json",
+      "bytes": 1962,
+      "sha256": "9929c303ed557fce5edfc73a81af2cbaa75c63bc36f241ceac92175406fa0471"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-15546a650b8110ca-ardoise-v6/viewer_check.json",
+      "bytes": 1885,
+      "sha256": "aff0878f08c911cc695e9dca80e74e0fca19a3b689625288542eda3dce404075"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/assembly.json",
+      "bytes": 1423,
+      "sha256": "13e864011cf939487ad27f48a534a9c9c123b71e161f09167cb1e4e9ba3f838b"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/checks.json",
+      "bytes": 2457,
+      "sha256": "21d13ca434fc9c80c8f1923fc93d568d0e34e2196740f0b9a6a885031076aeb7"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/contre_verification_epaisseur.json",
+      "bytes": 4353,
+      "sha256": "747f1b4ccb6758ecff1153c30a79916e15b072b13b6a2149ac5d4e1dc692d53a"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/manifest.json",
+      "bytes": 7177,
+      "sha256": "dcf12f3d88bae548ae1ff02b66bf385a57b5aec4763fe7ba5d7f7557aa2a360c"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/pose_study.json",
+      "bytes": 639,
+      "sha256": "b9b10537c27710c4451f068f2cbce99f7da89f7f953257048f1bc483e2684b58"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/spec.json",
+      "bytes": 968,
+      "sha256": "a254c30c45288511b29f2c38b45a97802295202fdbadb6fdc14522d3efcb3c2b"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/state.json",
+      "bytes": 7752,
+      "sha256": "b96d9f57a060649306c238fda2d5dc0a1f1ad85951ff663929f471359f532404"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/tranchage.json",
+      "bytes": 1966,
+      "sha256": "65bc67a7d1d8f15d7742f6d7b9087684b421869ad2ee12a0f01bb9af7ed36cad"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-157d5194ebed0087-fusain/viewer_check.json",
+      "bytes": 1881,
+      "sha256": "ff0359522e5d30cc6c34d10a8215d7584e7016998db287204d24be9d162c814c"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/assembly.json",
+      "bytes": 765,
+      "sha256": "4690128db057682d39d070155a5d48f65b4eb2a22b551c329b77601c74513a73"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/checks.json",
+      "bytes": 2450,
+      "sha256": "060cf9ba7b9079723dba7617c5da35f6b63a2f737808423396ebf7c261fa27f4"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/manifest.json",
+      "bytes": 6989,
+      "sha256": "e3df9d6f583776f5002605d4194da53099a8ee02ff4d3a4f47e21853ab3c616e"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/pose_study.json",
+      "bytes": 1330,
+      "sha256": "c1f036715cfc68eed61bc01dc5b4a5c5f7c54ae0a81bdf049af297e86ec1c3f9"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/spec.json",
+      "bytes": 953,
+      "sha256": "506484d4478f711dfc6d4e8acd7d73c93dc370b4296a9f90199f79da2292a7be"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/state.json",
+      "bytes": 7570,
+      "sha256": "fff905883a4a28fa58db8b873436740819743e0c5465d1f13653fa9fb70c8391"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/tranchage.json",
+      "bytes": 1963,
+      "sha256": "e4f6173e981dafd8b21c697a6c8c89b6ed2ff1ef67a4faf3b15e95c117629841"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-2821f575afea00a7-ardoise/viewer_check.json",
+      "bytes": 1881,
+      "sha256": "f63495c8d384867ca89f415b393fe3222d4977a1aa8a9901a82d4eb28a1846cb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/manifest_partiel.json",
+      "bytes": 4240,
+      "sha256": "e6d8848b1c3e51c8f4173c3d361cdf5a5af996c233fdb656cbc0e8b95ddc1ad6"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/spec.json",
+      "bytes": 969,
+      "sha256": "82eac147ae93197bc106f6659d1e32d0aa2c28dac3e44000a103cf03e591c562"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-5aafd044cf97f6d3-vegeta-bloque/state.json",
+      "bytes": 3974,
+      "sha256": "46d364379090bbb6fccd3c71b0dd8f463bcd13311f0f3ab8f2257bbd0c47c87a"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/assembly.json",
+      "bytes": 763,
+      "sha256": "0cbb6023f08f1da1cb7c7ba3a98d5892dee337c666bb28d8a84e7928ccb75644"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/checks.json",
+      "bytes": 2455,
+      "sha256": "4539d487791ce906434ef9ee5461a24c0d94f985d24dd100e78f6b6c41f29e2e"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/manifest.json",
+      "bytes": 6977,
+      "sha256": "4c60960342ef3892f49be0489e3bda69c7287fdb020a458814af6114b1e40a76"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/pose_study.json",
+      "bytes": 1274,
+      "sha256": "76493c3d77406584fdab463da726f1cb35ea7ebe54a53662fa8cf587e09ce824"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/spec.json",
+      "bytes": 955,
+      "sha256": "dcbb0b9244318f782cb61fe8e8519aa6291e6bf9dbcbe89b5ee57391a1d22fb3"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/state.json",
+      "bytes": 8060,
+      "sha256": "0a607861d90bd2eb43548c08d627596d91f072d33b2486ed2d0fb2320710d5a2"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/tranchage.json",
+      "bytes": 1963,
+      "sha256": "b69dc078ff139ca4ca665d1c4edc79ceedd63aa6a1ae46f0f3377e717c224bd8"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-d70b23ab2e4e3376/viewer_check.json",
+      "bytes": 1883,
+      "sha256": "859594ea11f8293ca9fcbd84f81807585489e7a99873ab0a15bb8a37867354ba"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/assembly.json",
+      "bytes": 1428,
+      "sha256": "6cf212a64fcb7970bf0f8aa380d2ae54961607544d26fe0bcad1d0afc9e7f2e9"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/checks.json",
+      "bytes": 2458,
+      "sha256": "506c5b4a5ac79010f758e5e5043bc17da8192a1ff21619f1f480c54a92690c78"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/contre_verification_epaisseur.json",
+      "bytes": 1863,
+      "sha256": "2fe5109c30f6cc6dee429ce58e909047f361991d85aa43e193bb71d9ab474acd"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/manifest.json",
+      "bytes": 7158,
+      "sha256": "88270c3cfba6707ae377348db26973999393d13593f630f15bceb5d98538a3e3"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/pose_study.json",
+      "bytes": 588,
+      "sha256": "952bd3d79abbd7e817f559f172e137699eb3dc599a1664d449be1d5bcd47b087"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/spec.json",
+      "bytes": 959,
+      "sha256": "65b0717eed532f3137f27a1076b74c50cd1baac4d4d0470a53713ec44a962087"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/state.json",
+      "bytes": 7725,
+      "sha256": "e9b6d4e26571c2674c8bb6b4159c1eda1226325c6596b5c6961ec234697f62fb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/tranchage.json",
+      "bytes": 2018,
+      "sha256": "d3abf0363cbcad66db77c74bb9a9e00be8f068e7c40b0e8faeecc277cd9bcf77"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-ed77ed8e1f71b0f4-veille/viewer_check.json",
+      "bytes": 1879,
+      "sha256": "2060e3a9b4b30c50c057c0535737a8907951724493d87594dc705e0ce0a1912b"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/assembly.json",
+      "bytes": 765,
+      "sha256": "2f9e53fa238c774302892404a5ad3c902606a88eaeec992caff9497d5a547841"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/checks.json",
+      "bytes": 2474,
+      "sha256": "c5338113da9c48d4f5695c54e07c367b2a09245fb2ba5f126f3fba10a9104471"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/cut_plan.json",
+      "bytes": 3945,
+      "sha256": "4fbd447841ae948b4de85d29fbb61a58d7c56b29ec1ffdc8788de8d0831f9aca"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/manifest_partiel.json",
+      "bytes": 6457,
+      "sha256": "cc4d6f968bf9db1cb5c88fe41bbea84be3e5fa5f22c33fb5496de5e500ecec43"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/spec.json",
+      "bytes": 892,
+      "sha256": "78f83a53f80a1e7782d7b8f24c3f4df7901d4481ce9d160a79e9337ef9721fb6"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/execution-f65591bfc2cc1f0a-1m-decoupe/state.json",
+      "bytes": 7122,
+      "sha256": "f06ea79551d89b44c8cec1ab125e119e9185d44901f1477bdeac5f22df6a8eae"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/socle-vitrine-hypothese-ronde-80/profil_simulation.ini",
+      "bytes": 772,
+      "sha256": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb"
+    },
+    {
+      "path": "jarvis/docs/m08/preuves/socle-vitrine-hypothese-ronde-80/rapport.json",
+      "bytes": 4039,
+      "sha256": "dcec740dcc24d41f51623af16e0b7005e73cea71be3911e7220a63a4dc976a60"
     },
     {
       "path": "jarvis/fixtures/fleet_1000mm_synthetic.json",
@@ -2458,6 +3338,26 @@
       "sha256": "19667899f5a7b3a5ff2146d062157ceed919429dafcb51d0c8d470f83f1dda97"
     },
     {
+      "path": "jarvis/locks/windows-cp312-figurine.txt",
+      "bytes": 2629,
+      "sha256": "55bf6f18d006e67006cd52dfb1c42f7b8e2101977455071ba6a879b3d9f2a901"
+    },
+    {
+      "path": "jarvis/locks/windows-cp312-moteurs.txt",
+      "bytes": 9083,
+      "sha256": "c114be5cbbf5f99b2eb23df648c9bbc0fc3e8657eabf1f2cd8d905895b12eafa"
+    },
+    {
+      "path": "jarvis/locks/windows-cp312-voice.txt",
+      "bytes": 2833,
+      "sha256": "462d162a24b5e8b87d93d15883c46e5d474b51571a84e98fbeb31c8a3c5e95d5"
+    },
+    {
+      "path": "jarvis/requirements-figurine.txt",
+      "bytes": 736,
+      "sha256": "18736a084f735acb82b75275dcf7c97b0ed282e7d27e106ede8562fb859bfc3b"
+    },
+    {
       "path": "jarvis/requirements-orchestration.txt",
       "bytes": 266,
       "sha256": "c6985cf9d0f5812699028cdec3325914d9bea906800429709b83bdb653df31d5"
@@ -2469,8 +3369,8 @@
     },
     {
       "path": "jarvis/requirements-voice.txt",
-      "bytes": 122,
-      "sha256": "ed3facd220d69beafe6f66830124fa94dffbadc6bc053328609e2ff9b33ca75e"
+      "bytes": 133,
+      "sha256": "8bf46aab2ab93c94d6ec88f91b842cc849daa4a72e30a97846be75bb30b7184a"
     },
     {
       "path": "jarvis/requirements.txt",
@@ -2543,6 +3443,16 @@
       "sha256": "76dab182f56e1cbad83103f0c0404a3fb1388a4d5897cf87e914b50f668be36d"
     },
     {
+      "path": "jarvis/tests/fixtures/atelier/PROVENANCE.json",
+      "bytes": 729,
+      "sha256": "2879421ed838dec7ca82c913b227e21c18f7593927604172ae61e56554517da1"
+    },
+    {
+      "path": "jarvis/tests/fixtures/atelier/prusaslicer-2.9.0-alpha1-metadonnees.gcode",
+      "bytes": 436,
+      "sha256": "4b18753036d9f6dfb4af8269fbc8fd06fbdeb951179ab6fb26d9a0f435db734e"
+    },
+    {
       "path": "jarvis/tests/memory_context.test.cjs",
       "bytes": 8327,
       "sha256": "ac4c0f400e84ebf414e026d78685b096cc5957728aa163203125f1164a54b437"
@@ -2558,6 +3468,11 @@
       "sha256": "fbc3ac1dec071897f09f46818a567f2ad2ec1259e00ab14f9c31ce4116d0e601"
     },
     {
+      "path": "jarvis/tests/test_atelier.py",
+      "bytes": 48509,
+      "sha256": "a4119ae7a9c979c27336fac5823382b676b9d6731a1888d7b4dc0d03e9f44f8c"
+    },
+    {
       "path": "jarvis/tests/test_connection_lifetime.py",
       "bytes": 2479,
       "sha256": "95f2cc849f178547b0b074a1b949bad2864c107dec4a62503f28cbd56c729b28"
@@ -2566,6 +3481,11 @@
       "path": "jarvis/tests/test_consolidated.py",
       "bytes": 7353,
       "sha256": "33db8db35e6d57a3454b6961c7a5f7eb675a2a1b941ea97cbcd9294feebf318b"
+    },
+    {
+      "path": "jarvis/tests/test_figurine_m08.py",
+      "bytes": 36624,
+      "sha256": "6f3ede098c78d8968600b20eff32a23236e73d566d2899977f1513c29a76e4c8"
     },
     {
       "path": "jarvis/tests/test_growth.py",
@@ -2614,13 +3534,23 @@
     },
     {
       "path": "jarvis/tests/voice_endpoint.test.cjs",
-      "bytes": 1540,
-      "sha256": "9a73a9452d77706974ea2673ddab851b3abc0d802742ac618d837f0a1041573f"
+      "bytes": 3268,
+      "sha256": "70675aa664cb09eafb75d6ad338d07da4fa0a3ac81c2f838565dfa9a649d834c"
     },
     {
       "path": "jarvis/tools/export_m07_graph.py",
       "bytes": 1702,
       "sha256": "3412d4d555f67cddbbb0af3e6ba48baaadec8aa4e15e5a5eb720d05cc1656686"
+    },
+    {
+      "path": "jarvis/tools/figurine_pipeline.py",
+      "bytes": 2104,
+      "sha256": "2913a2a1971edd915eeea8f44598b0ec718081ce7a2c9d7b3e971892522bef5c"
+    },
+    {
+      "path": "jarvis/tools/figurine_viewer_check.cjs",
+      "bytes": 7776,
+      "sha256": "a6c97c5533fb8999880fc5b6aceca63794541480ebf71e95cd55ca8e2af33c3a"
     },
     {
       "path": "jarvis/tools/legacy_publish_github.py",
@@ -2664,8 +3594,8 @@
     },
     {
       "path": "jarvis/tools/m07_browser.cjs",
-      "bytes": 8739,
-      "sha256": "168bbb8900577aee57f62bf18997eebdbfa78aaaa4a0a217936806da08d00207"
+      "bytes": 8732,
+      "sha256": "0ca8239b9a0b622c17087f346b031392355f1b9549868821b5bb36afca6a49f2"
     },
     {
       "path": "jarvis/tools/m07_smoke.py",
@@ -2723,6 +3653,11 @@
       "sha256": "39fa546ea9b406b7dd70ecefb6df0a3d18608bbd53c21ddc52e8e08de745e0f4"
     },
     {
+      "path": "jarvis/tools/socle_vitrine.py",
+      "bytes": 5213,
+      "sha256": "6ceb08bd03690624831c22136f1689e8727651b7cc6ec8ab4d146fa6e51b239d"
+    },
+    {
       "path": "jarvis/tools/verify_repository.py",
       "bytes": 279,
       "sha256": "d8808e5d9499f339c5be31c514b703499cc4c7dfc1fdb614662add2f0c6bda0e"
@@ -2739,8 +3674,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 14571,
-      "sha256": "b3cebf079ccd790e96fc93724760d3b7e154b4af24e55b0a088d62e89833d714"
+      "bytes": 16157,
+      "sha256": "e534d895db7cecf8ab4651cef6bd1107180662d1edd87048f0476395752a7da8"
     },
     {
       "path": "ops/request-example.json",
@@ -4393,6 +5328,11 @@
       "sha256": "659388f705ed8987b90e8eb14cbb04b546a8437123712056376e1da6d781b437"
     },
     {
+      "path": "tests/test_environment_diagnostic.py",
+      "bytes": 11695,
+      "sha256": "04a660507feea53717d021120348bcdc4ff6c27260842c069a5d88a4a684581c"
+    },
+    {
       "path": "tests/test_http_boundaries.py",
       "bytes": 10236,
       "sha256": "d13f8c7f2446050a9fe16f92d1f048cf05afc37926cd49f8e3472d2892c60c96"
@@ -4408,14 +5348,19 @@
       "sha256": "d58388513d835465690efeb58fad1f6363a875e8a7ba1f9e611d371f8bf74e34"
     },
     {
+      "path": "tests/test_media_check.py",
+      "bytes": 9336,
+      "sha256": "5176b2d4046d43f582eace534305e82b3e6f9a1298f01c38b3ece73ca3e6ed63"
+    },
+    {
       "path": "tests/test_memory.py",
       "bytes": 8857,
       "sha256": "a3c211de9bd8d6fdc9c07c5e211534505faeb3bcacbe2555dfa3cc38779554ed"
     },
     {
       "path": "tests/test_memory_http.py",
-      "bytes": 3186,
-      "sha256": "bf8ddde9cdbc954d5b7cb33387d937a3fb087673732d96c9983ee34c1602a6c1"
+      "bytes": 3204,
+      "sha256": "5f611e413c7846fb5b1d794e7fd2ff0ea165387b34046c32dd51bdbccf1afdbe"
     },
     {
       "path": "tests/test_production_recovery.py",
@@ -4533,6 +5478,31 @@
       "sha256": "1c85859de6aa7145a6632313d792ebb72aefdec91dc6cf8949730dd4928d49cc"
     },
     {
+      "path": "tests_ops/test_banc_simulation.py",
+      "bytes": 13275,
+      "sha256": "c7f2f9984a7f8b5143c763c954c470ea64e85a3b3c17e60664de826f443e5d8d"
+    },
+    {
+      "path": "tests_ops/test_banc_voix.py",
+      "bytes": 16394,
+      "sha256": "cd8ccedcb1b1aa049cf8d61ec626fb845dbda5e8aa787bed2024f983d1828266"
+    },
+    {
+      "path": "tests_ops/test_collecte.py",
+      "bytes": 7975,
+      "sha256": "fc0b2071ed7a4db987d327e9c5ec91c82f4fd9e1bfea45b71e443717b2ab5461"
+    },
+    {
+      "path": "tests_ops/test_installation_prete.py",
+      "bytes": 9177,
+      "sha256": "12a87c1c3589b5d1c50973d6df16322dc0c505ee1bab5e6d3e29217957e8322b"
+    },
+    {
+      "path": "tests_ops/test_installation_tout.py",
+      "bytes": 9602,
+      "sha256": "2a130654a82ad4617a5f49a7c154ffb511365f0854702d55701cba0e3c8a991b"
+    },
+    {
       "path": "tests_ops/test_ops.py",
       "bytes": 12230,
       "sha256": "f5c732d06da11646227993948fdb7249b2e9ebe82403253d1fad7932c1918dc0"
@@ -4553,6 +5523,16 @@
       "sha256": "4ad49603f11f272621283bc01a894374979a2e09e82ec6e77ea47605e0fe0673"
     },
     {
+      "path": "tests_ops/test_verifier_voix.py",
+      "bytes": 1750,
+      "sha256": "90487875838c7dd6e3fffe8af59967e65af83348001789dc48a2ad5431231750"
+    },
+    {
+      "path": "tests_ops/test_verrou_dependances.py",
+      "bytes": 5149,
+      "sha256": "3bce76ea5ccdc35fd0ddc576323bed64f9082aef15a8c3be7d67c5c1d156d6a9"
+    },
+    {
       "path": "tests_workflows/test_journeys.py",
       "bytes": 9098,
       "sha256": "679d6b1087140f62a7ce7e63c2771342b4b139f9df42364e23e276bc00d0200f"
@@ -4563,19 +5543,44 @@
       "sha256": "c17763734617bb272b412bb94913aeb31dde88325bec57a419e9994846dda118"
     },
     {
+      "path": "tools/banc_preinstallation.py",
+      "bytes": 2895,
+      "sha256": "80bf51132b0714b928bec7f15be31530ace7b205e5f2a15a5050bc1bcffb629d"
+    },
+    {
+      "path": "tools/banc_voix.py",
+      "bytes": 7347,
+      "sha256": "f0794bc0f1a4c67c7a04cf7ae9036c6cdd80af642ef1924a625cf3db26d724f0"
+    },
+    {
+      "path": "tools/banc_voix_navigateur.cjs",
+      "bytes": 3715,
+      "sha256": "0a4e3efac7c5552cf87b976310b222cdf93edc4bcd937c6207590560ed51233f"
+    },
+    {
       "path": "tools/benchmark_jarvis.py",
       "bytes": 1990,
       "sha256": "fddb1f1277bf0ee974bbf60562dd8f6d016a8316a5cb6df26024d1a680bd7647"
     },
     {
       "path": "tools/check_startup.py",
-      "bytes": 8047,
-      "sha256": "d94d64ed1d71455d694ec06f75f688e6f57b3cb5f49d151324bea6fc504bb6a6"
+      "bytes": 8065,
+      "sha256": "6042f0e33bdcf149696245819784e7c815bd481b92e5d36a342e4c7550cf0050"
+    },
+    {
+      "path": "tools/collecte_guidee.py",
+      "bytes": 13339,
+      "sha256": "cc4a50d26f7a01d6064a36443eeaff4d140eb2f72939b5a43a6badddbcdfbdde"
+    },
+    {
+      "path": "tools/diagnose_environment.py",
+      "bytes": 5038,
+      "sha256": "cd4c6bcf8dc9d67edb545cfdd8a2a28986ab62f147c9c6999bf8d29d6ebbbc2d"
     },
     {
       "path": "tools/doctor.py",
-      "bytes": 8262,
-      "sha256": "f7d0ef37cd00d5a141fee14af4a766d8f073a7ff507291188501c03588037353"
+      "bytes": 8625,
+      "sha256": "cc3067ccdd1cf2db4f38f001a6d0c8f1cc12cc073951bbf95e00ccb4a8cd6953"
     },
     {
       "path": "tools/download_remote_media.py",
@@ -4584,13 +5589,18 @@
     },
     {
       "path": "tools/evaluate_memory.py",
-      "bytes": 1270,
-      "sha256": "04e157a5843f21b6a4adf24a30883bfcdb2be000c2a21b1378adebf20b924480"
+      "bytes": 1286,
+      "sha256": "f6cff7b23600bb8f2eefabac98d27febba55b7ef4b61099ca3b6d71ee9cbeeb0"
     },
     {
       "path": "tools/hydrate_m07_media.py",
-      "bytes": 1982,
-      "sha256": "a94ea8ed0bd0a01046d7b6d5a79dcb3a2c0da549cbd4dcad8ae94d0118b85502"
+      "bytes": 1998,
+      "sha256": "4d3cfb982dcdb616199a093713ccca19f4391a8cff66a08bcd2c29c33575d53a"
+    },
+    {
+      "path": "tools/installer_tout.py",
+      "bytes": 5289,
+      "sha256": "6bf9d4e6e252014da314fae2e5d4acc48dd9776ec35d410e7804643fb18b3c30"
     },
     {
       "path": "tools/memory_browser.cjs",
@@ -4604,13 +5614,13 @@
     },
     {
       "path": "tools/orchestrate.py",
-      "bytes": 4123,
-      "sha256": "012d83cd6bf812b05a0a97b4f9dcc3ffa464a5ae027dbdbc5d88b6308b2269a3"
+      "bytes": 4141,
+      "sha256": "23dd0137b420e4a44ce242d64559d08a47f79078fe90e27f2d0e812becd1e6dc"
     },
     {
       "path": "tools/prepare_installation.py",
-      "bytes": 3148,
-      "sha256": "04da8d52217b050c2731b933d8e42520955cdd4a82e238e53205f57bf8d78622"
+      "bytes": 5106,
+      "sha256": "559efbfcea00e3c84edeb608372437412d98ee5e1eedb278fbe3bb60ac8acbe5"
     },
     {
       "path": "tools/prepare_jarvis.py",
@@ -4623,14 +5633,19 @@
       "sha256": "bd6c187ae2bdadf379f8b010b4e2714f5e1f99db5af02d2839de002821fa7c0c"
     },
     {
+      "path": "tools/preparer_voix.py",
+      "bytes": 1832,
+      "sha256": "4586a4900e52749b43acc93d079b9808d094bcd44873492c36a5fb1b7878ecdd"
+    },
+    {
       "path": "tools/quality_gate.py",
       "bytes": 1875,
       "sha256": "bb08f544c51d065efcfaeb3d3fd35efe627ac804aad7e325b389d44bd078ebed"
     },
     {
       "path": "tools/restore_archive_2026_11_01.py",
-      "bytes": 4495,
-      "sha256": "1c0ab7167d1b09089a74c4c7608d072107ac4852ab875802703203126d478256"
+      "bytes": 4628,
+      "sha256": "81af44963c48512e5f1ce47f77be9916b6cb84be8bf891f415d693f5fbd47e6f"
     },
     {
       "path": "tools/restore_recovery_2026_11_01.py",
@@ -4649,18 +5664,28 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 5335,
-      "sha256": "abd80dab005b96defe67ad81d5357d2cf1584db216c4016060a5ed558befc194"
+      "bytes": 5658,
+      "sha256": "6f7fd5ac0ae4e49741069c6a53d6cbb486b06db1a96184018fe293f7259f78eb"
     },
     {
       "path": "tools/validate_repository.py",
-      "bytes": 7610,
-      "sha256": "2ee6670d17ecfe7ae50441997d749c8cd0d62a159b16fa9cb405c2f17b08d9ca"
+      "bytes": 8294,
+      "sha256": "48c551d1b667f04dbe2dad506803833588cebe19bead57e35a16d625903d5bc7"
+    },
+    {
+      "path": "tools/verifier_voix.py",
+      "bytes": 2290,
+      "sha256": "675fa66f2ab3efb15b4cd5f1ee7cdd4ff235ce5f08dc538e0832967ff4259501"
     },
     {
       "path": "tools/verify_manifest.py",
       "bytes": 1849,
       "sha256": "b3c7237bee1c1b304a2c41e760ff1ea98b7d1c433386b8dfb4f39acd6e7af428"
+    },
+    {
+      "path": "tools/verrouiller_dependances.py",
+      "bytes": 1968,
+      "sha256": "1d71c3d43816d5a87ccc1889c9a480620188362ee6b8742cad70cddcedbcd19e"
     }
   ]
 }

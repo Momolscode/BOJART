@@ -142,13 +142,21 @@ def restore_snapshot(archive, destination):
                     WHERE state='PROPOSED' AND NOT EXISTS
                     (SELECT 1 FROM operations WHERE id=dialogue_proposals.operation_id)""",
                     (canonical({'state':'RESTORED','message':'Préparer une nouvelle demande après restauration.'}),)).rowcount
+            atelier=(0,0)
+            if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='atelier_ordres'").fetchone():
+                # Une restauration ne réactive ni un ordre machine ni une autorisation.
+                pending=db.execute("UPDATE atelier_ordres SET etat='inconnu_restauration' WHERE etat IN ('envoye','inconnu')").rowcount
+                grants=db.execute("UPDATE atelier_autorisations SET revoquee=1,revocation='restauration' WHERE revoquee=0").rowcount
+                db.execute('UPDATE atelier_machines SET rapprochement_requis=1')
+                atelier=(pending,grants)
             if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='jarvis_turns'").fetchone():
                 db.execute("UPDATE jarvis_turns SET status='RESTORED',cancelled=1,approved=0,result=? WHERE status IN ('NEW','RUNNING','INTERRUPTED','AWAITING_CONFIRMATION')",
                            (canonical({'message':'Tour arrêté par la restauration. Émettre une nouvelle commande après relecture.'}),))
         receipt={'schema':'bojart.restore.receipt.v1','restored_at':now(),'snapshot_id':meta['snapshot_id'],
                  'archive_sha256':file_digest(archive),'verified_files':len(hashes),'databases':list(DATABASES),
                  'invalidated_display_proposals':invalidated_display,'invalidated_cad_proposals':invalidated_cad,
-                 'media_relocated':len(locations),'pending_display_commands':'cancelled_restore','physical_actions':False}
+                 'media_relocated':len(locations),'pending_display_commands':'cancelled_restore','physical_actions':False,
+                 'atelier_machine_orders_unknown':atelier[0],'atelier_authorizations_revoked':atelier[1]}
         (destination/'RESTORE_RECEIPT.json').write_text(canonical(receipt),encoding='utf8')
         (destination/'.restore-in-progress').unlink()
         return {**receipt,'destination':str(destination)}
@@ -282,7 +290,7 @@ class WorkspaceState:
                             if file_digest(dest)!=aid:raise IntegrityError('Média modifié pendant la copie.')
                             db.execute('INSERT INTO locations VALUES(?,?)',(rel,aid))
                 meta={'schema':SCHEMA,'snapshot_id':rid,'created_at':now(),'databases':list(DATABASES),
-                      'scope':['CAO et propositions','dossiers et révisions','Studio et médias exacts','brouillons Growth','régie et reçus','contexte','fichiers incomplets conservés'],
+                      'scope':['CAO et propositions','dossiers et révisions','Studio et médias exacts','brouillons Growth','régie et reçus','contexte','fichiers incomplets conservés','demandes, devis et parc simulé'],
                       'excluded':['secrets et cookies','modèles IA externes','pilotes et profils machine externes','anciens fichiers de sauvegarde','états privés des sites hébergés'],
                       'restore_rule':'Nouveau dossier exclusivement ; commandes visuelles en attente neutralisées.'}
                 (stage/'snapshot.json').write_text(canonical(meta),encoding='utf8')

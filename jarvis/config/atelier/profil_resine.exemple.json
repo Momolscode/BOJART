@@ -1,0 +1,10 @@
+{
+  "hauteur_couche_mm": 0.05,
+  "couches_base": 5,
+  "exposition_base_s": 30,
+  "exposition_s": 2.5,
+  "cycle_couche_s": 6,
+  "hauteur_supports_mm": 5,
+  "part_supports": 0.15,
+  "origine": "exemple"
+}

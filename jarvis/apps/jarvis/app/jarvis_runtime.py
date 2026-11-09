@@ -17,7 +17,7 @@ COMMANDS = {
     'model': ('Affiche le modèle à droite', 'Afficher le modèle sélectionné sur la vue création'),
     'sources': ('Montre les sources au centre', 'Afficher la bibliothèque des sources au centre'),
     'studio': ('Ouvre le studio', 'Afficher la bibliothèque Studio à droite'),
-    'planning': ('Affiche le planning à gauche', 'Afficher le planning démonstratif à gauche'),
+    'planning': ('Affiche le planning à gauche', 'Afficher le tableau atelier à gauche : parc simulé, demandes et devis'),
     'workspace': ('Montre les dossiers au centre', 'Afficher les dossiers et les sauvegardes au centre'),
     'growth': ('Ouvre les contenus à droite', 'Afficher les préparations éditoriales à droite, sans publier'),
     'knowledge': ('Ouvre la base métier au centre', 'Afficher la base documentaire métier au centre'),
@@ -32,7 +32,8 @@ ALIASES.update({'montre le modele a droite':'model', 'interromps ta reponse':'si
                 'ouvre la conception':'cad', 'ouvre les contenus':'growth',
                 'affiche la tour de controle':'tower', 'affiche tout':'tower'})
 # Exact, bounded phrases: a negation or an additional action is never stripped.
-for _label, _choice in {'atelier':'planning', 'planning':'planning', 'dossiers':'workspace',
+for _label, _choice in {'atelier':'planning', 'planning':'planning', 'devis':'planning', 'imprimantes':'planning',
+                        'parc':'planning', 'dossiers':'workspace',
                         'studio':'studio', 'contenus':'growth', 'conception':'cad',
                         'base métier':'knowledge'}.items():
     for _verb in ('Affiche', 'Montre', 'Ouvre'):
@@ -305,7 +306,7 @@ class JarvisRuntime:
             choice=state['decision']['choice']
             if choice not in COMMANDS:
                 if state['decision'].get('reason')=='dashboard_unspecified':
-                    return {'status':'CLARIFY','message':'Quel tableau de bord : atelier (planning démonstratif), dossiers, Studio, contenus, conception ou base métier ?'}
+                    return {'status':'CLARIFY','message':'Quel tableau de bord : atelier (parc simulé, demandes et devis), dossiers, Studio, contenus, conception ou base métier ?'}
                 return {'status':'CLARIFY','message':'Commande non reconnue avec certitude. Choisissez un des ordres proposés.'}
             if choice=='model' and not data['operation_id']:
                 return {'status':'CLARIFY','message':'Sélectionnez le modèle à afficher dans ce dossier.'}

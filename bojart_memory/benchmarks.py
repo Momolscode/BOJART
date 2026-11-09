@@ -56,7 +56,7 @@ def host_info():
     for path, key in [('/sys/fs/cgroup/cpu.max', 'cgroup_cpu_max'),
                       ('/sys/fs/cgroup/memory.max', 'cgroup_memory_max_bytes')]:
         try:
-            result[key] = Path(path).read_text().strip()
+            result[key] = Path(path).read_text(encoding='utf-8').strip()
         except OSError:
             result[key] = None
     command = shutil.which('nvidia-smi')
@@ -64,7 +64,7 @@ def host_info():
         try:
             output = subprocess.run([command,
                 '--query-gpu=name,memory.total,memory.free,driver_version',
-                '--format=csv,noheader,nounits'], capture_output=True, text=True, timeout=5, check=True)
+                '--format=csv,noheader,nounits'], capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=5, check=True)
             result['gpu_snapshot'] = {'fields': ['name', 'memory_total_mib', 'memory_free_mib', 'driver'],
                                       'rows': output.stdout.strip().splitlines()[:8], 'peak_memory': False}
         except (OSError, subprocess.SubprocessError):
@@ -233,7 +233,7 @@ def fault_trials(root, repetitions):
                 before = [tuple(r) for r in memory.db.execute('SELECT source_id,current_version FROM sources ORDER BY source_id')]
             process = subprocess.Popen([sys.executable, '-c', CRASH_WORKER, str(state), str(docs), phase],
                 cwd=REPO, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                text=True, env=dict(os.environ, PYTHONUTF8='1'))
+                text=True, encoding='utf-8', env=dict(os.environ, PYTHONUTF8='1'))
             lines = queue.Queue()
             reader = threading.Thread(target=lambda: lines.put(process.stdout.readline()), daemon=True)
             reader.start()

@@ -1,5 +1,42 @@
 # Passation — consolidation du 1 novembre 2026
 
+## Installation prête — 9 novembre 2026
+
+Demande d'Olsen : « Audit l'ensemble du projet. Je veux qu'il soit fonctionnel à son installation ce Jarvis. » Base `main` `3436f53`. Intégration sur `claude/project-thread-m5t36k` : #20 (avec #17), #18, #11, #15, #21, conflits du manifeste régénérés, `SESSION_HANDOFF` réuni, `index.json` fusionné champ par champ. Laissées à part : #14 (bras peintre, conflits nombreux, sans effet sur l'installation), #16 (recettes Veille), #19 (fiche STRATES), #1 (surveillance de `main`).
+
+Décisions : installer depuis une copie sans Git doit marcher comme depuis un clone (raison : « Download ZIP » est le chemin documenté) ; la voix est préparée par l'installateur avec l'accord unique déjà demandé (raison : sans poids ni réglage, le micro ne servait à rien après installation) ; la fin de prise garde sa règle d'origine et n'ajoute qu'une seconde façon de conclure, relative au fond sonore (raison : ne rien changer au calme, mesuré bon). Remplace le constat `voix-fin-de-prise-bruit-20261102` par `voix-fin-de-prise-bruit-20261109`.
+
+Fichiers : `bojart_ops/banc_statique.py` (repli manifeste et `.gitignore`), `bojart_ops/banc_simulation.py` (révision d'une copie sans Git), `tools/validate_repository.py`, `bojart_ops/voix_installation.py`, `tools/preparer_voix.py`, `bojart_ops/installation_tout.py`, `tools/installer_tout.py` (`--sans-figurine`), `tools/prepare_installation.py` (`--figurine`, sonde des imports), `jarvis/requirements-figurine.txt`, `figurine/pipeline.py` et `slicing.py` (UTF-8), `jarvis/apps/jarvis/app/voice_endpoint.js`, `Installer_Tout_BOJART.cmd`, `Diagnostic_BOJART.cmd` (CRLF), `data/preinstallation/actions-jarvis.json`, `INSTALLER_DEMAIN.md` (trois gestes en tête), `docs/BANC_VOIX.md`, workflow du banc ; tests `tests_ops/test_installation_prete.py` (11), `test_installation_tout.py` (17), 4 tests de fin de prise.
+
+Tests exécutés : réinstallation complète depuis une copie sans Git de `3917f7a` (journal et banc dans `docs/evidence/installation-2026-11-09/`) : 1 148 tests sans régression, 16/16 HTTP, 2 actions en échec pour le seul verrou figurine ; voix avec les poids installés 37/40, 0 erreur critique, 15/15 cas d'erreur ; fin de prise avant/après sur 114 prises ; bruit seul 0 commande ; parcours navigateur des 8 pages. Limites : conteneur Linux, synthèse vocale, aucun matériel réel, Ollama non installé. Verrou figurine ajouté depuis l'artefact de la CI Windows de `db89f3a` (versions communes identiques aux verrous moteurs et voix). Prochaine preuve : installation et recette sur la tour (`Installer_Tout_BOJART.cmd`, `Banc_BOJART.cmd`, `Mesurer_Voix_BOJART.cmd`, vrai micro avec imprimante en marche).
+
+## Chaîne vocale simulée — 2 novembre 2026
+
+Demande d'Olsen (option « chaîne vocale simulée ») : tester « Affiche le dashboard atelier » de bout en bout sans la tour, mesurer chaque étape (médiane, p95, max, erreurs, froid/chaud) pour comparer ensuite avec la tour, y compris bruit, commande inconnue, coupure et réponse tardive. Branche reposée sur la PR #17 (correctif PyAV 18.1.0, verrou voix, `tools/verifier_voix.py`) pour ne pas dupliquer son banc.
+
+Décision : ajouter au décodage de `voice.py` un vocabulaire (`initial_prompt`) avec les mots du catalogue. Raison : sans lui, `small` ne reconnaissait la commande cible que 12 fois sur 80 (« dash beau d'atelier », « Jarvi ») ; avec, 65/80, sans erreur critique, négations toujours refusées, aucune commande inventée sur du bruit seul. Le routeur reste exact. Proposé, non codé : accepter le singulier de « dossiers », « contenus », « trois dashboards » (+7 commandes par mesure, aucun affichage dangereux) ; fin de prise adaptée au bruit ; filtre des phrases fantômes de Whisper.
+
+Fichiers : `bojart_ops/banc_voix.py`, `bojart_ops/voix_corpus.py`, `tools/banc_voix.py`, `tools/banc_voix_navigateur.cjs`, `tests_ops/test_banc_voix.py` (17 tests), `Mesurer_Voix_BOJART.cmd`, `.github/workflows/voice-bench.yml`, `docs/BANC_VOIX.md`, `docs/evidence/voix-2026-11-02/`, `jarvis/apps/jarvis/app/voice.py`, `jarvis/apps/jarvis/tests/test_m02.py`. Corpus (WAV hors Git) déposé dans le dossier partagé du projet : `banc-voix/corpus-voix-2026-11-02.zip`.
+
+Résultat sur conteneur Linux (Xeon 2,1 GHz, 4 cœurs, sans GPU) : 830 prises, 0 erreur critique, 15/15 cas d'erreur à chaque mesure ; référence `small` au commit `dad184c` : transcription 1 001 ms, de la fin de prise au reçu 1 090 ms, bout en bout 2,2 s au calme, 13,9 s avec imprimante (prise arrêtée par la limite de 15 s). `base` : 0/80 ; `large-v3-turbo` sans vocabulaire : 43/80 en 3,9 s. Limites : voix de synthèse, bruit synthétique, traitements audio du navigateur non simulés, vues sans rendu. Prochaine preuve : `Mesurer_Voix_BOJART.cmd` sur la tour avec le même corpus, comparaison avec `small-reference.json`, puis prises au vrai micro dans l'atelier.
+
+## Banc de simulation pré-installation — 2 novembre 2026
+
+Demande d'Olsen : simuler chaque action que Jarvis devra passer et trouver erreurs, corruptions et améliorations avant l'installation sur la tour. Base `3436f5352659554e4bac5af492b94af6c522ed2d` ; PR #15 (M08) et #16 (contenu) examinées, non modifiées. Le défaut `three.core.js` signalé par la PR #15 est déjà corrigé sur `main` (empreinte conforme à la provenance r180).
+
+Ajouts : catalogue de 38 actions (dont l'installation complète en une fois et la collecte guidée), banc `bojart_ops/banc_*.py` et `tools/banc_preinstallation.py`, lanceur `Banc_BOJART.cmd`, workflow Linux/Windows `preinstall-bench.yml`, 16 tests du banc. Corrections : 9 `.cmd` en CRLF (4 avec étiquettes), `PYTHONUTF8` dans `Simuler_BOJART.cmd`, encodage UTF-8 explicite dans le serveur, la médiathèque, les mesures, la préinstallation et les outils de lancement/validation (manifeste en LF), fixture de test mémoire, message clair quand une base de travail est illisible ; chemins canoniques dans l'outil de restauration d'archive et un test de médiathèque (noms courts 8.3 sous Windows, trouvés par la CI Windows du banc). Les suites Jarvis passent avec les mêmes exclusions explicites qu'avant (médias M07). Verrou d'installation Windows : `bojart_ops/verrou_dependances.py`, `tools/verrouiller_dependances.py`, verrous `jarvis/locks/windows-cp312-{moteurs,voice}.txt` générés par la CI Windows (82 + 24 paquets avec empreintes), installés par `prepare_installation.py` sous Windows (`--require-hashes --no-deps`, puis `pip check`) et contrôlés par le banc (`statique:verrou_installation`). Pas encore installés sur la tour. Installation complète en une fois : `Installer_Tout_BOJART.cmd` → `tools/installer_tout.py` (`bojart_ops/installation_tout.py`) : plan, un seul accord, winget pour Ollama/FFmpeg, Jarvis complet, modèles `speed`, banc, journal dans `~/BOJART/installation/` ; simulé par le banc (`outil:installation_tout_simulation`) et 15 tests, pas encore lancé sur la tour. Collecte guidée : `Collecter_BOJART.cmd` → `tools/collecte_guidee.py` (`bojart_ops/collecte.py`) : dossiers désignés une fois, copie vérifiée par SHA-256 dans `~/BOJART/collecte/originaux`, sans écrasement ni modification des sources, textes et `conversations.json` des exports ChatGPT en mémoire comme données non vérifiées ; simulation de bout en bout (13 contrôles, `outil:collecte_simulation`) et 14 tests. Emplacement réel des vidéos d'Olsen encore inconnu. Voix : `av==18.1.0` épinglé (PyAV 19 retire `metadata_errors`, appelé par faster-whisper 1.2.1 : chaque transcription échouait) ; contrôle `tools/verifier_voix.py` (`outil:voix_decodage`) ; la CI installe moteurs et voix par `prepare_installation.install_commands` avant le banc. Verrou voix Windows régénéré par la CI (seul `av` change) ; CI Windows verte au commit `46a9df9` avec ce verrou et le décodage réussi (preuve `docs/evidence/banc-preinstallation-2026-11-02/ci-windows-46a9df9.json`).
+
+Mesuré à `860aaaf` : 947 tests, 16/16 scénarios HTTP (1 réserve de charge), cp1252 et 95 roues Windows sans compilation ; actions 13 simulées OK, 17 partielles (12 à cause des seuls médias M07), 6 non codées. Vérifications et limites : voir `docs/evidence/banc-preinstallation-2026-11-02/`. Aucun micro, moniteur physique, imprimante, modèle local, service distant ou publication. Prochaine preuve : exécuter `Banc_BOJART.cmd` sur la tour après installation et comparer au rapport CI Windows.
+## Reprise : diagnostic des outils et du poste — 2 novembre 2026
+
+Demande : poursuivre la préparation des outils et du lancement BOJ.ART. La PR #7 est fusionnée ; base actuelle examinée `a0500b39ddf5a6154c701c225c5b2ad80767cc70`, puis rapprochement des lanceurs publiés à `d5855c1e8c10f6ab57d7b362eb1d954c722b340b`. Leurs corrections sont préservées. La tour signalée par le connecteur est hors ligne ; aucun matériel cible n'est déduit de cet environnement de travail.
+
+Ajouts : diagnostic local exécutable, raccourcis Windows/Linux, observation NVIDIA par carte et métadonnées de dix paquets Python, présence de neuf binaires dont quatre sondés pour leur version. Les sondes restent fixes et bornées ; les slicers, Ollama et le moteur Adobe ne sont pas démarrés. Les rapports datés restent hors du dépôt et distinguent présence, version et qualification. Le lanceur expose ce contrôle avec `--check-only --check-tools` ; son ouverture habituelle reste inchangée.
+
+Le guide `docs/DIAGNOSTIC_OUTILS.md` est relié aux documents d'installation déjà indexés et à la tâche `target-inventory`, toujours bloquée sur l'accès au poste. Le corpus de référence sélectionné n'est pas élargi par une seconde copie détaillée des mêmes prérequis. Les 14 cas lexicaux existants sont conservés. Aucun modèle, outil tiers, connexion de compte ou imprimante activé.
+
+Le contrôle GitHub a relevé les deux nouveaux raccourcis non classés après régénération du manifeste ; leur règle de classement est ajoutée, sans assouplir le test existant. Le passage Windows a également révélé une comparaison entre chemin long et alias 8.3 dans le test du rapport ; la comparaison porte désormais sur les deux chemins résolus, avec les mêmes contrôles de contenu et de non-écrasement. Tests et portée exécutée : `docs/evidence/environment-diagnostic-2026-11-02.json`. Les cas GPU sont synthétiques ; seul le diagnostic des outils présents dans cet environnement a été exécuté. Prochaine preuve : ouvrir `Diagnostic_BOJART` sur la tour, relever les champs restants, puis essayer un profil IA et les parcours créatifs sur ce matériel. Rapprochement final avec `2025ac1c8f376341532fbd2df8a176b0b8fc3de4` : le GPU déclaré RTX 4060 Ti, les 8 Go visibles sur la photo et le parcours compact sont conservés. La photo ne remplace pas le relevé du pilote, de la mémoire disponible et des performances. Les 295 tests Python, 14 recherches et la recette du lanceur passent sur le corpus réuni.
+
 ## Recherche des outils et qualification — 1 novembre 2026
 
 Demande : enrichir BOJ.ART/Jarvis pour la 3D, la voix, le studio VFX, l'identité et le marketing. Revue de 18 dépôts à références épinglées et de documentations officielles ; 26 fiches, 14 besoins de données et 12 portes de recette dans `docs/research/launch-toolchain-2026-11-01/`. Aucun outil tiers installé ni génération payante ou publication lancée. La tour n'est pas accessible pour une qualification. Metricool n'est pas retenu dans cette demande ; repli proposé par données natives/exportées, sans prétendre les avoir collectées.
@@ -242,3 +279,69 @@ Limites. Le corps de la conversation n'est pas lu. Les documents internes I1–I
 Prochaine preuve : fiche d'acceptation STRATES (G0) signée, puis coupons mesurés avec incertitude. Le choix d'un stockage privé pour le PDF, les vidéos, le texte de la conversation et les rapports V5 revient à l'utilisateur.
 
 Correctif CI Windows : `OwnerLock` comparait le chemin résolu du dossier `.ask-locks` à son chemin absolu non résolu. Sous Windows, un nom court 8.3 du dossier temporaire suffisait à signaler une redirection : trois tests `test_ask_requests` échouaient. Un parent lié produit le même faux positif sous Linux ou macOS. L'état est désormais résolu avant comparaison ; seul un `.ask-locks` lien ou jonction reste refusé. Deux tests sont ajoutés : un parent lié est accepté, un dossier de verrous redirigé est refusé sans réservation. Le premier échoue sans la correction.
+
+## Atelier : devis, suivi des demandes et parc simulé — 2 novembre 2026
+
+Objectif : étape 3 du plan Jarvis, pendant que la figurine (PR #15), le contenu (PR #16) et le banc (PR #17) avancent. Demande : devis automatiques, suivi des demandes clients, vue et pilotage des imprimantes en mode simulé, sans commande machine réelle. Défaut signalé : Atelier 3D sans `three.core.js`.
+
+Faits nouveaux. `three.core.js` est présent sur `main` : la visionneuse importe three r180 et crée un contexte WebGL dans Chromium. La copie publiée renvoie 401 et n'est pas vérifiable d'ici ; un redéploiement éventuel demande l'accord d'Olsen. Le calcul géométrique STL en Python pur donne les mêmes triangles, volume, surface et boîte que trimesh 4.11.1 sur les deux STL M08. Les sources consultées (Moonraker, OctoPrint, PrusaLink, Bambu, Elegoo, mentions du devis) et leur statut de lecture sont listés dans `docs/ATELIER_DEVIS_PARC.md`.
+
+Décisions. Les tables atelier sont dans la base des missions, donc dans la sauvegarde globale existante. Aucune machine réelle ne reçoit d'ordre ; seule la lecture d'état peut y être autorisée, et elle est refusée tant qu'aucun connecteur n'est qualifié. Le téléversement Moonraker avec `print=true` ne doit jamais servir. La grille d'exemple ne peut pas émettre de devis.
+
+Fichiers : `jarvis/apps/jarvis/app/atelier_*.py`, `atelier.html|js|css`, `jarvis/config/atelier/`, `jarvis/tests/test_atelier.py` et sa fixture PrusaSlicer, raccordements dans `consolidated_workbench.py`, `workspace_state.py`, `jarvis_runtime.py`, `tower_screen.js`, `workspace.html`, `jarvis/tools/m07_browser.cjs`.
+
+Tests exécutés (conteneur Linux) : `test_atelier` 35/35 ; `tests` 102, `tests_agent` 236, Node 30 ; `jarvis/tests` 315 dont les 3 mêmes échecs que `main` faute de médias M07. Banc PR #17 sur l'arbre fusionné : +35 tests réussis, aucun autre écart. Détail : `docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json`.
+
+Limites : aucun prix, régime de TVA ni émetteur réels ; mentions du devis non relues sur source officielle ; aucun connecteur ; parc réel inconnu ; captures d'écran hors dépôt.
+
+Prochaine preuve : grille et TVA déclarées puis devis à blanc relu ; inventaire du parc sur la tour ; une machine en lecture d'état avec opérateur.
+
+## Atelier : relecture et améliorations — 2 novembre 2026 (soir)
+
+Demande d'Olsen : « Prête, continue d'améliorer tout ça ». La PR #18 est passée en « prête ». Une relecture a trouvé quatre défauts, chacun couvert par un test qui échouait avant la correction :
+- l'entonnoir ne comptait que les 200 demandes affichées ;
+- les dates d'envoi et d'accord prenaient le jour de saisie ;
+- un devis expiré restait déclarable envoyé ;
+- la comparaison prévu / réel n'était pas chiffrée.
+
+Ajouts :
+- devis imprimable A4, avec lignes client au prorata exact du total HT et filigranes ;
+- bloc commandes avec mesures opérateur nominatives, écarts par pièce et dérive par procédé ;
+- délais de réponse en jours.
+
+Tests : `test_atelier` 42/42 ; `jarvis/tests` 322 avec les 3 mêmes échecs que `main` ; `tests` 102, `tests_agent` 236, `tests_ops` 98, `tests_workflows` 20, Node 30. Parcours Chromium sans erreur console, PDF A4 d'une page. Détail : `docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json` (section `ameliorations_soir`).
+
+Limites inchangées : aucun prix, régime de TVA ni émetteur réels ; mentions légales non relues ; aucun connecteur d'imprimante.
+
+Suite du soir : la grille tarifaire se déclare par un formulaire (plus de JSON à la main) :
+- chaque déclaration est versionnée par empreinte, avec historique ; une déclaration concurrente est refusée ;
+- le chiffrage désigne la grille courante par son empreinte ;
+- un brouillon calculé avec une grille remplacée est signalé et son émission refusée ;
+- le SIRET de l'émetteur est contrôlé par sa clé (règle de python-stdnum 2.1, La Poste comprise).
+
+Tests : `test_atelier` 47/47, dont 5 nouveaux qui échouaient avant ; `jarvis/tests` 327 avec les 3 mêmes échecs que `main`. Parcours Chromium : SIRET faux refusé, deux versions de grille, brouillon périmé bloqué, révision, émission, PDF A4 d'une page. Banc #17 sur la fusion, trois passages : seul l'effectif des tests atelier change ; la répartition 429 / « EN ATTENTE » du scénario concurrent varie déjà de 2 à 9 refus sur le banc seul (preuves CI du banc et passages locaux). Détail : `VALIDATION.json`, section `grille_declaree`.
+
+Point de vigilance trouvé par le banc : pour la question « LangGraph », `tools/evaluate_memory.py` attend `context/CURRENT.md`, classé 5e sur 5. Une phrase de plus dans la section Atelier de `CURRENT.md` l'a fait sortir sur l'arbre fusionné avec #17 (13/14 et un échec `tests_agent`). La phrase a été raccourcie : 14/14 sur les deux arbres. Tout ajout à `CURRENT.md` doit relancer cette évaluation.
+
+## 2 novembre 2026 — preuve locale d'export vidéo/audio
+
+Suite demandée : continuer puis pousser sur GitHub. La branche de diagnostic PR #11 est rapprochée du commit `b49101e3acad6257e2d1a610dac5fb95ec0a8bfb` ; récupération des sources R03, simulations et correction de réception HTTP sont conservées. Le diagnostic de matériel et de versions reste sans génération par défaut.
+
+L'option `python tools/diagnose_environment.py --check-media --save --summary` encode une mire temporaire de deux secondes en H.264/AAC, contrôle 48 images à 24 i/s, les dimensions et durées, décode toutes les pistes et mesure le signal PCM. Une panne ou un outil absent renvoie 2 et conserve un reçu d'échec ; le fichier de test est nettoyé. Les commandes sont fixes, sans shell ni entrée média utilisateur. Le résultat ne qualifie aucune production, aucun GPU, Blender ou After Effects.
+
+Preuve exécutée sur l'environnement Linux de développement : `docs/evidence/synthetic-media-check-2026-11-02.json`, export réussi, 96 256 échantillons PCM décodés, signal non silencieux, empreinte inchangée puis suppression du clip. Treize nouveaux tests de panne passent. Validation réunie : 129 tests racine, 135 tests agents et 83 tests opérations, plus 14/14 cas de recherche lexicale. Le manifeste public est régénéré et validé. Le job CI `media-export` réalise l'export avec FFmpeg sur Linux ; les tests Windows de ce module simulent les processus et ne prouvent pas un export sur la tour. Voir `docs/DIAGNOSTIC_OUTILS.md` pour les limites et les motifs d'échec.
+## Veille des outils de conception 3D — 4 novembre 2026
+
+Objectif : demande d'Olsen du 4 novembre (« chercher les données nécessaires pour la conception 3D, tous les outils dont on pourrait avoir besoin »). Base : `main` à `3436f5352659554e4bac5af492b94af6c522ed2d`, plus la branche de la PR #15 (chaîne M08) relue pour ne pas dupliquer.
+
+Faits nouveaux. 161 fiches sourcées en cinq domaines : IA 3D locale, IA 3D en ligne et rig, modélisation et numérisation, préparation à l'impression, pilotage et données. Coûts 3D Higgsfield relevés par préflight sans job soumis : Tripo H3.1 de 6 à 12 crédits, Hunyuan3D v3 de 7 à 11, Meshy 7 de 25 à 38. Contradictions avec le dépôt : PrusaSlicer 2.7.2 contre 2.9.7 en amont ; Blender 4.0.2 contre 5.2.3 LTS (API Python changée en 5.2) ; TRELLIS.2 désormais natif dans ComfyUI sous Windows (int8 de 5,25 Go, 8 Go non mesurés) ; chemin par défaut de TripoSG non commercial (RMBG-1.4 et diso, vérifiés) ; exclusion UE de Hunyuan3D étendue à toute la famille ouverte. Les archives du site citent des Ender 5 Pro/Plus et Elegoo Saturn/Mars : indice, pas inventaire.
+
+Décisions. Aucune adoption : les fiches sont des candidats, et l'ordre des essais est une proposition. Huit bancs sont décrits dans `BANCS.json`, tous non exécutés. B1 (88 crédits) attend l'accord de l'utilisateur.
+
+Fichiers : `docs/research/conception-3d-2026-11-04/`, `data/knowledge/index.json`, `ops/orchestration.json` (tâche `conception-3d-bancs`), `context/CURRENT.md` et le manifeste du dépôt.
+
+Limites. Lecture web seulement, recoupement partiel (`VERIFICATIONS.json`). Plusieurs prix restent marqués non vérifiés. Rien d'installé, d'acheté, de généré ni de mesuré sur la tour. Pas un avis juridique.
+
+Prochaine preuve : B3, B4 et B5, qui tournent sans tour ni dépense ; puis l'inventaire réel des imprimantes, dont dépendent le trancheur, les profils et le pilotage.
+
+Suite du 4 novembre, bancs gratuits (conteneur Linux, sans GPU, pas la tour). B1 a été approuvé par l'utilisateur à 13:21 UTC, mais le compte Higgsfield n'a que 0,65 crédit : rien n'est lancé ni débité. B3 : les contrôles M08 laissent passer une pièce de 400 mm (arrêtée ensuite par le trancheur), refusent les erreurs d'unités pour une fausse raison et plantent sur un STL tronqué ; la porte d'import proposée classe les 12 pièges, mais elle a été écrite en les connaissant. B4 : PrusaSlicer 2.7.2 reproduit au chiffre près le tranchage d'Ardoise v6 du 2 novembre ; 2.9.7 donne +0,2 % de temps ; OrcaSlicer 2.4.2 avec profil traduit +17,6 % de temps et +12,5 % de filament, dus à ses supports ; Orca chauffe sans M109. B5 : Ardoise à 1 m en 18 pièces avec 34 goujons, écart de remontage 0,00003 mm après correction des trous débouchants de la première exécution. Scripts et résultats : `docs/research/conception-3d-2026-11-04/bancs/`. Prochaine preuve : B1 après recharge ; intégrer la porte d'import et la découpe à la chaîne M08 avec tests.

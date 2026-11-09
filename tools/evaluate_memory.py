@@ -11,7 +11,7 @@ from bojart_memory import Memory
 from bojart_memory.indexing import index_repository
 
 def evaluate():
-    cases=json.loads((ROOT/'data/knowledge/retrieval_cases.json').read_text())
+    cases=json.loads((ROOT/'data/knowledge/retrieval_cases.json').read_text(encoding='utf-8'))
     with tempfile.TemporaryDirectory() as state, Memory(state) as memory:
         index_repository(memory,ROOT)
         results=[]

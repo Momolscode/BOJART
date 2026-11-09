@@ -152,8 +152,13 @@
         "jarvis/apps/jarvis/app/memory.*",
         "jarvis/tests/memory_*",
         "Installer_BOJART_4060Ti.cmd",
+        "Installer_Tout_BOJART.cmd",
+        "tools/installer_tout.py",
+        "Collecter_BOJART.cmd",
+        "tools/collecte_guidee.py",
         "Mesurer_BOJART.cmd",
-        "tools/benchmark_jarvis.py"
+        "tools/benchmark_jarvis.py",
+        "Diagnostic_BOJART.*"
       ],
       "reason": "Mémoire persistante, isolation des domaines et reprise après interruption."
     },
@@ -205,6 +210,9 @@
         "bojart_ops/*",
         "tests_ops/*",
         "data/preinstallation/target-inventory.template.json",
+        "data/preinstallation/actions-jarvis.json",
+        "Banc_BOJART.cmd",
+        "Mesurer_Voix_BOJART.cmd",
         "skills/bojart-context-reconstruction/*",
         "skills/bojart-evidence-audit/*",
         "skills/bojart-tool-qualification/*",
@@ -273,7 +281,8 @@
       "evidence": [
         "context/CURRENT.md",
         "INSTALLER_DEMAIN.md",
-        "docs/memory/POSTE_RTX4060TI.md"
+        "docs/memory/POSTE_RTX4060TI.md",
+        "docs/DIAGNOSTIC_OUTILS.md"
       ],
       "acceptance": "Inventaire observé sur le poste ; choix de modèles fondé sur ses ressources.",
       "required_datasets": [
@@ -312,7 +321,8 @@
       "blockers": [],
       "evidence": [
         "context/CURRENT.md",
-        "jarvis/context/START_HERE.md"
+        "jarvis/context/START_HERE.md",
+        "docs/BANC_VOIX.md"
       ],
       "acceptance": "Essais réels en bruit, latence mesurée et reçus de chargement/rendu sur les moniteurs.",
       "qualification_gates": [
@@ -332,10 +342,12 @@
         "target-install"
       ],
       "blockers": [
-        "Connecteurs et procédure opérateur à valider sur les machines identifiées."
+        "Connecteurs et procédure opérateur à valider sur les machines identifiées.",
+        "Parc réel non inventorié ; devis et parc existent seulement en simulation, sans connecteur (docs/ATELIER_DEVIS_PARC.md)."
       ],
       "evidence": [
-        "context/CURRENT.md"
+        "context/CURRENT.md",
+        "docs/ATELIER_DEVIS_PARC.md"
       ],
       "acceptance": "Recettes d'atelier documentées ; les documents et transcriptions ne déclenchent aucune commande libre.",
       "qualification_gates": [
@@ -394,7 +406,8 @@
       "blockers": [],
       "evidence": [
         "sites/README.md",
-        "context/CURRENT.md"
+        "context/CURRENT.md",
+        "docs/ATELIER_DEVIS_PARC.md"
       ],
       "acceptance": "Entités et champs communs documentés, migrations et parcours testés avant raccordement des publications.",
       "qualification_gates": [
@@ -454,6 +467,25 @@
         "docs/research/strates-robotique-2026-11-02/verification-calculs.json"
       ],
       "acceptance": "Fiche STRATES versionnée et signée, distincte des critères figurines ; puis coupons mesurés avec incertitude déclarée avant tout choix de capteur, de bras ou de cellule."
+    },
+    {
+      "id": "conception-3d-bancs",
+      "title": "Mesurer les outils de conception 3D candidats (bancs B1 à B8)",
+      "domain": "research",
+      "priority": 2,
+      "status": "in_progress",
+      "depends_on": [],
+      "blockers": [
+        "B1 approuvé par l'utilisateur le 2026-11-04, bloqué par le solde Higgsfield (0,65 crédit pour 88) ; B2, B6, B7, B8 attendent la tour, l'inventaire des machines ou des photos d'œuvre."
+      ],
+      "evidence": [
+        "docs/research/conception-3d-2026-11-04/README.md",
+        "docs/research/conception-3d-2026-11-04/BANCS.json",
+        "docs/research/conception-3d-2026-11-04/bancs/B3-resultats.json",
+        "docs/research/conception-3d-2026-11-04/bancs/B4-resultats.json",
+        "docs/research/conception-3d-2026-11-04/bancs/B5-resultats.json"
+      ],
+      "acceptance": "Chaque banc exécuté laisse versions, empreintes, durées et reçus ; un outil n'est adopté qu'après avoir passé son seuil. B3, B4 et B5 tournent sans tour ni dépense."
     }
   ],
   "context_audit": {

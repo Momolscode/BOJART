@@ -25,6 +25,10 @@ class ProposalBook:
         # A slow model call may finish after another client created a revision.
         if file_digest(self.store.context_path)!=h or self.store.project_revision(p)!=revision:
             raise Rejected('Contexte modifié pendant l’interprétation. Proposition écartée.')
+        if decision['intent']=='create_figurine':
+            return {**decision,'project_id':p,'revision':revision,'physical_commands':False,
+                    'message':decision['message']+' Chaîne figurine exécutable par jarvis/tools/figurine_pipeline.py ; '
+                              'pas encore raccordée à ce bouton de confirmation.'}
         if decision['intent']!='create_base':
             return {**decision,'project_id':p,'revision':revision,'jobs':self.store.list_jobs(p),
                     'message':'État lu dans le journal local ; aucune action physique.'}
