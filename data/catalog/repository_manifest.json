@@ -454,13 +454,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 19553,
-      "sha256": "d025039081ff234605f31c564b2868ca03b7ec19a2650eeece4fa11f883a8fcd"
+      "bytes": 19596,
+      "sha256": "9438f1cb709ac57ab684a6b2272d315b57900de6161422034fdd6428cadc7153"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 62314,
-      "sha256": "6950637b91f6f475d34818d25dc0742753522988ea9271029088489ffe5a462b"
+      "bytes": 62389,
+      "sha256": "0e6c27c46ca2529530a230d3c36477205285afca611ebbc6fc4397fe621424b6"
     },
     {
       "path": "creative/CURRENT.md",
@@ -929,8 +929,8 @@
     },
     {
       "path": "docs/evidence/installation-2026-11-09/README.md",
-      "bytes": 5016,
-      "sha256": "e11c5e5dfa83159eabe6e02cb4d5457b894e449cbaaaf647077dcb79f6aa624c"
+      "bytes": 5996,
+      "sha256": "ddf8c9fc127f904febfce2deaa3df9426fa211daab6be2fefbad4007c1599714"
     },
     {
       "path": "docs/evidence/installation-2026-11-09/banc-apres-installation.md",
@@ -941,6 +941,11 @@
       "path": "docs/evidence/installation-2026-11-09/bruit-seul-apres.md",
       "bytes": 1018,
       "sha256": "e8acdd6adfd4bd773362e6a75209ec2fb5137d72d04a9debc56a14520124451e"
+    },
+    {
+      "path": "docs/evidence/installation-2026-11-09/ci-windows-db89f3a.json",
+      "bytes": 102772,
+      "sha256": "731e421dd9a9ce4d909b3ba482047d7724482d947208ee32a740bbfde9d5d4e6"
     },
     {
       "path": "docs/evidence/installation-2026-11-09/fin-de-prise-bruit.json",
@@ -3331,6 +3336,11 @@
       "path": "jarvis/labs/planning/prototype/test_planner.py",
       "bytes": 4333,
       "sha256": "19667899f5a7b3a5ff2146d062157ceed919429dafcb51d0c8d470f83f1dda97"
+    },
+    {
+      "path": "jarvis/locks/windows-cp312-figurine.txt",
+      "bytes": 2629,
+      "sha256": "55bf6f18d006e67006cd52dfb1c42f7b8e2101977455071ba6a879b3d9f2a901"
     },
     {
       "path": "jarvis/locks/windows-cp312-moteurs.txt",

@@ -1,0 +1,48 @@
+# Verrou BOJ.ART, profil « figurine » : généré par tools/verrouiller_dependances.py, ne pas éditer.
+# plateforme Windows AMD64 ; Python 3.12.10 ; pip 26.3 ; date 2026-11-09
+# Installer : python -m pip install --require-hashes --no-deps -r <ce fichier> puis python -m pip check
+# source jarvis/requirements-figurine.txt sha256=18736a084f735acb82b75275dcf7c97b0ed282e7d27e106ede8562fb859bfc3b
+contourpy==1.4.0 \
+    --hash=sha256:6e697d94e69f499ff6bebb899cae97a58d5d14f0e1fe9568b43a0248d2f9af8c
+cycler==0.12.1 \
+    --hash=sha256:85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30
+fonttools==4.68.0 \
+    --hash=sha256:fedc183bdbc3fdbfbdca26e0e04566d089cbb404712509a4e824608e9304cc77
+ImageIO==2.38.1 \
+    --hash=sha256:36d23eb7423d2fb63f637098758edb3d2df3687f7125e0a5ce8596572022dcf9
+kiwisolver==1.5.1 \
+    --hash=sha256:06a6917674de9e0fe3f66f5430787f59a9f2ddb64af9b714eaec547e29ef5c19
+lazy-loader==0.6 \
+    --hash=sha256:77253be3391b06124a0e16105bd663b6c54470af1a9ca8e1cf026f38d58ed056
+lxml==6.1.3 \
+    --hash=sha256:3e9a00d1c2c30936f7add097c41afc5da6556c580909104aafd382cac92a855c
+manifold3d==3.5.4 \
+    --hash=sha256:5be1025860df8a83ed3c4fd585d87376b075e23ea45e833578fe77eacc49bee1
+matplotlib==3.11.2 \
+    --hash=sha256:c5c1c68ee401fc98271263410f0e5ce88285abacf7627132914e8adf3d70ff43
+networkx==3.7 \
+    --hash=sha256:e3fd2c13a7814cee3746340d8d7f8598a67f16a58bf47fb7f8793fab6efca1b0
+numpy==2.5.4 \
+    --hash=sha256:a7b1b6353e36a7e50de2973a38d705c88ee93adcf120673cee7f45a4a3fa223a
+packaging==26.3 \
+    --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c
+pillow==13.0.0 \
+    --hash=sha256:ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b
+pyparsing==3.3.3 \
+    --hash=sha256:ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4
+python-dateutil==4.0.0 \
+    --hash=sha256:a5e246f79eb80475e691bf93862cead98decd8a498cf53ba0516fcdc0f50dc1c
+rtree==1.4.1 \
+    --hash=sha256:efe125f416fd27150197ab8521158662943a40f87acab8028a1aac4ad667a489
+scikit-image==0.26.0 \
+    --hash=sha256:abed017474593cd3056ae0fe948d07d0747b27a085e92df5474f4955dd65aec0
+scipy==1.18.1 \
+    --hash=sha256:5e4d44984abc0020154ea81b247adeddcc3ac5527b975ff798bd1ba0adc513c2
+shapely==2.2.0 \
+    --hash=sha256:90895df6542ae039fc6557dec6194e3509e883fbd6f5788e3c3e7a38fe46b257
+tifffile==2026.11.8 \
+    --hash=sha256:bb41732b357a7fa3077db439961ea1ec3a88d2fda4b45fd3ea9f7786690f6049
+trimesh==4.11.1 \
+    --hash=sha256:bcc082ced94610ecd2c09b031431d0f3ad74352525e23a41b5688a2897b3e3e0
+tzdata==2026.6 \
+    --hash=sha256:0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e7e412a70b4aec

@@ -23,6 +23,10 @@ Demande d'Olsen : auditer tout le projet et rendre Jarvis fonctionnel dès son i
 
 Parcours navigateur sur l'installation (premier essai, Playwright Chromium) : les 8 pages de la console s'ouvrent ; « Affiche le dashboard atelier » tapé dans la console s'affiche sur la vue ATELIER en ≈ 80 ms. Captures gardées hors du dépôt.
 
+## Verrou Windows du profil figurine (`db89f3a`, CI Windows)
+
+`ci-windows-db89f3a.json` : banc de la CI Windows sur la tête de la PR #22 (Windows Server 2025, Python 3.12.10) : 1 148 tests, 16/16 scénarios HTTP, les deux mêmes actions en échec pour le seul verrou figurine absent. Le verrou `jarvis/locks/windows-cp312-figurine.txt` (22 paquets avec empreintes) vient de l'artefact `preinstall-bench-windows-latest` de cette exécution (empreinte de l'archive `1e5c39d7…`, égale à celle annoncée par GitHub). Contrôles avant ajout : source `requirements-figurine.txt` identique (`18736a08…`), 13 paquets communs avec le verrou moteurs et 2 avec le verrou voix, mêmes versions et mêmes empreintes ; `verrou_dependances.verify()` ne signale plus rien, et l'installation Windows enchaîne les trois verrous sans repli. La résolution du jour ferait bouger 6 dépendances indirectes du verrou moteurs et 2 du verrou voix : ces deux verrous validés restent inchangés.
+
 ## Voix
 
 - `voix-poids-installes.md` : poids téléchargés par l'installateur, 40 prises cibles du corpus : 37 correctes, 0 erreur critique, 15/15 cas d'erreur conformes.
