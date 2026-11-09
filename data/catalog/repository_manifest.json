@@ -464,13 +464,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 20374,
-      "sha256": "51bab98e4e2d9363e3d99bbce7fc9cea5a43b7dfdb9a8e4ba46aabd02a8498f2"
+      "bytes": 20550,
+      "sha256": "e2e43a859dbb522e3bf0e39af7cca7080a581117654d3be779b331cfa4b9b7a7"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 63880,
-      "sha256": "a6dbbd20b48cc8cf11bab55bce0b6f8b697f5fcb5619039f919dd75f8ef1c885"
+      "bytes": 64200,
+      "sha256": "9af0c051142785e60c395e287bc7133e90c5970d06aa5201dba792a3b91f29ab"
     },
     {
       "path": "creative/CURRENT.md",
