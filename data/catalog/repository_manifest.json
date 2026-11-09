@@ -9,8 +9,8 @@
     },
     {
       "path": ".github/workflows/agent-memory.yml",
-      "bytes": 941,
-      "sha256": "9626c538562e8bce0e9ba77bff89758084391767db44aae4445646c2369b1c8d"
+      "bytes": 1725,
+      "sha256": "e23b15ff4d0c0cad4aa07f4063beba65704b4865a1fc444116b625775dee7946"
     },
     {
       "path": ".github/workflows/audit.yml",
@@ -73,9 +73,19 @@
       "sha256": "10924269e304c31a69d212545cf6ab09e7c286eddf95b08ad2d50666d62b6981"
     },
     {
+      "path": "Diagnostic_BOJART.cmd",
+      "bytes": 320,
+      "sha256": "8bb709f75beebd6e806ede7325d8cca345fdc6c52c3fc87b996f3262c4c727a5"
+    },
+    {
+      "path": "Diagnostic_BOJART.sh",
+      "bytes": 299,
+      "sha256": "af6ebdb22bf94f11a668fc15d397cb32e368cfaff609dc4322ffd2cf5acb155a"
+    },
+    {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 9842,
-      "sha256": "5f84042aa1bd2719955e6eda42aea0fbfadab0a2832efd7fd0f21dfb1069f9aa"
+      "bytes": 10279,
+      "sha256": "120b1f28eb099a2b120a049a6d5796998b1bb21a5c4caa40f5ff7f75840e96ca"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -383,6 +393,11 @@
       "sha256": "6650814c47dfdc7dc3e2a3cd383314abe7f9bb360503b03487e13ad97b3d7a66"
     },
     {
+      "path": "bojart_ops/environment.py",
+      "bytes": 11468,
+      "sha256": "6ec3b4c8341b8de1e74a8cee0349d7d2483d708b0d389101c37fd926cf66b087"
+    },
+    {
       "path": "bojart_ops/installation_tout.py",
       "bytes": 12517,
       "sha256": "86673e72d92d4bd0cb9e7bc0b2e0b88f81478d1d050fb5c7a7d1dfd5a978f518"
@@ -391,6 +406,11 @@
       "path": "bojart_ops/ledger.py",
       "bytes": 10884,
       "sha256": "19dd488c7f906165b54582c8bf24b40d7fefb57544562cf3b647ebd40209db31"
+    },
+    {
+      "path": "bojart_ops/media_check.py",
+      "bytes": 9351,
+      "sha256": "85ac92d4ed625056c38d0c1fdc6a1e227b8bd2c87afd22001fede4fca6ebeadb"
     },
     {
       "path": "bojart_ops/orchestration.py",
@@ -429,13 +449,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 15350,
-      "sha256": "62215cf08ab0562f4b934e4e76313fb3c4c5275165184ed7d980f72ad3c2567b"
+      "bytes": 15771,
+      "sha256": "732ead5ecef90cbea28ff14db330f32e038e76141a56d6d3f7624716325a9cd2"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 52542,
-      "sha256": "e867f9a9a5276c4e57ae8a29e5d7ac7bff4e4d5f27855280315a47c65f5edcf8"
+      "bytes": 56652,
+      "sha256": "f9a484c548180f76dea616f21cf82fa3d95dee2cc8d1697638b59c7778e05262"
     },
     {
       "path": "creative/CURRENT.md",
@@ -644,8 +664,13 @@
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
-      "bytes": 5793,
-      "sha256": "c7ef0dc947213311a354a5e00c6162c0f8f6434ff49f7f27ae48a4b4dcbea7ac"
+      "bytes": 6112,
+      "sha256": "0adae3c30d71b6e5c363a3ea7c15238820f53ad255e0c544f99382da3e069f62"
+    },
+    {
+      "path": "docs/DIAGNOSTIC_OUTILS.md",
+      "bytes": 8562,
+      "sha256": "b4ea8085e2fd3a65bacd9dd4270eac09885c41dcc3aaeb5a65fab3c7291d07da"
     },
     {
       "path": "docs/ETAT_ARCHIVES_2026-11-01.md",
@@ -878,6 +903,11 @@
       "sha256": "53e249310c85e0a98cd1742a5bc6f45cd8c6ca9a8dca83ab2686fd948b6e83ee"
     },
     {
+      "path": "docs/evidence/environment-diagnostic-2026-11-02.json",
+      "bytes": 4893,
+      "sha256": "e4444c1e622ad9232dcf7205c01b960fa17116e19382a92db2b4031341ee2e91"
+    },
+    {
       "path": "docs/evidence/handoff-v5-2026-11-02/PACK_MANIFEST_SHA256.json",
       "bytes": 246843,
       "sha256": "b01d883943e26f566502f83a2436a44b4ff8861b795ad04419cb78be512f9e4e"
@@ -1001,6 +1031,11 @@
       "path": "docs/evidence/startup-retrieval-2026-11-01.json",
       "bytes": 4144,
       "sha256": "b872839516aec06623c18dd3f99a289dbaec0465717e6704e044c93760c8248c"
+    },
+    {
+      "path": "docs/evidence/synthetic-media-check-2026-11-02.json",
+      "bytes": 2634,
+      "sha256": "b128b67a7915c3a3aea6f1f3f7be660c86d4b90865c8d1db000a90f1bdaab8ec"
     },
     {
       "path": "docs/evidence/voix-2026-11-02/README.md",
@@ -3044,8 +3079,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 15064,
-      "sha256": "4cfd4f5a0a93fdffbb1fec3f110e1566ba01821711326165aad0c4f826ea97fe"
+      "bytes": 15132,
+      "sha256": "2408664482a31a4a3b99c3c74fd43c54bdd38053a9ec9a0c2322e499e7254d45"
     },
     {
       "path": "ops/request-example.json",
@@ -4698,6 +4733,11 @@
       "sha256": "659388f705ed8987b90e8eb14cbb04b546a8437123712056376e1da6d781b437"
     },
     {
+      "path": "tests/test_environment_diagnostic.py",
+      "bytes": 11695,
+      "sha256": "04a660507feea53717d021120348bcdc4ff6c27260842c069a5d88a4a684581c"
+    },
+    {
       "path": "tests/test_http_boundaries.py",
       "bytes": 10236,
       "sha256": "d13f8c7f2446050a9fe16f92d1f048cf05afc37926cd49f8e3472d2892c60c96"
@@ -4711,6 +4751,11 @@
       "path": "tests/test_launchers.py",
       "bytes": 8427,
       "sha256": "d58388513d835465690efeb58fad1f6363a875e8a7ba1f9e611d371f8bf74e34"
+    },
+    {
+      "path": "tests/test_media_check.py",
+      "bytes": 9336,
+      "sha256": "5176b2d4046d43f582eace534305e82b3e6f9a1298f01c38b3ece73ca3e6ed63"
     },
     {
       "path": "tests/test_memory.py",
@@ -4928,9 +4973,14 @@
       "sha256": "cc4a50d26f7a01d6064a36443eeaff4d140eb2f72939b5a43a6badddbcdfbdde"
     },
     {
+      "path": "tools/diagnose_environment.py",
+      "bytes": 5038,
+      "sha256": "cd4c6bcf8dc9d67edb545cfdd8a2a28986ab62f147c9c6999bf8d29d6ebbbc2d"
+    },
+    {
       "path": "tools/doctor.py",
-      "bytes": 8296,
-      "sha256": "22c0873fb6d4edb06f115be4e1f8be12eed889f994272769aac1c22a71203805"
+      "bytes": 8625,
+      "sha256": "cc3067ccdd1cf2db4f38f001a6d0c8f1cc12cc073951bbf95e00ccb4a8cd6953"
     },
     {
       "path": "tools/download_remote_media.py",
@@ -5009,8 +5059,8 @@
     },
     {
       "path": "tools/start_jarvis.py",
-      "bytes": 5369,
-      "sha256": "ef7427c3d5c47b962d69c64589ecfd8b684dc4ea1663ccefb2588b676fff7a4d"
+      "bytes": 5658,
+      "sha256": "6f7fd5ac0ae4e49741069c6a53d6cbb486b06db1a96184018fe293f7259f78eb"
     },
     {
       "path": "tools/validate_repository.py",

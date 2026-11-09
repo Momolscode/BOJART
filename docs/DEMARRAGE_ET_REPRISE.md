@@ -14,6 +14,8 @@ Le diagnostic importe réellement les moteurs CAO/LangGraph dans un processus bo
 
 Le code de sortie `2` signale des prérequis manquants ou un problème de données/configuration ; lire `workstation_blockers`. `memory_ready` concerne Python/FTS5. `workstation_ready` concerne les dépendances CAO/média et la voix si elle est demandée. LangGraph et les modèles restent facultatifs, avec leurs replis documentés. La qualification matérielle reste distincte.
 
+Ajouter `--check-tools` relève aussi le matériel et les outils de création disponibles sur ce poste, sans initialiser les données. Le [diagnostic des outils](DIAGNOSTIC_OUTILS.md) peut également s'exécuter séparément et enregistrer un rapport privé. Ces observations n'activent aucune porte de qualification.
+
 `Lancer_BOJART` ouvre par défaut la mémoire et les fonctions disponibles, en annonçant les moteurs manquants. Pour exiger aussi les dépendances du poste :
 
 ```bash
