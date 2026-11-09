@@ -260,3 +260,46 @@ Limites. Le corps de la conversation n'est pas lu. Les documents internes I1–I
 Prochaine preuve : fiche d'acceptation STRATES (G0) signée, puis coupons mesurés avec incertitude. Le choix d'un stockage privé pour le PDF, les vidéos, le texte de la conversation et les rapports V5 revient à l'utilisateur.
 
 Correctif CI Windows : `OwnerLock` comparait le chemin résolu du dossier `.ask-locks` à son chemin absolu non résolu. Sous Windows, un nom court 8.3 du dossier temporaire suffisait à signaler une redirection : trois tests `test_ask_requests` échouaient. Un parent lié produit le même faux positif sous Linux ou macOS. L'état est désormais résolu avant comparaison ; seul un `.ask-locks` lien ou jonction reste refusé. Deux tests sont ajoutés : un parent lié est accepté, un dossier de verrous redirigé est refusé sans réservation. Le premier échoue sans la correction.
+
+## Atelier : devis, suivi des demandes et parc simulé — 2 novembre 2026
+
+Objectif : étape 3 du plan Jarvis, pendant que la figurine (PR #15), le contenu (PR #16) et le banc (PR #17) avancent. Demande : devis automatiques, suivi des demandes clients, vue et pilotage des imprimantes en mode simulé, sans commande machine réelle. Défaut signalé : Atelier 3D sans `three.core.js`.
+
+Faits nouveaux. `three.core.js` est présent sur `main` : la visionneuse importe three r180 et crée un contexte WebGL dans Chromium. La copie publiée renvoie 401 et n'est pas vérifiable d'ici ; un redéploiement éventuel demande l'accord d'Olsen. Le calcul géométrique STL en Python pur donne les mêmes triangles, volume, surface et boîte que trimesh 4.11.1 sur les deux STL M08. Les sources consultées (Moonraker, OctoPrint, PrusaLink, Bambu, Elegoo, mentions du devis) et leur statut de lecture sont listés dans `docs/ATELIER_DEVIS_PARC.md`.
+
+Décisions. Les tables atelier sont dans la base des missions, donc dans la sauvegarde globale existante. Aucune machine réelle ne reçoit d'ordre ; seule la lecture d'état peut y être autorisée, et elle est refusée tant qu'aucun connecteur n'est qualifié. Le téléversement Moonraker avec `print=true` ne doit jamais servir. La grille d'exemple ne peut pas émettre de devis.
+
+Fichiers : `jarvis/apps/jarvis/app/atelier_*.py`, `atelier.html|js|css`, `jarvis/config/atelier/`, `jarvis/tests/test_atelier.py` et sa fixture PrusaSlicer, raccordements dans `consolidated_workbench.py`, `workspace_state.py`, `jarvis_runtime.py`, `tower_screen.js`, `workspace.html`, `jarvis/tools/m07_browser.cjs`.
+
+Tests exécutés (conteneur Linux) : `test_atelier` 35/35 ; `tests` 102, `tests_agent` 236, Node 30 ; `jarvis/tests` 315 dont les 3 mêmes échecs que `main` faute de médias M07. Banc PR #17 sur l'arbre fusionné : +35 tests réussis, aucun autre écart. Détail : `docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json`.
+
+Limites : aucun prix, régime de TVA ni émetteur réels ; mentions du devis non relues sur source officielle ; aucun connecteur ; parc réel inconnu ; captures d'écran hors dépôt.
+
+Prochaine preuve : grille et TVA déclarées puis devis à blanc relu ; inventaire du parc sur la tour ; une machine en lecture d'état avec opérateur.
+
+## Atelier : relecture et améliorations — 2 novembre 2026 (soir)
+
+Demande d'Olsen : « Prête, continue d'améliorer tout ça ». La PR #18 est passée en « prête ». Une relecture a trouvé quatre défauts, chacun couvert par un test qui échouait avant la correction :
+- l'entonnoir ne comptait que les 200 demandes affichées ;
+- les dates d'envoi et d'accord prenaient le jour de saisie ;
+- un devis expiré restait déclarable envoyé ;
+- la comparaison prévu / réel n'était pas chiffrée.
+
+Ajouts :
+- devis imprimable A4, avec lignes client au prorata exact du total HT et filigranes ;
+- bloc commandes avec mesures opérateur nominatives, écarts par pièce et dérive par procédé ;
+- délais de réponse en jours.
+
+Tests : `test_atelier` 42/42 ; `jarvis/tests` 322 avec les 3 mêmes échecs que `main` ; `tests` 102, `tests_agent` 236, `tests_ops` 98, `tests_workflows` 20, Node 30. Parcours Chromium sans erreur console, PDF A4 d'une page. Détail : `docs/evidence/atelier-devis-parc-2026-11-02/VALIDATION.json` (section `ameliorations_soir`).
+
+Limites inchangées : aucun prix, régime de TVA ni émetteur réels ; mentions légales non relues ; aucun connecteur d'imprimante.
+
+Suite du soir : la grille tarifaire se déclare par un formulaire (plus de JSON à la main) :
+- chaque déclaration est versionnée par empreinte, avec historique ; une déclaration concurrente est refusée ;
+- le chiffrage désigne la grille courante par son empreinte ;
+- un brouillon calculé avec une grille remplacée est signalé et son émission refusée ;
+- le SIRET de l'émetteur est contrôlé par sa clé (règle de python-stdnum 2.1, La Poste comprise).
+
+Tests : `test_atelier` 47/47, dont 5 nouveaux qui échouaient avant ; `jarvis/tests` 327 avec les 3 mêmes échecs que `main`. Parcours Chromium : SIRET faux refusé, deux versions de grille, brouillon périmé bloqué, révision, émission, PDF A4 d'une page. Banc #17 sur la fusion, trois passages : seul l'effectif des tests atelier change ; la répartition 429 / « EN ATTENTE » du scénario concurrent varie déjà de 2 à 9 refus sur le banc seul (preuves CI du banc et passages locaux). Détail : `VALIDATION.json`, section `grille_declaree`.
+
+Point de vigilance trouvé par le banc : pour la question « LangGraph », `tools/evaluate_memory.py` attend `context/CURRENT.md`, classé 5e sur 5. Une phrase de plus dans la section Atelier de `CURRENT.md` l'a fait sortir sur l'arbre fusionné avec #17 (13/14 et un échec `tests_agent`). La phrase a été raccourcie : 14/14 sur les deux arbres. Tout ajout à `CURRENT.md` doit relancer cette évaluation.

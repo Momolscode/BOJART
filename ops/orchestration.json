@@ -340,10 +340,12 @@
         "target-install"
       ],
       "blockers": [
-        "Connecteurs et procédure opérateur à valider sur les machines identifiées."
+        "Connecteurs et procédure opérateur à valider sur les machines identifiées.",
+        "Parc réel non inventorié ; devis et parc existent seulement en simulation, sans connecteur (docs/ATELIER_DEVIS_PARC.md)."
       ],
       "evidence": [
-        "context/CURRENT.md"
+        "context/CURRENT.md",
+        "docs/ATELIER_DEVIS_PARC.md"
       ],
       "acceptance": "Recettes d'atelier documentées ; les documents et transcriptions ne déclenchent aucune commande libre.",
       "qualification_gates": [
@@ -402,7 +404,8 @@
       "blockers": [],
       "evidence": [
         "sites/README.md",
-        "context/CURRENT.md"
+        "context/CURRENT.md",
+        "docs/ATELIER_DEVIS_PARC.md"
       ],
       "acceptance": "Entités et champs communs documentés, migrations et parcours testés avant raccordement des publications.",
       "qualification_gates": [

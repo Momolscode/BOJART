@@ -16,7 +16,10 @@ from launch_readiness import assessment
 from workspace_state import WorkspaceLease, WorkspaceState, verify_snapshot
 from jarvis_runtime import JarvisRuntime
 from tower_events import TowerEvents
+from atelier_commerce import Commerce
+from atelier_parc import Parc
 import jarvis_http
+import atelier_http
 # Root memory package shares one database with the canonical document index.
 sys.path.insert(0,str(Path(__file__).resolve().parents[4]))
 from bojart_memory import http_api as memory_http
@@ -36,6 +39,8 @@ class ConsolidatedWorkbench(StudioWorkbench):
             self.display=DisplayProposals(store)
             self.growth=GrowthEngine(self.library,store.root/"growth")
             self.tower=ControlTower(store,self.display)
+            self.commerce=Commerce(store)
+            self.parc=Parc(store)
             self.workspace=WorkspaceState(self)
             self.events=TowerEvents()
             self.jarvis=JarvisRuntime(self)
@@ -75,6 +80,7 @@ class ConsolidatedHandler(StudioHandler):
         parsed=urlsplit(self.path);route=parsed.path
         if route in memory_http.GETS:return memory_http.get(self,parsed,ROOT/'app')
         if route in jarvis_http.GETS:return jarvis_http.get(self,parsed,ROOT)
+        if route in atelier_http.GETS:return atelier_http.get(self,parsed,ROOT)
         if route=='/health':
             if not self.check_host():return
             return self.j({'status':'local_ready','version':self.server.app_version,'physical_commands':False,'production_ready':False})
@@ -211,7 +217,7 @@ class ConsolidatedHandler(StudioHandler):
         finally:self.server.requests_gate.release()
 
     def workspace_post(self):
-        if self.path not in {'/api/backup','/api/workspace/backup','/api/workspace/check','/api/workspace/recover','/api/projects/create','/api/control/prepare','/api/growth/prepare','/api/growth/validate','/api/tower/pair','/api/tower/poll','/api/tower/dispatch','/api/tower/ack'}:return super().do_POST()
+        if self.path not in {'/api/backup','/api/workspace/backup','/api/workspace/check','/api/workspace/recover','/api/projects/create','/api/control/prepare','/api/growth/prepare','/api/growth/validate','/api/tower/pair','/api/tower/poll','/api/tower/dispatch','/api/tower/ack'} and self.path not in atelier_http.POSTS:return super().do_POST()
         if not self.check_host():return
         if not self.authorized():return self.j({'error':'Session requise.'},401)
         if self.headers.get('Origin')!=self.server.origin:return self.j({'error':'Origine refusée.'},403)
@@ -224,6 +230,7 @@ class ConsolidatedHandler(StudioHandler):
             if len(raw)!=n:raise Rejected('Requête incomplète.')
             data=strict_json(raw)
             if not isinstance(data,dict):raise Rejected('Objet JSON requis.')
+            if self.path in atelier_http.POSTS:return self.j(atelier_http.dispatch(self.server,self.path,data))
             if self.path in {'/api/backup','/api/workspace/backup'}:
                 if set(data) not in (set(),{'request_id'}):raise Rejected('Identifiant de sauvegarde attendu.')
                 return self.j(self.server.workspace.backup(data.get('request_id')))
