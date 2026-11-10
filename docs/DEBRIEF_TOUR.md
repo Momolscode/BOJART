@@ -30,6 +30,8 @@ Seulement les rapports que Jarvis écrit lui-même dans `%USERPROFILE%\BOJART`, 
 | mesures | `benchmarks` | la dernière de `Mesurer_BOJART.cmd` |
 | diagnostic | `diagnostics` | le dernier, sur demande seulement |
 
+« Le dernier » veut dire le rapport texte le plus récent et les fichiers qui portent son nom. Un fichier isolé posé dans le dossier, une capture par exemple, ne prend jamais sa place et ne part pas.
+
 Ces rapports disent ce qui a été mesuré, les versions installées, le système, le processeur, la mémoire et la carte graphique. Ils arrivent dans `docs/evidence/tour-AAAA-MM-JJ-HHMMSS/`, avec un `README.md` qui donne pour chacun l'empreinte SHA-256 de l'original resté sur la tour, le nombre de retraits et une ligne de résultat.
 
 Ne partent jamais : médias, bases SQLite, mémoire documentaire, collecte, configuration privée, modèles, ni aucun dossier choisi librement.
@@ -49,4 +51,4 @@ Le débrief arrive sur une branche, pas dans `main` : il décrit ce que la tour 
 
 ## Vérifications
 
-`python tools/publier_debrief.py essai` : faux dépôt distant local, faux dossier personnel, une image et un jeton plantés ; 12 contrôles, exécutés par le banc sous Linux et sous Windows (`outil:debrief_simulation`). `tests_ops/test_debrief_tour.py` : 22 tests (ce qui est retenu, ce qui est retiré, destinations refusées, accord, lanceur). Preuve du 9 novembre : `docs/evidence/debrief-tour-2026-11-09/`.
+`python tools/publier_debrief.py essai` : faux dépôt distant local, faux dossier personnel, une image et un jeton plantés ; 12 contrôles, exécutés par le banc sous Linux et sous Windows (`outil:debrief_simulation`). `tests_ops/test_debrief_tour.py` : 24 tests (ce qui est retenu, ce qui est retiré, destinations refusées, accord, lanceur). Preuve du 9 novembre : `docs/evidence/debrief-tour-2026-11-09/`.

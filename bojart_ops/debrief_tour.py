@@ -74,7 +74,14 @@ def collect(home=None, families=DEFAULT_FAMILIES):
     for family in families:
         folder, runs = FAMILIES[family]
         files = [p for p in sorted((base / folder).glob('*')) if p.is_file() or p.is_symlink()]
-        stems = sorted({p.stem for p in files}, key=lambda s: max(p.lstat().st_mtime for p in files if p.stem == s), reverse=True)[:runs]
+        # A run is the files that share the stem of a text report; a stray file (a screenshot dropped in the folder)
+        # is not a run and never takes the place of a report. Two runs written in the same clock tick (Windows)
+        # are told apart by their name, which carries the date: never by the order of a set.
+        latest = {}
+        for path in files:
+            if path.suffix.lower() in SUFFIXES:
+                latest[path.stem] = max(latest.get(path.stem, 0), path.lstat().st_mtime)
+        stems = sorted(latest, key=lambda stem: (latest[stem], stem), reverse=True)[:runs]
         for path in files:
             if path.stem not in stems:
                 continue

@@ -399,8 +399,8 @@
     },
     {
       "path": "bojart_ops/debrief_tour.py",
-      "bytes": 16899,
-      "sha256": "42dca384d883d050bd43c2ef2d5781f10808cf26d0dd7298c5722ec2dfd8b97b"
+      "bytes": 17358,
+      "sha256": "fd8e087478fc5b571319405a3722e2e0af8685b09ac0654f988eaa8b4607ac14"
     },
     {
       "path": "bojart_ops/environment.py",
@@ -580,7 +580,7 @@
     {
       "path": "data/knowledge/sources.json",
       "bytes": 12295,
-      "sha256": "4f0459ba38f5a128461dac44adbf668792146212e07fb36e54853efde5943516"
+      "sha256": "24ac08c2a86676c6d45be1d486081fc75172fa0bafdf784686fb643d2661135e"
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
@@ -655,7 +655,7 @@
     {
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
       "bytes": 12703,
-      "sha256": "d407555bd7c2ed4e27e1a92f57ae85eb05e1306c98800af6469046609cbca002"
+      "sha256": "c58aae6e3acb62da0ce06c4024b09403db00264ea092a8e5840a0f8060338e8b"
     },
     {
       "path": "docs/BANC_VOIX.md",
@@ -679,8 +679,8 @@
     },
     {
       "path": "docs/DEBRIEF_TOUR.md",
-      "bytes": 4445,
-      "sha256": "855d188b6da64f8d549834f8f30df2d6c7fbabf14edb8ddf35efa103b4ff85fe"
+      "bytes": 4650,
+      "sha256": "4b104d2adb5a2f588d9aa0ebdee5f105180867db978e69cd37f31115a8b47dc4"
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
@@ -919,13 +919,13 @@
     },
     {
       "path": "docs/evidence/debrief-tour-2026-11-09/README.md",
-      "bytes": 1748,
-      "sha256": "13b54b90549b4bfc4346e3edf9fd219691e6d4041a39f343aa6a8a432ab87062"
+      "bytes": 2654,
+      "sha256": "e2ffe2d15fdbc96b28781d86a5fe1891abadb137dc0662e328f32543960f8d4f"
     },
     {
       "path": "docs/evidence/debrief-tour-2026-11-09/essai.json",
       "bytes": 532,
-      "sha256": "d7141e86baa429c40002e61747ed6943cef837108db43859b8447ed16b756fd1"
+      "sha256": "22ec06ff0abbfeb2468aaccc2d63ac643a2a601040538e24256643d19a3e1f74"
     },
     {
       "path": "docs/evidence/debrief-tour-2026-11-09/simulation-depot-reel.json",
@@ -5524,8 +5524,8 @@
     },
     {
       "path": "tests_ops/test_debrief_tour.py",
-      "bytes": 20209,
-      "sha256": "901480b95ad292b74e44654c80ef534ea9b823962666d953dc7718173e7b4e46"
+      "bytes": 21393,
+      "sha256": "fb37586d22d242d6457c8c15984e28641653ebf4d1a3a62ecc8d7889f53b3f3a"
     },
     {
       "path": "tests_ops/test_installation_prete.py",
@@ -5674,8 +5674,8 @@
     },
     {
       "path": "tools/publier_debrief.py",
-      "bytes": 11933,
-      "sha256": "ea5140f5727f6f310393bb9d7732c7f7452ab7a136a34e1164ea4d349f416be7"
+      "bytes": 12179,
+      "sha256": "4530a6d93bd15f849db4981675d9a80369fafefd586d1dc74b12c42c283e53b4"
     },
     {
       "path": "tools/quality_gate.py",

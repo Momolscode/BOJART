@@ -73,6 +73,23 @@ class Collect(Base):
         with_diag, _ = dt.collect(self.home, dt.DEFAULT_FAMILIES + ('diagnostic',))
         self.assertIn('20261109-abcd.json', [k['nom'] for k in with_diag])
 
+    def test_two_runs_written_in_the_same_instant_are_told_apart_by_name(self):
+        # Windows gives the same time to files written in one clock tick: the later name wins, with its own image.
+        for name in ('banc-20261109-120000.json', 'banc-20261109-120000.png', 'banc-20261109-120500.json',
+                     'banc-20261109-120500.md', 'banc-20261109-120500.png', 'capture.png'):
+            self.report('banc/' + name, mtime=1_000)
+        kept, aside = dt.collect(self.home, ('banc',))
+        self.assertEqual([k['nom'] for k in kept], ['banc-20261109-120500.json', 'banc-20261109-120500.md'])
+        self.assertEqual([a['fichier'] for a in aside], ['banc-20261109-120500.png'])
+
+    def test_a_stray_file_never_takes_the_place_of_a_report(self):
+        self.report('banc/banc-1.json', mtime=1_000)
+        self.report('banc/banc-1.png', b'\x89PNG', mtime=1_000)
+        self.report('banc/capture.png', b'\x89PNG', mtime=9_000)  # dropped in the folder after the bench
+        kept, aside = dt.collect(self.home, ('banc',))
+        self.assertEqual([k['nom'] for k in kept], ['banc-1.json'])
+        self.assertEqual([a['fichier'] for a in aside], ['banc-1.png'])
+
     @unittest.skipIf(os.name == 'nt', 'creating a link needs a privilege under Windows')
     def test_a_link_is_never_followed(self):
         secret = self.tmp / 'ailleurs.json'

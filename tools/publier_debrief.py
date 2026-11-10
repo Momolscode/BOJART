@@ -125,7 +125,8 @@ def essai():
         (base / 'banc/banc-1.json').write_text(json.dumps({'python_teste': str(home / 'BOJART/.venv/python.exe'),
                                                            'synthese': {'tests_executes': 3}}), encoding='utf-8')
         (base / 'banc/banc-1.md').write_text(f'# Banc\n\nPython : `{home}`\n', encoding='utf-8')
-        (base / 'banc/capture.png').write_bytes(b'\x89PNG\r\n\x1a\n' + bytes(64))
+        # The image belongs to the bench run (same stem): it is seen with it, whatever the clock says, and stays behind.
+        (base / 'banc/banc-1.png').write_bytes(b'\x89PNG\r\n\x1a\n' + bytes(64))
         (base / 'banc-voix/rapports/mesure.md').write_text('# Voix\n', encoding='utf-8')
         clone = tmp / 'tour' / 'BOJART'
         run(['clone', '-q', str(origin), str(clone)], tmp)
@@ -145,7 +146,8 @@ def essai():
             {p for p in pushed if p not in seeded} == set(files)
             and run(['diff', '--name-only', 'main', result['branche']], origin).split() == sorted([dt.MANIFEST, *files]))
         controls['donnees_personnelles_retirees'] = not any(s in text for s in ('Camille', 'TOUR-ESSAI', 'exemple.fr', str(tmp)))
-        controls['media_laisse_sur_la_tour'] = any(r['fichier'] == 'capture.png' for r in refused) and not any(p.endswith('.png') and p.startswith(folder) for p in pushed)
+        controls['media_laisse_sur_la_tour'] = (any(r['fichier'] == 'banc-1.png' for r in refused) and not any(p.endswith('.png') and p.startswith(folder) for p in pushed)
+                                               and {f'{folder}/banc/banc-1.json', f'{folder}/banc/banc-1.md'} <= set(pushed))
         controls['copie_de_travail_intacte'] = (run(['rev-parse', 'HEAD'], clone).strip() == head_before
                                                and run(['status', '--porcelain'], clone) == status_before)
         controls['identite_neutre'] = run(['log', '-1', '--format=%an <%ae>', result['branche']], origin).strip() == f'{dt.IDENTITY[0]} <{dt.IDENTITY[1]}>'

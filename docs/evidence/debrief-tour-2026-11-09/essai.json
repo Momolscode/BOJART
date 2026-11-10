@@ -14,6 +14,6 @@
     "simulation_ne_pousse_rien": true,
     "arbre_temporaire_retire": true
   },
-  "fichiers_pousses": 3,
+  "fichiers_pousses": 5,
   "git": "git version 2.43.0"
 }

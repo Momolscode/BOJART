@@ -224,7 +224,7 @@
   {
     "source_id": "debrief-tour-essai-20261109",
     "path": "docs/evidence/debrief-tour-2026-11-09/essai.json",
-    "sha256": "d7141e86baa429c40002e61747ed6943cef837108db43859b8447ed16b756fd1",
+    "sha256": "22ec06ff0abbfeb2468aaccc2d63ac643a2a601040538e24256643d19a3e1f74",
     "evidence": "executed_this_session",
     "scope": "Essai de bout en bout de tools/publier_debrief.py sur un faux dépôt distant local, conteneur Linux, sans réseau : 12 contrôles ; aucune poussée réelle vers GitHub, aucune connexion de la tour"
   },
