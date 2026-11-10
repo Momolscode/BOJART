@@ -5,7 +5,7 @@ cd /d "%~dp0"
 echo ============================================================
 echo  BOJ.ART Jarvis : installation complete de la tour
 echo ============================================================
-echo Verifie puis installe, si besoin : Python 3.12, Ollama, FFmpeg,
+echo Verifie puis installe, si besoin : Python 3.12, Ollama, FFmpeg, Git,
 echo Jarvis complet (memoire, CAO, LangGraph, voix, figurine) depuis le
 echo verrou Windows, la voix prete a l'emploi (poids small ~470 Mo),
 echo les modeles locaux du profil speed, puis lance le banc.

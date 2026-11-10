@@ -5,7 +5,7 @@
   python tools/installer_tout.py --oui           # sans question (accord donné à l'avance)
   python tools/installer_tout.py --simulation    # plan seul, en JSON : rien n'est installé ni téléchargé
 
-Étapes : Ollama et FFmpeg (winget, si absents), démarrage d'Ollama, Jarvis complet depuis les
+Étapes : Ollama, FFmpeg et Git (winget, si absents), démarrage d'Ollama, Jarvis complet depuis les
 verrous Windows (voix et chaîne figurine comprises), poids de la voix et son activation, modèles
 locaux du profil, banc de contrôle. Journal : ~/BOJART/installation/.
 Aucune imprimante, publication, dépense ou suppression de données.
@@ -55,7 +55,7 @@ def main(argv=None):
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     print('Ce qui est déjà là :')
-    for key, label in (('ollama', 'Ollama'), ('ffmpeg', 'FFmpeg'), ('winget', 'winget')):
+    for key, label in (('ollama', 'Ollama'), ('ffmpeg', 'FFmpeg'), ('git', 'Git'), ('winget', 'winget')):
         print(f'  {label} : {state[key] or "absent"}')
     print(f'  Ollama répond : {state["ollama_actif"] or "non"} ; espace libre : {state["espace_libre_go"]} Go')
     print('\nPlan :')
@@ -85,6 +85,7 @@ def main(argv=None):
     if journal.data['synthese']['termine']:
         print('Tout est installé. Ouvrir Lancer_BOJART.cmd.')
         print('Pour rapatrier vidéos, photos et documents : Collecter_BOJART.cmd.')
+        print('Pour envoyer le débrief de cette installation sur GitHub : Publier_Debrief_BOJART.cmd.')
     else:
         print('Reste à faire :')
         for line in journal.data['synthese']['reste_a_faire']:

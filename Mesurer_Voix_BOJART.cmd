@@ -9,6 +9,9 @@ set "PY=py -3.12"
 if exist ".venv\Scripts\python.exe" set "PY=.venv\Scripts\python.exe"
 set "CORPUS=%USERPROFILE%\BOJART\banc-voix\corpus-2026-11-02"
 set "MODELE=%USERPROFILE%\BOJART\modeles\whisper-small"
+rem Poids deja installes par Installer_Tout_BOJART.cmd (tools\preparer_voix.py) : les reutiliser, sans second telechargement.
+set "INSTALLE=%USERPROFILE%\BOJART\modeles\voix\faster-whisper-small-536b0662"
+if exist "%INSTALLE%\model.bin" set "MODELE=%INSTALLE%"
 set "RAPPORTS=%USERPROFILE%\BOJART\banc-voix\rapports"
 if not exist "%RAPPORTS%" mkdir "%RAPPORTS%"
 rem Decodage audio de Jarvis (PyAV) verifie d'abord, sans modele : tools\verifier_voix.py.
@@ -38,5 +41,6 @@ echo Mesure en cours : environ 10 a 20 minutes selon le processeur.
 %PY% tools\banc_voix.py mesurer --corpus "%CORPUS%" --modele "%MODELE%" --sortie "%RAPPORTS%" --libelle "tour small"
 echo Sonde bruit seul : la reconnaissance ne doit inventer aucune commande (environ 5 minutes).
 %PY% tools\banc_voix.py bruit --modele "%MODELE%" --sortie "%RAPPORTS%" --libelle "tour small"
-echo Rapports dans %RAPPORTS% (JSON et Markdown). Les envoyer pour comparaison avec la mesure du conteneur.
+echo Rapports dans %RAPPORTS% (JSON et Markdown).
+echo Pour les envoyer sur GitHub et les comparer a la mesure du conteneur : Publier_Debrief_BOJART.cmd
 pause

@@ -29,8 +29,8 @@
     },
     {
       "path": ".github/workflows/preinstall-bench.yml",
-      "bytes": 3153,
-      "sha256": "b7d3e29489187e563af776aa5734f632d82df09e826a8239bcdacb74f8c0f9b9"
+      "bytes": 3231,
+      "sha256": "14866f1772c3cb2fc60f739e3977d272e6b673836baeded55695ec46253b1004"
     },
     {
       "path": ".github/workflows/quality.yml",
@@ -84,8 +84,8 @@
     },
     {
       "path": "INSTALLER_DEMAIN.md",
-      "bytes": 11173,
-      "sha256": "0dbd85b653e1f59aea6e720f27d69c53cc262226ea67d52c6dea282f467abfe1"
+      "bytes": 12125,
+      "sha256": "ab838e73a135dabd43c26c63c21adcf31b06cc3b6485e51a05a527771d993856"
     },
     {
       "path": "Installer_BOJART.cmd",
@@ -104,8 +104,8 @@
     },
     {
       "path": "Installer_Tout_BOJART.cmd",
-      "bytes": 1970,
-      "sha256": "ec1fd9aebbeb98bad07b55c8f1ddbcea9611b1ecf3bd29bf43176fb36860d3a5"
+      "bytes": 1975,
+      "sha256": "f669d76a429cae0d72bdffd5fb6ce66a7dd8ba79b050f7a37bcc6a1c4c404008"
     },
     {
       "path": "Lancer_BOJART.cmd",
@@ -124,13 +124,18 @@
     },
     {
       "path": "Mesurer_Voix_BOJART.cmd",
-      "bytes": 1965,
-      "sha256": "03e6a0376cfdb77becd8b63b6db0974dad96510eab1f3816d2a6b1dbf3ef18f3"
+      "bytes": 2275,
+      "sha256": "84bca8ce17bc5a7eaee3834baa51b5e7ab0f8cf004331af8c1c050509ff1ffaa"
     },
     {
       "path": "PRODUCTION.md",
       "bytes": 3041,
       "sha256": "eb98bca179df7073db321b63bf898c66890d92ac46bdeda3c0d143c51838f643"
+    },
+    {
+      "path": "Publier_Debrief_BOJART.cmd",
+      "bytes": 860,
+      "sha256": "f2c8fc315e295efb9223771ddd6dea10145549628e6c036628d62f3d3ba79f7f"
     },
     {
       "path": "README.md",
@@ -374,8 +379,8 @@
     },
     {
       "path": "bojart_ops/banc_simulation.py",
-      "bytes": 34437,
-      "sha256": "4c582ffea93586b9aa365306d3475de0677c8da4b3f3ca9cbd1880e80eda2c7c"
+      "bytes": 35226,
+      "sha256": "d616223eca8768bf26c560b8f31a8cbcd4c08fbb2d2dac65315854ffcba0dace"
     },
     {
       "path": "bojart_ops/banc_statique.py",
@@ -393,14 +398,19 @@
       "sha256": "6650814c47dfdc7dc3e2a3cd383314abe7f9bb360503b03487e13ad97b3d7a66"
     },
     {
+      "path": "bojart_ops/debrief_tour.py",
+      "bytes": 17358,
+      "sha256": "fd8e087478fc5b571319405a3722e2e0af8685b09ac0654f988eaa8b4607ac14"
+    },
+    {
       "path": "bojart_ops/environment.py",
       "bytes": 11468,
       "sha256": "6ec3b4c8341b8de1e74a8cee0349d7d2483d708b0d389101c37fd926cf66b087"
     },
     {
       "path": "bojart_ops/installation_tout.py",
-      "bytes": 13265,
-      "sha256": "e3b61ea24531dc70bacf153fd627d7c283c0b41b55c9d9ccbea39d24b61be303"
+      "bytes": 14062,
+      "sha256": "898cddc5bbc9afb7a6a29b9950ceec2cb7a136b1eed2f0bb456b8fbf122c197a"
     },
     {
       "path": "bojart_ops/ledger.py",
@@ -454,13 +464,13 @@
     },
     {
       "path": "context/CURRENT.md",
-      "bytes": 19596,
-      "sha256": "9438f1cb709ac57ab684a6b2272d315b57900de6161422034fdd6428cadc7153"
+      "bytes": 20550,
+      "sha256": "e2e43a859dbb522e3bf0e39af7cca7080a581117654d3be779b331cfa4b9b7a7"
     },
     {
       "path": "context/SESSION_HANDOFF.md",
-      "bytes": 62389,
-      "sha256": "0e6c27c46ca2529530a230d3c36477205285afca611ebbc6fc4397fe621424b6"
+      "bytes": 64200,
+      "sha256": "9af0c051142785e60c395e287bc7133e90c5970d06aa5201dba792a3b91f29ab"
     },
     {
       "path": "creative/CURRENT.md",
@@ -549,8 +559,8 @@
     },
     {
       "path": "data/knowledge/claims.jsonl",
-      "bytes": 18064,
-      "sha256": "adb86f034af80c254743c8a0831aaa5e7603c29690cfc03be7a3aa5881812e22"
+      "bytes": 19492,
+      "sha256": "f651e31e0cbe8405263ece8a601f6936acd485c34c241c265c394fe45b9917c0"
     },
     {
       "path": "data/knowledge/conflicts.json",
@@ -569,13 +579,13 @@
     },
     {
       "path": "data/knowledge/sources.json",
-      "bytes": 11078,
-      "sha256": "802e94e9fc93f1ab430dad4ac1146f89cfe4661d4cae3000eead981fe95c12a4"
+      "bytes": 12295,
+      "sha256": "24ac08c2a86676c6d45be1d486081fc75172fa0bafdf784686fb643d2661135e"
     },
     {
       "path": "data/preinstallation/actions-jarvis.json",
-      "bytes": 22110,
-      "sha256": "f195cb12d3ef9cd9d5ddbeca4e85724fe11d64c214b925032f94683119233664"
+      "bytes": 22997,
+      "sha256": "720051054b5aca119c2f25a3c7864f2347e7da0ffe951cfffc7df501db73df1c"
     },
     {
       "path": "data/preinstallation/knowledge-cards.json",
@@ -644,8 +654,8 @@
     },
     {
       "path": "docs/BANC_SIMULATION_PREINSTALLATION.md",
-      "bytes": 11719,
-      "sha256": "424ab278d50e63b139c70fb813e675edd4e0e1ecf42dd1d1247e9aa53eda0c7a"
+      "bytes": 12703,
+      "sha256": "c58aae6e3acb62da0ce06c4024b09403db00264ea092a8e5840a0f8060338e8b"
     },
     {
       "path": "docs/BANC_VOIX.md",
@@ -666,6 +676,11 @@
       "path": "docs/DATA_GOVERNANCE.md",
       "bytes": 4107,
       "sha256": "d709e109111a2ad441e8849432b1efdfe6eb619a1d758be755cd122d62d72c33"
+    },
+    {
+      "path": "docs/DEBRIEF_TOUR.md",
+      "bytes": 4650,
+      "sha256": "4b104d2adb5a2f588d9aa0ebdee5f105180867db978e69cd37f31115a8b47dc4"
     },
     {
       "path": "docs/DEMARRAGE_ET_REPRISE.md",
@@ -901,6 +916,21 @@
       "path": "docs/evidence/consolidation-2026-11-01.json",
       "bytes": 4037,
       "sha256": "0c84f14b115c2d9bec3798f1868add0cd6e63b25d47d605c0683ba8a0bd4899a"
+    },
+    {
+      "path": "docs/evidence/debrief-tour-2026-11-09/README.md",
+      "bytes": 2654,
+      "sha256": "e2ffe2d15fdbc96b28781d86a5fe1891abadb137dc0662e328f32543960f8d4f"
+    },
+    {
+      "path": "docs/evidence/debrief-tour-2026-11-09/essai.json",
+      "bytes": 532,
+      "sha256": "22ec06ff0abbfeb2468aaccc2d63ac643a2a601040538e24256643d19a3e1f74"
+    },
+    {
+      "path": "docs/evidence/debrief-tour-2026-11-09/simulation-depot-reel.json",
+      "bytes": 2031,
+      "sha256": "ced6b90faffe796e5ddb5217f84bd8f313e3fc8bf6444ebe783332aee0db8c1f"
     },
     {
       "path": "docs/evidence/deep-recovery-2026-11-01.json",
@@ -3674,8 +3704,8 @@
     },
     {
       "path": "ops/orchestration.json",
-      "bytes": 16157,
-      "sha256": "e534d895db7cecf8ab4651cef6bd1107180662d1edd87048f0476395752a7da8"
+      "bytes": 16195,
+      "sha256": "1b3dcc1dc4957aaa4b5fed5d986aef7f20d5be17626ed175159174f0de14602e"
     },
     {
       "path": "ops/request-example.json",
@@ -5479,8 +5509,8 @@
     },
     {
       "path": "tests_ops/test_banc_simulation.py",
-      "bytes": 13275,
-      "sha256": "c7f2f9984a7f8b5143c763c954c470ea64e85a3b3c17e60664de826f443e5d8d"
+      "bytes": 13297,
+      "sha256": "bb1e999a43645f81718819a229f64ceb029a84de82f9a4120ba80a208ae4ab7b"
     },
     {
       "path": "tests_ops/test_banc_voix.py",
@@ -5493,14 +5523,19 @@
       "sha256": "fc0b2071ed7a4db987d327e9c5ec91c82f4fd9e1bfea45b71e443717b2ab5461"
     },
     {
+      "path": "tests_ops/test_debrief_tour.py",
+      "bytes": 21393,
+      "sha256": "fb37586d22d242d6457c8c15984e28641653ebf4d1a3a62ecc8d7889f53b3f3a"
+    },
+    {
       "path": "tests_ops/test_installation_prete.py",
       "bytes": 9177,
       "sha256": "12a87c1c3589b5d1c50973d6df16322dc0c505ee1bab5e6d3e29217957e8322b"
     },
     {
       "path": "tests_ops/test_installation_tout.py",
-      "bytes": 9602,
-      "sha256": "2a130654a82ad4617a5f49a7c154ffb511365f0854702d55701cba0e3c8a991b"
+      "bytes": 11174,
+      "sha256": "50de7be7a535b4f0481e158a31a6cef7b8b5ca61112ff21bcdee59b4f8121e6b"
     },
     {
       "path": "tests_ops/test_ops.py",
@@ -5599,8 +5634,8 @@
     },
     {
       "path": "tools/installer_tout.py",
-      "bytes": 5289,
-      "sha256": "6bf9d4e6e252014da314fae2e5d4acc48dd9776ec35d410e7804643fb18b3c30"
+      "bytes": 5415,
+      "sha256": "391627ad2ee47f6d4893297619972ea8af3101546d219ff7f49d55f97b8df5cd"
     },
     {
       "path": "tools/memory_browser.cjs",
@@ -5636,6 +5671,11 @@
       "path": "tools/preparer_voix.py",
       "bytes": 1832,
       "sha256": "4586a4900e52749b43acc93d079b9808d094bcd44873492c36a5fb1b7878ecdd"
+    },
+    {
+      "path": "tools/publier_debrief.py",
+      "bytes": 12179,
+      "sha256": "4530a6d93bd15f849db4981675d9a80369fafefd586d1dc74b12c42c283e53b4"
     },
     {
       "path": "tools/quality_gate.py",

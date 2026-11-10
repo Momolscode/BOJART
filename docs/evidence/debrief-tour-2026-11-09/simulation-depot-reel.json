@@ -1,0 +1,32 @@
+{
+  "schema": "bojart.debrief-tour.simulation.v1",
+  "date": "2026-11-09",
+  "commande": "python tools/publier_debrief.py --simulation --note \"essai du conteneur, rien de poussé\"",
+  "rapports_source": "journal et banc de la réinstallation du 9 novembre (docs/evidence/installation-2026-11-09/), relus depuis un dossier personnel d’essai",
+  "affichage": [
+    "Débrief de la tour : 3 rapport(s), dossier docs/evidence/tour-2026-11-09-233249",
+    "  README.md                                                         1317 octets",
+    "  banc/banc-installation-20261109-223723.json                      98583 octets",
+    "  banc/banc-installation-20261109-223723.md                        28465 octets",
+    "  installation/installation-20261109-223723.json                    1739 octets",
+    "Destination : https://github.com/Momolscode/BOJART, branche neuve tour/debrief-20261109-233249 (jamais main).",
+    "Ce dépôt est PUBLIC : ces rapports (résultats, versions, système, processeur, carte graphique) seront lisibles par tous.",
+    "Aucun média, aucune base, aucune donnée client ne part."
+  ],
+  "resultat": {
+    "branche": "tour/debrief-20261109-233249",
+    "dossier": "docs/evidence/tour-2026-11-09-233249",
+    "commit": "db8712b842dd83243306b94992c1d69fb2c71649",
+    "base": "3436f5352659554e4bac5af492b94af6c522ed2d",
+    "fichiers": [
+      "docs/evidence/tour-2026-11-09-233249/README.md",
+      "docs/evidence/tour-2026-11-09-233249/banc/banc-installation-20261109-223723.json",
+      "docs/evidence/tour-2026-11-09-233249/banc/banc-installation-20261109-223723.md",
+      "docs/evidence/tour-2026-11-09-233249/installation/installation-20261109-223723.json"
+    ],
+    "pousse": false,
+    "depot": "https://github.com/Momolscode/BOJART"
+  },
+  "conclusion": "Simulation : tout est prêt et contrôlé, rien n’a été poussé.",
+  "limites": "Conteneur Linux ; lecture de main sur GitHub puis commit dans un arbre temporaire ; aucune poussée, aucune connexion GitHub en écriture essayée."
+}
