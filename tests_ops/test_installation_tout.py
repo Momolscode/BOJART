@@ -24,7 +24,7 @@ SPEC.loader.exec_module(cli)
 
 def state(**over):
     base = {'systeme': 'windows', 'python': '3.12.10', 'python_312': True, 'winget': r'C:\winget.exe', 'ollama': None,
-            'ollama_actif': None, 'ffmpeg': None, 'venv': False, 'verrous_windows': [], 'espace_libre_go': 120.0}
+            'ollama_actif': None, 'ffmpeg': None, 'git': None, 'venv': False, 'verrous_windows': [], 'espace_libre_go': 120.0}
     base.update(over)
     return base
 
@@ -46,32 +46,36 @@ class Plan(Base):
     def test_bare_tower_installs_everything_in_order(self):
         steps = self.steps(state())
         self.assertEqual([s['id'] for s in steps],
-                         ['ollama_installation', 'ffmpeg_installation', 'ollama_demarrage', 'jarvis', 'voix', 'modeles', 'banc'])
+                         ['ollama_installation', 'ffmpeg_installation', 'git_installation', 'ollama_demarrage', 'jarvis', 'voix',
+                          'modeles', 'banc'])
         self.assertEqual(steps[0]['commande'][:4], ['winget', 'install', '--id', 'Ollama.Ollama'])
         self.assertIn('Gyan.FFmpeg', steps[1]['commande'])
-        self.assertEqual(steps[3]['commande'][-3:], ['--engines', '--voice', '--figurine'])
+        self.assertIn('Git.Git', steps[2]['commande'])  # Git pushes the tower debrief; nothing else depends on it
+        self.assertFalse(any('git_installation' in s.get('depend_de', []) for s in steps))
+        self.assertEqual(steps[4]['commande'][-3:], ['--engines', '--voice', '--figurine'])
         # The voice is prepared (pinned weights, setting) with the installed environment, after Jarvis.
-        self.assertEqual(steps[4]['depend_de'], ['jarvis'])
-        self.assertTrue(steps[4]['commande'][0].endswith(str(Path('.venv/Scripts/python.exe'))))
-        self.assertTrue(steps[4]['commande'][1].endswith('preparer_voix.py'))
-        self.assertEqual(steps[5]['commande'][-3:], ['--model-profile', 'speed', '--download-models'])
-        self.assertTrue(steps[6]['commande'][0].endswith(str(Path('.venv/Scripts/python.exe'))))
-        self.assertTrue(steps[6]['commande'][-1].endswith('banc-installation-S.md'))
+        self.assertEqual(steps[5]['depend_de'], ['jarvis'])
+        self.assertTrue(steps[5]['commande'][0].endswith(str(Path('.venv/Scripts/python.exe'))))
+        self.assertTrue(steps[5]['commande'][1].endswith('preparer_voix.py'))
+        self.assertEqual(steps[6]['commande'][-3:], ['--model-profile', 'speed', '--download-models'])
+        self.assertTrue(steps[7]['commande'][0].endswith(str(Path('.venv/Scripts/python.exe'))))
+        self.assertTrue(steps[7]['commande'][-1].endswith('banc-installation-S.md'))
 
     def test_present_tools_are_not_reinstalled(self):
-        steps = self.steps(state(ollama='C:/o/ollama.exe', ollama_actif='0.12.6', ffmpeg='C:/f/ffmpeg.exe'))
-        self.assertEqual([s['type'] for s in steps[:3]], ['present', 'present', 'demarrer_ollama'])
+        steps = self.steps(state(ollama='C:/o/ollama.exe', ollama_actif='0.12.6', ffmpeg='C:/f/ffmpeg.exe', git='C:/g/cmd/git.exe'))
+        self.assertEqual([s['type'] for s in steps[:4]], ['present', 'present', 'present', 'demarrer_ollama'])
         self.assertFalse(any(s.get('commande', [''])[0] == 'winget' for s in steps))
 
     def test_without_winget_the_tools_become_manual(self):
         steps = self.steps(state(winget=None))
-        self.assertEqual([s['type'] for s in steps[:2]], ['manuel', 'manuel'])
+        self.assertEqual([s['type'] for s in steps[:3]], ['manuel', 'manuel', 'manuel'])
+        self.assertIn('git-scm.com', steps[2]['detail'])
 
     def test_options_drop_models_voice_and_bench(self):
         steps = self.steps(state(), models=False, voice=False, bench=False)
-        self.assertEqual([s['id'] for s in steps], ['ffmpeg_installation', 'jarvis'])
-        self.assertNotIn('--voice', steps[1]['commande'])
-        self.assertIn('--figurine', steps[1]['commande'])
+        self.assertEqual([s['id'] for s in steps], ['ffmpeg_installation', 'git_installation', 'jarvis'])
+        self.assertNotIn('--voice', steps[2]['commande'])
+        self.assertIn('--figurine', steps[2]['commande'])
 
     def test_without_figurine_the_heavy_mesh_stack_is_not_installed(self):
         steps = self.steps(state(), figurine=False)
@@ -102,29 +106,39 @@ class Execute(Base):
 
     def test_everything_succeeds_and_new_tools_reach_the_children(self):
         st = state()
-        records, calls, journal = self.run_steps(st, {}, found={'ollama': 'C:/O/ollama.exe', 'ffmpeg': 'C:/F/bin/ffmpeg.exe'})
+        records, calls, journal = self.run_steps(st, {}, found={'ollama': 'C:/O/ollama.exe', 'ffmpeg': 'C:/F/bin/ffmpeg.exe',
+                                                                'git': 'C:/G/cmd/git.exe'})
         self.assertEqual({r['id']: r['statut'] for r in records},
-                         dict.fromkeys(['ollama_installation', 'ffmpeg_installation', 'ollama_demarrage', 'jarvis', 'voix', 'modeles', 'banc'], 'ok'))
+                         dict.fromkeys(['ollama_installation', 'ffmpeg_installation', 'git_installation', 'ollama_demarrage', 'jarvis',
+                                        'voix', 'modeles', 'banc'], 'ok'))
         model_env = [env for cmd, env in calls if '--model-profile' in cmd][0]
-        dirs = [str(Path('C:/O/ollama.exe').parent), str(Path('C:/F/bin/ffmpeg.exe').parent)]  # backslashes under Windows
+        dirs = [str(Path(p).parent) for p in ('C:/O/ollama.exe', 'C:/F/bin/ffmpeg.exe', 'C:/G/cmd/git.exe')]  # backslashes under Windows
         self.assertEqual(model_env['PATH'], os.pathsep.join(dirs + ['P']))
         self.assertEqual(model_env['PYTHONUTF8'], '1')
         self.assertTrue(it.summary(records)['termine'])
         saved = json.loads((self.home / 'j.json').read_text(encoding='utf-8'))
-        self.assertEqual(len(saved['etapes']), 7)
+        self.assertEqual(len(saved['etapes']), 8)
 
     def test_failed_ollama_only_stops_the_models(self):
-        records, calls, _ = self.run_steps(state(), {'Ollama.Ollama': 1}, found={'ffmpeg': 'C:/F/ffmpeg.exe'})
+        records, calls, _ = self.run_steps(state(), {'Ollama.Ollama': 1}, found={'ffmpeg': 'C:/F/ffmpeg.exe', 'git': 'C:/G/cmd/git.exe'})
         status = {r['id']: r['statut'] for r in records}
-        self.assertEqual(status, {'ollama_installation': 'echec', 'ffmpeg_installation': 'ok', 'ollama_demarrage': 'non_lance',
+        self.assertEqual(status, {'ollama_installation': 'echec', 'ffmpeg_installation': 'ok', 'git_installation': 'ok',
+                                  'ollama_demarrage': 'non_lance',
                                   'jarvis': 'ok', 'voix': 'ok', 'modeles': 'non_lance', 'banc': 'ok'})
         self.assertFalse(any('--model-profile' in cmd for cmd, _ in calls))
         self.assertEqual(len(it.summary(records)['reste_a_faire']), 3)
 
     def test_winget_non_zero_but_tool_present_counts_as_installed(self):
         records, _, _ = self.run_steps(state(), {'Gyan.FFmpeg': -1978335189},
-                                       found={'ollama': 'C:/O/ollama.exe', 'ffmpeg': 'C:/F/ffmpeg.exe'})
+                                       found={'ollama': 'C:/O/ollama.exe', 'ffmpeg': 'C:/F/ffmpeg.exe', 'git': 'C:/G/cmd/git.exe'})
         self.assertEqual(records[1]['statut'], 'ok')
+
+    def test_git_that_cannot_be_installed_stops_nothing_else(self):
+        records, _, _ = self.run_steps(state(), {'Git.Git': 1}, found={'ollama': 'C:/O/ollama.exe', 'ffmpeg': 'C:/F/ffmpeg.exe'})
+        status = {r['id']: r['statut'] for r in records}
+        self.assertEqual(status.pop('git_installation'), 'echec')
+        self.assertEqual(set(status.values()), {'ok'})
+        self.assertEqual(it.summary(records)['reste_a_faire'], ['Installer Git avec winget (echec)'])
 
     def test_ollama_that_never_answers_blocks_models_not_jarvis(self):
         records, _, _ = self.run_steps(state(ollama='C:/O/ollama.exe', ffmpeg='C:/F/ffmpeg.exe'), {}, start=lambda exe: None)
@@ -143,6 +157,14 @@ class Detection(Base):
         exe.parent.mkdir(parents=True)
         exe.write_bytes(b'')
         self.assertEqual(it.find_ffmpeg({'LOCALAPPDATA': str(self.home), 'PATH': ''}, which=lambda *a, **k: None), exe)
+
+    def test_git_from_its_installer_is_found_without_path(self):
+        exe = self.home / 'Program Files/Git/cmd/git.exe'
+        exe.parent.mkdir(parents=True)
+        exe.write_bytes(b'')
+        env = {'ProgramFiles': str(self.home / 'Program Files'), 'PATH': ''}
+        self.assertEqual(it.find_git(env, which=lambda *a, **k: None), exe)
+        self.assertIsNone(it.find_git({'PATH': ''}, which=lambda *a, **k: None))
 
     def test_ollama_default_location(self):
         exe = self.home / 'Programs/Ollama/ollama.exe'

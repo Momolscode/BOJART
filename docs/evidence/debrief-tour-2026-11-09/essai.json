@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "controles": {
+    "branche_neuve_poussee": true,
+    "main_inchange": true,
+    "seuls_le_dossier_et_le_manifeste_changent": true,
+    "donnees_personnelles_retirees": true,
+    "media_laisse_sur_la_tour": true,
+    "copie_de_travail_intacte": true,
+    "identite_neutre": true,
+    "jeton_refuse": true,
+    "branche_existante_refusee": true,
+    "autre_depot_refuse": true,
+    "simulation_ne_pousse_rien": true,
+    "arbre_temporaire_retire": true
+  },
+  "fichiers_pousses": 5,
+  "git": "git version 2.43.0"
+}

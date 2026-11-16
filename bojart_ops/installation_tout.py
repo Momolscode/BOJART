@@ -2,7 +2,7 @@
 
 Le programme détecte ce qui manque, montre le plan, demande un seul accord, puis :
 
-1. installe Ollama et FFmpeg avec winget (Windows) s'ils manquent ;
+1. installe Ollama, FFmpeg et Git avec winget (Windows) s'ils manquent ;
 2. démarre Ollama s'il ne répond pas ;
 3. installe Jarvis complet (mémoire, CAO, LangGraph, voix, chaîne figurine) depuis les verrous Windows ;
 4. prépare la voix : poids faster-whisper épinglés et activation dans la configuration privée ;
@@ -26,7 +26,9 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 OLLAMA_URL = 'http://127.0.0.1:11434'
-WINGET_IDS = {'ollama': 'Ollama.Ollama', 'ffmpeg': 'Gyan.FFmpeg'}
+WINGET_IDS = {'ollama': 'Ollama.Ollama', 'ffmpeg': 'Gyan.FFmpeg', 'git': 'Git.Git'}
+MANUAL = {'ollama': 'https://ollama.com/download', 'ffmpeg': 'installer FFmpeg et FFprobe (https://ffmpeg.org/download.html)',
+          'git': 'installer Git (https://git-scm.com/download/win) ; sans lui, seul l’envoi du débrief vers GitHub manque'}
 MIN_FREE_GB = 25  # environnement Python (CAO, voix) ~3 Go + modèles speed ~4 Go + marge pour médias et sauvegardes
 
 
@@ -64,6 +66,17 @@ def find_ffmpeg(env=None, which=shutil.which):
     return _first([winget / 'Links/ffmpeg.exe', *sorted(winget.glob('Packages/Gyan.FFmpeg*/*/bin/ffmpeg.exe'))])
 
 
+def find_git(env=None, which=shutil.which):
+    """Git pushes the tower debrief (tools/publier_debrief.py). Same PATH caveat as FFmpeg after winget."""
+    env = os.environ if env is None else env
+    found = which('git', path=env.get('PATH'))
+    if found:
+        return Path(found)
+    local = env.get('LOCALAPPDATA')
+    return _first([Path(base) / 'Git/cmd/git.exe' for base in (env.get('ProgramFiles'), env.get('ProgramW6432'),
+                                                              local and Path(local) / 'Programs') if base])
+
+
 def find_winget(env=None, which=shutil.which):
     env = os.environ if env is None else env
     found = which('winget', path=env.get('PATH'))
@@ -90,6 +103,7 @@ def detect(root=ROOT, env=None, which=shutil.which, os_name=os.name, probe=ollam
     env = os.environ if env is None else env
     ollama = find_ollama(env, which)
     ffmpeg = find_ffmpeg(env, which)
+    git = find_git(env, which)
     try:
         free = round(shutil.disk_usage(home_dir(env)).free / 1e9, 1)
     except OSError:
@@ -102,6 +116,7 @@ def detect(root=ROOT, env=None, which=shutil.which, os_name=os.name, probe=ollam
         'ollama': str(ollama) if ollama else None,
         'ollama_actif': probe(),
         'ffmpeg': str(ffmpeg) if ffmpeg else None,
+        'git': str(git) if git else None,
         'venv': venv_python(root, os_name).exists(),
         'verrous_windows': [p['detail'] for p in verrou_dependances.verify(Path(root), 'windows')] if os_name == 'nt' else None,
         'espace_libre_go': free,
@@ -123,12 +138,12 @@ def plan(state, *, profile='speed', voice=True, models=True, bench=True, figurin
                                        '--accept-package-agreements', '--accept-source-agreements']})
         else:
             steps.append({'id': f'{key}_installation', 'titre': f'{label} à installer à la main', 'type': 'manuel',
-                          'detail': 'winget absent : https://ollama.com/download' if key == 'ollama'
-                          else 'winget absent : installer FFmpeg et FFprobe (https://ffmpeg.org/download.html)'})
+                          'detail': 'winget absent : ' + MANUAL[key]})
 
     if models:
         tool('ollama', 'Ollama')
     tool('ffmpeg', 'FFmpeg')
+    tool('git', 'Git')
     if models:
         steps.append({'id': 'ollama_demarrage', 'type': 'demarrer_ollama', 'depend_de': ['ollama_installation'],
                       'titre': 'Ollama répond déjà' if state['ollama_actif'] else 'Démarrer Ollama et attendre sa réponse'})
@@ -195,7 +210,7 @@ class Journal:
 def child_env(state, env=None):
     """PATH for child processes, with tools winget just installed (this console does not see them yet)."""
     env = dict(os.environ if env is None else env)
-    extra = [str(Path(state[k]).parent) for k in ('ollama', 'ffmpeg') if state.get(k)]
+    extra = [str(Path(state[k]).parent) for k in ('ollama', 'ffmpeg', 'git') if state.get(k)]
     env['PATH'] = os.pathsep.join(extra + [env.get('PATH', '')])
     env['PYTHONUTF8'] = '1'
     return env
@@ -215,7 +230,7 @@ def start_ollama(executable, probe=ollama_version, wait_s=60, popen=subprocess.P
 
 def execute(steps, state, journal, *, run=subprocess.run, start=start_ollama, redetect=None, env=None, out=print):
     """Run the steps in order. A failed or manual step only stops the steps that depend on it."""
-    redetect = redetect or (lambda key, e: {'ollama': find_ollama, 'ffmpeg': find_ffmpeg}[key](e))
+    redetect = redetect or (lambda key, e: {'ollama': find_ollama, 'ffmpeg': find_ffmpeg, 'git': find_git}[key](e))
     done = {}
     for step in steps:
         blockers = [d for d in step.get('depend_de', []) if done.get(d) not in ('ok', 'present')]

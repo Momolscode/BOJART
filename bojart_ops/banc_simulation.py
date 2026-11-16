@@ -252,6 +252,15 @@ def run_tools(python, workdir):
                 'status': 'ok' if data['ok'] and not failed else 'echec'}
     out.append(run_tool('collecte_simulation', ['tools/collecte_guidee.py', 'simulation'], python, timeout=300, check_json=collection))
 
+    def debrief(stdout):
+        data = json.loads(stdout)
+        if data['ok'] is None:  # Git absent: the self-test did not run, which is not a failure of the code
+            return {'status': 'non_execute', 'raison': data['detail']}
+        failed = sorted(k for k, ok in data.get('controles', {}).items() if not ok)
+        return {'controles': len(data.get('controles', {})), 'echecs': failed, 'git': data.get('git'),
+                'status': 'ok' if data['ok'] and not failed else 'echec', **({'raison': data['detail']} if data.get('detail') else {})}
+    out.append(run_tool('debrief_simulation', ['tools/publier_debrief.py', 'essai'], python, timeout=300, check_json=debrief))
+
     def voice(stdout):
         data = json.loads(stdout)
         return {'status': 'ok' if data['ok'] else 'echec', 'versions': data['versions'],
@@ -436,7 +445,8 @@ def collect_findings(results):
             findings.append({'check': 'http:' + sc['id'], 'severity': 'mineur', 'path': 'serveur Jarvis', 'detail': sc['mesures']['reserve'], 'fix': ''})
     for t in results.get('outils', []):
         if t['status'] == 'echec':
-            detail = t.get('detail') or ', '.join(f"{a.get('path', '')} {a.get('error', '')}".strip() for a in t.get('anomalies', [])[:8])
+            detail = (t.get('detail') or ', '.join(f"{a.get('path', '')} {a.get('error', '')}".strip() for a in t.get('anomalies', [])[:8])
+                      or ', '.join(map(str, t.get('echecs') or [])) or str(t.get('raison') or ''))
             findings.append({'check': 'outil:' + t['id'], 'severity': 'bloquant', 'path': t['id'], 'detail': detail[-400:], 'fix': ''})
     enc = results.get('encodage', {})
     for s in enc.get('suites', []):
