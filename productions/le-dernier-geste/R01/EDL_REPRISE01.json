@@ -1,0 +1,80 @@
+{
+  "title": "L’art prend corps — reprise 01",
+  "fps": 24,
+  "frames": 202,
+  "duration_s": 8.416666666666666,
+  "output": "BOJART_REPRISE01_L_ART_PREND_CORPS.mp4",
+  "shots": [
+    {
+      "shot": "S01",
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 9.9,
+      "frames": 10,
+      "role": "Authentic eye/face insert",
+      "timeline_in_frame": 0,
+      "timeline_out_frame_exclusive": 10
+    },
+    {
+      "shot": "S02",
+      "source": "BOJART_INSERT_PEINTURE_BRUT.mp4",
+      "in": 0.25,
+      "frames": 36,
+      "role": "New generated paint motion; separate material fiction",
+      "timeline_in_frame": 10,
+      "timeline_out_frame_exclusive": 46
+    },
+    {
+      "shot": "S03",
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 9.5,
+      "frames": 10,
+      "role": "Authentic burgundy paint/shorts detail",
+      "timeline_in_frame": 46,
+      "timeline_out_frame_exclusive": 56
+    },
+    {
+      "shot": "S04",
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 8.25,
+      "frames": 16,
+      "role": "Authentic workshop profile",
+      "timeline_in_frame": 56,
+      "timeline_out_frame_exclusive": 72
+    },
+    {
+      "shot": "S05",
+      "source": "TEST19_SOURCE.mp4",
+      "in": 0.125,
+      "frames": 84,
+      "role": "Existing TEST19 animated fist/shoulder movement",
+      "timeline_in_frame": 72,
+      "timeline_out_frame_exclusive": 156
+    },
+    {
+      "shot": "S06",
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 10.0,
+      "frames": 28,
+      "role": "Return to real sculpture and camera move",
+      "timeline_in_frame": 156,
+      "timeline_out_frame_exclusive": 184
+    },
+    {
+      "shot": "S07",
+      "source": "v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+      "in": 0.2,
+      "frames": 18,
+      "role": "Existing BOJ.ART emblem, final signature",
+      "timeline_in_frame": 184,
+      "timeline_out_frame_exclusive": 202
+    }
+  ],
+  "audio": {
+    "source": "V21_MUSIQUE_ORIGINALE.mp3",
+    "delay_ms": 367,
+    "original_source_audio_used": false,
+    "new_foley_recorded": false,
+    "status": "Work music edit; no headphone/mobile perceptual listening certified"
+  },
+  "status": "First editorial cut for review; not an approved final master"
+}

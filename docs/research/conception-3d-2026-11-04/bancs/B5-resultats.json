@@ -1,0 +1,1664 @@
+{
+ "bench": "B5-decoupe-1m",
+ "status": "executed",
+ "executed_on": "2026-11-04T13:42:04Z",
+ "input": {
+  "file": "ardoise_v6_figurine.stl",
+  "sha256": "28ab5fe05b330cab38c3bfde932efb0d9e3ff39147b0e1ecb3f6ed7fbce95ab1",
+  "triangles": 771006,
+  "source_extents_mm": [
+   83.24,
+   73.56,
+   188.0
+  ],
+  "manifold_status": "Error.NoError"
+ },
+ "environment": {
+  "where": "conteneur Linux de session, sans GPU (pas la tour)",
+  "python": "3.13.18",
+  "trimesh": "4.11.1",
+  "m08_checks": "bojart.checks.v2"
+ },
+ "hypotheses": {
+  "bed_mm": [
+   250.0,
+   210.0,
+   220.0
+  ],
+  "fit_mm": [
+   240.0,
+   200.0,
+   220.0
+  ],
+  "dowels": [
+   {
+    "d": 8.0,
+    "clearance": 0.15,
+    "depth": 12.0
+   },
+   {
+    "d": 4.0,
+    "clearance": 0.15,
+    "depth": 8.0
+   }
+  ],
+  "wall_mm": 2.0,
+  "engrave_depth_mm": 0.8,
+  "digit_mm": [
+   7.0,
+   12.0,
+   1.6
+  ],
+  "note": "jeux et profondeurs non mesurés : à calibrer sur un coupon imprimé (N3)"
+ },
+ "summary": {
+  "height_mm": 1000.0,
+  "scale_factor": 5.31915,
+  "assembly_extents_mm": [
+   442.8,
+   391.3,
+   1000.0
+  ],
+  "parts": 18,
+  "fragments_under_1cm3": 0,
+  "parts_out_of_volume": 0,
+  "parts_not_watertight": 0,
+  "parts_with_m08_eliminatory": 11,
+  "joints": 12,
+  "joint_regions": 18,
+  "dowels": 34,
+  "regions_without_dowel": 0,
+  "regions_without_label": 2,
+  "reassembly_gap_mm": {
+   "max": 3e-05,
+   "p99": 2e-05,
+   "samples": 3000
+  },
+  "dowel_interference_mm3": 0.0,
+  "volume_cm3": {
+   "original": 16346.0,
+   "parts_sum": 16302.3,
+   "removed_by_holes_and_engraving": 43.67
+  },
+  "seconds": {
+   "cutting": 9.4,
+   "total": 41.9
+  },
+  "pass": true,
+  "pass_rule": "toutes les pièces étanches et dans le volume ; goujons et numéros présents ; écart ≤ 0,1 mm (BANCS.json)"
+ },
+ "joints": [
+  {
+   "joint": 1,
+   "axis": "Z",
+   "plane_mm": 550.0,
+   "regions": [
+    {
+     "area_mm2": 14783.1,
+     "dowels": [
+      {
+       "uv": [
+        -67.48,
+        3.79
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        76.37,
+        2.86
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      4.37,
+      2.42
+     ]
+    },
+    {
+     "area_mm2": 2281.9,
+     "dowels": [
+      {
+       "uv": [
+        -163.53,
+        40.55
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        -166.15,
+        6.19
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      -163.84,
+      22.89
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 2,
+   "axis": "Z",
+   "plane_mm": 220.0,
+   "regions": [
+    {
+     "area_mm2": 3378.8,
+     "dowels": [
+      {
+       "uv": [
+        102.46,
+        -35.55
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        84.73,
+        -84.85
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      93.11,
+      -59.53
+     ]
+    },
+    {
+     "area_mm2": 9069.4,
+     "dowels": [
+      {
+       "uv": [
+        -74.88,
+        146.14
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        -70.02,
+        -13.74
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      -111.74,
+      87.22
+     ]
+    },
+    {
+     "area_mm2": 5661.4,
+     "dowels": [
+      {
+       "uv": [
+        178.27,
+        78.11
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        170.11,
+        38.69
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      166.63,
+      112.18
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 3,
+   "axis": "Y",
+   "plane_mm": 99.979,
+   "regions": [
+    {
+     "area_mm2": 1261.7,
+     "dowels": [
+      {
+       "uv": [
+        187.45,
+        -118.6
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        206.5,
+        -105.52
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      199.06,
+      -117.21
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 4,
+   "axis": "X",
+   "plane_mm": 1.592,
+   "regions": [
+    {
+     "area_mm2": 21952.7,
+     "dowels": [
+      {
+       "uv": [
+        -49.98,
+        538.26
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        169.9,
+        228.65
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      114.26,
+      385.36
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 5,
+   "axis": "Z",
+   "plane_mm": 335.5,
+   "regions": [
+    {
+     "area_mm2": 8812.8,
+     "dowels": [
+      {
+       "uv": [
+        -62.42,
+        108.41
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        -58.18,
+        -24.76
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      -98.58,
+      54.63
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 6,
+   "axis": "Z",
+   "plane_mm": 335.5,
+   "regions": [
+    {
+     "area_mm2": 4873.5,
+     "dowels": [
+      {
+       "uv": [
+        108.95,
+        -23.41
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        54.4,
+        -54.75
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      79.87,
+      -35.18
+     ]
+    },
+    {
+     "area_mm2": 4814.0,
+     "dowels": [
+      {
+       "uv": [
+        126.4,
+        91.4
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        142.0,
+        18.14
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      135.01,
+      78.31
+     ]
+    },
+    {
+     "area_mm2": 367.4,
+     "dowels": [
+      {
+       "uv": [
+        8.5,
+        134.65
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": null,
+     "label_note": "pas de place pour graver le numéro : repère dans le manifeste seulement"
+    }
+   ]
+  },
+  {
+   "joint": 7,
+   "axis": "Z",
+   "plane_mm": 730.0,
+   "regions": [
+    {
+     "area_mm2": 1353.7,
+     "dowels": [
+      {
+       "uv": [
+        98.31,
+        -40.28
+       ],
+       "d_mm": 4.0,
+       "hole_d_mm": 4.3,
+       "depth_each_side_mm": 8.5,
+       "dowel_length_mm": 15.0
+      }
+     ],
+     "label": [
+      123.59,
+      -42.75
+     ]
+    },
+    {
+     "area_mm2": 16776.3,
+     "dowels": [
+      {
+       "uv": [
+        -8.42,
+        34.99
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        -1.44,
+        -35.13
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      0.0,
+      4.94
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 8,
+   "axis": "X",
+   "plane_mm": -65.976,
+   "regions": [
+    {
+     "area_mm2": 14997.7,
+     "dowels": [
+      {
+       "uv": [
+        21.6,
+        722.91
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        2.98,
+        580.49
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      2.91,
+      639.95
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 9,
+   "axis": "X",
+   "plane_mm": 103.184,
+   "regions": [
+    {
+     "area_mm2": 10831.8,
+     "dowels": [
+      {
+       "uv": [
+        28.81,
+        723.85
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        -20.08,
+        642.19
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      6.64,
+      676.48
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 10,
+   "axis": "Y",
+   "plane_mm": -59.644,
+   "regions": [
+    {
+     "area_mm2": 12928.5,
+     "dowels": [
+      {
+       "uv": [
+        605.58,
+        38.07
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        651.17,
+        48.62
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      638.45,
+      1.33
+     ]
+    }
+   ]
+  },
+  {
+   "joint": 11,
+   "axis": "Z",
+   "plane_mm": 905.5,
+   "regions": [
+    {
+     "area_mm2": 1195.2,
+     "dowels": [
+      {
+       "uv": [
+        160.35,
+        104.58
+       ],
+       "d_mm": 4.0,
+       "hole_d_mm": 4.3,
+       "depth_each_side_mm": 8.5,
+       "dowel_length_mm": 15.0
+      },
+      {
+       "uv": [
+        178.78,
+        104.27
+       ],
+       "d_mm": 4.0,
+       "hole_d_mm": 4.3,
+       "depth_each_side_mm": 8.5,
+       "dowel_length_mm": 15.0
+      }
+     ],
+     "label": null,
+     "label_note": "pas de place pour graver le numéro : repère dans le manifeste seulement"
+    }
+   ]
+  },
+  {
+   "joint": 12,
+   "axis": "X",
+   "plane_mm": -32.0,
+   "regions": [
+    {
+     "area_mm2": 7643.0,
+     "dowels": [
+      {
+       "uv": [
+        23.94,
+        809.6
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      },
+      {
+       "uv": [
+        -7.6,
+        751.21
+       ],
+       "d_mm": 8.0,
+       "hole_d_mm": 8.3,
+       "depth_each_side_mm": 12.5,
+       "dowel_length_mm": 23.0
+      }
+     ],
+     "label": [
+      6.26,
+      779.93
+     ]
+    }
+   ]
+  }
+ ],
+ "parts": [
+  {
+   "part": 1,
+   "triangles": 14330,
+   "volume_cm3": 105.69,
+   "extents_assembly_mm": [
+    88.2,
+    92.7,
+    94.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "daf8a9785e21e5f80e113c625f36cf88718f042f7e967d2a49e588b90a350b2b",
+   "print_extents_mm": [
+    88.2,
+    92.7,
+    94.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     -55.9191,
+     -33.9157,
+     -905.5
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 0,
+    "within_3mm_of_a_cut": 0
+   }
+  },
+  {
+   "part": 2,
+   "triangles": 22046,
+   "volume_cm3": 197.8,
+   "extents_assembly_mm": [
+    118.5,
+    113.5,
+    101.1
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "82d9a2e62b6fa33a589a291d6a9489ee8960597803b61b801627cd0b3a487564",
+   "print_extents_mm": [
+    118.5,
+    113.5,
+    101.1
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     216.2521,
+     97.3122,
+     -730.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "2.5% de la surface sous 0.8 mm (z 0–83 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 10,
+    "within_3mm_of_a_cut": 9
+   }
+  },
+  {
+   "part": 3,
+   "triangles": 33524,
+   "volume_cm3": 607.08,
+   "extents_assembly_mm": [
+    177.8,
+    148.1,
+    112.3
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "c17553f27bc2ebcf04737f1a929503274917e62f26be831f255f4fe9716935c4",
+   "print_extents_mm": [
+    177.8,
+    148.1,
+    112.3
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     68.1212,
+     94.79,
+     -730.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "1.0% de la surface sous 0.8 mm (z 0–0 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 4,
+    "within_3mm_of_a_cut": 4
+   }
+  },
+  {
+   "part": 4,
+   "triangles": 33956,
+   "volume_cm3": 223.07,
+   "extents_assembly_mm": [
+    126.6,
+    171.2,
+    175.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "d3dbd79b34333bc9c9c36c3ab96646bb211a61337f84f32428d36fc46339c7f0",
+   "print_extents_mm": [
+    126.6,
+    171.2,
+    175.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     -10.6076,
+     73.6286,
+     -730.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.2% de la surface sous 0.8 mm (z 0–0 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 1,
+    "within_3mm_of_a_cut": 1
+   }
+  },
+  {
+   "part": 5,
+   "triangles": 34104,
+   "volume_cm3": 318.19,
+   "extents_assembly_mm": [
+    169.1,
+    116.9,
+    155.6
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "d146b611d7d8880384290a6932ea7031984e6af6a76bc90e9a685b72f47c8549",
+   "print_extents_mm": [
+    169.1,
+    116.9,
+    155.6
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     106.3473,
+     223.0808,
+     -574.4028
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "3.0% de la surface sous 0.8 mm (z 65–105 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 12,
+    "within_3mm_of_a_cut": 12
+   }
+  },
+  {
+   "part": 6,
+   "triangles": 49088,
+   "volume_cm3": 751.79,
+   "extents_assembly_mm": [
+    112.8,
+    166.9,
+    162.2
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "9f4cba6f1efa0fa98b6b5fb29ff3817210517eaac1b609eca9d3004f03606638",
+   "print_extents_mm": [
+    112.8,
+    166.9,
+    162.2
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     -34.5704,
+     141.008,
+     -567.8285
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.8% de la surface sous 0.8 mm (z 64–162 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 3,
+    "within_3mm_of_a_cut": 3
+   }
+  },
+  {
+   "part": 7,
+   "triangles": 61912,
+   "volume_cm3": 1181.91,
+   "extents_assembly_mm": [
+    151.8,
+    124.5,
+    180.0
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "b8ee726137ad91917c253e5a9c08edfb3974e64d78edaf8c4368ccd31b95f4fc",
+   "print_extents_mm": [
+    151.8,
+    124.5,
+    180.0
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     266.8811,
+     102.3511,
+     -550.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.8% de la surface sous 0.8 mm (z 10–117 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 3,
+    "within_3mm_of_a_cut": 3
+   }
+  },
+  {
+   "part": 8,
+   "triangles": 68888,
+   "volume_cm3": 3071.19,
+   "extents_assembly_mm": [
+    169.2,
+    142.8,
+    180.0
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "d1fa231a204a18b9803dac3dd78772de38ef0befc21ab7d5f913df342cfac562",
+   "print_extents_mm": [
+    169.2,
+    142.8,
+    180.0
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     106.3961,
+     93.2206,
+     -550.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 0,
+    "within_3mm_of_a_cut": 0
+   }
+  },
+  {
+   "part": 9,
+   "triangles": 104452,
+   "volume_cm3": 2428.17,
+   "extents_assembly_mm": [
+    159.3,
+    223.8,
+    214.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "f857afa3f088d692ccd2086053080a4ca4994687ae15370e1922495e6369879e",
+   "print_extents_mm": [
+    223.8,
+    159.3,
+    214.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      0,
+      -1,
+      0
+     ],
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     161.451,
+     23.7508,
+     -335.5
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.2% de la surface sous 0.8 mm (z 0–0 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 1,
+    "within_3mm_of_a_cut": 1
+   }
+  },
+  {
+   "part": 10,
+   "triangles": 92652,
+   "volume_cm3": 2218.39,
+   "extents_assembly_mm": [
+    194.8,
+    213.8,
+    214.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "bd837d226dd2e7cb91de81a21ed5024e699038d17db36103062d16209f946dbd",
+   "print_extents_mm": [
+    213.8,
+    194.8,
+    214.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      0,
+      -1,
+      0
+     ],
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     161.0912,
+     200.798,
+     -335.5
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.2% de la surface sous 0.8 mm (z 3–3 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 1,
+    "within_3mm_of_a_cut": 1
+   }
+  },
+  {
+   "part": 11,
+   "triangles": 60592,
+   "volume_cm3": 1024.59,
+   "extents_assembly_mm": [
+    127.0,
+    221.2,
+    115.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "6856c6e94d191ada9df140335df7bca8a7bea3ce2908a0f10dfcf89050f4d4e9",
+   "print_extents_mm": [
+    221.2,
+    127.0,
+    115.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      0,
+      -1,
+      0
+     ],
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     199.5645,
+     166.8913,
+     -220.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 0,
+    "within_3mm_of_a_cut": 0
+   }
+  },
+  {
+   "part": 12,
+   "triangles": 7772,
+   "volume_cm3": 56.12,
+   "extents_assembly_mm": [
+    26.1,
+    76.5,
+    115.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "de44c61c75a59d69ae07bff9e906aaf1a9d0c145d425d416a61f00ad7d0e9616",
+   "print_extents_mm": [
+    26.1,
+    76.5,
+    115.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     110.3417,
+     -52.3013,
+     -220.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.5% de la surface sous 0.8 mm (z 80–110 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 2,
+    "within_3mm_of_a_cut": 2
+   }
+  },
+  {
+   "part": 13,
+   "triangles": 54520,
+   "volume_cm3": 602.2,
+   "extents_assembly_mm": [
+    166.8,
+    184.6,
+    115.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "f226929d03a523bce1ebe36b72cc12d6e6fa8e25a48154972420e5949f2eed4e",
+   "print_extents_mm": [
+    166.8,
+    184.6,
+    115.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     12.0451,
+     2.9784,
+     -220.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.2% de la surface sous 0.8 mm (z 115–115 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 1,
+    "within_3mm_of_a_cut": 1
+   }
+  },
+  {
+   "part": 14,
+   "triangles": 24974,
+   "volume_cm3": 509.05,
+   "extents_assembly_mm": [
+    87.7,
+    104.3,
+    115.5
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "7a2c854df004781b9ae95958b3f08db52f4f1e220a6b36fb7f6aadd98516940b",
+   "print_extents_mm": [
+    87.7,
+    104.3,
+    115.5
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     40.0964,
+     152.42,
+     -220.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 0,
+    "within_3mm_of_a_cut": 0
+   }
+  },
+  {
+   "part": 15,
+   "triangles": 31722,
+   "volume_cm3": 291.73,
+   "extents_assembly_mm": [
+    171.9,
+    182.7,
+    50.8
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "422fa9f4080e9bdb1a64c6ef6cc6ca9acf07b4d1f22e4fa2196c147846d3a27a",
+   "print_extents_mm": [
+    171.9,
+    182.7,
+    50.8
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     -0.2659,
+     -16.6482,
+     -169.1903
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 0,
+    "within_3mm_of_a_cut": 0
+   }
+  },
+  {
+   "part": 16,
+   "triangles": 22430,
+   "volume_cm3": 203.33,
+   "extents_assembly_mm": [
+    164.5,
+    114.8,
+    50.8
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "b67da6fbd49cdef2861a95e12602209f1df33c794eaaeb47c3262f5592b9ac0c",
+   "print_extents_mm": [
+    164.5,
+    114.8,
+    50.8
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     175.7319,
+     -52.3743,
+     -169.1841
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [
+    "0.2% de la surface sous 0.8 mm (z 47–47 mm)"
+   ],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 1,
+    "within_3mm_of_a_cut": 1
+   }
+  },
+  {
+   "part": 17,
+   "triangles": 58014,
+   "volume_cm3": 1299.06,
+   "extents_assembly_mm": [
+    100.0,
+    172.2,
+    220.0
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "d4d6170c8cb65ec8c8ac0f8b1252e7da9612a2cf4caca3ffbaa95708d9624e5b",
+   "print_extents_mm": [
+    100.0,
+    172.2,
+    220.0
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     208.0234,
+     91.1134,
+     0.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 0,
+    "within_3mm_of_a_cut": 0
+   }
+  },
+  {
+   "part": 18,
+   "triangles": 51888,
+   "volume_cm3": 1212.98,
+   "extents_assembly_mm": [
+    96.5,
+    147.7,
+    220.0
+   ],
+   "fragment": false,
+   "fits_bed": true,
+   "stl_sha256": "1140940cacc2a6bfde54b9181140f1e3fac9d508ba910093ca0b6dc4b382c240",
+   "print_extents_mm": [
+    96.5,
+    147.7,
+    220.0
+   ],
+   "print_transform": {
+    "rotation": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "then_translate_mm": [
+     24.6154,
+     189.3837,
+     0.0
+    ]
+   },
+   "watertight": true,
+   "m08_eliminatory": [],
+   "m08_warnings": [],
+   "thin_samples": {
+    "n": 400,
+    "under_min_wall": 0,
+    "within_3mm_of_a_cut": 0
+   }
+  }
+ ],
+ "prusaslicer_cut_fallback": {
+  "command": "prusa-slicer --cut 220 --export-stl",
+  "returncode": 0,
+  "log_tail": "File exported to <travail>/prusa_cut.stl\n",
+  "outputs": [
+   "prusa_cut.stl"
+  ]
+ },
+ "limits": [
+  "pièces pleines : ni évidement ni trous de drainage étudiés ici",
+  "coupes planes alignées sur les axes, choisies par la plus petite section : pas de coupe cachée dans le dessin du personnage",
+  "remontage virtuel ; aucun assemblage réel, aucune impression"
+ ],
+ "previous_run": {
+  "label": "v1, même jour, même entrée",
+  "summary": {
+   "height_mm": 1000.0,
+   "scale_factor": 5.31915,
+   "assembly_extents_mm": [
+    442.8,
+    391.3,
+    1000.0
+   ],
+   "parts": 18,
+   "fragments_under_1cm3": 0,
+   "parts_out_of_volume": 0,
+   "parts_not_watertight": 0,
+   "parts_with_m08_eliminatory": 13,
+   "joints": 11,
+   "joint_regions": 19,
+   "dowels": 37,
+   "regions_without_dowel": 0,
+   "regions_without_label": 3,
+   "reassembly_gap_mm": {
+    "max": 2.50913,
+    "p99": 2e-05,
+    "samples": 3000
+   },
+   "dowel_interference_mm3": 0.0,
+   "volume_cm3": {
+    "original": 16346.0,
+    "parts_sum": 16301.0,
+    "removed_by_holes_and_engraving": 44.98
+   },
+   "seconds": {
+    "cutting": 10.9,
+    "total": 38.4
+   },
+   "pass": false,
+   "pass_rule": "toutes les pièces étanches et dans le volume ; goujons et numéros présents ; écart ≤ 0,1 mm (BANCS.json)"
+  },
+  "defect": "trous de goujons placés d’après la seule section du plan de coupe : là où la peau rentre à quelques millimètres du plan, un trou de 12,5 mm de profondeur débouchait (écart de remontage maximal 2,5 mm, environ 5 cm³ de trou hors matière)",
+  "fix": "v2 : la zone d’un goujon doit appartenir aux sections à ±profondeur et ±profondeur/2 (safe_region) ; idem pour la gravure à ±1 mm",
+  "prusaslicer_cut_v1": {
+   "command": "prusa-slicer --cut 220 --export-stl",
+   "returncode": 0,
+   "log_tail": "",
+   "outputs": []
+  }
+ },
+ "prusaslicer_cut_findings": [
+  "PrusaSlicer 2.7.2 : « --cut 220 --export-stl --output X » rend le code 0 et n’écrit aucun fichier",
+  "PrusaSlicer 2.9.7 : écrit les deux moitiés dans UN seul STL, superposées à la même origine ; sans --output, il écrase le fichier d’entrée (constaté sur une colonne de 400 mm)",
+  "aucun goujon ni numéro en ligne de commande : l’outil Couper ne sert de secours que dans l’interface"
+ ],
+ "thin_wall_reading": "les signalements « paroi < 0,8 mm » des contrôles M08 viennent pour 38 échantillons sur 39 d’une bande de 3 mm autour d’un plan de coupe (biseau où la peau rejoint la coupe), voir parts[].thin_samples ; la porte M08, pensée pour une figurine entière, doit ignorer cette bande ou la signaler à part pour des pièces découpées"
+}

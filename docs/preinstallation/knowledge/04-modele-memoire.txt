@@ -1,0 +1,17 @@
+Distinguer moteur, poids et mémoire
+Identifiant : 04-modele-memoire
+Projet : bojart.jarvis
+Statut : source_reported_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+Ollama est le moteur local ; EmbeddingGemma représente les textes en vecteurs ; Qwen3.5-4B est un candidat séparé de réponse. Aucun de ces composants ne remplace les originaux, les versions et la recherche citée de BOJ.ART. Les licences du moteur et des poids sont distinctes.
+Dans l’adaptateur présent, les modèles sont identifiés par nom et digest, et truncate=false interdit une troncature silencieuse des entrées embeddings. Conserver ces invariants lors d’un changement de modèle. Avant activation, enregistrer provenance, digest, quantification, licence, taille et benchmark. Une réponse générée est non vérifiée ; contrôler que chaque citation soutient effectivement le fait. Aucune capacité d’action du modèle ne doit être exposée pour une conversation documentaire.
+
+Sources primaires :
+ollama-embed — https://docs.ollama.com/api/embed
+embeddinggemma — https://ai.google.dev/gemma/docs/embeddinggemma/model_card
+gemma-terms — https://ai.google.dev/gemma/terms
+qwenchat — https://huggingface.co/Qwen/Qwen3.5-4B
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

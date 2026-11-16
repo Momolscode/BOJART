@@ -1,0 +1,13 @@
+{
+  "passed": 8,
+  "checks": [
+    "Microphone désactivé dans aperçu",
+    "Exemple 180 mm",
+    "Exemple 240 mm distinct",
+    "Pas de fausse interprétation libre dans aperçu",
+    "Pas de faux diagnostic",
+    "Mobile sans débordement",
+    "Aucune erreur JavaScript",
+    "Aucun appel réseau"
+  ]
+}

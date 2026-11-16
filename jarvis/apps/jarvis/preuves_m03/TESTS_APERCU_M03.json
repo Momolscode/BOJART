@@ -1,0 +1,82 @@
+{
+  "passed": 19,
+  "scope": "offline self-contained preview, not direct browser-server integration",
+  "checks": [
+    {
+      "name": "three_sources",
+      "passed": true
+    },
+    {
+      "name": "eight_segments",
+      "passed": true
+    },
+    {
+      "name": "four_authentic_anchors",
+      "passed": true
+    },
+    {
+      "name": "offline_label",
+      "passed": true
+    },
+    {
+      "name": "proxy_video_loaded",
+      "passed": true
+    },
+    {
+      "name": "accent_search",
+      "passed": true
+    },
+    {
+      "name": "no_invented_result",
+      "passed": true
+    },
+    {
+      "name": "original_filter",
+      "passed": true
+    },
+    {
+      "name": "timecode_seek",
+      "passed": true
+    },
+    {
+      "name": "segment_stops",
+      "passed": true
+    },
+    {
+      "name": "example_brief_flagged",
+      "passed": true
+    },
+    {
+      "name": "verification_dated",
+      "passed": true
+    },
+    {
+      "name": "export_traceable",
+      "passed": true
+    },
+    {
+      "name": "desktop_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_overflow",
+      "passed": true
+    },
+    {
+      "name": "reduced_motion",
+      "passed": true
+    },
+    {
+      "name": "keyboard_search",
+      "passed": true
+    },
+    {
+      "name": "no_script_errors",
+      "passed": true
+    },
+    {
+      "name": "no_external_requests",
+      "passed": true
+    }
+  ]
+}

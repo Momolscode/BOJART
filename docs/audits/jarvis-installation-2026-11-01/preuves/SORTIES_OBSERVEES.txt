@@ -1,0 +1,24 @@
+BOJ.ART — sorties sélectionnées observées le 1 novembre 2026
+Nature : transcription de résumés affichés pendant l’évaluation, PAS copie des journaux bruts complets.
+L’environnement local a été déconnecté avant l’empaquetage. Les journaux complets ne sont pas joints.
+Les durées caractérisent seulement ces exécutions sur l’hôte de test.
+
+Référence e5cd9f3f18f744b800aa8bb655a70fa643c634a1
+tests/ : Ran 37 tests in 3.682s — OK
+tests_agent/ : Ran 25 tests in 3.216s — OK
+test_jarvis_m06.py : Ran 42 tests in 5.875s — OK
+test_jarvis_m07.py : Ran 22 tests in 1.243s — OK
+JavaScript : tests 11 ; pass 11 ; fail 0 ; duration_ms 149.62521
+Évaluation lexicale : cases 10 ; hits_at_5 10 ; citations vérifiées.
+Installation minimale Python 3.12.14 / SQLite 3.53.1 avec FTS5 : réussie.
+Six pages HTTP : 200 ; détails dans DEMARRAGE_OBSERVE.json.
+Statut de production : false. Commandes physiques : false.
+LangGraph : missing_dependency. Mode local de repli actif.
+Restauration documentaire : ok=true ; issues=[] ; assets=21 ; sources=23 ; versions=23 ; chunks=43 ; events=23.
+
+Référence 3c288214539adf97381f6053b43225485a873b6a
+tests_ops/ : Ran 46 tests in 0.131s — OK
+
+Les 172 tests Python sont la somme de cinq suites sélectionnées sur deux références.
+La réussite de ces tests ne valide pas les services IA réels, les moteurs facultatifs non installés ou le matériel.
+Les logs startup-* versionnés ailleurs proviennent d’une autre session et sont référencés dans SOURCES.json.

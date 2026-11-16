@@ -1,0 +1,76 @@
+{
+  "schema": "bojart.marketing.context.v1",
+  "version": "2026-10-31",
+  "brand": "BOJ.ART",
+  "language": "fr-FR",
+  "timezone": "Europe/Paris",
+  "repo": "Momolscode/BOJART",
+  "live_connections": false,
+  "accounts": {
+    "tiktok_main": {
+      "platform": "tiktok",
+      "handle": "@boj.art",
+      "editorial_role": "révélation et portfolio",
+      "role_status": "hypothèse à tester",
+      "provider_profile_id": null,
+      "provider_brand_id": null
+    },
+    "tiktok_workshop": {
+      "platform": "tiktok",
+      "handle": "@boj.art3d",
+      "editorial_role": "gestes, fabrication et communauté",
+      "role_status": "hypothèse à tester",
+      "provider_profile_id": null,
+      "provider_brand_id": null
+    },
+    "instagram_pending": {
+      "platform": "instagram",
+      "handle": null,
+      "provider_profile_id": null,
+      "provider_brand_id": null
+    },
+    "youtube_pending": {
+      "platform": "youtube",
+      "handle": null,
+      "provider_profile_id": null,
+      "provider_brand_id": null
+    },
+    "facebook_pending": {
+      "platform": "facebook",
+      "handle": null,
+      "provider_profile_id": null,
+      "provider_brand_id": null
+    }
+  },
+  "offers": [
+    "œuvres originales et éditions selon disponibilité",
+    "création sur mesure sur faisabilité et devis",
+    "prototypes selon exigences et essais"
+  ],
+  "visual_identity": [
+    "œuvre réelle",
+    "gestes de l’artiste",
+    "couleurs de peinture fidèles",
+    "emblème original",
+    "tension et révélation spectaculaires mais lisibles"
+  ],
+  "unknown": [
+    "adresse effective de l’atelier",
+    "dimensions physiques des œuvres",
+    "statistiques sociales actuelles",
+    "droits commerciaux par œuvre et bande-son",
+    "capacités de livraison et disponibilité",
+    "comptes Instagram/Facebook/YouTube exacts"
+  ],
+  "rules": [
+    "Ne pas mélanger UNUM ou M-Tek.",
+    "Aucune somme d’abonnés présentée comme audience unique.",
+    "Ne pas réutiliser un personnage généré refusé comme référence d’identité.",
+    "Pas de prix, de taille, de témoignage, de rareté ou de délai inventés.",
+    "Un hashtag de personnage ne donne aucun droit commercial.",
+    "Promouvoir un rendu VFX comme fiction, jamais comme preuve de mouvement réel de la sculpture.",
+    "Pas d’abonnés achetés, engagement artificiel ou démarchage en masse.",
+    "La publication réelle requiert un connecteur autorisé et un reçu.",
+    "Aucune dépense publicitaire dans ce module."
+  ]
+}

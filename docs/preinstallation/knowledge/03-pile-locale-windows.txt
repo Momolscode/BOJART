@@ -1,0 +1,16 @@
+Préparer la tour Windows sans surdimensionnement présumé
+Identifiant : 03-pile-locale-windows
+Projet : bojart.jarvis
+Statut : user_decision_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+Décision utilisateur : tour Windows, passage à 32 Go de RAM prévu fermement mais pas encore installé ; les autres évolutions restent ouvertes. La photo fournie, transcrite par l’agent parent, affiche Ryzen 5 5600G 3,90 GHz, 16 Go de RAM (15,9 utilisables), Windows 11 Pro Insider Preview 25H2 build 26220.9606, stockage 932 Go. Elle affiche 8 Go pour le GPU ; l’utilisateur précise ensuite NVIDIA GeForce RTX 4060 Ti. La mémoire dédiée, le pilote et l’espace disque libre ne sont pas vérifiés par diagnostic. Ces données viennent d’une photo, pas d’un diagnostic exécuté. Relever GPU/pilote, mémoire dédiée, espace libre, micro et sorties écran avant de choisir les poids.
+Base proposée : Python 3.12 dans un environnement isolé, sans remplacer Python système ni les applications métier. Vérifier réellement les imports natifs CadQuery/OCP/trimesh et la présence de FTS5 ; une installation pip réussie ne suffit pas. Tester d’abord mémoire et commandes écrites, puis une prise ASR et une voix locale, puis un petit modèle de réponse. Mesurer aussi la charge simultanée avec CAO et rendu. Aucune taille de modèle ne constitue une garantie de latence ou de qualité.
+
+Sources primaires :
+cadquery — https://cadquery.readthedocs.io/en/latest/installation.html
+ollama-hardware — https://docs.ollama.com/gpu
+ct2 — https://opennmt.net/CTranslate2/hardware_support.html
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

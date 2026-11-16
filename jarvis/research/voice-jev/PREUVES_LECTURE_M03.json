@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-30",
+  "scope": "Lecture statique du pack M03 joint; pas de recette matérielle, pas de relance des tests, pas de consultation du code des sites déployés.",
+  "archive": "BOJART_Jarvis_Mission03_Studio_Sources_2026-10-30.zip",
+  "archive_sha256": "d046b42cae172ed9bb5600a8a22e4264b01dcf9a1e12191af6c8b82f43636d30",
+  "config_example": {
+    "version": "bojart.config.v2",
+    "ollama": {
+      "enabled": false,
+      "url": "http://127.0.0.1:11434",
+      "model": "",
+      "model_digest": "",
+      "offline_verified": false
+    },
+    "voice": {
+      "enabled": false,
+      "model_dir": ""
+    }
+  },
+  "application_code_files": {
+    "BOJART_JARVIS_MISSION03_STUDIO/app/audio_worklet.js": {
+      "sha256": "ac15a58a87fd2c41134c63fb8e1ba72446421f5a1e82acfd5eb7dbfb161fbb52",
+      "lines": 10
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/capture.js": {
+      "sha256": "89e378a06c87a907ee718074b836f6eb63622b87508980b2d5417509ac25803d",
+      "lines": 34
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/context_guard.py": {
+      "sha256": "b24369ca6a8dd7710b2e319e89d6ab751f3adb7c3c4cf7c2e40938a58d61d108",
+      "lines": 48
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/core.py": {
+      "sha256": "1c2d75af2b04d16acd80ef405736081c7cdd1b388582eb3d3d0dafcdf40b75d1",
+      "lines": 306
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/diagnostics.py": {
+      "sha256": "37517a5eb5e09a0a8ebbbdab72632fc8956e17adfde1dcd852413abd3b3df659",
+      "lines": 61
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/dialogue.py": {
+      "sha256": "86deccfd1c8b3813709666bb31d7ddbaf93dd8d43b4faf6e8b6c4d4131ed3842",
+      "lines": 222
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/media_library.py": {
+      "sha256": "9afeff32fa7b03822f3c7addae8f648434210cf01552297d619402b44d639809",
+      "lines": 230
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/proposals.py": {
+      "sha256": "aaba4edabf752750f8630512321c4e9196c9c591a6c2b6560bb2b0c81a1daeca",
+      "lines": 69
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/server.py": {
+      "sha256": "7e36c9bdffeccfa962fba9270bb6ab21a7c1328103a1acfa0b84714dda78d421",
+      "lines": 140
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/studio.js": {
+      "sha256": "96ab99ca55eefd688effc52dc1fff99f4afc0bc9d452c0d38bdc21be2c1c66c2",
+      "lines": 20
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/studio_seed.py": {
+      "sha256": "cee2a95cd9175a4b7945cd416a03a01b941ff327ae0d1ee80a6563c553166378",
+      "lines": 28
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/studio_workbench.py": {
+      "sha256": "0cd16506b9c21d772146ee3cc844b661621679d9c713d5a8bc983b11b240cf6b",
+      "lines": 94
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/ui.js": {
+      "sha256": "1b61abe944f2ed9c5cb418242db64811e44da631c6d25095c7196c4213edeb08",
+      "lines": 46
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/viewer.js": {
+      "sha256": "f5c68df5c53c41e9a63b52a6105ffc9701470e5beb336e0a1ab241976457dbe4",
+      "lines": 8
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/voice.py": {
+      "sha256": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d",
+      "lines": 65
+    },
+    "BOJART_JARVIS_MISSION03_STUDIO/app/workbench.py": {
+      "sha256": "0a78a791f0326fc71f922085a0b7f682cdb1eed621cd41146ef6c946631f0fa1",
+      "lines": 143
+    }
+  },
+  "jev_langgraph_literal_matches": [],
+  "limitations": [
+    "L’absence de référence textuelle dans ces modules n’exclut pas d’autres travaux dans des packs non examinés.",
+    "Les statuts et chiffres de tests des bilans restent historiques; ils ne sont pas réexécutés ici.",
+    "Le panneau droit de M02 n’est pas une preuve d’appairage de trois moniteurs physiques."
+  ]
+}

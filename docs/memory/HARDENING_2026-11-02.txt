@@ -1,0 +1,37 @@
+MÉMOIRE JARVIS — CORRECTIONS DE REPRISE, 2 NOVEMBRE 2026
+
+Portée : couche mémoire locale, base SQLite unique, copies d’essai Windows. Les preuves de réception complètes accompagnent le paquet V4. Cette note décrit le contrat du code livré ; ce n’est ni une qualification d’un vrai modèle, ni une autorisation de machine. Les quatre constats du paquet V3 sont des observations antérieures aux corrections.
+
+1. Demande d’inférence
+Une réservation durable lie request_id, session, projet et question exacte avant tout code pouvant appeler un fournisseur. Les transactions SQLite restent courtes ; un verrou de fichier détenu par le processus identifie le propriétaire vivant. L’appel n’occupe aucune transaction d’écriture SQLite. Ce contrat concerne plusieurs processus sur le même système de fichiers local ; il n’est pas un protocole de cluster/NFS.
+RUNNING : demande en cours, consulter le même identifiant. COMPLETED : résultat exact conservé et rejouable. FAILED : échec connu avant fournisseur. UNKNOWN : l’appel peut avoir eu lieu, aucune relance automatique. Une nouvelle question explicite avec nouvel identifiant reste un nouvel appel autorisé par l’utilisateur, pas une reprise idempotente du précédent.
+Après perte réseau, l’interface conserve l’identifiant. Le bouton Nouvelle demande explicite le renouvelle sans lancer lui-même l’appel. Une restauration n’emporte pas les verrous vivants : les demandes en cours deviennent incertaines. Les épisodes et le résultat terminal sont enregistrés dans une seule transaction. Les réponses et diagnostics ont des limites de taille ; un dépassement tardif reste incertain et n’est pas relancé.
+
+2. Origine des extraits
+Avant diffusion lexicale ou sémantique, le système vérifie l’objet original, les métadonnées versionnées, l’extracteur, les passages exacts et leurs positions, puis leur correspondance avec le contenu FTS. Les embeddings vérifient leur entrée avant calcul et à nouveau avant enregistrement ; un lot périmé est refusé. L’historique ne réinjecte pas une réponse dont les preuves d’extrait manquent, ont changé ou proviennent d’un ancien registre non projeté.
+Le contrôle complet verify ajoute l’intégrité SQLite, les objets et l’intégrité interne FTS5 sur une copie en mémoire. Le statut rapide ne certifie que la structure SQLite. Un index malveillant entièrement réécrit par un acteur ayant accès à la base et aux originaux n’est pas authentifié par ces empreintes locales ; il faut une racine de confiance externe pour cette menace.
+Réparation explicite dans une copie de travail : python -m bojart_memory --state CHEMIN verify --repair-index. Les originaux et historiques sont préservés ; les index sont reconstruits transactionnellement et les vecteurs invalidés. Une source ou métadonnée inconnue est refusée sans approximation. Conserver un état de diagnostic avant réparation. Une sauvegarde corrompue est refusée ; une sauvegarde vérifiée est restaurée dans un nouveau dossier.
+
+3. Contexte utile
+Le classement donne priorité à la pertinence lexicale, à la provenance de référence et à la diversité des sujets. Les propositions restent des propositions. Les conflits pertinents sont signalés, même si certaines variantes ne tiennent pas. Les omissions ne détruisent aucune donnée ; leur total et les empreintes des identifiants sont conservés, avec diagnostics bornés. Le budget est en caractères Unicode, ou en octets UTF-8 si explicitement demandé au sélecteur ; l’estimation de tokens n’est pas exacte.
+Les tests français, perturbations et corpus tenu à part contrôlent des invariants déterministes. Ils ne prouvent ni compréhension sémantique générale, ni qualité d’un LLM local, ni supériorité sur tous les systèmes de recherche.
+
+4. Registre partagé
+project_jsonl_v1 extrait seulement les lignes du projet demandé sans réécrire les originaux ni décaler leurs numéros. Le JSONL original complet reste une seule pièce vérifiable. Une ancienne version non projetée est conservée mais exclue de la recherche, même historique. Relancer l’indexation explicite depuis les sources sélectionnées crée la version projetée. La chaîne de remplacement des faits est évaluée dans le projet avant tout supersedes.
+
+Réception minimale à reproduire dans une copie isolée
+python -m unittest discover -s tests -v
+python -m unittest discover -s tests_agent -v
+python -m unittest discover -s tests_ops -v
+node --test jarvis/tests/memory_context.test.cjs
+python tools/check_startup.py --abrupt --browser --output RAPPORT.json
+Les tests qui créent des symlinks sont explicitement sautés lorsque Windows refuse ce privilège (WinError1314), jamais comptés comme exécutés. Les modèles d’inférence utilisés dans les tests sont des doubles locaux. Le navigateur de réception utilise un profil jetable.
+
+Références primaires consultées pour les choix, sans promesse de certification
+SQLite transactions : https://www.sqlite.org/lang_transaction.html
+SQLite FTS5, integrity-check et rebuild : https://www.sqlite.org/fts5.html
+AWS Builders Library, identité des retries : https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/
+Anthropic, pertinence et budget du contexte : https://www.anthropic.com/research/effective-context-engineering-for-ai-agents
+Python msvcrt.locking : https://docs.python.org/3/library/msvcrt.html#msvcrt.locking
+
+Passation : lire les faits utilisateur et la matrice de réception V4 avant les rapports historiques. Réexaminer un nouveau delta Git sans réintroduire les quatre défauts. Tester ensuite les vrais modèles et le matériel sur la tour, avec preuves mesurées. Aucun service de Claude n’a reçu ce paquet automatiquement.

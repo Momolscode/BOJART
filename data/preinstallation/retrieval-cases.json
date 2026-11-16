@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "scope": "12 smoke checks of evidence retrieval, authored from these cards; not a held-out benchmark or answer correctness test.",
+  "cases": [
+    {
+      "id": "PREP-01",
+      "question": "Comment comparer FTS5 Recall MRR et citations sans LLM ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/01-recherche-citee.txt"
+      ]
+    },
+    {
+      "id": "PREP-02",
+      "question": "La transcription faster-whisper utilise CPU int8 quatre threads ou CUDA ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/02-voix-francaise.txt"
+      ]
+    },
+    {
+      "id": "PREP-03",
+      "question": "Quel matériel et quelle RAM Windows actuelle et prévue ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/03-pile-locale-windows.txt"
+      ]
+    },
+    {
+      "id": "PREP-04",
+      "question": "Pourquoi distinguer moteur Ollama embeddings EmbeddingGemma et modèle de réponse ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/04-modele-memoire.txt"
+      ]
+    },
+    {
+      "id": "PREP-05",
+      "question": "STL fermé suffit-il pour un fichier prêt à imprimer après tranchage ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/05-cao-vers-tranchage.txt"
+      ]
+    },
+    {
+      "id": "PREP-06",
+      "question": "Choisir PLA PETG ASA selon chaleur extérieur UV et référence ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/06-materiaux-choix.txt"
+      ]
+    },
+    {
+      "id": "PREP-07",
+      "question": "Quelles fiches et références pour procédure résine lavage post-polymérisation ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/07-resine-documentation.txt"
+      ]
+    },
+    {
+      "id": "PREP-08",
+      "question": "Peut-on lubrifier toutes les pièces mobiles des imprimantes ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/08-maintenance-par-modele.txt"
+      ]
+    },
+    {
+      "id": "PREP-09",
+      "question": "Moonraker attribut absent et timeout de télémétrie comment qualifier ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/09-telemetrie-inconnue.txt"
+      ]
+    },
+    {
+      "id": "PREP-10",
+      "question": "Réponse perdue après impression distante UNKNOWN et checkpoint LangGraph ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/10-reprise-effets.txt"
+      ]
+    },
+    {
+      "id": "PREP-11",
+      "question": "Blender scripts autoexec et opération artistique bornée ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/11-blender-connecteur.txt"
+      ]
+    },
+    {
+      "id": "PREP-12",
+      "question": "Interopérabilité client MCP version 2025-06-18 2026-07-28 ?",
+      "project": "bojart.jarvis",
+      "collection": "research",
+      "expected_sources": [
+        "docs/preinstallation/knowledge/12-mcp-interop.txt"
+      ]
+    }
+  ]
+}

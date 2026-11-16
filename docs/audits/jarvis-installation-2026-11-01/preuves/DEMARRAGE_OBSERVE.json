@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "reference": "e5cd9f3f18f744b800aa8bb655a70fa643c634a1",
+  "evidence_kind": "structured_transcription_of_observed_responses_not_original_raw_log",
+  "pages": [
+    {
+      "path": "/workspace",
+      "http_status": 200,
+      "body_bytes": 4073
+    },
+    {
+      "path": "/memory",
+      "http_status": 200,
+      "body_bytes": 3651
+    },
+    {
+      "path": "/tower",
+      "http_status": 200,
+      "body_bytes": 6220
+    },
+    {
+      "path": "/studio",
+      "http_status": 200,
+      "body_bytes": 5358
+    },
+    {
+      "path": "/growth",
+      "http_status": 200,
+      "body_bytes": 3019
+    },
+    {
+      "path": "/knowledge",
+      "http_status": 200,
+      "body_bytes": 816
+    }
+  ],
+  "health_selected_fields": {
+    "production_ready": false,
+    "physical_commands": false,
+    "version": "M07"
+  },
+  "jarvis_status_selected_fields": {
+    "langgraph": "missing_dependency",
+    "continuous_conversation": false,
+    "publication": false,
+    "physical_commands": false
+  },
+  "search": {
+    "query_topic": "Jev",
+    "citations_returned": true
+  },
+  "documentary_restore_verification": {
+    "ok": true,
+    "issues": [],
+    "assets": 21,
+    "sources": 23,
+    "versions": 23,
+    "chunks": 43,
+    "events": 23,
+    "project_source_counts": {
+      "bojart.creative": 7,
+      "bojart.jarvis": 14,
+      "bojart.sites": 2
+    }
+  },
+  "scope_note": "Documentary memory restore only; not proof of restoration of the five M07 operational databases."
+}

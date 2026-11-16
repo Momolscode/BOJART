@@ -1,0 +1,134 @@
+{
+ "objet": "Contre-vérification de l'épaisseur des parois de la figurine Fusain (tâche 157d5194ebed0087), au-delà des 1 500 points du contrôle de la chaîne",
+ "date": "2026-11-03",
+ "methode": "checks.wall_thickness : rayon lancé vers l'intérieur depuis des points tirés au hasard sur la surface de figurine.stl (assemblée, 200 mm) ; deux graines de 6 000 points. Puis contrôle local par régions : sculpt_figure(..., bounds=...) à 0,4 mm, mise à l'échelle de 200 mm, points à plus de 2,5 mm des bords de la boîte",
+ "seuils_mm": {
+  "paroi_minimale": 0.8,
+  "fragile": 1.2
+ },
+ "resultat_final": {
+  "5": {
+   "samples": 6000,
+   "misses": 0,
+   "min": 0.928,
+   "thin_lt_0.8": 0,
+   "fragile_lt_1.2": 1,
+   "p1": 2.671
+  },
+  "23": {
+   "samples": 6000,
+   "misses": 0,
+   "min": 1.509,
+   "thin_lt_0.8": 0,
+   "fragile_lt_1.2": 0,
+   "p1": 2.657
+  }
+ },
+ "points_les_plus_minces_final": [
+  {
+   "seed": 5,
+   "mm": 0.928,
+   "xyz": [
+    20.7,
+    -49.8,
+    25.4
+   ]
+  },
+  {
+   "seed": 23,
+   "mm": 1.509,
+   "xyz": [
+    -25.4,
+    -4.8,
+    157.6
+   ]
+  },
+  {
+   "seed": 23,
+   "mm": 1.523,
+   "xyz": [
+    -24.6,
+    -4.9,
+    158.9
+   ]
+  },
+  {
+   "seed": 5,
+   "mm": 1.538,
+   "xyz": [
+    -25.3,
+    -3.5,
+    158.7
+   ]
+  },
+  {
+   "seed": 23,
+   "mm": 1.693,
+   "xyz": [
+    39.9,
+    -80.0,
+    181.9
+   ]
+  }
+ ],
+ "controle_local_final": {
+  "graine": 11,
+  "regions": 11,
+  "points": 69468,
+  "sous_0_8_mm": 3,
+  "sous_1_2_mm": 6,
+  "detail": "trois points de 0,706 à 0,764 mm au pied du trait (coordonnées nominales x 17,7 à 18,2, y -44, z 6,7 à 7,1) : peau d'une fente entre la volute de gauche, le petit bloc et l'appui du trait, ouverte vers l'avant ; 0,04 % des points de la région ; un point de 1,016 mm au bord d'une narine. Bouts de bandage, chevilles et ceinture (contrôle dense, 12 000 points pour la ceinture) : minimum 2,226 mm"
+ },
+ "historique": [
+  {
+   "passage": "premier passage complet",
+   "resultat": "REFUSÉ par le contrôle de la chaîne : 0,27 % de la surface sous 0,8 mm, minimum 0,05 mm",
+   "causes": [
+    "bord d'encolure presque parallèle à la couche autour de la bosse des trapèzes (lame derrière la nuque)",
+    "ourlet d'emmanchure en capuchon au-dessus du deltoïde",
+    "ourlet en croissant le long du bras gauche couché dans le dos",
+    "stries du trait qui se chevauchaient et perçaient le ruban près de la main",
+    "plis du pantalon en étoile sous le genou gauche",
+    "fentes de 0,2 à 0,3 mm entre les doigts de la main ouverte"
+   ]
+  },
+  {
+   "passage": "deuxième passage (coupes du vêtement au pied de la normale, emmanchure à 4 mm du bras, stries en une passe, plis effacés près de l'axe, doigts serrés)",
+   "resultat": "REFUSÉ par l'assemblage : volume non fermé, 186 arêtes non-manifold, 187 morceaux",
+   "causes": [
+    "résidu ouvert du marching cubes accroché à la figure : maillage nominal retourné, fix_normals() sans effet ; corrigé dans la chaîne (sculpt.drop_residue_and_orient)"
+   ]
+  },
+  {
+   "passage": "troisième passage (chaîne corrigée)",
+   "resultat": "conforme sur 1 500 points (minimum 1,653 mm) ; contre-vérification : 1 point sur 12 000 sous 0,8 mm (graine 23, 0,245 mm), puis contrôle local : une lèvre de 0,125 mm",
+   "resultat_contre_verification": {
+    "5": {
+     "samples": 6000,
+     "misses": 0,
+     "min": 1.203,
+     "thin_lt_0.8": 0,
+     "fragile_lt_1.2": 0,
+     "p1": 2.633
+    },
+    "23": {
+     "samples": 6000,
+     "misses": 0,
+     "min": 0.245,
+     "thin_lt_0.8": 1,
+     "fragile_lt_1.2": 1,
+     "p1": 2.616
+    }
+   },
+   "causes": [
+    "arête haute de la ceinture coupée par deux plans dans l'espace : coin de 67° là où la cage s'évase au-dessus de la taille, côté droit",
+    "bout du bandage du poignet gauche coupé net : anneau à dents de scie de 0,7 à 1,15 mm au-dessus du raccord du poing"
+   ]
+  },
+  {
+   "passage": "passage final (ceinture coupée au pied de la normale, arête à 81° ; bandage resserré en cône sur ses deux derniers millimètres)",
+   "resultat": "0 point sous 0,8 mm sur 12 000 ; 1 point sous 1,2 mm (0,928 mm, au pied du trait, même fente que le contrôle local)"
+  }
+ ],
+ "limite": "échantillonnage aléatoire : une zone plus petite que l'écart entre deux points peut échapper ; ce n'est pas une mesure sur pièce imprimée"
+}

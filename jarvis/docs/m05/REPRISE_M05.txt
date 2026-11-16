@@ -1,0 +1,52 @@
+BOJ.ART / JARVIS — POINT DE REPRISE M05 — 31 OCTOBRE 2026
+
+À lire en premier : README.md, context/START_HERE.md, AGENTS.md,
+puis docs/m05/RELEASE_M05.md et les preuves M05.
+
+Le code dérive du M04 d408b116e19c99e9cd79ea0114f73162dcc69715.
+Branche locale : improvement/m05-launch-2026-10-31.
+Ce paquet ne prouve aucune publication GitHub. Les deux dépôts des sites
+BOJ.ART ont été récupérés séparément et n'ont pas été fusionnés ni déployés.
+
+UTILISABLE EN LOCAL
+- Tableau de bord /workspace, plusieurs dossiers, révisions CAO distinctes.
+- Propositions revues puis création réelle STEP / STL / GLB et aperçu.
+- Régie /tower et trois rôles navigateur isolés par dossier.
+- Studio et Growth avec catalogue commun et brouillons conservés.
+- Contrôle d'intégrité, sauvegarde des 5 bases + fichiers référencés.
+- Restauration non destructive, liens médias rétablis, appairages réinitialisés.
+- Reprise explicite des calculs interrompus, sans relance automatique.
+- Verrou d'instance et identifiants de tentative conservés après réponse perdue.
+
+LANCEMENT
+Lancer_Jarvis ouvre l'espace ~/BOJART/mission05.
+Ouvrir_un_dossier_Jarvis choisit un espace existant ou restauré.
+Restaurer_Jarvis crée un nouveau dossier depuis une sauvegarde globale M05.
+Sans interface de choix :
+  python apps/jarvis/app/consolidated_workbench.py --state CHEMIN --no-browser
+  python tools/restore_workspace.py ARCHIVE_ZIP NOUVEAU_DOSSIER
+Ne pas ouvrir simultanément un ancien serveur et M05 sur les mêmes données.
+Conserver une copie de l'espace M04 avant sa première ouverture par M05.
+
+PREUVES
+514 tests réussis, dont 34 nouveaux tests de continuité ; 13 contrôles
+navigateur réel et 5 contrôles des lanceurs Linux.
+Lire docs/evidence/m05-2026-10-31/TESTS_SUMMARY.json et ACCEPTANCE_M05.json.
+Recette Chromium réelle : deux variantes 180/240 mm, trois vues, un brief,
+un brouillon, sauvegarde, suppression de l'espace d'essai initial,
+restauration vérifiée puis deuxième sauvegarde/restauration.
+Les tests rapides emploient aussi des fichiers factices explicitement
+identifiés ; seules les preuves de la recette CAO attestent la géométrie.
+
+NE PAS INVENTER
+Pas de validation Windows sur la tour, pas de micro/LLM/Jev qualifié,
+pas de moniteur physique appairé, pas d'impression, pas de publication.
+Pas de copie intégrale de l'ancien chat. Pas de données SQLite du PC réel
+récupérées par ce travail. Pas de migration des états privés des sites.
+La production physique reste non qualifiée. Les dépendances, modèles et
+profils externes ne voyagent pas dans la sauvegarde de données.
+
+PRIORITÉ SUIVANTE SUR LE PC CIBLE
+Ouvrir une copie de l'espace réel, vérifier les dépendances et la restauration,
+puis qualifier les périphériques et une machine de chaque procédé avec
+un opérateur. Garder chaque preuve séparée des anciens engagements verbaux.

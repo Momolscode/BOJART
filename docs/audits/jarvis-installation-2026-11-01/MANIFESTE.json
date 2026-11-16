@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scope": "Exact UTF-8 bytes of this audit folder except MANIFESTE.json itself",
+  "files": [
+    {
+      "path": "CAPACITES.json",
+      "bytes": 2255,
+      "sha256": "c5c0b7ededc991bacac5d75a1e2da5fc15b1d9725480791031a5b5cea77de7fc"
+    },
+    {
+      "path": "DELTA_A_REEXAMINER.json",
+      "bytes": 6287,
+      "sha256": "c1f4ac7d891229a061788a2aaf3df366b757e14bfd77c75689f686965574af25"
+    },
+    {
+      "path": "GRAPHE_EXECUTE.mmd",
+      "bytes": 357,
+      "sha256": "7ef3bb81f4c20e2f13ef8e2481dad33eaff8e09ec427f0a6e18a0a8ff2ced519"
+    },
+    {
+      "path": "MISSION_AUDITEUR.txt",
+      "bytes": 4085,
+      "sha256": "e713f82963e0d27980a6f67e8cfdadd44d4964c20158998fc9c424ac6f3d0b94"
+    },
+    {
+      "path": "PREUVES.json",
+      "bytes": 4453,
+      "sha256": "691a4287fb61dfacb4ce4ea2d21ccbf75a95284f3d2cfd108c4f83b710180ce2"
+    },
+    {
+      "path": "RAPPORT.md",
+      "bytes": 8183,
+      "sha256": "de55e4e1bf60913ace46e6dcd468bb82c09539eed71db640bbd72a008c650f6e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2875,
+      "sha256": "0132fddbec4e5c1c08d62f4c5ce1ea1da43c62061402605d2f0cf32b216f93b4"
+    },
+    {
+      "path": "REPRODUIRE.md",
+      "bytes": 5486,
+      "sha256": "3e654da95aeeb5cd1b54a31ae81c9ace9cca3235daebc22508765281a91f8241"
+    },
+    {
+      "path": "RETOUR_AUDITEUR.md",
+      "bytes": 1285,
+      "sha256": "6332c8d6e27c0c862256f8e5ec4010c05a740ba07785d32da009940c10ce72dc"
+    },
+    {
+      "path": "SCHEMA_ORCHESTRATION.svg",
+      "bytes": 22348,
+      "sha256": "b228dd76aba2bdb8e1beff3cedd5f840ad2ef79601247a03053c1871ac833946"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 12024,
+      "sha256": "ffe761a21ac120eb925b6a3f2233692e3485e5f456566011e522ab14d58239ae"
+    },
+    {
+      "path": "preuves/CI_PUBLICATION.json",
+      "bytes": 1278,
+      "sha256": "37c891f7c9f57d5947662db5d923a43b9c5058d696fef23736cac366cfeb00b3"
+    },
+    {
+      "path": "preuves/DEMARRAGE_OBSERVE.json",
+      "bytes": 1505,
+      "sha256": "4e8a2dd803ddbdc72854a5d9f156b35b6c530b372f02461593a7ed996b0c7872"
+    },
+    {
+      "path": "preuves/SORTIES_OBSERVEES.txt",
+      "bytes": 1527,
+      "sha256": "9a9ba0b34c448bc2f74e1c4432ddbff3144e741f17a3af8355d41a79d2453521"
+    }
+  ]
+}

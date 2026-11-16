@@ -1,0 +1,592 @@
+{
+  "schema": "bojart.production-recovery-acceptance.v1",
+  "observed_at": "2026-11-02T00:44:48.648398+01:00",
+  "base_commit": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "linux"
+  },
+  "scope": "Current working-tree code and recipes; exact source hashes recorded. No rendering or artistic approval.",
+  "archive_restore": {
+    "schema_version": 1,
+    "ok": true,
+    "parts": [
+      {
+        "part": 1,
+        "commit": "635116df515f7910c5bc854176b642e282efbfb3",
+        "transport": "exact_zip",
+        "zip_sha256": "9f0544b915ebcd34482a0ff33076eb0ae25dfe333c9493b746f15a183c61fc8f",
+        "chunks_verified": 40
+      },
+      {
+        "part": 2,
+        "commit": "2d2e01e3576e0a655729f6d273e9038e109f915a",
+        "transport": "original_contents",
+        "files_verified": 1114
+      },
+      {
+        "part": 3,
+        "commit": "6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967",
+        "transport": "original_contents",
+        "files_verified": 1114
+      }
+    ],
+    "objects": 3340,
+    "unique_bytes": 1089594390,
+    "sources": 219,
+    "occurrences": 6445,
+    "verification": "All bytes read from pinned Git commits; Git SHA-1, SHA-256, sizes and ZIP CRC checked",
+    "limits": "Recovery collection only; not a complete ChatGPT export or workshop PC backup"
+  },
+  "preparation": {
+    "summary": {
+      "assets": 5,
+      "catalogued_assets": 5,
+      "required_bytes": 14276962,
+      "recipe_files": 13
+    },
+    "assets": [
+      {
+        "path": "sources/v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+        "bytes": 9310485,
+        "sha256": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+        "role": "Vues authentiques et emblème, vidéo de diffusion BOJ.ART",
+        "status": "copied_verified",
+        "archive": {
+          "part": 2,
+          "commit": "2d2e01e3576e0a655729f6d273e9038e109f915a",
+          "collection_path": "objets/73/7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662.mp4"
+        }
+      },
+      {
+        "path": "TEST19_SOURCE.mp4",
+        "bytes": 2239592,
+        "sha256": "13698fbda04306d087275d7105a6d2a9a33a7ff2cd83608e09bef50450b33779",
+        "role": "Ancien essai animé, provisoire pour G2",
+        "status": "copied_verified",
+        "archive": {
+          "part": 1,
+          "commit": "635116df515f7910c5bc854176b642e282efbfb3",
+          "collection_path": "objets/13/13698fbda04306d087275d7105a6d2a9a33a7ff2cd83608e09bef50450b33779.mp4"
+        }
+      },
+      {
+        "path": "V21_MUSIQUE_ORIGINALE.mp3",
+        "bytes": 485805,
+        "sha256": "5aea3d23f8ca873d19efd440bb1eaa51884191b598c7caf509a1df2dabfe0562",
+        "role": "Composition existante",
+        "status": "copied_verified",
+        "archive": {
+          "part": 3,
+          "commit": "6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967",
+          "collection_path": "objets/5a/5aea3d23f8ca873d19efd440bb1eaa51884191b598c7caf509a1df2dabfe0562.mp3"
+        }
+      },
+      {
+        "path": "R02_LE_DERNIER_GESTE/BOJART_G1_DERNIER_TRAIT_BRUT.mp4",
+        "bytes": 2077736,
+        "sha256": "0c59fa55389e199765b1eb64fe50a95421714c84b3bbcddfefba15a29f8a45fd",
+        "role": "Macro de pinceau G1 terminée",
+        "status": "copied_verified",
+        "archive": {
+          "part": 3,
+          "commit": "6e743b8a8ba90b6ab24a579a1f8c5aebaa8ba967",
+          "collection_path": "objets/0c/0c59fa55389e199765b1eb64fe50a95421714c84b3bbcddfefba15a29f8a45fd.mp4"
+        }
+      },
+      {
+        "path": "R02_LE_DERNIER_GESTE/FOLEY_PINCEAU_BenDrain_preview.mp3",
+        "bytes": 163344,
+        "sha256": "02140fbe75ba2179f6ccc20c28cec5abe8214257bcef18fbb7262c3bff916825",
+        "role": "Préécoute MP3 publique du Foley CC0",
+        "status": "copied_verified",
+        "archive": {
+          "part": 1,
+          "commit": "635116df515f7910c5bc854176b642e282efbfb3",
+          "collection_path": "objets/02/02140fbe75ba2179f6ccc20c28cec5abe8214257bcef18fbb7262c3bff916825.mp3"
+        }
+      }
+    ],
+    "recipes": [
+      {
+        "path": ".gitignore",
+        "bytes": 134,
+        "sha256": "1f31142264a3dee5f97ebc5ee345d710bb35f84390bc49737b9d65eec0f0c0a2"
+      },
+      {
+        "path": "ASSETS.json",
+        "bytes": 1283,
+        "sha256": "b7d4ded2cf522b326ab99a919b20030be0394bc02715ca93b8fc5cae6fe313e7"
+      },
+      {
+        "path": "R01/EDL_REPRISE01.json",
+        "bytes": 2277,
+        "sha256": "5dc3b385dafe0483e463feb543cfb2566d5b6e525652de471ab757c8e319f760"
+      },
+      {
+        "path": "R02_LE_DERNIER_GESTE/EDL_R02.json",
+        "bytes": 2600,
+        "sha256": "9aad246f11a1d216fa98f3d8b2ce80f939ab6d54de1c9f1029813ee9efd37a91"
+      },
+      {
+        "path": "R02_LE_DERNIER_GESTE/FOLEY_PROVENANCE.json",
+        "bytes": 549,
+        "sha256": "780f946a1a8d88b92a7d8d81b61ac09aafe86ed7c757eb37c28133d1b92c75d2"
+      },
+      {
+        "path": "R02_LE_DERNIER_GESTE/G1_PARAMETRES.json",
+        "bytes": 1888,
+        "sha256": "1bdaa6e5545e409a3cf5f40f82a3d7eb5c20eb33698bc4cfa53df6f1aefcd010"
+      },
+      {
+        "path": "R03_LE_DERNIER_GESTE/EDL_R03.json",
+        "bytes": 3344,
+        "sha256": "98e1556a27b8fd33f8595fe320ed091f6199487f80f2d4d7f780b75febcfd10d"
+      },
+      {
+        "path": "R03_LE_DERNIER_GESTE/R03_QC.json",
+        "bytes": 566,
+        "sha256": "9f0df1697965c8c8dd653b113dd3006568a52e4bfca416a9d354ac5ca8a141b6"
+      },
+      {
+        "path": "R03_LE_DERNIER_GESTE/REVUE_R03.json",
+        "bytes": 1778,
+        "sha256": "d4ef37cd06149bd596919544c1ddf049ade0db8328aa4fb300a29392cec35a5d"
+      },
+      {
+        "path": "R03_LE_DERNIER_GESTE/build_dernier_geste_r03.py",
+        "bytes": 4942,
+        "sha256": "3364f19e445cc775e036a4a8c78794d66cdd25fb015b3232f205f1c46b7ed033"
+      },
+      {
+        "path": "README.md",
+        "bytes": 3272,
+        "sha256": "d6d474bbaf75e414ed07cb9e9a7632c86ebab66d4b660ce4242d779518a913f6"
+      },
+      {
+        "path": "STATUT_G2.json",
+        "bytes": 1084,
+        "sha256": "719950f7e65283178b224da7307f1a8430c8da54db011c641a303d3c822d0a31"
+      },
+      {
+        "path": "verify_assets.py",
+        "bytes": 957,
+        "sha256": "36abc093afd1ce1a14d1bb8dfcc03b3b0977e4f46e508dab077cef8627a58a8a"
+      }
+    ],
+    "source_bytes_verified": true,
+    "copied_bytes_verified": true,
+    "original_sources_rechecked_after_copy": 5,
+    "scripts_executed_by_preparation": 0,
+    "renders_created": 0,
+    "provider_calls": 0,
+    "receipt_sha256": "d8c9778d8dc656b746c59d2c3cb775f9bf448d3e80cfc7908174621df78e6b3d",
+    "repository_manifest_sha256_at_preparation": "b4fbd36791a34383fa8c095e694043787e6a6771ff4d68132a2a6039c9a3cb56",
+    "manifest_note": "Execution snapshot before adding this evidence file. The published manifest is regenerated to include this proof; recipe and media hashes remain explicit."
+  },
+  "independent_asset_verification": {
+    "checked": 5,
+    "ok": true,
+    "failures": []
+  },
+  "decoding": {
+    "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "media": [
+      {
+        "path": "sources/v24044gl0000cuei73fog65q7gjmvfc0.mp4",
+        "full_decode_ok": true,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "nb_frames": "327"
+            },
+            {
+              "index": 1,
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 512,
+              "height": 1108,
+              "nb_frames": "453"
+            }
+          ],
+          "format": {
+            "duration": "15.100000"
+          }
+        }
+      },
+      {
+        "path": "TEST19_SOURCE.mp4",
+        "full_decode_ok": true,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 720,
+              "height": 1280,
+              "nb_frames": "97"
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "nb_frames": "129"
+            }
+          ],
+          "format": {
+            "duration": "4.096000"
+          }
+        }
+      },
+      {
+        "path": "V21_MUSIQUE_ORIGINALE.mp3",
+        "full_decode_ok": true,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "mp3",
+              "codec_type": "audio"
+            }
+          ],
+          "format": {
+            "duration": "12.120000"
+          }
+        }
+      },
+      {
+        "path": "R02_LE_DERNIER_GESTE/BOJART_G1_DERNIER_TRAIT_BRUT.mp4",
+        "full_decode_ok": true,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 720,
+              "height": 1280,
+              "nb_frames": "97"
+            }
+          ],
+          "format": {
+            "duration": "4.041667"
+          }
+        }
+      },
+      {
+        "path": "R02_LE_DERNIER_GESTE/FOLEY_PINCEAU_BenDrain_preview.mp3",
+        "full_decode_ok": true,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "mp3",
+              "codec_type": "audio",
+              "side_data_list": [
+                {}
+              ]
+            }
+          ],
+          "format": {
+            "duration": "8.544000"
+          }
+        }
+      }
+    ],
+    "new_render_created": false,
+    "perceptual_or_artistic_review": false
+  },
+  "test_suites": [
+    {
+      "name": "core",
+      "command": "python -m unittest discover -s tests -v",
+      "passed": 85,
+      "log_sha256": "954b1d655d2fcf7722ee23dabcbffbdecce97c5c43785b7970abd04d4e6410d5"
+    },
+    {
+      "name": "agent",
+      "command": "python -m unittest discover -s tests_agent -v",
+      "passed": 128,
+      "log_sha256": "c8cf1b28c81461cff01ad09805a70c5e07ddbb57c7721372b468d7cdb86b2dbd"
+    },
+    {
+      "name": "operations",
+      "command": "python -m unittest discover -s tests_ops -v",
+      "passed": 83,
+      "log_sha256": "af462998d6ecd5deecc929bbc66a81ebf3aa927e264604b6b22f47835d6c3f10"
+    }
+  ],
+  "new_integrity_tests": 19,
+  "retrieval": {
+    "scope": "14 hand-authored lexical retrieval cases over selected documents; no generative-answer evaluation",
+    "cases": 14,
+    "hits_at_5": 14,
+    "results": [
+      {
+        "question": "Jev décideur voix",
+        "project": "bojart.jarvis",
+        "expected_source": "context/CURRENT.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/INSTALLATION.md",
+          "context/CURRENT.md",
+          "docs/ARCHITECTURE.md",
+          "docs/DATA_GOVERNANCE.md",
+          "docs/RESEARCH_2026-11-01.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "G2",
+        "project": "bojart.creative",
+        "expected_source": "creative/CURRENT.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "creative/CURRENT.md",
+          "data/knowledge/claims.jsonl",
+          "docs/ORCHESTRATION.md",
+          "productions/le-dernier-geste/STATUT_G2.json",
+          "docs/creative/RECUPERATION_PRODUCTION.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "R03",
+        "project": "bojart.creative",
+        "expected_source": "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+        "hit_at_5": true,
+        "returned_sources": [
+          "productions/le-dernier-geste/README.md",
+          "creative/CURRENT.md",
+          "docs/creative/RECUPERATION_PRODUCTION.md",
+          "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+          "productions/le-dernier-geste/STATUT_G2.json"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "restauration sauvegarde",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/DATA_GOVERNANCE.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/DATA_GOVERNANCE.md",
+          "INSTALLER_DEMAIN.md",
+          "context/CURRENT.md",
+          "docs/memory/RESILIENCE.md",
+          "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "microphone voix",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/INSTALLATION.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/INSTALLATION.md",
+          "INSTALLER_DEMAIN.md",
+          "docs/ORCHESTRATION.md",
+          "docs/DEMARRAGE_ET_REPRISE.md",
+          "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "V11 V3",
+        "project": "bojart.sites",
+        "expected_source": "sites/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "sites/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "LangGraph",
+        "project": "bojart.jarvis",
+        "expected_source": "context/CURRENT.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/memory/OUTILS_ET_ARCHITECTURE.md",
+          "docs/RESEARCH_2026-11-01.md",
+          "INSTALLER_DEMAIN.md",
+          "docs/DEMARRAGE_ET_REPRISE.md",
+          "context/CURRENT.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "destination GitHub",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/GITHUB_WORKFLOW.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/ETAT_ARCHIVES_2026-11-01.md",
+          "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+          "data/knowledge/claims.jsonl",
+          "docs/GITHUB_WORKFLOW.md",
+          "docs/DATA_GOVERNANCE.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "GPU imprimantes",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/memory/POSTE_RTX4060TI.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/memory/RESILIENCE.md",
+          "docs/memory/POSTE_RTX4060TI.md",
+          "INSTALLER_DEMAIN.md",
+          "docs/memory/INSTALLATION_MODELES.md",
+          "docs/DEMARRAGE_ET_REPRISE.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "contacts profondeur sound design",
+        "project": "bojart.creative",
+        "expected_source": "creative/CURRENT.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "creative/CURRENT.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "OrcaSlicer UVtools tranchage",
+        "project": "bojart.jarvis",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "AE MCP Bridge Roto Brush",
+        "project": "bojart.creative",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "hashtags PeintureFigurine recherche",
+        "project": "bojart.creative",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "docs/ORCHESTRATION.md",
+          "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+          "docs/OPERATIONS.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/MODELES_LOCAUX_2026-11-02.md"
+        ],
+        "all_citations_verified": true
+      },
+      {
+        "question": "Search Console export CSV",
+        "project": "bojart.sites",
+        "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+        "hit_at_5": true,
+        "returned_sources": [
+          "data/knowledge/claims.jsonl",
+          "docs/ORCHESTRATION.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md",
+          "docs/research/launch-toolchain-2026-11-01/README.md"
+        ],
+        "all_citations_verified": true
+      }
+    ]
+  },
+  "tested_inputs_sha256": {
+    "bojart_ops/orchestration.py": "691c3542bf52a4eee0402acf683e790f098d310bba04eea307bd17913813e41e",
+    "bojart_ops/production_recovery.py": "43b9c5c650735150277c31a10d98139ac9a6fb1a0f6275663c2b14eba362ae52",
+    "context/SESSION_HANDOFF.md": "008949b54aa1b58fedd19dd77aa37fa64f5d42a02e6206989b43b162a4858102",
+    "creative/CURRENT.md": "625b0d81507f0c9d744cec5869d4fbb703af59021ee5fcce146ae76c33822329",
+    "data/knowledge/index.json": "dacf9144151c06a364c9ad6b957846d2e854b9b772c8fd4bfb89e7b0fbcd0731",
+    "docs/ORCHESTRATION.md": "b2fdf9bc6ec991c694774fcb730dcb7b9f237b5ee40d9091fc3a0534705d0691",
+    "docs/creative/RECUPERATION_PRODUCTION.md": "abd60255f4c5fb83339ccfafc0bd81d4415cb45afcc23804b57e9e8f9290cfae",
+    "ops/orchestration.json": "153c2577338b699a16dfd301cf6c5f93d4f51cb746dd03c56a56e3bb17c11036",
+    "productions/le-dernier-geste/ASSETS.json": "b7d4ded2cf522b326ab99a919b20030be0394bc02715ca93b8fc5cae6fe313e7",
+    "productions/le-dernier-geste/README.md": "d6d474bbaf75e414ed07cb9e9a7632c86ebab66d4b660ce4242d779518a913f6",
+    "productions/le-dernier-geste/verify_assets.py": "36abc093afd1ce1a14d1bb8dfcc03b3b0977e4f46e508dab077cef8627a58a8a",
+    "tests/test_production_recovery.py": "0b1aac2277a1f3b9a882f2bc1d091a2fad16380bb8f25e920ff5ffafc5f19029",
+    "tools/orchestrate.py": "012d83cd6bf812b05a0a97b4f9dcc3ffa464a5ae027dbdbc5d88b6308b2269a3",
+    "tools/prepare_production.py": "bd6c187ae2bdadf379f8b010b4e2714f5e1f99db5af02d2839de002821fa7c0c",
+    "tools/restore_recovery_2026_11_01.py": "dc18931255977dcb336138562fb4282e9c23b6b1268e40ed34f732b5ed729c73",
+    "bojart_memory/agent.py": "faf7dd4acd339fab9fa703b4584ff8325a75b7524345a972c99361c91c951f4b",
+    "bojart_memory/ollama.py": "74cdf365803a4bef3711ca6cd469751bcf8e3c0d62c3080ab933667fec8d492c",
+    "bojart_memory/model_setup.py": "1d77d2f95a5e976f2c85d63a9e2982abf4a1b11789122d151cc32487fb5840e8",
+    "tests_agent/test_compact_context.py": "c704f854da3c0e1becf5856c6069efc53fa7d09a046d0f1f2f8b747c2fd15a75",
+    "context/CURRENT.md": "6795fe5bb272732735ba98d609d8993600a0bb95bf1314502e448bc4807b9ecf",
+    "data/knowledge/claims.jsonl": "6e744a5912934942df9e0dafa5052e4d9197bb74bd2500bd66aa6b76df36fcea"
+  },
+  "limitations": [
+    "Archive provenance and intact media do not qualify final G2 or artistic quality.",
+    "The historical TEST19 remains provisional and the required G2 model/rig are not supplied.",
+    "No inference, paid generation, publishing, physical equipment or new film render tested.",
+    "Technical classification is not an exhaustive semantic review of every repository file."
+  ],
+  "preparation_base_commit": "20283c3136c66fbfca78a9e733b5c74bd5dfcf03",
+  "python_tests_passed": 296,
+  "orchestration": {
+    "commands": [
+      "python tools/audit_repository.py --output .bojart-audit",
+      "python tools/orchestrate.py --audit .bojart-audit/audit.json"
+    ],
+    "production_summary": {
+      "assets": 5,
+      "catalogued_assets": 5,
+      "required_bytes": 14276962,
+      "recipe_files": 13
+    },
+    "complete": true,
+    "tasks_executed": 0,
+    "task_records": 12,
+    "unclassified_paths": 0,
+    "audited_paths": 838,
+    "unique_contents": 824
+  },
+  "reconciled_commits": [
+    "a0500b39ddf5a6154c701c225c5b2ad80767cc70",
+    "d5855c1e8c10f6ab57d7b362eb1d954c722b340b",
+    "2025ac1c8f376341532fbd2df8a176b0b8fc3de4"
+  ],
+  "platform_corrections": [
+    {
+      "platform": "Windows",
+      "scope": "test_fixture",
+      "failed_run": 41363074885,
+      "change": "Compare resolved destination paths and assert that the simulated concurrent creation was actually injected.",
+      "application_behavior_changed": false,
+      "verified_run": 41363328451,
+      "verified_commit": "0d853787285142292a70850a1e38c49ce45b385e",
+      "verified_platforms": [
+        "ubuntu-latest",
+        "windows-latest"
+      ]
+    }
+  ]
+}

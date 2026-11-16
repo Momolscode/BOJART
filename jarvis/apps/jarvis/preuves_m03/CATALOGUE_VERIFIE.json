@@ -1,0 +1,267 @@
+{
+  "version": "bojart.studio.v1",
+  "search_mode": "keywords_human_annotations",
+  "checked_at": "2026-10-30T18:29:54.537125+00:00",
+  "segments": [
+    {
+      "id": "vfx-2d",
+      "asset_id": "4391a4af24f5e3ce7f08666bcc3ac687d3460d0373487cd3e5aaaf1e83387fe0",
+      "label": "Rupture 2D · hors référence personnage",
+      "start": 0.0,
+      "end": 4.0,
+      "kind": "concept",
+      "review": "rejected",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": false,
+      "evidence": "Décision de ce pilote : exclu des références de personnage car fondé sur une illustration, pas sur la vraie sculpture. Ce n’est pas un nouveau verdict utilisateur.",
+      "tags": [
+        "verre",
+        "rupture",
+        "essai"
+      ],
+      "revision": 1,
+      "asset_label": "Essai de rupture · compositing 2D",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 5.0,
+        "fps": "24/1",
+        "height": 960,
+        "width": 540
+      },
+      "availability": "verified",
+      "origin": "assistant_render",
+      "provenance": "Ancien livrable BOJART_VFX_BREAK_FRAME_PROOF.mp4 ; illustration de principe issue du storyboard. Aucun personnage réel photographié dans ce fichier."
+    },
+    {
+      "id": "concept-v4",
+      "asset_id": "6b4e373efa0d107abc9c16975fbe70b99db21f92615507d42b939ef24b61564a",
+      "label": "V4 · intention de combat",
+      "start": 0.0,
+      "end": 4.0,
+      "kind": "concept",
+      "review": "unreviewed",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": false,
+      "evidence": "Illustration d’intention seulement ; exclue du rôle référence authentique.",
+      "tags": [
+        "storyboard",
+        "combat",
+        "concept"
+      ],
+      "revision": 1,
+      "asset_label": "Animatique V4 · images fixes animées",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 8.0,
+        "fps": "30/1",
+        "height": 1280,
+        "width": 720
+      },
+      "availability": "verified",
+      "origin": "assistant_render",
+      "provenance": "Ancien livrable BOJART_BREAK_THE_FRAME_V4_ANIMATIC_TEST.mp4. Mouvement de caméra sur des cases conceptuelles ; pas une captation de la figurine."
+    },
+    {
+      "id": "intro",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Introduction logo + animation",
+      "start": 0.0,
+      "end": 3.8,
+      "kind": "mixed",
+      "review": "unreviewed",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": false,
+      "evidence": "Images de contrôle à 0,6 et 2,8 s : illustration et extrait animé ; ne pas en déduire le modèle de sculpture.",
+      "tags": [
+        "logo",
+        "anime",
+        "introduction"
+      ],
+      "revision": 1,
+      "asset_label": "Vidéo BOJ.ART transmise · montage TikTok",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 15.1,
+        "fps": "30/1",
+        "height": 1108,
+        "width": 512
+      },
+      "availability": "verified",
+      "origin": "user_upload",
+      "provenance": "Pièce jointe v24044gl0000cuei73fog65q7gjmvfc0.mp4. Copie déjà montée : logo, animation et vraie sculpture ; pas un rush brut certifié."
+    },
+    {
+      "id": "profil",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Sculpture · profil et socle",
+      "start": 5.0,
+      "end": 6.0,
+      "kind": "authentic_capture",
+      "review": "approved_internal",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": true,
+      "evidence": "Comparaison visuelle des images extraites du média fourni. Validation interne de catégorie, pas validation technique ni droits.",
+      "tags": [
+        "sculpture",
+        "profil",
+        "socle",
+        "vraie figurine"
+      ],
+      "revision": 1,
+      "asset_label": "Vidéo BOJ.ART transmise · montage TikTok",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 15.1,
+        "fps": "30/1",
+        "height": 1108,
+        "width": 512
+      },
+      "availability": "verified",
+      "origin": "user_upload",
+      "provenance": "Pièce jointe v24044gl0000cuei73fog65q7gjmvfc0.mp4. Copie déjà montée : logo, animation et vraie sculpture ; pas un rush brut certifié."
+    },
+    {
+      "id": "ensemble",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Sculpture · vue d’ensemble",
+      "start": 6.6,
+      "end": 7.5,
+      "kind": "authentic_capture",
+      "review": "approved_internal",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": true,
+      "evidence": "Passage court de la pièce réelle ; contrôle visuel échantillonné pour repérer le sujet.",
+      "tags": [
+        "sculpture",
+        "ensemble",
+        "corps",
+        "socle"
+      ],
+      "revision": 1,
+      "asset_label": "Vidéo BOJ.ART transmise · montage TikTok",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 15.1,
+        "fps": "30/1",
+        "height": 1108,
+        "width": 512
+      },
+      "availability": "verified",
+      "origin": "user_upload",
+      "provenance": "Pièce jointe v24044gl0000cuei73fog65q7gjmvfc0.mp4. Copie déjà montée : logo, animation et vraie sculpture ; pas un rush brut certifié."
+    },
+    {
+      "id": "troisquarts",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Sculpture · trois-quarts",
+      "start": 8.5,
+      "end": 9.4,
+      "kind": "authentic_capture",
+      "review": "approved_internal",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": true,
+      "evidence": "Vue originale déjà retenue dans la fiche de fidélité V6. Source vidéo conservée par empreinte.",
+      "tags": [
+        "sculpture",
+        "reference",
+        "short bordeaux",
+        "trois quarts"
+      ],
+      "revision": 1,
+      "asset_label": "Vidéo BOJ.ART transmise · montage TikTok",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 15.1,
+        "fps": "30/1",
+        "height": 1108,
+        "width": 512
+      },
+      "availability": "verified",
+      "origin": "user_upload",
+      "provenance": "Pièce jointe v24044gl0000cuei73fog65q7gjmvfc0.mp4. Copie déjà montée : logo, animation et vraie sculpture ; pas un rush brut certifié."
+    },
+    {
+      "id": "visage",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Sculpture · visage et tenue",
+      "start": 10.2,
+      "end": 11.1,
+      "kind": "authentic_capture",
+      "review": "approved_internal",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": true,
+      "evidence": "Vue originale à 10,2 s du dossier V6. Sert à comparer le personnage ; ne prouve aucune dimension physique.",
+      "tags": [
+        "sculpture",
+        "visage",
+        "reference",
+        "short bordeaux",
+        "cicatrices"
+      ],
+      "revision": 1,
+      "asset_label": "Vidéo BOJ.ART transmise · montage TikTok",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 15.1,
+        "fps": "30/1",
+        "height": 1108,
+        "width": 512
+      },
+      "availability": "verified",
+      "origin": "user_upload",
+      "provenance": "Pièce jointe v24044gl0000cuei73fog65q7gjmvfc0.mp4. Copie déjà montée : logo, animation et vraie sculpture ; pas un rush brut certifié."
+    },
+    {
+      "id": "outro",
+      "asset_id": "7308bb1fecde4fcd484ad369f7e130661a5c2208a2373e2dc9996b251eb80662",
+      "label": "Outro · illustration et promotion",
+      "start": 12.8,
+      "end": 15.1,
+      "kind": "mixed",
+      "review": "unreviewed",
+      "rights": "unknown",
+      "rights_evidence": "",
+      "identity_anchor": false,
+      "evidence": "Fin montée du clip ; informations promotionnelles anciennes, non reprises comme offre actuelle.",
+      "tags": [
+        "logo",
+        "outro",
+        "promotion"
+      ],
+      "revision": 1,
+      "asset_label": "Vidéo BOJ.ART transmise · montage TikTok",
+      "metadata": {
+        "audio": true,
+        "codec": "h264",
+        "duration": 15.1,
+        "fps": "30/1",
+        "height": 1108,
+        "width": 512
+      },
+      "availability": "verified",
+      "origin": "user_upload",
+      "provenance": "Pièce jointe v24044gl0000cuei73fog65q7gjmvfc0.mp4. Copie déjà montée : logo, animation et vraie sculpture ; pas un rush brut certifié."
+    }
+  ],
+  "asset_count": 3,
+  "capabilities": {
+    "semantic_search": false,
+    "auto_artistic_review": false,
+    "rendering": false,
+    "publication": false
+  }
+}

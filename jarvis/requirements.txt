@@ -1,0 +1,3 @@
+# Same verified CAD dependencies as recovered Mission 03. No automatic install.
+-r apps/jarvis/requirements.txt
+-r requirements-orchestration.txt

@@ -23,10 +23,10 @@ Le rapport décrit les fichiers suivis du répertoire de travail. Après des mod
 | Mécanisme | Déclencheur | Travail | Limite |
 |---|---|---|---|
 | GitHub Actions `BOJART data audit` | Push, pull request, lancement manuel | Tests et inventaire du dépôt ; rapport attaché au run pendant 14 jours | Contrôle technique ; délai de file GitHub possible ; aucune validation artistique |
-| Automatisation ChatGPT `Auditer les évolutions BOJART` | Événements de PR et nouvelles révisions de PR | Lecture du contexte, écarts, recherche ciblée, correctifs réversibles testés sur branche du même dépôt | Créée et activée le 1 novembre ; première exécution future non encore prouvée |
+| Automatisation ChatGPT `Auditer les évolutions BOJART` | PR ordinaires et mises à jour de `main` via la PR permanente n°1 | Lecture du contexte et des écarts ; reçus par SHA sur `audit/context-results` ; correctifs réversibles testés | Portée et état vérifiables dans les reçus ; délai de traitement possible ; médias externes non présumés lus |
 | Veille IA locale Jarvis existante | Vendredi | Nouveautés utiles aux modèles 3D et à la production | Cadence conservée ; aucune installation présumée |
 
-Les pushes directs déclenchent les contrôles techniques. Pour bénéficier aussi de l'analyse contextuelle, travailler sur une branche et ouvrir une PR. Le connecteur actuel ne propose pas d'événement ChatGPT pour chaque push direct. Aucune analyse intelligente permanente de toutes les données n'est revendiquée. Un contrôle en échec ne bloque pas à lui seul une fusion : aucune règle de protection de branche n'a été modifiée.
+Les pushes directs sur `main` actualisent désormais la [PR de surveillance n°1](https://github.com/Momolscode/BOJART/pull/1), qui doit rester ouverte et ne pas être fusionnée. Ce relais utilise l'événement PR pris en charge par le connecteur. La [procédure et les preuves de recette](SURVEILLANCE_CONTEXTUELLE.md) expliquent comment vérifier les lancements et les reçus. Un lancement en cours ou un reçu partiel ne vaut pas validation complète. Les branches sans PR restent couvertes par les contrôles techniques seulement. Un contrôle en échec ne bloque pas à lui seul une fusion : aucune règle de protection de branche n'a été modifiée.
 
 ## Relier les informations
 
@@ -39,7 +39,7 @@ Les pushes directs déclenchent les contrôles techniques. Pour bénéficier aus
 | Montage | Version de l'EDL | Sources, points d'entrée, images, sons, correspondance vers les jobs |
 | Revue | Plan/export + version | Mesures techniques, jugement artistique, retour utilisateur et audience séparés |
 
-La mémoire documentaire doit indexer ces références et fournir des extraits sourcés par domaine (`bojart.jarvis`, `bojart.creative`, `bojart.sites`). Réutiliser `bojart_memory` dès sa consolidation dans le dépôt ; ne pas créer une deuxième base documentaire. Le présent journal n'est qu'un état de production. Les versions historiques restent consultables et ne deviennent pas automatiquement des décisions actuelles.
+La mémoire documentaire doit indexer ces références et fournir des extraits sourcés par domaine (`bojart.jarvis`, `bojart.creative`, `bojart.sites`). Réutiliser `bojart_memory`, maintenant consolidé dans le dépôt ; ne pas créer une deuxième base documentaire. Le présent journal n'est qu'un état de production. Les versions historiques restent consultables et ne deviennent pas automatiquement des décisions actuelles.
 
 La réponse à « où en est G2 ? » doit réunir `STATUT_G2.json`, la revue R03, le dernier reçu fournisseur et la source authentique. Elle doit exposer l'absence de plan fidèle, plutôt que déduire un succès du mot `completed` présent dans un ancien essai.
 
@@ -66,7 +66,7 @@ Après téléchargement par une route autorisée, `attach RUN FICHIER --sha256 E
 
 ## Prochaines preuves à obtenir
 
-1. Réunir le code M07 réellement consolidé, puis lancer sa recette dans un environnement neuf. Distinguer voix simulée, Jev réel et vrai microphone.
+1. Le code M07 est consolidé sous `jarvis/` et sa recette logicielle a été réexécutée ; voir [les preuves](evidence/consolidation-2026-11-01.json). Qualifier maintenant la tour réelle, en distinguant voix simulée, Jev réel et vrai microphone.
 2. Relier un seul adaptateur Higgsfield au journal, avec test d'interruption entre soumission et reçu, dans un essai borné. Aucun adaptateur payant n'est activé par ce changement.
 3. Qualifier G2 sur la sculpture authentique : même visage, peinture, main, socle et geste. Les refus fournisseur restent terminaux ; choisir une méthode autorisée et adaptée.
 4. Exporter une timeline de référence via OpenTimelineIO, puis comparer les 222 images de R03 et la piste son après import. Les effets FFmpeg, recadrages et traitements audio exigent une vérification séparée.

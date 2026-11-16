@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-01",
+  "repository_base_commit": "1d76c6876de54c7bc37b777ae66bf031207a140d",
+  "source_index_sha256": "91de1bb79cfb7cc72a2ff3e8267b009687083b1860acb282c763890598980da1",
+  "sources": 219,
+  "library_sources": 168,
+  "unique_contents": 3340,
+  "source_locations": 6445,
+  "unique_bytes": 1089594390,
+  "verified_unique_contents": 3340,
+  "errors": [],
+  "verification": "All three archive CRCs and all 3340 object sizes and SHA-256 recomputed in this transfer session. Every location resolves to a known object and source.",
+  "archives": [
+    {
+      "name": "BOJART_RECUPERATION_2026-11-01_PARTIE_1_SUR_3.zip",
+      "library_file_id": "libfile_8fe4cb5dac708191a5b11d0767f110a1",
+      "bytes": 331492004,
+      "sha256": "9f0544b915ebcd34482a0ff33076eb0ae25dfe333c9493b746f15a183c61fc8f",
+      "crc_verified": true,
+      "objects_sha256_verified": 1112,
+      "storage": "external_library",
+      "bytes_uploaded_to_github": false
+    },
+    {
+      "name": "BOJART_RECUPERATION_2026-11-01_PARTIE_2_SUR_3.zip",
+      "library_file_id": "libfile_e6d9a3e4475c81918f7f388c26378809",
+      "bytes": 328554766,
+      "sha256": "3c7fa81e053001df21138765c00f2424a50fd31e132fb5b56370908a514396a5",
+      "crc_verified": true,
+      "objects_sha256_verified": 1114,
+      "storage": "external_library",
+      "bytes_uploaded_to_github": false
+    },
+    {
+      "name": "BOJART_RECUPERATION_2026-11-01_PARTIE_3_SUR_3.zip",
+      "library_file_id": "libfile_b6a6ca51d7588191948ab9c82e2d078d",
+      "bytes": 340986970,
+      "sha256": "6a23245cda664686f0d8dac40d49107032bd5f94a09a686edaa833ed39300b06",
+      "crc_verified": true,
+      "objects_sha256_verified": 1114,
+      "storage": "external_library",
+      "bytes_uploaded_to_github": false
+    }
+  ],
+  "scope": "Public metadata only; object bytes remain in the referenced recovery archives. These counts describe the collection, not files newly uploaded to GitHub.",
+  "limits": [
+    "Not a complete ChatGPT conversation export.",
+    "No access to the workshop PC.",
+    "Runtime tests and creative approval are not implied by integrity checks.",
+    "The historical TikTok source documents one missing video."
+  ],
+  "omitted_from_public_projection": [
+    "Raw provider URLs",
+    "Original local absolute paths",
+    "Raw source contents",
+    "Embedded media"
+  ],
+  "reconciled_base_commit": "9a78aab6987905030e96112d0229ae0ba8ae53a5",
+  "software_checks": {
+    "memory_tests_passed": 30,
+    "agent_memory_tests_passed": 25,
+    "lexical_retrieval_cases_passed": 10,
+    "lexical_retrieval_cases_total": 10,
+    "source_policy_and_manifest_valid": true,
+    "scope": "Local checks of the reconciled repository; no hardware qualification."
+  }
+}

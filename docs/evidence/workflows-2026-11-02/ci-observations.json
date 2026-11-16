@@ -1,0 +1,71 @@
+{
+  "schema": "bojart.workflow-ci-observations.v1",
+  "code_commit": "13005fe924e0c092e87a99a82089c8ad15cf9b4c",
+  "workflow_run": 41365827134,
+  "workflow_url": "https://github.com/Momolscode/BOJART/actions/runs/41365827134",
+  "scope": "Two different CI runners; direct synthetic acknowledgements; no real audio/browser/target-PC test. Sequential engine runs are not a controlled causal comparison.",
+  "runs": [
+    {
+      "os": "linux",
+      "engine": "missing_dependency",
+      "file": "ci-linux-rules.json",
+      "file_sha256": "5f3187b80db3bd056e417f1bac8b72bbec8492112dbb51443680fed44a29d1e5",
+      "artifact_id": 13107068413,
+      "archive_sha256_verified": "3fc752035d368a3ca601585845a98a2e1835de78ac92abe4a81b2e1a29b11db0",
+      "trials": 270,
+      "functional_passes": 270,
+      "p50_ms": 15.179126,
+      "p95_ms": 31.76659,
+      "max_ms": 34.163507,
+      "above_1s": 0,
+      "above_5s": 0
+    },
+    {
+      "os": "linux",
+      "engine": "sqlite_ready",
+      "file": "ci-linux-langgraph.json",
+      "file_sha256": "98c0e57cdc825ae7cad8650b8e1f82bd4318ef16df4c1a261cd212ff86bfa3c9",
+      "artifact_id": 13107068413,
+      "archive_sha256_verified": "3fc752035d368a3ca601585845a98a2e1835de78ac92abe4a81b2e1a29b11db0",
+      "trials": 270,
+      "functional_passes": 270,
+      "p50_ms": 21.348436,
+      "p95_ms": 36.544619,
+      "max_ms": 41.808118,
+      "above_1s": 0,
+      "above_5s": 0
+    },
+    {
+      "os": "windows",
+      "engine": "missing_dependency",
+      "file": "ci-windows-rules.json",
+      "file_sha256": "fb5d61ec15c07e7b87eb82d9103001c2587749133ab79c5a414e45b89e33a64e",
+      "artifact_id": 13107207083,
+      "archive_sha256_verified": "8ccb33e3d0d0bb50f308d96f51f8c97188b85ff45384fb2ed9b1ca30f7608a05",
+      "trials": 270,
+      "functional_passes": 270,
+      "p50_ms": 184.7796,
+      "p95_ms": 375.0763,
+      "max_ms": 419.9099,
+      "above_1s": 0,
+      "above_5s": 0
+    },
+    {
+      "os": "windows",
+      "engine": "sqlite_ready",
+      "file": "ci-windows-langgraph.json",
+      "file_sha256": "9912f138da2a07f8ed347c64961f173270229c05a5aada682a62719057953696",
+      "artifact_id": 13107207083,
+      "archive_sha256_verified": "8ccb33e3d0d0bb50f308d96f51f8c97188b85ff45384fb2ed9b1ca30f7608a05",
+      "trials": 270,
+      "functional_passes": 270,
+      "p50_ms": 158.2537,
+      "p95_ms": 740.8945,
+      "max_ms": 17964.7184,
+      "above_1s": 7,
+      "above_5s": 2
+    }
+  ],
+  "latency_qualified_on_target": false,
+  "outlier_cause": "not isolated; no attribution to CPU, disk, network or LangGraph established"
+}

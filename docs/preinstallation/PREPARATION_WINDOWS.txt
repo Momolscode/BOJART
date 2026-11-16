@@ -1,0 +1,44 @@
+PRÉPARER JARVIS SUR LA TOUR WINDOWS
+
+Statut : préparation documentée et logiciel de préparation local. La tour physique reste à réceptionner. Les tests sur l’hôte d’audit ne valent pas installation propre ni benchmark de la tour.
+
+1. Profil et choix proportionnés
+Décision directe : Windows. Photo : Ryzen 5 5600G, 16 Go RAM, RTX 4060 Ti déclarée par l’utilisateur et 8 Go affichés. Passage à 32 Go prévu, pas encore constaté. Stockage affiché 932 Go, espace libre inconnu. Le build Insider Preview doit être enregistré lors de la recette ; ne pas changer l’OS automatiquement.
+Commencer par le mode documentaire FTS5 et les commandes écrites. Le socle ne requiert aucun LLM. Ajouter les moteurs CAO dans l’environnement Python 3.12 isolé, puis la voix courte et enfin un petit modèle local mesuré. Avec 16 Go ou 32 Go de RAM, sept rôles d’agents ne signifient pas sept modèles en parallèle. La VRAM disponible dépend aussi de l’affichage, Blender et des autres processus.
+Qwen3.5-4B et EmbeddingGemma sont des candidats distincts, pas une prescription de téléchargement ni une preuve de performance. Vérifier licences, digests, quantification, mémoire et latence sur un scénario utile avant sélection. Le chemin ASR actuel reste CPU/int8/quatre threads ; installer CUDA ne le bascule pas sur GPU.
+
+2. Examiner le paquet
+Lire data/preinstallation/target-profile.json et remplir target-inventory.template.json à partir du poste réel. Garder les inconnues nulles. Relever le GPU et le pilote par nvidia-smi si présent, RAM installée/libre et disque libre, microphone, voix locale et disposition des écrans. Aucun numéro de produit Windows ni secret dans le rapport.
+Utiliser le clone source livré ou appliquer le patch au SHA de base annoncé, dans une branche neuve. Ne pas écraser un clone modifié. Le paquet de mémoire est reconstruit depuis les documents sélectionnés ; il ne contient pas les conversations privées de l’utilisateur.
+
+3. Consulter avant toute installation optionnelle
+Depuis la racine du clone, avec Python 3.12 disponible et le mode UTF-8 (ajouter -X utf8 à Python, ou PYTHONUTF8=1 comme les lanceurs .cmd existants) :
+  python tools/prepare_jarvis.py status
+  python tools/prepare_jarvis.py requirements "voix"
+  python tools/prepare_jarvis.py tools "Moonraker"
+Ces commandes lisent les registres. Un résultat décrit une capacité attendue ou un outil candidat ; il n’installe rien et ne découvre aucun appareil.
+La commande build reconstruit la mémoire via le moteur existant, vérifie les originaux, sauvegarde, restaure dans un autre dossier temporaire et compare les recherches :
+  python tools/prepare_jarvis.py build --destination C:/BOJART_PREPARATION_NEUVE
+La destination doit être neuve et extérieure au clone. Aucune note ou mémoire active n’est remplacée.
+
+4. Installer le socle et restaurer
+Suivre l’installateur existant après lecture de tools/prepare_installation.py et de ses options --help. Conserver les versions épinglées dans les requirements du dépôt ; ne pas remplacer Python système ni les outils de l’atelier. Les dépendances optionnelles demandent réseau et disque ; aucun modèle n’est inclus dans ce paquet.
+Pour une mémoire neuve :
+  .venv/Scripts/python.exe -m bojart_memory restore CHEMIN_PAQUET/memory-snapshot CHEMIN_MEMOIRE_NEUVE
+  .venv/Scripts/python.exe -m bojart_memory --state CHEMIN_MEMOIRE_NEUVE verify
+Pour une mémoire déjà utilisée, conserver une sauvegarde et importer/indexer les nouvelles sources avec le moteur existant. Ne pas restaurer par-dessus. La mémoire documentaire et les cinq bases opérationnelles M07 ont des procédures distinctes ; réceptionner les deux restaurations.
+Configurer BOJART_MEMORY_STATE vers la même mémoire pour Jarvis et les clients MCP, puis vérifier tools/start_jarvis.py --check-only. Lire docs/DEMARRAGE_ET_REPRISE.md pour le lancement réel et ses chemins. Les exemples de chemins ne sont pas des commandes exécutées sur la tour.
+
+5. Recette de réception sur le poste
+Avant modèles : démarrage local, authentification, recherche citée, OS actuel correctement retrouvé, arrêt/redémarrage, sauvegarde/restauration dans un dossier neuf, aucune fuite de notes entre projets.
+CAO : produire une petite pièce autorisée avec moteur réel ; vérifier dimensions, unité, intégrité et révision. L’existence du STL ne signifie pas imprimable.
+Interface : trois reçus navigateur puis vérification manuelle des trois moniteurs physiques et de leur placement. Ces deux contrôles sont différents.
+Voix : choisir modèle local et micro, essais français calmes/bruit d’atelier, dimensions/négations/corrections, annulation, session concurrente, interruption du TTS, latence p50/p95 et faux positifs. Les fixtures ASR ne remplacent pas cette recette.
+LLM : questions sourcées avec vérité attendue, information absente, contradiction, instruction malveillante dans un document, source périmée. Mesurer citations réellement justificatives et abstention ; le seul nom d’une source est insuffisant. Garder un jeu d’évaluation non utilisé pour ajuster la recherche.
+Charge : mémoire libre/VRAM/latence pendant CAO ou rendu et reprise après veille. Décider d’un upgrade supplémentaire après mesure ; aucune promesse de vitesse n’est dérivée de la photo.
+
+6. Ordre des extensions
+Commencer par inventaires métier et télémétrie en lecture seule sur un appareil autorisé. Ensuite simulation de file/tranchage, profils exacts et vérification G-code. Autorisation humaine liée à une révision/empreinte avant envoi, et démarrage physique séparé. Après perte de réponse, résultat inconnu à réconcilier avant relance.
+Préparer les entrées documents/OCR/vidéo, Blender et les données de planification avant d’ajouter des services. Garder LangGraph ; Pipecat est candidat pour dialogue continu. Temporal ne devient pertinent qu’avec des tâches longues distribuées et un besoin de reprise démontré. Ni PostgreSQL, ni base vectorielle externe, ni serveur MCP tiers n’est un prérequis au socle existant.
+
+Voir requirements.json pour 91 exigences sourcées, les registres métier vides pour les informations à collecter, et ARCHITECTURE_ET_REPRISE.txt pour les contrats et états. L’absence de données interdit de fabriquer un inventaire ou une recette machine.

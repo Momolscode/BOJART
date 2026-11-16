@@ -1,0 +1,56 @@
+{
+ "scale_from_nominal": 0.89868,
+ "base_height_mm": 18.0,
+ "base_radius_mm": 43.34,
+ "base_centre_xy_mm": [
+  1.8,
+  -7.67
+ ],
+ "pegs": [
+  {
+   "side": "gauche",
+   "diameter_mm": 4.0,
+   "xy": [
+    -15.28,
+    0.48
+   ]
+  },
+  {
+   "side": "droite",
+   "diameter_mm": 5.0,
+   "xy": [
+    18.87,
+    -15.71
+   ]
+  }
+ ],
+ "peg_length_mm": 6.0,
+ "hole_clearance_per_side_mm": 0.2,
+ "keying": "diamètres différents : impossible d’inverser les pieds",
+ "joint_plane": "semelles / dessus du socle (joint masqué par le contact des bottes)",
+ "base_recess_height_mm": 9.2,
+ "base_print_orientation": "retourné (dessus sur le plateau) : évidement sans pont ni support",
+ "hypotheses": "hypothèse à calibrer par une pièce test, pas un réglage de production",
+ "base_style": {
+  "style": "strates",
+  "version": "bojart.socle.strates.v1",
+  "strata": 5,
+  "strata_heights_mm": [
+   4.0,
+   3.92,
+   3.09,
+   3.06,
+   3.94
+  ],
+  "cleavage_grooves": 1,
+  "seed": 23,
+  "outline_jitter_mm": 0.7,
+  "step_per_stratum_mm": 0.8,
+  "top_outline_min_radius_mm": 40.63,
+  "bottom_outline_max_radius_mm": 47.15,
+  "chamfer_slope": "1.15 (plus raide que 45° dans le sens d’impression)",
+  "top_margin_beyond_feet_mm": 7.29,
+  "recess_radius_mm": 40.34,
+  "recess_wall_min_mm": 2.9
+ }
+}

@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "name": "Données fictives visibles",
+      "pass": true
+    },
+    {
+      "name": "Baseline",
+      "pass": true
+    },
+    {
+      "name": "Trois dossiers",
+      "pass": true
+    },
+    {
+      "name": "Aucun débordement desktop",
+      "pass": true
+    },
+    {
+      "name": "Scénario indisponibilité",
+      "pass": true
+    },
+    {
+      "name": "Machine B non affectée",
+      "pass": true
+    },
+    {
+      "name": "Finition retard",
+      "pass": true
+    },
+    {
+      "name": "Échéance courte",
+      "pass": true
+    },
+    {
+      "name": "Bloqué sans compatibilité",
+      "pass": true
+    },
+    {
+      "name": "Clavier",
+      "pass": true
+    },
+    {
+      "name": "Pas de débordement mobile",
+      "pass": true
+    },
+    {
+      "name": "Réduction de mouvement",
+      "pass": true
+    },
+    {
+      "name": "Aucune erreur JS",
+      "pass": true
+    },
+    {
+      "name": "Aucune requête HTTP externe",
+      "pass": true
+    }
+  ],
+  "count": 14,
+  "errors": [],
+  "scope": "HTML injecté dans Chromium headless avec set_content. Navigation file:// interdite par la politique du navigateur. Aucun backend, modèle IA ou matériel."
+}

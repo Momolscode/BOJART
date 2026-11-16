@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-10-19T19:16:31.024Z",
+  "suite": "BOJ.ART V11 explicit STL import",
+  "passed": 9,
+  "failed": 0,
+  "environment": {
+    "runtime": "v24.19.0",
+    "fullApplication": true,
+    "realSTLParser": true,
+    "browser": false,
+    "webGL": false,
+    "server": false,
+    "realIndexedDB": false,
+    "realMachine": false
+  },
+  "scope": "App.js integration with actual import helper, WorkshopStore reducer and real STL/Three geometry; controlled JSDOM and IndexedDB contract.",
+  "limitations": [
+    "Does not certify visual rendering, actual browser IndexedDB persistence or hardware behavior.",
+    "A write already in flight when the drawer is closed may leave unassociated STL bytes; the dossier remains unchanged.",
+    "New parts remain unassigned and unqualified. No slicing or printing is triggered."
+  ],
+  "checks": [
+    {
+      "id": "choices-required",
+      "status": "passed",
+      "description": "No default unit or process; empty, partial and invalid choices perform no parsing, file read or asset write."
+    },
+    {
+      "id": "mixed-unit-process-destination",
+      "status": "passed",
+      "description": "Mixed mm/FDM and inch/resin files retain their explicit choices and original destination when the active dossier changes during reading."
+    },
+    {
+      "id": "double-submit",
+      "status": "passed",
+      "description": "Two submissions in one interval read and append the source only once."
+    },
+    {
+      "id": "close-during-file-read",
+      "status": "passed",
+      "description": "Closing the import while arrayBuffer is pending produces no parsing, asset write or piece addition after reading returns."
+    },
+    {
+      "id": "revision-during-file-read",
+      "status": "passed",
+      "description": "A concurrent destination revision interrupts the lot without overwriting the revised dossier or attaching a stale part."
+    },
+    {
+      "id": "partial-success-retry",
+      "status": "passed",
+      "description": "After one asset storage failure, retry only reads and adds the remaining source; the already-added part and its bytes remain unchanged."
+    },
+    {
+      "id": "preserve-open-drafts-on-drop",
+      "status": "passed",
+      "description": "Dropping an STL preserves a draft brief, Jarvis command and existing STL setup instead of replacing the open panel."
+    },
+    {
+      "id": "close-during-storage",
+      "status": "passed",
+      "description": "Closing after parsing while storage is in flight attaches no piece; an already-started byte write may remain as an unassociated asset."
+    },
+    {
+      "id": "motion-focus-responsive-contract",
+      "status": "passed",
+      "description": "The explicit import keeps labelled required controls and status text; reduced-motion CSS covers the drawer and the UI toggle preserves input."
+    }
+  ],
+  "unexpectedErrors": [],
+  "networkWrites": []
+}

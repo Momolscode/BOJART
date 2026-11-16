@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "id": "BOJART-VEGETA-1000MM",
+  "title": "Préparer une sculpture Végéta de 1 mètre répartie sur le parc",
+  "state": "NO_EXECUTION",
+  "requirement_provenance": {
+    "kind": "user_direct_in_returned_projection",
+    "original_chat_reference": {
+      "thread_id": "6ae7a1e3-e0f0-83ed-8b67-2fc8af142629",
+      "thread_title": "Créer mémoire Jarvis GitHub",
+      "message_id": "b1177501-f9f9-4667-b1ed-e95dc3a017d7",
+      "message_at_utc": "2026-11-01T23:59:38.012365+00:00"
+    },
+    "source": "Réconciliation V5, CHAT-REQ-07 ; projection récupérée, original intégral non obtenu.",
+    "not_an_execution_authorization": true
+  },
+  "target": {
+    "assembled_height_mm": 1000,
+    "definition_of_height": null,
+    "artistic_reference": null,
+    "model_original": null,
+    "model_sha256": null,
+    "model_units": null,
+    "model_revision": null,
+    "rights_or_permission": null,
+    "model_manifest": null
+  },
+  "machine_inventory": {
+    "status": "MISSING",
+    "machines": [],
+    "required_fields": [
+      "Identifiant stable",
+      "Fabricant, modèle et révision",
+      "Procédé FDM ou résine",
+      "Volume utile et marges réellement utilisables",
+      "Buse ou écran selon procédé",
+      "Matières compatibles et profils mesurés",
+      "Firmware et protocole",
+      "État et disponibilité",
+      "Manuel officiel et version"
+    ]
+  },
+  "manufacturing_datasheet": {
+    "status": "INCOMPLETE_NO_EXECUTION",
+    "required": [
+      "Échelle assemblée et définition des points de hauteur",
+      "Encombrement et stabilité de la sculpture",
+      "Nombre de pièces après analyse, jamais présumé",
+      "Plans de joint et assemblages",
+      "Tolérances et jeu validés par coupon",
+      "Orientation et supports par pièce",
+      "Profil machine/matière/lot par pièce",
+      "Version du slicer et hash des profils",
+      "Temps machine et opérateur",
+      "Nettoyage, finition et assemblage selon produits exacts",
+      "Repères des pièces et nomenclature",
+      "Aperçu artistique et validation humaine"
+    ],
+    "part_plan": [],
+    "assembly_tolerance_mm": null,
+    "materials": [],
+    "slicer_versions": [],
+    "estimated_total_cost_eur": null
+  },
+  "qualification_plan": [
+    {
+      "stage": "Entrées",
+      "acceptance": "Modèle authentique fourni, droits renseignés, unités et manifeste vérifiés ; aucun remplacement automatique par un modèle généré."
+    },
+    {
+      "stage": "Échelle",
+      "acceptance": "Hauteur assemblée calculée à 1 000 mm selon les points convenus ; préserver l’original et consigner la transformation."
+    },
+    {
+      "stage": "Découpe simulée",
+      "acceptance": "Chaque morceau est identifié, assemblable et compatible avec le volume utile du profil choisi ; une boîte englobante compatible ne suffit pas à prouver la fabricabilité."
+    },
+    {
+      "stage": "Assemblages",
+      "acceptance": "Plan de joints et tolérances soumis à validation ; coupon de qualification proposé, aucune impression lancée."
+    },
+    {
+      "stage": "Tranchage local",
+      "acceptance": "Aperçus, supports, matière et paramètres relus pour chaque pièce ; hash des fichiers et profils, aucun upload ni démarrage."
+    },
+    {
+      "stage": "Répartition",
+      "acceptance": "Planning proposé intégrant machine, opérateur, finition et assemblage ; délais et coûts distingués entre mesurés, estimés et inconnus."
+    },
+    {
+      "stage": "Réception",
+      "acceptance": "Dossier de fabrication et aperçu assemblé inspectés ; état reste NO_EXECUTION tant qu’une activation distincte n’est pas autorisée et qualifiée."
+    }
+  ],
+  "forbidden_effects": [
+    "Chauffe",
+    "Mouvement",
+    "Upload machine",
+    "Démarrage",
+    "File de travaux physique",
+    "Commande de matériau",
+    "Publication"
+  ],
+  "artifacts_expected": [
+    "Manifestes source et dérivés",
+    "Aperçu de la sculpture assemblée",
+    "Nomenclature des pièces",
+    "Fiches de fabrication par pièce",
+    "Plan d’assemblage",
+    "Planning proposé",
+    "Registre des inconnues",
+    "Reçus de qualification locaux"
+  ],
+  "physical_actions_performed": 0,
+  "model_generated": false,
+  "actual_printer_qualification": false,
+  "separate_synthetic_prototype": {
+    "code": "jarvis/apps/jarvis/app/fleet_simulation.py",
+    "fixture": "jarvis/fixtures/fleet_1000mm_synthetic.json",
+    "documentation": "docs/SIMULATIONS_ATELIER.md",
+    "scope": "Prototype ajouté dans le lot distant c71628c ; boîtes et parc fictifs, hors runtime vocal, sans modèle de Végéta ni connecteur machine. Résultats de réception V5 à lire séparément."
+  }
+}

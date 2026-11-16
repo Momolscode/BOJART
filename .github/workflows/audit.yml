@@ -24,11 +24,28 @@ jobs:
       - name: Inventory and inspect tracked files
         if: always()
         run: python tools/audit_repository.py --output .bojart-audit
+      - name: Read contextual checkpoint without changing the audited checkout
+        if: always()
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: Momolscode/BOJART
+          ref: audit/context-results
+          path: .bojart-audit/context-source
+          sparse-checkout: ops/context-monitor/checkpoint.json
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - name: Classify sources and prepare review batches
+        if: always()
+        run: python tools/orchestrate.py --audit .bojart-audit/audit.json --checkpoint .bojart-audit/context-source/ops/context-monitor/checkpoint.json
       - name: Add audit summary
         if: always()
         run: |
           if test -f .bojart-audit/audit.md; then
             cat .bojart-audit/audit.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if test -f .bojart-audit/orchestration.md; then
+            cat .bojart-audit/orchestration.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - uses: actions/upload-artifact@v4
         if: always()
@@ -37,6 +54,8 @@ jobs:
           path: |
             .bojart-audit/audit.json
             .bojart-audit/audit.md
+            .bojart-audit/orchestration.json
+            .bojart-audit/orchestration.md
           include-hidden-files: true
           retention-days: 14
           if-no-files-found: error

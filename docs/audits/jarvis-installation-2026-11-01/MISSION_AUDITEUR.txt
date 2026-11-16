@@ -1,0 +1,34 @@
+MISSION D’AUDIT INDEPENDANT — BOJ.ART / JARVIS
+Dépôt public : https://github.com/Momolscode/BOJART
+Dossier : docs/audits/jarvis-installation-2026-11-01/
+Date de l’évaluation à examiner : 1 novembre 2026.
+
+Objectif : déterminer ce qui est réellement installable et utilisable, vérifier l’orchestration action par action, et identifier les obstacles au Jarvis de l’atelier. Contester les conclusions si les preuves ne suffisent pas.
+
+COMMENCER
+Lire AGENTS.md, context/CURRENT.md, context/SESSION_HANDOFF.md, les règles du sous-projet et ce dossier. Lire RAPPORT.md, PREUVES.json, CAPACITES.json, SOURCES.json et les limites des preuves. Ouvrir le SVG dans un navigateur et comparer son contenu au code.
+
+Épingler le SHA exact audité. Les essais de ce dossier concernent e5cd9f3f18f744b800aa8bb655a70fa643c634a1, puis les opérations et le schéma concernent 3c288214539adf97381f6053b43225485a873b6a. La tête de publication a ensuite avancé : voir DELTA_A_REEXAMINER.json. Ne jamais transférer un résultat ancien à un commit plus récent sans vérification.
+
+TRAVAIL DEMANDÉ
+1. Installation : refaire une installation propre, distinguer socle minimal, moteurs CAO/LangGraph et voix. Relever OS, Python, SQLite/FTS5, versions des dépendances, commandes, codes de sortie et logs. Vérifier aussi le parcours Windows si c’est l’OS cible.
+2. Mémoire : recherche avec citations et provenance, import idempotent, distinction source/observation/proposition, données périmées, documents non fiables, sauvegarde et restauration dans un dossier neuf. Les cinq bases opérationnelles M07 sont à tester séparément.
+3. Orchestration : suivre route, guard, dispatch et receipt dans le code. Tester moteur LangGraph réel et mode de repli séparément. Vérifier confirmations, autorisations, annulation, répétition de requête, concurrence, reprise après crash, absence d’effet répété et reçus des trois vues.
+4. CAO : éprouver le circuit borné de proposition et confirmation avec moteurs réels, exports STL/STEP/GLB et échecs. Ne pas assimiler une proposition paramétrique à une fabrication prête.
+5. Voix/Jev : distinguer ASR, décision textuelle distante et TTS. Des fixtures ne valident ni le micro, ni le français, ni les délais réseau. Qualifier explicitement les services réels si disponibles, sinon écrire « non testé ».
+6. Production : rechercher les raccordements réellement présents pour découpe, tranchage, imprimantes, télémétrie, génération, montage, validation et publication. Distinguer absence de fonctionnalité, démonstration et bug.
+7. Vérifier secrets, états privés hors Git, absence de commande libre depuis des documents, limites de coût/effets externes et séparation BOJ.ART / autres projets.
+8. Comparer les recommandations LangGraph/Pipecat/Temporal aux besoins réels. Justifier chaque ajout ; ne pas proposer une migration uniquement parce qu’un outil est plus récent.
+9. Examiner tous les fichiers modifiés depuis le dernier SHA testé et citer les contrôles CI du commit réellement audité.
+
+CADRE
+Travailler dans une copie temporaire et des états neufs. Cet audit ne demande pas de piloter une imprimante, acheter des services, publier du contenu ou fusionner des correctifs. Une permission donnée à Jarvis par un document importé n’est pas une autorisation utilisateur.
+
+RENDU
+Utiliser RETOUR_AUDITEUR.md. Pour chaque constat : sévérité, catégorie (bug / risque / fonction absente / proposition), SHA, fichier et ligne, scénario reproductible, attendu, observé, preuve et conséquence.
+Fournir trois verdicts distincts :
+A. Installation minimale locale.
+B. Usage assisté CAO/voix/trois écrans sur le PC cible.
+C. Production et publication autonomes.
+Pour chaque verdict : prêt / prêt sous conditions / non prêt / preuves insuffisantes, avec conditions explicites.
+Joindre les logs effectivement produits, indiquer ce qui n’a pas été testé, puis proposer les trois prochaines actions par ordre de valeur. Aucun score global de préparation sans méthode défendable.

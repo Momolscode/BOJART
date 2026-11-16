@@ -1,0 +1,27 @@
+{
+ "objet": "Revérification de l'import three.js de l'Atelier après fusion de main (fiche D6)",
+ "contexte": {
+  "constat_precedent": "atelier_three_core_absent_2026-11-02.json (03:08 UTC, base b49101e de la branche)",
+  "correction": "02be63c « Replay the unpushed local V5 handoff revision » : three.core.js 0.180.0 + THREE-PROVENANCE.json, fusionné sur main par la PR #12 à 02:55 UTC",
+  "arbre_verifie": "e1a08fe (fusion de origin/main dans la branche)"
+ },
+ "checked": "2026-11-02T04:42:42.599Z",
+ "commit": "e1a08fe",
+ "browser": "Chromium 153.0.8010.12",
+ "served": "sites/atelier/dist (serveur HTTP local, sans API)",
+ "three_import": "réussi : REVISION 180",
+ "vendor_three_core_status": "servi",
+ "not_found": [
+  "/assets/logo.webp",
+  "/assets/body.ttf",
+  "/assets/display.ttf",
+  "/assets/baki-hero.webp",
+  "/assets/logo.webp",
+  "/api/workshop/status",
+  "/api/workshop/assets/status",
+  "/assets/logo.webp",
+  "/assets/baki-hero.webp"
+ ],
+ "console_errors": 9,
+ "lecture": "three.js se charge (r180). Les 404 restants ne concernent pas three.js : binaires exclus du dépôt (logo, polices, visuel) et API /api/workshop absente en service statique. Aucune capture d'écran."
+}

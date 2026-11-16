@@ -54,5 +54,6 @@
     "audience": "Aucune publication ou mesure",
     "feedback_R03": "Pas encore reçu"
   },
-  "new_generations_this_pass": 0
+  "new_generations_this_pass": 0,
+  "credits_spent_this_pass": 0
 }

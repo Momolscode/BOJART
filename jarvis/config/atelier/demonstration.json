@@ -1,0 +1,37 @@
+{
+  "schema": "bojart.atelier.demonstration.v1",
+  "avertissement": "Données de démonstration. Les trois machines sont simulées ; aucune ne décrit le parc réel de BOJ.ART. Le devis utilise la grille d'exemple et ne peut pas être émis.",
+  "dossier": {"id": "BOJ-DEMO-ATELIER", "nom": "Démonstration atelier (fictif)"},
+  "machines": [
+    {"id": "SIM-FDM-1", "origine": "simulee", "fabricant": "Simulation BOJ.ART", "modele": "FDM 250 × 210 × 220",
+     "procede": "FDM", "volume_utile_mm": [250, 210, 220], "source_volume": "plateau d'hypothèse du profil de tranchage M08 (PR #15)",
+     "matieres": ["PLA", "PETG"], "interface": {"type": "simulation"}},
+    {"id": "SIM-FDM-2", "origine": "simulee", "fabricant": "Simulation BOJ.ART", "modele": "FDM 256 × 256 × 256",
+     "procede": "FDM", "volume_utile_mm": [256, 256, 256], "source_volume": "volume d'exemple",
+     "matieres": ["PLA"], "interface": {"type": "simulation"}},
+    {"id": "SIM-RES-1", "origine": "simulee", "fabricant": "Simulation BOJ.ART", "modele": "MSLA 218 × 123 × 220",
+     "procede": "RESINE", "volume_utile_mm": [218, 123, 220], "source_volume": "volume d'exemple",
+     "matieres": ["Résine standard"], "interface": {"type": "simulation"}}
+  ],
+  "demande": {"origine": "demonstration", "reference_source": "DEMO-001", "recue_le": "2026-11-02",
+              "resume": "Figurine originale « La Sentinelle de l'atelier », 200 mm avec socle, PLA, finition peinte. Démonstration."},
+  "entree": {
+    "schema": "bojart.devis.entree.v1", "dossier_id": "BOJ-DEMO-ATELIER", "titre": "La Sentinelle de l'atelier — 200 mm (démonstration)",
+    "exemplaires": 1, "reference_demande": "DEMO-001",
+    "pieces": [
+      {"id": "figurine", "libelle": "Figurine", "procede": "FDM", "matiere": "PLA", "par_exemplaire": 1,
+       "estimation": {"source": "trancheur", "temps_machine_s": 44161, "matiere_g": 112.99, "marque_simulation": true,
+                      "fichier_sha256": "56856ac3ee3ad7ce3fa0b631ba8fd9c33e4ed5666dbfd144ef441df3b6005ff0",
+                      "reference": "PrusaSlicer 2.7.2, profil d'hypothèse M08, figurine.SIMULATION-NE-PAS-IMPRIMER.gcode"}},
+      {"id": "socle", "libelle": "Socle à tenons", "procede": "FDM", "matiere": "PLA", "par_exemplaire": 1,
+       "estimation": {"source": "trancheur", "temps_machine_s": 29409, "matiere_g": 73.77, "marque_simulation": true,
+                      "fichier_sha256": "f5b98d7ce1169f8af4372cf3496b6d781b32044a8096c633e4e3ccae6cc14eb2",
+                      "reference": "PrusaSlicer 2.7.2, profil d'hypothèse M08, socle_impression.SIMULATION-NE-PAS-IMPRIMER.gcode"}}
+    ],
+    "operations": [
+      {"id": "preparation", "libelle": "Préparation des fichiers et tranchage", "heures": "0.5", "par": "lot"},
+      {"id": "finition", "libelle": "Retrait des supports, ponçage, apprêt et peinture", "heures": "3", "par": "exemplaire"}
+    ],
+    "frais": [{"id": "emballage", "libelle": "Emballage protégé", "montant_ht": "6.00"}]
+  }
+}

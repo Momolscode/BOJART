@@ -1,0 +1,42 @@
+{
+ "schema_version": 1,
+ "checked_on": "2026-11-04",
+ "meaning": "Contre-vérifications faites par le fil principal sur des affirmations des fiches de veille. Le reste des fiches reste au statut de preuve indiqué dans chaque fichier de domaine.",
+ "checks": [
+  {
+   "claim": "diso (décodeur rapide de TripoSG) est sous CC BY-NC 4.0",
+   "source": "https://raw.githubusercontent.com/SarahWeiii/diso/main/LICENSE",
+   "result": "confirmé : « licensed under CC BY-NC 4.0 »"
+  },
+  {
+   "claim": "Le script d'inférence TripoSG télécharge et charge briaai/RMBG-1.4",
+   "source": "https://raw.githubusercontent.com/VAST-AI-Research/TripoSG/main/scripts/inference_triposg.py",
+   "result": "confirmé : snapshot_download(repo_id=\"briaai/RMBG-1.4\") puis BriaRMBG.from_pretrained"
+  },
+  {
+   "claim": "ComfyUI intègre TRELLIS.2 nativement sans nvdiffrast",
+   "source": "https://raw.githubusercontent.com/comfyanonymous/ComfyUI/master/comfy_extras/nodes_trellis2.py",
+   "result": "fichier présent (41 478 octets) ; imports : comfy_api, comfy.ldm.trellis2, comfy_extras.nodes_mesh_postprocess, torch ; aucun import nvdiffrast. Le pic VRAM sur 8 Go reste non mesuré."
+  },
+  {
+   "claim": "Comfy-Org/TRELLIS.2 est publié sur Hugging Face",
+   "source": "https://huggingface.co/api/models/Comfy-Org/TRELLIS.2",
+   "result": "dépôt public trouvé (métadonnées API lues)"
+  },
+  {
+   "claim": "Blender 5.2 est une LTS courante, avec 4.5 LTS",
+   "source": "https://www.blender.org/download/lts/",
+   "result": "confirmé : la page cite Blender 5.2 LTS et 4.5 LTS"
+  },
+  {
+   "claim": "Les archives du site citent des imprimantes Ender 5 Pro/Plus et Elegoo Saturn/Mars",
+   "source": "sites/atelier/dist/assets/archive-index.json (descriptions de vidéos)",
+   "result": "confirmé : hashtags #ender5pro, #ender5plus, #elegoosaturn, #elegoomars. Indice public, pas un inventaire."
+  },
+  {
+   "claim": "Coûts 3D Higgsfield",
+   "source": "generate_3d get_cost=true",
+   "result": "voir higgsfield-couts-3d.json ; aucun job soumis"
+  }
+ ]
+}

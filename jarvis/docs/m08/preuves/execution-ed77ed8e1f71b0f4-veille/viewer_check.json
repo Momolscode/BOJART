@@ -1,0 +1,119 @@
+{
+ "url_kind": "serveur local 127.0.0.1",
+ "checks": [
+  {
+   "name": "chargement figurine",
+   "ok": true,
+   "detail": {
+    "shown": 518570,
+    "file": 518570
+   }
+  },
+  {
+   "name": "chargement socle",
+   "ok": true,
+   "detail": {
+    "shown": 490,
+    "file": 490
+   }
+  },
+  {
+   "name": "rotation à la souris",
+   "ok": true,
+   "detail": {
+    "camera_moved_mm": 777.2
+   }
+  },
+  {
+   "name": "zoom molette",
+   "ok": true,
+   "detail": {
+    "distance_before": 626,
+    "distance_after": 460.2
+   }
+  },
+  {
+   "name": "vue face",
+   "ok": true,
+   "detail": {
+    "direction": [
+     0,
+     -0.993,
+     0.119
+    ]
+   }
+  },
+  {
+   "name": "vue profil",
+   "ok": true,
+   "detail": {
+    "direction": [
+     -0.993,
+     0,
+     0.119
+    ]
+   }
+  },
+  {
+   "name": "vue dos",
+   "ok": true,
+   "detail": {
+    "direction": [
+     0,
+     0.993,
+     0.119
+    ]
+   }
+  },
+  {
+   "name": "vue trois_quarts",
+   "ok": true,
+   "detail": {
+    "direction": [
+     -0.589,
+     -0.737,
+     0.332
+    ]
+   }
+  },
+  {
+   "name": "masquer le socle",
+   "ok": true,
+   "detail": {
+    "socle": false,
+    "figurine": true
+   }
+  },
+  {
+   "name": "vue éclatée (tenons visibles)",
+   "ok": true,
+   "detail": {
+    "lift_mm": 36
+   }
+  },
+  {
+   "name": "affichage maillage",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "canevas non vide",
+   "ok": true,
+   "detail": {
+    "distinct_levels": 24
+   }
+  },
+  {
+   "name": "aucune erreur console",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "started": "2026-11-03T01:21:04.714Z",
+ "load_ms": 525,
+ "console_errors": [],
+ "browser": "chromium 153.0.8010.12",
+ "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+ "passed": true,
+ "scope": "Chromium sans écran + rendu logiciel ; ne qualifie ni la tour, ni ses trois écrans, ni le tableau de bord Jarvis réel."
+}

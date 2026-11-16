@@ -1,0 +1,6868 @@
+{
+ "schema": "bojart.banc_voix.rapport.v1",
+ "libelle": "conteneur small règles",
+ "debut": "2026-11-02T14:53:05+00:00",
+ "fin": "2026-11-02T14:55:09+00:00",
+ "depot": {
+  "sha": "3436f5352659554e4bac5af492b94af6c522ed2d",
+  "modifications_locales": true,
+  "sources_runtime_sha256": {
+   "voice.py": "409faa8a3bd653d370ff8566642b0fcb65c33a838afa6597de37218a2ea3376d",
+   "jarvis_runtime.py": "37c5ea4ace564634664eaa1f2ff08e40bdd3452eaad2996340b3da1767657e57",
+   "jarvis_http.py": "9228ef96993d4262c624ab3ff5edc5ad64cecc12f504f25336ed9482463e8ec3",
+   "display_contracts.py": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c",
+   "control_tower.py": "f610deef425543abdbccb8a4a072b41799d324a2107c04ddbb1139f4098ed16d",
+   "tower_voice.js": "c69ea4231bf0876cf542e23453b4c052e735283079e3380b010058cbc5dca2bf",
+   "capture.js": "1ef361db5ddc266257e6dcd33b0462324860ec84cf8e7b51f573f355e0829b23",
+   "voice_endpoint.js": "bc1a2847b9e85e5d209754deb082701ea757cb0dd6cc56639ba0a605efe1564b",
+   "tower_screen.js": "7454d70c4dee602957b86fb659d73a4c04697f6fb054f3a937ef0016cb18c921"
+  }
+ },
+ "environnement": {
+  "systeme": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+  "python": "3.13.18",
+  "processeur": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+  "coeurs_logiques": 4,
+  "memoire_go": 15.7,
+  "gpu_nvidia": null,
+  "paquets": {
+   "faster-whisper": "1.2.1",
+   "ctranslate2": "4.8.4",
+   "av": "18.1.0",
+   "onnxruntime": "1.31.1",
+   "numpy": "2.5.4",
+   "langgraph": "1.2.18",
+   "langgraph-checkpoint-sqlite": "3.1.3"
+  }
+ },
+ "moteur_orchestration": "missing_dependency",
+ "asr": {
+  "moteur": "faster-whisper",
+  "modele": {
+   "dossier": "whisper-small",
+   "modele_connu": "small",
+   "empreintes": {
+    "model.bin": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "config.json": "b55496ac7940a7ae47d2c01eab40edfd8701feec1229d9cce3b40014383fb828",
+    "tokenizer.json": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab"
+   }
+  },
+  "variante": "runtime",
+  "parametres_ajoutes": {},
+  "parametres_transcription": {
+   "language": "fr",
+   "beam_size": 3,
+   "condition_on_previous_text": false,
+   "vad_filter": true,
+   "word_timestamps": false
+  },
+  "parametres_chargement": {
+   "device": "cpu",
+   "compute_type": "int8",
+   "cpu_threads": 4,
+   "local_files_only": true
+  }
+ },
+ "corpus": {
+  "schema": "bojart.banc_voix.corpus.v1",
+  "manifeste_sha256": "71d7020519c541bd6e4e1d245c2f281ed7465847e4358e915a73f588085043b2",
+  "cree_le": "2026-11-02T14:43:43+00:00",
+  "nature": "synthèse vocale Piper + bruit synthétique ; pas une voix humaine ni un micro réel",
+  "clips": 80,
+  "code_navigateur": {
+   "node": "v22.23.4",
+   "sources_sha256": {
+    "voice_endpoint.js": "bc1a2847b9e85e5d209754deb082701ea757cb0dd6cc56639ba0a605efe1564b",
+    "capture.js": "1ef361db5ddc266257e6dcd33b0462324860ec84cf8e7b51f573f355e0829b23"
+   }
+  }
+ },
+ "protocole": {
+  "serveur": "ConsolidatedWorkbench réel, HTTP 127.0.0.1, base temporaire neuve",
+  "ecrans": "trois clients HTTP (atelier, pilotage, création) : événements, poll, accusé ; aucun rendu",
+  "console": "reçu relu à chaque événement /api/tower/events, repli 5 s, comme tower_voice.js",
+  "froid": "3 démarrages neufs, première prise de chacun (chargement du modèle inclus) ; texte du tour imposé pour mesurer aussi la première distribution ; cache disque du système chaud",
+  "chaud": "une prise d’échauffement exclue, puis chaque clip du corpus une fois, dans l’ordre du manifeste",
+  "fin_de_prise": "temps audio entre la fin de la parole et la décision de voice_endpoint.js (corpus)",
+  "encodage_wav": "mesuré par Node lors de la génération du corpus, sur l’hôte du corpus",
+  "bout_en_bout": "fin de prise après parole + encodage + transcription + tour + reçu d’affichage",
+  "statistiques": "médiane ; p95 au rang le plus proche ; maximum ; n"
+ },
+ "synthese": {
+  "issues": {
+   "commande_manquee": 68,
+   "correct": 12,
+   "mesure_a_froid": 3
+  },
+  "erreurs_critiques": 0,
+  "erreurs_techniques": {},
+  "etapes": {
+   "chaud": {
+    "debut_de_prise": {
+     "n": 80,
+     "mediane_ms": 4.217,
+     "p95_ms": 5.58,
+     "max_ms": 6.692
+    },
+    "fin_de_prise_apres_parole": {
+     "n": 80,
+     "mediane_ms": 12130.0,
+     "p95_ms": 12910.0,
+     "max_ms": 13030.0
+    },
+    "encodage_wav": {
+     "n": 80,
+     "mediane_ms": 192.043,
+     "p95_ms": 237.979,
+     "max_ms": 293.224
+    },
+    "transcription_http": {
+     "n": 80,
+     "mediane_ms": 1035.461,
+     "p95_ms": 1257.522,
+     "max_ms": 5769.867
+    },
+    "controle_audio": {
+     "n": 80,
+     "mediane_ms": 38.318,
+     "p95_ms": 48.788,
+     "max_ms": 61.213
+    },
+    "transcription_moteur": {
+     "n": 80,
+     "mediane_ms": 1007.791,
+     "p95_ms": 1217.611,
+     "max_ms": 5727.729
+    },
+    "chargement_modele": {
+     "n": 0,
+     "mediane_ms": null,
+     "p95_ms": null,
+     "max_ms": null
+    },
+    "tour_http": {
+     "n": 80,
+     "mediane_ms": 13.772,
+     "p95_ms": 21.503,
+     "max_ms": 24.309
+    },
+    "intention": {
+     "n": 80,
+     "mediane_ms": 2.335,
+     "p95_ms": 3.204,
+     "max_ms": 4.512
+    },
+    "garde": {
+     "n": 80,
+     "mediane_ms": 0.343,
+     "p95_ms": 0.526,
+     "max_ms": 2.509
+    },
+    "distribution": {
+     "n": 12,
+     "mediane_ms": 5.054,
+     "p95_ms": 6.113,
+     "max_ms": 6.113
+    },
+    "journal_du_tour": {
+     "n": 80,
+     "mediane_ms": 1.22,
+     "p95_ms": 5.29,
+     "max_ms": 6.841
+    },
+    "orchestration": {
+     "n": 80,
+     "mediane_ms": 6.745,
+     "p95_ms": 10.267,
+     "max_ms": 11.806
+    },
+    "affichage": {
+     "n": 12,
+     "mediane_ms": 21.656,
+     "p95_ms": 35.381,
+     "max_ms": 35.381
+    },
+    "affichage_serveur": {
+     "n": 12,
+     "mediane_ms": 27.6,
+     "p95_ms": 33.1,
+     "max_ms": 33.1
+    },
+    "apres_fin_de_prise": {
+     "n": 12,
+     "mediane_ms": 1052.479,
+     "p95_ms": 1108.446,
+     "max_ms": 1108.446
+    },
+    "bout_en_bout": {
+     "n": 12,
+     "mediane_ms": 2271.683,
+     "p95_ms": 14216.208,
+     "max_ms": 14216.208
+    }
+   },
+   "froid": {
+    "debut_de_prise": {
+     "n": 3,
+     "mediane_ms": 10.362,
+     "p95_ms": 13.708,
+     "max_ms": 13.708
+    },
+    "fin_de_prise_apres_parole": {
+     "n": 0,
+     "mediane_ms": null,
+     "p95_ms": null,
+     "max_ms": null
+    },
+    "encodage_wav": {
+     "n": 0,
+     "mediane_ms": null,
+     "p95_ms": null,
+     "max_ms": null
+    },
+    "transcription_http": {
+     "n": 3,
+     "mediane_ms": 2077.526,
+     "p95_ms": 2205.423,
+     "max_ms": 2205.423
+    },
+    "controle_audio": {
+     "n": 3,
+     "mediane_ms": 8.844,
+     "p95_ms": 8.963,
+     "max_ms": 8.963
+    },
+    "transcription_moteur": {
+     "n": 3,
+     "mediane_ms": 2066.934,
+     "p95_ms": 2195.364,
+     "max_ms": 2195.364
+    },
+    "chargement_modele": {
+     "n": 3,
+     "mediane_ms": 769.519,
+     "p95_ms": 864.325,
+     "max_ms": 864.325
+    },
+    "tour_http": {
+     "n": 3,
+     "mediane_ms": 23.581,
+     "p95_ms": 24.262,
+     "max_ms": 24.262
+    },
+    "intention": {
+     "n": 3,
+     "mediane_ms": 2.414,
+     "p95_ms": 3.49,
+     "max_ms": 3.49
+    },
+    "garde": {
+     "n": 3,
+     "mediane_ms": 0.411,
+     "p95_ms": 0.446,
+     "max_ms": 0.446
+    },
+    "distribution": {
+     "n": 3,
+     "mediane_ms": 5.87,
+     "p95_ms": 5.876,
+     "max_ms": 5.876
+    },
+    "journal_du_tour": {
+     "n": 3,
+     "mediane_ms": 5.81,
+     "p95_ms": 6.021,
+     "max_ms": 6.021
+    },
+    "orchestration": {
+     "n": 3,
+     "mediane_ms": 6.161,
+     "p95_ms": 7.943,
+     "max_ms": 7.943
+    },
+    "affichage": {
+     "n": 3,
+     "mediane_ms": 22.056,
+     "p95_ms": 24.316,
+     "max_ms": 24.316
+    },
+    "affichage_serveur": {
+     "n": 3,
+     "mediane_ms": 31.3,
+     "p95_ms": 37.6,
+     "max_ms": 37.6
+    },
+    "apres_fin_de_prise": {
+     "n": 3,
+     "mediane_ms": 2123.843,
+     "p95_ms": 2246.529,
+     "max_ms": 2246.529
+    },
+    "bout_en_bout": {
+     "n": 0,
+     "mediane_ms": null,
+     "p95_ms": null,
+     "max_ms": null
+    }
+   }
+  },
+  "par_condition": {
+   "atelier_fort": {
+    "prises": 16,
+    "affichages_corrects": 1,
+    "transcriptions_exactes": 1,
+    "taux_erreur_mots_moyen": 0.7187,
+    "fin_de_prise_automatique": {
+     "pause": 0,
+     "limit": 16,
+     "no_speech": 0
+    },
+    "bout_en_bout": {
+     "n": 1,
+     "mediane_ms": 13853.884,
+     "p95_ms": 13853.884,
+     "max_ms": 13853.884
+    },
+    "transcription_moteur": {
+     "n": 16,
+     "mediane_ms": 1029.712,
+     "p95_ms": 1133.496,
+     "max_ms": 1133.496
+    }
+   },
+   "calme": {
+    "prises": 16,
+    "affichages_corrects": 4,
+    "transcriptions_exactes": 4,
+    "taux_erreur_mots_moyen": 0.4635,
+    "fin_de_prise_automatique": {
+     "pause": 16,
+     "limit": 0,
+     "no_speech": 0
+    },
+    "bout_en_bout": {
+     "n": 4,
+     "mediane_ms": 2186.435,
+     "p95_ms": 2205.104,
+     "max_ms": 2205.104
+    },
+    "transcription_moteur": {
+     "n": 16,
+     "mediane_ms": 977.912,
+     "p95_ms": 1083.529,
+     "max_ms": 1083.529
+    }
+   },
+   "imprimante": {
+    "prises": 16,
+    "affichages_corrects": 2,
+    "transcriptions_exactes": 2,
+    "taux_erreur_mots_moyen": 0.5937,
+    "fin_de_prise_automatique": {
+     "pause": 0,
+     "limit": 16,
+     "no_speech": 0
+    },
+    "bout_en_bout": {
+     "n": 2,
+     "mediane_ms": 14037.585,
+     "p95_ms": 14216.208,
+     "max_ms": 14216.208
+    },
+    "transcription_moteur": {
+     "n": 16,
+     "mediane_ms": 984.921,
+     "p95_ms": 1217.611,
+     "max_ms": 1217.611
+    }
+   },
+   "parole_fond": {
+    "prises": 16,
+    "affichages_corrects": 1,
+    "transcriptions_exactes": 1,
+    "taux_erreur_mots_moyen": 2.5781,
+    "fin_de_prise_automatique": {
+     "pause": 0,
+     "limit": 16,
+     "no_speech": 0
+    },
+    "bout_en_bout": {
+     "n": 1,
+     "mediane_ms": 13972.734,
+     "p95_ms": 13972.734,
+     "max_ms": 13972.734
+    },
+    "transcription_moteur": {
+     "n": 16,
+     "mediane_ms": 1074.854,
+     "p95_ms": 5727.729,
+     "max_ms": 5727.729
+    }
+   },
+   "ventilateur": {
+    "prises": 16,
+    "affichages_corrects": 4,
+    "transcriptions_exactes": 4,
+    "taux_erreur_mots_moyen": 0.526,
+    "fin_de_prise_automatique": {
+     "pause": 16,
+     "limit": 0,
+     "no_speech": 0
+    },
+    "bout_en_bout": {
+     "n": 4,
+     "mediane_ms": 2251.246,
+     "p95_ms": 2820.565,
+     "max_ms": 2820.565
+    },
+    "transcription_moteur": {
+     "n": 16,
+     "mediane_ms": 990.176,
+     "p95_ms": 1108.672,
+     "max_ms": 1108.672
+    }
+   }
+  },
+  "par_groupe": {
+   "cible": {
+    "prises": 80,
+    "correct": 12,
+    "issues": {
+     "commande_manquee": 68,
+     "correct": 12
+    }
+   },
+   "froid": {
+    "prises": 3,
+    "correct": 0,
+    "issues": {
+     "mesure_a_froid": 3
+    }
+   }
+  }
+ },
+ "scenarios": [
+  {
+   "nom": "wav_tronque",
+   "famille": "coupure",
+   "injection": "en-tête WAV intact, 4 000 derniers octets perdus",
+   "attendu": "refus 409 « Audio tronqué », aucun tour",
+   "reussi": true,
+   "observe": {
+    "http": 409,
+    "message": "Audio tronqué."
+   }
+  },
+  {
+   "nom": "prise_trop_longue",
+   "famille": "coupure",
+   "injection": "549078 octets (> 15 s)",
+   "attendu": "refus avant transcription",
+   "reussi": true,
+   "observe": {
+    "http": 413,
+    "message": "Requête hors limites."
+   }
+  },
+  {
+   "nom": "format_non_conforme",
+   "famille": "coupure",
+   "injection": "WAV annoncé à 48 kHz",
+   "attendu": "refus 409 du format",
+   "reussi": true,
+   "observe": {
+    "http": 409,
+    "message": "WAV PCM mono 16 bits / 16 kHz requis."
+   }
+  },
+  {
+   "nom": "micro_reserve_ailleurs",
+   "famille": "coupure",
+   "injection": "une seconde fenêtre demande le micro",
+   "attendu": "réservation et transcription refusées",
+   "reussi": true,
+   "observe": {
+    "reservation_http": 409,
+    "transcription_http": 409,
+    "message": "Le microphone n’est pas réservé par cette fenêtre."
+   }
+  },
+  {
+   "nom": "transcriptions_simultanees",
+   "famille": "reponse_tardive",
+   "injection": "deux envois simultanés de la même prise",
+   "attendu": "une transcription acceptée, l’autre refusée sans file d’attente",
+   "reussi": true,
+   "observe": {
+    "http": [
+     200,
+     409
+    ]
+   }
+  },
+  {
+   "nom": "prise_annulee_pendant_transcription",
+   "famille": "coupure",
+   "injection": "la fenêtre annule la prise pendant la transcription",
+   "attendu": "transcription écartée, aucun tour",
+   "reussi": true,
+   "observe": {
+    "issue": "refus_audio",
+    "http": 409,
+    "message": "La prise a été annulée ou sa réservation a expiré."
+   }
+  },
+  {
+   "nom": "contexte_modifie_pendant_transcription",
+   "famille": "reponse_tardive",
+   "injection": "le fichier de contexte change pendant la transcription",
+   "attendu": "tour STALE, aucune vue servie",
+   "reussi": true,
+   "observe": {
+    "statut": "STALE",
+    "texte": "Affiche le Dashboard Atelier.",
+    "nouvelles_commandes": 0
+   }
+  },
+  {
+   "nom": "dossier_modifie_pendant_transcription",
+   "famille": "reponse_tardive",
+   "injection": "une autre fenêtre enregistre une révision du dossier",
+   "attendu": "tour STALE, aucune vue servie",
+   "reussi": true,
+   "observe": {
+    "statut": "STALE",
+    "texte": "Affiche le Dashboard Atelier.",
+    "nouvelles_commandes": 0
+   }
+  },
+  {
+   "nom": "ecran_en_retard",
+   "famille": "reponse_tardive",
+   "injection": "la vue atelier accuse 3 s après réception",
+   "attendu": "reçu « affiché » seulement après l’accusé (≥ 3 000 ms)",
+   "reussi": true,
+   "observe": {
+    "affichage_ms": 3011.4759109997067,
+    "recu": {
+     "status": "QUEUED",
+     "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+     "physical_effect": false,
+     "approval_source": "",
+     "affichage": "rendered",
+     "vues": [
+      "atelier"
+     ]
+    }
+   }
+  },
+  {
+   "nom": "accuse_tardif_apres_changement",
+   "famille": "reponse_tardive",
+   "injection": "le contexte change entre la réception et l’accusé de la vue atelier",
+   "attendu": "accusé refusé, vue « stale », aucun reçu « affiché »",
+   "reussi": true,
+   "observe": {
+    "recu": {
+     "status": "QUEUED",
+     "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+     "physical_effect": false,
+     "approval_source": "",
+     "affichage": "stale",
+     "vues": [
+      "atelier"
+     ]
+    },
+    "acks": [
+     {
+      "request_id": "turn_29afadbb224a426db1d83df4b972fe32",
+      "http": 409,
+      "etat": "Révision périmée : accusé refusé."
+     }
+    ]
+   }
+  },
+  {
+   "nom": "ecran_absent_puis_revenu",
+   "famille": "reponse_tardive",
+   "injection": "la vue atelier ne demande plus de commande pendant 3 s",
+   "attendu": "pas de reçu pendant l’absence, affichage au retour",
+   "reussi": true,
+   "observe": {
+    "pendant_absence": "queued",
+    "au_retour": "rendered",
+    "duree_s": 4.05
+   }
+  },
+  {
+   "nom": "coupure_pendant_distribution",
+   "famille": "coupure",
+   "injection": "la première distribution échoue (OSError)",
+   "attendu": "tour INTERRUPTED, reprise de la même référence : une seule commande, affichée",
+   "reussi": true,
+   "observe": {
+    "premier": "INTERRUPTED",
+    "reprise": "QUEUED",
+    "commandes": 1
+   }
+  },
+  {
+   "nom": "reprise_apres_120_s",
+   "famille": "reponse_tardive",
+   "injection": "reprise d’un tour interrompu 121 s après la demande",
+   "attendu": "tour STALE, aucune commande",
+   "reussi": true,
+   "observe": {
+    "premier": "INTERRUPTED",
+    "reprise": "STALE",
+    "message": "Le dossier, le contexte ou le délai a changé. Reformulez la commande."
+   }
+  },
+  {
+   "nom": "double_envoi",
+   "famille": "coupure",
+   "injection": "le même tour est renvoyé après une réponse perdue",
+   "attendu": "même référence, aucune commande supplémentaire",
+   "reussi": true,
+   "observe": {
+    "http": 200,
+    "statut": "QUEUED"
+   }
+  },
+  {
+   "nom": "redemarrage_avant_affichage",
+   "famille": "coupure",
+   "injection": "serveur arrêté puis relancé sur le même dossier avant tout accusé ; vues réappairées",
+   "attendu": "commande conservée, affichée une fois, aucune duplication",
+   "reussi": true,
+   "observe": {
+    "avant": "QUEUED",
+    "apres": "QUEUED",
+    "affichage": "rendered",
+    "commandes": 1
+   }
+  }
+ ],
+ "froid": [
+  {
+   "etapes_ms": {
+    "debut_de_prise": 8.41748600032588,
+    "transcription_http": 2205.4228020001574,
+    "controle_audio": 8.844412000144075,
+    "transcription_moteur": 2195.3640259998792,
+    "chargement_modele": 864.3254330004311,
+    "tour_http": 16.790667999885045,
+    "intention": 1.3972100000501086,
+    "garde": 0.32162599973162287,
+    "distribution": 4.800919999979669,
+    "journal_du_tour": 4.543065999769169,
+    "orchestration": 4.182767000656895,
+    "affichage": 24.3158210000729,
+    "affichage_serveur": 23.4,
+    "apres_fin_de_prise": 2246.5292910001153
+   },
+   "froid": true,
+   "texte": "Affiche le Dashboard Atelier.",
+   "qualite_audio": {
+    "seconds": 3.157,
+    "rate": 16000,
+    "peak": 0.30597,
+    "rms": 0.04277,
+    "silence": false,
+    "clipped": false
+   },
+   "texte_impose": "Affiche le dashboard atelier",
+   "tour": {
+    "request_id": "turn_ae525d46db2c41f9a45b51e0235815e2",
+    "client_id": "mic_5e59193cac4b446eaa4ef8be3967a375",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le dashboard atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A1-siwis-calme",
+   "condition": "calme",
+   "groupe": "froid",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "classement": "mesure_a_froid"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 13.708081000004313,
+    "transcription_http": 2077.526010999918,
+    "controle_audio": 8.963189000041893,
+    "transcription_moteur": 2066.9342720002533,
+    "chargement_modele": 769.5193779995861,
+    "tour_http": 24.26185100011935,
+    "intention": 2.4137519999385404,
+    "garde": 0.41068000018640305,
+    "distribution": 5.87022599984266,
+    "journal_du_tour": 6.0211879999769735,
+    "orchestration": 7.943396999962715,
+    "affichage": 22.055611000268982,
+    "affichage_serveur": 37.6,
+    "apres_fin_de_prise": 2123.8434730003064
+   },
+   "froid": true,
+   "texte": "Affiche le Dashboard Atelier.",
+   "qualite_audio": {
+    "seconds": 3.157,
+    "rate": 16000,
+    "peak": 0.30597,
+    "rms": 0.04277,
+    "silence": false,
+    "clipped": false
+   },
+   "texte_impose": "Affiche le dashboard atelier",
+   "tour": {
+    "request_id": "turn_a604045358ea4ba6b7299db08ab13723",
+    "client_id": "mic_726b063554354eee8d04631caa8df501",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le dashboard atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A1-siwis-calme",
+   "condition": "calme",
+   "groupe": "froid",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "classement": "mesure_a_froid"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 10.362088999954722,
+    "transcription_http": 1943.8361560000885,
+    "controle_audio": 8.56953299989982,
+    "transcription_moteur": 1933.442586000183,
+    "chargement_modele": 603.8489450002089,
+    "tour_http": 23.580752999805554,
+    "intention": 3.489885999897524,
+    "garde": 0.4463129998839577,
+    "distribution": 5.875818000276922,
+    "journal_du_tour": 5.809817999761435,
+    "orchestration": 6.160971000554127,
+    "affichage": 14.326166000046214,
+    "affichage_serveur": 31.3,
+    "apres_fin_de_prise": 1981.7430749999403
+   },
+   "froid": true,
+   "texte": "Affiche le Dashboard Atelier.",
+   "qualite_audio": {
+    "seconds": 3.157,
+    "rate": 16000,
+    "peak": 0.30597,
+    "rms": 0.04277,
+    "silence": false,
+    "clipped": false
+   },
+   "texte_impose": "Affiche le dashboard atelier",
+   "tour": {
+    "request_id": "turn_226d85ab9ae54783a81df5ad7baaf13b",
+    "client_id": "mic_6788da1efe3f4224917315bf51bf0ec6",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le dashboard atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A1-siwis-calme",
+   "condition": "calme",
+   "groupe": "froid",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "classement": "mesure_a_froid"
+  }
+ ],
+ "prises": [
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.310691000227962,
+    "transcription_http": 997.070051999799,
+    "controle_audio": 11.562057999981334,
+    "transcription_moteur": 984.2083489998004,
+    "tour_http": 24.309465999976965,
+    "intention": 1.8945479996546055,
+    "garde": 0.48826699958226527,
+    "distribution": 6.113386999913928,
+    "journal_du_tour": 5.925073000071279,
+    "orchestration": 6.218157000603242,
+    "affichage": 34.16127999980745,
+    "affichage_serveur": 30.4,
+    "apres_fin_de_prise": 1055.5407979995834,
+    "fin_de_prise_apres_parole": 1067.3,
+    "encodage_wav": 52.364,
+    "bout_en_bout": 2175.204797999583
+   },
+   "froid": false,
+   "texte": "Affiche le Dashboard Atelier.",
+   "qualite_audio": {
+    "seconds": 3.157,
+    "rate": 16000,
+    "peak": 0.30597,
+    "rms": 0.04277,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_563b6f29a4ca4e43ae82bc978c4a0ad1",
+    "client_id": "mic_f34a4511b10048989ac493183b82da20",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le Dashboard Atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A1-siwis-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.1573,
+    "delai_apres_parole_s": 1.0673,
+    "encodage_ms": 52.364
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 2.9064129998914723,
+    "transcription_http": 1014.2391419999512,
+    "controle_audio": 8.0886890000329,
+    "transcription_moteur": 1004.9219829998037,
+    "tour_http": 18.107484999745793,
+    "intention": 1.261770999917644,
+    "garde": 0.2705880001485639,
+    "distribution": 4.778758000156813,
+    "journal_du_tour": 4.593704000399157,
+    "orchestration": 5.095689999507158,
+    "affichage": 17.070376999981818,
+    "affichage_serveur": 26.6,
+    "apres_fin_de_prise": 1049.4170039996789,
+    "fin_de_prise_apres_parole": 1067.3,
+    "encodage_wav": 47.512,
+    "bout_en_bout": 2164.2290039996788
+   },
+   "froid": false,
+   "texte": "Affiche le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 3.157,
+    "rate": 16000,
+    "peak": 0.30234,
+    "rms": 0.04318,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_e772d484eb7b4656830ec177aa9e3beb",
+    "client_id": "mic_4b724aaf299d438083bc0c3126969068",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A1-siwis-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.1573,
+    "delai_apres_parole_s": 1.0673,
+    "encodage_ms": 47.512
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.77661800025453,
+    "transcription_http": 1048.9197840001907,
+    "controle_audio": 40.06108799967478,
+    "transcription_moteur": 1007.2375660006401,
+    "tour_http": 21.431155999835028,
+    "intention": 1.1964240002271254,
+    "garde": 0.2742790002230322,
+    "distribution": 4.761865000091348,
+    "journal_du_tour": 3.3778289998736,
+    "orchestration": 9.947793999799615,
+    "affichage": 22.013241999957245,
+    "affichage_serveur": 27.5,
+    "apres_fin_de_prise": 1092.364181999983,
+    "fin_de_prise_apres_parole": 12910.0,
+    "encodage_wav": 213.844,
+    "bout_en_bout": 14216.208181999982
+   },
+   "froid": false,
+   "texte": "Affiche le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.30496,
+    "rms": 0.02774,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_1b11d133b002470c94ed63100d5b4487",
+    "client_id": "mic_ba3fe61e324e40cb891660cf6aa78a3c",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A1-siwis-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.91,
+    "encodage_ms": 213.844
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.045695999844611,
+    "transcription_http": 1119.3809850001344,
+    "controle_audio": 39.42087299992636,
+    "transcription_moteur": 1078.6564589998306,
+    "tour_http": 16.638137999962055,
+    "intention": 2.6539550003690238,
+    "garde": 0.4899440000372124,
+    "journal_du_tour": 1.5066590003698366,
+    "orchestration": 10.266762998980994,
+    "fin_de_prise_apres_parole": 12910.0,
+    "encodage_wav": 214.879
+   },
+   "froid": false,
+   "texte": "Affiche le dash pour l'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.31436,
+    "rms": 0.04012,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_f613cd4aa857402ebd2033049dd07559",
+    "client_id": "mic_7e6a4d4c40294eb99fe3469d16298bf7",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le dash pour l'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-siwis-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.91,
+    "encodage_ms": 214.879
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.292575000159559,
+    "transcription_http": 1330.4869980001968,
+    "controle_audio": 41.20348800006468,
+    "transcription_moteur": 1286.7861919999086,
+    "tour_http": 12.060105999808002,
+    "intention": 2.3949750002429937,
+    "garde": 0.3264599999965867,
+    "journal_du_tour": 1.3511470001503767,
+    "orchestration": 5.556361999424553,
+    "fin_de_prise_apres_parole": 12910.0,
+    "encodage_wav": 205.596
+   },
+   "froid": false,
+   "texte": "Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi. Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.31232,
+    "rms": 0.02792,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_2d5b2003a2cd42edb5a15b4bc17f4063",
+    "client_id": "mic_20b47912ed3e49a382c8a35acb45574e",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi. Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-siwis-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.91,
+    "encodage_ms": 205.596
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 6.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.579882999882102,
+    "transcription_http": 995.3690019997339,
+    "controle_audio": 9.546054000111326,
+    "transcription_moteur": 983.9574249995167,
+    "tour_http": 12.433159000011074,
+    "intention": 1.9172689999322756,
+    "garde": 0.3588859999581473,
+    "journal_du_tour": 0.9844539999903645,
+    "orchestration": 6.148669000140217,
+    "fin_de_prise_apres_parole": 999.3,
+    "encodage_wav": 47.338
+   },
+   "froid": false,
+   "texte": "Affiche le dash beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 3.349,
+    "rate": 16000,
+    "peak": 0.46985,
+    "rms": 0.04526,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_a32271fd6ca649a9ab4962202bc25b4f",
+    "client_id": "mic_55ea470194d3400cb968557606ff333a",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le dash beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-jessica-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3493,
+    "delai_apres_parole_s": 0.9993,
+    "encodage_ms": 47.338
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.823378000106459,
+    "transcription_http": 1116.766663999897,
+    "controle_audio": 9.073106999949232,
+    "transcription_moteur": 1105.651405000117,
+    "tour_http": 13.83203700015656,
+    "intention": 2.7946690001954266,
+    "garde": 0.4007270003967278,
+    "journal_du_tour": 1.2456509998628462,
+    "orchestration": 6.8596139994951955,
+    "fin_de_prise_apres_parole": 994.0,
+    "encodage_wav": 45.858
+   },
+   "froid": false,
+   "texte": "affiche le dâche beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 3.344,
+    "rate": 16000,
+    "peak": 0.47113,
+    "rms": 0.04567,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_a32ca69700c84273b23a0f4f99b0702a",
+    "client_id": "mic_1ae36b33e332471785d80f077406bd51",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dâche beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-jessica-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.344,
+    "delai_apres_parole_s": 0.994,
+    "encodage_ms": 45.858
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.964301999734744,
+    "transcription_http": 1257.5221259999125,
+    "controle_audio": 38.14801099997567,
+    "transcription_moteur": 1217.611485999896,
+    "tour_http": 12.254208999820548,
+    "intention": 2.9445860000123503,
+    "garde": 0.40221700010079076,
+    "journal_du_tour": 1.7022409997480281,
+    "orchestration": 5.112523000207148,
+    "fin_de_prise_apres_parole": 12650.0,
+    "encodage_wav": 262.939
+   },
+   "froid": false,
+   "texte": "affiche le dâche beau d'atelier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.47696,
+    "rms": 0.02898,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_a99383a492224ddfbd4ecd1019ff3cd9",
+    "client_id": "mic_9d7e1107caee497a950f284c0d99c6f0",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dâche beau d'atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-jessica-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.65,
+    "encodage_ms": 262.939
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.406480999681662,
+    "transcription_http": 1182.8161189996536,
+    "controle_audio": 47.71039600018412,
+    "transcription_moteur": 1133.4960939998382,
+    "tour_http": 11.22578300009991,
+    "intention": 2.268938999804959,
+    "garde": 0.2787389998957224,
+    "journal_du_tour": 1.2360790001366695,
+    "orchestration": 5.9602030000860395,
+    "fin_de_prise_apres_parole": 12650.0,
+    "encodage_wav": 248.562
+   },
+   "froid": false,
+   "texte": "affiche le dage baudateux",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.47919,
+    "rms": 0.04094,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_cab555fd74164faeb6fe3b11bb68ca10",
+    "client_id": "mic_fcf4faf2996d4c42a3da3d063c422689",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dage baudateux",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-jessica-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.65,
+    "encodage_ms": 248.562
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.0417849997757,
+    "transcription_http": 1183.5750889999872,
+    "controle_audio": 40.673993999917,
+    "transcription_moteur": 1141.2417110000206,
+    "tour_http": 10.96273699977246,
+    "intention": 2.244357000108721,
+    "garde": 0.3262529999119579,
+    "journal_du_tour": 1.2663650004469673,
+    "orchestration": 5.178964999231539,
+    "fin_de_prise_apres_parole": 12650.0,
+    "encodage_wav": 264.612
+   },
+   "froid": false,
+   "texte": "affiche le dage dans l'atelier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.46875,
+    "rms": 0.02923,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_829e84656df74521809520100e6b3400",
+    "client_id": "mic_382ba6147a704a799c9e3da79672b4aa",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dage dans l'atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-jessica-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.65,
+    "encodage_ms": 264.612
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.637880999780464,
+    "transcription_http": 1033.7011709998478,
+    "controle_audio": 11.156564999964758,
+    "transcription_moteur": 1021.263400999942,
+    "tour_http": 12.55145100003574,
+    "intention": 2.4069979999694624,
+    "garde": 0.3078490003645129,
+    "journal_du_tour": 1.1484999999993306,
+    "orchestration": 7.292231999599608,
+    "fin_de_prise_apres_parole": 980.0,
+    "encodage_wav": 46.494
+   },
+   "froid": false,
+   "texte": "affiche le dashboot-batovier",
+   "qualite_audio": {
+    "seconds": 3.52,
+    "rate": 16000,
+    "peak": 0.47415,
+    "rms": 0.04332,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_8af185ea195c43caa323b9043899c98e",
+    "client_id": "mic_8e930ed6fd6a4696aae72b242bdf8a0e",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dashboot-batovier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-pierre-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.52,
+    "delai_apres_parole_s": 0.98,
+    "encodage_ms": 46.494
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.216389000248455,
+    "transcription_http": 949.9331880001591,
+    "controle_audio": 8.88439800019114,
+    "transcription_moteur": 939.8003559999779,
+    "tour_http": 13.989872999900399,
+    "intention": 2.1751839999524236,
+    "garde": 0.3464860001258785,
+    "journal_du_tour": 1.1387510003260104,
+    "orchestration": 8.974579999630805,
+    "fin_de_prise_apres_parole": 990.7,
+    "encodage_wav": 44.556
+   },
+   "froid": false,
+   "texte": "affiche le dashboard bâtovier.",
+   "qualite_audio": {
+    "seconds": 3.531,
+    "rate": 16000,
+    "peak": 0.47455,
+    "rms": 0.04374,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_3f3dee43b6e44861a29cf437173019c3",
+    "client_id": "mic_0b0c843cd17a4ccfa93f371fe5480ae4",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dashboard bâtovier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-pierre-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5307,
+    "delai_apres_parole_s": 0.9907,
+    "encodage_ms": 44.556
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.25,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 2.965879999919707,
+    "transcription_http": 1106.7885910001678,
+    "controle_audio": 45.2167720000034,
+    "transcription_moteur": 1060.3154430000359,
+    "tour_http": 12.462992999644484,
+    "intention": 2.215561999946658,
+    "garde": 0.33217800000784337,
+    "journal_du_tour": 1.104146000216133,
+    "orchestration": 7.064798999635968,
+    "fin_de_prise_apres_parole": 12460.0,
+    "encodage_wav": 202.333
+   },
+   "froid": false,
+   "texte": "affiche le dash bout-bâteau-vier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.49191,
+    "rms": 0.02873,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_6d4867f4493d4eb3b197680856ed51eb",
+    "client_id": "mic_a14444e5dae94e1287c4d86e21343142",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dash bout-bâteau-vier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-pierre-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.46,
+    "encodage_ms": 202.333
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.781009999987873,
+    "transcription_http": 1144.4728030000988,
+    "controle_audio": 44.48180300005333,
+    "transcription_moteur": 1097.5547299999562,
+    "tour_http": 13.531434000014997,
+    "intention": 2.384081999935006,
+    "garde": 0.3502320000734471,
+    "journal_du_tour": 1.547521000247798,
+    "orchestration": 7.177317999321531,
+    "fin_de_prise_apres_parole": 12460.0,
+    "encodage_wav": 209.241
+   },
+   "froid": false,
+   "texte": "affiches de daches ou de bateaux d'huile",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.50098,
+    "rms": 0.04057,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_fda50eeeff1f4287901968e87f74ad72",
+    "client_id": "mic_4a7343d5fe61483084092999f3677e08",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiches de daches ou de bateaux d'huile",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-pierre-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.46,
+    "encodage_ms": 209.241
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.43550399970627,
+    "transcription_http": 1883.658584999921,
+    "controle_audio": 36.816043999806425,
+    "transcription_moteur": 1845.1576749998821,
+    "tour_http": 13.617904000057024,
+    "intention": 2.7710979998119,
+    "garde": 0.3352610001456924,
+    "journal_du_tour": 1.2344500000835978,
+    "orchestration": 7.610786999975971,
+    "fin_de_prise_apres_parole": 12460.0,
+    "encodage_wav": 218.259
+   },
+   "froid": false,
+   "texte": "affiche le dâche-boute-bâteau-vie",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.45816,
+    "rms": 0.02894,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_84b5667d67fc4e6eb765c31e78665ead",
+    "client_id": "mic_816e290e3f414d1f84254865d8ba63bb",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le dâche-boute-bâteau-vie",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-upmc-pierre-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.46,
+    "encodage_ms": 218.259
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.68120599998656,
+    "transcription_http": 1033.2859129998724,
+    "controle_audio": 11.965463000251475,
+    "transcription_moteur": 1019.7222019996843,
+    "tour_http": 21.390985999914847,
+    "intention": 2.0725420004055195,
+    "garde": 0.4309679998186766,
+    "distribution": 4.902257000139798,
+    "journal_du_tour": 5.54549299977225,
+    "orchestration": 6.4104309999493125,
+    "affichage": 23.02720399984537,
+    "affichage_serveur": 33.1,
+    "apres_fin_de_prise": 1077.7041029996326,
+    "fin_de_prise_apres_parole": 1066.7,
+    "encodage_wav": 53.262,
+    "bout_en_bout": 2197.6661029996326
+   },
+   "froid": false,
+   "texte": "Affiche le Dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 3.627,
+    "rate": 16000,
+    "peak": 0.3551,
+    "rms": 0.04616,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_3bb473720f9d461096f28cc3942f3462",
+    "client_id": "mic_67c5452272094391b312ac1df24058bd",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le Dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A1-gilles-calme",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.6267,
+    "delai_apres_parole_s": 1.0667,
+    "encodage_ms": 53.262
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.431220999776997,
+    "transcription_http": 1120.943127999908,
+    "controle_audio": 10.286564000125509,
+    "transcription_moteur": 1108.6718819997259,
+    "tour_http": 12.321166999754496,
+    "intention": 2.425774999665009,
+    "garde": 0.3285699999651115,
+    "journal_du_tour": 1.113404000079754,
+    "orchestration": 6.74815300044429,
+    "fin_de_prise_apres_parole": 1066.7,
+    "encodage_wav": 50.133
+   },
+   "froid": false,
+   "texte": "Affichent le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 3.627,
+    "rate": 16000,
+    "peak": 0.35431,
+    "rms": 0.04654,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_44ec1a341c694e818ba0eab6a704f8ae",
+    "client_id": "mic_cffca190b3114f6d8b9964890d29e4cd",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affichent le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-gilles-ventilateur",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.6267,
+    "delai_apres_parole_s": 1.0667,
+    "encodage_ms": 50.133
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.25,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.7296059999789577,
+    "transcription_http": 1033.3012730002338,
+    "controle_audio": 42.512652999903366,
+    "transcription_moteur": 988.9181009998538,
+    "tour_http": 14.671806000023935,
+    "intention": 2.5309229999948,
+    "garde": 0.29737100021520746,
+    "journal_du_tour": 1.0502420000193524,
+    "orchestration": 8.717050999621279,
+    "fin_de_prise_apres_parole": 12440.0,
+    "encodage_wav": 198.881
+   },
+   "froid": false,
+   "texte": "Affichent le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.37485,
+    "rms": 0.02995,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_95e4fd1153da472a938dc81aa8701566",
+    "client_id": "mic_4b21c52e98e647b687eb8e8ddea33791",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affichent le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-gilles-imprimante",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.44,
+    "encodage_ms": 198.881
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.25,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.616929000145319,
+    "transcription_http": 1003.3657760000096,
+    "controle_audio": 37.98470899982931,
+    "transcription_moteur": 963.2950010004606,
+    "tour_http": 11.088917000051879,
+    "intention": 1.8332829999962996,
+    "garde": 0.2867959997274738,
+    "journal_du_tour": 1.0522130000936158,
+    "orchestration": 6.379753000146593,
+    "fin_de_prise_apres_parole": 12440.0,
+    "encodage_wav": 206.131
+   },
+   "froid": false,
+   "texte": "Affichent le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.42966,
+    "rms": 0.04162,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_0a420f3dcba04714807e4c66521ef488",
+    "client_id": "mic_855ed78346324a599d08ef44a24e16ca",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affichent le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-gilles-atelier_fort",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.44,
+    "encodage_ms": 206.131
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.25,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 2.8058050002073287,
+    "transcription_http": 1004.1630050000094,
+    "controle_audio": 36.96181400027854,
+    "transcription_moteur": 964.4918199996937,
+    "tour_http": 12.927301999752672,
+    "intention": 2.4320779998561193,
+    "garde": 0.3130869999949937,
+    "journal_du_tour": 1.2430819997462095,
+    "orchestration": 7.432447000610409,
+    "fin_de_prise_apres_parole": 12440.0,
+    "encodage_wav": 237.979
+   },
+   "froid": false,
+   "texte": "affichent le dashboard à l'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.36389,
+    "rms": 0.0303,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_57e3458826db425d9655612f66584ca2",
+    "client_id": "mic_d5e5fc5b73184df585a61a48cb180ce6",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affichent le dashboard à l'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A1-gilles-parole_fond",
+   "phrase_id": "A1",
+   "phrase": "Affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.44,
+    "encodage_ms": 237.979
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 2.8908690001117066,
+    "transcription_http": 964.0678509999816,
+    "controle_audio": 9.605855999780033,
+    "transcription_moteur": 953.0750910003007,
+    "tour_http": 16.647800000100688,
+    "intention": 2.380702000209567,
+    "garde": 0.3001280001626583,
+    "journal_du_tour": 1.2326389996815124,
+    "orchestration": 11.171427000135736,
+    "fin_de_prise_apres_parole": 1074.7,
+    "encodage_wav": 56.47
+   },
+   "froid": false,
+   "texte": "Jarvie affiche le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 3.795,
+    "rate": 16000,
+    "peak": 0.33704,
+    "rms": 0.04511,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_bf6750d661b24d0c99d006537ab48ae5",
+    "client_id": "mic_74c03de984f94c7ba132b166624507c5",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvie affiche le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-siwis-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.7947,
+    "delai_apres_parole_s": 1.0747,
+    "encodage_ms": 56.47
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.25,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.2377360003010835,
+    "transcription_http": 1011.8176080000012,
+    "controle_audio": 17.214246000094136,
+    "transcription_moteur": 993.2680440001604,
+    "tour_http": 12.066627999956836,
+    "intention": 1.9553960000848747,
+    "garde": 0.27242400028626435,
+    "journal_du_tour": 1.2466650000533264,
+    "orchestration": 6.879248999666743,
+    "fin_de_prise_apres_parole": 3365.3,
+    "encodage_wav": 96.594
+   },
+   "froid": false,
+   "texte": "Jarvis affiche le dage beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 6.085,
+    "rate": 16000,
+    "peak": 0.33279,
+    "rms": 0.03617,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_ba1b3a44d98045d2b6049f6275a470fe",
+    "client_id": "mic_dff14836e36b4fafa4c9ef11a1d08ed0",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis affiche le dage beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-siwis-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 6.0853,
+    "delai_apres_parole_s": 3.3653,
+    "encodage_ms": 96.594
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.9975720003203605,
+    "transcription_http": 991.728879999755,
+    "controle_audio": 58.411709000210976,
+    "transcription_moteur": 932.0019459996729,
+    "tour_http": 10.628748000272026,
+    "intention": 1.837512000292918,
+    "garde": 0.26879799997914233,
+    "journal_du_tour": 0.8905029999368708,
+    "orchestration": 6.080793999444722,
+    "fin_de_prise_apres_parole": 12280.0,
+    "encodage_wav": 214.645
+   },
+   "froid": false,
+   "texte": "Jarvie affiche le dâge beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.35977,
+    "rms": 0.03001,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_8ec9e7ff5664440ea65ce19feea7389e",
+    "client_id": "mic_a819929affea469296c67e3187656c54",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvie affiche le dâge beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-siwis-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.28,
+    "encodage_ms": 214.645
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.0,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.530140000042593,
+    "transcription_http": 1113.494635999814,
+    "controle_audio": 38.71354200009591,
+    "transcription_moteur": 1073.497956999745,
+    "tour_http": 13.920541000061348,
+    "intention": 2.652524000041012,
+    "garde": 0.40875300010156934,
+    "journal_du_tour": 1.398241000060807,
+    "orchestration": 8.01944500017271,
+    "fin_de_prise_apres_parole": 12280.0,
+    "encodage_wav": 223.96
+   },
+   "froid": false,
+   "texte": "Jarvis affiche le dage beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.37076,
+    "rms": 0.04159,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_d59dc64ec8e942af92df6b455c0ee985",
+    "client_id": "mic_6d6ee74d4885485d9c07842e30d016fb",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis affiche le dage beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-siwis-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.28,
+    "encodage_ms": 223.96
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.289712999958283,
+    "transcription_http": 1124.2437149999205,
+    "controle_audio": 41.29652899973735,
+    "transcription_moteur": 1081.7514970003685,
+    "tour_http": 14.709724000113056,
+    "intention": 2.790671999719052,
+    "garde": 0.5798020001748228,
+    "journal_du_tour": 1.495545999659953,
+    "orchestration": 7.571894000648172,
+    "fin_de_prise_apres_parole": 12280.0,
+    "encodage_wav": 187.19
+   },
+   "froid": false,
+   "texte": "Jarvie affiche le dâge beau-d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.35764,
+    "rms": 0.03002,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_5ec6a96b02ad4555b04ec31c1b4b657c",
+    "client_id": "mic_380bb8fd95674e3eb23d5ead1ded0e1b",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvie affiche le dâge beau-d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-siwis-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.28,
+    "encodage_ms": 187.19
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.664873000365333,
+    "transcription_http": 1098.2871030000751,
+    "controle_audio": 13.071637999928498,
+    "transcription_moteur": 1083.5293790000833,
+    "tour_http": 9.822247000101925,
+    "intention": 1.9593050001276424,
+    "garde": 0.26266499980920344,
+    "journal_du_tour": 0.9455680001337896,
+    "orchestration": 5.252547000054619,
+    "fin_de_prise_apres_parole": 1023.3000000000001,
+    "encodage_wav": 52.247
+   },
+   "froid": false,
+   "texte": "Jarvis affiche le dinge beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 3.893,
+    "rate": 16000,
+    "peak": 0.42563,
+    "rms": 0.04755,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_70ffd1eaa7744a4ba0d1be250f4e429c",
+    "client_id": "mic_89c08e5f60834d7099e1a72b18b490d0",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis affiche le dinge beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-jessica-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.8933,
+    "delai_apres_parole_s": 1.0233,
+    "encodage_ms": 52.247
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.338839000160078,
+    "transcription_http": 1050.9496649997345,
+    "controle_audio": 12.050312999690505,
+    "transcription_moteur": 1036.8019279999316,
+    "tour_http": 14.479970000138565,
+    "intention": 2.7654980003717355,
+    "garde": 0.3945520002162084,
+    "journal_du_tour": 1.1821359998975822,
+    "orchestration": 7.976646999395598,
+    "fin_de_prise_apres_parole": 1914.0,
+    "encodage_wav": 61.191
+   },
+   "froid": false,
+   "texte": "Jarvis affiche le dinge beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 4.784,
+    "rate": 16000,
+    "peak": 0.42532,
+    "rms": 0.04322,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_dd2476ed74cb4bda8fb76d7fa7c86cfa",
+    "client_id": "mic_7f54c71b2d7a496b93c1537ca7494bda",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis affiche le dinge beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-jessica-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.784,
+    "delai_apres_parole_s": 1.914,
+    "encodage_ms": 61.191
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.808903000139253,
+    "transcription_http": 1187.8691070000968,
+    "controle_audio": 44.14809099989725,
+    "transcription_moteur": 1141.9493310004327,
+    "tour_http": 11.116253000182041,
+    "intention": 2.7208100000279956,
+    "garde": 0.4083220001120935,
+    "journal_du_tour": 1.2297829998715315,
+    "orchestration": 5.520524000075966,
+    "fin_de_prise_apres_parole": 12130.0,
+    "encodage_wav": 188.112
+   },
+   "froid": false,
+   "texte": "J'arrive à afficher le dage bout d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.47421,
+    "rms": 0.03125,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_f76bbcd993f44861b02b9c0a445848c6",
+    "client_id": "mic_f9e556dedba64a4385f5118b49339f58",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "J'arrive à afficher le dage bout d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-jessica-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.13,
+    "encodage_ms": 188.112
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.122862999793142,
+    "transcription_http": 1088.615120999748,
+    "controle_audio": 48.788210000111576,
+    "transcription_moteur": 1038.6080189996392,
+    "tour_http": 12.781887000073766,
+    "intention": 1.8958979999297298,
+    "garde": 0.2866220002033515,
+    "journal_du_tour": 0.9631059997445846,
+    "orchestration": 7.029468999917299,
+    "fin_de_prise_apres_parole": 12130.0,
+    "encodage_wav": 189.447
+   },
+   "froid": false,
+   "texte": "Jardis affiche le dinge bouddha tenu",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.48636,
+    "rms": 0.04254,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_36f9a3b62df64616be9ba97974e573f0",
+    "client_id": "mic_2ba71bb567b449bc8242bb709bf9b1e5",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jardis affiche le dinge bouddha tenu",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-jessica-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.13,
+    "encodage_ms": 189.447
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.0,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.273801000181265,
+    "transcription_http": 1142.4904700002116,
+    "controle_audio": 38.00201200010633,
+    "transcription_moteur": 1101.9915080000828,
+    "tour_http": 12.067165999724239,
+    "intention": 2.2743250001440174,
+    "garde": 0.49545299998499104,
+    "journal_du_tour": 1.1648839999907068,
+    "orchestration": 5.921245999616076,
+    "fin_de_prise_apres_parole": 12130.0,
+    "encodage_wav": 190.579
+   },
+   "froid": false,
+   "texte": "Le colis de résine arrive demain matin. Pense à vérifier la livraison avant midi.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.46393,
+    "rms": 0.03143,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_f291fa43a15d4c96865723b7d5f1c6c2",
+    "client_id": "mic_ffa5eed915b64da8936de9d1fc2bbba6",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Le colis de résine arrive demain matin. Pense à vérifier la livraison avant midi.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-jessica-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.13,
+    "encodage_ms": 190.579
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 3.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.098854999687319,
+    "transcription_http": 966.1285910001425,
+    "controle_audio": 11.241428999710479,
+    "transcription_moteur": 953.4863270005189,
+    "tour_http": 14.192576999903395,
+    "intention": 2.359312999942631,
+    "garde": 0.3617900001700036,
+    "journal_du_tour": 1.371857000322052,
+    "orchestration": 8.343736999449902,
+    "fin_de_prise_apres_parole": 1024.7,
+    "encodage_wav": 57.523
+   },
+   "froid": false,
+   "texte": "Jarvis, affiche le dash beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 4.555,
+    "rate": 16000,
+    "peak": 0.5083,
+    "rms": 0.04462,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_d06ae667e01b4f4e82459d0b5916372c",
+    "client_id": "mic_f405fd6cf3894751830b73616baef321",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis, affiche le dash beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-pierre-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.5547,
+    "delai_apres_parole_s": 1.0247,
+    "encodage_ms": 57.523
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.266611999810266,
+    "transcription_http": 1011.3580120000734,
+    "controle_audio": 13.697701999717538,
+    "transcription_moteur": 996.4068280000902,
+    "tour_http": 11.467508999885467,
+    "intention": 2.0499050001490104,
+    "garde": 0.30394500026886817,
+    "journal_du_tour": 1.1304019999442971,
+    "orchestration": 5.896328999369871,
+    "fin_de_prise_apres_parole": 1128.7,
+    "encodage_wav": 59.883
+   },
+   "froid": false,
+   "texte": "Jarvis, affiche le dash beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 4.659,
+    "rate": 16000,
+    "peak": 0.51013,
+    "rms": 0.04451,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_c90dfefadb704780b95ef7ff356463b3",
+    "client_id": "mic_4bb97523734f4d9e9bb1dd6f1db9ef83",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis, affiche le dash beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-pierre-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.6587,
+    "delai_apres_parole_s": 1.1287,
+    "encodage_ms": 59.883
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.439696999725129,
+    "transcription_http": 1013.4064359999684,
+    "controle_audio": 38.73614099984479,
+    "transcription_moteur": 971.8383110002833,
+    "tour_http": 13.219516999924963,
+    "intention": 2.382383000167465,
+    "garde": 0.28446299984352663,
+    "journal_du_tour": 1.4991419998295896,
+    "orchestration": 6.970919000195863,
+    "fin_de_prise_apres_parole": 11470.0,
+    "encodage_wav": 210.7
+   },
+   "froid": false,
+   "texte": "Jarvis, affiche le dache beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.52679,
+    "rms": 0.0314,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_7a4d81e47ebe42168e1271d8c374df1f",
+    "client_id": "mic_516db452a50d423fbfab8fa1f59229a1",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis, affiche le dache beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-pierre-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 11.47,
+    "encodage_ms": 210.7
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.520441000091523,
+    "transcription_http": 1062.411862999852,
+    "controle_audio": 40.259576000153174,
+    "transcription_moteur": 1020.8160430001954,
+    "tour_http": 10.898100000304112,
+    "intention": 2.25116399997205,
+    "garde": 0.28565599995999946,
+    "journal_du_tour": 1.0400790001767746,
+    "orchestration": 5.1937849998466845,
+    "fin_de_prise_apres_parole": 11470.0,
+    "encodage_wav": 203.904
+   },
+   "froid": false,
+   "texte": "Jarvis, affiche le dache beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.47861,
+    "rms": 0.04269,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_e5752bb44bec4f89a717ff7bac12b6cc",
+    "client_id": "mic_a2d2d35bb87a498f9fc562b7802847e5",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Jarvis, affiche le dache beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-pierre-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 11.47,
+    "encodage_ms": 203.904
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 6.691634000162594,
+    "transcription_http": 5769.866571999955,
+    "controle_audio": 38.72622900007627,
+    "transcription_moteur": 5727.728910999758,
+    "tour_http": 13.464001000102144,
+    "intention": 2.7141350001329556,
+    "garde": 0.33285400013483013,
+    "journal_du_tour": 1.1768980002671015,
+    "orchestration": 6.337659999644529,
+    "fin_de_prise_apres_parole": 11470.0,
+    "encodage_wav": 192.279
+   },
+   "froid": false,
+   "texte": "Le colis de résine arrive demain matin. A fiche le dâche Baudatoisier. Le colis de résine arrive demain matin. Pense à vérifier la livraison avant midi. Le colis de résine arrive demain matin. Pense à vérifier la livraison avant...",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.50726,
+    "rms": 0.03161,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_6d96f9e3d16243d4b493cb106bc9d73d",
+    "client_id": "mic_8c9b20e52bef4962a28aed123aad9de4",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Le colis de résine arrive demain matin. A fiche le dâche Baudatoisier. Le colis de résine arrive demain matin. Pense à vérifier la livraison avant midi. Le colis de résine arrive demain matin. Pense à vérifier la livraison avant...",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-upmc-pierre-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 11.47,
+    "encodage_ms": 192.279
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 9.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.727147999597946,
+    "transcription_http": 1059.7741380001935,
+    "controle_audio": 10.16704399989976,
+    "transcription_moteur": 1048.3289740000146,
+    "tour_http": 16.931803999796102,
+    "intention": 2.8953959999853396,
+    "garde": 0.39190700044855475,
+    "journal_du_tour": 1.3160100002096442,
+    "orchestration": 10.3257499990832,
+    "fin_de_prise_apres_parole": 1069.3,
+    "encodage_wav": 51.708
+   },
+   "froid": false,
+   "texte": "J'arrivée, t'affiche le dachement de la tuyée.",
+   "qualite_audio": {
+    "seconds": 3.989,
+    "rate": 16000,
+    "peak": 0.41962,
+    "rms": 0.048,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_471d16ae8a0c4e53b16b75441040d967",
+    "client_id": "mic_a626de34442f4295a49e67e25c33d8d4",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "J'arrivée, t'affiche le dachement de la tuyée.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-gilles-calme",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.9893,
+    "delai_apres_parole_s": 1.0693,
+    "encodage_ms": 51.708
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.717584999776591,
+    "transcription_http": 1046.4336459999686,
+    "controle_audio": 15.574846999697911,
+    "transcription_moteur": 1029.579606000425,
+    "tour_http": 14.706453000144393,
+    "intention": 2.466463000018848,
+    "garde": 0.3015749998667161,
+    "journal_du_tour": 1.1293770003248937,
+    "orchestration": 7.621149999977206,
+    "fin_de_prise_apres_parole": 1069.3,
+    "encodage_wav": 51.732
+   },
+   "froid": false,
+   "texte": "J'arrive vite à fichre le dachement de la tuyée.",
+   "qualite_audio": {
+    "seconds": 3.989,
+    "rate": 16000,
+    "peak": 0.4201,
+    "rms": 0.04837,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_d61854c6f5cf450abf84f207592ff49a",
+    "client_id": "mic_8707c1044d544299b98c767879e086ee",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "J'arrive vite à fichre le dachement de la tuyée.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-gilles-ventilateur",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.9893,
+    "delai_apres_parole_s": 1.0693,
+    "encodage_ms": 51.732
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 2.0,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.196728999886545,
+    "transcription_http": 1116.5382089998275,
+    "controle_audio": 38.89986800004408,
+    "transcription_moteur": 1072.6038489997336,
+    "tour_http": 13.412789000085468,
+    "intention": 2.6345050000600168,
+    "garde": 0.46629899998151814,
+    "journal_du_tour": 1.204440000037721,
+    "orchestration": 7.269293000263133,
+    "fin_de_prise_apres_parole": 12080.0,
+    "encodage_wav": 190.07
+   },
+   "froid": false,
+   "texte": "J'ai envie d'afficher le dashboard à tuyer.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.42776,
+    "rms": 0.03146,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_97905df7c9544599b38bd6bcc4be7b8e",
+    "client_id": "mic_b5fc419107bc4183b7a1fdbf92e6a8ce",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "J'ai envie d'afficher le dashboard à tuyer.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-gilles-imprimante",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.08,
+    "encodage_ms": 190.07
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.25,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.514836999987892,
+    "transcription_http": 1115.7355089999328,
+    "controle_audio": 49.222333999750845,
+    "transcription_moteur": 1064.8210570002448,
+    "tour_http": 13.883489999898302,
+    "intention": 2.4394800002482953,
+    "garde": 0.3677599997899961,
+    "journal_du_tour": 1.3243799999145267,
+    "orchestration": 7.998692999990453,
+    "fin_de_prise_apres_parole": 12080.0,
+    "encodage_wav": 194.661
+   },
+   "froid": false,
+   "texte": "J'en revis, affiche le dache-bois-dratille.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.40244,
+    "rms": 0.04286,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_e93b71efab2c4352a821fb59c4a3ff7e",
+    "client_id": "mic_7fec7c58f26a4aa981a032712a452237",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "J'en revis, affiche le dache-bois-dratille.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-gilles-atelier_fort",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.08,
+    "encodage_ms": 194.661
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.0,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.7660220000361733,
+    "transcription_http": 1094.181750000189,
+    "controle_audio": 37.14562000004662,
+    "transcription_moteur": 1052.5583959997675,
+    "tour_http": 10.350045999985014,
+    "intention": 2.2413509996113135,
+    "garde": 0.27470899976833607,
+    "journal_du_tour": 1.0413320001134707,
+    "orchestration": 4.658955000650167,
+    "fin_de_prise_apres_parole": 12080.0,
+    "encodage_wav": 190.491
+   },
+   "froid": false,
+   "texte": "Le colis de résine arribe demain matin, pense à vérifier la livraison avant midi.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.48352,
+    "rms": 0.0317,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_3b09f0c5d066431a83aa5a243083765d",
+    "client_id": "mic_2fc54b797f6e46ec9dfeb8b41ae675f0",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Le colis de résine arribe demain matin, pense à vérifier la livraison avant midi.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A2-gilles-parole_fond",
+   "phrase_id": "A2",
+   "phrase": "Jarvis, affiche le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.08,
+    "encodage_ms": 190.491
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 3.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.422604999945179,
+    "transcription_http": 967.010283000036,
+    "controle_audio": 9.11099099994317,
+    "transcription_moteur": 956.7102070004694,
+    "tour_http": 18.54610500004128,
+    "intention": 1.4963469998292567,
+    "garde": 0.313360999825818,
+    "distribution": 4.715572000350221,
+    "journal_du_tour": 5.00498500014146,
+    "orchestration": 5.572672999733186,
+    "affichage": 19.60174099986034,
+    "affichage_serveur": 29.2,
+    "apres_fin_de_prise": 1005.1581289999376,
+    "fin_de_prise_apres_parole": 1067.3,
+    "encodage_wav": 42.289,
+    "bout_en_bout": 2114.7471289999376
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de bord atelier.",
+   "qualite_audio": {
+    "seconds": 3.397,
+    "rate": 16000,
+    "peak": 0.3259,
+    "rms": 0.04453,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_28dde41383ab46d580c7f88e37a70361",
+    "client_id": "mic_5454c932259c4d2686ad603c4abd81b7",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de bord atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A3-siwis-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3973,
+    "delai_apres_parole_s": 1.0673,
+    "encodage_ms": 42.289
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.00807200003328,
+    "transcription_http": 898.467915999845,
+    "controle_audio": 8.530360999884579,
+    "transcription_moteur": 887.7733660001468,
+    "tour_http": 23.373959000309696,
+    "intention": 1.5438110003742622,
+    "garde": 0.3089309998358658,
+    "distribution": 4.735818999961339,
+    "journal_du_tour": 3.4511889998611878,
+    "orchestration": 11.146962000111671,
+    "affichage": 35.380715999963286,
+    "affichage_serveur": 25.3,
+    "apres_fin_de_prise": 957.222591000118,
+    "fin_de_prise_apres_parole": 1136.7,
+    "encodage_wav": 42.529,
+    "bout_en_bout": 2136.4515910001182
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de bord atelier.",
+   "qualite_audio": {
+    "seconds": 3.467,
+    "rate": 16000,
+    "peak": 0.33722,
+    "rms": 0.04443,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_f1d9f1871f3242949fcd2d8cb08afb37",
+    "client_id": "mic_10a33a4434734f528805fe6d983b023a",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de bord atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A3-siwis-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.4667,
+    "delai_apres_parole_s": 1.1367,
+    "encodage_ms": 42.529
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.332544999921083,
+    "transcription_http": 972.421845000099,
+    "controle_audio": 38.83239600008892,
+    "transcription_moteur": 929.314776999945,
+    "tour_http": 14.03252899990548,
+    "intention": 2.544252999996388,
+    "garde": 0.3953489999730664,
+    "journal_du_tour": 1.0863259999496222,
+    "orchestration": 7.589713000015763,
+    "fin_de_prise_apres_parole": 12670.0,
+    "encodage_wav": 226.685
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de bord à tenuier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.31931,
+    "rms": 0.02884,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_98243a90c51a415fb9bfa49eb19c3c80",
+    "client_id": "mic_3cb51964e0e3453d89ebea404263d058",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de bord à tenuier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-siwis-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.67,
+    "encodage_ms": 226.685
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.782562000149483,
+    "transcription_http": 953.5292750001645,
+    "controle_audio": 47.305646000040724,
+    "transcription_moteur": 900.6879929997922,
+    "tour_http": 21.5030360000128,
+    "intention": 1.6598909996901057,
+    "garde": 0.3519699998832948,
+    "distribution": 5.362079999940761,
+    "journal_du_tour": 6.840997999915999,
+    "orchestration": 5.419556000560988,
+    "affichage": 13.453857000058633,
+    "affichage_serveur": 27.7,
+    "apres_fin_de_prise": 988.4861680002359,
+    "fin_de_prise_apres_parole": 12670.0,
+    "encodage_wav": 195.398,
+    "bout_en_bout": 13853.884168000235
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de bord atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.38489,
+    "rms": 0.04075,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_f265c55a4aca4670b635456a3c48c22d",
+    "client_id": "mic_fbfc35255af94444bec634a60252ed5a",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de bord atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A3-siwis-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.67,
+    "encodage_ms": 195.398
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.389285999626736,
+    "transcription_http": 1055.0106900000173,
+    "controle_audio": 40.98236299978453,
+    "transcription_moteur": 1008.5040220001247,
+    "tour_http": 19.626177000191092,
+    "intention": 1.2236380002832448,
+    "garde": 0.3510349997668527,
+    "distribution": 4.921061000004556,
+    "journal_du_tour": 6.256413999835786,
+    "orchestration": 5.296194000038668,
+    "affichage": 33.809201999702054,
+    "affichage_serveur": 27.9,
+    "apres_fin_de_prise": 1108.4460689999105,
+    "fin_de_prise_apres_parole": 12670.0,
+    "encodage_wav": 194.288,
+    "bout_en_bout": 13972.734068999911
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord atelier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.33505,
+    "rms": 0.02922,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_855f08ab0e3c4c4c87a9ca9e28b3c5f8",
+    "client_id": "mic_66d5528b00fc42088d1b206fdf810d0f",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A3-siwis-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.67,
+    "encodage_ms": 194.288
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.6062379999748373,
+    "transcription_http": 987.6323859998593,
+    "controle_audio": 10.325050000119518,
+    "transcription_moteur": 971.8669449998742,
+    "tour_http": 16.160872999989806,
+    "intention": 3.5955670000475948,
+    "garde": 0.5256519998511067,
+    "journal_du_tour": 1.8049810000775324,
+    "orchestration": 8.580331000302976,
+    "fin_de_prise_apres_parole": 1025.3000000000002,
+    "encodage_wav": 52.024
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de bord à tolis.",
+   "qualite_audio": {
+    "seconds": 3.845,
+    "rate": 16000,
+    "peak": 0.41183,
+    "rms": 0.04714,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_b3f86ca66adf4d49b7a3818cccc48339",
+    "client_id": "mic_c81f0a5615f84686867a51e9cf6f8d8c",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de bord à tolis.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-jessica-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.8453,
+    "delai_apres_parole_s": 1.0253,
+    "encodage_ms": 52.024
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.299044999948819,
+    "transcription_http": 989.0664750000724,
+    "controle_audio": 11.208295999949769,
+    "transcription_moteur": 974.5110140001998,
+    "tour_http": 11.121185999854788,
+    "intention": 1.991074000216031,
+    "garde": 0.31082900022738613,
+    "journal_du_tour": 1.251652000064496,
+    "orchestration": 5.489756999395468,
+    "fin_de_prise_apres_parole": 1025.3000000000002,
+    "encodage_wav": 48.74
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord à tolier.",
+   "qualite_audio": {
+    "seconds": 3.845,
+    "rate": 16000,
+    "peak": 0.40662,
+    "rms": 0.04753,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_9b3dceea11ed476193972ae53a09ec86",
+    "client_id": "mic_0f4eec9587a04f39a7bea5f831d369eb",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord à tolier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-jessica-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.8453,
+    "delai_apres_parole_s": 1.0253,
+    "encodage_ms": 48.74
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.62577899977623,
+    "transcription_http": 1177.5081119999413,
+    "controle_audio": 48.03822300027605,
+    "transcription_moteur": 1127.3713559994576,
+    "tour_http": 19.373368000287883,
+    "intention": 2.5910770000336925,
+    "garde": 0.3840699996544572,
+    "journal_du_tour": 1.176507000309357,
+    "orchestration": 11.806068000169034,
+    "fin_de_prise_apres_parole": 12180.0,
+    "encodage_wav": 199.926
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord à tenir.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.43759,
+    "rms": 0.03086,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_126c151aa48e45aab16a9d5123c8dbec",
+    "client_id": "mic_9e80ce02c1784496a7c862854bac6d06",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord à tenir.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-jessica-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.18,
+    "encodage_ms": 199.926
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.537009999694419,
+    "transcription_http": 998.5442360002708,
+    "controle_audio": 40.01964700000826,
+    "transcription_moteur": 953.7679479999497,
+    "tour_http": 10.014332999617181,
+    "intention": 2.3193809997792414,
+    "garde": 0.3493029998935526,
+    "journal_du_tour": 1.030609999816079,
+    "orchestration": 4.718995000530413,
+    "fin_de_prise_apres_parole": 12180.0,
+    "encodage_wav": 208.758
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord à tenue",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.44833,
+    "rms": 0.04231,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_bc189245813846a1a3fee60a41b319b4",
+    "client_id": "mic_771283d1da6c45378bc1515e2678dddd",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord à tenue",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-jessica-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.18,
+    "encodage_ms": 208.758
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.3150559999958205,
+    "transcription_http": 1038.371282999833,
+    "controle_audio": 43.09682899975087,
+    "transcription_moteur": 993.2984840002064,
+    "tour_http": 16.65518300023905,
+    "intention": 3.3875109998007247,
+    "garde": 0.5752540000685258,
+    "journal_du_tour": 1.6393129999414668,
+    "orchestration": 5.783703000361129,
+    "fin_de_prise_apres_parole": 12180.0,
+    "encodage_wav": 227.46
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord à tolis",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.43591,
+    "rms": 0.0312,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_f949057da5f6432fa2c25f88fe30e2e7",
+    "client_id": "mic_d3e09ae156ba4df797d9687ba3881667",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord à tolis",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-jessica-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.18,
+    "encodage_ms": 227.46
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.617903000053047,
+    "transcription_http": 926.0139170000912,
+    "controle_audio": 9.868224999991071,
+    "transcription_moteur": 914.6143640000446,
+    "tour_http": 12.859135999860882,
+    "intention": 2.091992000259779,
+    "garde": 0.2942129999610188,
+    "journal_du_tour": 0.9482189998379909,
+    "orchestration": 7.3181839998142095,
+    "fin_de_prise_apres_parole": 1039.3,
+    "encodage_wav": 46.295
+   },
+   "froid": false,
+   "texte": "Infiche le tableau de bord atelier.",
+   "qualite_audio": {
+    "seconds": 3.509,
+    "rate": 16000,
+    "peak": 0.49026,
+    "rms": 0.04527,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_837661b693154d45a7dcda7eaf0f7be7",
+    "client_id": "mic_3bfb2a95fc2a41e79a0a34b28ce3eb74",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Infiche le tableau de bord atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-pierre-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5093,
+    "delai_apres_parole_s": 1.0393,
+    "encodage_ms": 46.295
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.1667,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.76824299994405,
+    "transcription_http": 899.691612999959,
+    "controle_audio": 13.644726999700652,
+    "transcription_moteur": 884.5111260002341,
+    "tour_http": 14.526263999869116,
+    "intention": 2.9167869997763773,
+    "garde": 0.3434280001783918,
+    "journal_du_tour": 1.3746480003646866,
+    "orchestration": 5.995824999445176,
+    "fin_de_prise_apres_parole": 3012.7000000000003,
+    "encodage_wav": 69.457
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord à tolier.",
+   "qualite_audio": {
+    "seconds": 5.483,
+    "rate": 16000,
+    "peak": 0.48938,
+    "rms": 0.03673,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_dda5aee6536f48b3ad33ee9325c2148c",
+    "client_id": "mic_bfbf137186a846369f2df3055b9443dc",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord à tolier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-pierre-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 5.4827,
+    "delai_apres_parole_s": 3.0127,
+    "encodage_ms": 69.457
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.9795609998000145,
+    "transcription_http": 927.47062799981,
+    "controle_audio": 38.00008300004265,
+    "transcription_moteur": 888.0373759998292,
+    "tour_http": 13.598494000234496,
+    "intention": 2.7750969998123765,
+    "garde": 0.31709299992144224,
+    "journal_du_tour": 1.3000499998270243,
+    "orchestration": 7.065882000460988,
+    "fin_de_prise_apres_parole": 12530.0,
+    "encodage_wav": 213.497
+   },
+   "froid": false,
+   "texte": "affiche le tableau de Bord-Atelier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.51892,
+    "rms": 0.02938,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_d262afa82fc54765a890bd71a6fed31d",
+    "client_id": "mic_7fae9edc03a540ce8e12402c454d1ee3",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de Bord-Atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-pierre-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.53,
+    "encodage_ms": 213.497
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.268520000096032,
+    "transcription_http": 1065.4396169998108,
+    "controle_audio": 44.98444900036702,
+    "transcription_moteur": 1017.0312249997551,
+    "tour_http": 12.97339099983219,
+    "intention": 2.5416839998797514,
+    "garde": 0.37516900010814425,
+    "journal_du_tour": 1.0291720000168425,
+    "orchestration": 5.103264000354102,
+    "fin_de_prise_apres_parole": 12530.0,
+    "encodage_wav": 202.571
+   },
+   "froid": false,
+   "texte": "Un fiche de tableau de bord à tolille.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.51721,
+    "rms": 0.04114,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_41d50010f44b44199776c0f21cc97852",
+    "client_id": "mic_05965d22290f474590d2c0f05c6c0801",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Un fiche de tableau de bord à tolille.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-pierre-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.53,
+    "encodage_ms": 202.571
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.8333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.975801000251522,
+    "transcription_http": 1083.3369309998488,
+    "controle_audio": 38.925086999825,
+    "transcription_moteur": 1039.7545810001247,
+    "tour_http": 10.693324000385473,
+    "intention": 2.186965999953827,
+    "garde": 0.3317119999337592,
+    "journal_du_tour": 1.1710139997376245,
+    "orchestration": 4.502220000176749,
+    "fin_de_prise_apres_parole": 12530.0,
+    "encodage_wav": 196.12
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de Boratoli.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.49277,
+    "rms": 0.02955,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_b88c407fddbd4dcca586295797c88b7d",
+    "client_id": "mic_9f135e85ca2a42b189f66b0b6c778a84",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de Boratoli.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-upmc-pierre-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.53,
+    "encodage_ms": 196.12
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.6858229996141745,
+    "transcription_http": 966.273425000054,
+    "controle_audio": 9.155165999800374,
+    "transcription_moteur": 952.2168640005475,
+    "tour_http": 14.910924999639974,
+    "intention": 3.0922450000616664,
+    "garde": 0.5595990000983875,
+    "journal_du_tour": 1.386813999943115,
+    "orchestration": 8.247700000083569,
+    "fin_de_prise_apres_parole": 1090.7,
+    "encodage_wav": 49.968
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de bord attaillé.",
+   "qualite_audio": {
+    "seconds": 3.531,
+    "rate": 16000,
+    "peak": 0.2941,
+    "rms": 0.04518,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_ba1d912790854be4b59fa1ca17f697c8",
+    "client_id": "mic_c2bba731a27a4afa805406d349f176be",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de bord attaillé.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-gilles-calme",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.5307,
+    "delai_apres_parole_s": 1.0907,
+    "encodage_ms": 49.968
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.1667,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.216821000227355,
+    "transcription_http": 998.6109500000566,
+    "controle_audio": 10.316982999938773,
+    "transcription_moteur": 987.0847010001853,
+    "tour_http": 22.135966999940138,
+    "intention": 1.812108000194712,
+    "garde": 0.3538760001902119,
+    "distribution": 5.18725700021605,
+    "journal_du_tour": 5.140282999946066,
+    "orchestration": 5.807305999496748,
+    "affichage": 21.299302999977954,
+    "affichage_serveur": 25.6,
+    "apres_fin_de_prise": 1042.0462199999747,
+    "fin_de_prise_apres_parole": 1725.3,
+    "encodage_wav": 53.219,
+    "bout_en_bout": 2820.565219999975
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord atelier.",
+   "qualite_audio": {
+    "seconds": 4.165,
+    "rate": 16000,
+    "peak": 0.29965,
+    "rms": 0.04202,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_73b7aeee5bd34d399ff1b65b89fc5269",
+    "client_id": "mic_b109f0c5cca444a68cf3c4041e54a89c",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A3-gilles-ventilateur",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 4.1653,
+    "delai_apres_parole_s": 1.7253,
+    "encodage_ms": 53.219
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.08081499972468,
+    "transcription_http": 1046.8970830002036,
+    "controle_audio": 61.213247000068804,
+    "transcription_moteur": 980.9235930001705,
+    "tour_http": 18.53882599971257,
+    "intention": 1.3521409996428702,
+    "garde": 0.2810549999594514,
+    "distribution": 5.223215000114578,
+    "journal_du_tour": 4.873922000115272,
+    "orchestration": 5.032943000514933,
+    "affichage": 15.618512999935774,
+    "affichage_serveur": 27.2,
+    "apres_fin_de_prise": 1081.054421999852,
+    "fin_de_prise_apres_parole": 12560.0,
+    "encodage_wav": 217.907,
+    "bout_en_bout": 13858.961421999851
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.30542,
+    "rms": 0.02938,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_cbcd31cc95ee43c0ad31925103737289",
+    "client_id": "mic_ded761897b404704ab27ce2106bb4316",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A3-gilles-imprimante",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.56,
+    "encodage_ms": 217.907
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.9110730003339995,
+    "transcription_http": 1059.1671030001635,
+    "controle_audio": 42.80952499993873,
+    "transcription_moteur": 1015.0719510002091,
+    "tour_http": 13.88544199971875,
+    "intention": 2.7668059997267846,
+    "garde": 0.3351119999024377,
+    "journal_du_tour": 1.0011419999500504,
+    "orchestration": 8.13973500044085,
+    "fin_de_prise_apres_parole": 12560.0,
+    "encodage_wav": 293.224
+   },
+   "froid": false,
+   "texte": "Affiche le tableau de Boratini.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.30255,
+    "rms": 0.04117,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_60024416b1bf4fab821476876940f60e",
+    "client_id": "mic_fc7b80737e5d4e6eb9ccc0819bb0b20f",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Affiche le tableau de Boratini.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-gilles-atelier_fort",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.56,
+    "encodage_ms": 293.224
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.3333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.157384000132879,
+    "transcription_http": 1512.3864500001218,
+    "controle_audio": 44.81613000007201,
+    "transcription_moteur": 1463.0397429996265,
+    "tour_http": 11.441239999840036,
+    "intention": 2.0492530002229614,
+    "garde": 0.2690830001483846,
+    "journal_du_tour": 0.9128599999712605,
+    "orchestration": 5.1234159996056405,
+    "fin_de_prise_apres_parole": 12560.0,
+    "encodage_wav": 195.03
+   },
+   "froid": false,
+   "texte": "affiche le tableau de bord attaie Pense à vérifier la livraison avant midi le colis de résine arrive demain matin Pense à vérifier la livraison avant midi le colis de résine arrive demain matin Pense à vérifier la livraison avant...",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.30832,
+    "rms": 0.02966,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_27d15a8400c44133b5d82caca5b5d4cf",
+    "client_id": "mic_036b05a777ed4359918b159b5dc455c8",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "affiche le tableau de bord attaie Pense à vérifier la livraison avant midi le colis de résine arrive demain matin Pense à vérifier la livraison avant midi le colis de résine arrive demain matin Pense à vérifier la livraison avant...",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A3-gilles-parole_fond",
+   "phrase_id": "A3",
+   "phrase": "Affiche le tableau de bord atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.56,
+    "encodage_ms": 195.03
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 5.8333,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.26428799983114,
+    "transcription_http": 934.3678310001451,
+    "controle_audio": 7.807499000136886,
+    "transcription_moteur": 925.4732640001748,
+    "tour_http": 13.801000000057684,
+    "intention": 2.3318650000874186,
+    "garde": 0.2788720003081835,
+    "journal_du_tour": 0.9580279997862817,
+    "orchestration": 8.565308000015648,
+    "fin_de_prise_apres_parole": 1056.7,
+    "encodage_wav": 41.516
+   },
+   "froid": false,
+   "texte": "Montre le dash pour l'atelier.",
+   "qualite_audio": {
+    "seconds": 3.027,
+    "rate": 16000,
+    "peak": 0.26468,
+    "rms": 0.04218,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_104f05622aee459cb87f12d7e682af3d",
+    "client_id": "mic_0d8735de7fc54d429def429518ccc98f",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dash pour l'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-siwis-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.0267,
+    "delai_apres_parole_s": 1.0567,
+    "encodage_ms": 41.516
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.146094999920024,
+    "transcription_http": 1022.2380219997831,
+    "controle_audio": 9.23171500016906,
+    "transcription_moteur": 1008.3444989995769,
+    "tour_http": 12.530300999969768,
+    "intention": 2.338295999834372,
+    "garde": 0.39994899998418987,
+    "journal_du_tour": 1.5377400000033958,
+    "orchestration": 6.828747000326985,
+    "fin_de_prise_apres_parole": 1528.7,
+    "encodage_wav": 47.5
+   },
+   "froid": false,
+   "texte": "Montre le dage beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 3.499,
+    "rate": 16000,
+    "peak": 0.26614,
+    "rms": 0.03965,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_f68b6b39892c45efbf65f1ff3b6d7469",
+    "client_id": "mic_a5933982f40e4b5d96a6f70a3c0f2b95",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dage beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-siwis-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.4987,
+    "delai_apres_parole_s": 1.5287,
+    "encodage_ms": 47.5
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.613119999954506,
+    "transcription_http": 976.1548900000889,
+    "controle_audio": 39.15834800000084,
+    "transcription_moteur": 932.2151169999415,
+    "tour_http": 13.936424999883457,
+    "intention": 3.1297550003728247,
+    "garde": 0.40250299980471027,
+    "journal_du_tour": 1.18783900006747,
+    "orchestration": 7.2758229998726165,
+    "fin_de_prise_apres_parole": 13030.0,
+    "encodage_wav": 197.903
+   },
+   "froid": false,
+   "texte": "Montre le dash pour l'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.2692,
+    "rms": 0.02725,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_04ca001ec4cb4fd78c7a96e25118ab96",
+    "client_id": "mic_cb3313330db240d2bf7367f84520fbbf",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dash pour l'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-siwis-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.03,
+    "encodage_ms": 197.903
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.893488999641704,
+    "transcription_http": 1128.5104799999317,
+    "controle_audio": 58.705911999823,
+    "transcription_moteur": 1067.3927130001175,
+    "tour_http": 15.031602999897586,
+    "intention": 3.417985999931261,
+    "garde": 0.43923600014750264,
+    "journal_du_tour": 1.1982550004177028,
+    "orchestration": 6.633071999203821,
+    "fin_de_prise_apres_parole": 13030.0,
+    "encodage_wav": 189.21
+   },
+   "froid": false,
+   "texte": "Montre le dage pour l'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.31705,
+    "rms": 0.03961,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_aff6938aaae149dfaa810ea6ac9dedb0",
+    "client_id": "mic_1791dda3ab8d4ec286d2e0c767e9c52b",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dage pour l'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-siwis-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.03,
+    "encodage_ms": 189.21
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.00862299986693,
+    "transcription_http": 1240.96558500014,
+    "controle_audio": 41.80447800035836,
+    "transcription_moteur": 1194.4694179996986,
+    "tour_http": 13.743175999934465,
+    "intention": 2.7071910003542143,
+    "garde": 0.36089700006414205,
+    "journal_du_tour": 1.106311000057758,
+    "orchestration": 7.460615999661968,
+    "fin_de_prise_apres_parole": 13030.0,
+    "encodage_wav": 229.41
+   },
+   "froid": false,
+   "texte": "Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.28424,
+    "rms": 0.0274,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_4a29068308fa43dbbfb6da7f3874d20a",
+    "client_id": "mic_e445b9d12a8e44d1bf73d3db6455ee0b",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Le colis de résine arrive demain matin, pense à vérifier la livraison avant midi.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-siwis-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "siwis",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 13.03,
+    "encodage_ms": 229.41
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 3.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.36238600013894,
+    "transcription_http": 1091.4978320001865,
+    "controle_audio": 8.35344199958854,
+    "transcription_moteur": 1078.0090930002189,
+    "tour_http": 11.955547999605187,
+    "intention": 3.203537999979744,
+    "garde": 0.3905319999830681,
+    "journal_du_tour": 1.4365469996846514,
+    "orchestration": 4.477522000343015,
+    "fin_de_prise_apres_parole": 964.0,
+    "encodage_wav": 44.795
+   },
+   "froid": false,
+   "texte": "Montre le dâche beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 3.264,
+    "rate": 16000,
+    "peak": 0.33817,
+    "rms": 0.04544,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_e8a94964f22a4965abebad506dc38286",
+    "client_id": "mic_8f6fcb955a414575b0993cfe009d2660",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dâche beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-jessica-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.264,
+    "delai_apres_parole_s": 0.964,
+    "encodage_ms": 44.795
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.911354999672767,
+    "transcription_http": 981.7828620002729,
+    "controle_audio": 15.103689999705239,
+    "transcription_moteur": 961.6506010002013,
+    "tour_http": 12.896888999875955,
+    "intention": 1.9693170002028637,
+    "garde": 0.335584999902494,
+    "journal_du_tour": 0.9920249999595399,
+    "orchestration": 6.828950999988592,
+    "fin_de_prise_apres_parole": 3262.7000000000003,
+    "encodage_wav": 76.376
+   },
+   "froid": false,
+   "texte": "Montre le dache beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 5.563,
+    "rate": 16000,
+    "peak": 0.34174,
+    "rms": 0.03547,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_7638d15d0446432fb3e8744db86cf942",
+    "client_id": "mic_a24eda917b904af0a9854d3126f146fb",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dache beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-jessica-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 5.5627,
+    "delai_apres_parole_s": 3.2627,
+    "encodage_ms": 76.376
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 2.897592999943299,
+    "transcription_http": 1019.4807569996556,
+    "controle_audio": 39.48370199987039,
+    "transcription_moteur": 978.950167000221,
+    "tour_http": 12.51544400020066,
+    "intention": 2.5924579999809794,
+    "garde": 0.39513799993073917,
+    "journal_du_tour": 1.0785929998746724,
+    "orchestration": 6.58202100021299,
+    "fin_de_prise_apres_parole": 12700.0,
+    "encodage_wav": 216.195
+   },
+   "froid": false,
+   "texte": "Montre le dash bonateuse",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.37515,
+    "rms": 0.02874,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_5463365b4db345afba8c1fdea7363b86",
+    "client_id": "mic_84b04e2c44a1405a9b71ecca641c8f7b",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dash bonateuse",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-jessica-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.7,
+    "encodage_ms": 216.195
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.167738999967696,
+    "transcription_http": 970.2571019997777,
+    "controle_audio": 39.44521099992926,
+    "transcription_moteur": 929.4743360001121,
+    "tour_http": 15.596135000123468,
+    "intention": 2.669863999926747,
+    "garde": 0.3750910000235308,
+    "journal_du_tour": 1.2808810001843085,
+    "orchestration": 6.741132000115613,
+    "fin_de_prise_apres_parole": 12700.0,
+    "encodage_wav": 203.503
+   },
+   "froid": false,
+   "texte": "Montre le dache beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.34766,
+    "rms": 0.04082,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_0f25df71ed39432cafec93b26dc8a4dd",
+    "client_id": "mic_406b9d6b4baf4675ad41ed00760b9035",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dache beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-jessica-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.7,
+    "encodage_ms": 203.503
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.538639999987936,
+    "transcription_http": 1018.4390989998064,
+    "controle_audio": 38.88339800005269,
+    "transcription_moteur": 976.6023189999942,
+    "tour_http": 11.349992000305065,
+    "intention": 2.460698000049888,
+    "garde": 0.3422419999878912,
+    "journal_du_tour": 1.1684040000545792,
+    "orchestration": 5.5192889999489125,
+    "fin_de_prise_apres_parole": 12700.0,
+    "encodage_wav": 225.087
+   },
+   "froid": false,
+   "texte": "Montre le dâge beau d'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.33142,
+    "rms": 0.02909,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_002a3f21ef844ee887d19beed3802b5a",
+    "client_id": "mic_2e6607237b824d3bbfc872590959070e",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dâge beau d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-jessica-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-jessica",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.7,
+    "encodage_ms": 225.087
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 5.415008999989368,
+    "transcription_http": 964.0024010000161,
+    "controle_audio": 8.25782399988384,
+    "transcription_moteur": 954.6221080004216,
+    "tour_http": 14.563904999704391,
+    "intention": 2.063356999769894,
+    "garde": 0.2871850001611165,
+    "journal_du_tour": 1.1872790000779787,
+    "orchestration": 6.122901999788155,
+    "fin_de_prise_apres_parole": 985.3,
+    "encodage_wav": 49.3
+   },
+   "froid": false,
+   "texte": "Montre le tâche pour d'Atoby.",
+   "qualite_audio": {
+    "seconds": 3.325,
+    "rate": 16000,
+    "peak": 0.49789,
+    "rms": 0.04551,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_beb5016f7f90497c84168302dd7b99ad",
+    "client_id": "mic_67dc9c8e41564f0dbf111de3b2e746bf",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le tâche pour d'Atoby.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-pierre-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3253,
+    "delai_apres_parole_s": 0.9853,
+    "encodage_ms": 49.3
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.8184850000106962,
+    "transcription_http": 919.8097849998703,
+    "controle_audio": 8.258642999862786,
+    "transcription_moteur": 909.5456350000859,
+    "tour_http": 11.23641599997427,
+    "intention": 2.2677010001643794,
+    "garde": 0.5061980000391486,
+    "journal_du_tour": 1.1520070002006833,
+    "orchestration": 5.515098999694601,
+    "fin_de_prise_apres_parole": 990.7,
+    "encodage_wav": 42.86
+   },
+   "froid": false,
+   "texte": "Montre le tâche pour d'atelier.",
+   "qualite_audio": {
+    "seconds": 3.331,
+    "rate": 16000,
+    "peak": 0.49307,
+    "rms": 0.04584,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_21dd1f38728846568c075a644fe9aaa2",
+    "client_id": "mic_a3f12103d7a04254a7f4004327e54920",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le tâche pour d'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-pierre-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.3307,
+    "delai_apres_parole_s": 0.9907,
+    "encodage_ms": 42.86
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.266233999715041,
+    "transcription_http": 1005.9755570000561,
+    "controle_audio": 41.2256729996443,
+    "transcription_moteur": 963.0704130004233,
+    "tour_http": 8.519993999925646,
+    "intention": 1.9681480002873286,
+    "garde": 0.2761030000328901,
+    "journal_du_tour": 1.0220129997833283,
+    "orchestration": 3.767420999793103,
+    "fin_de_prise_apres_parole": 12660.0,
+    "encodage_wav": 213.485
+   },
+   "froid": false,
+   "texte": "montre le tâche pour d'atodier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.52243,
+    "rms": 0.02909,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_017eb427baaa468c8493ffbb3ed3a38e",
+    "client_id": "mic_eaf0c709eea349ab97b27bbf0fc35d92",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "montre le tâche pour d'atodier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-pierre-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.66,
+    "encodage_ms": 213.485
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.8646719999633206,
+    "transcription_http": 1135.2230640000016,
+    "controle_audio": 38.93723300006968,
+    "transcription_moteur": 1091.8576640001447,
+    "tour_http": 15.734084000087023,
+    "intention": 4.512459999659768,
+    "garde": 0.31767800010129577,
+    "journal_du_tour": 1.24266600005285,
+    "orchestration": 7.757143000162614,
+    "fin_de_prise_apres_parole": 12660.0,
+    "encodage_wav": 200.117
+   },
+   "froid": false,
+   "texte": "montre le tâche pour d'atelier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.48422,
+    "rms": 0.04094,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_546944c03dc14b7bb1c5938448b7deba",
+    "client_id": "mic_01fb95a888304d59a86f13cddbc5018a",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "montre le tâche pour d'atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-pierre-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.66,
+    "encodage_ms": 200.117
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 4.5948040001349,
+    "transcription_http": 1037.2210489999816,
+    "controle_audio": 38.21612199999436,
+    "transcription_moteur": 997.4590880001415,
+    "tour_http": 15.031937999992806,
+    "intention": 2.1395419998953003,
+    "garde": 0.3001280001626583,
+    "journal_du_tour": 1.0968120000143244,
+    "orchestration": 7.36253700006273,
+    "fin_de_prise_apres_parole": 12660.0,
+    "encodage_wav": 205.697
+   },
+   "froid": false,
+   "texte": "Montre le tâche pour l'atelier.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.49121,
+    "rms": 0.02917,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_57f4537d874340799164cf61bca206fc",
+    "client_id": "mic_bb0e83187b174d3a844612fec1a86761",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le tâche pour l'atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-upmc-pierre-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "upmc-pierre",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.66,
+    "encodage_ms": 205.697
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.75,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.245850999974209,
+    "transcription_http": 1032.29568200004,
+    "controle_audio": 9.320554000169068,
+    "transcription_moteur": 1020.3773289999845,
+    "tour_http": 23.775630999807618,
+    "intention": 1.5029589999357995,
+    "garde": 0.4033629998048127,
+    "distribution": 5.978274999961286,
+    "journal_du_tour": 5.289942000217707,
+    "orchestration": 7.603751000260672,
+    "affichage": 23.937630000091303,
+    "affichage_serveur": 30.0,
+    "apres_fin_de_prise": 1080.0089429999389,
+    "fin_de_prise_apres_parole": 1071.3,
+    "encodage_wav": 53.795,
+    "bout_en_bout": 2205.103942999939
+   },
+   "froid": false,
+   "texte": "Montre le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 3.661,
+    "rate": 16000,
+    "peak": 0.32999,
+    "rms": 0.04492,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_86f66e35d3024d6d8c9815b4f984b980",
+    "client_id": "mic_8072ff3cbf7b40a89e0832640b63916c",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A4-gilles-calme",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "calme",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.6613,
+    "delai_apres_parole_s": 1.0713,
+    "encodage_ms": 53.795
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.6305859998719825,
+    "transcription_http": 993.4610949999296,
+    "controle_audio": 10.641578000104346,
+    "transcription_moteur": 980.3598599996803,
+    "tour_http": 19.581041000037658,
+    "intention": 1.5830940001251292,
+    "garde": 0.3672079997159017,
+    "distribution": 5.521121000128915,
+    "journal_du_tour": 3.87835100036682,
+    "orchestration": 6.679608999547781,
+    "affichage": 21.223454999926616,
+    "affichage_serveur": 25.9,
+    "apres_fin_de_prise": 1034.265590999894,
+    "fin_de_prise_apres_parole": 1250.0,
+    "encodage_wav": 53.997,
+    "bout_en_bout": 2338.262590999894
+   },
+   "froid": false,
+   "texte": "Montre le dashboard atelier.",
+   "qualite_audio": {
+    "seconds": 3.84,
+    "rate": 16000,
+    "peak": 0.3295,
+    "rms": 0.04431,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_a49c196e94f24362be1f94682b498279",
+    "client_id": "mic_1a97a1e777c440d1bb86e1c01403476e",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre le dashboard atelier.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "QUEUED",
+   "decision": {
+    "called": false,
+    "choice": "planning",
+    "reason": "known_command",
+    "source": "local"
+   },
+   "recu": {
+    "status": "QUEUED",
+    "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": "rendered",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "nouvelles_commandes": 1,
+   "issue": "tour",
+   "clip": "A4-gilles-ventilateur",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "ventilateur",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "pause",
+    "t_s": 3.84,
+    "delai_apres_parole_s": 1.25,
+    "encodage_ms": 53.997
+   },
+   "transcription_exacte": true,
+   "taux_erreur_mots": 0.0,
+   "classement": "correct"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 2.9916630001025624,
+    "transcription_http": 1069.5396259998233,
+    "controle_audio": 45.00491599992529,
+    "transcription_moteur": 1021.6841350002142,
+    "tour_http": 13.906784000027983,
+    "intention": 2.1772139998574858,
+    "garde": 0.370684999779769,
+    "journal_du_tour": 1.084387999981118,
+    "orchestration": 6.162848000258236,
+    "fin_de_prise_apres_parole": 12410.0,
+    "encodage_wav": 202.473
+   },
+   "froid": false,
+   "texte": "montre le dashboard à l'atelier",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.35117,
+    "rms": 0.02962,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_97f95b2f3d7b43de9fdf2a74e261949c",
+    "client_id": "mic_75f7b5c070324777852cbbe229916801",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "montre le dashboard à l'atelier",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-gilles-imprimante",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "imprimante",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.41,
+    "encodage_ms": 202.473
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 0.5,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.7317540000003646,
+    "transcription_http": 955.8399020002071,
+    "controle_audio": 38.419275999785896,
+    "transcription_moteur": 915.699381000195,
+    "tour_http": 17.99128499988001,
+    "intention": 2.1644779999405728,
+    "garde": 2.5092380001296988,
+    "journal_du_tour": 1.2109429999327403,
+    "orchestration": 7.005796999692393,
+    "fin_de_prise_apres_parole": 12410.0,
+    "encodage_wav": 191.806
+   },
+   "froid": false,
+   "texte": "Montre les dashboards à 3",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.38907,
+    "rms": 0.04122,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_c9aad15d89184bf6922d3295167b4d7f",
+    "client_id": "mic_9df59970d8154b2983dde63ddcf8068e",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Montre les dashboards à 3",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-gilles-atelier_fort",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "atelier_fort",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.41,
+    "encodage_ms": 191.806
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 1.0,
+   "classement": "commande_manquee"
+  },
+  {
+   "etapes_ms": {
+    "debut_de_prise": 3.9369379996969656,
+    "transcription_http": 1108.3899770001153,
+    "controle_audio": 38.9460040000813,
+    "transcription_moteur": 1067.9568130003645,
+    "tour_http": 11.693876000208547,
+    "intention": 1.9421009997131478,
+    "garde": 0.3418530000089959,
+    "journal_du_tour": 0.8943210000325053,
+    "orchestration": 5.538882000109879,
+    "fin_de_prise_apres_parole": 12410.0,
+    "encodage_wav": 212.05
+   },
+   "froid": false,
+   "texte": "Le colis de résine arribe demain matin et pense à vérifier la livraison avant midi.",
+   "qualite_audio": {
+    "seconds": 15.0,
+    "rate": 16000,
+    "peak": 0.36948,
+    "rms": 0.02963,
+    "silence": false,
+    "clipped": false
+   },
+   "tour": {
+    "request_id": "turn_29d7a9b64a454605a223d2cec4211c7b",
+    "client_id": "mic_24b6c3111a4d42f6820fb54811b22784",
+    "project_id": "BOJ-PILOTE-001",
+    "revision": 0,
+    "text": "Le colis de résine arribe demain matin et pense à vérifier la livraison avant midi.",
+    "operation_id": null,
+    "source": "voice",
+    "context_sha256": "1fc205a2095c2c2a79833c4255f3706c17f982657ed40e5cd238a3fdd9d90dee"
+   },
+   "statut": "CLARIFY",
+   "decision": {
+    "called": false,
+    "choice": "clarify",
+    "reason": "disabled",
+    "source": "local"
+   },
+   "recu": {
+    "status": "CLARIFY",
+    "message": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+    "physical_effect": false,
+    "approval_source": "",
+    "affichage": null,
+    "vues": []
+   },
+   "nouvelles_commandes": 0,
+   "issue": "tour",
+   "clip": "A4-gilles-parole_fond",
+   "phrase_id": "A4",
+   "phrase": "Montre le dashboard atelier.",
+   "groupe": "cible",
+   "condition": "parole_fond",
+   "voix": "gilles",
+   "attendu": {
+    "type": "affichage",
+    "choix": "planning",
+    "vues": [
+     "atelier"
+    ]
+   },
+   "fin_de_prise": {
+    "raison": "limit",
+    "t_s": 15,
+    "delai_apres_parole_s": 12.41,
+    "encodage_ms": 212.05
+   },
+   "transcription_exacte": false,
+   "taux_erreur_mots": 3.75,
+   "classement": "commande_manquee"
+  }
+ ],
+ "limites": [
+  "Voix de synthèse Piper et bruit synthétique : pas une voix humaine, pas le micro de la tour.",
+  "Traitements audio du navigateur (réduction de bruit, gain automatique, annulation d’écho) non simulés.",
+  "Écrans simulés par des clients HTTP : aucun rendu, aucun moniteur physique.",
+  "Jev, LLM et GPU non utilisés ; la transcription suit voice.py (CPU, int8, 4 fils).",
+  "Une mesure ne vaut que pour cet hôte, ce SHA, ce corpus et ce modèle."
+ ]
+}

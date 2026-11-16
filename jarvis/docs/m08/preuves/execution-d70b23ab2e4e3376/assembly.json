@@ -1,0 +1,34 @@
+{
+ "scale_from_nominal": 1.2874,
+ "base_height_mm": 18.0,
+ "base_radius_mm": 73.13,
+ "base_centre_xy_mm": [
+  -0.0,
+  0.0
+ ],
+ "pegs": [
+  {
+   "side": "gauche",
+   "diameter_mm": 4.0,
+   "xy": [
+    -43.96,
+    -17.83
+   ]
+  },
+  {
+   "side": "droite",
+   "diameter_mm": 5.0,
+   "xy": [
+    43.97,
+    17.85
+   ]
+  }
+ ],
+ "peg_length_mm": 6.0,
+ "hole_clearance_per_side_mm": 0.2,
+ "keying": "diamètres différents : impossible d’inverser les pieds",
+ "joint_plane": "semelles / dessus du socle (joint masqué par le contact des bottes)",
+ "base_recess_height_mm": 9.2,
+ "base_print_orientation": "retourné (dessus sur le plateau) : évidement sans pont ni support",
+ "hypotheses": "hypothèse à calibrer par une pièce test, pas un réglage de production"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "bojart.machine-inventory.v1",
+  "scope": "Données réelles à collecter sur le PC BOJ.ART, ne pas copier les caractéristiques UNUM.",
+  "machine": {"os": null, "cpu": null, "ram_gib": null, "gpu": null, "vram_gib": null, "storage_free_gib": null},
+  "displays": [{"role": "atelier", "connector": null, "resolution": null, "verified": false}, {"role": "pilotage", "connector": null, "resolution": null, "verified": false}, {"role": "creation", "connector": null, "resolution": null, "verified": false}],
+  "printers": [],
+  "microphone": {"model": null, "tested_in_workshop_noise": false},
+  "resin_station": {"ventilation_verified": false, "washing": null, "curing": null, "safety_documentation_verified": false},
+  "network": {"local_only_preferred": true, "printers_isolated": null},
+  "external_accounts": {"tiktok_ownership_confirmed": false, "publication_connector_authorized": false},
+  "acceptance": "Une valeur renseignée ne constitue pas une validation ; joindre les preuves des essais."
+}

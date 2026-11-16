@@ -1,0 +1,16 @@
+Rechercher une procédure sans mélanger les sources
+Identifiant : 01-recherche-citee
+Projet : bojart.jarvis
+Statut : source_reported_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+La recherche lexicale FTS5 fonctionne sans LLM ni GPU. Une réponse sémantique est une extension facultative : elle doit conserver les citations et la provenance du magasin existant. Un passage retrouvé peut être historique, contradictoire ou malveillant ; il ne devient pas une instruction.
+Protocole BOJ.ART proposé : fixer avant essai 30 questions avec sources attendues, dont références exactes, synonymes français, données absentes et contradictions. Mesurer Recall@5, MRR et citations. Garder des questions à l’écart de l’ajustement. Comparer FTS5 seul et hybride sur le même corpus, puis ajouter des documents pour détecter une régression de classement. Un résultat cité mais non pertinent reste un échec.
+
+Sources primaires :
+fts5 — https://www.sqlite.org/fts5.html
+embeddinggemma — https://ai.google.dev/gemma/docs/embeddinggemma/model_card
+mcp-security — https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

@@ -1,0 +1,96 @@
+{
+  "runs": 3,
+  "all_checks_passed": true,
+  "unique_retrieval_cases": 14,
+  "search_ms": {
+    "n": 1260,
+    "p50": 0.706,
+    "p95": 1.053,
+    "min": 0.448,
+    "max": 3.489,
+    "mean": 0.738
+  },
+  "context_8k_ms": {
+    "n": 1260,
+    "p50": 1.426,
+    "p95": 2.524,
+    "min": 0.707,
+    "max": 27.828,
+    "mean": 1.567
+  },
+  "context_13k_ms": {
+    "n": 1260,
+    "p50": 1.425,
+    "p95": 2.47,
+    "min": 0.698,
+    "max": 6.176,
+    "mean": 1.569
+  },
+  "retrieval_hits": 1260,
+  "context_reference_8k": 900,
+  "context_reference_13k": 1170,
+  "mixed_operations": 960,
+  "mixed_errors": 0,
+  "mixed_service_ms": {
+    "n": 960,
+    "p50": 8.238,
+    "p95": 13.05,
+    "min": 0.395,
+    "max": 184.026,
+    "mean": 8.481
+  },
+  "mixed_including_queue_ms": {
+    "n": 960,
+    "p50": 174.041,
+    "p95": 331.955,
+    "min": 6.835,
+    "max": 356.702,
+    "mean": 176.528
+  },
+  "faults_passed": 69,
+  "forced_stops": 60,
+  "broad_5000_ms": {
+    "n": 90,
+    "p50": 13.206,
+    "p95": 16.014,
+    "min": 11.82,
+    "max": 17.603,
+    "mean": 13.592
+  },
+  "restore_ms": [
+    1060.189,
+    1082.974,
+    962.453
+  ],
+  "backup_ms": [
+    1323.918,
+    1468.723,
+    1266.549
+  ],
+  "schema": "bojart.simulation-summary.v1",
+  "reference_runtime_and_corpus_commit": "2025ac1c8f376341532fbd2df8a176b0b8fc3de4",
+  "source_verification": "48 runtime, corpus and index files verified against the reference revision; raw reports retain the corpus hashes.",
+  "benchmark_harness": "New tools/benchmark_jarvis.py and bojart_memory/benchmarks.py; exact hashes in each raw report",
+  "raw_reports": [
+    {
+      "path": "run-1.json",
+      "sha256": "ec7f325d605322f9db27284985a5fd1b5d5eed2dce46dfc00921eb43fdfa2371",
+      "bytes": 309095
+    },
+    {
+      "path": "run-2.json",
+      "sha256": "bd370bbee76f55f2139804c621be1e1193982bdebaf57c41dff4ed051f6f5479",
+      "bytes": 309125
+    },
+    {
+      "path": "run-3.json",
+      "sha256": "583f03dacd4ff438f87350ffff873821d78436c2ed92a2d56d4d3033b99e01b2",
+      "bytes": 309140
+    }
+  ],
+  "target_hardware_qualified": false,
+  "llm_inference": false,
+  "first_token_ms": null,
+  "independent_users": false,
+  "reference_index_sha256": "529ccf88f2cc130cd70094c8782308afe954605fd6c888f5178676388b8c2236"
+}

@@ -1,0 +1,64 @@
+{
+ "scale_from_nominal": 1.137,
+ "base_height_mm": 18.0,
+ "base_radius_mm": 49.6,
+ "base_centre_xy_mm": [
+  8.72,
+  -0.34
+ ],
+ "pegs": [
+  {
+   "side": "gauche",
+   "diameter_mm": 4.0,
+   "xy": [
+    25.02,
+    -52.25
+   ]
+  },
+  {
+   "side": "droite",
+   "diameter_mm": 5.0,
+   "xy": [
+    32.22,
+    54.14
+   ]
+  }
+ ],
+ "peg_length_mm": 6.0,
+ "hole_clearance_per_side_mm": 0.2,
+ "keying": "diamètres différents : impossible d’inverser les pieds",
+ "joint_plane": "appuis / dessus du socle (joint masqué par le contact des appuis)",
+ "base_recess_height_mm": 9.2,
+ "base_print_orientation": "retourné (dessus sur le plateau) : évidement sans pont ni support",
+ "hypotheses": "hypothèse à calibrer par une pièce test, pas un réglage de production",
+ "base_radius_note": "disque inscrit dans le dessus hexagonal autour du centre des appuis",
+ "base_style": {
+  "style": "basalte",
+  "version": "bojart.socle.basalte.v1",
+  "sides": 6,
+  "seed": 29,
+  "side_normals_deg": [
+   -5.4,
+   60.08,
+   120.23,
+   177.18,
+   235.55,
+   294.25
+  ],
+  "top_margin_beyond_feet_mm": 10.07,
+  "top_inradius_mm": 49.6,
+  "bevel_height_mm": 6.84,
+  "bevel_inset_mm": [
+   4.58,
+   5.45
+  ],
+  "bevel_slope_min": 1.256,
+  "column_joint": {
+   "depth_mm": 0.45,
+   "height_mm": 1.0,
+   "flank_from_vertical_deg": 42
+  },
+  "recess_wall_min_mm": 3.0,
+  "chamfer_slope": "biseau plus raide que 45° dans le sens d’impression"
+ }
+}

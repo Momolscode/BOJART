@@ -1,0 +1,314 @@
+{
+  "schema": "bojart.context.v1",
+  "project_id": "BOJART_JARVIS",
+  "version": "2026.10.28-m02",
+  "updated_at": "2026-10-28",
+  "facts": [
+    {
+      "key": "budget",
+      "label": "Budget tour",
+      "value": {
+        "min_eur": 3000,
+        "max_eur": 5000,
+        "reuse_first": true
+      },
+      "status": "user_constraint",
+      "source": "Conversation utilisateur : budget révisé et réemploi",
+      "scope": "Projet BOJ.ART ; pas une autorisation d’achat"
+    },
+    {
+      "key": "hardware_scope",
+      "label": "Parc et poste",
+      "value": {
+        "printers_target": [
+          7,
+          8
+        ],
+        "processes": [
+          "FDM",
+          "résine UV"
+        ],
+        "screens": 3
+      },
+      "status": "user_constraint",
+      "source": "Conversation utilisateur : atelier et trois écrans",
+      "scope": "Objectif ; modèles de machines inconnus"
+    },
+    {
+      "key": "local",
+      "label": "Fonctionnement local prioritaire",
+      "value": true,
+      "status": "user_constraint",
+      "source": "Conversation utilisateur : Jarvis local",
+      "scope": "Pas de repli automatique vers le cloud"
+    },
+    {
+      "key": "hands_off",
+      "label": "Installation sans terminal manuel pour le propriétaire",
+      "value": true,
+      "status": "user_constraint",
+      "source": "Conversation utilisateur : plug-and-play",
+      "scope": "Objectif ; installateur universel non livré"
+    },
+    {
+      "key": "independent",
+      "label": "Projet distinct",
+      "value": {
+        "exclude": [
+          "UNUM",
+          "M-Tek"
+        ]
+      },
+      "status": "user_constraint",
+      "source": "Conversation utilisateur : atelier indépendant",
+      "scope": "Ne pas importer le matériel ou les données de ces projets"
+    },
+    {
+      "key": "brand",
+      "label": "Signature artistique",
+      "value": {
+        "brand": "BOJ.ART",
+        "palette_interface": [
+          "charbon",
+          "ivoire",
+          "carmin"
+        ],
+        "authenticity": "fidélité à l’œuvre réelle",
+        "effects": "mouvements fluides ; spectaculaire sans perdre le personnage"
+      },
+      "status": "user_constraint",
+      "source": "Messages utilisateur et validation des storyboards",
+      "scope": "Les illustrations générées restent des concepts ; emblème original prioritaire"
+    },
+    {
+      "key": "social_accounts",
+      "label": "Comptes TikTok",
+      "value": [
+        "@boj.art",
+        "@boj.art3d"
+      ],
+      "status": "user_constraint",
+      "source": "Utilisateur : les deux comptes appartiennent à l’associé",
+      "scope": "Comptes identifiés ; métriques récentes non connectées"
+    },
+    {
+      "key": "process_preference",
+      "label": "Répartition souhaitée",
+      "value": {
+        "default_preference": "grandes figurines résine segmentée ; socles / petites pièces compatibles FDM",
+        "override": "selon usage, détail, résistance, finition et machines qualifiées"
+      },
+      "status": "user_constraint",
+      "source": "Utilisateur puis arbitrages du projet",
+      "scope": "Préférence, pas règle d’imprimabilité"
+    },
+    {
+      "key": "launch_geometry",
+      "label": "Générateur du pack précédent accessible",
+      "value": true,
+      "status": "verified_here",
+      "source": "BOJART_Pack_Lancement_20-10-2026.zip / 01_Demonstration/generer_socle.py",
+      "scope": "Script CadQuery inspecté ; modèle de démonstration",
+      "evidence": "preuves/inventaire_antecedents.json"
+    },
+    {
+      "key": "simulator_source",
+      "label": "Simulateur de commandes du pack accessible",
+      "value": true,
+      "status": "verified_here",
+      "source": "BOJART_Pack_Lancement_20-10-2026.zip / 03_Preuve_Et_Tests",
+      "scope": "Simulateur uniquement, aucun pilote matériel",
+      "evidence": "preuves/inventaire_antecedents.json"
+    },
+    {
+      "key": "character_lock",
+      "label": "Références et fiche V6 accessibles",
+      "value": true,
+      "status": "verified_here",
+      "source": "BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip",
+      "scope": "Fichiers de référence locaux ; qualité des nouvelles vidéos non réauditée dans cette livraison",
+      "evidence": "preuves/inventaire_antecedents.json"
+    },
+    {
+      "key": "websites",
+      "label": "Sites décrits comme publiés",
+      "value": {
+        "workshop": "https://bojart-atelier.yellowghost64.chatgpt.site",
+        "studio": "https://bojart-studio.yellowghost64.chatgpt.site"
+      },
+      "status": "historical_claim",
+      "source": "Messages et anciennes réponses outils de cette conversation",
+      "scope": "Sources complètes, bases et déploiement actuel non accessibles/réaudités ici"
+    },
+    {
+      "key": "local_pc",
+      "label": "Configuration de la tour",
+      "value": null,
+      "status": "unknown",
+      "source": "Utilisateur : atelier non installé, matériel à récupérer",
+      "scope": "OS, GPU, VRAM, RAM, stockage, audio et écrans à relever sur la tour"
+    },
+    {
+      "key": "printer_interfaces",
+      "label": "Interfaces et profils du parc",
+      "value": null,
+      "status": "unknown",
+      "source": "Aucun audit machine dans ce livrable",
+      "scope": "Modèles, firmware, matières, formats, lavage/cure et finition à qualifier"
+    },
+    {
+      "key": "voice",
+      "label": "Voix locale sur la tour",
+      "value": null,
+      "status": "unknown",
+      "source": "Aucun microphone ni moteur vocal raccordé ici",
+      "scope": "Ne pas afficher « prêt » ou « écoute »"
+    },
+    {
+      "key": "production_metrics",
+      "label": "Temps, défauts et coûts réels",
+      "value": null,
+      "status": "unknown",
+      "source": "Aucune campagne d’impression mesurée",
+      "scope": "Ne pas chiffrer des délais comme une garantie"
+    },
+    {
+      "key": "current_analytics",
+      "label": "Performances récentes des deux comptes",
+      "value": null,
+      "status": "unknown",
+      "source": "Pas de connexion TikTok Studio dans ce livrable",
+      "scope": "Les captures arrondies ne sont ni un suivi temps réel ni une audience unique"
+    },
+    {
+      "key": "mission01",
+      "label": "Première mission retenue",
+      "value": "Demande écrite bornée → paramètres relus → CAO → contrôles → fichiers et reçu → affichage",
+      "status": "verified_here",
+      "source": "Choix de réalisation dans cette itération",
+      "scope": "Prototype local isolé : génération et HTTP testés directement ; UI testée avec transport simulé. Pas de déploiement sur la tour.",
+      "evidence": "preuves/TESTS_MISSION01.txt"
+    },
+    {
+      "key": "decision_backend",
+      "label": "Décision interchangeable",
+      "value": {
+        "default": "règles déterministes",
+        "local_candidate": "Ollama /api/chat avec schéma",
+        "optional": "TypeSafe Jev via adaptateur distant désactivé"
+      },
+      "status": "proposed",
+      "source": "Documentation primaire revue le 28-10-2026",
+      "scope": "Aucun appel modèle ici ; aucun modèle préchoisi avant mesures du PC"
+    },
+    {
+      "key": "memory",
+      "label": "Mémoire commune",
+      "value": {
+        "layers": [
+          "contraintes approuvées",
+          "preuves versionnées",
+          "état opérationnel daté",
+          "expériences avec origine"
+        ],
+        "no_universal_chat_prompt": true
+      },
+      "status": "proposed",
+      "source": "Choix d’architecture",
+      "scope": "Ce document n’est pas un historique exhaustif de toutes les conversations"
+    },
+    {
+      "key": "approval_levels",
+      "label": "Niveaux d’autorisation",
+      "value": {
+        "offline_cad": "autorisé dans les limites de recette",
+        "machine_actions": "désactivées",
+        "paid_generation": "budget et action autorisés séparément",
+        "publish": "approbation et connecteur requis"
+      },
+      "status": "proposed",
+      "source": "Architecture BOJ.ART",
+      "scope": "Les anciennes autorisations de crédits ne sont pas illimitées"
+    },
+    {
+      "key": "m02_dialogue",
+      "label": "Dialogue français borné",
+      "value": {
+        "scope": "socle circulaire + consultation du dossier",
+        "units": [
+          "mm",
+          "cm",
+          "pouces"
+        ],
+        "numbers": "chiffres et nombres français bornés"
+      },
+      "status": "verified_here",
+      "source": "Code et tests de Mission 02",
+      "scope": "Pas de compréhension universelle ni de commande physique.",
+      "evidence": "app/dialogue.py"
+    },
+    {
+      "key": "m02_proposals",
+      "label": "Propositions avec contexte conservé",
+      "value": {
+        "ttl_seconds": 600,
+        "review_required": true,
+        "same_operation_on_retry": true
+      },
+      "status": "verified_here",
+      "source": "Tests de propositions M02",
+      "scope": "Géométrie uniquement ; aucune garantie machine.",
+      "evidence": "app/proposals.py"
+    },
+    {
+      "key": "m02_local_adapters",
+      "label": "Adaptateurs locaux codés",
+      "value": {
+        "ollama": "schéma JSON et contrôle déterministe",
+        "asr": "capture WAV et faster-whisper optionnel",
+        "enabled_by_default": false
+      },
+      "status": "verified_here",
+      "source": "Code et tests de contrat M02",
+      "scope": "Modèle et ASR réels non exécutés ici ; essais avec doublures.",
+      "evidence": "preuves/TESTS_M02.txt"
+    },
+    {
+      "key": "m02_interface",
+      "label": "Interface relue et testée",
+      "value": {
+        "desktop": true,
+        "mobile": true,
+        "real_http_via_test_bridge": true,
+        "direct_browser_localhost": false
+      },
+      "status": "verified_here",
+      "source": "Contrôles Chromium de Mission 02",
+      "scope": "Le navigateur direct et le matériel cible restent à qualifier.",
+      "evidence": "preuves/TESTS_INTERFACE_M02.json"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

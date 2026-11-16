@@ -1,0 +1,41 @@
+test_asset_path_escape_rejected (test_ops.AuditTests.test_asset_path_escape_rejected) ... ok
+test_brand_film_crossfades_are_explicit (test_ops.AuditTests.test_brand_film_crossfades_are_explicit) ... ok
+test_duplicates_preserve_both_paths (test_ops.AuditTests.test_duplicates_preserve_both_paths) ... ok
+test_every_tracked_extension_hashed (test_ops.AuditTests.test_every_tracked_extension_hashed) ... ok
+test_invalid_json_and_python_fail (test_ops.AuditTests.test_invalid_json_and_python_fail) ... ok
+test_legacy_seconds_duration_is_checked (test_ops.AuditTests.test_legacy_seconds_duration_is_checked) ... ok
+test_lfs_media_pointer_reported (test_ops.AuditTests.test_lfs_media_pointer_reported) ... ok
+test_missing_assets_are_warnings_not_fake_success (test_ops.AuditTests.test_missing_assets_are_warnings_not_fake_success) ... ok
+test_modified_asset_fails (test_ops.AuditTests.test_modified_asset_fails) ... ok
+test_nonfinite_json_rejected (test_ops.AuditTests.test_nonfinite_json_rejected) ... ok
+test_secrets_not_echoed (test_ops.AuditTests.test_secrets_not_echoed) ... ok
+test_symlink_outside_is_not_read (test_ops.AuditTests.test_symlink_outside_is_not_read) ... ok
+test_timeline_gap_fails (test_ops.AuditTests.test_timeline_gap_fails) ... ok
+test_ambiguous_provider_status_preserved (test_ops.LedgerTests.test_ambiguous_provider_status_preserved) ... ok
+test_backup_restores_receipt (test_ops.LedgerTests.test_backup_restores_receipt) ... ok
+test_bad_hash_rejected (test_ops.LedgerTests.test_bad_hash_rejected) ... ok
+test_blocked_status_is_terminal (test_ops.LedgerTests.test_blocked_status_is_terminal) ... ok
+test_budget_transaction_prevents_overspend (test_ops.LedgerTests.test_budget_transaction_prevents_overspend) ... ok
+test_claim_only_once_and_restart (test_ops.LedgerTests.test_claim_only_once_and_restart) ... ok
+test_credit_validation (test_ops.LedgerTests.test_credit_validation) ... ok
+test_download_and_artistic_approval_are_separate (test_ops.LedgerTests.test_download_and_artistic_approval_are_separate) ... ok
+test_duplicate_receipt_does_not_duplicate_event (test_ops.LedgerTests.test_duplicate_receipt_does_not_duplicate_event) ... ok
+test_existing_budget_cannot_be_reduced_below_reservation (test_ops.LedgerTests.test_existing_budget_cannot_be_reduced_below_reservation) ... ok
+test_failed_job_does_not_infer_refund (test_ops.LedgerTests.test_failed_job_does_not_infer_refund) ... ok
+test_idempotent_plan_and_different_id_duplicate_rejected (test_ops.LedgerTests.test_idempotent_plan_and_different_id_duplicate_rejected) ... ok
+test_input_bytes_required (test_ops.LedgerTests.test_input_bytes_required) ... ok
+test_no_receipt_before_claim (test_ops.LedgerTests.test_no_receipt_before_claim) ... ok
+test_out_of_order_status_does_not_downgrade (test_ops.LedgerTests.test_out_of_order_status_does_not_downgrade) ... ok
+test_parallel_claim_has_single_winner (test_ops.LedgerTests.test_parallel_claim_has_single_winner) ... ok
+test_receipt_identity_conflict (test_ops.LedgerTests.test_receipt_identity_conflict) ... ok
+test_unknown_never_auto_resubmits (test_ops.LedgerTests.test_unknown_never_auto_resubmits) ... ok
+test_complete_declared_review_accepted (test_ops.QualityTests.test_complete_declared_review_accepted) ... ok
+test_missing_gate_rejected (test_ops.QualityTests.test_missing_gate_rejected) ... ok
+test_null_reviewer_rejected (test_ops.QualityTests.test_null_reviewer_rejected) ... ok
+test_truthy_nonboolean_rejected (test_ops.QualityTests.test_truthy_nonboolean_rejected) ... ok
+test_unknown_gate_and_invalid_shot_rejected (test_ops.QualityTests.test_unknown_gate_and_invalid_shot_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.177s
+
+OK

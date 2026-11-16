@@ -1,0 +1,182 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "d6c105b4-646e-477e-ae4f-c9b23916cad1",
+  "prevId": "ed175144-ed50-4f1b-8f77-2a2fa6896c00",
+  "tables": {
+    "inquiries": {
+      "name": "inquiries",
+      "columns": {
+        "request_id": {
+          "name": "request_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "reference": {
+          "name": "reference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "payload_hash": {
+          "name": "payload_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "payload_json": {
+          "name": "payload_json",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "privacy_version": {
+          "name": "privacy_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'2026-10-19'"
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'new'"
+        },
+        "revision": {
+          "name": "revision",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 1
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "inquiries_reference_unique": {
+          "name": "inquiries_reference_unique",
+          "columns": [
+            "reference"
+          ],
+          "isUnique": true
+        },
+        "inquiries_created_idx": {
+          "name": "inquiries_created_idx",
+          "columns": [
+            "created_at",
+            "request_id"
+          ],
+          "isUnique": false
+        },
+        "inquiries_status_idx": {
+          "name": "inquiries_status_idx",
+          "columns": [
+            "status",
+            "created_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "inquiry_rate_limits": {
+      "name": "inquiry_rate_limits",
+      "columns": {
+        "key": {
+          "name": "key",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "count": {
+          "name": "count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "inquiry_rate_expiry_idx": {
+          "name": "inquiry_rate_expiry_idx",
+          "columns": [
+            "expires_at"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "inquiry_tombstones": {
+      "name": "inquiry_tombstones",
+      "columns": {
+        "request_id": {
+          "name": "request_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

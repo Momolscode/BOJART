@@ -1,0 +1,3637 @@
+{
+  "schema": "bojart.workflow-simulation.v1",
+  "created_at": "2026-11-02T00:05:09.014615+00:00",
+  "host": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "machine": "x86_64"
+  },
+  "scope": {
+    "transcripts": "synthetic post-ASR text",
+    "sqlite": "real temporary databases",
+    "server": "minimal fixture, no HTTP",
+    "display_receipts": "synthetic direct acknowledgements, no browser",
+    "audio_measured": false,
+    "llm_measured": false,
+    "jev_enabled": false,
+    "gpu_measured": false,
+    "printers": "fictitious, no network or device commands",
+    "vegeta_mesh_created": false,
+    "production_ready": false
+  },
+  "source_sha256": {
+    "tools/simulate_jarvis_workflows.py": "4c151eb2aba48f4b17698a91baded6235f72b8fb7125144a7c24ebf93e838bbe",
+    "jarvis/fixtures/fleet_1000mm_synthetic.json": "ee9fba1e29ea56981136797b29c9389c09c1ab93d259bed35ca87aa89c034e86",
+    "jarvis/apps/jarvis/app/control_tower.py": "f610deef425543abdbccb8a4a072b41799d324a2107c04ddbb1139f4098ed16d",
+    "jarvis/apps/jarvis/app/core.py": "ff79558a2a58f4321b54185783910f6dcfd874ec432d5ff49fe44611e8396eb1",
+    "jarvis/apps/jarvis/app/dialogue.py": "86deccfd1c8b3813709666bb31d7ddbaf93dd8d43b4faf6e8b6c4d4131ed3842",
+    "jarvis/apps/jarvis/app/display_contracts.py": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c",
+    "jarvis/apps/jarvis/app/fleet_simulation.py": "fe2d0f14ebca1c3ede4088d49683f01bc8dcdbdf80909b65e60c6cc5bf1b1eb1",
+    "jarvis/apps/jarvis/app/jarvis_runtime.py": "37c5ea4ace564634664eaa1f2ff08e40bdd3452eaad2996340b3da1767657e57",
+    "jarvis/apps/jarvis/app/jev_decider.py": "fe162bc6cd5f61576fec83e1bc1214ce9da1bec8c6ebc8d7a25b68ed0671136a",
+    "jarvis/apps/jarvis/app/tower_events.py": "b5977eee110051c8b9ad7a0534286c966c27fb093c84b4d40163848a312e6ae8"
+  },
+  "transcripts": {
+    "engine": "missing_dependency",
+    "unique_phrases": 9,
+    "trials": 270,
+    "submit": {
+      "count": 270,
+      "p50_ms": 11.462215,
+      "p95_ms": 19.411056,
+      "max_ms": 23.28094
+    },
+    "through_synthetic_receipt": {
+      "count": 270,
+      "p50_ms": 15.560918,
+      "p95_ms": 31.174914,
+      "max_ms": 45.539722
+    },
+    "samples": [
+      {
+        "repeat": 0,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.029555,
+        "synthetic_receipt_ms": 14.38469,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.709441,
+        "synthetic_receipt_ms": 15.640571,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.727739,
+        "synthetic_receipt_ms": 28.765431,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.074531,
+        "synthetic_receipt_ms": 14.585479,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.81715,
+        "synthetic_receipt_ms": 14.338099,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.525075,
+        "synthetic_receipt_ms": 14.091838,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.079609,
+        "synthetic_receipt_ms": 14.69191,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.255224,
+        "synthetic_receipt_ms": 14.886554,
+        "passed": true
+      },
+      {
+        "repeat": 0,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.357978,
+        "synthetic_receipt_ms": 28.246419,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.795823,
+        "synthetic_receipt_ms": 13.878468,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.105234,
+        "synthetic_receipt_ms": 14.330256,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.042675,
+        "synthetic_receipt_ms": 26.672395,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.262754,
+        "synthetic_receipt_ms": 14.688324,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.796553,
+        "synthetic_receipt_ms": 14.276986,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 12.876291,
+        "synthetic_receipt_ms": 16.672939,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.798957,
+        "synthetic_receipt_ms": 14.548455,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.683423,
+        "synthetic_receipt_ms": 14.507599,
+        "passed": true
+      },
+      {
+        "repeat": 1,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.219443,
+        "synthetic_receipt_ms": 29.501883,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.462215,
+        "synthetic_receipt_ms": 17.025304,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.44419,
+        "synthetic_receipt_ms": 16.234369,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.058873,
+        "synthetic_receipt_ms": 27.827751,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.461363,
+        "synthetic_receipt_ms": 15.016969,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.041641,
+        "synthetic_receipt_ms": 16.41021,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.426031,
+        "synthetic_receipt_ms": 15.036383,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.987921,
+        "synthetic_receipt_ms": 14.65858,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 12.545113,
+        "synthetic_receipt_ms": 16.93216,
+        "passed": true
+      },
+      {
+        "repeat": 2,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.981315,
+        "synthetic_receipt_ms": 28.388974,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.134001,
+        "synthetic_receipt_ms": 15.101656,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.882682,
+        "synthetic_receipt_ms": 14.508854,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.715938,
+        "synthetic_receipt_ms": 27.897617,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 12.186684,
+        "synthetic_receipt_ms": 16.568622,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.379277,
+        "synthetic_receipt_ms": 14.400332,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.329742,
+        "synthetic_receipt_ms": 13.731156,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.537363,
+        "synthetic_receipt_ms": 13.993069,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.730127,
+        "synthetic_receipt_ms": 15.301728,
+        "passed": true
+      },
+      {
+        "repeat": 3,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.011912,
+        "synthetic_receipt_ms": 28.091597,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 12.583485,
+        "synthetic_receipt_ms": 16.223603,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 9.902318,
+        "synthetic_receipt_ms": 13.019976,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.137028,
+        "synthetic_receipt_ms": 27.52737,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.854701,
+        "synthetic_receipt_ms": 14.055944,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.849353,
+        "synthetic_receipt_ms": 14.375936,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.043801,
+        "synthetic_receipt_ms": 13.340148,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 12.385948,
+        "synthetic_receipt_ms": 16.155996,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.203366,
+        "synthetic_receipt_ms": 14.707515,
+        "passed": true
+      },
+      {
+        "repeat": 4,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 16.959129,
+        "synthetic_receipt_ms": 26.600385,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.278915,
+        "synthetic_receipt_ms": 15.193531,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 13.223973,
+        "synthetic_receipt_ms": 17.124488,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.411056,
+        "synthetic_receipt_ms": 29.481998,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.678894,
+        "synthetic_receipt_ms": 16.632472,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 13.053528,
+        "synthetic_receipt_ms": 16.63293,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 12.991373,
+        "synthetic_receipt_ms": 18.150645,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 17.631306,
+        "synthetic_receipt_ms": 23.657612,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 15.894273,
+        "synthetic_receipt_ms": 19.798653,
+        "passed": true
+      },
+      {
+        "repeat": 5,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.759481,
+        "synthetic_receipt_ms": 30.328071,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.805805,
+        "synthetic_receipt_ms": 15.359007,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.895968,
+        "synthetic_receipt_ms": 15.560918,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.661968,
+        "synthetic_receipt_ms": 29.695829,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.902242,
+        "synthetic_receipt_ms": 14.584558,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.397643,
+        "synthetic_receipt_ms": 13.972038,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 15.429035,
+        "synthetic_receipt_ms": 18.901556,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 13.219596,
+        "synthetic_receipt_ms": 17.243206,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 13.029531,
+        "synthetic_receipt_ms": 16.837197,
+        "passed": true
+      },
+      {
+        "repeat": 6,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 16.884327,
+        "synthetic_receipt_ms": 27.446808,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 14.254097,
+        "synthetic_receipt_ms": 18.43589,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.538249,
+        "synthetic_receipt_ms": 15.137841,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.626397,
+        "synthetic_receipt_ms": 29.58914,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.739572,
+        "synthetic_receipt_ms": 14.608069,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 13.034144,
+        "synthetic_receipt_ms": 16.419204,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.979462,
+        "synthetic_receipt_ms": 15.569229,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.71435,
+        "synthetic_receipt_ms": 14.547533,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.862537,
+        "synthetic_receipt_ms": 16.548062,
+        "passed": true
+      },
+      {
+        "repeat": 7,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.836688,
+        "synthetic_receipt_ms": 27.692067,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 13.314559,
+        "synthetic_receipt_ms": 17.502265,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.691088,
+        "synthetic_receipt_ms": 16.985599,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.711371,
+        "synthetic_receipt_ms": 27.787892,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.148859,
+        "synthetic_receipt_ms": 14.085278,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 9.836591,
+        "synthetic_receipt_ms": 13.524306,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.737744,
+        "synthetic_receipt_ms": 13.99384,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.810628,
+        "synthetic_receipt_ms": 16.34765,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.676133,
+        "synthetic_receipt_ms": 13.986751,
+        "passed": true
+      },
+      {
+        "repeat": 8,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.797825,
+        "synthetic_receipt_ms": 27.667625,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.377327,
+        "synthetic_receipt_ms": 14.670829,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.58173,
+        "synthetic_receipt_ms": 14.247392,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.655705,
+        "synthetic_receipt_ms": 31.702678,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.079418,
+        "synthetic_receipt_ms": 14.576747,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 9.731623,
+        "synthetic_receipt_ms": 12.963862,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.644905,
+        "synthetic_receipt_ms": 14.643177,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 12.220144,
+        "synthetic_receipt_ms": 15.610362,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.617348,
+        "synthetic_receipt_ms": 15.181176,
+        "passed": true
+      },
+      {
+        "repeat": 9,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.5515,
+        "synthetic_receipt_ms": 27.379678,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.27581,
+        "synthetic_receipt_ms": 13.46835,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.517844,
+        "synthetic_receipt_ms": 14.049113,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.349782,
+        "synthetic_receipt_ms": 28.458339,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.365003,
+        "synthetic_receipt_ms": 15.323455,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.814561,
+        "synthetic_receipt_ms": 14.364268,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.862827,
+        "synthetic_receipt_ms": 17.007336,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 12.266043,
+        "synthetic_receipt_ms": 15.601639,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.420458,
+        "synthetic_receipt_ms": 13.796644,
+        "passed": true
+      },
+      {
+        "repeat": 10,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 16.293829,
+        "synthetic_receipt_ms": 26.476499,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.832872,
+        "synthetic_receipt_ms": 15.731674,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.424,
+        "synthetic_receipt_ms": 15.999426,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 20.185521,
+        "synthetic_receipt_ms": 32.144692,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 12.89971,
+        "synthetic_receipt_ms": 16.556715,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.658633,
+        "synthetic_receipt_ms": 15.966527,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.753218,
+        "synthetic_receipt_ms": 14.573522,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.262845,
+        "synthetic_receipt_ms": 14.597288,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.18687,
+        "synthetic_receipt_ms": 14.920113,
+        "passed": true
+      },
+      {
+        "repeat": 11,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.091242,
+        "synthetic_receipt_ms": 28.451159,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.259499,
+        "synthetic_receipt_ms": 15.032422,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.321182,
+        "synthetic_receipt_ms": 14.820324,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.413055,
+        "synthetic_receipt_ms": 29.134435,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.824946,
+        "synthetic_receipt_ms": 14.181514,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.612816,
+        "synthetic_receipt_ms": 13.86082,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.586127,
+        "synthetic_receipt_ms": 14.431909,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.750615,
+        "synthetic_receipt_ms": 14.1258,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.696893,
+        "synthetic_receipt_ms": 15.430711,
+        "passed": true
+      },
+      {
+        "repeat": 12,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.730358,
+        "synthetic_receipt_ms": 28.65206,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.274317,
+        "synthetic_receipt_ms": 14.948911,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.493267,
+        "synthetic_receipt_ms": 13.844956,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.670453,
+        "synthetic_receipt_ms": 29.100404,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.803093,
+        "synthetic_receipt_ms": 16.289408,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.680742,
+        "synthetic_receipt_ms": 15.487516,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.847816,
+        "synthetic_receipt_ms": 17.578776,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.920109,
+        "synthetic_receipt_ms": 15.355604,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.550503,
+        "synthetic_receipt_ms": 13.918567,
+        "passed": true
+      },
+      {
+        "repeat": 13,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.240172,
+        "synthetic_receipt_ms": 27.859479,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.554905,
+        "synthetic_receipt_ms": 14.185273,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.60803,
+        "synthetic_receipt_ms": 14.22544,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.744142,
+        "synthetic_receipt_ms": 28.025327,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.463903,
+        "synthetic_receipt_ms": 13.578747,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.129644,
+        "synthetic_receipt_ms": 14.678249,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.759581,
+        "synthetic_receipt_ms": 16.398781,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 14.10541,
+        "synthetic_receipt_ms": 18.2758,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 12.148425,
+        "synthetic_receipt_ms": 16.302481,
+        "passed": true
+      },
+      {
+        "repeat": 14,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 20.760245,
+        "synthetic_receipt_ms": 32.061587,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 12.21153,
+        "synthetic_receipt_ms": 16.61383,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.314336,
+        "synthetic_receipt_ms": 16.264556,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 20.705661,
+        "synthetic_receipt_ms": 33.884007,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 13.256071,
+        "synthetic_receipt_ms": 16.956635,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.411833,
+        "synthetic_receipt_ms": 15.163514,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.032495,
+        "synthetic_receipt_ms": 13.41106,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.208452,
+        "synthetic_receipt_ms": 14.539751,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.322531,
+        "synthetic_receipt_ms": 14.788186,
+        "passed": true
+      },
+      {
+        "repeat": 15,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.614879,
+        "synthetic_receipt_ms": 29.09023,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.320491,
+        "synthetic_receipt_ms": 14.810608,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.650649,
+        "synthetic_receipt_ms": 14.965161,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.688944,
+        "synthetic_receipt_ms": 31.149795,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.869183,
+        "synthetic_receipt_ms": 14.585211,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.619767,
+        "synthetic_receipt_ms": 14.46644,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.933022,
+        "synthetic_receipt_ms": 15.66982,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.35903,
+        "synthetic_receipt_ms": 14.685441,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 9.864311,
+        "synthetic_receipt_ms": 13.539707,
+        "passed": true
+      },
+      {
+        "repeat": 16,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 16.524936,
+        "synthetic_receipt_ms": 26.152502,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.799518,
+        "synthetic_receipt_ms": 14.603447,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.695361,
+        "synthetic_receipt_ms": 13.837926,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.742608,
+        "synthetic_receipt_ms": 27.79337,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 9.927186,
+        "synthetic_receipt_ms": 14.787254,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.041829,
+        "synthetic_receipt_ms": 13.393798,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.102409,
+        "synthetic_receipt_ms": 13.689743,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.336746,
+        "synthetic_receipt_ms": 14.853564,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.377733,
+        "synthetic_receipt_ms": 13.517454,
+        "passed": true
+      },
+      {
+        "repeat": 17,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.445944,
+        "synthetic_receipt_ms": 28.805096,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 13.506042,
+        "synthetic_receipt_ms": 17.031392,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.658114,
+        "synthetic_receipt_ms": 14.084296,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.479713,
+        "synthetic_receipt_ms": 27.725087,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.804274,
+        "synthetic_receipt_ms": 14.638429,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.704596,
+        "synthetic_receipt_ms": 17.620375,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.10089,
+        "synthetic_receipt_ms": 14.595264,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.33579,
+        "synthetic_receipt_ms": 13.76735,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.138474,
+        "synthetic_receipt_ms": 13.701411,
+        "passed": true
+      },
+      {
+        "repeat": 18,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.847421,
+        "synthetic_receipt_ms": 30.421621,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.989242,
+        "synthetic_receipt_ms": 14.469305,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.7876,
+        "synthetic_receipt_ms": 14.187511,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.074637,
+        "synthetic_receipt_ms": 28.448775,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.058697,
+        "synthetic_receipt_ms": 14.362806,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.848302,
+        "synthetic_receipt_ms": 14.383888,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.398888,
+        "synthetic_receipt_ms": 15.278011,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 12.495875,
+        "synthetic_receipt_ms": 16.777237,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.381729,
+        "synthetic_receipt_ms": 13.841701,
+        "passed": true
+      },
+      {
+        "repeat": 19,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 16.494691,
+        "synthetic_receipt_ms": 27.323463,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 12.987127,
+        "synthetic_receipt_ms": 16.518577,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.364583,
+        "synthetic_receipt_ms": 14.164437,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.6434,
+        "synthetic_receipt_ms": 30.556909,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.865647,
+        "synthetic_receipt_ms": 14.446382,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.180791,
+        "synthetic_receipt_ms": 15.653556,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.982873,
+        "synthetic_receipt_ms": 14.500232,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.969607,
+        "synthetic_receipt_ms": 15.607898,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 12.193514,
+        "synthetic_receipt_ms": 16.897086,
+        "passed": true
+      },
+      {
+        "repeat": 20,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 23.038261,
+        "synthetic_receipt_ms": 36.868044,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.942042,
+        "synthetic_receipt_ms": 14.409816,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 9.934237,
+        "synthetic_receipt_ms": 13.307219,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.969836,
+        "synthetic_receipt_ms": 32.11727,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 12.617771,
+        "synthetic_receipt_ms": 17.132469,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 13.554124,
+        "synthetic_receipt_ms": 17.181398,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.389062,
+        "synthetic_receipt_ms": 13.985569,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.303646,
+        "synthetic_receipt_ms": 14.991841,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.481714,
+        "synthetic_receipt_ms": 17.120292,
+        "passed": true
+      },
+      {
+        "repeat": 21,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.713143,
+        "synthetic_receipt_ms": 29.186864,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.164026,
+        "synthetic_receipt_ms": 15.250501,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.108749,
+        "synthetic_receipt_ms": 13.389401,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.431394,
+        "synthetic_receipt_ms": 32.542485,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.950322,
+        "synthetic_receipt_ms": 16.370919,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.220221,
+        "synthetic_receipt_ms": 15.285694,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.081801,
+        "synthetic_receipt_ms": 15.258311,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 13.493223,
+        "synthetic_receipt_ms": 17.018083,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.008209,
+        "synthetic_receipt_ms": 13.945949,
+        "passed": true
+      },
+      {
+        "repeat": 22,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 16.164884,
+        "synthetic_receipt_ms": 45.539722,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.435884,
+        "synthetic_receipt_ms": 15.287876,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.899561,
+        "synthetic_receipt_ms": 16.78289,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.501671,
+        "synthetic_receipt_ms": 31.462445,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.35875,
+        "synthetic_receipt_ms": 15.967008,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.23126,
+        "synthetic_receipt_ms": 16.9802,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.707323,
+        "synthetic_receipt_ms": 16.037774,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 12.46361,
+        "synthetic_receipt_ms": 16.769113,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 14.181739,
+        "synthetic_receipt_ms": 19.087155,
+        "passed": true
+      },
+      {
+        "repeat": 23,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 20.611535,
+        "synthetic_receipt_ms": 31.547292,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 12.020064,
+        "synthetic_receipt_ms": 16.485723,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.467251,
+        "synthetic_receipt_ms": 15.491802,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.620735,
+        "synthetic_receipt_ms": 28.833955,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.244807,
+        "synthetic_receipt_ms": 15.128436,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.664499,
+        "synthetic_receipt_ms": 15.751775,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.684649,
+        "synthetic_receipt_ms": 16.694441,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 12.05801,
+        "synthetic_receipt_ms": 15.950613,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.223185,
+        "synthetic_receipt_ms": 14.972372,
+        "passed": true
+      },
+      {
+        "repeat": 24,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 19.233759,
+        "synthetic_receipt_ms": 31.493583,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.803794,
+        "synthetic_receipt_ms": 15.593901,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.2634,
+        "synthetic_receipt_ms": 16.205481,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 23.28094,
+        "synthetic_receipt_ms": 37.503324,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 17.842112,
+        "synthetic_receipt_ms": 21.550718,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.012427,
+        "synthetic_receipt_ms": 15.152422,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 12.912967,
+        "synthetic_receipt_ms": 16.971358,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.615711,
+        "synthetic_receipt_ms": 14.403716,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.781811,
+        "synthetic_receipt_ms": 14.648365,
+        "passed": true
+      },
+      {
+        "repeat": 25,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.587494,
+        "synthetic_receipt_ms": 28.300522,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.463031,
+        "synthetic_receipt_ms": 14.026309,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.948652,
+        "synthetic_receipt_ms": 14.847174,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.337662,
+        "synthetic_receipt_ms": 29.796993,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.272248,
+        "synthetic_receipt_ms": 14.91818,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.800252,
+        "synthetic_receipt_ms": 15.671162,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.876404,
+        "synthetic_receipt_ms": 14.759883,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.201932,
+        "synthetic_receipt_ms": 15.147495,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.543763,
+        "synthetic_receipt_ms": 14.368795,
+        "passed": true
+      },
+      {
+        "repeat": 26,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.336681,
+        "synthetic_receipt_ms": 30.166142,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.481588,
+        "synthetic_receipt_ms": 15.683186,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.163634,
+        "synthetic_receipt_ms": 16.186472,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 16.933821,
+        "synthetic_receipt_ms": 28.197221,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 13.974887,
+        "synthetic_receipt_ms": 18.616781,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.156233,
+        "synthetic_receipt_ms": 16.420264,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 12.338692,
+        "synthetic_receipt_ms": 16.458746,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.115452,
+        "synthetic_receipt_ms": 15.081185,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.168513,
+        "synthetic_receipt_ms": 14.860154,
+        "passed": true
+      },
+      {
+        "repeat": 27,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.467277,
+        "synthetic_receipt_ms": 31.174914,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.295023,
+        "synthetic_receipt_ms": 14.842286,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 10.387388,
+        "synthetic_receipt_ms": 13.916283,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.252865,
+        "synthetic_receipt_ms": 30.05489,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.2597,
+        "synthetic_receipt_ms": 14.989568,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 11.118859,
+        "synthetic_receipt_ms": 15.000866,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 10.441739,
+        "synthetic_receipt_ms": 14.362134,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 10.968912,
+        "synthetic_receipt_ms": 14.908526,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 10.493729,
+        "synthetic_receipt_ms": 14.360012,
+        "passed": true
+      },
+      {
+        "repeat": 28,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 17.925327,
+        "synthetic_receipt_ms": 29.854574,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Affiche le planning à gauche",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 11.287711,
+        "synthetic_receipt_ms": 15.267194,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Montre les dossiers au centre",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.491051,
+        "synthetic_receipt_ms": 16.569823,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Ouvre la tour de contrôle",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.370522,
+        "synthetic_receipt_ms": 29.998004,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Jarvis, affiche le dashboard atelier !",
+        "choice": "planning",
+        "views": 1,
+        "submit_ms": 10.286596,
+        "synthetic_receipt_ms": 14.251843,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Affiche le dashboard dossiers",
+        "choice": "workspace",
+        "views": 1,
+        "submit_ms": 12.852134,
+        "synthetic_receipt_ms": 17.1126,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Affiche le dashboard Studio",
+        "choice": "studio",
+        "views": 1,
+        "submit_ms": 11.415494,
+        "synthetic_receipt_ms": 15.269799,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Affiche le dashboard contenus",
+        "choice": "growth",
+        "views": 1,
+        "submit_ms": 11.216996,
+        "synthetic_receipt_ms": 15.221838,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Affiche le dashboard conception",
+        "choice": "cad",
+        "views": 1,
+        "submit_ms": 11.347131,
+        "synthetic_receipt_ms": 15.105792,
+        "passed": true
+      },
+      {
+        "repeat": 29,
+        "text": "Affiche les trois dashboards",
+        "choice": "tower",
+        "views": 3,
+        "submit_ms": 18.03357,
+        "synthetic_receipt_ms": 32.454864,
+        "passed": true
+      }
+    ],
+    "traces": [
+      {
+        "transcript": "Affiche le planning à gauche",
+        "decision": {
+          "called": false,
+          "choice": "planning",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+        "roles": [
+          "atelier"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Montre les dossiers au centre",
+        "decision": {
+          "called": false,
+          "choice": "workspace",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+        "roles": [
+          "pilotage"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Ouvre la tour de contrôle",
+        "decision": {
+          "called": false,
+          "choice": "tower",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Composition envoyée aux trois vues. En attente des reçus d’affichage.",
+        "roles": [
+          "atelier",
+          "pilotage",
+          "creation"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Jarvis, affiche le dashboard atelier !",
+        "decision": {
+          "called": false,
+          "choice": "planning",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+        "roles": [
+          "atelier"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Affiche le dashboard dossiers",
+        "decision": {
+          "called": false,
+          "choice": "workspace",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+        "roles": [
+          "pilotage"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Affiche le dashboard Studio",
+        "decision": {
+          "called": false,
+          "choice": "studio",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+        "roles": [
+          "creation"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Affiche le dashboard contenus",
+        "decision": {
+          "called": false,
+          "choice": "growth",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+        "roles": [
+          "creation"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Affiche le dashboard conception",
+        "decision": {
+          "called": false,
+          "choice": "cad",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Commande envoyée à la vue. En attente des reçus d’affichage.",
+        "roles": [
+          "pilotage"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      },
+      {
+        "transcript": "Affiche les trois dashboards",
+        "decision": {
+          "called": false,
+          "choice": "tower",
+          "reason": "known_command",
+          "source": "local"
+        },
+        "status": "QUEUED",
+        "message": "Composition envoyée aux trois vues. En attente des reçus d’affichage.",
+        "roles": [
+          "atelier",
+          "pilotage",
+          "creation"
+        ],
+        "receipt": "synthetic_rendered",
+        "physical_display_verified": false
+      }
+    ]
+  },
+  "guards": [
+    {
+      "case": "Affiche un des dashboards",
+      "passed": true,
+      "detail": {
+        "status": "CLARIFY",
+        "reply": "Quel tableau de bord : atelier (planning démonstratif), dossiers, Studio, contenus, conception ou base métier ?",
+        "dispatched": 0
+      }
+    },
+    {
+      "case": "Affiche le modèle à droite",
+      "passed": true,
+      "detail": {
+        "status": "CLARIFY",
+        "reply": "Sélectionnez le modèle à afficher dans ce dossier.",
+        "dispatched": 0
+      }
+    },
+    {
+      "case": "Prépare un Végéta 3D d’un mètre de haut à répartir sur toutes les imprimantes",
+      "passed": true,
+      "detail": {
+        "status": "CLARIFY",
+        "reply": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+        "dispatched": 0
+      }
+    },
+    {
+      "case": "Lance toutes les impressions",
+      "passed": true,
+      "detail": {
+        "status": "CLARIFY",
+        "reply": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+        "dispatched": 0
+      }
+    },
+    {
+      "case": "N’affiche pas le dashboard Studio",
+      "passed": true,
+      "detail": {
+        "status": "CLARIFY",
+        "reply": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+        "dispatched": 0
+      }
+    },
+    {
+      "case": "Affiche le dashboard Studio et imprime tout",
+      "passed": true,
+      "detail": {
+        "status": "CLARIFY",
+        "reply": "Commande non reconnue avec certitude. Choisissez un des ordres proposés.",
+        "dispatched": 0
+      }
+    },
+    {
+      "case": "revision_changed",
+      "passed": true,
+      "detail": "STALE"
+    },
+    {
+      "case": "context_changed_after_listening",
+      "passed": true,
+      "detail": "STALE"
+    },
+    {
+      "case": "lost_response_then_restart_same_id",
+      "passed": true,
+      "detail": {
+        "attempts": 3,
+        "commands": 1
+      }
+    },
+    {
+      "case": "same_id_different_request",
+      "passed": true,
+      "detail": "rejected"
+    },
+    {
+      "case": "partial_scene_delivery",
+      "passed": true,
+      "detail": {
+        "first": "INTERRUPTED",
+        "resumed": "QUEUED",
+        "commands": 3
+      }
+    },
+    {
+      "case": "one_view_absent_then_returns",
+      "passed": true,
+      "detail": {
+        "before": "2/3",
+        "after": "3/3",
+        "duplicate_commands": 0
+      }
+    },
+    {
+      "case": "failed_view",
+      "passed": true,
+      "detail": "failed, never complete"
+    },
+    {
+      "case": "cancel_pending",
+      "passed": true,
+      "detail": "cancelled before receipt"
+    },
+    {
+      "case": "other_project_screen",
+      "passed": true,
+      "detail": "isolated"
+    },
+    {
+      "case": "context_changed_before_ack",
+      "passed": true,
+      "detail": "stale receipt rejected"
+    }
+  ],
+  "fleet": {
+    "planning_compute_ms": 0.530888,
+    "intake": {
+      "status": "NEEDS_INPUT",
+      "subject": "Végéta",
+      "target_height_mm": 1000,
+      "can_print": false,
+      "mesh_created": false,
+      "spoken_command_connected": false,
+      "missing": [
+        {
+          "id": "mesh",
+          "detail": "Fichier 3D source identifié, unités et hauteur mesurées ; aucune géométrie de personnage livrée."
+        },
+        {
+          "id": "fleet",
+          "detail": "Inventaire réel : volumes utiles, procédé, matière, profils et disponibilités."
+        },
+        {
+          "id": "parts",
+          "detail": "Découpe, orientations, assemblages et supports vérifiés à la hauteur cible."
+        },
+        {
+          "id": "slicer",
+          "detail": "Durée et matière estimées par le slicer pour chaque couple pièce / profil machine."
+        }
+      ],
+      "reply": "Je prépare le dossier Végéta, hauteur 1000 mm. Il me manque le modèle 3D et les profils réels des imprimantes pour découper et chiffrer le travail.",
+      "reply_kind": "template_for_simulation_not_live_voice"
+    },
+    "baseline": {
+      "schema": "bojart.fleet-simulation.v1",
+      "status": "SIMULATION_ONLY",
+      "input_sha256": "8a2af1c91a541490ad0ca67ce2ec43b94d3e1a5cb6cbb0b742bcb5b663ebee33",
+      "data_kind": "synthetic_scheduling_fixture",
+      "target_height_mm": 1000,
+      "strategy": "round_robin",
+      "can_print": false,
+      "mesh_created": false,
+      "geometry_checked": false,
+      "physical_commands": false,
+      "jobs": [
+        {
+          "part_id": "SIM-PART-01",
+          "printer_id": "SIM-FDM-01",
+          "start_min": 0.0,
+          "finish_min": 720.0,
+          "assumed_duration_min": 720
+        },
+        {
+          "part_id": "SIM-PART-02",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 0.0,
+          "finish_min": 759.0,
+          "assumed_duration_min": 759.0
+        },
+        {
+          "part_id": "SIM-PART-03",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 0.0,
+          "finish_min": 594.0,
+          "assumed_duration_min": 594.0
+        },
+        {
+          "part_id": "SIM-PART-04",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 0.0,
+          "finish_min": 756.0,
+          "assumed_duration_min": 756.0
+        },
+        {
+          "part_id": "SIM-PART-05",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 0.0,
+          "finish_min": 630.0,
+          "assumed_duration_min": 630.0
+        },
+        {
+          "part_id": "SIM-PART-06",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 0.0,
+          "finish_min": 541.5,
+          "assumed_duration_min": 541.5
+        },
+        {
+          "part_id": "SIM-PART-07",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 120.0,
+          "finish_min": 741.0,
+          "assumed_duration_min": 621.0
+        },
+        {
+          "part_id": "SIM-PART-08",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 120.0,
+          "finish_min": 553.5,
+          "assumed_duration_min": 433.5
+        },
+        {
+          "part_id": "SIM-PART-09",
+          "printer_id": "SIM-FDM-01",
+          "start_min": 735.0,
+          "finish_min": 1215.0,
+          "assumed_duration_min": 480
+        },
+        {
+          "part_id": "SIM-PART-10",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 774.0,
+          "finish_min": 1269.0,
+          "assumed_duration_min": 495.0
+        },
+        {
+          "part_id": "SIM-PART-11",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 609.0,
+          "finish_min": 987.0,
+          "assumed_duration_min": 378.0
+        },
+        {
+          "part_id": "SIM-PART-12",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 771.0,
+          "finish_min": 1239.0,
+          "assumed_duration_min": 468.0
+        },
+        {
+          "part_id": "SIM-PART-13",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 645.0,
+          "finish_min": 1023.0,
+          "assumed_duration_min": 378.0
+        },
+        {
+          "part_id": "SIM-PART-14",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 556.5,
+          "finish_min": 870.0,
+          "assumed_duration_min": 313.5
+        },
+        {
+          "part_id": "SIM-PART-15",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 756.0,
+          "finish_min": 1101.0,
+          "assumed_duration_min": 345.0
+        },
+        {
+          "part_id": "SIM-PART-16",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 568.5,
+          "finish_min": 798.0,
+          "assumed_duration_min": 229.5
+        },
+        {
+          "part_id": "SIM-PART-17",
+          "printer_id": "SIM-FDM-01",
+          "start_min": 1230.0,
+          "finish_min": 1470.0,
+          "assumed_duration_min": 240
+        },
+        {
+          "part_id": "SIM-PART-18",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 1284.0,
+          "finish_min": 1515.0,
+          "assumed_duration_min": 231.0
+        },
+        {
+          "part_id": "SIM-PART-19",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 1002.0,
+          "finish_min": 1164.0,
+          "assumed_duration_min": 162.0
+        },
+        {
+          "part_id": "SIM-PART-20",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 1254.0,
+          "finish_min": 1434.0,
+          "assumed_duration_min": 180.0
+        },
+        {
+          "part_id": "SIM-PART-21",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 1038.0,
+          "finish_min": 1164.0,
+          "assumed_duration_min": 126.0
+        },
+        {
+          "part_id": "SIM-PART-22",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 885.0,
+          "finish_min": 970.5,
+          "assumed_duration_min": 85.5
+        },
+        {
+          "part_id": "SIM-PART-23",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 1116.0,
+          "finish_min": 1185.0,
+          "assumed_duration_min": 69.0
+        },
+        {
+          "part_id": "SIM-PART-24",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 813.0,
+          "finish_min": 851.25,
+          "assumed_duration_min": 38.25
+        }
+      ],
+      "completed_excluded": [],
+      "assumptions": [
+        "synthetic boxes and per-printer durations",
+        "one part per job",
+        "fixed orientation, supports and brim must be included in box",
+        "no human calendar, assembly, post-processing or failure forecast"
+      ],
+      "excluded_candidates": {
+        "SIM-PART-01": {},
+        "SIM-PART-02": {},
+        "SIM-PART-03": {},
+        "SIM-PART-04": {},
+        "SIM-PART-05": {},
+        "SIM-PART-06": {},
+        "SIM-PART-07": {},
+        "SIM-PART-08": {},
+        "SIM-PART-09": {},
+        "SIM-PART-10": {},
+        "SIM-PART-11": {},
+        "SIM-PART-12": {},
+        "SIM-PART-13": {},
+        "SIM-PART-14": {},
+        "SIM-PART-15": {},
+        "SIM-PART-16": {},
+        "SIM-PART-17": {},
+        "SIM-PART-18": {},
+        "SIM-PART-19": {},
+        "SIM-PART-20": {},
+        "SIM-PART-21": {},
+        "SIM-PART-22": {},
+        "SIM-PART-23": {},
+        "SIM-PART-24": {}
+      },
+      "makespan_min": 1515.0,
+      "optimistic_lower_bound_min": 957.84375,
+      "gap_to_lower_bound_percent": 58.16775961632573,
+      "printers_used": 8,
+      "total_assumed_print_minutes": 9273.75,
+      "optimality_proven": false
+    },
+    "balanced": {
+      "schema": "bojart.fleet-simulation.v1",
+      "status": "SIMULATION_ONLY",
+      "input_sha256": "8a2af1c91a541490ad0ca67ce2ec43b94d3e1a5cb6cbb0b742bcb5b663ebee33",
+      "data_kind": "synthetic_scheduling_fixture",
+      "target_height_mm": 1000,
+      "strategy": "earliest_finish",
+      "can_print": false,
+      "mesh_created": false,
+      "geometry_checked": false,
+      "physical_commands": false,
+      "jobs": [
+        {
+          "part_id": "SIM-PART-01",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 0.0,
+          "finish_min": 648.0,
+          "assumed_duration_min": 648.0
+        },
+        {
+          "part_id": "SIM-PART-02",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 0.0,
+          "finish_min": 655.5,
+          "assumed_duration_min": 655.5
+        },
+        {
+          "part_id": "SIM-PART-03",
+          "printer_id": "SIM-FDM-01",
+          "start_min": 0.0,
+          "finish_min": 660.0,
+          "assumed_duration_min": 660
+        },
+        {
+          "part_id": "SIM-PART-04",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 120.0,
+          "finish_min": 655.5,
+          "assumed_duration_min": 535.5
+        },
+        {
+          "part_id": "SIM-PART-05",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 0.0,
+          "finish_min": 630.0,
+          "assumed_duration_min": 630.0
+        },
+        {
+          "part_id": "SIM-PART-06",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 0.0,
+          "finish_min": 627.0,
+          "assumed_duration_min": 627.0
+        },
+        {
+          "part_id": "SIM-PART-07",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 0.0,
+          "finish_min": 648.0,
+          "assumed_duration_min": 648.0
+        },
+        {
+          "part_id": "SIM-PART-08",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 120.0,
+          "finish_min": 706.5,
+          "assumed_duration_min": 586.5
+        },
+        {
+          "part_id": "SIM-PART-09",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 670.5,
+          "finish_min": 1078.5,
+          "assumed_duration_min": 408.0
+        },
+        {
+          "part_id": "SIM-PART-10",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 663.0,
+          "finish_min": 1068.0,
+          "assumed_duration_min": 405.0
+        },
+        {
+          "part_id": "SIM-PART-11",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 670.5,
+          "finish_min": 1069.5,
+          "assumed_duration_min": 399.0
+        },
+        {
+          "part_id": "SIM-PART-12",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 645.0,
+          "finish_min": 1054.5,
+          "assumed_duration_min": 409.5
+        },
+        {
+          "part_id": "SIM-PART-13",
+          "printer_id": "SIM-FDM-01",
+          "start_min": 675.0,
+          "finish_min": 1035.0,
+          "assumed_duration_min": 360
+        },
+        {
+          "part_id": "SIM-PART-14",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 642.0,
+          "finish_min": 1005.0,
+          "assumed_duration_min": 363.0
+        },
+        {
+          "part_id": "SIM-PART-15",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 663.0,
+          "finish_min": 1023.0,
+          "assumed_duration_min": 360.0
+        },
+        {
+          "part_id": "SIM-PART-16",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 721.5,
+          "finish_min": 1032.0,
+          "assumed_duration_min": 310.5
+        },
+        {
+          "part_id": "SIM-PART-17",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 1020.0,
+          "finish_min": 1284.0,
+          "assumed_duration_min": 264.0
+        },
+        {
+          "part_id": "SIM-PART-18",
+          "printer_id": "SIM-FDM-01",
+          "start_min": 1050.0,
+          "finish_min": 1260.0,
+          "assumed_duration_min": 210
+        },
+        {
+          "part_id": "SIM-PART-19",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 1083.0,
+          "finish_min": 1245.0,
+          "assumed_duration_min": 162.0
+        },
+        {
+          "part_id": "SIM-PART-20",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 1038.0,
+          "finish_min": 1218.0,
+          "assumed_duration_min": 180.0
+        },
+        {
+          "part_id": "SIM-PART-21",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 1047.0,
+          "finish_min": 1185.0,
+          "assumed_duration_min": 138.0
+        },
+        {
+          "part_id": "SIM-PART-22",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 1069.5,
+          "finish_min": 1164.0,
+          "assumed_duration_min": 94.5
+        },
+        {
+          "part_id": "SIM-PART-23",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 1084.5,
+          "finish_min": 1141.5,
+          "assumed_duration_min": 57.0
+        },
+        {
+          "part_id": "SIM-PART-24",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 1093.5,
+          "finish_min": 1131.75,
+          "assumed_duration_min": 38.25
+        }
+      ],
+      "completed_excluded": [],
+      "assumptions": [
+        "synthetic boxes and per-printer durations",
+        "one part per job",
+        "fixed orientation, supports and brim must be included in box",
+        "no human calendar, assembly, post-processing or failure forecast"
+      ],
+      "excluded_candidates": {
+        "SIM-PART-01": {},
+        "SIM-PART-02": {},
+        "SIM-PART-03": {},
+        "SIM-PART-04": {},
+        "SIM-PART-05": {},
+        "SIM-PART-06": {},
+        "SIM-PART-07": {},
+        "SIM-PART-08": {},
+        "SIM-PART-09": {},
+        "SIM-PART-10": {},
+        "SIM-PART-11": {},
+        "SIM-PART-12": {},
+        "SIM-PART-13": {},
+        "SIM-PART-14": {},
+        "SIM-PART-15": {},
+        "SIM-PART-16": {},
+        "SIM-PART-17": {},
+        "SIM-PART-18": {},
+        "SIM-PART-19": {},
+        "SIM-PART-20": {},
+        "SIM-PART-21": {},
+        "SIM-PART-22": {},
+        "SIM-PART-23": {},
+        "SIM-PART-24": {}
+      },
+      "makespan_min": 1284.0,
+      "optimistic_lower_bound_min": 957.84375,
+      "gap_to_lower_bound_percent": 34.05109131839092,
+      "printers_used": 8,
+      "total_assumed_print_minutes": 9149.25,
+      "optimality_proven": false
+    },
+    "one_printer_offline_before_start": {
+      "schema": "bojart.fleet-simulation.v1",
+      "status": "SIMULATION_ONLY",
+      "input_sha256": "859595ab40c83976ad6eb9cdb00c0c06b7340392b58d8d4a069ed338b15124a5",
+      "data_kind": "synthetic_scheduling_fixture",
+      "target_height_mm": 1000,
+      "strategy": "earliest_finish",
+      "can_print": false,
+      "mesh_created": false,
+      "geometry_checked": false,
+      "physical_commands": false,
+      "jobs": [
+        {
+          "part_id": "SIM-PART-01",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 0.0,
+          "finish_min": 648.0,
+          "assumed_duration_min": 648.0
+        },
+        {
+          "part_id": "SIM-PART-02",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 0.0,
+          "finish_min": 655.5,
+          "assumed_duration_min": 655.5
+        },
+        {
+          "part_id": "SIM-PART-03",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 120.0,
+          "finish_min": 681.0,
+          "assumed_duration_min": 561.0
+        },
+        {
+          "part_id": "SIM-PART-04",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 0.0,
+          "finish_min": 661.5,
+          "assumed_duration_min": 661.5
+        },
+        {
+          "part_id": "SIM-PART-05",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 0.0,
+          "finish_min": 660.0,
+          "assumed_duration_min": 660.0
+        },
+        {
+          "part_id": "SIM-PART-06",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 0.0,
+          "finish_min": 684.0,
+          "assumed_duration_min": 684.0
+        },
+        {
+          "part_id": "SIM-PART-07",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 120.0,
+          "finish_min": 741.0,
+          "assumed_duration_min": 621.0
+        },
+        {
+          "part_id": "SIM-PART-08",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 663.0,
+          "finish_min": 1122.0,
+          "assumed_duration_min": 459.0
+        },
+        {
+          "part_id": "SIM-PART-09",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 696.0,
+          "finish_min": 1104.0,
+          "assumed_duration_min": 408.0
+        },
+        {
+          "part_id": "SIM-PART-10",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 670.5,
+          "finish_min": 1098.0,
+          "assumed_duration_min": 427.5
+        },
+        {
+          "part_id": "SIM-PART-11",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 676.5,
+          "finish_min": 1117.5,
+          "assumed_duration_min": 441.0
+        },
+        {
+          "part_id": "SIM-PART-12",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 675.0,
+          "finish_min": 1104.0,
+          "assumed_duration_min": 429.0
+        },
+        {
+          "part_id": "SIM-PART-13",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 699.0,
+          "finish_min": 1131.0,
+          "assumed_duration_min": 432.0
+        },
+        {
+          "part_id": "SIM-PART-14",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 756.0,
+          "finish_min": 1135.5,
+          "assumed_duration_min": 379.5
+        },
+        {
+          "part_id": "SIM-PART-15",
+          "printer_id": "SIM-FDM-08",
+          "start_min": 1119.0,
+          "finish_min": 1374.0,
+          "assumed_duration_min": 255.0
+        },
+        {
+          "part_id": "SIM-PART-16",
+          "printer_id": "SIM-FDM-06",
+          "start_min": 1113.0,
+          "finish_min": 1369.5,
+          "assumed_duration_min": 256.5
+        },
+        {
+          "part_id": "SIM-PART-17",
+          "printer_id": "SIM-FDM-03",
+          "start_min": 1137.0,
+          "finish_min": 1353.0,
+          "assumed_duration_min": 216.0
+        },
+        {
+          "part_id": "SIM-PART-18",
+          "printer_id": "SIM-FDM-02",
+          "start_min": 1119.0,
+          "finish_min": 1350.0,
+          "assumed_duration_min": 231.0
+        },
+        {
+          "part_id": "SIM-PART-19",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 1132.5,
+          "finish_min": 1321.5,
+          "assumed_duration_min": 189.0
+        },
+        {
+          "part_id": "SIM-PART-20",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 1150.5,
+          "finish_min": 1323.0,
+          "assumed_duration_min": 172.5
+        },
+        {
+          "part_id": "SIM-PART-21",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 1146.0,
+          "finish_min": 1290.0,
+          "assumed_duration_min": 144.0
+        },
+        {
+          "part_id": "SIM-PART-22",
+          "printer_id": "SIM-FDM-04",
+          "start_min": 1305.0,
+          "finish_min": 1413.0,
+          "assumed_duration_min": 108.0
+        },
+        {
+          "part_id": "SIM-PART-23",
+          "printer_id": "SIM-FDM-05",
+          "start_min": 1336.5,
+          "finish_min": 1399.5,
+          "assumed_duration_min": 63.0
+        },
+        {
+          "part_id": "SIM-PART-24",
+          "printer_id": "SIM-FDM-07",
+          "start_min": 1338.0,
+          "finish_min": 1389.75,
+          "assumed_duration_min": 51.75
+        }
+      ],
+      "completed_excluded": [],
+      "assumptions": [
+        "synthetic boxes and per-printer durations",
+        "one part per job",
+        "fixed orientation, supports and brim must be included in box",
+        "no human calendar, assembly, post-processing or failure forecast"
+      ],
+      "excluded_candidates": {
+        "SIM-PART-01": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-02": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-03": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-04": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-05": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-06": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-07": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-08": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-09": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-10": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-11": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-12": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-13": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-14": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-15": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-16": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-17": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-18": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-19": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-20": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-21": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-22": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-23": {
+          "SIM-FDM-01": "offline"
+        },
+        "SIM-PART-24": {
+          "SIM-FDM-01": "offline"
+        }
+      },
+      "makespan_min": 1413.0,
+      "optimistic_lower_bound_min": 1094.6785714285713,
+      "gap_to_lower_bound_percent": 29.0789860037193,
+      "printers_used": 7,
+      "total_assumed_print_minutes": 9153.75,
+      "optimality_proven": false
+    },
+    "oversized_part": {
+      "schema": "bojart.fleet-simulation.v1",
+      "status": "INFEASIBLE",
+      "input_sha256": "a6cf0c09a935addeba5b741e3d586dfcfebeca915d8a15a2d2f3f217ea367184",
+      "data_kind": "synthetic_scheduling_fixture",
+      "target_height_mm": 1000,
+      "strategy": "earliest_finish",
+      "can_print": false,
+      "mesh_created": false,
+      "geometry_checked": false,
+      "physical_commands": false,
+      "jobs": [],
+      "completed_excluded": [],
+      "assumptions": [
+        "synthetic boxes and per-printer durations",
+        "one part per job",
+        "fixed orientation, supports and brim must be included in box",
+        "no human calendar, assembly, post-processing or failure forecast"
+      ],
+      "excluded_candidates": {
+        "SIM-PART-01": {
+          "SIM-FDM-01": "height",
+          "SIM-FDM-02": "height",
+          "SIM-FDM-03": "height",
+          "SIM-FDM-04": "height",
+          "SIM-FDM-05": "height",
+          "SIM-FDM-06": "height",
+          "SIM-FDM-07": "height",
+          "SIM-FDM-08": "height"
+        },
+        "SIM-PART-02": {},
+        "SIM-PART-03": {},
+        "SIM-PART-04": {},
+        "SIM-PART-05": {},
+        "SIM-PART-06": {},
+        "SIM-PART-07": {},
+        "SIM-PART-08": {},
+        "SIM-PART-09": {},
+        "SIM-PART-10": {},
+        "SIM-PART-11": {},
+        "SIM-PART-12": {},
+        "SIM-PART-13": {},
+        "SIM-PART-14": {},
+        "SIM-PART-15": {},
+        "SIM-PART-16": {},
+        "SIM-PART-17": {},
+        "SIM-PART-18": {},
+        "SIM-PART-19": {},
+        "SIM-PART-20": {},
+        "SIM-PART-21": {},
+        "SIM-PART-22": {},
+        "SIM-PART-23": {},
+        "SIM-PART-24": {}
+      },
+      "blocked_parts": [
+        "SIM-PART-01"
+      ]
+    },
+    "lost_print_receipt": {
+      "schema": "bojart.fleet-simulation.v1",
+      "status": "NEEDS_RECONCILIATION",
+      "input_sha256": "c3cd3d2d1ba884233de1157dd1f2ba2300d4928603fd876c34fe20a1517dab50",
+      "data_kind": "synthetic_scheduling_fixture",
+      "target_height_mm": 1000,
+      "strategy": "earliest_finish",
+      "can_print": false,
+      "mesh_created": false,
+      "geometry_checked": false,
+      "physical_commands": false,
+      "jobs": [],
+      "completed_excluded": [],
+      "assumptions": [
+        "synthetic boxes and per-printer durations",
+        "one part per job",
+        "fixed orientation, supports and brim must be included in box",
+        "no human calendar, assembly, post-processing or failure forecast"
+      ],
+      "blocked_parts": [
+        "SIM-PART-01"
+      ]
+    },
+    "incompatible_process": {
+      "schema": "bojart.fleet-simulation.v1",
+      "status": "INFEASIBLE",
+      "input_sha256": "1eb8f76526c4543c049d57b905aabe919d04bacc73669cbc3774abbddd2e04f6",
+      "data_kind": "synthetic_scheduling_fixture",
+      "target_height_mm": 1000,
+      "strategy": "earliest_finish",
+      "can_print": false,
+      "mesh_created": false,
+      "geometry_checked": false,
+      "physical_commands": false,
+      "jobs": [],
+      "completed_excluded": [],
+      "assumptions": [
+        "synthetic boxes and per-printer durations",
+        "one part per job",
+        "fixed orientation, supports and brim must be included in box",
+        "no human calendar, assembly, post-processing or failure forecast"
+      ],
+      "excluded_candidates": {
+        "SIM-PART-01": {
+          "SIM-FDM-01": "process",
+          "SIM-FDM-02": "process",
+          "SIM-FDM-03": "process",
+          "SIM-FDM-04": "process",
+          "SIM-FDM-05": "process",
+          "SIM-FDM-06": "process",
+          "SIM-FDM-07": "process",
+          "SIM-FDM-08": "process"
+        },
+        "SIM-PART-02": {},
+        "SIM-PART-03": {},
+        "SIM-PART-04": {},
+        "SIM-PART-05": {},
+        "SIM-PART-06": {},
+        "SIM-PART-07": {},
+        "SIM-PART-08": {},
+        "SIM-PART-09": {},
+        "SIM-PART-10": {},
+        "SIM-PART-11": {},
+        "SIM-PART-12": {},
+        "SIM-PART-13": {},
+        "SIM-PART-14": {},
+        "SIM-PART-15": {},
+        "SIM-PART-16": {},
+        "SIM-PART-17": {},
+        "SIM-PART-18": {},
+        "SIM-PART-19": {},
+        "SIM-PART-20": {},
+        "SIM-PART-21": {},
+        "SIM-PART-22": {},
+        "SIM-PART-23": {},
+        "SIM-PART-24": {}
+      },
+      "blocked_parts": [
+        "SIM-PART-01"
+      ]
+    },
+    "changed_height_rejected": true,
+    "comparison": {
+      "reduction_vs_round_robin_percent": 15.247524752475247,
+      "scope": "synthetic schedule only; not a real print time or universal speedup"
+    }
+  },
+  "ok": true
+}

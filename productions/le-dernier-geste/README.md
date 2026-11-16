@@ -16,10 +16,10 @@ Le [plan G2 définitif](STATUT_G2.json) reste à produire. TEST19 est un ancien 
 
 Prérequis : Python 3 et FFmpeg avec libx264. Aucun appel à une API de génération n’est effectué par le script de montage.
 
-1. Récupérer le paquet complet privé du projet auprès de son responsable.
-2. Décompresser ses médias dans ce dossier en conservant les chemins de [ASSETS.json](ASSETS.json).
+1. Suivre le [guide de reconstruction vérifiée](https://github.com/Momolscode/BOJART/blob/main/docs/creative/RECUPERATION_PRODUCTION.md) pour retrouver les cinq médias dans la collecte restaurée et préparer un dossier de travail externe avec la recette actuelle.
+2. Se placer dans le dossier `le-dernier-geste` ainsi préparé ; les chemins de [ASSETS.json](ASSETS.json) sont conservés.
 3. Vérifier les cinq sources : `python3 verify_assets.py`.
-4. Lancer `python3 R03_LE_DERNIER_GESTE/build_dernier_geste_r03.py`.
+4. Si un nouveau rendu est souhaité, lancer `python3 R03_LE_DERNIER_GESTE/build_dernier_geste_r03.py` depuis cette copie de travail. La préparation des données ne lance pas cette commande.
 
 Le script écrit `R03_LE_DERNIER_GESTE/BOJART_LE_DERNIER_GESTE_R03.mp4`. Les options `--legacy CHEMIN` et `--r02 CHEMIN` permettent d’indiquer d’autres emplacements de médias. Les durées, cadrages et couches audio figurent dans [EDL_R03.json](R03_LE_DERNIER_GESTE/EDL_R03.json).
 

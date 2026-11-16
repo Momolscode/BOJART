@@ -1,0 +1,914 @@
+{
+ "bench": "B4-trancheurs",
+ "status": "executed",
+ "executed_on": "2026-11-04T13:40:58Z",
+ "environment": {
+  "where": "conteneur Linux de session, 4 cœurs, sans GPU (pas la tour)",
+  "python": "3.13.18",
+  "slicers": {
+   "prusaslicer_2_7_2": "PrusaSlicer-2.7.2+UNKNOWN based on Slic3r (with GUI support)",
+   "prusaslicer_2_9_7": "PrusaSlicer-2.9.7+flathub.org based on Slic3r (with GUI support)",
+   "orcaslicer_2_4_2": "OrcaSlicer-2.4.2:"
+  },
+  "install": "PrusaSlicer 2.7.2 par apt (Ubuntu) ; 2.9.7 et OrcaSlicer 2.4.2 par Flathub, lancés hors bac à sable avec le chargeur du runtime GNOME 50"
+ },
+ "profile": {
+  "prusaslicer": {
+   "bed_shape": "0x0,250x0,250x210,0x210",
+   "max_print_height": "220",
+   "nozzle_diameter": "0.4",
+   "filament_diameter": "1.75",
+   "filament_type": "PLA",
+   "filament_density": "1.24",
+   "temperature": "215",
+   "first_layer_temperature": "215",
+   "bed_temperature": "60",
+   "first_layer_bed_temperature": "60",
+   "layer_height": "0.15",
+   "first_layer_height": "0.2",
+   "perimeters": "3",
+   "top_solid_layers": "5",
+   "bottom_solid_layers": "4",
+   "fill_density": "15%",
+   "fill_pattern": "gyroid",
+   "support_material": "1",
+   "support_material_auto": "1",
+   "support_material_style": "organic",
+   "support_material_threshold": "50",
+   "support_material_contact_distance": "0.2",
+   "gcode_flavor": "marlin2",
+   "use_relative_e_distances": "1",
+   "start_gcode": "; BOJART SIMULATION - PROFIL NON VERIFIE - NE PAS ENVOYER A UNE MACHINE",
+   "end_gcode": "; fin simulation",
+   "layer_gcode": "G92 E0",
+   "autoemit_temperature_commands": "0"
+  },
+  "orcaslicer": {
+   "machine": {
+    "type": "machine",
+    "name": "BOJART simulation 250x210x220",
+    "from": "system",
+    "inherits": "",
+    "version": "2.4.0.0",
+    "printer_technology": "FFF",
+    "gcode_flavor": "marlin2",
+    "printable_area": [
+     "0x0",
+     "250x0",
+     "250x210",
+     "0x210"
+    ],
+    "printable_height": "220",
+    "nozzle_diameter": [
+     "0.4"
+    ],
+    "use_relative_e_distances": "1",
+    "machine_start_gcode": "; BOJART SIMULATION - PROFIL NON VERIFIE - NE PAS ENVOYER A UNE MACHINE",
+    "machine_end_gcode": "; fin simulation",
+    "layer_change_gcode": "G92 E0",
+    "retraction_length": [
+     "2"
+    ],
+    "retraction_speed": [
+     "40"
+    ],
+    "z_hop": [
+     "0"
+    ],
+    "emit_machine_limits_to_gcode": "0",
+    "machine_max_acceleration_extruding": [
+     "1500",
+     "1250"
+    ],
+    "machine_max_acceleration_retracting": [
+     "1500",
+     "1250"
+    ],
+    "machine_max_acceleration_travel": [
+     "1500",
+     "1250"
+    ],
+    "machine_max_acceleration_x": [
+     "9000",
+     "1000"
+    ],
+    "machine_max_acceleration_y": [
+     "9000",
+     "1000"
+    ],
+    "machine_max_acceleration_z": [
+     "500",
+     "200"
+    ],
+    "machine_max_acceleration_e": [
+     "10000",
+     "5000"
+    ],
+    "machine_max_speed_x": [
+     "500",
+     "200"
+    ],
+    "machine_max_speed_y": [
+     "500",
+     "200"
+    ],
+    "machine_max_speed_z": [
+     "12",
+     "12"
+    ],
+    "machine_max_speed_e": [
+     "120",
+     "120"
+    ],
+    "machine_max_jerk_x": [
+     "10",
+     "10"
+    ],
+    "machine_max_jerk_y": [
+     "10",
+     "10"
+    ],
+    "machine_max_jerk_z": [
+     "0.2",
+     "0.4"
+    ],
+    "machine_max_jerk_e": [
+     "2.5",
+     "2.5"
+    ]
+   },
+   "process": {
+    "type": "process",
+    "name": "BOJART simulation 0.15",
+    "from": "User",
+    "inherits": "",
+    "version": "2.4.0.0",
+    "compatible_printers": [
+     "BOJART simulation 250x210x220"
+    ],
+    "layer_height": "0.15",
+    "initial_layer_print_height": "0.2",
+    "wall_loops": "3",
+    "top_shell_layers": "5",
+    "bottom_shell_layers": "4",
+    "sparse_infill_density": "15%",
+    "sparse_infill_pattern": "gyroid",
+    "enable_support": "1",
+    "support_type": "tree(auto)",
+    "support_style": "organic",
+    "support_threshold_angle": "50",
+    "support_top_z_distance": "0.2",
+    "outer_wall_speed": "30",
+    "inner_wall_speed": "60",
+    "sparse_infill_speed": "80",
+    "internal_solid_infill_speed": "20",
+    "top_surface_speed": "15",
+    "support_speed": "60",
+    "support_interface_speed": "60",
+    "travel_speed": "130",
+    "initial_layer_speed": "30",
+    "initial_layer_infill_speed": "30",
+    "bridge_speed": "60",
+    "gap_infill_speed": "20",
+    "small_perimeter_speed": "15",
+    "enable_overhang_speed": "0",
+    "default_acceleration": "1500",
+    "outer_wall_acceleration": "1500",
+    "inner_wall_acceleration": "1500",
+    "initial_layer_acceleration": "1500",
+    "top_surface_acceleration": "1500",
+    "travel_acceleration": "1500",
+    "bridge_acceleration": "100%",
+    "sparse_infill_acceleration": "100%",
+    "internal_solid_infill_acceleration": "100%",
+    "default_jerk": "0",
+    "skirt_loops": "1",
+    "skirt_distance": "6",
+    "skirt_height": "1",
+    "brim_type": "no_brim",
+    "thick_bridges": "1",
+    "top_surface_pattern": "monotonic",
+    "bottom_surface_pattern": "monotonic",
+    "seam_position": "aligned"
+   },
+   "filament": {
+    "type": "filament",
+    "name": "BOJART PLA simulation",
+    "from": "User",
+    "inherits": "",
+    "version": "2.4.0.0",
+    "compatible_printers": [
+     "BOJART simulation 250x210x220"
+    ],
+    "filament_type": [
+     "PLA"
+    ],
+    "filament_diameter": [
+     "1.75"
+    ],
+    "filament_density": [
+     "1.24"
+    ],
+    "nozzle_temperature": [
+     "215"
+    ],
+    "nozzle_temperature_initial_layer": [
+     "215"
+    ],
+    "hot_plate_temp": [
+     "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+     "60"
+    ],
+    "cool_plate_temp": [
+     "60"
+    ],
+    "cool_plate_temp_initial_layer": [
+     "60"
+    ],
+    "eng_plate_temp": [
+     "60"
+    ],
+    "eng_plate_temp_initial_layer": [
+     "60"
+    ],
+    "textured_plate_temp": [
+     "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+     "60"
+    ],
+    "filament_max_volumetric_speed": [
+     "50"
+    ],
+    "fan_min_speed": [
+     "35"
+    ],
+    "fan_max_speed": [
+     "100"
+    ],
+    "slow_down_layer_time": [
+     "5"
+    ],
+    "slow_down_min_speed": [
+     "10"
+    ],
+    "close_fan_the_first_x_layers": [
+     "3"
+    ],
+    "fan_cooling_layer_time": [
+     "60"
+    ],
+    "overhang_fan_speed": [
+     "100"
+    ]
+   }
+  }
+ },
+ "reviewer": {
+  "whitelist": [
+   "G0",
+   "G1",
+   "G10",
+   "G11",
+   "G2",
+   "G21",
+   "G28",
+   "G29",
+   "G3",
+   "G4",
+   "G90",
+   "G92",
+   "M104",
+   "M105",
+   "M106",
+   "M107",
+   "M109",
+   "M117",
+   "M140",
+   "M190",
+   "M201",
+   "M203",
+   "M204",
+   "M205",
+   "M220",
+   "M221",
+   "M486",
+   "M73",
+   "M82",
+   "M83",
+   "M84",
+   "M900"
+  ],
+  "bed_mm": [
+   250.0,
+   210.0,
+   220.0
+  ],
+  "pla_nozzle_c": [
+   180,
+   230
+  ],
+  "pla_bed_c": [
+   0,
+   70
+  ]
+ },
+ "results": {
+  "coupon": {
+   "stl_sha256": "f98a52b98df45f3919af1834763c9899070dbaef6a847e8bd85ef366b14ee78b",
+   "bytes": 684,
+   "slicers": {
+    "prusaslicer_2_7_2": {
+     "runs": [
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.11
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.11
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.1
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.12
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.1
+      }
+     ],
+     "errors": 0,
+     "slicing_seconds": {
+      "n": 5,
+      "min": 0.1,
+      "median": 0.11,
+      "max": 0.12
+     },
+     "deterministic": true,
+     "gcode_sha256_normalized": "60aa7ba0022b890d24acfaf4a6db20ea64ffcc9732973a06766f282aa02c981f",
+     "stats": {
+      "estimated_time_normal": "25m 4s",
+      "filament_mm": 1404.74,
+      "filament_g": 4.19,
+      "layer_changes": 133,
+      "estimated_seconds": 1504
+     },
+     "review": {
+      "accepted": true,
+      "issues": [],
+      "notes": [
+       "aucune consigne de chauffe : fichier de simulation, non imprimable tel quel (voulu par le profil)"
+      ],
+      "travel_bounds_mm": {
+       "X": [
+        108.64,
+        141.36
+       ],
+       "Y": [
+        88.64,
+        121.36
+       ],
+       "Z": [
+        0.2,
+        20.0
+       ]
+      },
+      "relative_xyz_seen": false,
+      "absolute_e": false
+     },
+     "effective_settings": {
+      "layer_height": "0.15",
+      "perimeters": "3",
+      "fill_density": "15%",
+      "fill_pattern": "gyroid",
+      "perimeter_speed": "60",
+      "external_perimeter_speed": "50%",
+      "infill_speed": "80",
+      "solid_infill_speed": "20",
+      "travel_speed": "130",
+      "support_material_style": "organic",
+      "support_material_threshold": "50",
+      "filament_max_volumetric_speed": "0",
+      "retract_length": "2",
+      "skirt_distance": "6",
+      "perimeter_generator": "arachne",
+      "ensure_vertical_shell_thickness": null
+     },
+     "gcode_bytes": 740134,
+     "extrusion_mm_by_role": {
+      "parois": 778.5,
+      "remplissage": 421.4,
+      "pleins": 201.4,
+      "supports": 0.0,
+      "jupe": 3.6,
+      "autres": {}
+     }
+    },
+    "prusaslicer_2_9_7": {
+     "runs": [
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.1
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.1
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.12
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.14
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.11
+      }
+     ],
+     "errors": 0,
+     "slicing_seconds": {
+      "n": 5,
+      "min": 0.1,
+      "median": 0.11,
+      "max": 0.14
+     },
+     "deterministic": true,
+     "gcode_sha256_normalized": "f78a95d6a6a72005fa0924448b519013ac586bb5c7d077701c7e520269397fb4",
+     "stats": {
+      "estimated_time_normal": "25m 7s",
+      "filament_mm": 1404.71,
+      "filament_g": 4.19,
+      "layer_changes": 133,
+      "estimated_seconds": 1507
+     },
+     "review": {
+      "accepted": true,
+      "issues": [],
+      "notes": [
+       "aucune consigne de chauffe : fichier de simulation, non imprimable tel quel (voulu par le profil)"
+      ],
+      "travel_bounds_mm": {
+       "X": [
+        108.82,
+        141.18
+       ],
+       "Y": [
+        88.82,
+        121.18
+       ],
+       "Z": [
+        0.2,
+        20.0
+       ]
+      },
+      "relative_xyz_seen": false,
+      "absolute_e": false
+     },
+     "effective_settings": {
+      "layer_height": "0.15",
+      "perimeters": "3",
+      "fill_density": "15%",
+      "fill_pattern": "gyroid",
+      "perimeter_speed": "60",
+      "external_perimeter_speed": "50%",
+      "infill_speed": "80",
+      "solid_infill_speed": "20",
+      "travel_speed": "130",
+      "support_material_style": "organic",
+      "support_material_threshold": "50",
+      "filament_max_volumetric_speed": "0",
+      "retract_length": "2",
+      "skirt_distance": "6",
+      "perimeter_generator": "arachne",
+      "ensure_vertical_shell_thickness": "enabled"
+     },
+     "gcode_bytes": 722255,
+     "extrusion_mm_by_role": {
+      "parois": 778.5,
+      "remplissage": 421.4,
+      "pleins": 201.4,
+      "supports": 0.0,
+      "jupe": 3.5,
+      "autres": {}
+     }
+    },
+    "orcaslicer_2_4_2": {
+     "runs": [
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.16
+      },
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.23
+      },
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.23
+      },
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.19
+      },
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 0.18
+      }
+     ],
+     "errors": 0,
+     "slicing_seconds": {
+      "n": 5,
+      "min": 0.16,
+      "median": 0.19,
+      "max": 0.23
+     },
+     "deterministic": true,
+     "gcode_sha256_normalized": "5a0d53d9575c467287490fc002e88a1fdfba7e0d49725940c1cfe84e34194ee2",
+     "stats": {
+      "estimated_time_normal": "26m 55s",
+      "filament_mm": 1378.42,
+      "filament_g": 4.11,
+      "layer_changes": 133,
+      "estimated_seconds": 1615
+     },
+     "review": {
+      "accepted": true,
+      "issues": [],
+      "notes": [
+       "chauffe émise sans attente M109 avant la première extrusion (ligne 38) : sur une machine réelle, extrusion possible buse froide",
+       "consignes de chauffe émises malgré le profil de simulation : [('M104', 215.0), ('M190', 60.0)]"
+      ],
+      "travel_bounds_mm": {
+       "X": [
+        108.8,
+        141.2
+       ],
+       "Y": [
+        88.8,
+        121.2
+       ],
+       "Z": [
+        0.2,
+        20.0
+       ]
+      },
+      "relative_xyz_seen": false,
+      "absolute_e": false
+     },
+     "effective_settings": {
+      "layer_height": "0.15",
+      "perimeters": "3",
+      "fill_density": "15%",
+      "fill_pattern": "gyroid",
+      "perimeter_speed": "60",
+      "external_perimeter_speed": "30",
+      "infill_speed": "80",
+      "solid_infill_speed": "20",
+      "travel_speed": "130",
+      "support_material_style": "organic",
+      "support_material_threshold": "50",
+      "filament_max_volumetric_speed": "50",
+      "retract_length": "2",
+      "skirt_distance": "6",
+      "perimeter_generator": "arachne",
+      "ensure_vertical_shell_thickness": "ensure_all"
+     },
+     "gcode_bytes": 770181,
+     "extrusion_mm_by_role": {
+      "parois": 778.7,
+      "remplissage": 397.9,
+      "pleins": 197.8,
+      "supports": 0.0,
+      "jupe": 4.0,
+      "autres": {}
+     }
+    }
+   }
+  },
+  "ardoise_v6": {
+   "stl_sha256": "28ab5fe05b330cab38c3bfde932efb0d9e3ff39147b0e1ecb3f6ed7fbce95ab1",
+   "bytes": 38550384,
+   "slicers": {
+    "prusaslicer_2_7_2": {
+     "runs": [
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 28.43
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 27.46
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 28.56
+      }
+     ],
+     "errors": 0,
+     "slicing_seconds": {
+      "n": 3,
+      "min": 27.46,
+      "median": 28.43,
+      "max": 28.56
+     },
+     "deterministic": true,
+     "gcode_sha256_normalized": "0c57a45f0a94b07fadbe9e979eab5977626ce8c3888e48976001e69e3215f2ae",
+     "stats": {
+      "estimated_time_normal": "11h 58m 43s",
+      "filament_mm": 33049.44,
+      "filament_g": 98.57,
+      "layer_changes": 1253,
+      "estimated_seconds": 43123
+     },
+     "review": {
+      "accepted": true,
+      "issues": [],
+      "notes": [
+       "aucune consigne de chauffe : fichier de simulation, non imprimable tel quel (voulu par le profil)"
+      ],
+      "travel_bounds_mm": {
+       "X": [
+        68.22,
+        167.25
+       ],
+       "Y": [
+        54.71,
+        168.46
+       ],
+       "Z": [
+        0.2,
+        188.0
+       ]
+      },
+      "relative_xyz_seen": false,
+      "absolute_e": false
+     },
+     "effective_settings": {
+      "layer_height": "0.15",
+      "perimeters": "3",
+      "fill_density": "15%",
+      "fill_pattern": "gyroid",
+      "perimeter_speed": "60",
+      "external_perimeter_speed": "50%",
+      "infill_speed": "80",
+      "solid_infill_speed": "20",
+      "travel_speed": "130",
+      "support_material_style": "organic",
+      "support_material_threshold": "50",
+      "filament_max_volumetric_speed": "0",
+      "retract_length": "2",
+      "skirt_distance": "6",
+      "perimeter_generator": "arachne",
+      "ensure_vertical_shell_thickness": null
+     },
+     "gcode_bytes": 50353603,
+     "extrusion_mm_by_role": {
+      "parois": 14546.2,
+      "remplissage": 5572.1,
+      "pleins": 2312.1,
+      "supports": 10609.3,
+      "jupe": 9.8,
+      "autres": {}
+     }
+    },
+    "prusaslicer_2_9_7": {
+     "runs": [
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 30.12
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 29.31
+      },
+      {
+       "returncode": 0,
+       "warnings": [],
+       "ok": true,
+       "seconds": 28.88
+      }
+     ],
+     "errors": 0,
+     "slicing_seconds": {
+      "n": 3,
+      "min": 28.88,
+      "median": 29.31,
+      "max": 30.12
+     },
+     "deterministic": true,
+     "gcode_sha256_normalized": "d870e1e28835e4f0d03b0c7cfa09d528dc9902d0f8d29a717e4bad2082516e88",
+     "stats": {
+      "estimated_time_normal": "12h 0m 1s",
+      "filament_mm": 33043.44,
+      "filament_g": 98.55,
+      "layer_changes": 1253,
+      "estimated_seconds": 43201
+     },
+     "review": {
+      "accepted": true,
+      "issues": [],
+      "notes": [
+       "aucune consigne de chauffe : fichier de simulation, non imprimable tel quel (voulu par le profil)"
+      ],
+      "travel_bounds_mm": {
+       "X": [
+        68.4,
+        167.07
+       ],
+       "Y": [
+        54.88,
+        168.28
+       ],
+       "Z": [
+        0.2,
+        188.0
+       ]
+      },
+      "relative_xyz_seen": false,
+      "absolute_e": false
+     },
+     "effective_settings": {
+      "layer_height": "0.15",
+      "perimeters": "3",
+      "fill_density": "15%",
+      "fill_pattern": "gyroid",
+      "perimeter_speed": "60",
+      "external_perimeter_speed": "50%",
+      "infill_speed": "80",
+      "solid_infill_speed": "20",
+      "travel_speed": "130",
+      "support_material_style": "organic",
+      "support_material_threshold": "50",
+      "filament_max_volumetric_speed": "0",
+      "retract_length": "2",
+      "skirt_distance": "6",
+      "perimeter_generator": "arachne",
+      "ensure_vertical_shell_thickness": "enabled"
+     },
+     "gcode_bytes": 49626528,
+     "extrusion_mm_by_role": {
+      "parois": 14546.2,
+      "remplissage": 5572.1,
+      "pleins": 2306.3,
+      "supports": 10609.1,
+      "jupe": 9.7,
+      "autres": {}
+     }
+    },
+    "orcaslicer_2_4_2": {
+     "runs": [
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 41.07
+      },
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 35.47
+      },
+      {
+       "returncode": 0,
+       "result": "Success.",
+       "warnings": [],
+       "ok": true,
+       "seconds": 33.38
+      }
+     ],
+     "errors": 0,
+     "slicing_seconds": {
+      "n": 3,
+      "min": 33.38,
+      "median": 35.47,
+      "max": 41.07
+     },
+     "deterministic": true,
+     "gcode_sha256_normalized": "9b3291fb8842b35e2032e26c250282a80eb746b60a6b1d0df66a2c5e9d1eb62a",
+     "stats": {
+      "estimated_time_normal": "14h 5m 27s",
+      "filament_mm": 37165.75,
+      "filament_g": 110.85,
+      "layer_changes": 1253,
+      "estimated_seconds": 50727
+     },
+     "review": {
+      "accepted": true,
+      "issues": [],
+      "notes": [
+       "chauffe émise sans attente M109 avant la première extrusion (ligne 38) : sur une machine réelle, extrusion possible buse froide",
+       "consignes de chauffe émises malgré le profil de simulation : [('M104', 215.0), ('M190', 60.0)]"
+      ],
+      "travel_bounds_mm": {
+       "X": [
+        68.56,
+        185.97
+       ],
+       "Y": [
+        48.59,
+        154.2
+       ],
+       "Z": [
+        0.2,
+        188.0
+       ]
+      },
+      "relative_xyz_seen": false,
+      "absolute_e": false
+     },
+     "effective_settings": {
+      "layer_height": "0.15",
+      "perimeters": "3",
+      "fill_density": "15%",
+      "fill_pattern": "gyroid",
+      "perimeter_speed": "60",
+      "external_perimeter_speed": "30",
+      "infill_speed": "80",
+      "solid_infill_speed": "20",
+      "travel_speed": "130",
+      "support_material_style": "organic",
+      "support_material_threshold": "50",
+      "filament_max_volumetric_speed": "50",
+      "retract_length": "2",
+      "skirt_distance": "6",
+      "perimeter_generator": "arachne",
+      "ensure_vertical_shell_thickness": "ensure_all"
+     },
+     "gcode_bytes": 70861218,
+     "extrusion_mm_by_role": {
+      "parois": 14534.3,
+      "remplissage": 5476.2,
+      "pleins": 1322.2,
+      "supports": 15821.2,
+      "jupe": 11.8,
+      "autres": {}
+     }
+    }
+   }
+  }
+ },
+ "limits": [
+  "temps de tranchage mesurés dans un conteneur partagé : ordre de grandeur, pas une mesure de la tour",
+  "n petit : médiane et maximum, pas de p95",
+  "temps et matière = estimations des trancheurs, aucune impression réelle",
+  "Orca : traduction du profil, pas une équivalence parfaite (moteurs de supports et de remplissage différents)",
+  "OrcaSlicer et PrusaSlicer 2.9.7 lancés hors bac à sable Flatpak : Orca cherche des ressources sous /app (nozzle_info.json introuvable, consigné dans son journal) ; effet sur le tranchage non mesuré, à revérifier avec l’installation Windows"
+ ],
+ "extrusion_by_role_note": "calculé après l’exécution par extrusion_by_role() du même script, sur le dernier G-code conservé de chaque trancheur"
+}

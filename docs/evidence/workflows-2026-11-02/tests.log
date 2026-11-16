@@ -1,0 +1,25 @@
+test_all_offline_and_material_mismatch_block (test_journeys.FleetTests.test_all_offline_and_material_mismatch_block) ... ok
+test_box_clearance_boundary (test_journeys.FleetTests.test_box_clearance_boundary) ... ok
+test_circular_plate_rejects_corners (test_journeys.FleetTests.test_circular_plate_rejects_corners) ... ok
+test_completed_parts_excluded (test_journeys.FleetTests.test_completed_parts_excluded) ... ok
+test_duplicate_identifiers_rejected (test_journeys.FleetTests.test_duplicate_identifiers_rejected) ... ok
+test_eight_machine_example_and_failures (test_journeys.FleetTests.test_eight_machine_example_and_failures) ... ok
+test_input_is_unchanged_and_results_deterministic (test_journeys.FleetTests.test_input_is_unchanged_and_results_deterministic) ... ok
+test_intake_never_claims_geometry_or_voice (test_journeys.FleetTests.test_intake_never_claims_geometry_or_voice) ... ok
+test_lower_bound_does_not_exceed_enumerated_optimum (test_journeys.FleetTests.test_lower_bound_does_not_exceed_enumerated_optimum) ... ok
+test_missing_estimate_has_no_default (test_journeys.FleetTests.test_missing_estimate_has_no_default) ... ok
+test_new_height_requires_new_parts_and_times (test_journeys.FleetTests.test_new_height_requires_new_parts_and_times) ... ok
+test_nonfinite_bool_and_zero_dimensions_rejected (test_journeys.FleetTests.test_nonfinite_bool_and_zero_dimensions_rejected) ... ok
+test_nonfinite_bool_and_zero_durations_rejected (test_journeys.FleetTests.test_nonfinite_bool_and_zero_durations_rejected) ... ok
+test_real_data_is_not_silently_accepted (test_journeys.FleetTests.test_real_data_is_not_silently_accepted) ... ok
+test_seeded_variable_durations_preserve_schedule_invariants (test_journeys.FleetTests.test_seeded_variable_durations_preserve_schedule_invariants) ... ok
+test_turnaround_and_existing_work_included (test_journeys.FleetTests.test_turnaround_and_existing_work_included) ... ok
+test_unknown_or_active_part_prevents_automatic_reprint (test_journeys.FleetTests.test_unknown_or_active_part_prevents_automatic_reprint) ... ok
+test_all_local_aliases_and_ambiguities_bypass_provider (test_journeys.TranscriptTests.test_all_local_aliases_and_ambiguities_bypass_provider) ... ok
+test_end_to_end_python_trials (test_journeys.TranscriptTests.test_end_to_end_python_trials) ... ok
+test_failure_and_recovery_scenarios (test_journeys.TranscriptTests.test_failure_and_recovery_scenarios) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.896s
+
+OK

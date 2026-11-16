@@ -1,0 +1,71 @@
+BOJ.ART / JARVIS M07 — 1 NOVEMBRE 2026
+
+BASE
+M06 d6a1ddb3f823717df71c85fcd44b583fe05b9e84, préservée dans l’historique.
+Branche : improvement/m07-voice-scenes-2026-11-01.
+Le paquet comprend le code et un bundle Git, sans publication distante attestée.
+
+NOUVEAU
+Dire « Ouvre la tour de contrôle » compose les trois vues déjà appairées :
+planning démonstratif, dossiers, modèle sélectionné ou catalogue Studio.
+Dire « Confirme cet affichage » confirme seulement la proposition visuelle
+courante ; « Annule cette proposition » l’annule. Un « oui » isolé ne suffit pas.
+Le contexte est figé avant l’écoute. Les réponses anciennes sont écartées.
+L’option Terminer après une pause peut être désactivée en milieu bruyant.
+
+PRÉPARER UNE FOIS SUR LA TOUR
+Conserver une sauvegarde globale du dossier de données avant toute mise à jour.
+Extraire le nouveau code dans un dossier séparé des données existantes.
+Avec Python 3.12 et un environnement virtuel :
+  python -m pip install -r requirements.txt
+  python -m pip install -r requirements-voice.txt
+Ces commandes nécessitent les accès réseau aux paquets. Rien ne s’installe
+lors d’une simple commande vocale.
+
+VOIX
+Copier apps/jarvis/config.example.json vers une configuration locale.
+Renseigner voice.enabled=true et voice.model_dir vers un modèle multilingue
+faster-whisper vérifié. model.bin, config.json et tokenizer.json sont requis.
+Les poids du modèle ne sont pas fournis. Le moteur n’en télécharge pas à la
+première commande. Le clavier reste disponible si la voix est désactivée.
+Une voix française locale du navigateur est nécessaire au retour parlé.
+
+JEV
+Facultatif. Pour l’activer : BOJ_JEV_ENABLED=1 et TYPESAFE_API_KEY dans
+l’environnement privé du serveur. Ne jamais coller cette clé dans le dépôt,
+le navigateur ou le rapport. L’API est distante ; le modèle est fixé à 1.14.
+Les ordres connus fonctionnent sans Jev. Les autres formulations peuvent lui
+transmettre leur texte et exigent encore une confirmation d’affichage.
+Aucun appel Jev réel ni benchmark de français parlé n’est revendiqué ici.
+
+LANCER
+  python tools/m06_preflight.py --config CHEMIN_CONFIG
+  python apps/jarvis/app/consolidated_workbench.py --state CHEMIN_DONNEES --config CHEMIN_CONFIG
+Les lanceurs existants et le nom du dossier de données mission05 sont conservés.
+Dans /tower, ouvrir les trois vues et les placer sur les moniteurs.
+L’appairage navigateur est distinct de la vérification des moniteurs physiques.
+Le navigateur impose un premier geste et sa permission pour le microphone.
+Il n’y a pas de mot d’éveil ou de conversation continue active dans M07.
+
+ESSAYER
+Commencer au clavier : « Ouvre la tour de contrôle » ; attendre 3/3 reçus.
+Puis activer la voix et essayer la même phrase avec le vrai micro.
+Choisir un modèle conservé pour le voir à droite ; sinon le Studio apparaît.
+Tester aussi une prise annulée, le bruit, une fenêtre fermée et un redémarrage.
+Une réponse perdue se reprend avec la même référence, sans reformuler en doublon.
+
+LIMITES
+La détection de pause par énergie ne comprend pas le sens de la phrase et doit
+être réglée avec le bruit réel. Les essais de capture utilisent un signal
+synthétique et un double de transcripteur, explicitement identifiés.
+La CAO reste sur proposition et confirmation dans le poste dédié.
+Découpe, imprimantes, rendu vidéo externe, publication et statistiques ne sont
+pas connectés par cette version. Le planning du parc réel reste à renseigner.
+La vérification finale du PC, du micro et des écrans reste à réaliser.
+
+CONSULTER
+SCHEMA_M07.html : pipeline cliquable et état des intégrations.
+PIPELINE_M07.mmd : schéma Mermaid éditable.
+GRAPHE_EXECUTE.mmd : les quatre nœuds LangGraph exportés depuis le code.
+RECHERCHE_2026-11-01.md : comparaison des assistants et sources primaires.
+docs/evidence/m07-2026-11-01 : preuves des tests de cette version.

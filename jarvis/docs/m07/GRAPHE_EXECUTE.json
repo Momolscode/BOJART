@@ -1,0 +1,100 @@
+{
+  "nodes": [
+    {
+      "id": "__start__",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "__start__"
+      }
+    },
+    {
+      "id": "route",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "route"
+      }
+    },
+    {
+      "id": "guard",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "guard"
+      }
+    },
+    {
+      "id": "dispatch",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "dispatch"
+      }
+    },
+    {
+      "id": "receipt",
+      "type": "runnable",
+      "data": {
+        "id": [
+          "langgraph",
+          "_internal",
+          "_runnable",
+          "RunnableCallable"
+        ],
+        "name": "receipt"
+      }
+    },
+    {
+      "id": "__end__"
+    }
+  ],
+  "edges": [
+    {
+      "source": "__start__",
+      "target": "route"
+    },
+    {
+      "source": "dispatch",
+      "target": "receipt"
+    },
+    {
+      "source": "guard",
+      "target": "dispatch",
+      "conditional": true
+    },
+    {
+      "source": "guard",
+      "target": "receipt",
+      "conditional": true
+    },
+    {
+      "source": "route",
+      "target": "guard"
+    },
+    {
+      "source": "receipt",
+      "target": "__end__"
+    }
+  ]
+}

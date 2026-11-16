@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-11-01",
+  "scope": "Research snapshot; repository metadata and selected documentation only. No third-party source installed or security-audited.",
+  "repositories": [
+    {
+      "repository": "langchain-ai/langgraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "examined_commit": "e5c961d7fbe7ca6fdd4c94c84d90511372514d55",
+      "default_branch": "main",
+      "pushed_at": "2026-11-01T06:12:27Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "pipecat-ai/pipecat",
+      "url": "https://github.com/pipecat-ai/pipecat",
+      "examined_commit": "6f777a0ef3bb98163d10d708525a0db21cda5fbf",
+      "default_branch": "main",
+      "pushed_at": "2026-11-01T21:39:47Z",
+      "archived": false,
+      "license_github_metadata": "BSD-2-Clause",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "SYSTRAN/faster-whisper",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "examined_commit": "9e472ae9de8bb374552f531f752654554b76b2d6",
+      "default_branch": "master",
+      "pushed_at": "2026-10-31T18:02:17Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "docling-project/docling",
+      "url": "https://github.com/docling-project/docling",
+      "examined_commit": "07154cdc82500058ad9377bac92beed3de820458",
+      "default_branch": "main",
+      "pushed_at": "2026-11-01T12:35:00Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "CadQuery/cadquery",
+      "url": "https://github.com/CadQuery/cadquery",
+      "examined_commit": "8178185a24a035c9af7f4679033be14267f6a6ef",
+      "default_branch": "master",
+      "pushed_at": "2026-10-24T15:18:33Z",
+      "archived": false,
+      "license_github_metadata": "NOASSERTION",
+      "license_note": "LICENSE read: Apache-2.0; metadata NOASSERTION is not the license text."
+    },
+    {
+      "repository": "mikedh/trimesh",
+      "url": "https://github.com/mikedh/trimesh",
+      "examined_commit": "6c158cce226500fc64b12acd265af0cf01d1c212",
+      "default_branch": "main",
+      "pushed_at": "2026-10-29T00:51:02Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "elalish/manifold",
+      "url": "https://github.com/elalish/manifold",
+      "examined_commit": "0209eae1b279735c966bb490d0ab91926fe27c69",
+      "default_branch": "master",
+      "pushed_at": "2026-11-01T19:23:37Z",
+      "archived": false,
+      "license_github_metadata": "Apache-2.0",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "OrcaSlicer/OrcaSlicer",
+      "url": "https://github.com/OrcaSlicer/OrcaSlicer",
+      "examined_commit": "2a8abac43da575f7fd358987801111c372a18b84",
+      "default_branch": "main",
+      "pushed_at": "2026-11-01T22:10:47Z",
+      "archived": false,
+      "license_github_metadata": "AGPL-3.0",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "Arksine/moonraker",
+      "url": "https://github.com/Arksine/moonraker",
+      "examined_commit": "b559b9a81161f958a43c2f527b6ad96f73310d5d",
+      "default_branch": "master",
+      "pushed_at": "2026-10-21T22:14:48Z",
+      "archived": false,
+      "license_github_metadata": "GPL-3.0",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "sn4k3/UVtools",
+      "url": "https://github.com/sn4k3/UVtools",
+      "examined_commit": "c2d984c50a80409ec9ca11775e3687e9f3719caa",
+      "default_branch": "master",
+      "pushed_at": "2026-10-26T22:46:48Z",
+      "archived": false,
+      "license_github_metadata": "AGPL-3.0",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "google/or-tools",
+      "url": "https://github.com/google/or-tools",
+      "examined_commit": "100f66e6242ab8bf8d32feb8f3bf086db66ae2b5",
+      "default_branch": "stable",
+      "pushed_at": "2026-10-30T14:48:39Z",
+      "archived": false,
+      "license_github_metadata": "Apache-2.0",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "microsoft/TRELLIS.2",
+      "url": "https://github.com/microsoft/TRELLIS.2",
+      "examined_commit": "75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+      "default_branch": "main",
+      "pushed_at": "2026-07-10T12:34:32Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "solomondivyananth/aftereffects-mcp",
+      "url": "https://github.com/solomondivyananth/aftereffects-mcp",
+      "examined_commit": "2ed42650a435f7401bce25e69df6880894d68bcb",
+      "default_branch": "main",
+      "pushed_at": "2026-10-05T12:40:12Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "remotion-dev/skills",
+      "url": "https://github.com/remotion-dev/skills",
+      "examined_commit": "30d4553ecd46fbc5212fd0ff006ae43af522158b",
+      "default_branch": "main",
+      "pushed_at": "2026-10-26T11:37:35Z",
+      "archived": false,
+      "license_github_metadata": null,
+      "license_note": "No root LICENSE found in examined tree; engine has separate commercial terms. No skill text copied."
+    },
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "examined_commit": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "default_branch": "main",
+      "pushed_at": "2026-10-31T00:53:07Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "examined_commit": "17ff1dcce963bd9f23095ec9b28febbfc4db8388",
+      "default_branch": "master",
+      "pushed_at": "2026-11-01T22:01:16Z",
+      "archived": false,
+      "license_github_metadata": "GPL-3.0",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "AcademySoftwareFoundation/OpenTimelineIO",
+      "url": "https://github.com/AcademySoftwareFoundation/OpenTimelineIO",
+      "examined_commit": "80c5ff30938e4adffe9c94f419b1055856cee9f5",
+      "default_branch": "main",
+      "pushed_at": "2026-10-31T01:15:54Z",
+      "archived": false,
+      "license_github_metadata": "Apache-2.0",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    },
+    {
+      "repository": "inlife/nexrender",
+      "url": "https://github.com/inlife/nexrender",
+      "examined_commit": "f17a178f61391f744fdd78b25f7ed6e32c196110",
+      "default_branch": "master",
+      "pushed_at": "2026-06-03T16:56:25Z",
+      "archived": false,
+      "license_github_metadata": "MIT",
+      "license_note": "Metadata is not a dependency or model-weights license audit."
+    }
+  ]
+}

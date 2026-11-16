@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "computed_on": "2026-11-02",
+  "source_sha256": "2a9830490b0ea15742678f74e305c8747fc79650153c0952c6c7938302a47e94",
+  "method": "Python 3 standard library: exact binomial tail sums with bisection for one-sided Clopper-Pearson bounds; direct arithmetic otherwise.",
+  "checks": [
+    {
+      "item": "one-sided 95% lower bound, 19 successes / 20",
+      "document": "about 78.4 %",
+      "recomputed": 0.783894,
+      "agrees": true
+    },
+    {
+      "item": "one-sided 95% lower bound, 59 / 59",
+      "document": "about 95.05 %",
+      "recomputed": 0.950492,
+      "closed_form": "0.05**(1/59)",
+      "agrees": true
+    },
+    {
+      "item": "smallest zero-failure n exceeding 95 %",
+      "document": 59,
+      "recomputed": {
+        "n58": 0.949661,
+        "n59": 0.950492
+      },
+      "agrees": true
+    },
+    {
+      "item": "camera 400 mm over 2048 px",
+      "document": "0.195 mm/px; 0.20 mm about 1 px",
+      "recomputed": {
+        "mm_per_px": 0.1953125,
+        "px_for_0_20_mm": 1.024
+      },
+      "agrees": true
+    },
+    {
+      "item": "camera 900 mm over 2048 px",
+      "document": "0.20 mm about 0.46 px",
+      "recomputed": {
+        "px_for_0_20_mm": 0.455
+      },
+      "agrees": true
+    },
+    {
+      "item": "synchronisation 10 mm/s x 20 ms",
+      "document": "0.20 mm",
+      "recomputed_mm": 0.2,
+      "agrees": true
+    },
+    {
+      "item": "error budget allocation sum",
+      "document": "1.00 mm",
+      "recomputed_mm": 1.0,
+      "agrees": true
+    },
+    {
+      "item": "budget totals, 25 % reserve, category shares, GPU share, FTE on 220 days/year",
+      "document": "stated in the PDF",
+      "recomputed": "amounts withheld from the public repository",
+      "agrees": true
+    },
+    {
+      "item": "preparation cost per accepted piece and robot cost per piece at 100/10/1 pieces per recipe",
+      "document": "stated in the PDF",
+      "recomputed": "amounts withheld; only the preparation term varies, other per-piece costs constant",
+      "agrees": true
+    }
+  ],
+  "limits": "Arithmetic consistency only. Supplier prices, datasheets, standards and papers R1-R9 were not reopened; no physical quantity was measured."
+}

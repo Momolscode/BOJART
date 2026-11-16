@@ -1,0 +1,16 @@
+# Chaîne figurine (simulation N2). Installable avec requirements.txt dans le même environnement :
+# trimesh reste aligné sur apps/jarvis/requirements.txt (CAO M01). Résolution combinée vérifiée le
+# 2026-11-02 pour win_amd64 / CPython 3.12 (roues binaires) ; tests M08 exécutés sous Linux, Python 3.12.
+# lxml : requis par trimesh pour l'export 3MF.
+# Outils système à part : PrusaSlicer (2.7.2 testé) et Blender (4.0.2 testé), facultatif pour les rendus.
+# numpy aligné sur les verrous moteurs et voix (2.5.4) : installer la figurine après eux ne rétrograde rien.
+numpy==2.5.4
+scipy==1.18.1
+scikit-image==0.26.0
+trimesh==4.11.1
+lxml==6.1.3
+manifold3d==3.5.4
+rtree==1.4.1
+shapely==2.2.0
+networkx==3.7
+matplotlib==3.11.2

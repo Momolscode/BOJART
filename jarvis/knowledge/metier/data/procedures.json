@@ -1,0 +1,310 @@
+[
+  {
+    "id": "P01",
+    "title": "Réception d’un projet 3D",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Éviter une géométrie sans usage ni critères.",
+    "steps": [
+      "Attribuer projet, révision et provenance au brief et aux fichiers.",
+      "Renseigner échelle, unité, dimensions socle compris ou non, quantité, usage, exposition, finition et transport.",
+      "Séparer attentes esthétiques, interfaces, charges et fonctions critiques.",
+      "Vérifier les droits prévus pour création, vente et médias.",
+      "Conserver les inconnues ; ne pas accepter un délai fondé sur une capacité non mesurée."
+    ],
+    "records": [
+      "brief",
+      "criteres_reception",
+      "liste_inconnues",
+      "droits"
+    ],
+    "knowledge_ids": [
+      "K01",
+      "K02",
+      "K07",
+      "K32",
+      "K52"
+    ],
+    "release_condition": "Brief techniquement examiné ; inconnues bloquantes levées avant engagement.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P02",
+    "title": "Qualification FDM d’une recette",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Construire un couple machine/matière reproductible.",
+    "steps": [
+      "Lire les notices de la machine, de la surface et du SKU ; figer les versions et limites.",
+      "Inspecter la machine selon sa notice et confirmer la préparation du plateau.",
+      "Préparer les essais de température, débit et réglages associés selon la documentation de la version utilisée.",
+      "Réaliser un coupon d’ajustement et un segment représentatif du futur objet.",
+      "Mesurer après stabilisation et finition prévue ; enregistrer défauts, temps, matière et photos.",
+      "Faire approuver la recette et ses limites ; requalifier après changement pertinent."
+    ],
+    "records": [
+      "machine",
+      "sku",
+      "buse",
+      "firmware",
+      "profil_sha",
+      "coupons",
+      "mesures"
+    ],
+    "knowledge_ids": [
+      "K04",
+      "K16",
+      "K17",
+      "K18",
+      "K20"
+    ],
+    "release_condition": "Critères du projet atteints sur un exemplaire représentatif, pas seulement sur un cube.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P03",
+    "title": "Qualification résine d’une recette",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Éviter la copie de temps d’exposition entre machines.",
+    "steps": [
+      "Identifier résine exacte, FDS, compatibilité optique, poste, firmware et trancheur.",
+      "Vérifier le bac/film et les contrôles constructeur avant essais.",
+      "Calibrer les conditions recommandées pour la couche et les conditions thermiques retenues.",
+      "Imprimer un coupon de détail et de raccord représentatif.",
+      "Laver, sécher et post-polymériser selon la recette fabricant ; documenter ces opérations.",
+      "Mesurer, tester l’ajustement, constater la finition et faire approuver."
+    ],
+    "records": [
+      "sku_version",
+      "lot",
+      "temperature",
+      "exposition",
+      "mouvements",
+      "post_traitement",
+      "coupon"
+    ],
+    "knowledge_ids": [
+      "K22",
+      "K25",
+      "K26",
+      "K27",
+      "K29"
+    ],
+    "release_condition": "Recette et post-traitement qualifiés ensemble ; aucune recette générique prédéfinie.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P04",
+    "title": "Figurine grand format hybride",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Rendre le découpage compatible avec l’ensemble de la fabrication.",
+    "steps": [
+      "Définir hauteur finale, socle, masse cible, pose, stabilité et conditionnement.",
+      "Proposer les coupes selon détails, interfaces, manutention et accès de finition.",
+      "Choisir procédé et matériau par segment, puis vérifier le volume avec supports.",
+      "Concevoir cavités résine et accès au nettoyage ; contrôler les coupes en aperçu de couches.",
+      "Fabriquer un raccord à l’échelle finale, puis un segment représentatif.",
+      "Créer nomenclature, ordre d’assemblage, repères et gamme complète avant les lots."
+    ],
+    "records": [
+      "nomenclature",
+      "plans_interfaces",
+      "orientation",
+      "supports",
+      "volumes",
+      "transport"
+    ],
+    "knowledge_ids": [
+      "K04",
+      "K05",
+      "K06",
+      "K07",
+      "K23",
+      "K24",
+      "K33"
+    ],
+    "release_condition": "Montage d’essai et traitement accessibles ; la grande pièce n’est pas un simple STL agrandi.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P05",
+    "title": "Diagnostiquer un échec",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Remplacer les modifications aléatoires par un historique exploitable.",
+    "steps": [
+      "Sécuriser la situation selon la notice et isoler le travail concerné.",
+      "Enregistrer symptôme, photos, étape, fichier, profil, lot, matériel et dernier changement.",
+      "Séparer fait observé, cause possible et cause confirmée.",
+      "Choisir un contrôle discriminant et un seul changement dans la plage autorisée.",
+      "Comparer avec le témoin ; conserver les échecs et les résultats.",
+      "N’approuver la nouvelle recette qu’après validation de sa portée."
+    ],
+    "records": [
+      "incident",
+      "photos",
+      "hypotheses",
+      "test",
+      "resultat"
+    ],
+    "knowledge_ids": [
+      "K21",
+      "K28",
+      "K38",
+      "K48"
+    ],
+    "release_condition": "Cause et correction suffisamment documentées ; pas d’augmentation aveugle des paramètres.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P06",
+    "title": "Finition et fidélité BOJ.ART",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Conserver l’apparence et les cotes de l’œuvre réelle.",
+    "steps": [
+      "Contrôler traitement et montage à blanc avant collage/peinture.",
+      "Valider un échantillon d’apprêt, peinture et vernis sur la matière prévue.",
+      "Protéger les interfaces et respecter les temps de traitement du produit.",
+      "Photographier sous lumière neutre pour comparaison, puis sous lumière créative.",
+      "Faire valider l’aspect et les critères techniques séparément.",
+      "Conserver recette couleur, gestes utiles et médias avec l’identifiant de l’œuvre."
+    ],
+    "records": [
+      "echantillon",
+      "recette_couleur",
+      "photos",
+      "accord_artistique",
+      "controle_technique"
+    ],
+    "knowledge_ids": [
+      "K30",
+      "K31",
+      "K32",
+      "K49",
+      "K50"
+    ],
+    "release_condition": "Validation de l’œuvre physique ; aucun rendu IA ne remplace le contrôle.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P07",
+    "title": "Planifier et lancer un lot",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Séparer préparation logique et disponibilité physique.",
+    "steps": [
+      "Confirmer projet, pièce, révision, fichiers et profils effectifs.",
+      "Réserver matériaux, machine, opérateur, traitement et finition.",
+      "Vérifier contrôles géométriques, prévention et état physique de préparation.",
+      "Créer une opération avec identifiant unique et reçu cible, via le connecteur qualifié.",
+      "Relire le travail actif ; en cas de réponse perdue, conserver l’état inconnu.",
+      "Ne libérer la machine qu’après retrait et préparation constatés."
+    ],
+    "records": [
+      "operation_id",
+      "file_sha",
+      "resources",
+      "readiness",
+      "receipt",
+      "state"
+    ],
+    "knowledge_ids": [
+      "K39",
+      "K40",
+      "K41",
+      "K42",
+      "K43",
+      "K44"
+    ],
+    "release_condition": "Cette bibliothèque ne réalise aucune des commandes : raccordement et recette matérielle distincts.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P08",
+    "title": "Chiffrer et apprendre du coût réel",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Estimer le travail complet puis comparer aux réalisations.",
+    "steps": [
+      "Décomposer conception, machine, matières, supports, pertes, finition, contrôle, emballage et frais.",
+      "Séparer temps actif et cycles ; préciser ce qui est mesuré ou estimé.",
+      "Réserver une provision explicite pour les inconnues plutôt que masquer des zéros.",
+      "Calculer sur une base cohérente et conserver la version du devis.",
+      "À la clôture, relever quantités conformes, reprises et coûts imputés.",
+      "Comparer prévision/constaté avant d’ajuster la prochaine estimation."
+    ],
+    "records": [
+      "couts",
+      "hypotheses",
+      "devis_revision",
+      "mesures",
+      "ecarts"
+    ],
+    "knowledge_ids": [
+      "K45",
+      "K46",
+      "K47",
+      "K48"
+    ],
+    "release_condition": "Pas de devis automatique lorsque les coûts indispensables manquent.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P09",
+    "title": "Tenir la documentation à jour",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Rendre les connaissances réutilisables sans créer de fausse certitude.",
+    "steps": [
+      "Référencer une source et sa portée exacte ; la synthèse reste séparée de l’original.",
+      "Stocker une date de consultation et une échéance de relecture choisie par le projet.",
+      "Rapprocher les nouveaux documents de la machine et du SKU concernés.",
+      "Signaler les contradictions, ne pas moyenner les valeurs incompatibles.",
+      "Faire qualifier un changement sur un exemplaire avant recette de production.",
+      "Garder l’ancienne version et tester la restauration."
+    ],
+    "records": [
+      "source_url",
+      "scope",
+      "revision",
+      "date",
+      "contradiction",
+      "qualification"
+    ],
+    "knowledge_ids": [
+      "K15",
+      "K22",
+      "K38",
+      "K54"
+    ],
+    "release_condition": "Une documentation relue ne devient pas automatiquement une recette qualifiée.",
+    "automatic_execution": false
+  },
+  {
+    "id": "P10",
+    "title": "Relier fabrication, contenu et demande client",
+    "status": "procedure_bojart_proposee_non_executee",
+    "purpose": "Préparer l’acquisition avec les œuvres réellement disponibles.",
+    "steps": [
+      "Associer chaque captation à l’œuvre, l’étape et les droits de diffusion.",
+      "Séparer originaux, concepts et générations ; réserver les passages authentiques comme références.",
+      "Préparer la version de montage et vérifier son sujet, son audio et sa destination.",
+      "Relier la publication autorisée à une offre réalisable et à un suivi conforme.",
+      "Suivre les demandes puis le délai et la marge constatés, sans exposer les coordonnées clients.",
+      "Ne pas augmenter automatiquement la publicité lorsque la capacité de finition est saturée."
+    ],
+    "records": [
+      "oeuvre_id",
+      "media_sha",
+      "droits",
+      "montage",
+      "campagne",
+      "capacity"
+    ],
+    "knowledge_ids": [
+      "K43",
+      "K45",
+      "K49",
+      "K50",
+      "K51",
+      "K52",
+      "K53"
+    ],
+    "release_condition": "Publication, dépense et promesse commerciale restent des opérations autorisées séparément.",
+    "automatic_execution": false
+  }
+]

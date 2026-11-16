@@ -1,0 +1,10 @@
+DÉCISIONS DIRECTES — REPRISE JARVIS DU 1 NOVEMBRE 2026
+Le destinataire demandé est Claude Opus 5.5, sous réserve de disponibilité du compte. La mission porte sur un audit, une préparation avant installation et une amélioration successive ; elle ne permet pas de publier, acheter ou piloter l’atelier.
+L’utilisateur confirme « Les deux : nettoyer le contexte et challenger les décisions ».
+Il demande de recommencer depuis les nouveaux fichiers GitHub, d’axer l’audit sur toutes les fonctions attendues de Jarvis et de préparer les données/outils avant installation.
+Cible directe : « Tour Windows ».
+GPU déclaré : « Rtx Geforce 4060 TI ». Évolution directe : « déjà passer à 32g ram sur sur » ; les autres évolutions restent ouvertes.
+Photo actuelle : Ryzen 5 5600G 3,90 GHz, RAM 16 Go (15,9 utilisables), GPU 8 Go affichés, stockage 932 Go affichés, Windows 11 Professionnel Insider Preview 25H2 build 26220.9606. La capacité affichée ne prouve pas l’espace libre ; aucune vérification directe du pilote ou de la VRAM dédiée.
+Le passage à 32 Go est prévu, pas constaté. Ne pas substituer les configurations UNUM/M-Tek au poste BOJ.ART. Les identifiants privés de la photo sont omis.
+L’utilisateur joint deux diagrammes : vision globale JARVIS 5 et état M07 au SHA 3c28821. Il demande leur inclusion dans l’audit des outils, intégrations et architecture. Les libellés des images restent des assertions à vérifier.
+Ces informations remplacent uniquement la décision ancienne « OS pas encore décidé ». Les preuves historiques restent conservées.

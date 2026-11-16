@@ -1,0 +1,199 @@
+{
+ "schema_version": 1,
+ "checked_on": "2026-11-04",
+ "status_all": "B3, B4 et B5 exécutés le 2026-11-04 (conteneur, sans tour) ; B1 approuvé mais bloqué par le solde Higgsfield ; B2, B6, B7, B8 non exécutés",
+ "common_protocol": "Entrée : un personnage ORIGINAL BOJ.ART (Veille, Ardoise ou Fusain), jamais un personnage protégé. PNG RGBA 1024 px détouré à la main ou par BiRefNet (MIT), jamais RMBG-1.4/2.0. Reçu par essai : version de l'outil, empreinte des poids ou identifiant de job, graine, paramètres, coût, durées, SHA-256 des sorties. Contrôles d'impression = ceux de la chaîne M08 (trimesh, manifold3d, PrusaSlicer CLI). Aucun temps H100/A100 repris comme performance de la tour.",
+ "benches": [
+  {
+   "id": "B1-ia-en-ligne",
+   "compare": [
+    "tripo_h3_1_image_to_3d geometry_quality=detailed sans texture (12 crédits)",
+    "hunyuan3d_v3_image_to_3d generate_type=Geometry (7)",
+    "meshy_v7_image_to_3d sans texture (25)"
+   ],
+   "input": "même image de face de Veille, 2 graines",
+   "metrics": [
+    "étanchéité après réparation automatique",
+    "épaisseur minimale à 120 mm",
+    "IoU de silhouette de face contre le masque du concept",
+    "tranchage PrusaSlicer sans erreur",
+    "note artistique à l'aveugle par 2 personnes contre la Veille procédurale"
+   ],
+   "pass": "étanche après réparation ; paroi ≥ 1,2 mm FDM ou ≥ 0,8 mm résine à 120 mm ; tranchage sans erreur ; note supérieure au procédural",
+   "cost": "88 crédits Higgsfield (préflight du 2026-11-04)",
+   "requires": [
+    "accord explicite de l'utilisateur sur la dépense",
+    "Higgsfield peut entraîner sur entrées et sorties hors Enterprise : n'envoyer qu'un concept déjà passé par Higgsfield"
+   ],
+   "can_run_now": false
+  },
+  {
+   "id": "B2-ia-locale",
+   "compare": [
+    "TRELLIS.2 natif ComfyUI int8 (Pixal3D désactivé)",
+    "TripoSG corrigé (entrée RGBA, use_flash_decoder=False, sans diso)",
+    "Hi3DGen"
+   ],
+   "input": "même entrée que B1, 3 graines, 2 répétitions",
+   "metrics": [
+    "temps p50/p95 génération + export",
+    "pic VRAM dédiée (nvidia-smi 100 ms et torch.cuda.max_memory_reserved)",
+    "mémoire GPU partagée Windows",
+    "pic RAM",
+    "contrôles de B1"
+   ],
+   "pass": "aucun débordement en mémoire partagée ; au moins 1 sortie sur 3 passe les contrôles de B1",
+   "cost": "0 €",
+   "requires": [
+    "tour installée et diagnostiquée",
+    "32 Go de RAM conseillés"
+   ],
+   "can_run_now": false
+  },
+  {
+   "id": "B3-controles-q12",
+   "compare": [
+    "portes trimesh + manifold3d de la chaîne M08",
+    "second avis orca-slicer --info"
+   ],
+   "input": "12 fichiers : cube 20 mm valide ; en pouces ; en mètres ; face retirée ; normales inversées ; deux cubes chevauchants non unis ; paroi 0,3 mm ; pièce de 400 mm ; arête non-variété ; faces dupliquées ou dégénérées ; STL binaire tronqué ; cavité fermée",
+   "metrics": [
+    "classement par fichier",
+    "faux « prêt »"
+   ],
+   "pass": "12/12 bien classés, 0 déclaré prêt à tort",
+   "cost": "0 €",
+   "requires": [],
+   "can_run_now": true,
+   "status": "executed",
+   "executed_on": "2026-11-04",
+   "result_file": "bancs/B3-resultats.json",
+   "script": "bancs/b3_q12.py",
+   "verdict": "contrôles M08 seuls : 11/12 verdicts justes, 1 faux « prêt » (pièce de 400 mm, arrêtée plus loin par le trancheur) ; porte d’import proposée : 12/12, 0 faux « prêt », mais écrite en connaissant les pièges",
+   "findings": [
+    "unités : M08 refuse les cubes en pouces et en mètres pour une fausse raison (« paroi < 0,8 mm ») au lieu de signaler l’échelle",
+    "STL tronqué : M08 plante (ModuleNotFoundError charset_normalizer, ou maillage vide puis TypeError) au lieu de refuser",
+    "trancheurs en second avis (2.7.2, 2.9.7, Orca 2.4.2) : ne voient que 3 défauts sur 11 (trou, faces dupliquées, fichier tronqué) ; PrusaSlicer retourne les normales sans le dire, Orca ne le signale pas",
+    "chevauchement, arête non-variété et cavité fermée : « manifold = yes » pour les trois trancheurs"
+   ]
+  },
+  {
+   "id": "B4-trancheurs",
+   "compare": [
+    "PrusaSlicer 2.7.2 (référence)",
+    "PrusaSlicer 2.9.7",
+    "OrcaSlicer 2.4.2"
+   ],
+   "input": "Ardoise v6 et un coupon, profil d'hypothèse identique",
+   "metrics": [
+    "erreurs",
+    "temps de tranchage p50/p95",
+    "temps et matière estimés",
+    "relecture G-code : bornes, températures, liste blanche de commandes"
+   ],
+   "pass": "0 erreur ; G-code accepté par le relecteur ; écarts expliqués",
+   "cost": "0 €",
+   "requires": [],
+   "can_run_now": true,
+   "status": "executed",
+   "executed_on": "2026-11-04",
+   "result_file": "bancs/B4-resultats.json",
+   "script": "bancs/b4_trancheurs.py",
+   "verdict": "0 erreur, G-code accepté par le relecteur pour les trois, sorties déterministes ; 2.7.2 reproduit au chiffre près le tranchage M08 du 2 novembre ; écarts expliqués",
+   "findings": [
+    "Ardoise v6 : 2.7.2 11 h 58 min 43 s / 98,57 g ; 2.9.7 12 h 0 min 1 s / 98,55 g ; Orca 2.4.2 14 h 5 min 27 s / 110,85 g",
+    "écart Orca : supports organiques +49 % de filament (15 821 contre 10 609 mm), pleins −43 % ; parois et remplissage à 2 % près",
+    "tranchage d’Ardoise : médiane 28,4 s (2.7.2), 29,3 s (2.9.7), 35,5 s (Orca), conteneur 4 cœurs",
+    "Orca ajoute M190 et M104 sans M109 malgré un début personnalisé sans chauffe : extrusion possible buse froide sur une vraie machine ; le début de G-code de la tour devra porter M109",
+    "Orca applique ses propres vitesses si le profil ne les écrit pas (débit volumique 2 mm³/s par défaut) : profil traduit à écrire en clair"
+   ]
+  },
+  {
+   "id": "B5-decoupe-1m",
+   "compare": [
+    "script manifold3d split_by_plane + goujons séparés",
+    "outil Couper de PrusaSlicer en secours"
+   ],
+   "input": "personnage original mis à 1 000 mm, volume machine d'hypothèse",
+   "metrics": [
+    "nombre de pièces",
+    "pièces hors volume",
+    "étanchéité par pièce",
+    "écart de remontage virtuel"
+   ],
+   "pass": "toutes les pièces étanches et dans le volume ; goujons et numéros présents ; écart ≤ 0,1 mm",
+   "cost": "0 €",
+   "requires": [
+    "jeu réel à mesurer plus tard sur coupon imprimé (N3, opérateur)"
+   ],
+   "can_run_now": true,
+   "status": "executed",
+   "executed_on": "2026-11-04",
+   "result_file": "bancs/B5-resultats.json",
+   "script": "bancs/b5_decoupe_1m.py",
+   "verdict": "réussi en v2 : Ardoise à 1 000 mm, 18 pièces étanches dans le volume 240×200×220, 34 goujons (31 de 8 mm, 3 de 4 mm), écart de remontage 0,00003 mm, aucune interférence de goujon ; v1 échouait (trous débouchants, écart 2,5 mm)",
+   "findings": [
+    "2 joints sur 18 sans place pour graver le numéro : repère dans le manifeste",
+    "les alertes « paroi < 0,8 mm » de M08 sur 11 pièces viennent à 38 sur 39 du biseau le long des coupes",
+    "outil Couper en ligne de commande inutilisable comme secours : 2.7.2 n’écrit rien, 2.9.7 superpose les deux moitiés dans un STL et écrase l’entrée sans --output",
+    "jeu de 0,15 mm par côté et profondeurs = hypothèses à calibrer sur coupon imprimé (N3)"
+   ]
+  },
+  {
+   "id": "B6-resine",
+   "compare": [
+    "PrusaSlicer 2.9.7 SLA puis UVtools 7.1.2 convert + print-issues"
+   ],
+   "input": "figurine creusée avec trous de drainage",
+   "metrics": [
+    "îlots",
+    "ventouses",
+    "poches de résine"
+   ],
+   "pass": "0 îlot non supporté, 0 ventouse",
+   "cost": "0 €",
+   "requires": [
+    "format natif et écran de la machine connus par l'inventaire"
+   ],
+   "can_run_now": false
+  },
+  {
+   "id": "B7-pilotage-lecture",
+   "compare": [
+    "interface locale retenue par famille (OctoPrint lecture seule, Moonraker derrière proxy GET, PrusaLink GET, MQTT Bambu standard, SDCP lecture)"
+   ],
+   "input": "une machine inventoriée, opérateur présent",
+   "metrics": [
+    "latence p95 de lecture d'état sur 1 h",
+    "comportement après coupure réseau simulée"
+   ],
+   "pass": "état UNKNOWN puis rapprochement ; 0 commande d'effet émise",
+   "cost": "0 €",
+   "requires": [
+    "inventaire",
+    "autorisation de lecture d'état",
+    "opérateur"
+   ],
+   "can_run_now": false
+  },
+  {
+   "id": "B8-numerisation",
+   "compare": [
+    "RealityScan 2.2",
+    "COLMAP 4.2.1"
+   ],
+   "input": "une œuvre existante photographiée sous 60 à 100 angles",
+   "metrics": [
+    "écart de cotes contre 3 mesures au pied à coulisse",
+    "temps de calcul",
+    "étanchéité après réparation"
+   ],
+   "pass": "écart ≤ 1 %",
+   "cost": "0 € (RealityScan gratuit sous 1 M$ de revenus, compte Epic)",
+   "requires": [
+    "photos et mesures de l'œuvre"
+   ],
+   "can_run_now": false
+  }
+ ]
+}

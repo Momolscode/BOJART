@@ -1,0 +1,182 @@
+{
+  "account": "@boj.art",
+  "profile_url": "https://www.tiktok.com/@boj.art",
+  "prepared_on": "2026-10-18",
+  "scope": "Sélection de publications publiques récupérées pour la référence visuelle. Aucun inventaire, statut de stock ou fichier 3D n’est établi par ces images.",
+  "asset_transformations": "Extraction et recadrage FFmpeg, encodage web. Aucune génération ou retouche de l’œuvre.",
+  "excluded_video_ids": [
+    "7472009171861310742"
+  ],
+  "audio_reviewed": false,
+  "art_direction_observed": [
+    "Noir et blanc brush dans la signature, rouge cramoisi et magenta dans ses éclats.",
+    "Mise en valeur de l’œuvre entière et du geste d’atelier réel.",
+    "Les photographies claires appartiennent aux publications."
+  ],
+  "art_direction_proposed": [
+    "Fond noir charbon, lignes discrètes, grandes zones médias.",
+    "Rouge ponctuel pour la navigation, état explicite pour les erreurs.",
+    "Sans serif lisible pour le travail ; lettrage authentique réservé à la signature.",
+    "Révélation diagonale courte, mouvement lié à une action, pas de particules permanentes."
+  ],
+  "assets": [
+    {
+      "file": "baki-hero.webp",
+      "kind": "image",
+      "title": "Baki — pièce finie",
+      "description": "Portrait de la pièce complète sur le fond clair authentique de la publication.",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7480904142689635607",
+      "source_video_id": "7480904142689635607",
+      "source_sha256": "d6a6884944b3fb09e4d96d9df97b759d739dc0c488531c06d91d2694c7b01d1c",
+      "source_time_seconds": 49.5,
+      "source_timecode": "00:49.500",
+      "crop_pixels": {
+        "x": 0,
+        "y": 0,
+        "width": 576,
+        "height": 610
+      },
+      "width": 576,
+      "height": 610,
+      "bytes": 28124,
+      "sha256": "e204ad7ef9d25196b80c5180415b886bc0dd274fcb1fd4ccebea83156ded7d60",
+      "encoding": "WebP quality 86",
+      "synthetic": false
+    },
+    {
+      "file": "dragon.webp",
+      "kind": "image",
+      "title": "Composition Dragon Ball — pièce finie",
+      "description": "Composition sur son socle ; recadrage de la moitié supérieure du montage.",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7480904142689635607",
+      "source_video_id": "7480904142689635607",
+      "source_sha256": "d6a6884944b3fb09e4d96d9df97b759d739dc0c488531c06d91d2694c7b01d1c",
+      "source_time_seconds": 42,
+      "source_timecode": "00:42.000",
+      "crop_pixels": {
+        "x": 0,
+        "y": 0,
+        "width": 576,
+        "height": 610
+      },
+      "width": 576,
+      "height": 610,
+      "bytes": 25918,
+      "sha256": "d30529b0985f8973b4230679fcb019ce49b45dc093e51db1146e51536440eac6",
+      "encoding": "WebP quality 86",
+      "synthetic": false
+    },
+    {
+      "file": "throne.webp",
+      "kind": "image",
+      "title": "Pièce sur trône — pièce finie",
+      "description": "Vue frontale avec socle, textures sombres et rouges ; recadrage du montage.",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7480904142689635607",
+      "source_video_id": "7480904142689635607",
+      "source_sha256": "d6a6884944b3fb09e4d96d9df97b759d739dc0c488531c06d91d2694c7b01d1c",
+      "source_time_seconds": 46.5,
+      "source_timecode": "00:46.500",
+      "crop_pixels": {
+        "x": 0,
+        "y": 0,
+        "width": 576,
+        "height": 610
+      },
+      "width": 576,
+      "height": 610,
+      "bytes": 52548,
+      "sha256": "536dd0bcf06153db5e1ee58e33addd7527d07bdcbd1f0df5e258338d28232192",
+      "encoding": "WebP quality 86",
+      "synthetic": false
+    },
+    {
+      "file": "atelier.webp",
+      "kind": "image",
+      "title": "Mise en peinture — geste d’atelier",
+      "description": "Vue plongeante du travail au pinceau ; recadrage exact de la bande filmée.",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7464268707989114134",
+      "source_video_id": "7464268707989114134",
+      "source_sha256": "9ca3bd55f02e5841a1f8fba53adef40b4bd5c13954c6f8ff615dfe6ab3d56bf4",
+      "source_time_seconds": 22,
+      "source_timecode": "00:22.000",
+      "crop_pixels": {
+        "x": 0,
+        "y": 662,
+        "width": 576,
+        "height": 324
+      },
+      "width": 576,
+      "height": 324,
+      "bytes": 28798,
+      "sha256": "40f586037dbc0ced7a6b1c13db0f4ee281eafc8b13b0d7e5fcb9c62c035cb520",
+      "encoding": "WebP quality 86",
+      "synthetic": false
+    },
+    {
+      "file": "baki-detail.webp",
+      "kind": "image",
+      "title": "Baki — présentation dans l’atelier",
+      "description": "Plan vertical entier au milieu du matériel et des peintures ; couverture du clip. Le nom technique « detail » ne désigne pas un gros plan.",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7467517355535404310",
+      "source_video_id": "7467517355535404310",
+      "source_sha256": "27f922de227cd93c79ba5ca11f3adf9c08d883436ed27590d0abae2936ac44e8",
+      "source_time_seconds": 16,
+      "source_timecode": "00:16.000",
+      "crop_pixels": null,
+      "width": 576,
+      "height": 1024,
+      "bytes": 88246,
+      "sha256": "8be7c4149afc707408a491a724399f7ae6ceb87df5582da7edbbb1d773d4bc88",
+      "encoding": "WebP quality 86",
+      "synthetic": false
+    },
+    {
+      "file": "logo.webp",
+      "kind": "logo_reference",
+      "title": "BOJ.ART — signature authentique",
+      "description": "Recadrage de l’écran final sur son fond noir ; référence vidéo, pas un fichier maître.",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7467517355535404310",
+      "source_video_id": "7467517355535404310",
+      "source_sha256": "27f922de227cd93c79ba5ca11f3adf9c08d883436ed27590d0abae2936ac44e8",
+      "source_time_seconds": 35,
+      "source_timecode": "00:35.000",
+      "crop_pixels": {
+        "x": 56,
+        "y": 252,
+        "width": 464,
+        "height": 524
+      },
+      "width": 464,
+      "height": 524,
+      "bytes": 27978,
+      "sha256": "77ed2e567fd69e74f84d117d4af2815dd7078d4c91a0297902b4d6ab78bec0f6",
+      "encoding": "WebP quality 86",
+      "synthetic": false
+    },
+    {
+      "file": "studio-loop.mp4",
+      "kind": "video",
+      "title": "Baki — aperçu de l’œuvre dans l’atelier",
+      "source_url": "https://www.tiktok.com/@boj.art/video/7467517355535404310",
+      "source_video_id": "7467517355535404310",
+      "source_sha256": "27f922de227cd93c79ba5ca11f3adf9c08d883436ed27590d0abae2936ac44e8",
+      "source_start_seconds": 16,
+      "source_end_seconds": 22,
+      "source_timecode_range": "00:16.000–00:22.000",
+      "duration_seconds": 6.0,
+      "crop_pixels": null,
+      "width": 576,
+      "height": 1024,
+      "fps": 30,
+      "frames": 180,
+      "audio": false,
+      "bytes": 971195,
+      "sha256": "a2cbc3dcae1ee0d1a6b767097c66e2214e16a8e9367a8a3ae6a9f1069791372e",
+      "encoding": "H.264 CRF 24 / yuv420p / faststart",
+      "poster": "baki-detail.webp",
+      "synthetic": false,
+      "playback_note": "Extrait authentique continu ; le raccord de fin à début n’est pas une boucle transparente. Lecture silencieuse et rejouable ; image fixe si mouvement réduit."
+    }
+  ],
+  "media_total_bytes": 1222807
+}

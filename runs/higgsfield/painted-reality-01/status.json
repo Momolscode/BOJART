@@ -3,12 +3,14 @@
   "status": "completed",
   "type": "video",
   "model": "seedance_2_5",
-  "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3JCDo2fd3qrOBDg2LTUdRL5hpru/hf_20261030_223437_9d7c949b-e456-407f-ae43-8efa0b4cbe89.mp4",
+  "result_url": null,
   "verification_date": "2026-11-01",
   "verification_source": "Higgsfield.jobs_wait",
   "binary_in_this_repository": false,
   "visual_quality_validation": "not_performed",
   "authentic_sculpture_reference_injected": false,
   "source": "text-to-video",
-  "final_premium_master": false
+  "final_premium_master": false,
+  "media_locator_policy": "Direct media URLs removed from active public snapshot; job IDs and source metadata commit retain provenance. Original record remains in Git history and source archives.",
+  "source_metadata_commit": "b68878fc5040a15dcee9a89ca415a94cbc946880"
 }

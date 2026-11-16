@@ -1,0 +1,44 @@
+# Contexte de référence BOJ.ART / Jarvis
+Version : 2026.10.28-m02 | date : 2026-10-28
+
+Ce dossier est distinct d’UNUM et de M-Tek. Ne pas déduire le matériel cible de leurs configurations.
+
+## Contraintes exprimées
+- Budget tour : {"min_eur": 3000, "max_eur": 5000, "reuse_first": true}. Portée : Projet BOJ.ART ; pas une autorisation d’achat. Source : Conversation utilisateur : budget révisé et réemploi.
+- Parc et poste : {"printers_target": [7, 8], "processes": ["FDM", "résine UV"], "screens": 3}. Portée : Objectif ; modèles de machines inconnus. Source : Conversation utilisateur : atelier et trois écrans.
+- Fonctionnement local prioritaire : true. Portée : Pas de repli automatique vers le cloud. Source : Conversation utilisateur : Jarvis local.
+- Installation sans terminal manuel pour le propriétaire : true. Portée : Objectif ; installateur universel non livré. Source : Conversation utilisateur : plug-and-play.
+- Projet distinct : {"exclude": ["UNUM", "M-Tek"]}. Portée : Ne pas importer le matériel ou les données de ces projets. Source : Conversation utilisateur : atelier indépendant.
+- Signature artistique : {"brand": "BOJ.ART", "palette_interface": ["charbon", "ivoire", "carmin"], "authenticity": "fidélité à l’œuvre réelle", "effects": "mouvements fluides ; spectaculaire sans perdre le personnage"}. Portée : Les illustrations générées restent des concepts ; emblème original prioritaire. Source : Messages utilisateur et validation des storyboards.
+- Comptes TikTok : ["@boj.art", "@boj.art3d"]. Portée : Comptes identifiés ; métriques récentes non connectées. Source : Utilisateur : les deux comptes appartiennent à l’associé.
+- Répartition souhaitée : {"default_preference": "grandes figurines résine segmentée ; socles / petites pièces compatibles FDM", "override": "selon usage, détail, résistance, finition et machines qualifiées"}. Portée : Préférence, pas règle d’imprimabilité. Source : Utilisateur puis arbitrages du projet.
+
+## Vérifié dans cet environnement
+- Générateur du pack précédent accessible : true. Portée : Script CadQuery inspecté ; modèle de démonstration. Source : BOJART_Pack_Lancement_20-10-2026.zip / 01_Demonstration/generer_socle.py.
+- Simulateur de commandes du pack accessible : true. Portée : Simulateur uniquement, aucun pilote matériel. Source : BOJART_Pack_Lancement_20-10-2026.zip / 03_Preuve_Et_Tests.
+- Références et fiche V6 accessibles : true. Portée : Fichiers de référence locaux ; qualité des nouvelles vidéos non réauditée dans cette livraison. Source : BOJART_V6_STORYBOARD_CHARACTER_LOCK.zip.
+- Première mission retenue : "Demande écrite bornée → paramètres relus → CAO → contrôles → fichiers et reçu → affichage". Portée : Prototype local isolé : génération et HTTP testés directement ; UI testée avec transport simulé. Pas de déploiement sur la tour.. Source : Choix de réalisation dans cette itération.
+- Dialogue français borné : {"scope": "socle circulaire + consultation du dossier", "units": ["mm", "cm", "pouces"], "numbers": "chiffres et nombres français bornés"}. Portée : Pas de compréhension universelle ni de commande physique.. Source : Code et tests de Mission 02.
+- Propositions avec contexte conservé : {"ttl_seconds": 600, "review_required": true, "same_operation_on_retry": true}. Portée : Géométrie uniquement ; aucune garantie machine.. Source : Tests de propositions M02.
+- Adaptateurs locaux codés : {"ollama": "schéma JSON et contrôle déterministe", "asr": "capture WAV et faster-whisper optionnel", "enabled_by_default": false}. Portée : Modèle et ASR réels non exécutés ici ; essais avec doublures.. Source : Code et tests de contrat M02.
+- Interface relue et testée : {"desktop": true, "mobile": true, "real_http_via_test_bridge": true, "direct_browser_localhost": false}. Portée : Le navigateur direct et le matériel cible restent à qualifier.. Source : Contrôles Chromium de Mission 02.
+
+## Historique non réaudité ici
+- Sites décrits comme publiés : {"workshop": "https://bojart-atelier.yellowghost64.chatgpt.site", "studio": "https://bojart-studio.yellowghost64.chatgpt.site"}. Portée : Sources complètes, bases et déploiement actuel non accessibles/réaudités ici. Source : Messages et anciennes réponses outils de cette conversation.
+
+## Propositions
+- Décision interchangeable : {"default": "règles déterministes", "local_candidate": "Ollama /api/chat avec schéma", "optional": "TypeSafe Jev via adaptateur distant désactivé"}. Portée : Aucun appel modèle ici ; aucun modèle préchoisi avant mesures du PC. Source : Documentation primaire revue le 28-10-2026.
+- Mémoire commune : {"layers": ["contraintes approuvées", "preuves versionnées", "état opérationnel daté", "expériences avec origine"], "no_universal_chat_prompt": true}. Portée : Ce document n’est pas un historique exhaustif de toutes les conversations. Source : Choix d’architecture.
+- Niveaux d’autorisation : {"offline_cad": "autorisé dans les limites de recette", "machine_actions": "désactivées", "paid_generation": "budget et action autorisés séparément", "publish": "approbation et connecteur requis"}. Portée : Les anciennes autorisations de crédits ne sont pas illimitées. Source : Architecture BOJ.ART.
+
+## Inconnues à lever
+- Configuration de la tour : null. Portée : OS, GPU, VRAM, RAM, stockage, audio et écrans à relever sur la tour. Source : Utilisateur : atelier non installé, matériel à récupérer.
+- Interfaces et profils du parc : null. Portée : Modèles, firmware, matières, formats, lavage/cure et finition à qualifier. Source : Aucun audit machine dans ce livrable.
+- Voix locale sur la tour : null. Portée : Ne pas afficher « prêt » ou « écoute ». Source : Aucun microphone ni moteur vocal raccordé ici.
+- Temps, défauts et coûts réels : null. Portée : Ne pas chiffrer des délais comme une garantie. Source : Aucune campagne d’impression mesurée.
+- Performances récentes des deux comptes : null. Portée : Les captures arrondies ne sont ni un suivi temps réel ni une audience unique. Source : Pas de connexion TikTok Studio dans ce livrable.
+
+## Mode de travail
+Ne pas appeler le réseau, publier, engager une dépense ou lancer une imprimante à partir de ce seul contexte.
+Vérifier les fichiers et l’état courant avant une décision ; les versions terminées restent immuables.
+Les observations d’atelier ont une date et une durée de validité ; une ancienne note ne prouve pas un état présent.

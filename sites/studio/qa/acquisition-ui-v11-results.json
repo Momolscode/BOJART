@@ -1,0 +1,37 @@
+{
+  "version": "bojart.acquisition.ui.qa.v11",
+  "testedAt": "2026-10-19T19:13:40.288Z",
+  "scope": "React in JSDOM with deferred injected responses, no browser, live session or database.",
+  "passed": 7,
+  "failed": 0,
+  "results": [
+    {
+      "name": "An unrecognized JSON 400/413/422 never clears a possibly committed submission",
+      "pass": true
+    },
+    {
+      "name": "A validation error after an ambiguous prior send preserves the original identifier",
+      "pass": true
+    },
+    {
+      "name": "A deleted request becomes terminal and can be cleared explicitly without being recreated",
+      "pass": true
+    },
+    {
+      "name": "A failure before POST leaves a new brief editable instead of freezing an unsent request",
+      "pass": true
+    },
+    {
+      "name": "Rapid repeated submission enters one in-flight operation and creates one request identifier",
+      "pass": true
+    },
+    {
+      "name": "An administrator cannot write dossier A while a selection of dossier B is pending",
+      "pass": true
+    },
+    {
+      "name": "An expired uncertain attempt retains a minimal recovery notice before any fresh submission",
+      "pass": true
+    }
+  ]
+}

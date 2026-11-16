@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visionneuse figurine BOJ.ART</title>
+<style>
+  :root { --bg:#1c1d22; --panel:#26282f; --ink:#eceae4; --muted:#a3a19b; --accent:#d9a441; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:14px/1.4 system-ui, sans-serif; }
+  #stage { position:fixed; inset:0; }
+  #bar { position:fixed; left:12px; right:12px; top:12px; display:flex; flex-wrap:wrap; gap:6px; align-items:center;
+         background:color-mix(in srgb, var(--panel) 92%, transparent); padding:8px 10px; border-radius:10px; }
+  #bar button { background:#33363f; color:var(--ink); border:1px solid #444955; border-radius:7px; padding:6px 10px; cursor:pointer; }
+  #bar button[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); }
+  #bar .sep { width:1px; height:22px; background:#444955; margin:0 4px; }
+  #status { position:fixed; left:12px; bottom:12px; right:12px; color:var(--muted); font-size:12.5px; }
+  #status strong { color:var(--ink); font-weight:600; }
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<div id="stage" aria-label="Vue 3D du modèle"></div>
+<div id="bar" role="toolbar" aria-label="Commandes de la vue">
+  <button data-view="face">Face</button><button data-view="profil">Profil</button>
+  <button data-view="dos">Dos</button><button data-view="trois_quarts">Trois-quarts</button>
+  <span class="sep"></span>
+  <button data-part="figurine" aria-pressed="true">Figurine</button>
+  <button data-part="socle" aria-pressed="true">Socle</button>
+  <button id="explode" aria-pressed="false">Éclaté</button>
+  <button id="wire" aria-pressed="false">Maillage</button>
+</div>
+<div id="status" aria-live="polite">Chargement des pièces…</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from './vendor/OrbitControls.js';
+import { STLLoader } from './vendor/STLLoader.js';
+
+const params = new URLSearchParams(location.search);
+const base = params.get('parts') || './parts/';
+const PARTS = ['figurine', 'socle'];
+const stage = document.getElementById('stage');
+const status = document.getElementById('status');
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+stage.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x1c1d22);
+// Les STL sont en mm, z vers le haut : on garde cette convention.
+const camera = new THREE.PerspectiveCamera(30, innerWidth / innerHeight, 1, 20000);
+camera.up.set(0, 0, 1);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x30323a, 1.4));
+const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(-300, -400, 600); scene.add(key);
+const rim = new THREE.DirectionalLight(0xffffff, 1.0); rim.position.set(400, 300, 200); scene.add(rim);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = false;
+const state = { loaded: {}, triangles: {}, errors: [], explode: false, wireframe: false, view: null, renders: 0 };
+window.__viewer = { state, camera, controls, meshes: {} };
+const clay = () => new THREE.MeshStandardMaterial({ color: 0xc9c4ba, roughness: 0.55, metalness: 0.0 });
+const group = new THREE.Group(); scene.add(group);
+const loader = new STLLoader();
+let box = new THREE.Box3();
+
+function render() { renderer.render(scene, camera); state.renders++; }
+controls.addEventListener('change', render);
+addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); render(); });
+
+function setView(name) {
+  const c = box.getCenter(new THREE.Vector3());
+  const r = box.getSize(new THREE.Vector3()).length() * 1.25;
+  const dirs = { face: [0, -1, 0.12], profil: [-1, 0, 0.12], dos: [0, 1, 0.12], trois_quarts: [-0.8, -1, 0.45] };
+  const d = new THREE.Vector3(...dirs[name]).normalize();
+  controls.target.copy(c);
+  camera.position.copy(c).addScaledVector(d, r / (2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2))));
+  camera.lookAt(c); controls.update(); state.view = name;
+  document.querySelectorAll('[data-view]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === name)));
+  render();
+}
+function updateStatus() {
+  const parts = PARTS.filter(p => state.loaded[p]).map(p => `${p} ${state.triangles[p].toLocaleString('fr-FR')} triangles`);
+  const s = box.getSize(new THREE.Vector3());
+  status.innerHTML = `<strong>${parts.join(' · ')}</strong> — enveloppe ${s.x.toFixed(1)} × ${s.y.toFixed(1)} × ${s.z.toFixed(1)} mm` +
+    (state.errors.length ? ` — erreurs : ${state.errors.join(', ')}` : '') + ' — géométrie seule, sans texture.';
+}
+await Promise.all(PARTS.map(name => new Promise(resolve => {
+  loader.load(base + name + '.stl', geo => {
+    geo.computeVertexNormals();
+    const mesh = new THREE.Mesh(geo, clay()); mesh.name = name;
+    group.add(mesh); window.__viewer.meshes[name] = mesh;
+    state.loaded[name] = true; state.triangles[name] = geo.index ? geo.index.count / 3 : geo.attributes.position.count / 3;
+    resolve();
+  }, undefined, () => { state.errors.push(name); state.loaded[name] = false; resolve(); });
+})));
+box = new THREE.Box3().setFromObject(group);
+updateStatus();
+setView('trois_quarts');
+document.querySelectorAll('[data-view]').forEach(b => b.onclick = () => setView(b.dataset.view));
+document.querySelectorAll('[data-part]').forEach(b => b.onclick = () => {
+  const m = window.__viewer.meshes[b.dataset.part]; if (!m) return;
+  m.visible = !m.visible; b.setAttribute('aria-pressed', String(m.visible)); render();
+});
+document.getElementById('explode').onclick = e => {
+  state.explode = !state.explode; const m = window.__viewer.meshes.figurine;
+  if (m) m.position.z = state.explode ? box.getSize(new THREE.Vector3()).z * 0.18 : 0;
+  e.target.setAttribute('aria-pressed', String(state.explode)); render();
+};
+document.getElementById('wire').onclick = e => {
+  state.wireframe = !state.wireframe;
+  Object.values(window.__viewer.meshes).forEach(m => m.material.wireframe = state.wireframe);
+  e.target.setAttribute('aria-pressed', String(state.wireframe)); render();
+};
+state.ready = true;
+</script>
+</body>
+</html>

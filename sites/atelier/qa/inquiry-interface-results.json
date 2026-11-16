@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "Commerce opens the inquiry desk and explicit showcase link without a network call to a private inbox.",
+    "Import reads and escapes a genuine hashed export; preview shows source contact without creating a project.",
+    "Confirmation creates one technical dossier; contacts and source prose leave the DOM and never enter the journal.",
+    "Unknown height stays empty through the editable brief; central decision opens qualification and the quote requires operator-entered costs.",
+    "Reimport opens the existing dossier without duplicating or replacing working notes.",
+    "A revised export with the same reference displays a conflict and disables creation.",
+    "Closing an asynchronous read discards its later result and clears the source preview.",
+    "Dedicated inquiry tab displays the local technical list; CSS parses and no JavaScript error is raised."
+  ],
+  "browserRenderingVerified": false,
+  "scope": "Real app and store in JSDOM, hashed JSON fixture, localStorage and user actions. No screen rendering, D1 account, contact message or payment."
+}

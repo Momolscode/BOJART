@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "base": "3c288214539adf97381f6053b43225485a873b6a",
+  "head": "9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "compare_url": "https://github.com/Momolscode/BOJART/compare/3c288214539adf97381f6053b43225485a873b6a...9f58fa29f0051cc8a7098855359a8a6dd0eef7e6",
+  "ahead_by": 4,
+  "scope": "Changes after final graph/ops reference; not locally requalified by this audit",
+  "files": [
+    {
+      "path": ".github/workflows/audit.yml",
+      "status": "modified",
+      "additions": 19,
+      "deletions": 0
+    },
+    {
+      "path": ".github/workflows/continuity.yml",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "path": ".gitignore",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "INSTALLER_DEMAIN.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "bojart_memory/__main__.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2
+    },
+    {
+      "path": "bojart_memory/agent.py",
+      "status": "modified",
+      "additions": 40,
+      "deletions": 20
+    },
+    {
+      "path": "bojart_memory/core.py",
+      "status": "modified",
+      "additions": 40,
+      "deletions": 11
+    },
+    {
+      "path": "bojart_memory/paths.py",
+      "status": "added",
+      "additions": 8,
+      "deletions": 0
+    },
+    {
+      "path": "bojart_ops/orchestration.py",
+      "status": "added",
+      "additions": 208,
+      "deletions": 0
+    },
+    {
+      "path": "context/CURRENT.md",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 0
+    },
+    {
+      "path": "context/SESSION_HANDOFF.md",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 0
+    },
+    {
+      "path": "data/catalog/derivatives.json",
+      "status": "modified",
+      "additions": 46,
+      "deletions": 25
+    },
+    {
+      "path": "data/catalog/repository_manifest.json",
+      "status": "modified",
+      "additions": 143,
+      "deletions": 48
+    },
+    {
+      "path": "data/knowledge/claims.jsonl",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "data/knowledge/index.json",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 0
+    },
+    {
+      "path": "data/knowledge/sources.json",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 0
+    },
+    {
+      "path": "docs/DATA_GOVERNANCE.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "docs/DEMARRAGE_ET_REPRISE.md",
+      "status": "added",
+      "additions": 59,
+      "deletions": 0
+    },
+    {
+      "path": "docs/GITHUB_WORKFLOW.md",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 1
+    },
+    {
+      "path": "docs/INSTALLATION.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "docs/ORCHESTRATION.md",
+      "status": "added",
+      "additions": 75,
+      "deletions": 0
+    },
+    {
+      "path": "docs/evidence/startup-2026-11-01.json",
+      "status": "added",
+      "additions": 90,
+      "deletions": 0
+    },
+    {
+      "path": "docs/evidence/startup-final-agent-tests.log",
+      "status": "added",
+      "additions": 35,
+      "deletions": 0
+    },
+    {
+      "path": "docs/evidence/startup-final-m07-scenes-tests.log",
+      "status": "added",
+      "additions": 27,
+      "deletions": 0
+    },
+    {
+      "path": "docs/evidence/startup-final-m07-workbench-tests.log",
+      "status": "added",
+      "additions": 43,
+      "deletions": 0
+    },
+    {
+      "path": "docs/evidence/startup-final-ops-tests.log",
+      "status": "added",
+      "additions": 51,
+      "deletions": 0
+    },
+    {
+      "path": "docs/evidence/startup-final-root-tests.log",
+      "status": "added",
+      "additions": 51,
+      "deletions": 0
+    },
+    {
+      "path": "docs/evidence/startup-retrieval-2026-11-01.json",
+      "status": "added",
+      "additions": 139,
+      "deletions": 0
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/consolidated_workbench.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/memory.html",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "jarvis/apps/jarvis/app/memory.js",
+      "status": "modified",
+      "additions": 24,
+      "deletions": 31
+    },
+    {
+      "path": "jarvis/tests/memory_context.test.cjs",
+      "status": "modified",
+      "additions": 31,
+      "deletions": 0
+    },
+    {
+      "path": "ops/orchestration.json",
+      "status": "added",
+      "additions": 349,
+      "deletions": 0
+    },
+    {
+      "path": "tests/test_installation.py",
+      "status": "added",
+      "additions": 95,
+      "deletions": 0
+    },
+    {
+      "path": "tests/test_memory.py",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 0
+    },
+    {
+      "path": "tests_agent/test_context_export.py",
+      "status": "added",
+      "additions": 88,
+      "deletions": 0
+    },
+    {
+      "path": "tests_agent/test_retrieval_diversity.py",
+      "status": "added",
+      "additions": 103,
+      "deletions": 0
+    },
+    {
+      "path": "tests_ops/test_orchestration.py",
+      "status": "added",
+      "additions": 202,
+      "deletions": 0
+    },
+    {
+      "path": "tools/check_startup.py",
+      "status": "added",
+      "additions": 143,
+      "deletions": 0
+    },
+    {
+      "path": "tools/doctor.py",
+      "status": "modified",
+      "additions": 149,
+      "deletions": 12
+    },
+    {
+      "path": "tools/memory_browser.cjs",
+      "status": "added",
+      "additions": 60,
+      "deletions": 0
+    },
+    {
+      "path": "tools/orchestrate.py",
+      "status": "added",
+      "additions": 74,
+      "deletions": 0
+    },
+    {
+      "path": "tools/start_jarvis.py",
+      "status": "modified",
+      "additions": 85,
+      "deletions": 7
+    }
+  ],
+  "note": "Includes a read-only review planner; its existence does not activate Jarvis production actions. Review later changes too if main advances."
+}

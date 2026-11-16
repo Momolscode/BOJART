@@ -1,3 +1,5 @@
+> Direction courante : [creative/CURRENT.md](creative/CURRENT.md). Recettes et scripts : [productions/le-dernier-geste](productions/le-dernier-geste/README.md).
+
 # Production BOJ.ART — plan de reprise
 
 ## Avancement du 1 novembre 2026
@@ -36,3 +38,4 @@ Conserver pour chaque essai : ID de génération, modèle/version, durée, ratio
 
 ## État de livraison
 La présence d'un MP4 ou d'un statut « completed » ne signifie **pas** que le rendu est validé. Aucune performance de rétention ou qualité commerciale n'a été établie.
+

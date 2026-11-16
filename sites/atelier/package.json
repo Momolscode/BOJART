@@ -1,0 +1,15 @@
+{
+  "name": "bojart-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BOJ.ART — Jarvis, tour de contrôle sur trois écrans",
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "css-tree": "3.1.0"
+  },
+  "scripts": {
+    "start:local": "node local/jev-gateway.mjs",
+    "check:visual": "node qa/check-visual-router.mjs && node qa/check-jev-gateway.mjs"
+  }
+}

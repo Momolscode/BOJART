@@ -1,0 +1,992 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T00:12:27.217Z",
+  "repository_revision": "b030fa43837d0dbc5b39e8d9024746528e465e8b",
+  "remote_base": "6cda578030b619c7b459515e77a34b80b2b5f396",
+  "target": {
+    "os": "Windows 11 Pro Insider Preview 25H2 déclaré/photo",
+    "cpu": "Ryzen 5 5600G photo",
+    "gpu": "RTX 4060 Ti déclarée,8Go affichés",
+    "ram_current_gb": 16,
+    "ram_planned_gb": 32,
+    "hardware_qualified": false
+  },
+  "prior_registry": {
+    "tools": 23,
+    "curated_sources": 68,
+    "requirements": 91,
+    "domains": 23,
+    "bootstrap_datasets": 14,
+    "knowledge_cards": 12,
+    "skills_examined": 10,
+    "skills_selected_reading": 4,
+    "skills_bojart": 3,
+    "current_local_skill_bundle_files": 5
+  },
+  "new_candidates": "Docling et calibration OpenCV répondent à des lacunes précises ; autres propositions réemploient les composants ou méthodes existants.",
+  "domain_map": [
+    {
+      "domain": "scope",
+      "gaps": [
+        "G00",
+        "G14"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "installation",
+      "gaps": [
+        "G00",
+        "G04"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "reprise",
+      "gaps": [
+        "G00",
+        "G02",
+        "G11",
+        "G12"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "memory",
+      "gaps": [
+        "G01",
+        "G02",
+        "G11"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "knowledge",
+      "gaps": [
+        "G01",
+        "G02",
+        "G07",
+        "G14"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "agent",
+      "gaps": [
+        "G04",
+        "G05",
+        "G11",
+        "G14"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "voice",
+      "gaps": [
+        "G04",
+        "G05"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "three_screens",
+      "gaps": [
+        "G03"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "cad",
+      "gaps": [
+        "G06",
+        "G10"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "fabrication",
+      "gaps": [
+        "G03",
+        "G06",
+        "G07"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "planning",
+      "gaps": [
+        "G08"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "stock",
+      "gaps": [
+        "G07",
+        "G08"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "pricing",
+      "gaps": [
+        "G08",
+        "G13"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "commercial",
+      "gaps": [
+        "G13"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "studio",
+      "gaps": [
+        "G09",
+        "G10",
+        "G13"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "growth",
+      "gaps": [
+        "G09",
+        "G13"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "multimodal",
+      "gaps": [
+        "G01",
+        "G03",
+        "G05",
+        "G09"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "vision",
+      "gaps": [
+        "G03"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "tools",
+      "gaps": [
+        "G00",
+        "G06",
+        "G10",
+        "G11"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "telemetry",
+      "gaps": [
+        "G12"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "notifications",
+      "gaps": [
+        "G12"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "reporting",
+      "gaps": [
+        "G08",
+        "G09",
+        "G12",
+        "G13"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    },
+    {
+      "domain": "learning",
+      "gaps": [
+        "G02",
+        "G14"
+      ],
+      "scope": "besoins, sources et recettes ciblés ; ne représente pas lecture exhaustive du code"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G00",
+      "domains": [
+        "scope",
+        "installation",
+        "reprise",
+        "tools"
+      ],
+      "priority": "P0",
+      "gap": "Catalogue V3 et code actuel ne décrivent plus le même rôle des modèles ; cible matérielle déclarée, ressources libres non relevées.",
+      "candidate": "Inventaire local et registre réconcilié, sans nouveau moteur",
+      "repo_status": "Qwen3.5:4b-q4_K_M et qwen3-embedding:0.6b dans model_setup.py ; registre décrit encore EmbeddingGemma initial",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "BOJART b030fa43837d0dbc5b39e8d9024746528e465e8b",
+      "license": "Code BOJART selon dépôt ; chaque modèle/runtime licence séparée",
+      "interface": "model_setup.plan ; target-profile.json ; versions/digests/pilote enregistrés",
+      "resources": "Ryzen 5 5600G, 16 Go actuels et 32 Go prévus ; RTX 4060 Ti avec 8 Go affichés. Marges RAM/VRAM inconnues. Politique proposée : un traitement lourd à la fois et ASR sur CPU initialement.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "Inventaire matériel daté",
+        "Espace libre",
+        "Digest des poids",
+        "Version du pilote",
+        "Processus concurrents"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Comparer les 23 entrées du registre au code ; distinguer candidat, adaptateur présent, exécutable disponible et composant qualifié.",
+          "Essayer séparément puis ensemble mémoire/chat, ASR et rendu/OCR ; relever RAM, VRAM, p95 et échecs.",
+          "Conserver le repli FTS sans modèle et la restauration sans dépôt ; aucun gain attribué aux 32 Go avant leur installation."
+        ],
+        "threshold_origin": "Politique et critères BOJART proposés, pas résultats mesurés."
+      },
+      "sources": [
+        "faster-whisper",
+        "ct2-hardware",
+        "docling-rtx"
+      ],
+      "limits": [
+        "Aucun diagnostic live de la tour effectué.",
+        "Budget octets du prompt n’est pas un comptage exact de tokens."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G01",
+      "domains": [
+        "knowledge",
+        "memory",
+        "multimodal"
+      ],
+      "priority": "P1",
+      "gap": "PDF scannés, doubles colonnes et tableaux perdent structure/provenance avec extraction texte seule.",
+      "candidate": "Docling standard dans un sous-processus isolé ; pypdf et Tesseract comme comparatifs simples",
+      "repo_status": "Candidat absent du catalogue des 23 outils ; pypdf et Tesseract sont déjà candidats.",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Docling 2.145.0, release du 29 octobre 2026",
+      "license": "MIT pour le code ; licences des modèles, moteurs OCR et dépendances à inventorier.",
+      "interface": "DocumentConverter.convert → DoclingDocument JSON, pages, boîtes et tableaux ; ingestion dans la mémoire existante, sans second magasin vectoriel.",
+      "resources": "Windows et Python >=3.10 documentés ; CPU possible et GPU optionnel. Départ proposé : batch 1, files de taille 1 et 4 threads. Pics RAM/VRAM sur 16 Go inconnus.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "30 pages autorisées, comprenant PDF natifs, scans et tableaux",
+        "Réponses annotées par page et cellule",
+        "Langue, révision et produit",
+        "SHA-256 des originaux"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Geler 20 pages de développement et 10 pages hors réglage.",
+          "Comparer texte, ordre de lecture, valeurs et unités par cellule ; aucune inversion silencieuse de signe ou d’unité acceptée dans les champs critiques du lot.",
+          "Pour chaque assertion, retrouver original, page, boîte ou cellule, transformateur, version, poids et options.",
+          "Mesurer temps par page, pic RAM, échecs et délais dépassés ; ne pas remplacer un original valide après échec."
+        ],
+        "threshold_origin": "Critères BOJART proposés, pas performances garanties."
+      },
+      "sources": [
+        "docling-release",
+        "docling-doc",
+        "docling-offline",
+        "docling-rtx"
+      ],
+      "limits": [
+        "Une sortie OCR est une transcription à contrôler, pas une preuve sémantique de l’original.",
+        "Refuser les services distants ne bloque pas tous les téléchargements de poids ; préparer les artefacts puis tester hors réseau.",
+        "Aucun gain annoncé dans une documentation ne devient un résultat sur la RTX 4060 Ti."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G02",
+      "domains": [
+        "memory",
+        "reprise",
+        "knowledge",
+        "learning"
+      ],
+      "priority": "P0",
+      "gap": "Les nouveaux OCR et transcriptions doivent rester traçables sans casser le contrôle entre extrait et original corrigé en V4.",
+      "candidate": "Contrat de dérivé immuable dans la mémoire existante",
+      "repo_status": "Contrat proposé ; inspecter les extracteurs actuels avant intégration.",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Identifiant, version et digest d’extracteur à définir explicitement.",
+      "license": "Métadonnées BOJART ; droits de l’original conservés",
+      "interface": "Original → dérivé JSON ou texte versionné → chunks ; empreintes de chaque étape, relation parent et positions authentiques.",
+      "resources": "CPU et stockage ; expansion des images et pages et limites de fichier à mesurer.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "Original immuable",
+        "Extracteur et options",
+        "Runtime et digest des poids",
+        "Géométrie des pages",
+        "Confiance OCR, revueur et date",
+        "Décision de remplacement"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Altérer une cellule du dérivé : ne pas certifier excerpt_matches_source sans contrôle adapté.",
+          "Retraiter un original avec un nouvel OCR : créer une version distincte, sans écraser l’ancienne.",
+          "Sauvegarder et restaurer original, dérivé et preuve ; vérifier leur identité sans dépôt et l’isolation des projets.",
+          "Si l’extracteur est non déterministe, conserver trace, sortie figée et statut limité ; ne pas inventer une reproduction exacte des octets."
+        ],
+        "threshold_origin": "Invariants de provenance proposés."
+      },
+      "sources": [
+        "docling-doc",
+        "docling-offline",
+        "anthropic-context"
+      ],
+      "limits": [
+        "Contrat à concevoir et tester ; source_bytes_verified ne signifie pas exactitude sémantique de l’OCR."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G03",
+      "domains": [
+        "vision",
+        "multimodal",
+        "fabrication",
+        "three_screens"
+      ],
+      "priority": "P1",
+      "gap": "Une photo ou description VLM ne mesure pas un défaut ou une tolérance ; aucun corpus local de qualité atelier n’est qualifié.",
+      "candidate": "OpenCV pour calibration et ChArUco, avec photos contrôlées ; VLM facultatif pour la description.",
+      "repo_status": "Nouveau candidat pour calibration ; adaptateur vision antérieur seulement proposé",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "OpenCV 5.0.0 observé ; documentation de calibration 4.13.0 ; version d’essai à épingler après contrôle de compatibilité.",
+      "license": "Apache-2.0 pour OpenCV ; droits du jeu d’images à vérifier.",
+      "interface": "Images bornées → calibration, exposition et pose → mesures et annotations JSON → reçu séparé.",
+      "resources": "CPU initial pour la géométrie ; besoin GPU non établi. Caméra, objectif, éclairage et échelle physique inconnus.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "Pièces bonnes et défauts réels annotés",
+        "Échelle mesurée",
+        "Conditions d’éclairage",
+        "Calibration, résolution et objectif",
+        "Mesures de référence adaptées au besoin"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Proposition de lot : 50 images, avec 20 pièces bonnes, 20 défectueuses et 10 conditions dégradées ; séparer par pièce et séance.",
+          "Mesurer faux acceptés, faux rejets, abstention et erreur dimensionnelle contre une mesure physique.",
+          "Masquer l’échelle ou changer la focale : revenir à inconnu, sans annoncer une dimension précise.",
+          "Fixer les seuils métier avant l’essai ; aucune validation qualité sur la seule confiance du modèle."
+        ],
+        "threshold_origin": "Protocole de mesure proposé ; seuils métier non décidés."
+      },
+      "sources": [
+        "opencv-release",
+        "opencv-calibration",
+        "opencv-charuco"
+      ],
+      "limits": [
+        "Documentation 4.x et API 5 ne sont pas équivalentes sans test. Pipecat WebRTC impose OpenCV <5 : isoler les environnements ou résoudre les versions.",
+        "Trois vues navigateur ne qualifient pas trois moniteurs physiques."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G04",
+      "domains": [
+        "voice",
+        "installation",
+        "agent"
+      ],
+      "priority": "P0",
+      "gap": "ASR français en bruit d’atelier, nombres, unités, négations et annulation non qualifiés sur microphone réel.",
+      "candidate": "faster-whisper CPU/int8 actuel, avec corpus de réception français.",
+      "repo_status": "Code CPU à quatre threads et local_files_only ; poids et matériel à qualifier.",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "faster-whisper 1.2.1 et CTranslate2 4.8.4 épinglés.",
+      "license": "MIT pour les moteurs ; licence exacte des poids séparée.",
+      "interface": "WAV local → texte et horodatage → intention bornée ; confirmation indépendante.",
+      "resources": "CPU initial conservé. CUDA candidat après mesure ; contradiction documentaire cuDNN 8/9 à résoudre avant activation.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "60 énoncés consentis",
+        "Trois conditions sonores représentatives",
+        "Nombres décimaux et unités",
+        "Annulation et négation",
+        "Silence et audio non vocal"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Geler 40 énoncés de développement et 20 hors réglage, dans trois conditions, soit 180 clips ; ne pas utiliser uniquement du TTS.",
+          "Mesurer WER/CER et surtout intention/paramètres : 5,5 contre 55, mm contre cm, négation et nom du dossier.",
+          "Exiger zéro distribution sur silence, annulation ou demande ambiguë dans le lot ; compter explicitement les échecs.",
+          "Tester microphone débranché, clip tronqué, double fenêtre, réponse tardive et redémarrage ; aucun résultat périmé ne doit agir."
+        ],
+        "threshold_origin": "Critères de réception proposés, aucune mesure réelle."
+      },
+      "sources": [
+        "faster-whisper",
+        "ct2-install",
+        "ct2-hardware"
+      ],
+      "limits": [
+        "Un seuil WER ne garantit pas une décision sûre ; qualifier la prise courte en premier.",
+        "Aucune DLL tierce importée et aucun CUDA activé dans cette recherche."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G05",
+      "domains": [
+        "voice",
+        "agent",
+        "multimodal"
+      ],
+      "priority": "P2",
+      "gap": "La conversation continue exige gestion des tours, reprise et interruption mesurées, au-delà du transport audio.",
+      "candidate": "Pipecat avec transports minimaux et services locaux choisis",
+      "repo_status": "Candidat ; aucun remplacement du circuit guard/dispatch.",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Pipecat 1.15.0 ; Python >=3.11.",
+      "license": "BSD-2-Clause ; licences et coûts des voix, modèles et services distincts.",
+      "interface": "Frames audio/texte, UserTurnStrategies et LocalSmartTurnAnalyzerV3 ; résultats transmis au contrat Jarvis existant.",
+      "resources": "CPU/ONNX et modèles audio selon pipeline ; coût concurrent CPU/GPU inconnu ; aucun service payant sélectionné.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "Corpus de voix G04",
+        "Réponses TTS validées",
+        "Horodatages de début, fin et interruption",
+        "Priorité de l’annulation",
+        "État de réservation M07"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Rejouer 20 dialogues avec pauses dans une phrase, interruption TTS, toux, tour vide, reprise, déconnexion et annulation.",
+          "Mesurer fin de parole → premier son audible et délai d’arrêt TTS après interruption, p50/p95 ; fixer les seuils avant essai.",
+          "Conserver une seule distribution par intention et refuser les confirmations hors contexte ; distinguer fin de tour et autorisation."
+        ],
+        "threshold_origin": "Protocole proposé ; délais cibles non qualifiés."
+      },
+      "sources": [
+        "pipecat-release",
+        "pipecat-turn"
+      ],
+      "limits": [
+        "JevClassifier n’est pas un ASR ; ses appels distants ne sont ni gratuits ni autorisés implicitement.",
+        "Éviter téléphonie, cloud, avatars et multiples fournisseurs sans besoin."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G06",
+      "domains": [
+        "cad",
+        "fabrication",
+        "tools"
+      ],
+      "priority": "P0",
+      "gap": "Un mesh fermé ne prouve pas la fabricabilité ; tolérances, parois, orientation, supports et paramètres machine doivent être reliés aux exports.",
+      "candidate": "CadQuery et trimesh existants, puis OrcaSlicer ou PrusaSlicer selon le parc.",
+      "repo_status": "Composants CAO présents ; slicers candidats historiques ; profils du parc inconnus.",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Pins du dépôt à préserver ; versions de slicers observées en V3, pas prescriptions V5.",
+      "license": "Apache-2.0 pour CadQuery, MIT pour trimesh et AGPL-3.0 pour les slicers selon distribution.",
+      "interface": "STEP/STL/3MF → rapport de dimensions, unités, volume et maillage → tranchage local → aperçu et hash des profils.",
+      "resources": "CPU pour préflight et tranchage ; limites de complexité et délais à mesurer.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "Machine et révision",
+        "Buse ou écran selon procédé",
+        "Matière et lot",
+        "Profils versionnés",
+        "Orientation et supports",
+        "Tolérance cible",
+        "Cotes attendues"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Préparer 12 pièces : trois valides, trois erreurs d’unités/échelle, trois défauts de maillage/paroi et trois assemblages.",
+          "Comparer GUI et CLI avec les mêmes profils ; vérifier le gabarit et les empreintes des profils.",
+          "Le fichier de fabrication reste un artefact soumis à réception ; aucun upload ni démarrage.",
+          "Ne pas déduire une épaisseur minimale universelle ; critères liés au procédé, à la matière et à un coupon mesuré."
+        ],
+        "threshold_origin": "Protocole de qualification proposé."
+      },
+      "sources": [
+        "prusa-design",
+        "formlabs-wall"
+      ],
+      "limits": [
+        "Lavage et cure dépendent du produit et du matériel exacts.",
+        "Supports automatiques et mesh étanche ne certifient pas la résistance."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research",
+      "scenario_refs": [
+        "SCENARIO_VEGETA_1000MM.json"
+      ]
+    },
+    {
+      "id": "G07",
+      "domains": [
+        "stock",
+        "fabrication",
+        "knowledge"
+      ],
+      "priority": "P0",
+      "gap": "Des sources matériaux et maintenance sans produit, lot, révision et date conduisent à des réponses génériques non justifiées.",
+      "candidate": "Registre exact machines, matières, manuels et FDS, réutilisant SQLite et les originaux.",
+      "repo_status": "Données à collecter ; sources fabricant V3 référencées mais parc non inventorié.",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Révisions fabricant à figer lors de la collecte.",
+      "license": "Documents fabricant : droits propres ; redistribution intégrale non présumée.",
+      "interface": "Référence produit → document, révision, hash et page → profil mesuré → stock et lot.",
+      "resources": "Stockage documentaire ; aucune charge GPU nécessaire.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "Fabricant, référence et lot",
+        "Manuel et FDS, langue et date",
+        "Ouverture et stockage",
+        "Mouvements de stock avec unité",
+        "Dates et mesures d’entretien",
+        "Opérateur"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Préparer 15 fiches avec champs obligatoires ; laisser les données manquantes nulles et refuser le conseil spécifique.",
+          "Tester lot dupliqué, péremption, retrait de document et unité incompatible ; aucune fusion automatique de produits proches.",
+          "Pour une matière hors corpus, expliquer la donnée absente ; aucune recette universelle de température ou cure."
+        ],
+        "threshold_origin": "Contrat de données proposé."
+      },
+      "sources": [
+        "prusa-materials",
+        "formlabs-safety",
+        "formlabs-wall"
+      ],
+      "limits": [
+        "Prusa et Formlabs sont des sources exemples ; aucune machine de ces marques n’est présumée possédée."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G08",
+      "domains": [
+        "planning",
+        "pricing",
+        "stock",
+        "reporting"
+      ],
+      "priority": "P1",
+      "gap": "Le temps machine seul ignore l’opérateur, la finition, le nettoyage et les reprises ; coût réel inconnu.",
+      "candidate": "Table métier déterministe, puis OR-Tools CP-SAT si une limite du planning simple est mesurée.",
+      "repo_status": "OR-Tools candidat déjà catalogué ; aucune file de commandes physiques intégrée.",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "OR-Tools 9.15, release du 12 janvier 2026.",
+      "license": "Apache-2.0.",
+      "interface": "Intervalles machine/opérateur, précédences, NoOverlap et contraintes cumulatives ; proposition JSON avec statut du solveur.",
+      "resources": "CPU ; délai et mémoire à borner ; aucun besoin GPU établi.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "Gammes et temps opérateur",
+        "Temps machine observés",
+        "Finition selon produit",
+        "Calendriers",
+        "Stock",
+        "Échecs et reprises",
+        "Tarifs internes datés"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Construire 12 ordres, deux machines, un opérateur et un poste de finition ; vérifier les conflits à la main.",
+          "Injecter retard, absence et rupture de lot ; ne pas modifier une opération déjà en cours lors du recalcul.",
+          "Distinguer FEASIBLE, OPTIMAL et UNKNOWN ; conserver objectifs, bornes et délai.",
+          "Séparer matière, temps humain, énergie mesurée, convention machine et reprises ; montrer estimé/réel et coûts inconnus, sans envoyer de devis."
+        ],
+        "threshold_origin": "Modèle métier et recette proposés."
+      },
+      "sources": [
+        "ortools-release",
+        "ortools-job",
+        "ortools-status"
+      ],
+      "limits": [
+        "Le job shop amont n’ajoute pas automatiquement les humains et la finition.",
+        "Aucun gain de marge ni optimisation réelle démontrés ; montants à fournir."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G09",
+      "domains": [
+        "studio",
+        "multimodal",
+        "growth",
+        "reporting"
+      ],
+      "priority": "P1",
+      "gap": "Les médias ont besoin de masters, droits, repères temporels et dérivés vérifiables ; un outil génératif supplémentaire ne résout pas cette traçabilité.",
+      "candidate": "FFprobe + FFmpeg, avec montage et validation artistique dans les outils déjà présents",
+      "repo_status": "FFmpeg référencé partiellement ; adaptateur métier et build cible à inventorier",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "9.0.2 sources courantes observées ; binaire Windows non choisi",
+      "license": "LGPL2.1+ ou GPL selon build ; licences codecs/assets séparées",
+      "interface": "ffprobe JSON → manifeste média ; dérivés/proxies, sous-titres et images-clés horodatées ; loudnorm sur copie",
+      "resources": "CPU initial ; GPU d’encodage/rendu optionnel, simultanéité avec LLM à mesurer. Aucun modèle vidéo lourd proposé.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "master original et SHA",
+        "licence/consentement",
+        "fps/timebase/VFR",
+        "couleurs/transfert",
+        "audio canaux/fréquence",
+        "transcription et timestamps",
+        "validation artistique"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "10 médias : silence, piste absente, rotation, VFR, audio décalé, fichier tronqué ; échec explicite et originaux intacts.",
+          "Comparer durée, résolution, sync audio/vidéo et timecodes de 5 repères connus ; ne pas reconstruire des timestamps à partir du seul numéro d’image.",
+          "Exporter manifeste, miniature et sous-titres ; vérifier visuellement et écouter avant statut reçu.",
+          "Pour normalisation audio, conserver mesures avant/après et fréquence de sortie ; aucun seuil universel de diffusion présumé."
+        ],
+        "threshold_origin": "Critères BOJART proposés, pas chiffres garantis par les fournisseurs."
+      },
+      "sources": [
+        "ffmpeg-release",
+        "ffmpeg-legal",
+        "ffprobe",
+        "ffmpeg-filters"
+      ],
+      "limits": [
+        "La CLI peut ouvrir des URLs : l’adaptateur devra imposer entrées locales autorisées et arguments validés.",
+        "Aucun contenu n’est publié automatiquement."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G10",
+      "domains": [
+        "cad",
+        "studio",
+        "tools"
+      ],
+      "priority": "P1",
+      "gap": "Un connecteur Blender capable de Python arbitraire confond création assistée et accès complet au PC.",
+      "candidate": "Blender par opérations bornées et scripts relus, sans serveur MCP générique indispensable",
+      "repo_status": "Candidat de connecteur ; scènes et ressources artistiques existantes distinctes de son intégration Jarvis",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Branche5.2LTS V3 ; patch exact et binaire actuel à inventorier, pas actualisés dans ce lot",
+      "license": "GPL Blender ; add-ons et assets à vérifier individuellement",
+      "interface": "Contrat opération/paramètres → fichier de travail → rendu/export → reçu de version et image de contrôle",
+      "resources": "CPU pour préparation ; VRAM de rendu inconnue. Fermer ou décharger les modèles concurrents si les mesures l’exigent.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "scène master",
+        "unités/axes",
+        "caméra/éclairage",
+        "matériaux et assets autorisés",
+        "opérations approuvées",
+        "référence artistique et critères"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Trois opérations initiales : ouvrir une scène connue, produire un aperçu, exporter un objet nommé.",
+          "Interdire chemins hors espace de travail et paramètres qui deviennent du code ; entrée .blend inconnue soumise à revue.",
+          "Comparer géométrie, caméra et matériaux attendus ; reçu d’export distinct de validation artistique.",
+          "Conserver original et dérivé ; contrôle des scripts embarqués et des add-ons."
+        ],
+        "threshold_origin": "Critères BOJART proposés, pas chiffres garantis par les fournisseurs."
+      },
+      "sources": [
+        "blender-security"
+      ],
+      "limits": [
+        "--disable-autoexec n’est pas une sandbox et ne neutralise pas un script lancé explicitement.",
+        "Documentation latest a retourné402 ; connaissance de sécurité corroborée par extrait officiel versionné 5.1."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G11",
+      "domains": [
+        "agent",
+        "tools",
+        "reprise",
+        "memory"
+      ],
+      "priority": "P0",
+      "gap": "Le MCP stdio local testé ne démontre pas découverte, limites ni autorisations dans un véritable client Codex/Claude.",
+      "candidate": "Harness JSON-RPC existant + MCP Inspector optionnel épinglé + matrice client",
+      "repo_status": "8 outils existants ; Inspector non installé ; conserver serveur Python avant toute migration",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Inspector2.13.0 ; protocole BOJART2025-06-18, spec relue 2026-07-28",
+      "license": "Notice Inspector : transition Apache-2.0/MIT, docs CC-BY4.0 ; dépendances à relever",
+      "interface": "initialize → tools/list → tools/call sur état jetable ; journal appels/effets et négociation réelle",
+      "resources": "Node requis pour Inspector ; version/prérequis exacts à confirmer avant installation. Pas besoinGPU pour contrat.",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "catalogue actuel",
+        "schémas et tailles limites",
+        "fixtures publiques",
+        "allowlist lecture",
+        "sessions/projets isolés",
+        "journal appels"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Dans chacun des deux clients : découvrir les8 outils, appel valide/invalide, absence de source, gros résultat, redémarrage et refus d’un outil inexistant.",
+          "Mode audit : exposer 7 outils de lecture ; memory_note ne doit écrire que dans l’état jetable lors de son test explicite.",
+          "Une source qui demande commande shell/transfert ne produit aucun effet ; relever réseau et mutations pour la recette.",
+          "Les annotations readOnlyHint/idempotentHint n’accordent aucune permission ; vérifier le comportement effectif."
+        ],
+        "threshold_origin": "Critères BOJART proposés, pas chiffres garantis par les fournisseurs."
+      },
+      "sources": [
+        "mcp-inspector",
+        "mcp-tools",
+        "mcp-security",
+        "skill-anthropic"
+      ],
+      "limits": [
+        "La différence de dates de protocole seule ne prouve pas incompatibilité.",
+        "Évaluateur tiers Anthropic non sélectionné : appels réels possibles ; conserver faux fournisseurs et plafonds explicites."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G12",
+      "domains": [
+        "telemetry",
+        "notifications",
+        "reporting",
+        "reprise"
+      ],
+      "priority": "P0",
+      "gap": "Une donnée machine périmée ou un message accepté par un prestataire peut être confondu avec état courant ou livraison certaine.",
+      "candidate": "Connecteur télémétrie minimal + journal de propositions/notifications dans le socle existant",
+      "repo_status": "Moonraker/OctoPrint candidats V3 ; adaptation exacte dépend du parc ; pas nouveau broker par défaut",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "API/commit hôte à relever, inconnu actuellement",
+      "license": "Licences déjà documentées V3, à confirmer sur l’hôte et les plugins effectifs",
+      "interface": "GET/subscribe en liste blanche ; observed_at/received_at/TTL ; proposition notification → autorisation distincte → reçu transport",
+      "resources": "CPU/réseau local ; aucunGPU ; délai et fréquence adaptés au besoin, inconnus à mesurer",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "appareil/protocole exacts",
+        "unités et horloges",
+        "événements autorisés",
+        "destinataire approuvé",
+        "déduplication/expiration",
+        "règle de reprise après silence"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Injecter déconnexion, duplicata, événement hors ordre, horloge décalée et champ absent : état stale/unknown conservé, pas faux zéro.",
+          "Préparer 10 notifications locales dont doublons et réponse perdue ; distinguer préparée, tentative, acceptée, livrée et unknown.",
+          "Aucune commande de chauffe/mouvement/upload/start ; aucune notification externe dans cette recherche."
+        ],
+        "threshold_origin": "Critères BOJART proposés, pas chiffres garantis par les fournisseurs."
+      },
+      "sources": [
+        "mcp-security",
+        "mcp-tools"
+      ],
+      "limits": [
+        "Les sources machine précises sont les liens du registre V3 ; pas revalidation d’un appareil réel ici.",
+        "Une API authentifiée n’est pas intrinsèquement en lecture seule."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G13",
+      "domains": [
+        "commercial",
+        "growth",
+        "studio",
+        "pricing",
+        "reporting"
+      ],
+      "priority": "P1",
+      "gap": "Les résultats commerciaux et créatifs ne doivent pas être déduits de la disponibilité d’un site ou d’un contenu généré.",
+      "candidate": "Registre des briefs, devis brouillons, validations artistiques et événements métier existant",
+      "repo_status": "Audit sites et chaîne créative confié au parent ; cette proposition couvre données/mesure, pas nouvelle intégration",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Schémas métier à fixer sur code V5",
+      "license": "Données client/œuvres : droits et règles métier à définir ; aucun service externe choisi",
+      "interface": "brief → devis brouillon → validation → fabrication → média → publication séparée ; événements attribués à une version",
+      "resources": "CPU/SQLite ; coûts humains et services inconnus",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "brief et objectif",
+        "devis versionné",
+        "preuve de validation",
+        "temps/coût réels",
+        "source de demande",
+        "droits médias",
+        "mesure résultat et période sans données"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "10 parcours synthétiques : brouillon, modification de devis, annulation, doublon de demande, refus artistique, source retirée.",
+          "Réconcilier coût/devis/facture seulement selon données présentes ; distinguer demande reçue, conversion et revenu observés.",
+          "Aucun envoi/publication/CRM réel ; la validation de parcours reste distincte du gain commercial."
+        ],
+        "threshold_origin": "Critères BOJART proposés, pas chiffres garantis par les fournisseurs."
+      },
+      "sources": [
+        "ffprobe",
+        "anthropic-context"
+      ],
+      "limits": [
+        "Cette recette est une recommandation de conception ; aucune hausse de conversion ou rentabilité prétendue."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    },
+    {
+      "id": "G14",
+      "domains": [
+        "learning",
+        "knowledge",
+        "agent",
+        "scope"
+      ],
+      "priority": "P1",
+      "gap": "Auto-apprentissage peut masquer modification de faits, entraînement ou réemploi d’erreurs du modèle.",
+      "candidate": "Boucle de retours revus + corpus de non-régression, dans la mémoire existante",
+      "repo_status": "Proposition de méthode ; aucun entraînement ni nouveau magasin actif",
+      "checked_at": "2026-11-02T00:12:27.217Z",
+      "version": "Versionner corpus et réponses attendues par SHA",
+      "license": "Droits/consentements des retours et pièces avant toute réutilisation",
+      "interface": "réponse+sources → correction humaine → proposition → décision explicite/supersession → cas de test",
+      "resources": "CPU pour validation déterministe ; appels modèles futurs mesurés et limités ; aucunGPU supplémentaire requis pour conserver les retours",
+      "cost": {
+        "license_fee": "No paid service selected; exact redistribution terms remain component-specific",
+        "operating_cost_eur": null,
+        "unknown_reason": "Électricité, temps humain, stockage, maintenance et éventuels services non mesurés."
+      },
+      "data_needed": [
+        "erreur originale",
+        "correction et motif",
+        "revueur/date",
+        "sources concernées",
+        "statut de décision",
+        "partition apprentissage/test"
+      ],
+      "qualification_recipe": {
+        "status": "proposed_not_executed",
+        "steps": [
+          "Geler un lot tenu à part avant modification ; mesurer précision des citations, abstention et non-régression après chaque lot.",
+          "Un avis utilisateur non confirmé reste une proposition ; une réponse du modèle ne devient jamais sa propre preuve.",
+          "Détecter contradiction et document périmé ; restaurer le corpus précédent sans effacer l’historique."
+        ],
+        "threshold_origin": "Critères BOJART proposés, pas chiffres garantis par les fournisseurs."
+      },
+      "sources": [
+        "anthropic-context",
+        "skill-trailofbits"
+      ],
+      "limits": [
+        "Collecter et réviser des connaissances n’est pas entraîner les poids du modèle.",
+        "Le petit benchmark mémoire V4 reste synthétique, post-implémentation initiale et non annotation indépendante."
+      ],
+      "installation_policy": "candidate_or_existing_component_only; no install, no credentials, no external effects in this research"
+    }
+  ],
+  "sources_file": "sources-recherche-v5.json",
+  "raw_sources_manifest": "primary-source-manifest.json",
+  "effects": {
+    "installs": 0,
+    "third_party_code_executed": 0,
+    "model_calls": 0,
+    "production_mutations": 0,
+    "external_messages": 0,
+    "hardware_benchmarks": 0
+  },
+  "limits": [
+    "Recettes proposées, pas réussites rapportées.",
+    "Lecture ciblée des manifestes et modules indiqués ; audit complet du code par les autres lots.",
+    "Versions amont observées ne prescrivent aucune mise à jour.",
+    "Coûts et besoins exacts de la tour restent inconnus."
+  ],
+  "skill_adaptation_file": "skills-adaptation-v5.json",
+  "datasets_file": "datasets-qualification-v5.json",
+  "user_scenario_file": "SCENARIO_VEGETA_1000MM.json"
+}

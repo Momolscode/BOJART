@@ -1,0 +1,31 @@
+{
+ "version": "bojart.figurine.spec.v1",
+ "source": "typed",
+ "request_normalized": "jarvis, cree-moi la figurine veille 3d imprimable dans une position stylee, iconique et remarquable.",
+ "character": {
+  "id": "veille",
+  "label": "Veille, la gardienne du trait",
+  "franchise": null,
+  "rights": "bojart_original"
+ },
+ "variant": "v1 — référence BOJ.ART interne",
+ "pose_intent": "iconic",
+ "expression": "déterminée",
+ "height_mm": 200.0,
+ "base_included": true,
+ "detail_level": "figurine de vitrine (lisible à 30 cm)",
+ "process": "FDM",
+ "nozzle_mm": 0.4,
+ "material": "PLA",
+ "assembly": "socle séparé, tenons détrompés",
+ "field_origin": {
+  "height_mm": "hypothèse de simulation",
+  "base_included": "hypothèse de simulation",
+  "process": "hypothèse de simulation",
+  "nozzle_mm": "hypothèse de simulation",
+  "material": "hypothèse de simulation"
+ },
+ "geometry_source": "procedural_sdf",
+ "llm_used": false,
+ "asr_tested": false
+}

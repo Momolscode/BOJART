@@ -1,0 +1,125 @@
+{
+  "files": [
+    {
+      "path": "BASE_METIER.html",
+      "bytes": 96518,
+      "sha256": "60e8bb14c0ef834f6a7345e0fcbe1f012c7117bc3530821f61a5bd89926dd211"
+    },
+    {
+      "path": "BASE_METIER.md",
+      "bytes": 63204,
+      "sha256": "3251eed479d3365878ccd715d7eff8d38508da8498b8e3a2a315e11843580e69"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2500,
+      "sha256": "383166b58c21eaf3373bc4d368cc33f2cad3a50f71693ca4b4f44d8fd13fb0f7"
+    },
+    {
+      "path": "app/base_metier.py",
+      "bytes": 10444,
+      "sha256": "6c83c4a7bcfdd5dff5e73580d7047b4e0a3d7d66cd9b160e39f83733ce3e3469"
+    },
+    {
+      "path": "data/contexte.json",
+      "bytes": 1596,
+      "sha256": "246b114e9d6a5bcae149bcdad709b0d48841c8c61a99672806edf7d4ded04b02"
+    },
+    {
+      "path": "data/fiches.json",
+      "bytes": 52631,
+      "sha256": "8ac541863087ba8d3e2e4cd565216532d9c1c3b938e550bcdfc17fbbc3246f9c"
+    },
+    {
+      "path": "data/index_metier.sqlite",
+      "bytes": 77824,
+      "sha256": "8db24a26e0b021bcaee48430622d7ea67686c490a947be9d2f8ee1a959ab588c"
+    },
+    {
+      "path": "data/procedures.json",
+      "bytes": 11399,
+      "sha256": "03ec24a2da2a63e51064ec613698d6a7064017cf1838f6e9cd1d26d6df8ae5ed"
+    },
+    {
+      "path": "data/registres_a_renseigner.json",
+      "bytes": 2898,
+      "sha256": "b8e582ac33de59787603c434443dd7277115ba0c76e40d88f32a7cb43eae7d18"
+    },
+    {
+      "path": "data/sources.json",
+      "bytes": 27453,
+      "sha256": "4a96a7fc4707d39d108a828943e772010e2811f53b2959a356fe2a1ce42d09d4"
+    },
+    {
+      "path": "docs/BILAN_LIVRAISON.md",
+      "bytes": 1908,
+      "sha256": "5b048e7c9645bf1fc38dcf11cb93fc2fb2603557a48857b2acc90a648758c254"
+    },
+    {
+      "path": "docs/EXEMPLES_JARVIS.md",
+      "bytes": 2205,
+      "sha256": "9fe448e872ba3f374ec811e9a3be631b9a0719a7e5a06f55dfbe6dc0f62ffa72"
+    },
+    {
+      "path": "docs/INTEGRATION_M03.md",
+      "bytes": 2206,
+      "sha256": "aeec781a68af32624172464479e7cab9fa01bd48da4e3ab29393ee96c301d852"
+    },
+    {
+      "path": "preuves/BIBLIOTHEQUE_DESKTOP.png",
+      "bytes": 233527,
+      "sha256": "ef31e0352047018f09b003b3265e64b89bbd1299319014111386d70ad207f263"
+    },
+    {
+      "path": "preuves/BIBLIOTHEQUE_MOBILE.png",
+      "bytes": 183378,
+      "sha256": "ae0e5554612c52695e50cbfe137cbcfcbb03f4736ab174da1bbf4f0fff69dc61"
+    },
+    {
+      "path": "preuves/ETAT_LIVRAISON.json",
+      "bytes": 1454,
+      "sha256": "8d48a26439b42f574e2ea7a0bcce9c49acd5e495e7b678597c100e0e7167ff3e"
+    },
+    {
+      "path": "preuves/PROVENANCE_REPRISE.json",
+      "bytes": 480,
+      "sha256": "56853bf7e92f04d5e42c8509473b78533da3e9459dbb59c122731736812cfd70"
+    },
+    {
+      "path": "preuves/RECHERCHES_TESTEES.json",
+      "bytes": 51315,
+      "sha256": "b9f2c1d2070bf4057f3f067947551e3b693acd1579ffd0593c2dfa2b9f6f1036"
+    },
+    {
+      "path": "preuves/TESTS_INTERFACE.json",
+      "bytes": 1616,
+      "sha256": "292970d57fb5d7b44cc36eeba28e34f5b09a3cb8e686efa2879948d2670a37d0"
+    },
+    {
+      "path": "preuves/TESTS_UNITAIRES.txt",
+      "bytes": 3559,
+      "sha256": "22584f6e2cda26dc2a9cce4bdcc128c859f74b0c82184cb9543aeb43371643d5"
+    },
+    {
+      "path": "preuves/exemple_recherche_resine.json",
+      "bytes": 5682,
+      "sha256": "aaf8f7f2a5325c326488e420c9d9aece598c1be715863d8bf72fa25cc9c83fe7"
+    },
+    {
+      "path": "skills/bojart-base-metier/SKILL.md",
+      "bytes": 1858,
+      "sha256": "b650802db744c164bbe76e09fef7ced22113afae5477dd5c2afef39c90826980"
+    },
+    {
+      "path": "tests/check_interface.py",
+      "bytes": 4015,
+      "sha256": "adf8fdfb2c39e23ca16b9336a842acf69429aed3bd7161868a16c8d5fca2c5c8"
+    },
+    {
+      "path": "tests/test_base_metier.py",
+      "bytes": 6894,
+      "sha256": "ce269d85a2edfe9d38a9c0dd13e9fbbe50983e4d16f4854c312a286057205e89"
+    }
+  ],
+  "note": "Intégrité du pack ; pas signature des sources tierces."
+}

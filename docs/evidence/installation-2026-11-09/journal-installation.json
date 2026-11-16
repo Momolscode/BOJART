@@ -1,0 +1,66 @@
+{
+  "schema": "bojart.installation-complete.v1",
+  "debut": "2026-11-09T22:37:23",
+  "manifeste_sha256": "a8aa17c92e2b418b47fd679104b5e506046dcd28e952bf3bd70ca1cb1f6d8907",
+  "options": {
+    "oui": true,
+    "simulation": false,
+    "profil": "speed",
+    "sans_voix": false,
+    "sans_figurine": false,
+    "sans_modeles": true,
+    "sans_banc": false,
+    "journal": "~/BOJART/installation/installation-20261109-223723.json"
+  },
+  "etat_initial": {
+    "systeme": "linux",
+    "python": "3.12.3",
+    "python_312": true,
+    "winget": null,
+    "ollama": null,
+    "ollama_actif": null,
+    "ffmpeg": "/usr/bin/ffmpeg",
+    "venv": false,
+    "verrous_windows": null,
+    "espace_libre_go": 26.5
+  },
+  "etapes": [
+    {
+      "id": "ffmpeg_installation",
+      "titre": "FFmpeg déjà présent",
+      "statut": "present",
+      "detail": "/usr/bin/ffmpeg",
+      "duree_s": 0.0
+    },
+    {
+      "id": "jarvis",
+      "titre": "Installer Jarvis complet (versions épinglées), voix et chaîne figurine comprises",
+      "statut": "ok",
+      "code_retour": 0,
+      "duree_s": 69.8
+    },
+    {
+      "id": "voix",
+      "titre": "Préparer la voix : poids faster-whisper « small » épinglés (~470 Mo), puis activation",
+      "statut": "ok",
+      "code_retour": 0,
+      "duree_s": 7.0
+    },
+    {
+      "id": "banc",
+      "titre": "Lancer le banc de contrôle (tests, scénarios, Windows)",
+      "statut": "ok",
+      "code_retour": 0,
+      "rapports": [
+        "~/BOJART/banc/banc-installation-20261109-223723.json",
+        "~/BOJART/banc/banc-installation-20261109-223723.md"
+      ],
+      "duree_s": 259.8
+    }
+  ],
+  "fin": "2026-11-09T22:42:59",
+  "synthese": {
+    "termine": true,
+    "reste_a_faire": []
+  }
+}

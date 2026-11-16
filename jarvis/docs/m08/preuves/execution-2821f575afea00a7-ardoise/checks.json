@@ -1,0 +1,106 @@
+{
+ "thresholds": {
+  "min_wall_mm": 0.8,
+  "fragile_wall_mm": 1.2,
+  "max_fragile_fraction": 0.02,
+  "max_thin_fraction": 0.002,
+  "height_tolerance_rel": 0.01,
+  "overhang_angle_deg": 45.0,
+  "stability_margin_mm": 3.0,
+  "source": "hypothèse de simulation FDM 0,4 mm, à remplacer par un profil mesuré"
+ },
+ "parts": [
+  {
+   "part": "figurine",
+   "measured": {
+    "triangles": 330280,
+    "watertight": true,
+    "winding_consistent": true,
+    "nonmanifold_edges": 0,
+    "bodies": 1,
+    "volume_cm3": 114.439,
+    "extents_mm": [
+     83.04,
+     74.4,
+     188.0
+    ],
+    "euler_number": -6,
+    "thickness_samples": 1500,
+    "thickness_ray_misses": 0,
+    "thickness_mm": {
+     "min": 2.11,
+     "p1": 3.405,
+     "p5": 3.867,
+     "median": 13.55
+    },
+    "thin_fraction": 0.0,
+    "fragile_fraction": 0.0,
+    "overhang_area_fraction": 0.0625
+   },
+   "eliminatory": [],
+   "warnings": []
+  },
+  {
+   "part": "socle",
+   "measured": {
+    "triangles": 1660,
+    "watertight": true,
+    "winding_consistent": true,
+    "nonmanifold_edges": 0,
+    "bodies": 1,
+    "volume_cm3": 57.075,
+    "extents_mm": [
+     85.48,
+     85.48,
+     18.0
+    ],
+    "euler_number": 2,
+    "thickness_samples": 600,
+    "thickness_ray_misses": 0,
+    "thickness_mm": {
+     "min": 1.999,
+     "p1": 2.998,
+     "p5": 2.998,
+     "median": 8.799
+    },
+    "thin_fraction": 0.0,
+    "fragile_fraction": 0.0,
+    "overhang_area_fraction": 0.002
+   },
+   "eliminatory": [],
+   "warnings": []
+  }
+ ],
+ "orientation_note": "surplombs mesurés dans l’orientation d’impression (socle retourné s’il est évidé)",
+ "assembly_height": {
+  "measured_mm": 200.0,
+  "target_mm": 200.0
+ },
+ "stability": {
+  "assembly_com_mm": [
+   1.97,
+   -1.54,
+   70.81
+  ],
+  "com_offset_from_base_centre_mm": 6.55,
+  "margin_to_base_edge_mm": 36.19,
+  "stable_static_estimate": true,
+  "method": "densité uniforme (remplissage réel non pris en compte) ; estimation statique, pas un essai"
+ },
+ "fit": {
+  "interference_volume_mm3": 0.0,
+  "fit_ok": true,
+  "clearance_per_side_mm": 0.2,
+  "note": "jeu numérique ; jeu réel à calibrer par une pièce test"
+ },
+ "detail_vs_process": {
+  "process": "FDM",
+  "xy_resolution_estimate_mm": 0.44,
+  "layer_mm": 0.15,
+  "smallest_intended_feature_mm": 3.405,
+  "reproducible": true,
+  "note": "estimation géométrique, pas une mesure sur pièce"
+ },
+ "eliminatory": [],
+ "verdict": "CONFORME_AUX_CRITERES_CALCULES"
+}

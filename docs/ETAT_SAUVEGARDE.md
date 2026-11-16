@@ -1,3 +1,5 @@
+> État historique de la consolidation créative. Pour le périmètre actuel incluant Jarvis et les sites, lire [CURRENT.md](../context/CURRENT.md).
+
 # BOJ.ART — État réel des transferts GitHub
 
 Mise à jour : 1 novembre 2026. Dépôt `Momolscode/BOJART`, branche `main`, visibilité **publique**.

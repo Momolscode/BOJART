@@ -1,63 +1,52 @@
-# BOJART — Marwin Studio
+# BOJ.ART — atelier, Jarvis et direction artistique
 
-Projet de direction artistique et de production audiovisuelle hybride pour les sculptures et créations de BOJ.ART.
+Installation de la mémoire pour le poste BOJ.ART : **[INSTALLER_DEMAIN.md](INSTALLER_DEMAIN.md)**. Installer avec `Installer_BOJART.cmd` ou `bash Installer_BOJART.sh`, puis lancer Jarvis. [Architecture mémoire](docs/memory/OUTILS_ET_ARCHITECTURE.md) · [Connexion MCP](docs/memory/MCP.md).
 
-> **État : recherche & développement.** Les essais de génération ne sont pas des films terminés ni des validations de qualité.
+**[Pilotage de BOJ.ART](docs/ORCHESTRATION.md)** : classement des sources, lots de revue et dépendances recalculés dans l’audit de chaque poussée.
 
-## Production en cours — 1 novembre 2026
+Point d’entrée consolidé : [contexte courant](context/CURRENT.md), [installation](docs/INSTALLATION.md), [passation](context/SESSION_HANDOFF.md).
 
-[**Le dernier geste — R03**](productions/le-dernier-geste/README.md) dispose d’une coupe de travail de **9,25 s**, 222 images, 24 i/s, 720 × 1280. Le dossier contient le script de montage reproductible, le découpage, les paramètres G1, la provenance sonore et les contrôles techniques.
+| Dossier | Contenu | État |
+|---|---|---|
+| `jarvis/` | M07, CAO, trois vues, Studio, Growth, base métier | Code local ; matériel à qualifier |
+| `bojart_memory/` | Import, versions, recherche sourcée, sauvegarde/restauration | Implémenté ; sans LLM ni accès automatique aux chats |
+| `creative/` | Direction, exigences et statut courant | R03 est une coupe de travail |
+| `productions/`, `runs/` | Scripts de montage, timelines, sources et essais | R01–R03 et générations historisées |
+| `sites/atelier/`, `sites/studio/` | Sources V11/V3 | Copies ; publications d’origine conservées |
+| `data/catalog/` | Empreintes et provenance | 1 060 emplacements, 1016 contenus distincts |
+| `data/knowledge/` | Affirmations, sources et contradictions | Distillation révisable |
 
-G1 est terminé ; le personnage animé reste l’ancien TEST19. Le plan d’éveil G2 définitif reste à produire. Les médias et archives demeurent dans le stockage privé, conformément à la politique ci-dessous. La R03 n’est pas un master final approuvé.
+**[Archives : état vérifié et restauration complète](docs/ETAT_ARCHIVES_2026-11-01.md).** Les trois branches de récupération conservent les 3 340 contenus de la collecte, restaurés depuis GitHub et comparés aux originaux. Une commande commune rassemble les trois parties. La sauvegarde historique reste séparée du runtime ; `main` contient aussi la sélection binaire précisément inventoriée sous `archive/2026-11-01/`.
 
-## Deux directions artistiques
+## Démarrer
 
-### Painted Reality — prioritaire
-Un pinceau entre en contact avec une sculpture brute ; la peinture se propage en respectant la matière et révèle l'œuvre. Signature recherchée : macro réaliste, transformation tactile, raccords motivés, fidélité au modèle physique.
+La mémoire seule fonctionne avec Python standard et SQLite FTS5 :
 
-### The Awakening
-Une sculpture devient subtilement vivante : respiration, regard, tension musculaire, interaction avec son socle. Signature recherchée : suspense, précision anatomique, caméra cinématographique.
+```bash
+python3 -m bojart_memory index-repo
+python3 -m bojart_memory search "Jev et voix" --project bojart.jarvis
+```
 
-## Pipeline cible
+Pour le poste complet, suivre [INSTALLATION.md](docs/INSTALLATION.md), puis `Lancer_BOJART.sh` ou `Lancer_BOJART.cmd`. Le lanceur indexe les documents sélectionnés et ouvre l’application. **Mémoire du projet** retrouve les passages avec provenance et numéros de lignes.
 
-1. **Préproduction** : sélection de l'œuvre, photographies authentiques, concept, storyboard et référence de mouvement.
-2. **Analyse** : PySceneDetect / TransNetV2, SAM 2, CoTracker, contrôle de provenance et droits.
-3. **Génération contrôlée** : image/vidéo avec modèles locaux ou hébergés ; prompt, paramètres, coût et limites conservés.
-4. **VFX physiques** : Blender (3D, fractures, débris), Fusion (tracking, occlusion, compositing).
-5. **Montage et son** : DaVinci Resolve, Fairlight, étalonnage et lecture mobile.
-6. **Contrôle qualité** : cohérence des personnages, mouvements, matière, colorimétrie, audio, licences et validation humaine.
+## Reprendre
 
-## Pistes de recherche
+Lire `context/CURRENT.md`, vérifier les sources du domaine concerné, importer les nouveaux documents localement, puis consigner les décisions avec leurs preuves. Voir [le protocole GitHub](docs/GITHUB_WORKFLOW.md) et [les données](docs/DATA_GOVERNANCE.md).
 
-- One-to-All Animation / Wan Animate : transfert de mouvement de personnages.
-- ComfyUI / Wan / LTX / HunyuanVideo : génération et workflows reproductibles.
-- OpenTimelineIO : échanges structurés de timelines.
-- Blender / Fusion / OpenColorIO : simulation et compositing.
+Les poids ASR, le micro, les moniteurs, le GPU et les imprimantes restent à qualifier sur la tour. Jev est facultatif et distant. Conversation continue, commandes physiques, publication sociale et synchronisation automatique des chats ne sont pas activées. Les sites et Jarvis partagent un dépôt, pas encore une base métier commune.
 
-Ces technologies sont des **candidates à tester**, non des composants installés ou validés.
+Le montage courant est **Le dernier geste R03** ; son plan G2 fidèle manque. Une réussite technique ne vaut pas validation artistique ou mesure d’audience.
 
-## Tests Higgsfield — 30 octobre 2026
+Les apports des autres sessions sont conservés : [recette R03](productions/le-dernier-geste/README.md), [recherche artistes](docs/RECHERCHE_ARTISTES.md), [pistes RTX](docs/PRODUCTION_RTX.md), [restauration des archives](docs/ARCHIVE_RESTAURATION.md) et [pipeline créatif historique](docs/CREATIVE_PIPELINE_HISTORIQUE.md).
 
-Les essais **The Awakening** et **Painted Reality** (Seedance 2.5, 5 s, 9:16, 720p) ont été générés à titre exploratoire.
+Les archives et médias simplement référencés ne sont pas tous hébergés ici. Les documents anciens sous `docs/historical/` décrivent leur époque ; le contexte courant distingue ce qui a été récupéré depuis. Voir [les preuves de consolidation](docs/evidence/consolidation-2026-11-01.json).
 
-Leur statut de génération ne vaut pas validation artistique. Les références authentiques et les droits des médias devront être vérifiés avant toute publication.
+Les ajouts simultanés sont intégrés : [audit et journal des générations](docs/OPERATIONS.md), `bojart_ops/`, `tests_ops/` et leur workflow GitHub. Ils complètent la mémoire documentaire ; les sauvegardes restent distinctes.
 
-## Politique du dépôt
+La [récupération étendue](docs/RECUPERATION_VERIFIEE_2026-11-01.md) décrit 3 340 contenus distincts et 6 445 emplacements. Leur présence sur les trois branches GitHub est désormais confirmée par une [restauration vérifiée](docs/evidence/recovery-resumption-2026-11-01.json). Ce périmètre ne certifie pas la récupération de toutes les conversations ni des fichiers du PC de l'atelier.
 
-Ce dépôt est **public** tant que sa visibilité n'a pas été modifiée. Les médias sources, archives complètes, notes privées, informations de clients et exports non validés ne doivent pas y être ajoutés.
+Le [démarrage et la reprise de session](docs/DEMARRAGE_ET_REPRISE.md) ajoutent le contrôle des moteurs natifs, l’export de contexte avec provenance et une recette de redémarrage/restauration.
 
-Voir [PRODUCTION.md](PRODUCTION.md) et [SECURITY.md](SECURITY.md).
+Le [dossier d’audit Jarvis du 1 novembre 2026](docs/audits/jarvis-installation-2026-11-01/README.md) réunit le schéma d’orchestration, les résultats datés, leurs limites, une recette de reproduction et une mission à transmettre à un auditeur. Le [workflow du dossier](https://github.com/Momolscode/BOJART/actions/workflows/jarvis-audit-dossier.yml) produit son ZIP vérifié.
 
-## Archives et continuité — mise à jour du 1er novembre 2026
-
-La mémoire historique disponible est progressivement versée dans `docs/historical/` : storyboard V25, registre R&D, manifeste V23, ancien bilan de consolidation et référence textuelle de la tour de contrôle. Les requêtes et résultats **Painted Reality** / **The Awakening** sont conservés dans `runs/higgsfield/`.
-
-**Portée de la sauvegarde :** les documents et métadonnées ont été publiés ; le ZIP de travail préparé localement, les 28 médias récupérés, les PDF originaux et les MP4 Higgsfield ne sont **pas tous stockés sur GitHub**. Une archive annoncée comme préparée ne signifie pas qu'elle a été poussée. Un inventaire indique explicitement les éléments non publiés et les vérifications nécessaires.
-
-Certaines images de la récupération historique montrent des personnes ou des captures de conversations non directement liées aux sculptures. Leur diffusion publique est suspendue tant que la provenance et les autorisations pertinentes ne sont pas vérifiées.
-
-## Audit des données et suivi des générations
-
-[Mode d’emploi opérationnel](docs/OPERATIONS.md) · [Audit du 1 novembre](docs/AUDIT_CONTINU_2026-11-01.md) · [Outils et essais](docs/OUTILS_ET_ESSAIS.md).
-
-Un contrôle technique couvre chaque push et chaque PR avec un inventaire SHA-256. Le journal local `bojart_ops` conserve requêtes, budgets, statuts et reçus sans appeler de fournisseur. L’analyse contextuelle des PR est programmée séparément ; les limites et les preuves figurent dans le mode d’emploi.
+Le [complément de récupération approfondie](docs/RECUPERATION_APPROFONDIE_2026-11-01.md) ajoute 62 originaux distincts, dont 57 médias et quatre captures de conversations. Le périmètre indexé atteint 3 402 originaux ; la restauration depuis GitHub est vérifiée, sans certifier l’intégralité des anciens chats.

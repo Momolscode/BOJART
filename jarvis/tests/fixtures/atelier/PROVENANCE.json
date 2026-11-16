@@ -1,0 +1,11 @@
+{
+  "schema": "bojart.fixture-provenance.v1",
+  "fichier": "prusaslicer-2.9.0-alpha1-metadonnees.gcode",
+  "origine": "https://raw.githubusercontent.com/prusa3d/PrusaSlicer/master/resources/test_data/test_vase.gcode",
+  "depot_observe": "prusa3d/PrusaSlicer, branche master à 30ef59195e0f3ee6f270b185bb5f9fb5f349f81f le 2026-11-02",
+  "sha256_original": "918379706e63abab93fda7cc8855b7ef52160aed27a7fc336466c11d1ca71933",
+  "octets_original": 109623,
+  "extraction": "Seules les lignes de commentaires de métadonnées (générateur, durée, filament, réglages) sont conservées ; aucun parcours d’outil.",
+  "licence_amont": "AGPL-3.0 (PrusaSlicer) ; extrait factuel de format utilisé comme cas de test.",
+  "lignes": 10
+}

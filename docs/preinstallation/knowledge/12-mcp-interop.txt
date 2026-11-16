@@ -1,0 +1,15 @@
+Qualifier le client MCP avant la reprise Claude
+Identifiant : 12-mcp-interop
+Projet : bojart.jarvis
+Statut : repo_observation_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+Le serveur BOJ.ART annonce MCP 2025-06-18 sur stdio ; la documentation courante présente aussi une révision 2026-07-28 avec distinction entre clients modernes et anciens. Cela impose un test d’interopérabilité, sans prouver automatiquement que le serveur existant est incompatible.
+Configurer le chemin absolu du Python isolé et le même BOJART_MEMORY_STATE que Jarvis. Avec le client réel choisi, tester démarrage, découverte des outils, recherche et contexte cité ; confirmer la version réellement négociée. Vérifier les effets de chaque outil : une lecture reste une lecture, memory_note ajoute seulement une proposition. Ne pas introduire de serveur tiers donnant exécution Python, shell ou commande machine au prétexte qu’il porte le nom MCP.
+
+Sources primaires :
+mcp-old — https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle
+mcp-current — https://modelcontextprotocol.io/specification/2026-07-28/basic/versioning
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

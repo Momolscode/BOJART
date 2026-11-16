@@ -1,0 +1,39 @@
+{
+  "version": "0.1",
+  "intent_types": [
+    "inspect",
+    "visualize",
+    "model",
+    "slice",
+    "schedule",
+    "publish_draft",
+    "execute_qualified"
+  ],
+  "input_required": [
+    "project_id",
+    "revision",
+    "intent",
+    "available_actions",
+    "evidence_refs"
+  ],
+  "output_required": [
+    "selected_action",
+    "reason",
+    "evidence_refs",
+    "requires_approval",
+    "status"
+  ],
+  "statuses": [
+    "proposed",
+    "validated",
+    "executed",
+    "failed",
+    "unknown"
+  ],
+  "policy": [
+    "model_never_executes_directly",
+    "unknown_machine_state_blocks_retry",
+    "approval_for_unqualified_physical_actions",
+    "no_external_transfer_without_authorization"
+  ]
+}

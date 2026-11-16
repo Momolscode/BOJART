@@ -1,0 +1,76 @@
+{
+  "approval": "géométrie numérique uniquement",
+  "context_sha256": "debf9152e6bc60c95bc46cd520552d7358d4e59d5c38195c2c0b08a14b3ccbfc",
+  "created_at": "2026-10-28T12:20:39.128494+00:00",
+  "files": {
+    "modele.json": {
+      "bytes": 616640,
+      "sha256": "9dfff398b3805e90b1a869acb0a9a242aefb0f2ab19bde85be81061ffb340003"
+    },
+    "parametres.json": {
+      "bytes": 188,
+      "sha256": "6a6d336ebc094b33341d87d40a60982cb1d829f0b12b0fa4024f42d68e51568e"
+    },
+    "recette_core.py": {
+      "bytes": 18302,
+      "sha256": "1c2d75af2b04d16acd80ef405736081c7cdd1b388582eb3d3d0dafcdf40b75d1"
+    },
+    "socle.step": {
+      "bytes": 36559,
+      "sha256": "6bb87ddec216c45a4fcb49b9f8072bf1972453791ab7fb015b488a3496ea5252"
+    },
+    "socle.stl": {
+      "bytes": 237684,
+      "sha256": "22c366de185c1d54a538b9a0bcf5d46ecf04409c292e033b4eb6a9e08db16c20"
+    },
+    "socle_metres.glb": {
+      "bytes": 86484,
+      "sha256": "9f3a78b8dc3bbbf99b8e2124f28d8d753f2c3821ae6f6562a8480fb5fe40735f"
+    }
+  },
+  "llm_used": false,
+  "operation_id": "000000000000000000000000000000b4",
+  "parameters": {
+    "chamfer_mm": 1.0,
+    "diameter_mm": 180.0,
+    "height_mm": 24.0,
+    "hole_diameter_mm": 6.0,
+    "pitch_mm": 96.0,
+    "upper_diameter_mm": 150.0,
+    "upper_height_mm": 4.0
+  },
+  "physical_commands_enabled": false,
+  "project_id": "BOJ-PILOTE-001",
+  "proof": {
+    "bounds_mm": [
+      180.0,
+      179.96441650390625,
+      24.0
+    ],
+    "cad_brep_valid": true,
+    "cadquery": "2.8.0",
+    "geometric_volume_cm3": 575.96,
+    "not_validated": [
+      "résistance / stabilité",
+      "ajustements réels",
+      "matière et profil",
+      "slicing",
+      "impression physique"
+    ],
+    "numerical_tolerance_mm": 0.15,
+    "solid_count": 1,
+    "stl_watertight": true,
+    "stl_winding_consistent": true,
+    "triangles": 4752,
+    "trimesh": "4.11.1",
+    "units": {
+      "glb": "m",
+      "step": "mm",
+      "stl": "mm : convention du manifeste"
+    }
+  },
+  "recipe_version": "bojart.socle.v1",
+  "revision": 1,
+  "schema": "bojart.mission01.receipt.v1",
+  "state": "READY"
+}

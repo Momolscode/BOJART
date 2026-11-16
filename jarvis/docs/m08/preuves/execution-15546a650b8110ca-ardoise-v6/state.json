@@ -1,0 +1,249 @@
+{
+ "task_id": "15546a650b8110ca",
+ "identity": {
+  "spec": {
+   "character": {
+    "id": "ardoise",
+    "label": "Ardoise, le duelliste des strates",
+    "franchise": null,
+    "rights": "bojart_original"
+   },
+   "pose_intent": "iconic",
+   "height_mm": 200.0,
+   "material": "PLA",
+   "process": "FDM"
+  },
+  "mesh_sha256": null,
+  "voxel": 0.4,
+  "pipeline": "bojart.figurine.pipeline.v1",
+  "sculpt": "bojart.ardoise.sdf.v6",
+  "fab": "bojart.fabrication.v3+bojart.socle.strates.v1",
+  "checks": "bojart.checks.v2"
+ },
+ "created": "2026-11-02T12:10:44+00:00",
+ "requests": [
+  {
+   "at": "2026-11-02T12:10:44+00:00",
+   "text": "Jarvis, crée-moi Ardoise 3D imprimable dans une position stylée, iconique et remarquable.",
+   "source": "typed",
+   "entry_point": {
+    "intent": "create_figurine",
+    "engine": "bojart.dialogue.fr.v2",
+    "provider": "rules_fr",
+    "requires_confirmation": true,
+    "message": "Figurine « Ardoise, le duelliste des strates », 200 mm, FDM PLA. Relisez la spécification ; la génération passe par la chaîne figurine."
+   },
+   "faults": [],
+   "duplicate_of_existing_task": false
+  }
+ ],
+ "steps": {
+  "intake": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:10:44+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T12:10:44+00:00",
+   "result": {
+    "received": "2026-11-02T12:10:44+00:00",
+    "source": "typed",
+    "text_length": 89
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 37.9,
+   "peak_rss_mb_children": 0.0
+  },
+  "transcription": {
+   "status": "NOT_TESTED",
+   "attempts": 1,
+   "started": "2026-11-02T12:10:44+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T12:10:44+00:00",
+   "result": {
+    "note": "Aucun enregistrement disponible : texte injecté au même point d’entrée. Reconnaissance vocale NON TESTÉE ; aucun score de confiance fabriqué."
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 37.9,
+   "peak_rss_mb_children": 0.0
+  },
+  "spec": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:10:44+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T12:10:44+00:00",
+   "result": {
+    "character": "Ardoise, le duelliste des strates",
+    "geometry_source": "procedural_sdf"
+   },
+   "outputs": {
+    "spec.json": "506484d4478f711dfc6d4e8acd7d73c93dc370b4296a9f90199f79da2292a7be"
+   },
+   "peak_rss_mb_process": 37.9,
+   "peak_rss_mb_children": 0.0
+  },
+  "pose_study": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:10:44+00:00",
+   "seconds": 6.165,
+   "finished": "2026-11-02T12:10:50+00:00",
+   "result": {
+    "chosen": "defi"
+   },
+   "outputs": {
+    "pose_study.json": "e0aa9c2ff48cff9315cb36fb18a3c2aacac44d383372a1f3b044c984cdd195f7"
+   },
+   "peak_rss_mb_process": 99.9,
+   "peak_rss_mb_children": 0.0
+  },
+  "geometry": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:10:50+00:00",
+   "seconds": 87.813,
+   "finished": "2026-11-02T12:12:18+00:00",
+   "result": {
+    "source": "procedural_sdf",
+    "character": "ardoise",
+    "pose": "defi",
+    "voxel_mm": 0.4,
+    "grid_estimate_mb": 146,
+    "bodies": 1,
+    "marching_cubes_residue_removed": 14,
+    "triangles": 771118
+   },
+   "outputs": {
+    "nominal.stl": "c30f66b4069a5c6b00317b8a1d3b2e4bce8ba3ac12fb5eab8f6e958108c87e0a"
+   },
+   "peak_rss_mb_process": 921.1,
+   "peak_rss_mb_children": 0.0
+  },
+  "assembly": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:12:18+00:00",
+   "seconds": 4.552,
+   "finished": "2026-11-02T12:12:23+00:00",
+   "result": {},
+   "outputs": {
+    "figurine.stl": "28ab5fe05b330cab38c3bfde932efb0d9e3ff39147b0e1ecb3f6ed7fbce95ab1",
+    "socle.stl": "d863334887eb564d553d32587e73f779335e0089077063f8062a1b348e22f33d",
+    "assembly.json": "fdb593c168a6dad0a509095defc15b2ab07d588262b899d1b0e16cc6ccace965"
+   },
+   "peak_rss_mb_process": 1221.9,
+   "peak_rss_mb_children": 0.0
+  },
+  "checks": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:12:23+00:00",
+   "seconds": 58.126,
+   "finished": "2026-11-02T12:13:21+00:00",
+   "result": {
+    "verdict": "CONFORME_AUX_CRITERES_CALCULES"
+   },
+   "outputs": {
+    "checks.json": "5dc0fae05573cadbdf3f89be8547af0b90a1e0141bb4bd2f6d44ad7374299cc5"
+   },
+   "peak_rss_mb_process": 2281.8,
+   "peak_rss_mb_children": 0.0
+  },
+  "renders": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:13:21+00:00",
+   "seconds": 84.409,
+   "finished": "2026-11-02T12:14:45+00:00",
+   "result": {
+    "engine": "Cycles CPU",
+    "samples": 32,
+    "note": "rendus argile sans texture, vue rapprochée du buste et vue maillage ; appréciation visuelle, pas une mesure"
+   },
+   "outputs": {
+    "rendus/figurine.blend": "2a956a468d9efe280ea94c0ab14c9c5d9b053ea39fb38fe4ec3061444fa6606e",
+    "rendus/vue_buste.png": "cf157e2cf326a2df1943b92043ccabb01121300e53ac77dbb6020d82069a1ca0",
+    "rendus/vue_dos.png": "0a9c261f9cd7009dc55b16f3c1df265629e38b9c5e30dcd2d88b6085265f5a74",
+    "rendus/vue_face.png": "c933f6affa2c0cbfb7d51737af0a99001b623dc01e831e7369d3579e43957e7b",
+    "rendus/vue_maillage_detail.png": "0e7043593180831625d44dd4bded398fe6938cfcb30638652d4bb7f3ba51d5c4",
+    "rendus/vue_profil_gauche.png": "82199b4eebe5f441633b445cd30e84698b5a0429609665d1e38a92ea38884cf5",
+    "rendus/vue_trois_quarts.png": "d4162005bb0cff4a92cd59ba50dca457cba48968d3700b43e5d4ddbdb422c932"
+   },
+   "peak_rss_mb_process": 2281.8,
+   "peak_rss_mb_children": 4341.7
+  },
+  "exports": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:14:45+00:00",
+   "seconds": 8.627,
+   "finished": "2026-11-02T12:14:54+00:00",
+   "result": {
+    "status": "DONE",
+    "objects_reread": 2,
+    "writer": "trimesh 5.2.0",
+    "slicer_settings_included": false
+   },
+   "outputs": {
+    "projet.3mf": "c8e9f8a6d39f99d328242bcf7d9cebbe7ec2ff5a010b796370a1e2af1e230d97"
+   },
+   "peak_rss_mb_process": 2281.8,
+   "peak_rss_mb_children": 4341.7
+  },
+  "slicing": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:14:54+00:00",
+   "seconds": 44.796,
+   "finished": "2026-11-02T12:15:39+00:00",
+   "result": {
+    "estimates": {
+     "socle": {
+      "estimated_time_normal": "3h 44m 4s",
+      "filament_mm": 11130.11,
+      "filament_cm3": 26.77,
+      "filament_g": 33.2,
+      "layer_count": 120,
+      "forbidden_header_present": true
+     },
+     "figurine": {
+      "estimated_time_normal": "11h 58m 43s",
+      "filament_mm": 33049.44,
+      "filament_cm3": 79.49,
+      "filament_g": 98.57,
+      "layer_count": 1253,
+      "forbidden_header_present": true
+     }
+    },
+    "sent_to_machine": false
+   },
+   "outputs": {
+    "tranchage/socle_impression.SIMULATION-NE-PAS-IMPRIMER.gcode": "a431d2bf113018eb58cabc7754f496d59646a98352aa7d2db80692f5e6c99d40",
+    "tranchage/figurine.SIMULATION-NE-PAS-IMPRIMER.gcode": "b1e166666edbd6b7cd9bac2c8d9dde7e6390efcf5a3431f4099cd4aeb91a9c06",
+    "tranchage/apercu_couches_figurine.png": "90be4d6c2f538d98a52cc184bac353bf72e20b6291e7fe57bb32571ba4670142",
+    "tranchage/profil_simulation.ini": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb",
+    "tranchage/tranchage.json": "9929c303ed557fce5edfc73a81af2cbaa75c63bc36f241ceac92175406fa0471"
+   },
+   "peak_rss_mb_process": 2281.8,
+   "peak_rss_mb_children": 4341.7
+  },
+  "manifest": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T12:15:39+00:00",
+   "seconds": 0.422,
+   "finished": "2026-11-02T12:15:39+00:00",
+   "result": {
+    "files": 21
+   },
+   "outputs": {
+    "manifest.json": "922497e1f7caf8e3129f2ba7f452ea3bb94bc0be455223629010e1cc492ee883"
+   },
+   "peak_rss_mb_process": 2281.8,
+   "peak_rss_mb_children": 4341.7
+  }
+ },
+ "ack_seconds": 0.0317,
+ "pose": "defi",
+ "status": "DONE"
+}

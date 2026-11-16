@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-30",
+  "corpus": {
+    "cards": 54,
+    "primary_source_references": 38,
+    "proposed_procedures": 10,
+    "record_templates": 8,
+    "documented_cards": 42,
+    "project_rule_cards": 12
+  },
+  "tests": {
+    "unit_tests": 40,
+    "unit_passed": 40,
+    "interface_checks": 19,
+    "interface_passed": 19,
+    "interface_method": "Chromium headless, HTML chargé en mémoire ; desktop 1440 et mobile 390 px ; pas de test du serveur M03."
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "system": "Linux"
+  },
+  "executed": {
+    "documentary_research": true,
+    "local_index": true,
+    "trained_model": false,
+    "inference_model": false,
+    "machine_operation": false,
+    "site_update": false,
+    "mission03_modified": false,
+    "credits_used": 0
+  },
+  "scope_limits": [
+    "Recherche lexicale seulement.",
+    "Les notices exactes du parc BOJ.ART restent à importer.",
+    "Présence d’un rapport déclarée ne prouve pas son authenticité ni sa réussite.",
+    "Aucun état matériel courant dans la bibliothèque.",
+    "Pas de scan automatique futur ni d’entraînement permanent du modèle.",
+    "Références consultées par pages ou extraits officiels ; aucun manuel complet redistribué."
+  ],
+  "test_fixes": [
+    "Export SQLite bloqué par transaction ouverte : commit ajouté puis export retesté.",
+    "Comptage des règles de projet corrigé à 12 après inventaire."
+  ]
+}

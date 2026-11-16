@@ -1,0 +1,80 @@
+BOJ.ART / JARVIS M06 — CONFIGURATION ET REPRISE
+31 octobre 2026
+
+Cette livraison contient du code, pas une installation sur la tour réelle.
+Le chat complet et les données locales de la tour ne sont pas inclus.
+
+1. CONSERVER LE TRAVAIL EXISTANT
+Créer une sauvegarde globale depuis M05 avant de remplacer le logiciel.
+Extraire M06 dans un nouveau dossier. Ne pas recopier le code dans le dossier
+de données. Garder les ZIP précédents. Le dossier de données mission05 reste
+utilisable : son nom est conservé volontairement pour éviter un espace vide.
+
+2. ENVIRONNEMENT PYTHON
+Depuis le dossier du code, avec Python 3.12 conseillé pour reproduire l’essai :
+  python -m venv .venv
+Windows :
+  .venv\Scripts\python.exe -m pip install -r requirements.txt
+  .venv\Scripts\python.exe -m pip install -r requirements-voice.txt
+Linux :
+  .venv/bin/python -m pip install -r requirements.txt
+  .venv/bin/python -m pip install -r requirements-voice.txt
+Les téléchargements ne démarrent qu’à l’exécution de ces commandes.
+Les dépendances Windows/GPU restent à qualifier ; la recette fournie est Linux.
+Le code fonctionne en règles locales si LangGraph manque.
+
+3. VOIX LOCALE
+Copier apps/jarvis/config.example.json vers un fichier de configuration local.
+Dans voice : mettre enabled à true et model_dir vers le dossier d’un modèle
+faster-whisper déjà téléchargé et vérifié. Les fichiers model.bin, config.json
+et tokenizer.json doivent être présents. Utiliser un modèle multilingue pour
+le français. Les poids ne sont pas livrés. Le moteur n’en télécharge pas lors
+d’une demande : local_files_only=True.
+Ne pas activer Ollama sans son modèle exact et sa qualification hors ligne.
+
+4. JEV FACULTATIF
+Garder désactivé pour un fonctionnement local sans envoi de phrase à TypeSafe.
+Pour le relier, définir BOJ_JEV_ENABLED=1 et TYPESAFE_API_KEY dans l’environnement
+privé du processus serveur. Utiliser le gestionnaire de secrets du poste.
+Ne jamais enregistrer la clé dans Git, ce TXT, un écran ou le navigateur.
+L’adaptateur utilise jev-1.14.0 et https://api.typesafe.ai/v1/systemone.
+La phrase et un indicateur de sélection sont transmis uniquement en cas de
+formulation non reconnue localement. Aucun audio ou média n’est transmis.
+La proposition de Jev doit actuellement être confirmée dans la régie.
+Aucun appel Jev réel n’a été effectué pendant la recette livrée.
+
+5. VÉRIFIER PUIS LANCER
+Avec le Python de l’environnement :
+  python tools/m06_preflight.py --config CHEMIN_CONFIG
+  python apps/jarvis/app/consolidated_workbench.py --state CHEMIN_DONNEES --config CHEMIN_CONFIG
+La première commande ne contacte aucun fournisseur et ne demande pas le micro.
+Lancer_Jarvis.cmd ou Lancer_Jarvis.sh fonctionne toujours avec le fichier de
+configuration par défaut apps/jarvis/config.json, s’il est présent.
+Depuis Dossiers, ouvrir la régie et ses trois vues. Les placer manuellement sur
+les écrans. Tester « Montre les dossiers au centre », puis un modèle sélectionné.
+Ne pas exposer le serveur 127.0.0.1 sur Internet.
+
+6. UTILISER LA VOIX
+Cliquer Parler à Jarvis, parler, puis Terminer la prise (15 s maximum).
+Les ordres connus contrôlent les vues. La création CAO reste soumise au formulaire
+et à la confirmation existants. Interrompre arrête la prise et la réponse parlée,
+pas une imprimante. Une seule fenêtre peut posséder le microphone.
+La réponse parlée nécessite une voix française locale dans le navigateur.
+Pas encore de mot d’éveil, de conversation continue ni de Pipecat actif.
+
+7. SI UNE RÉPONSE SE PERD
+Reprendre la même référence depuis le bouton de la régie. Ne pas créer une
+nouvelle demande pour « être sûr ». Un appel Jev de résultat inconnu ne sera
+pas répété automatiquement. Une restauration neutralise les approbations et
+les distributions d’affichage inachevées ; reformuler après vérification.
+
+8. RECETTE DE LA TOUR
+Tester une série de formulations françaises avec le vrai micro, le bruit
+habituel, les trois moniteurs et les haut-parleurs. Mesurer le délai complet,
+la compréhension, la fausse détection, les interruptions et les redémarrages.
+Qualifier ensuite les connecteurs de machines séparément. M06 n’envoie aucun
+ordre d’impression, aucune publication et aucun achat.
+
+Schémas : PIPELINE_M06.mmd et ATELIER_COMPLET.mmd.
+Recherche et limites : RECHERCHE_ET_INTEGRATION.md.
+Tests : docs/evidence/m06-2026-10-31.

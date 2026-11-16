@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="BOJ.ART — Jarvis, tour de contrôle sur trois écrans. Vue du parc, préparation des pièces, inspection 3D, œuvres et pilotage de l’atelier.">
+  <title>BOJ.ART — La tour de contrôle</title>
+  <link rel="icon" href="./assets/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./motion.css">
+  <link rel="stylesheet" href="./control.css">
+  <link rel="stylesheet" href="./signature.css">
+  <link rel="stylesheet" href="./visual.css">
+  <link rel="stylesheet" href="./fleet.css">
+  <link rel="stylesheet" href="./continuity.css">
+  <link rel="stylesheet" href="./studio.css">
+  <link rel="stylesheet" href="./project-studio.css">
+  <link rel="stylesheet" href="./preparation.css">
+  <link rel="stylesheet" href="./decisions.css">
+  <link rel="stylesheet" href="./inquiry.css">
+  <link rel="stylesheet" href="./integrity.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <input id="inquiry-input" type="file" accept=".json,application/json" hidden aria-label="Importer un export de demande BOJ.ART">
+  <a class="skip-link" href="#main">Aller au dashboard</a>
+  <div class="app-shell" id="app-shell">
+    <aside class="rail" aria-label="Navigation principale">
+      <a class="brand" href="?screen=pilotage" aria-label="BOJ.ART — Tour de contrôle"><img src="./assets/logo.webp" alt="BOJ.ART" width="64" height="70"></a>
+      <nav class="rail-nav">
+        <button class="nav-item" data-screen="panorama" aria-label="Tour de contrôle" title="Tour de contrôle"><span data-icon="screens"></span><span>Le poste</span><i></i></button>
+        <button class="nav-item" data-screen="atelier" aria-label="Atelier" title="Atelier"><span data-icon="printer"></span><span>Atelier</span><i></i></button>
+        <button class="nav-item" data-screen="pilotage" aria-label="Jarvis et pilotage" title="Jarvis et pilotage"><span data-icon="spark"></span><span>Jarvis</span><i></i></button>
+        <button class="nav-item" data-screen="creation" aria-label="Création" title="Création"><span data-icon="cube"></span><span>Création</span><i></i></button>
+      </nav>
+      <div class="rail-bottom">
+        <button class="nav-item" data-action="command" aria-label="Ouvrir Jarvis"><span data-icon="spark"></span><span>Jarvis</span></button>
+        <button class="nav-item" data-action="settings" aria-label="Réglages"><span data-icon="settings"></span><span>Réglages</span></button>
+        <span class="rail-signature">ART.<br>IN.<br>MOTION.</span>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="top-brand">BOJ.ART <span>/</span> <span class="top-label">LA TOUR DE CONTRÔLE</span></div>
+        <div class="top-actions">
+          <span class="mode-pill"><i></i> Poste de préparation</span>
+          <button class="icon-button" data-action="studio" aria-label="Ouvrir le Studio BOJ.ART" title="Studio de signature"><span data-icon="film"></span></button>
+          <button class="icon-button" data-action="screens" aria-label="Configurer les trois écrans" title="Les trois écrans"><span data-icon="screens"></span></button>
+          <button class="button immersion-toggle" data-action="immersive" aria-pressed="false"><span data-icon="expand"></span> Immersion</button>
+          <button class="command-shortcut" data-action="command"><span data-icon="spark"></span><span>Jarvis</span><kbd>⌘ K</kbd></button>
+        </div>
+      </header>
+      <main id="main" class="main" tabindex="-1">
+        <div class="opening"><p class="eyebrow">BOJ.ART / WORKSHOP</p><h1>L’ART PREND VIE.</h1><p>Ouverture de votre tour de contrôle…</p></div>
+      </main>
+      <footer class="footer"><span class="footer-brand">CRÉER. FABRIQUER. TRANSMETTRE.</span><button id="save-status" data-action="continuity" aria-live="polite"><i class="status-dot"></i> Conservation du journal</button><button data-action="motion" id="motion-button"><span data-icon="motion"></span><span>Motion activée</span></button></footer>
+    </div>
+  </div>
+  <div class="view-slash" aria-hidden="true"></div>
+  <dialog id="drawer" class="drawer" aria-labelledby="drawer-title"><div class="drawer-head"><div><p class="eyebrow" id="drawer-kicker">BOJ.ART / ATELIER</p><h2 id="drawer-title"></h2></div><button class="icon-button" data-action="close-dialog" aria-label="Fermer"><span data-icon="close"></span></button></div><div id="drawer-content"></div></dialog>
+  <dialog id="command-dialog" class="command-dialog" aria-labelledby="command-title"><div class="command-top"><span class="tiny-orb"></span><span class="eyebrow">JARVIS / CONSOLE DU PROJET</span><button class="icon-button" data-action="close-command" aria-label="Fermer Jarvis"><span data-icon="close"></span></button></div><h2 id="command-title">UNE INTENTION.<br>TOUT L’ATELIER.</h2><form id="command-form"><label for="command-input" class="sr-only">Votre commande</label><div class="command-field"><input id="command-input" placeholder="Jarvis, orchestre mon projet…" autocomplete="off" maxlength="250"><button class="button button-red" type="submit" aria-label="Exécuter la commande de démonstration"><span data-icon="arrow"></span></button></div></form><div class="command-suggestions"><button data-command="Orchestre mon projet">Orchestrer le projet</button><button data-command="Ouvre le centre de contrôle">Tout contrôler</button><button data-command="Montre le socle">Voir le socle</button></div><div class="command-receipt" id="command-receipt" role="status">Navigation et simulation disponibles. Voix locale et imprimantes à raccorder.</div><p class="micro-copy">Les actions machine restent simulées. Les fichiers STL sont traités dans votre navigateur.</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <input id="stl-input" type="file" accept=".stl" multiple hidden>
+  <input id="preparation-stl-input" type="file" accept=".stl" hidden>
+  <input id="backup-input" type="file" accept=".json,application/json" hidden>
+  <input id="asset-backup-input" type="file" accept=".bojassets,application/octet-stream" hidden>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "observed_on": "2026-11-01",
+  "scope": "User declaration and photo, not live target diagnostic",
+  "os": {
+    "family": "Windows",
+    "source": "user_direct",
+    "photo": "Windows 11 Professionnel Insider Preview 25H2, build 26220.9606"
+  },
+  "cpu": {
+    "model": "AMD Ryzen 5 5600G",
+    "frequency_photo_GHz": 3.9,
+    "source": "user_photo"
+  },
+  "ram_GB": {
+    "current_photo": 16,
+    "planned_user_decision": 32,
+    "upgrade_installed": false
+  },
+  "gpu": {
+    "model": "NVIDIA GeForce RTX 4060 Ti",
+    "model_source": "user_direct",
+    "memory_GB_photo": 8,
+    "dedicated_vram_live_verified": false,
+    "driver": null
+  },
+  "storage": {
+    "capacity_GB_photo": 932,
+    "free_GB": null
+  },
+  "other_upgrades": "open",
+  "target_qualified": false,
+  "unknowns": [
+    "free disk",
+    "GPU driver and dedicated VRAM diagnostic",
+    "motherboard/RAM kit compatibility",
+    "microphone",
+    "screen placement",
+    "exact printer inventory and interfaces"
+  ],
+  "source_document": "docs/preinstallation/DECISIONS_UTILISATEUR.txt",
+  "private_device_identifiers_included": false
+}

@@ -1,0 +1,160 @@
+test_display_closes (test_connection_lifetime.ConnectionLifetimeTests.test_display_closes) ... ok
+test_display_rolls_back_and_closes (test_connection_lifetime.ConnectionLifetimeTests.test_display_rolls_back_and_closes) ... ok
+test_empty_backup_still_verifies (test_connection_lifetime.ConnectionLifetimeTests.test_empty_backup_still_verifies) ... ok
+test_repeated_connections_do_not_emit_resource_warning (test_connection_lifetime.ConnectionLifetimeTests.test_repeated_connections_do_not_emit_resource_warning) ... ok
+test_store_closes_after_success (test_connection_lifetime.ConnectionLifetimeTests.test_store_closes_after_success) ... ok
+test_store_commits (test_connection_lifetime.ConnectionLifetimeTests.test_store_commits) ... ok
+test_store_rolls_back_and_closes (test_connection_lifetime.ConnectionLifetimeTests.test_store_rolls_back_and_closes) ... ok
+test_ambiguous_stop (test_consolidated.ContractTests.test_ambiguous_stop) ... ok
+test_bool_revision (test_consolidated.ContractTests.test_bool_revision) ... ok
+test_context_change_after_request (test_consolidated.ContractTests.test_context_change_after_request) ... ok
+test_extra_key (test_consolidated.ContractTests.test_extra_key) ... ok
+test_id_conflict (test_consolidated.ContractTests.test_id_conflict) ... ok
+test_known_command_local (test_consolidated.ContractTests.test_known_command_local) ... ok
+test_long_command (test_consolidated.ContractTests.test_long_command) ... ok
+test_no_delete (test_consolidated.ContractTests.test_no_delete) ... ok
+test_no_printer (test_consolidated.ContractTests.test_no_printer) ... ok
+test_parallel_retries (test_consolidated.ContractTests.test_parallel_retries) ... ok
+test_planning_explicit_demo (test_consolidated.ContractTests.test_planning_explicit_demo) ... ok
+test_reopen_preserves_receipt (test_consolidated.ContractTests.test_reopen_preserves_receipt) ... ok
+test_replay_no_duplicate (test_consolidated.ContractTests.test_replay_no_duplicate) ... ok
+test_revision_after_request (test_consolidated.ContractTests.test_revision_after_request) ... ok
+test_selection_required (test_consolidated.ContractTests.test_selection_required) ... ok
+test_speech_interrupt_not_machine_stop (test_consolidated.ContractTests.test_speech_interrupt_not_machine_stop) ... ok
+test_unicode (test_consolidated.ContractTests.test_unicode) ... ok
+test_unknown_selection (test_consolidated.ContractTests.test_unknown_selection) ... ok
+test_wrong_project (test_consolidated.ContractTests.test_wrong_project) ... ok
+test_wrong_revision (test_consolidated.ContractTests.test_wrong_revision) ... ok
+test_capabilities_honest (test_consolidated.HTTPTests.test_capabilities_honest) ... ok
+test_context (test_consolidated.HTTPTests.test_context) ... ok
+test_duplicate_query (test_consolidated.HTTPTests.test_duplicate_query) ... ok
+test_empty_search (test_consolidated.HTTPTests.test_empty_search) ... ok
+test_knowledge_page (test_consolidated.HTTPTests.test_knowledge_page) ... ok
+test_knowledge_real_results (test_consolidated.HTTPTests.test_knowledge_real_results) ... ok
+test_limit_validation (test_consolidated.HTTPTests.test_limit_validation) ... ok
+test_no_auth_context (test_consolidated.HTTPTests.test_no_auth_context) ... ok
+test_no_auth_knowledge (test_consolidated.HTTPTests.test_no_auth_knowledge) ... ok
+test_origin_rejected (test_consolidated.HTTPTests.test_origin_rejected) ... ok
+test_original_cad_retained (test_consolidated.HTTPTests.test_original_cad_retained) ... ok
+test_original_console_link (test_consolidated.HTTPTests.test_original_console_link) ... ok
+test_original_studio_retained (test_consolidated.HTTPTests.test_original_studio_retained) ... ok
+test_propose (test_consolidated.HTTPTests.test_propose) ... ok
+test_unauth_write_rejected (test_consolidated.HTTPTests.test_unauth_write_rejected) ... ok
+test_unbounded_actions_absent (test_consolidated.HTTPTests.test_unbounded_actions_absent) ... ok
+test_unknown_query_parameter (test_consolidated.HTTPTests.test_unknown_query_parameter) ... ok
+test_wrong_host (test_consolidated.HTTPTests.test_wrong_host) ... ok
+test_absolute_refused (test_preservation.Tests.test_absolute_refused) ... ok
+test_corruption_refused (test_preservation.Tests.test_corruption_refused) ... ok
+test_delivery_integrity (test_preservation.Tests.test_delivery_integrity) ... ok
+test_destination_case_insensitive (test_preservation.Tests.test_destination_case_insensitive) ... ok
+test_drive_refused (test_preservation.Tests.test_drive_refused) ... ok
+test_exact_restore (test_preservation.Tests.test_exact_restore) ... ok
+test_existing_refused (test_preservation.Tests.test_existing_refused) ... ok
+test_invalid_branch (test_preservation.Tests.test_invalid_branch) ... ok
+test_invalid_commit (test_preservation.Tests.test_invalid_commit) ... ok
+test_invalid_tag (test_preservation.Tests.test_invalid_tag) ... ok
+test_no_execute_plan (test_preservation.Tests.test_no_execute_plan) ... ok
+test_no_partial_restore_on_error (test_preservation.Tests.test_no_partial_restore_on_error) ... ok
+test_other_owner_refused (test_preservation.Tests.test_other_owner_refused) ... ok
+test_other_project_same_account_refused (test_preservation.Tests.test_other_project_same_account_refused) ... ok
+test_other_repo_refused (test_preservation.Tests.test_other_repo_refused) ... ok
+test_owner_ambiguous_not_defaulted (test_preservation.Tests.test_owner_ambiguous_not_defaulted) ... ok
+test_public_refused (test_preservation.Tests.test_public_refused) ... ok
+test_repo_injection_refused (test_preservation.Tests.test_repo_injection_refused) ... ok
+test_repo_valid (test_preservation.Tests.test_repo_valid) ... ok
+test_traversal_refused (test_preservation.Tests.test_traversal_refused) ... ok
+test_unlisted_entry_refused (test_preservation.Tests.test_unlisted_entry_refused) ... ok
+test_unselected_linked_account_refused (test_preservation.Tests.test_unselected_linked_account_refused) ... ok
+test_unverified_bundle (test_preservation.Tests.test_unverified_bundle) ... ok
+test_windows_refused (test_preservation.Tests.test_windows_refused) ... ok
+test_cards (test_readiness_research.ResearchTests.test_cards) ... ok
+test_cases_cover_six_domains (test_readiness_research.ResearchTests.test_cases_cover_six_domains) ... ok
+test_cases_not_misrepresented (test_readiness_research.ResearchTests.test_cases_not_misrepresented) ... ok
+test_destination_decision (test_readiness_research.ResearchTests.test_destination_decision) ... ok
+test_local_module_still_honest (test_readiness_research.ResearchTests.test_local_module_still_honest) ... ok
+test_no_material_capability_promised (test_readiness_research.ResearchTests.test_no_material_capability_promised) ... ok
+test_no_stale_destination_in_active_context (test_readiness_research.ResearchTests.test_no_stale_destination_in_active_context) ... ok
+test_sources (test_readiness_research.ResearchTests.test_sources) ... ok
+
+----------------------------------------------------------------------
+Ran 77 tests in 1.244s
+
+OK
+........................................................................ [ 29%]
+........................................................................ [ 59%]
+........................................................................ [ 89%]
+..........................                                          [100%]
+242 passed, 5 subtests passed in 25.23s
+test_all_sources_primary (test_base_metier.CorpusTests.test_all_sources_primary) ... ok
+test_budget_preserved (test_base_metier.CorpusTests.test_budget_preserved) ... ok
+test_counts (test_base_metier.CorpusTests.test_counts) ... ok
+test_current_not_overdue (test_base_metier.CorpusTests.test_current_not_overdue) ... ok
+test_documented_have_sources (test_base_metier.CorpusTests.test_documented_have_sources) ... ok
+test_domain_filter (test_base_metier.CorpusTests.test_domain_filter) ... ok
+test_empty_browse (test_base_metier.CorpusTests.test_empty_browse) ... ok
+test_every_card_is_nonexecuting (test_base_metier.CorpusTests.test_every_card_is_nonexecuting) ... ok
+test_fts_injection (test_base_metier.CorpusTests.test_fts_injection) ... ok
+test_index_exports_and_no_overwrite (test_base_metier.CorpusTests.test_index_exports_and_no_overwrite) ... ok
+test_invalid_domain (test_base_metier.CorpusTests.test_invalid_domain) ... ok
+test_invalid_limit (test_base_metier.CorpusTests.test_invalid_limit) ... ok
+test_invalid_price (test_base_metier.CorpusTests.test_invalid_price) ... ok
+test_long_query (test_base_metier.CorpusTests.test_long_query) ... ok
+test_missing_cost_not_zero (test_base_metier.CorpusTests.test_missing_cost_not_zero) ... ok
+test_no_automatic_execution_from_search (test_base_metier.CorpusTests.test_no_automatic_execution_from_search) ... ok
+test_no_invention_on_no_match (test_base_metier.CorpusTests.test_no_invention_on_no_match) ... ok
+test_no_universal_settings (test_base_metier.CorpusTests.test_no_universal_settings) ... ok
+test_overdue_warning (test_base_metier.CorpusTests.test_overdue_warning) ... ok
+test_price (test_base_metier.CorpusTests.test_price) ... ok
+test_procedures_nonautomatic (test_base_metier.CorpusTests.test_procedures_nonautomatic) ... ok
+test_proposed_are_explicit (test_base_metier.CorpusTests.test_proposed_are_explicit) ... ok
+test_recipe_bad_hash (test_base_metier.CorpusTests.test_recipe_bad_hash) ... ok
+test_recipe_bad_layer (test_base_metier.CorpusTests.test_recipe_bad_layer) ... ok
+test_recipe_empty (test_base_metier.CorpusTests.test_recipe_empty) ... ok
+test_recipe_matching_not_authorized (test_base_metier.CorpusTests.test_recipe_matching_not_authorized) ... ok
+test_recipe_revision_change (test_base_metier.CorpusTests.test_recipe_revision_change) ... ok
+test_reject_duplicate_source (test_base_metier.CorpusTests.test_reject_duplicate_source) ... ok
+test_reject_missing_source (test_base_metier.CorpusTests.test_reject_missing_source) ... ok
+test_reject_qualified_corpus (test_base_metier.CorpusTests.test_reject_qualified_corpus) ... ok
+test_scopes_present (test_base_metier.CorpusTests.test_scopes_present) ... ok
+test_search_cost (test_base_metier.CorpusTests.test_search_cost) ... ok
+test_search_hollow (test_base_metier.CorpusTests.test_search_hollow) ... ok
+test_search_identity (test_base_metier.CorpusTests.test_search_identity) ... ok
+test_search_maintenance (test_base_metier.CorpusTests.test_search_maintenance) ... ok
+test_search_tol (test_base_metier.CorpusTests.test_search_tol) ... ok
+test_templates_not_actual_data (test_base_metier.CorpusTests.test_templates_not_actual_data) ... ok
+test_unknown_hardware (test_base_metier.CorpusTests.test_unknown_hardware) ... ok
+test_unknown_nozzle_not_completed (test_base_metier.CorpusTests.test_unknown_nozzle_not_completed) ... ok
+test_warning_local_qualification (test_base_metier.CorpusTests.test_warning_local_qualification) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.017s
+
+OK
+test_baseline_feasible (test_planner.PlannerTests.test_baseline_feasible) ... ok
+test_bool_not_minutes (test_planner.PlannerTests.test_bool_not_minutes) ... ok
+test_calendar_break (test_planner.PlannerTests.test_calendar_break) ... ok
+test_digest_changes (test_planner.PlannerTests.test_digest_changes) ... ok
+test_duplicate_job (test_planner.PlannerTests.test_duplicate_job) ... ok
+test_fixed_downtime_no_overlap (test_planner.PlannerTests.test_fixed_downtime_no_overlap) ... ok
+test_input_not_mutated (test_planner.PlannerTests.test_input_not_mutated) ... ok
+test_late_status (test_planner.PlannerTests.test_late_status) ... ok
+test_missing_compatibility_blocked (test_planner.PlannerTests.test_missing_compatibility_blocked) ... ok
+test_negative_duration (test_planner.PlannerTests.test_negative_duration) ... ok
+test_no_commands (test_planner.PlannerTests.test_no_commands) ... ok
+test_no_operator (test_planner.PlannerTests.test_no_operator) ... ok
+test_no_optimality_claim (test_planner.PlannerTests.test_no_optimality_claim) ... ok
+test_no_overlap (test_planner.PlannerTests.test_no_overlap) ... ok
+test_no_plan_not_infeasibility_proof (test_planner.PlannerTests.test_no_plan_not_infeasibility_proof) ... ok
+test_no_real_data_permitted (test_planner.PlannerTests.test_no_real_data_permitted) ... ok
+test_precedences (test_planner.PlannerTests.test_precedences) ... ok
+test_print_hold_until_unload (test_planner.PlannerTests.test_print_hold_until_unload) ... ok
+test_reproducible (test_planner.PlannerTests.test_reproducible) ... ok
+test_station_not_double_counted (test_planner.PlannerTests.test_station_not_double_counted) ... ok
+test_unavailable_printer (test_planner.PlannerTests.test_unavailable_printer) ... ok
+test_wrong_process_rejected (test_planner.PlannerTests.test_wrong_process_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.083s
+
+OK
+All selected suites passed. No live model, microphone, printer or GitHub remote was tested.

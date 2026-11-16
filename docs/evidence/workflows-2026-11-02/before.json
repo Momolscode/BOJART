@@ -1,0 +1,79 @@
+{
+  "base_commit": "6cda578030b619c7b459515e77a34b80b2b5f396",
+  "engine": "missing_dependency",
+  "scope": "actual Python routing and SQLite, synthetic context, transcripts and peripherals; no audio, no browser",
+  "cases": [
+    {
+      "text": "Affiche le planning à gauche",
+      "status": "QUEUED",
+      "choice": "planning",
+      "display_commands": 1
+    },
+    {
+      "text": "Montre les dossiers au centre",
+      "status": "QUEUED",
+      "choice": "workspace",
+      "display_commands": 1
+    },
+    {
+      "text": "Ouvre la tour de contrôle",
+      "status": "QUEUED",
+      "choice": "tower",
+      "display_commands": 3
+    },
+    {
+      "text": "Jarvis, affiche le dashboard atelier !",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Affiche le dashboard dossiers",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Affiche le dashboard Studio",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Affiche le dashboard contenus",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Affiche le dashboard conception",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Affiche les trois dashboards",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Affiche un des dashboards",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Prépare un Végéta 3D d’un mètre de haut à répartir sur toutes les imprimantes",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    },
+    {
+      "text": "Lance toutes les impressions",
+      "status": "CLARIFY",
+      "choice": "clarify",
+      "display_commands": 0
+    }
+  ]
+}

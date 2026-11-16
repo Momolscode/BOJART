@@ -1,0 +1,1125 @@
+{
+  "schema": "bojart.orchestration-integration.v1",
+  "observed_at": "2026-11-01T23:00:49.291783+00:00",
+  "scope": "Local integration working tree with explicit input hashes. GitHub Actions independently validates the published commit.",
+  "parents": {
+    "integration_previous": "882b30d88788486be903910b5db95a13fcc9d322",
+    "main": "9c2a0fb47baf1b610e31d2deb800a5323bb9495e"
+  },
+  "environment": {
+    "os": "Linux",
+    "python": "3.12.14",
+    "node": "v24.22.1"
+  },
+  "suites": [
+    {
+      "suite": "memory",
+      "command": "python -m unittest discover -s tests -v",
+      "passed": 52,
+      "log_sha256": "37152a51a0f26b7d0ebdc97fba486b1d197b70f8dc2c1d9fc722496628dce450"
+    },
+    {
+      "suite": "agent",
+      "command": "python -m unittest discover -s tests_agent -v",
+      "passed": 78,
+      "log_sha256": "05325f418e6396f5bc4cd4b041ccc1eeb3f45f7dc845e356a5ce63329181d8ba"
+    },
+    {
+      "suite": "operations",
+      "command": "python -m unittest discover -s tests_ops -v",
+      "passed": 83,
+      "log_sha256": "19b39c4025c0e7d0c9b87170ae7c02ff6d4592cbf1372473a36d4537ca4b53e3"
+    },
+    {
+      "suite": "javascript",
+      "command": "node --test jarvis/tests/voice_endpoint.test.cjs jarvis/tests/memory_context.test.cjs",
+      "passed": 14,
+      "log_sha256": "793ec2a02f247dc87818c37305ad740e26baff7fae9784fb0eb9a97201ac8e08"
+    }
+  ],
+  "python_tests_passed": 213,
+  "new_scenarios": {
+    "qualification_dependencies": 16,
+    "session_collection": 5
+  },
+  "retrieval": {
+    "command": "python tools/evaluate_memory.py",
+    "before_integration_fix": {
+      "cases": 14,
+      "hits_at_5": 13
+    },
+    "final": {
+      "scope": "14 hand-authored lexical retrieval cases over selected documents; no generative-answer evaluation",
+      "cases": 14,
+      "hits_at_5": 14,
+      "results": [
+        {
+          "question": "Jev décideur voix",
+          "project": "bojart.jarvis",
+          "expected_source": "context/CURRENT.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/INSTALLATION.md",
+            "context/CURRENT.md",
+            "docs/ARCHITECTURE.md",
+            "docs/DATA_GOVERNANCE.md",
+            "docs/RESEARCH_2026-11-01.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "G2",
+          "project": "bojart.creative",
+          "expected_source": "creative/CURRENT.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "creative/CURRENT.md",
+            "data/knowledge/claims.jsonl",
+            "docs/ORCHESTRATION.md",
+            "productions/le-dernier-geste/STATUT_G2.json",
+            "docs/OPERATIONS.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "R03",
+          "project": "bojart.creative",
+          "expected_source": "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+          "hit_at_5": true,
+          "returned_sources": [
+            "productions/le-dernier-geste/README.md",
+            "creative/CURRENT.md",
+            "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json",
+            "productions/le-dernier-geste/STATUT_G2.json",
+            "ops/higgsfield-observations.json"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "restauration sauvegarde",
+          "project": "bojart.jarvis",
+          "expected_source": "docs/DATA_GOVERNANCE.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/DATA_GOVERNANCE.md",
+            "INSTALLER_DEMAIN.md",
+            "context/CURRENT.md",
+            "docs/memory/RESILIENCE.md",
+            "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "microphone voix",
+          "project": "bojart.jarvis",
+          "expected_source": "docs/INSTALLATION.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/INSTALLATION.md",
+            "docs/ORCHESTRATION.md",
+            "docs/DEMARRAGE_ET_REPRISE.md",
+            "INSTALLER_DEMAIN.md",
+            "docs/RECUPERATION_VERIFIEE_2026-11-01.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "V11 V3",
+          "project": "bojart.sites",
+          "expected_source": "sites/README.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "sites/README.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "LangGraph",
+          "project": "bojart.jarvis",
+          "expected_source": "context/CURRENT.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/memory/OUTILS_ET_ARCHITECTURE.md",
+            "docs/RESEARCH_2026-11-01.md",
+            "docs/DEMARRAGE_ET_REPRISE.md",
+            "INSTALLER_DEMAIN.md",
+            "context/CURRENT.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "destination GitHub",
+          "project": "bojart.jarvis",
+          "expected_source": "docs/GITHUB_WORKFLOW.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "data/knowledge/claims.jsonl",
+            "docs/ETAT_ARCHIVES_2026-11-01.md",
+            "docs/RECUPERATION_VERIFIEE_2026-11-01.md",
+            "docs/DATA_GOVERNANCE.md",
+            "docs/GITHUB_WORKFLOW.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "GPU imprimantes",
+          "project": "bojart.jarvis",
+          "expected_source": "context/CURRENT.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/memory/RESILIENCE.md",
+            "INSTALLER_DEMAIN.md",
+            "context/CURRENT.md",
+            "docs/DEMARRAGE_ET_REPRISE.md",
+            "docs/INSTALLATION.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "contacts profondeur sound design",
+          "project": "bojart.creative",
+          "expected_source": "creative/CURRENT.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "creative/CURRENT.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "OrcaSlicer UVtools tranchage",
+          "project": "bojart.jarvis",
+          "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "AE MCP Bridge Roto Brush",
+          "project": "bojart.creative",
+          "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "hashtags PeintureFigurine recherche",
+          "project": "bojart.creative",
+          "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "docs/ORCHESTRATION.md",
+            "docs/RECUPERATION_APPROFONDIE_2026-11-01.md",
+            "docs/OPERATIONS.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/ORCHESTRATION.md"
+          ],
+          "all_citations_verified": true
+        },
+        {
+          "question": "Search Console export CSV",
+          "project": "bojart.sites",
+          "expected_source": "docs/research/launch-toolchain-2026-11-01/README.md",
+          "hit_at_5": true,
+          "returned_sources": [
+            "data/knowledge/claims.jsonl",
+            "docs/ORCHESTRATION.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md",
+            "docs/research/launch-toolchain-2026-11-01/README.md"
+          ],
+          "all_citations_verified": true
+        }
+      ]
+    }
+  },
+  "startup": {
+    "command": "python tools/check_startup.py --abrupt --output .bojart-audit/startup-integration.json",
+    "result": {
+      "schema": "bojart.startup-acceptance.v1",
+      "observed_at": "2026-11-01T23:00:40.129109+00:00",
+      "python": "3.12.14",
+      "platform": "linux",
+      "launcher_started_twice": true,
+      "context_survives_restart": true,
+      "unclean_shutdown_tested": true,
+      "restart_method": "forced_process_kill",
+      "no_duplicate_versions_or_notes": true,
+      "backup_restore_verified": true,
+      "restored_without_source_repo": true,
+      "browser": null,
+      "provider_calls": 0,
+      "live_models_tested": false,
+      "physical_hardware_tested": false,
+      "data_scope": "temporary fixtures and selected public project context",
+      "tested_files_sha256": {
+        "tools/start_jarvis.py": "8261902e710dfd022f88e9dfd3f26b33ccfd530438888e920ad93b3b3a58f87d",
+        "tools/doctor.py": "d2e6b078396396d4d799b346633bce0dcd80d83e2139c218c7e68edde45c0ca1",
+        "bojart_memory/paths.py": "3f776181ca3ef620649fcc3017d74ecc34d0b24b7deee3883e46037b7bc7e1d6",
+        "bojart_memory/agent.py": "7cb0342a2d48c4e9578353a74e75ade1469edce377f44d12ee64f57c57054e71",
+        "bojart_memory/core.py": "45384ba83825905b17cd85b33a8549d77d16da19e8c2e1d93e32e01ab86db7a7",
+        "jarvis/apps/jarvis/app/consolidated_workbench.py": "6bb4d4162b658a9441b09969dfede320c9bd7f07b44ea2c7403775119e80bde4",
+        "jarvis/apps/jarvis/app/memory.html": "845087eaf551b64e62fb591152b36ee199865aee5a793995fb7c3ef2920892f6",
+        "jarvis/apps/jarvis/app/memory.js": "24b3463eb8d275b99fa945359b2f55659709d2203c7360364d8ed28ea8d27276",
+        "jarvis/apps/jarvis/app/memory.css": "9a406323d11db43094576a09e192de1ae7fdf13cd57750dbfcbbdf4721bfc1a5"
+      }
+    }
+  },
+  "orchestration": {
+    "commands": [
+      "python tools/audit_repository.py --output .bojart-audit",
+      "python tools/orchestrate.py --audit .bojart-audit/audit.json"
+    ],
+    "task_records": 11,
+    "qualification": {
+      "schema": "bojart.qualification-dependencies.v1",
+      "target_production_qualified": false,
+      "tools_executed": 0,
+      "tasks_executed": 0,
+      "summary": {
+        "tool_records": 26,
+        "data_requirements": 14,
+        "runtime_gates": 12,
+        "target_gates_qualified_by_this_report": 0
+      },
+      "ranking_method": "descending gate count, P0 active tool count, active tool count, stable ID",
+      "ranking_limit": "Declared dependencies only; not a probability, ROI or proof that collecting data is sufficient. Task prerequisites still apply.",
+      "datasets": [
+        {
+          "id": "printer_profiles",
+          "declared_status": "not_qualified",
+          "required_field_count": 10,
+          "required_fields": [
+            "printer_id",
+            "model",
+            "firmware",
+            "technology",
+            "build_volume_mm",
+            "accepted_file_formats",
+            "transport",
+            "authorized_endpoint_reference",
+            "qualified_profile_hash",
+            "last_qualification"
+          ],
+          "gate_ids": [
+            "cad_runtime",
+            "printer_fdm",
+            "printer_resin",
+            "production_safety"
+          ],
+          "active_tool_ids": [
+            "cadquery",
+            "manifold",
+            "moonraker",
+            "orcaslicer",
+            "trimesh",
+            "uvtools"
+          ],
+          "deferred_tool_ids": [
+            "ortools"
+          ],
+          "p0_tool_ids": [
+            "cadquery",
+            "moonraker",
+            "orcaslicer",
+            "trimesh",
+            "uvtools"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 4,
+          "active_tool_count": 6,
+          "p0_tool_count": 5
+        },
+        {
+          "id": "material_profiles",
+          "declared_status": "not_qualified",
+          "required_field_count": 9,
+          "required_fields": [
+            "material_id",
+            "technology",
+            "brand",
+            "batch",
+            "nozzle_or_exposure_profile",
+            "layer_height_mm",
+            "temperature_or_exposure_limits",
+            "shrinkage",
+            "fit_coupon_result"
+          ],
+          "gate_ids": [
+            "cad_runtime",
+            "printer_fdm",
+            "printer_resin"
+          ],
+          "active_tool_ids": [
+            "cadquery",
+            "manifold",
+            "orcaslicer",
+            "uvtools"
+          ],
+          "deferred_tool_ids": [],
+          "p0_tool_ids": [
+            "cadquery",
+            "orcaslicer",
+            "uvtools"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 3,
+          "active_tool_count": 4,
+          "p0_tool_count": 3
+        },
+        {
+          "id": "target_hardware",
+          "declared_status": "not_verified",
+          "required_field_count": 12,
+          "required_fields": [
+            "os_version",
+            "cpu",
+            "ram_gib",
+            "gpu_model",
+            "vram_gib",
+            "driver",
+            "cuda_runtime",
+            "microphone",
+            "monitor_ids",
+            "blender_version",
+            "after_effects_version",
+            "plugins_and_fonts"
+          ],
+          "gate_ids": [
+            "llm_qualified",
+            "screen_physical",
+            "speech_offline"
+          ],
+          "active_tool_ids": [
+            "aftereffects_mcp",
+            "aftereffects_native",
+            "comfyui",
+            "faster_whisper",
+            "pipecat"
+          ],
+          "deferred_tool_ids": [
+            "trellis2"
+          ],
+          "p0_tool_ids": [
+            "aftereffects_native",
+            "faster_whisper"
+          ],
+          "direct_task_ids": [
+            "target-inventory"
+          ],
+          "gate_count": 3,
+          "active_tool_count": 5,
+          "p0_tool_count": 2
+        },
+        {
+          "id": "execution_receipts",
+          "declared_status": "local_ledger_exists_provider_wiring_unqualified",
+          "required_field_count": 12,
+          "required_fields": [
+            "job_id",
+            "idempotency_key",
+            "input_hashes",
+            "provider",
+            "model_version",
+            "parameters_hash",
+            "budget_ceiling",
+            "authorization_reference",
+            "provider_receipt",
+            "output_hashes",
+            "state",
+            "reconciliation"
+          ],
+          "gate_ids": [
+            "jev_contract",
+            "production_safety"
+          ],
+          "active_tool_ids": [
+            "comfyui",
+            "higgsfield",
+            "langgraph",
+            "moonraker"
+          ],
+          "deferred_tool_ids": [
+            "nexrender"
+          ],
+          "p0_tool_ids": [
+            "higgsfield",
+            "langgraph",
+            "moonraker"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 2,
+          "active_tool_count": 4,
+          "p0_tool_count": 3
+        },
+        {
+          "id": "brand_bible",
+          "declared_status": "partial_context_not_full_approved_bible",
+          "required_field_count": 10,
+          "required_fields": [
+            "logo_master_reference",
+            "approved_palette",
+            "typeface_licenses",
+            "materials",
+            "motion_rules",
+            "sound_identity",
+            "approved_examples",
+            "rejected_examples",
+            "reviewer",
+            "version"
+          ],
+          "gate_ids": [
+            "social_publish",
+            "studio_identity"
+          ],
+          "active_tool_ids": [
+            "aftereffects_native",
+            "blender",
+            "remotion_skills"
+          ],
+          "deferred_tool_ids": [
+            "nexrender"
+          ],
+          "p0_tool_ids": [
+            "aftereffects_native",
+            "blender"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 2,
+          "active_tool_count": 3,
+          "p0_tool_count": 2
+        },
+        {
+          "id": "voice_corpus",
+          "declared_status": "synthetic_cases_exist_real_voice_missing",
+          "required_field_count": 10,
+          "required_fields": [
+            "sample_id",
+            "audio_reference",
+            "speaker_permission",
+            "expected_text",
+            "expected_intent",
+            "negation",
+            "noise_condition",
+            "cancellation",
+            "latency_ms",
+            "observed_result"
+          ],
+          "gate_ids": [
+            "llm_qualified",
+            "speech_offline"
+          ],
+          "active_tool_ids": [
+            "faster_whisper",
+            "pipecat"
+          ],
+          "deferred_tool_ids": [],
+          "p0_tool_ids": [
+            "faster_whisper"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 2,
+          "active_tool_count": 2,
+          "p0_tool_count": 1
+        },
+        {
+          "id": "production_history",
+          "declared_status": "not_available_in_reviewed_scope",
+          "required_field_count": 12,
+          "required_fields": [
+            "job_id",
+            "printer_id",
+            "profile_hash",
+            "material_id",
+            "quantity",
+            "planned_minutes",
+            "actual_minutes",
+            "setup_minutes",
+            "finishing_minutes",
+            "waste",
+            "failure",
+            "maintenance"
+          ],
+          "gate_ids": [
+            "printer_fdm",
+            "printer_resin"
+          ],
+          "active_tool_ids": [],
+          "deferred_tool_ids": [
+            "ortools"
+          ],
+          "p0_tool_ids": [],
+          "direct_task_ids": [],
+          "gate_count": 2,
+          "active_tool_count": 0,
+          "p0_tool_count": 0
+        },
+        {
+          "id": "reference_assets",
+          "declared_status": "partial_g2_identity_and_rig_missing",
+          "required_field_count": 12,
+          "required_fields": [
+            "asset_id",
+            "work_id",
+            "kind",
+            "authenticity",
+            "source_reference",
+            "sha256",
+            "angles",
+            "physical_dimensions_mm",
+            "rig_reference",
+            "textures",
+            "rights",
+            "artist_review"
+          ],
+          "gate_ids": [
+            "studio_identity"
+          ],
+          "active_tool_ids": [
+            "aftereffects_native",
+            "blender",
+            "opentimelineio",
+            "remotion_skills",
+            "trimesh"
+          ],
+          "deferred_tool_ids": [
+            "trellis2"
+          ],
+          "p0_tool_ids": [
+            "aftereffects_native",
+            "blender",
+            "trimesh"
+          ],
+          "direct_task_ids": [
+            "g2-source"
+          ],
+          "gate_count": 1,
+          "active_tool_count": 5,
+          "p0_tool_count": 3
+        },
+        {
+          "id": "shot_benchmarks",
+          "declared_status": "partial_historical_trials",
+          "required_field_count": 12,
+          "required_fields": [
+            "shot_id",
+            "goal",
+            "reference_asset_ids",
+            "engine_and_model",
+            "parameters",
+            "cost",
+            "elapsed_time",
+            "identity_review",
+            "contact_review",
+            "motion_review",
+            "audio_review",
+            "failure_reason"
+          ],
+          "gate_ids": [
+            "studio_identity"
+          ],
+          "active_tool_ids": [
+            "aftereffects_mcp",
+            "blender",
+            "comfyui",
+            "higgsfield"
+          ],
+          "deferred_tool_ids": [],
+          "p0_tool_ids": [
+            "blender",
+            "higgsfield"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 1,
+          "active_tool_count": 4,
+          "p0_tool_count": 2
+        },
+        {
+          "id": "offer_catalog",
+          "declared_status": "partial_offers_without_measured_capacity",
+          "required_field_count": 12,
+          "required_fields": [
+            "offer_id",
+            "scope",
+            "materials",
+            "dimensions",
+            "capacity",
+            "lead_time",
+            "price_or_quote_policy",
+            "margin_inputs",
+            "rights",
+            "shipping_area",
+            "landing_page",
+            "validation"
+          ],
+          "gate_ids": [
+            "site_quotes"
+          ],
+          "active_tool_ids": [
+            "marketing_skills",
+            "search_console",
+            "tiktok_search"
+          ],
+          "deferred_tool_ids": [],
+          "p0_tool_ids": [
+            "search_console",
+            "tiktok_search"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 1,
+          "active_tool_count": 3,
+          "p0_tool_count": 2
+        },
+        {
+          "id": "site_measurement",
+          "declared_status": "no_export_or_authenticated_measurement",
+          "required_field_count": 15,
+          "required_fields": [
+            "property",
+            "page",
+            "query",
+            "country",
+            "device",
+            "search_type",
+            "window",
+            "clicks",
+            "impressions",
+            "ctr",
+            "position",
+            "export_filters",
+            "coverage_limit",
+            "missing_value_policy",
+            "source_reference"
+          ],
+          "gate_ids": [
+            "site_quotes"
+          ],
+          "active_tool_ids": [
+            "marketing_skills",
+            "search_console"
+          ],
+          "deferred_tool_ids": [],
+          "p0_tool_ids": [
+            "search_console"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 1,
+          "active_tool_count": 2,
+          "p0_tool_count": 1
+        },
+        {
+          "id": "social_metrics",
+          "declared_status": "not_connected_no_metrics_retrieved",
+          "required_field_count": 15,
+          "required_fields": [
+            "platform",
+            "account_id",
+            "post_id",
+            "published_at",
+            "collected_at",
+            "window_start",
+            "window_end",
+            "timezone",
+            "metric_name",
+            "metric_value",
+            "unit",
+            "denominator",
+            "data_availability",
+            "source_reference",
+            "export_hash"
+          ],
+          "gate_ids": [
+            "social_publish"
+          ],
+          "active_tool_ids": [
+            "marketing_skills",
+            "tiktok_search"
+          ],
+          "deferred_tool_ids": [
+            "metricool"
+          ],
+          "p0_tool_ids": [
+            "tiktok_search"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 1,
+          "active_tool_count": 2,
+          "p0_tool_count": 1
+        },
+        {
+          "id": "source_corpus",
+          "declared_status": "partial_archives_and_curated_documents",
+          "required_field_count": 11,
+          "required_fields": [
+            "source_id",
+            "source_hash",
+            "revision",
+            "project",
+            "rights",
+            "original_reference",
+            "extraction_engine",
+            "page",
+            "units",
+            "review_status",
+            "supersedes"
+          ],
+          "gate_ids": [
+            "restore_drill"
+          ],
+          "active_tool_ids": [
+            "docling"
+          ],
+          "deferred_tool_ids": [],
+          "p0_tool_ids": [
+            "docling"
+          ],
+          "direct_task_ids": [],
+          "gate_count": 1,
+          "active_tool_count": 1,
+          "p0_tool_count": 1
+        },
+        {
+          "id": "ad_measurement",
+          "declared_status": "no_campaign_data_or_budget",
+          "required_field_count": 16,
+          "required_fields": [
+            "platform",
+            "advertiser_id",
+            "campaign_id",
+            "creative_id",
+            "offer_id",
+            "window",
+            "attribution_window",
+            "currency",
+            "spend",
+            "qualified_leads",
+            "quotes",
+            "sales",
+            "margin",
+            "approved_budget",
+            "stop_rule",
+            "source_reference"
+          ],
+          "gate_ids": [],
+          "active_tool_ids": [],
+          "deferred_tool_ids": [
+            "tiktok_business_mcp"
+          ],
+          "p0_tool_ids": [],
+          "direct_task_ids": [],
+          "gate_count": 0,
+          "active_tool_count": 0,
+          "p0_tool_count": 0
+        }
+      ],
+      "gates": [
+        {
+          "id": "cad_runtime",
+          "label": "CAO paramétrique",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "printers"
+          ],
+          "required_datasets": [
+            "material_profiles",
+            "printer_profiles"
+          ],
+          "pass_criteria": "Unités et cotes correctes ; limites machine respectées ; mesure physique liée au profil."
+        },
+        {
+          "id": "jev_contract",
+          "label": "Jev",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "voice-displays"
+          ],
+          "required_datasets": [
+            "execution_receipts"
+          ],
+          "pass_criteria": "Intentions hors catalogue refusées ; contexte conservé ; pas de second appel lorsque l'état est inconnu."
+        },
+        {
+          "id": "llm_qualified",
+          "label": "LLM local",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "voice-displays"
+          ],
+          "required_datasets": [
+            "target_hardware",
+            "voice_corpus"
+          ],
+          "pass_criteria": "Modèle identifié, latences mesurées, repli visible ; pas d'inférence depuis la présence d'un paquet."
+        },
+        {
+          "id": "printer_fdm",
+          "label": "FDM",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "printers"
+          ],
+          "required_datasets": [
+            "material_profiles",
+            "printer_profiles",
+            "production_history"
+          ],
+          "pass_criteria": "Bonne machine et bon fichier ; pièce inspectée ; pas de double envoi après incident."
+        },
+        {
+          "id": "printer_resin",
+          "label": "Résine",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "printers"
+          ],
+          "required_datasets": [
+            "material_profiles",
+            "printer_profiles",
+            "production_history"
+          ],
+          "pass_criteria": "Résultat physique vérifié ; exposition et matière connues ; capacités de lavage/cure et ventilation confirmées."
+        },
+        {
+          "id": "production_safety",
+          "label": "Sécurité",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "printers"
+          ],
+          "required_datasets": [
+            "execution_receipts",
+            "printer_profiles"
+          ],
+          "pass_criteria": "Aucun mouvement imprévu ; pas de transition automatique non qualifiée ; autorisation liée au travail exact."
+        },
+        {
+          "id": "restore_drill",
+          "label": "Sauvegarde",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "target-install"
+          ],
+          "required_datasets": [
+            "source_corpus"
+          ],
+          "pass_criteria": "Empreintes et références identiques ; aucun original perdu ; sources nouvelles retrouvables."
+        },
+        {
+          "id": "screen_physical",
+          "label": "Trois moniteurs",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "voice-displays"
+          ],
+          "required_datasets": [
+            "target_hardware"
+          ],
+          "pass_criteria": "Affichage observé sur le moniteur attendu ; trois reçus conservés ; reprise partielle sans changement d'enfants."
+        },
+        {
+          "id": "site_quotes",
+          "label": "Site et devis",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "sites-contract"
+          ],
+          "required_datasets": [
+            "offer_catalog",
+            "site_measurement"
+          ],
+          "pass_criteria": "Demande reçue sans doublon ; offre réalisable ; événement mesuré selon sa définition."
+        },
+        {
+          "id": "social_publish",
+          "label": "Publication",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "social-trial"
+          ],
+          "required_datasets": [
+            "brand_bible",
+            "social_metrics"
+          ],
+          "pass_criteria": "Bon compte, bon fichier et reçu/lien public ; collecte à fenêtre documentée. Brouillon seul = gate non réussi."
+        },
+        {
+          "id": "speech_offline",
+          "label": "Voix locale",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "voice-displays"
+          ],
+          "required_datasets": [
+            "target_hardware",
+            "voice_corpus"
+          ],
+          "pass_criteria": "Aucune action physique issue d'une ambiguïté ; erreurs et latences mesurées ; annulation correctement respectée."
+        },
+        {
+          "id": "studio_identity",
+          "label": "Studio vidéo",
+          "status": "not_run_on_target",
+          "task_ids": [
+            "master-review"
+          ],
+          "required_datasets": [
+            "brand_bible",
+            "reference_assets",
+            "shot_benchmarks"
+          ],
+          "pass_criteria": "Identité, contact, mouvement, raccord et audio approuvés séparément ; master récupéré et décodable."
+        }
+      ],
+      "sources": {
+        "tools": {
+          "path": "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json",
+          "sha256": "c005ec8231874b0a92513ecafbcc7cc1fa431afc2f84316f139fa014ed74be10",
+          "bytes": 20179
+        },
+        "data": {
+          "path": "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json",
+          "sha256": "d577bfb63a17270ce763369038e480ce5bdf23a8c38f754774334ec2c1f7ffc1",
+          "bytes": 9243
+        },
+        "acceptance": {
+          "path": "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json",
+          "sha256": "73fd9f07d1598d0ca0f5d2623a1aa6727a796fdfa4b0214e350c40d1d30ef181",
+          "bytes": 6182
+        },
+        "runtime_gates": {
+          "path": "jarvis/apps/jarvis/app/launch_readiness.py",
+          "sha256": "c84a04ac74f3043178d47b83e2cdbf1cf5af27881c4a7c7b3406585c80c206b6",
+          "bytes": 4474
+        }
+      }
+    },
+    "audit_ok": true,
+    "audit_warnings": [
+      {
+        "level": "warning",
+        "code": "asset_not_materialized",
+        "path": "productions/le-dernier-geste/ASSETS.json",
+        "message": "Required source absent: sources/v24044gl0000cuei73fog65q7gjmvfc0.mp4"
+      },
+      {
+        "level": "warning",
+        "code": "asset_not_materialized",
+        "path": "productions/le-dernier-geste/ASSETS.json",
+        "message": "Required source absent: TEST19_SOURCE.mp4"
+      },
+      {
+        "level": "warning",
+        "code": "asset_not_materialized",
+        "path": "productions/le-dernier-geste/ASSETS.json",
+        "message": "Required source absent: V21_MUSIQUE_ORIGINALE.mp3"
+      },
+      {
+        "level": "warning",
+        "code": "asset_not_materialized",
+        "path": "productions/le-dernier-geste/ASSETS.json",
+        "message": "Required source absent: R02_LE_DERNIER_GESTE/BOJART_G1_DERNIER_TRAIT_BRUT.mp4"
+      },
+      {
+        "level": "warning",
+        "code": "asset_not_materialized",
+        "path": "productions/le-dernier-geste/ASSETS.json",
+        "message": "Required source absent: R02_LE_DERNIER_GESTE/FOLEY_PINCEAU_BenDrain_preview.mp3"
+      }
+    ],
+    "contextual_coverage": "Not certified by this technical integration; no checkpoint used for the uncommitted working tree."
+  },
+  "tested_inputs_sha256": {
+    "INSTALLER_DEMAIN.md": "62369704cac60d78dc48719b535b9880837874cd402ad10808fe51e0c8e70078",
+    "bojart_memory/__main__.py": "b2c6769e28566613a7b044b27595cda20d9262332547047f3107e47b77badc25",
+    "bojart_memory/agent.py": "7cb0342a2d48c4e9578353a74e75ade1469edce377f44d12ee64f57c57054e71",
+    "bojart_memory/conversation.py": "3a8b41f6efcd11635bdb350e7c75a32cc3dbcacb994015b0166e5a81d9ceeaf7",
+    "bojart_memory/core.py": "45384ba83825905b17cd85b33a8549d77d16da19e8c2e1d93e32e01ab86db7a7",
+    "bojart_memory/indexing.py": "be4f6f87638f91a515fd8fe34331ef5be3f3b1a95a12d6956c28e5df85b2283b",
+    "bojart_memory/ollama.py": "392368e7a87e4349c2cabc7174d1daff6eb86c277fcf0816505048ee0e5c4d3c",
+    "bojart_memory/paths.py": "3f776181ca3ef620649fcc3017d74ecc34d0b24b7deee3883e46037b7bc7e1d6",
+    "bojart_ops/orchestration.py": "29bdedb5f530b44bd73185f4a050a5ca9de7b103dc95e1ba90ba46673625411d",
+    "bojart_ops/qualification.py": "ee489bedf74506add484d3644f71273f0b7e8179674c586899589fcbd9527998",
+    "context/CURRENT.md": "5b2da779a3cc19ca27e9f27ade57e25f36b54c45ad1f44ca3c365b5afa273574",
+    "context/SESSION_HANDOFF.md": "099fd5965f213fd495ae10fcfda952136e615d73590d3e3d4c3a31a38e88615b",
+    "creative/CURRENT.md": "a328317fbb1d89aea822d54721b93d008cc181ae9595de10de420eba000e536e",
+    "data/knowledge/claims.jsonl": "1a25d50ab9b68969660e997684951da843904fa4dab0ec65e71b009d73f5c1fd",
+    "data/knowledge/index.json": "31410d2b55e5c9bb3049288949089fff7b7e4208171e03993457c36b979da42b",
+    "data/knowledge/retrieval_cases.json": "10d0172b8f74b22c59b1cc1f0e72d9944b44528fb5c76fb5d6e562d3bd24b273",
+    "docs/ARCHITECTURE.md": "b2b8c4177f46bec51dd49ae790032ea3f0e5228c110cf679f2aadc8dbdf6fc94",
+    "docs/DATA_GOVERNANCE.md": "d709e109111a2ad441e8849432b1efdfe6eb619a1d758be755cd122d62d72c33",
+    "docs/DEMARRAGE_ET_REPRISE.md": "c7ef0dc947213311a354a5e00c6162c0f8f6434ff49f7f27ae48a4b4dcbea7ac",
+    "docs/ETAT_ARCHIVES_2026-11-01.md": "fe6ac917aef3a82097de6a312062f4cb33837c960526f70cfc037c22178bccae",
+    "docs/GITHUB_WORKFLOW.md": "a6417c71e14f5369175939d939e24b7d5443bd3c87c1ebb6fcedcd032f6c7de0",
+    "docs/INSTALLATION.md": "ee1726014a546a03668cd431cb3791c8b307293b6db6a664f478c93a61633feb",
+    "docs/OPERATIONS.md": "d75bf56b9578e7259dba8a5e21f6586e74364a827ae6116dd15310382b4dab9c",
+    "docs/ORCHESTRATION.md": "9e6e91acc35f2c72c0e8c27e3d8dbf2cff4f3443208263680d9b5e132335c049",
+    "docs/RECUPERATION_APPROFONDIE_2026-11-01.md": "01f3f5f73688b2fd2cfd1be5d3a812c92e2a1ee153e726c319ae094d84caa37d",
+    "docs/RECUPERATION_VERIFIEE_2026-11-01.md": "ff91c767a8f05b2c821ca60d871b4164e2169da1fb79763631ef4e91aedc1e0d",
+    "docs/RESEARCH_2026-11-01.md": "6167d64a01904c558ddafca7b1f5ca1fa846734b70b3ca6c1921e5b65bf4502b",
+    "docs/SURVEILLANCE_CONTEXTUELLE.md": "73a8f52482fea648e077ed7e5cc52e4d180843169b4375fcfc14bbbbfd2fd40b",
+    "docs/memory/CONVERSATIONS.md": "e9a77b143a9dc17fe8d8d016cce6d76a0460cef9aa13a50a6d5a44120f983b79",
+    "docs/memory/MCP.md": "ade32c9c0b63ede8eede87cc2350c46cdde2b314c5c0a31907adffe777fb98d3",
+    "docs/memory/OUTILS_ET_ARCHITECTURE.md": "a57177a51eb8e647d4c11553eadcac6800fa4e2bec1e9900bf848f73607eae23",
+    "docs/memory/RESILIENCE.md": "701428ed57672214a71da33b61453a0cedf74ee2ef1f269bcd97dbc161d4628f",
+    "docs/research/launch-toolchain-2026-11-01/ACCEPTANCE.json": "73fd9f07d1598d0ca0f5d2623a1aa6727a796fdfa4b0214e350c40d1d30ef181",
+    "docs/research/launch-toolchain-2026-11-01/DATA_REQUIREMENTS.json": "d577bfb63a17270ce763369038e480ce5bdf23a8c38f754774334ec2c1f7ffc1",
+    "docs/research/launch-toolchain-2026-11-01/README.md": "040be03c17cb7911477b5cdad2ebfaae1c4612bf05fb0d9aa9682642771605c2",
+    "docs/research/launch-toolchain-2026-11-01/SOURCE_SNAPSHOT.json": "b0fb6403baef86edbe74a3db8842a2f0c5e333487f5491cbe2aba0a957d11360",
+    "docs/research/launch-toolchain-2026-11-01/TOOLCHAIN.json": "c005ec8231874b0a92513ecafbcc7cc1fa431afc2f84316f139fa014ed74be10",
+    "docs/research/launch-toolchain-2026-11-01/VALIDATION.json": "15cd726e48088d52ceb149ab6aea859c300c624557431f97ae3e73e8a7938c17",
+    "jarvis/apps/jarvis/app/consolidated_workbench.py": "6bb4d4162b658a9441b09969dfede320c9bd7f07b44ea2c7403775119e80bde4",
+    "jarvis/apps/jarvis/app/display_contracts.py": "e39ec97d9424233f1063a37a809a82be9fc7717ad78b17f089a69d77786be43c",
+    "jarvis/apps/jarvis/app/memory.css": "9a406323d11db43094576a09e192de1ae7fdf13cd57750dbfcbbdf4721bfc1a5",
+    "jarvis/apps/jarvis/app/memory.html": "845087eaf551b64e62fb591152b36ee199865aee5a793995fb7c3ef2920892f6",
+    "jarvis/apps/jarvis/app/memory.js": "24b3463eb8d275b99fa945359b2f55659709d2203c7360364d8ed28ea8d27276",
+    "jarvis/apps/jarvis/app/proposals.py": "9fcc59d14548958a1844162228cd5bcac70d778a325119a3523f170fb2abe8f6",
+    "jarvis/apps/jarvis/app/workspace_state.py": "9974501d5d337b59d546ad3f38adf964e1f084ae56339b2a4374cf3986684f1f",
+    "jarvis/docs/m05/RELEASE_M05.md": "a2faecd2e7abe8ece67550129b4c9536791d56778ce822f42a80ab9ee15fb350",
+    "jarvis/knowledge/growth/BRAND_CONTEXT.json": "aa0a6109d5ccb1bec9b713f4f4a6e676a481933461283fa7f9c91c73c9d2a317",
+    "ops/higgsfield-observations.json": "1ce6600d97e0f74baecd674103f56db290b2e467428e62a615eb09c4dcd510f5",
+    "ops/orchestration.json": "2980e9ff3c15bd56fa3d85cb8b3efb860b026aa636e2cc93b9bbbd47688c9965",
+    "productions/le-dernier-geste/R03_LE_DERNIER_GESTE/REVUE_R03.json": "d4ef37cd06149bd596919544c1ddf049ade0db8328aa4fb300a29392cec35a5d",
+    "productions/le-dernier-geste/README.md": "033250fcef41e32ec28d626f95ef379f847a2c59e12d31aee8b5746dcb3576b0",
+    "productions/le-dernier-geste/STATUT_G2.json": "719950f7e65283178b224da7307f1a8430c8da54db011c641a303d3c822d0a31",
+    "sites/README.md": "c790a601a64d5eef579b41fa6e26d277259e05b36ef4bd7eb29d96c95cac53c7",
+    "tests/test_workspace_restore.py": "dfdd925dc1c24c9964937ba57d561be9ce0c07aaf5a32922a910384dc30d2cb8",
+    "tests_agent/test_conversation_context.py": "da36efb63fd51977b19faa936baa4b08cf16575f983d466920919fefb3d11d21",
+    "tests_agent/test_research_indexing.py": "0f986abb8d1e68ebde03c62e9545c5d84b35c96a68730f32e36b9e653d3efaae",
+    "tests_agent/test_session_indexing.py": "b10d9cf24ddd3a05be6d3670c3c51a4fbecbf52e5a55cbc7987e3d260228bc69",
+    "tests_ops/test_qualification.py": "4ad49603f11f272621283bc01a894374979a2e09e82ec6e77ea47605e0fe0673",
+    "tools/check_startup.py": "d94d64ed1d71455d694ec06f75f688e6f57b3cb5f49d151324bea6fc504bb6a6",
+    "tools/doctor.py": "d2e6b078396396d4d799b346633bce0dcd80d83e2139c218c7e68edde45c0ca1",
+    "tools/evaluate_memory.py": "04e157a5843f21b6a4adf24a30883bfcdb2be000c2a21b1378adebf20b924480",
+    "tools/orchestrate.py": "0bc1389f67149002b1ed1bc086bd9e347f8ce799ba43194cd217e22aac779515",
+    "tools/start_jarvis.py": "8261902e710dfd022f88e9dfd3f26b33ccfd530438888e920ad93b3b3a58f87d"
+  },
+  "limitations": [
+    "Selected lexical cases are not a generative-answer or exhaustive recall benchmark.",
+    "No live models, microphone, physical monitors, printers, social publishing, client upload or paid provider tested.",
+    "Forced process termination is not a power failure test.",
+    "Browser visual checks were not rerun in this integration.",
+    "Five production assets are not materialized in this source checkout; this does not establish absence from the archives.",
+    "These checks do not certify a semantic review of every repository file or recovery of all conversations."
+  ],
+  "reconciled_contributions": [
+    "7ac120994cdcf6102b6b2a353bf7805e2ac1fbc2",
+    "5e8a14415b816ac7aa840cb3409a1752943929da",
+    "f290812a2a3d90e1ac19e7d9ac945e42b050037f",
+    "0a7a08dd0a0bed445ef0dc5734be7c841b30467a",
+    "9c2a0fb47baf1b610e31d2deb800a5323bb9495e"
+  ],
+  "preserved_concurrent_scenarios": {
+    "conversation_context": 17,
+    "workspace_restore": 6
+  }
+}

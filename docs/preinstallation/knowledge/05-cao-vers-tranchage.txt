@@ -1,0 +1,16 @@
+Séparer géométrie correcte, tranchage et fabrication
+Identifiant : 05-cao-vers-tranchage
+Projet : bojart.jarvis
+Statut : repo_observation_and_recommendation
+Vérifié le : 2026-11-01
+Portée : préparation documentaire ; tour Windows non qualifiée ; aucune instruction d’exécution implicite.
+
+La CAO paramétrique bornée de Jarvis ne remplace pas une sculpture artistique libre. Pour un export, conserver recette, unités, version, dimensions, empreinte et contrôles du maillage. Un STL fermé n’atteste ni la résistance de la pièce ni l’adéquation du procédé.
+Le tranchage doit ajouter une machine exacte, buse ou technologie, firmware, matière et profil. Pour une machine FDM à G-code, relire les scripts de début/fin ; pour la résine, vérifier le format et les paramètres propres à la machine et au fabricant. Comparer l’aperçu GUI à l’export CLI sur une petite pièce, puis vérifier les dimensions et les avertissements. Garder le fichier de projet et les profils. Aucun fichier ne passe à « prêt à imprimer » sur son seul nom ou son existence ; un échec du processus ou une sortie partielle le bloque. L’envoi et le démarrage sont des étapes séparées.
+
+Sources primaires :
+cadquery — https://cadquery.readthedocs.io/en/latest/installation.html
+orca-cli — https://github.com/OrcaSlicer/OrcaSlicer/wiki/cli_mode
+prusa-profiles — https://github.com/prusa3d/PrusaSlicer/wiki/Vendor-bundles-and-updating-process
+
+Contexte de code : Momolscode/BOJART a0ab8f4df17f0e8ea80c0310713ee529b794cca2. Les protocoles d’essai sont des propositions BOJ.ART, pas des résultats exécutés.

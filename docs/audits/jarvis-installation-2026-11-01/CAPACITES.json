@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "reference": "3c288214539adf97381f6053b43225485a873b6a",
+  "intents": [
+    "model",
+    "sources",
+    "studio",
+    "planning",
+    "workspace",
+    "growth",
+    "knowledge",
+    "cad",
+    "silence",
+    "tower"
+  ],
+  "graph": {
+    "nodes": [
+      "route",
+      "guard",
+      "dispatch",
+      "receipt"
+    ],
+    "edges": [
+      [
+        "route",
+        "guard"
+      ],
+      [
+        "guard",
+        "dispatch"
+      ],
+      [
+        "guard",
+        "receipt"
+      ],
+      [
+        "dispatch",
+        "receipt"
+      ]
+    ],
+    "checkpoint_backend": "SQLite when LangGraph dependencies available",
+    "smoke_mode_observed": "local_fallback_missing_langgraph_dependency",
+    "receipt_note": "Graph receipt is distinct from later asynchronous browser rendering receipts."
+  },
+  "capabilities": [
+    {
+      "id": "documentary_memory",
+      "state": "implemented_and_minimal_smoke_observed",
+      "caveat": "Later memory changes and target PC require new verification."
+    },
+    {
+      "id": "three_views",
+      "state": "implemented_and_selected_contract_tests_passed",
+      "caveat": "Physical three-monitor setup not qualified."
+    },
+    {
+      "id": "cad",
+      "state": "bounded_proposal_confirmation_circuit",
+      "caveat": "Real engines and exports not run in the isolated minimal installation."
+    },
+    {
+      "id": "voice",
+      "state": "optional_short_capture_asr_and_browser_tts",
+      "caveat": "Real microphone/model/accuracy not qualified; not continuous conversation."
+    },
+    {
+      "id": "jev",
+      "state": "optional_hosted_text_decider",
+      "caveat": "Fixture tests do not qualify the real provider; no machine authority."
+    },
+    {
+      "id": "studio_growth",
+      "state": "catalog_and_drafts",
+      "caveat": "No demonstrated autonomous generation-to-publication chain."
+    },
+    {
+      "id": "printer_control",
+      "state": "not_connected",
+      "caveat": "No real-machine qualification."
+    },
+    {
+      "id": "continuous_conversation",
+      "state": "not_active",
+      "caveat": "Pipecat is a proposal."
+    },
+    {
+      "id": "temporal",
+      "state": "proposal_only_if_needed",
+      "caveat": "Not integrated."
+    }
+  ]
+}

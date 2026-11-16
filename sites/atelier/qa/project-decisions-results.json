@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "checks": 22,
+  "names": [
+    "Trois domaines actifs et domaines futurs explicitement non raccordés",
+    "Candidats de préparation régénérés depuis les mesures, sans dimensions de démonstration",
+    "Sans STL mesuré, fiche réelle, bon procédé ou volume : aucun candidat inventé",
+    "Contrat fermé : prompts, outils, endpoints, candidats et politique étrangère refusés",
+    "Empreinte liée aux preuves : fichier, unité, machine, objectif et révision",
+    "Attention : uniquement fichiers, fiches et intentions existants ; jobs simulés exclus",
+    "Éditorial : catalogue réel et dernière version enregistrée, sans supposer des médias de projet",
+    "Minimisation serveur : ni identifiants, noms, notes, chemins, empreintes ni clé au modèle",
+    "Conseil local explicite, déterministe, sans probabilité ni connexion prétendue",
+    "Sans clé : statut non configuré et zéro appel au fournisseur",
+    "Réponse réelle normalisée : alias fermé, modèle figé, paquet original et limites invariables",
+    "Abstention conservée pour incertitude et choix none",
+    "Choix amont inconnu, modèle inattendu, scores corrompus et capacité additionnelle refusés",
+    "Ancienne réponse refusée après changement de preuves ou expiration",
+    "Connexion annoncée uniquement après réponse vérifiée ; secret dans en-tête serveur seulement",
+    "Réseau, surcharge et erreurs JSON sans fuite de corps amont",
+    "Délai et concurrence bornés, sans réémission automatique",
+    "Client : contrôle du contexte obligatoire avant tout envoi",
+    "Client : le contexte est relu après réponse, même si la révision du projet ne change pas",
+    "Client : les erreurs HTTP et délais laissent les options locales disponibles",
+    "Statut client : un site sans service ou une politique étrangère ne devient jamais connecté",
+    "Service exportable : résolveur autoritatif vérifié avant et après le conseil"
+  ],
+  "scope": "Synthetic measured/declared fixtures and mocked fetch. No browser, server, TypeSafe account, slicer, printer, video render or social action."
+}

@@ -1,0 +1,11 @@
+{
+  "python": "3.13.5",
+  "os_family": "Linux",
+  "packages": {
+    "cadquery": "2.8.0",
+    "trimesh": "4.11.1",
+    "pytest": "9.0.2",
+    "playwright": "1.57.0"
+  },
+  "scope": "environnement de préparation, pas la tour utilisateur"
+}

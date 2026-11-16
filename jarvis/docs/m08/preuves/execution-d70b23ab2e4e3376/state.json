@@ -1,0 +1,260 @@
+{
+ "task_id": "d70b23ab2e4e3376",
+ "identity": {
+  "spec": {
+   "character": {
+    "id": "sentinelle",
+    "label": "La Sentinelle de l'atelier",
+    "franchise": null,
+    "rights": "bojart_original"
+   },
+   "pose_intent": "iconic",
+   "height_mm": 200.0,
+   "material": "PLA",
+   "process": "FDM"
+  },
+  "mesh_sha256": null,
+  "voxel": 0.6,
+  "pipeline": "bojart.figurine.pipeline.v1",
+  "sculpt": "bojart.sentinelle.sdf.v1",
+  "fab": "bojart.fabrication.v2",
+  "checks": "bojart.checks.v2"
+ },
+ "created": "2026-11-02T03:12:48+00:00",
+ "requests": [
+  {
+   "at": "2026-11-02T03:12:48+00:00",
+   "text": "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable.",
+   "source": "typed",
+   "entry_point": {
+    "intent": "create_figurine",
+    "engine": "bojart.dialogue.fr.v2",
+    "provider": "rules_fr",
+    "requires_confirmation": true,
+    "message": "Figurine « La Sentinelle de l'atelier », 200 mm, FDM PLA. Relisez la spécification ; la génération passe par la chaîne figurine."
+   },
+   "faults": [],
+   "duplicate_of_existing_task": false
+  },
+  {
+   "at": "2026-11-02T03:15:00+00:00",
+   "text": "Jarvis, crée-moi la Sentinelle 3D imprimable dans une position stylée, iconique et remarquable.",
+   "source": "typed",
+   "entry_point": {
+    "intent": "create_figurine",
+    "engine": "bojart.dialogue.fr.v2",
+    "provider": "rules_fr",
+    "requires_confirmation": true,
+    "message": "Figurine « La Sentinelle de l'atelier », 200 mm, FDM PLA. Relisez la spécification ; la génération passe par la chaîne figurine."
+   },
+   "faults": [],
+   "duplicate_of_existing_task": true
+  }
+ ],
+ "steps": {
+  "intake": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:12:48+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T03:12:48+00:00",
+   "result": {
+    "received": "2026-11-02T03:12:48+00:00",
+    "source": "typed",
+    "text_length": 95
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 34.7,
+   "peak_rss_mb_children": 0.0
+  },
+  "transcription": {
+   "status": "NOT_TESTED",
+   "attempts": 1,
+   "started": "2026-11-02T03:12:48+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T03:12:48+00:00",
+   "result": {
+    "note": "Aucun enregistrement disponible : texte injecté au même point d’entrée. Reconnaissance vocale NON TESTÉE ; aucun score de confiance fabriqué."
+   },
+   "outputs": {},
+   "peak_rss_mb_process": 34.7,
+   "peak_rss_mb_children": 0.0
+  },
+  "spec": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:12:48+00:00",
+   "seconds": 0.0,
+   "finished": "2026-11-02T03:12:48+00:00",
+   "result": {
+    "character": "La Sentinelle de l'atelier",
+    "geometry_source": "procedural_sdf"
+   },
+   "outputs": {
+    "spec.json": "dcbb0b9244318f782cb61fe8e8519aa6291e6bf9dbcbe89b5ee57391a1d22fb3"
+   },
+   "peak_rss_mb_process": 34.7,
+   "peak_rss_mb_children": 0.0
+  },
+  "pose_study": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:12:48+00:00",
+   "seconds": 3.151,
+   "finished": "2026-11-02T03:12:51+00:00",
+   "result": {
+    "chosen": "garde_basse"
+   },
+   "outputs": {
+    "pose_study.json": "76493c3d77406584fdab463da726f1cb35ea7ebe54a53662fa8cf587e09ce824"
+   },
+   "peak_rss_mb_process": 85.0,
+   "peak_rss_mb_children": 0.0
+  },
+  "geometry": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:12:51+00:00",
+   "seconds": 42.866,
+   "finished": "2026-11-02T03:13:34+00:00",
+   "result": {
+    "source": "procedural_sdf",
+    "pose": "garde_basse",
+    "voxel_mm": 0.6,
+    "grid_estimate_mb": 122,
+    "bodies": 1,
+    "triangles": 181536
+   },
+   "outputs": {
+    "nominal.stl": "aa6e1cae62740ee9d5a2118fd044a5d37544e2284ea5221c235358e9d3224291"
+   },
+   "peak_rss_mb_process": 344.6,
+   "peak_rss_mb_children": 0.0
+  },
+  "assembly": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:13:34+00:00",
+   "seconds": 0.605,
+   "finished": "2026-11-02T03:13:34+00:00",
+   "result": {},
+   "outputs": {
+    "figurine.stl": "7292980adb18aa716cb981bfcd75f26724e16e1b300062853a4d757fbfe2196e",
+    "socle.stl": "028493fe9de55568737c5a3149811e1c8598ef89df529c70fe876f5f3664368e",
+    "assembly.json": "0cbb6023f08f1da1cb7c7ba3a98d5892dee337c666bb28d8a84e7928ccb75644"
+   },
+   "peak_rss_mb_process": 344.6,
+   "peak_rss_mb_children": 0.0
+  },
+  "checks": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:13:34+00:00",
+   "seconds": 10.736,
+   "finished": "2026-11-02T03:13:45+00:00",
+   "result": {
+    "verdict": "CONFORME_AUX_CRITERES_CALCULES"
+   },
+   "outputs": {
+    "checks.json": "4539d487791ce906434ef9ee5461a24c0d94f985d24dd100e78f6b6c41f29e2e"
+   },
+   "peak_rss_mb_process": 620.4,
+   "peak_rss_mb_children": 0.0
+  },
+  "renders": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:13:45+00:00",
+   "seconds": 39.324,
+   "finished": "2026-11-02T03:14:24+00:00",
+   "result": {
+    "engine": "Cycles CPU",
+    "samples": 32,
+    "note": "rendus argile sans texture + vue maillage ; appréciation visuelle, pas une mesure"
+   },
+   "outputs": {
+    "rendus/figurine.blend": "7e5fe9c7a0554ebb83ee29d6ecf33e03200ba76fdd66bad8309764f148353ed6",
+    "rendus/vue_dos.png": "1403a0346df60d3d0b827bfd40f010daf5dd9102a19792e145e50bb4a4bba845",
+    "rendus/vue_face.png": "30aac9f709c570e07440e0225227a4fe05d43bbf5f118c3fd94bcce808c2c1eb",
+    "rendus/vue_maillage_detail.png": "5de02a05a0c51b617346f78ee01405325cfb706df9803592ed79dfa8ef3b01db",
+    "rendus/vue_profil_gauche.png": "e8164aac584b803d0353b5914a43a43ba38558d72fe4f5cac5b12094528f0889",
+    "rendus/vue_trois_quarts.png": "327733f88c66d2bf3a790e090f6f7d4c64a0af96e99b84b52641b1f42237a8a9"
+   },
+   "peak_rss_mb_process": 620.4,
+   "peak_rss_mb_children": 1283.0
+  },
+  "exports": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:14:24+00:00",
+   "seconds": 1.734,
+   "finished": "2026-11-02T03:14:26+00:00",
+   "result": {
+    "status": "DONE",
+    "objects_reread": 2,
+    "writer": "trimesh 5.2.0",
+    "slicer_settings_included": false
+   },
+   "outputs": {
+    "projet.3mf": "84289305b3e0554b29e9204bed4c7c82b5d425dd2ac645eb1e91b5beedac582f"
+   },
+   "peak_rss_mb_process": 620.4,
+   "peak_rss_mb_children": 1283.0
+  },
+  "slicing": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:14:26+00:00",
+   "seconds": 32.135,
+   "finished": "2026-11-02T03:14:58+00:00",
+   "result": {
+    "estimates": {
+     "socle": {
+      "estimated_time_normal": "8h 10m 9s",
+      "filament_mm": 24732.81,
+      "filament_cm3": 59.49,
+      "filament_g": 73.77,
+      "layer_count": 120,
+      "forbidden_header_present": true
+     },
+     "figurine": {
+      "estimated_time_normal": "12h 16m 1s",
+      "filament_mm": 37885.23,
+      "filament_cm3": 91.12,
+      "filament_g": 112.99,
+      "layer_count": 1253,
+      "forbidden_header_present": true
+     }
+    },
+    "sent_to_machine": false
+   },
+   "outputs": {
+    "tranchage/socle_impression.SIMULATION-NE-PAS-IMPRIMER.gcode": "f5b98d7ce1169f8af4372cf3496b6d781b32044a8096c633e4e3ccae6cc14eb2",
+    "tranchage/figurine.SIMULATION-NE-PAS-IMPRIMER.gcode": "56856ac3ee3ad7ce3fa0b631ba8fd9c33e4ed5666dbfd144ef441df3b6005ff0",
+    "tranchage/apercu_couches_figurine.png": "d084a953186993916b92b09e614bf665477218e9721fee7bbe550e2c39b61f16",
+    "tranchage/profil_simulation.ini": "e82ef8be2edbbc666605e0feffbcbc2a05c3a3305c18943b2c512fa24f4dddcb",
+    "tranchage/tranchage.json": "b69dc078ff139ca4ca665d1c4edc79ceedd63aa6a1ae46f0f3377e717c224bd8"
+   },
+   "peak_rss_mb_process": 981.6,
+   "peak_rss_mb_children": 1283.0
+  },
+  "manifest": {
+   "status": "DONE",
+   "attempts": 1,
+   "started": "2026-11-02T03:14:58+00:00",
+   "seconds": 0.372,
+   "finished": "2026-11-02T03:14:59+00:00",
+   "result": {
+    "files": 20
+   },
+   "outputs": {
+    "manifest.json": "4c60960342ef3892f49be0489e3bda69c7287fdb020a458814af6114b1e40a76"
+   },
+   "peak_rss_mb_process": 981.6,
+   "peak_rss_mb_children": 1283.0
+  }
+ },
+ "ack_seconds": 0.0225,
+ "pose": "garde_basse",
+ "status": "DONE"
+}

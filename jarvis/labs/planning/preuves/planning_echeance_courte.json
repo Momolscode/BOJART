@@ -1,0 +1,610 @@
+{
+  "schema": "bojart.planning_lab/1",
+  "mode": "simulation_only",
+  "data_origin": "synthetic",
+  "can_execute": false,
+  "optimality_claim": false,
+  "input_sha256": "d83adcf3cc968f4cf4afb38a3497834844f2e5740b1b32661fe5e55c51f91106",
+  "resources": {
+    "FDM-A": {
+      "kind": "fdm"
+    },
+    "RESINE-A": {
+      "kind": "resin"
+    },
+    "RESINE-B": {
+      "kind": "resin"
+    },
+    "POSTE-LAVAGE-CURE": {
+      "kind": "postprocess"
+    },
+    "OPERATEUR-1": {
+      "kind": "operator",
+      "blocked": [
+        [
+          180,
+          210
+        ]
+      ]
+    },
+    "ETABLI": {
+      "kind": "bench"
+    }
+  },
+  "horizon": 720,
+  "scenario": "Échéance trop courte pour ce plan",
+  "status": "PLAN_LATE",
+  "reason": "Meilleur plan trouvé par énumération des ordres de dossiers et placement glouton. Pas d’optimalité certifiée.",
+  "order": [
+    "SOCLE",
+    "DETAIL",
+    "TORSE"
+  ],
+  "score": {
+    "total_lateness_minutes": 580,
+    "completion_minutes": 540
+  },
+  "results": [
+    {
+      "id": "DETAIL",
+      "printer": "RESINE-A",
+      "complete": 370,
+      "due": 200,
+      "late_by": 170
+    },
+    {
+      "id": "SOCLE",
+      "printer": "FDM-A",
+      "complete": 270,
+      "due": 200,
+      "late_by": 70
+    },
+    {
+      "id": "TORSE",
+      "printer": "RESINE-B",
+      "complete": 540,
+      "due": 200,
+      "late_by": 340
+    }
+  ],
+  "reservations": {
+    "FDM-A": [
+      {
+        "start": 0,
+        "end": 170,
+        "job": "SOCLE",
+        "label": "Impression · réservé jusqu’au retrait",
+        "blocked": false
+      }
+    ],
+    "RESINE-A": [
+      {
+        "start": 10,
+        "end": 150,
+        "job": "DETAIL",
+        "label": "Impression · réservé jusqu’au retrait",
+        "blocked": false
+      }
+    ],
+    "RESINE-B": [
+      {
+        "start": 20,
+        "end": 285,
+        "job": "TORSE",
+        "label": "Impression · réservé jusqu’au retrait",
+        "blocked": false
+      }
+    ],
+    "POSTE-LAVAGE-CURE": [
+      {
+        "start": 150,
+        "end": 180,
+        "job": "DETAIL",
+        "label": "Lavage · réservé jusqu’au retrait",
+        "blocked": false
+      },
+      {
+        "start": 270,
+        "end": 305,
+        "job": "DETAIL",
+        "label": "Cure · réservé jusqu’au retrait",
+        "blocked": false
+      },
+      {
+        "start": 370,
+        "end": 400,
+        "job": "TORSE",
+        "label": "Lavage · réservé jusqu’au retrait",
+        "blocked": false
+      },
+      {
+        "start": 430,
+        "end": 465,
+        "job": "TORSE",
+        "label": "Cure · réservé jusqu’au retrait",
+        "blocked": false
+      }
+    ],
+    "OPERATEUR-1": [
+      {
+        "start": 0,
+        "end": 10,
+        "job": "SOCLE",
+        "label": "Impression · préparation",
+        "blocked": false
+      },
+      {
+        "start": 10,
+        "end": 20,
+        "job": "DETAIL",
+        "label": "Impression · préparation",
+        "blocked": false
+      },
+      {
+        "start": 20,
+        "end": 30,
+        "job": "TORSE",
+        "label": "Impression · préparation",
+        "blocked": false
+      },
+      {
+        "start": 140,
+        "end": 150,
+        "job": "DETAIL",
+        "label": "Impression · retrait",
+        "blocked": false
+      },
+      {
+        "start": 150,
+        "end": 155,
+        "job": "DETAIL",
+        "label": "Lavage · préparation",
+        "blocked": false
+      },
+      {
+        "start": 160,
+        "end": 170,
+        "job": "SOCLE",
+        "label": "Impression · retrait",
+        "blocked": false
+      },
+      {
+        "start": 175,
+        "end": 180,
+        "job": "DETAIL",
+        "label": "Lavage · retrait",
+        "blocked": false
+      },
+      {
+        "start": 180,
+        "end": 210,
+        "job": "INDISPONIBLE",
+        "label": "Indisponible",
+        "blocked": true
+      },
+      {
+        "start": 210,
+        "end": 255,
+        "job": "SOCLE",
+        "label": "Finition",
+        "blocked": false
+      },
+      {
+        "start": 255,
+        "end": 270,
+        "job": "SOCLE",
+        "label": "Contrôle / conditionnement fictif",
+        "blocked": false
+      },
+      {
+        "start": 270,
+        "end": 275,
+        "job": "DETAIL",
+        "label": "Cure · préparation",
+        "blocked": false
+      },
+      {
+        "start": 275,
+        "end": 285,
+        "job": "TORSE",
+        "label": "Impression · retrait",
+        "blocked": false
+      },
+      {
+        "start": 300,
+        "end": 305,
+        "job": "DETAIL",
+        "label": "Cure · retrait",
+        "blocked": false
+      },
+      {
+        "start": 305,
+        "end": 355,
+        "job": "DETAIL",
+        "label": "Finition",
+        "blocked": false
+      },
+      {
+        "start": 355,
+        "end": 370,
+        "job": "DETAIL",
+        "label": "Contrôle / conditionnement fictif",
+        "blocked": false
+      },
+      {
+        "start": 370,
+        "end": 375,
+        "job": "TORSE",
+        "label": "Lavage · préparation",
+        "blocked": false
+      },
+      {
+        "start": 395,
+        "end": 400,
+        "job": "TORSE",
+        "label": "Lavage · retrait",
+        "blocked": false
+      },
+      {
+        "start": 430,
+        "end": 435,
+        "job": "TORSE",
+        "label": "Cure · préparation",
+        "blocked": false
+      },
+      {
+        "start": 460,
+        "end": 465,
+        "job": "TORSE",
+        "label": "Cure · retrait",
+        "blocked": false
+      },
+      {
+        "start": 465,
+        "end": 525,
+        "job": "TORSE",
+        "label": "Finition",
+        "blocked": false
+      },
+      {
+        "start": 525,
+        "end": 540,
+        "job": "TORSE",
+        "label": "Contrôle / conditionnement fictif",
+        "blocked": false
+      }
+    ],
+    "ETABLI": [
+      {
+        "start": 210,
+        "end": 255,
+        "job": "SOCLE",
+        "label": "Finition",
+        "blocked": false
+      },
+      {
+        "start": 255,
+        "end": 270,
+        "job": "SOCLE",
+        "label": "Contrôle / conditionnement fictif",
+        "blocked": false
+      },
+      {
+        "start": 305,
+        "end": 355,
+        "job": "DETAIL",
+        "label": "Finition",
+        "blocked": false
+      },
+      {
+        "start": 355,
+        "end": 370,
+        "job": "DETAIL",
+        "label": "Contrôle / conditionnement fictif",
+        "blocked": false
+      },
+      {
+        "start": 465,
+        "end": 525,
+        "job": "TORSE",
+        "label": "Finition",
+        "blocked": false
+      },
+      {
+        "start": 525,
+        "end": 540,
+        "job": "TORSE",
+        "label": "Contrôle / conditionnement fictif",
+        "blocked": false
+      }
+    ]
+  },
+  "events": [
+    {
+      "job": "SOCLE",
+      "label": "Impression · préparation",
+      "start": 0,
+      "end": 10,
+      "resources": [
+        "FDM-A",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Impression · préparation",
+      "start": 10,
+      "end": 20,
+      "resources": [
+        "RESINE-A",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "SOCLE",
+      "label": "Impression · cycle",
+      "start": 10,
+      "end": 160,
+      "resources": [
+        "FDM-A"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Impression · cycle",
+      "start": 20,
+      "end": 140,
+      "resources": [
+        "RESINE-A"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Impression · préparation",
+      "start": 20,
+      "end": 30,
+      "resources": [
+        "RESINE-B",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Impression · cycle",
+      "start": 30,
+      "end": 210,
+      "resources": [
+        "RESINE-B"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Impression · retrait",
+      "start": 140,
+      "end": 150,
+      "resources": [
+        "RESINE-A",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Lavage · préparation",
+      "start": 150,
+      "end": 155,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Lavage · cycle",
+      "start": 155,
+      "end": 175,
+      "resources": [
+        "POSTE-LAVAGE-CURE"
+      ]
+    },
+    {
+      "job": "SOCLE",
+      "label": "Impression · retrait",
+      "start": 160,
+      "end": 170,
+      "resources": [
+        "FDM-A",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Lavage · retrait",
+      "start": 175,
+      "end": 180,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Délai technique fictif",
+      "start": 180,
+      "end": 210,
+      "resources": []
+    },
+    {
+      "job": "SOCLE",
+      "label": "Finition",
+      "start": 210,
+      "end": 255,
+      "resources": [
+        "OPERATEUR-1",
+        "ETABLI"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Impression · attente du retrait",
+      "start": 210,
+      "end": 275,
+      "resources": [
+        "RESINE-B"
+      ]
+    },
+    {
+      "job": "SOCLE",
+      "label": "Contrôle / conditionnement fictif",
+      "start": 255,
+      "end": 270,
+      "resources": [
+        "OPERATEUR-1",
+        "ETABLI"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Cure · préparation",
+      "start": 270,
+      "end": 275,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Cure · cycle",
+      "start": 275,
+      "end": 300,
+      "resources": [
+        "POSTE-LAVAGE-CURE"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Impression · retrait",
+      "start": 275,
+      "end": 285,
+      "resources": [
+        "RESINE-B",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Cure · retrait",
+      "start": 300,
+      "end": 305,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Finition",
+      "start": 305,
+      "end": 355,
+      "resources": [
+        "OPERATEUR-1",
+        "ETABLI"
+      ]
+    },
+    {
+      "job": "DETAIL",
+      "label": "Contrôle / conditionnement fictif",
+      "start": 355,
+      "end": 370,
+      "resources": [
+        "OPERATEUR-1",
+        "ETABLI"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Lavage · préparation",
+      "start": 370,
+      "end": 375,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Lavage · cycle",
+      "start": 375,
+      "end": 395,
+      "resources": [
+        "POSTE-LAVAGE-CURE"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Lavage · retrait",
+      "start": 395,
+      "end": 400,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Délai technique fictif",
+      "start": 400,
+      "end": 430,
+      "resources": []
+    },
+    {
+      "job": "TORSE",
+      "label": "Cure · préparation",
+      "start": 430,
+      "end": 435,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Cure · cycle",
+      "start": 435,
+      "end": 460,
+      "resources": [
+        "POSTE-LAVAGE-CURE"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Cure · retrait",
+      "start": 460,
+      "end": 465,
+      "resources": [
+        "POSTE-LAVAGE-CURE",
+        "OPERATEUR-1"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Finition",
+      "start": 465,
+      "end": 525,
+      "resources": [
+        "OPERATEUR-1",
+        "ETABLI"
+      ]
+    },
+    {
+      "job": "TORSE",
+      "label": "Contrôle / conditionnement fictif",
+      "start": 525,
+      "end": 540,
+      "resources": [
+        "OPERATEUR-1",
+        "ETABLI"
+      ]
+    }
+  ]
+}

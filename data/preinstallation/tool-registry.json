@@ -1,0 +1,975 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02",
+  "repo_sha": "a0ab8f4df17f0e8ea80c0310713ee529b794cca2",
+  "scope": "Préparation et qualification ; aucune installation, aucun modèle téléchargé, aucun appareil contacté par cette recherche",
+  "tools": [
+    {
+      "id": "sqlite-fts5",
+      "name": "SQLite FTS5",
+      "role": "Mémoire documentaire lexicale citée",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "integrated",
+      "status": "integrated",
+      "repo_evidence": [
+        "bojart_memory/core.py"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "Python sqlite3 ; disponibilité FTS5 vérifiée au lancement",
+        "upstream": "Documentation courante ; version embarquée de la tour inconnue",
+        "installed_on_target": null
+      },
+      "officialURL": "https://www.sqlite.org/fts5.html",
+      "source_urls": [
+        "https://www.sqlite.org/fts5.html",
+        "https://www.sqlite.org/copyright.html"
+      ],
+      "source_ids": [
+        "fts5",
+        "sqlite-license"
+      ],
+      "prereqs": [
+        "Python de l’environnement Jarvis",
+        "FTS5 disponible",
+        "même BOJART_MEMORY_STATE"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Aucun GPU requis par FTS5",
+        "unknown": "RAM/volume corpus cible et débit"
+      },
+      "license": "Domaine public SQLite",
+      "installpolicy": "Conserver le magasin existant ; aucune base vectorielle supplémentaire. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Lecture documentaire ; indexation locale explicite",
+      "qualificationtest": "Importer deux fois un lot, contrôler idempotence, sources/versions/citations puis sauvegarde-restauration dans un dossier neuf ; recherche sans modèle.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "langgraph",
+      "name": "LangGraph + checkpoint SQLite",
+      "role": "Orchestration route → guard → dispatch → receipt",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "integrated_optional",
+      "status": "integrated_optional",
+      "repo_evidence": [
+        "jarvis/requirements-orchestration.txt",
+        "jarvis/apps/jarvis/app/jarvis_runtime.py"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "langgraph 1.2.18 ; checkpoint-sqlite 3.1.3 ; ensemble épinglé requirements-orchestration.txt",
+        "upstream": "Documentation persistance relue ; pas de résolution transitive exécutée",
+        "installed_on_target": null
+      },
+      "officialURL": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "source_urls": [
+        "https://docs.langchain.com/oss/python/langgraph/persistence"
+      ],
+      "source_ids": [
+        "langgraph"
+      ],
+      "prereqs": [
+        "Environnement Python isolé",
+        "Ensemble de versions testé",
+        "Traces distantes désactivées"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Graphe et SQLite ne nécessitent pas de GPU",
+        "unknown": "Compatibilité des roues exactes OS cible"
+      },
+      "license": "MIT moteur ; dépendances à inventorier",
+      "installpolicy": "Réutiliser le moteur présent ; ne pas ajouter Temporal/Pipecat pour dessiner ce graphe. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Commandes applicatives bornées ; aucune nouvelle autorité machine",
+      "qualificationtest": "Prouver moteur réel chargé, comparaison au repli, interruption avant/après distribution, reprise sans double effet et réception des trois écrans.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "asr-faster-whisper",
+      "name": "faster-whisper / CTranslate2",
+      "role": "Transcription française locale de prises bornées",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "integrated_optional",
+      "status": "integrated_optional",
+      "repo_evidence": [
+        "jarvis/requirements-voice.txt",
+        "jarvis/apps/jarvis/app/voice.py"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "faster-whisper 1.2.1 ; ctranslate2 4.8.4",
+        "upstream": "v1.2.1 / v4.8.4 confirmés API officielle",
+        "installed_on_target": null
+      },
+      "officialURL": "https://github.com/SYSTRAN/faster-whisper",
+      "source_urls": [
+        "https://github.com/SYSTRAN/faster-whisper",
+        "https://opennmt.net/CTranslate2/hardware_support.html",
+        "https://github.com/SYSTRAN/faster-whisper/releases/tag/v1.2.1",
+        "https://github.com/OpenNMT/CTranslate2/releases/tag/v4.8.4"
+      ],
+      "source_ids": [
+        "asr",
+        "ct2",
+        "release-faster-whisper",
+        "release-ctranslate2"
+      ],
+      "prereqs": [
+        "Poids multilingues locaux model.bin/config.json/tokenizer.json",
+        "Micro autorisé",
+        "WAV PCM mono 16 bits 16kHz, 0.25–15 s"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Code Jarvis CPU/int8/4 threads ; CT2 binaire CPU x86-64 SSE4.1+ ou ARM64. CUDA amont optionnel, non utilisé par cet adaptateur.",
+        "unknown": "Latence et précision sur CPU/bruit réels"
+      },
+      "license": "MIT faster-whisper ; MIT CT2 ; licence exacte des poids séparée",
+      "installpolicy": "Installer seulement dans environnement isolé après inventaire ; poids explicites avec empreinte ; pas de téléchargement automatique. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Micro ponctuel et proposition texte ; jamais autorité machine",
+      "qualificationtest": "30 phrases françaises incluant dix-huit/quatre-vingts, unités, noms projet, annulation ; bruit atelier/silence/saturation ; exactitude des paramètres et p50/p95 sans lancer d’impression.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "tts-browser",
+      "name": "Web Speech TTS local",
+      "role": "Lecture du retour français",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "integrated_unqualified",
+      "status": "integrated_unqualified",
+      "repo_evidence": [
+        "jarvis/apps/jarvis/app/ui.js"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "speechSynthesis, filtre fr et localService",
+        "upstream": "Web Speech draft 2026-10-27",
+        "installed_on_target": null
+      },
+      "officialURL": "https://webaudio.github.io/web-speech-api/",
+      "source_urls": [
+        "https://webaudio.github.io/web-speech-api/"
+      ],
+      "source_ids": [
+        "tts-web"
+      ],
+      "prereqs": [
+        "Voix française installée dans OS/navigateur",
+        "Sortie audio"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Dépend du moteur de voix local choisi par le navigateur",
+        "unknown": "Voix, qualité, latence, comportement hors ligne réels"
+      },
+      "license": "Implémentation navigateur/OS et voix : conditions spécifiques à vérifier",
+      "installpolicy": "Premier choix sans ajout de service ; retour écrit si aucune voix locale. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Sortie audio seulement",
+      "qualificationtest": "Essai réseau déconnecté, nombres/unités/négations, arrêt immédiat et absence de collision avec la capture micro.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "tts-piper",
+      "name": "Piper OHF",
+      "role": "Alternative TTS locale stable entre navigateurs",
+      "exists_in_repo": false,
+      "candidate_or_integrated": "candidate",
+      "status": "candidate",
+      "repo_evidence": [],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": null,
+        "upstream": "v1.8.0 ; voix fr_FR-siwis-medium candidate",
+        "installed_on_target": null
+      },
+      "officialURL": "https://github.com/OHF-Voice/piper1-gpl",
+      "source_urls": [
+        "https://github.com/OHF-Voice/piper1-gpl",
+        "https://huggingface.co/rhasspy/piper-voices/blob/main/fr/fr_FR/siwis/medium/MODEL_CARD",
+        "https://github.com/OHF-Voice/piper1-gpl/releases/tag/v1.8.0"
+      ],
+      "source_ids": [
+        "piper",
+        "siwis",
+        "release-piper1-gpl"
+      ],
+      "prereqs": [
+        "Moteur isolé",
+        "Poids ONNX+config approuvés",
+        "Adaptateur borné à développer"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Moteur local ; aucune exigence GPU imposée dans la source consultée",
+        "unknown": "RAM/CPU et latence cible mesurés"
+      },
+      "license": "GPL-3.0 moteur ; carte siwis : dataset CC-BY 4.0 ; vérifier modèle exact et attribution",
+      "installpolicy": "P1 seulement si TTS navigateur échoue ; pas installé ni branché. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Sortie audio locale ; aucune exécution de texte",
+      "qualificationtest": "Comparer au navigateur sur même corpus, mesurer début de lecture/arrêt, vérifier licence voix et réseau absent.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "ollama-runtime",
+      "name": "Ollama local",
+      "role": "Servir embeddings et réponses sans outil d’action",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "adapter_integrated_runtime_unqualified",
+      "status": "adapter_integrated_runtime_unqualified",
+      "repo_evidence": [
+        "bojart_memory/ollama.py",
+        "jarvis/apps/jarvis/app/dialogue.py"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "Adaptateurs HTTP locaux ; aucun binaire épinglé",
+        "upstream": "v0.40.13 confirmé API officielle",
+        "installed_on_target": null
+      },
+      "officialURL": "https://docs.ollama.com/api/embed",
+      "source_urls": [
+        "https://docs.ollama.com/api/embed",
+        "https://docs.ollama.com/gpu",
+        "https://github.com/ollama/ollama/releases/tag/v0.40.13"
+      ],
+      "source_ids": [
+        "ollama-embed",
+        "ollama-hardware",
+        "release-ollama"
+      ],
+      "prereqs": [
+        "127.0.0.1 seulement",
+        "Poids exacts présents avec digest",
+        "Modèle non distant"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Support GPU dépend carte/pilote ; aucune VRAM universelle promise",
+        "unknown": "Pilote, VRAM dédiée disponible et charge conjointe sur la RTX 4060 Ti déclarée ; diagnostic cible non exécuté."
+      },
+      "license": "MIT moteur ; licences des poids distinctes",
+      "installpolicy": "Option après fonctionnement lexical ; installation locale explicite, pas de cloud ni pull automatique. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Réponses et vecteurs ; aucun shell/machine",
+      "qualificationtest": "Démarrage à froid et chaud, timeouts des deux adaptateurs, modèle absent, redirection/cloud refusés, arrêt service puis repli lexical.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "embeddinggemma",
+      "name": "EmbeddingGemma 300M",
+      "role": "Alternative historique d’embeddings à comparer ; le profil speed courant prépare Qwen3 Embedding 0.6B",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "historical_candidate_unqualified",
+      "status": "historical_candidate_unqualified",
+      "repo_evidence": [
+        "docs/memory/OUTILS_ET_ARCHITECTURE.md",
+        "bojart_memory/agent.py"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "Mentionné docs/memory/OUTILS_ET_ARCHITECTURE.md ; aucun poids livré",
+        "upstream": "embeddinggemma 300M, tag Ollama confirmé ; digest à capturer",
+        "installed_on_target": null
+      },
+      "officialURL": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card",
+      "source_urls": [
+        "https://ai.google.dev/gemma/docs/embeddinggemma/model_card",
+        "https://ai.google.dev/gemma/terms",
+        "https://ollama.com/library/embeddinggemma"
+      ],
+      "source_ids": [
+        "embeddinggemma",
+        "gemma-terms",
+        "embeddinggemma-ollama"
+      ],
+      "prereqs": [
+        "Ollama local",
+        "Acceptation conditions poids",
+        "Version/digest et taille de vecteur conservés"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Modèle 300M conçu pour ressources limitées",
+        "unknown": "Empreinte réelle selon quantification/runtime/contexte et précision française"
+      },
+      "license": "Gemma Terms ; ne pas assimiler à Apache-2.0",
+      "installpolicy": "Téléchargement explicite ultérieur ; FTS5 reste le témoin de référence. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Indexation locale des sources autorisées",
+      "qualificationtest": "Jeu aveugle de 30 questions, paraphrases françaises, références exactes et absences ; comparer Recall@5/MRR, citations, p95 et erreurs à FTS5 seul, sans modifier les réponses attendues.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "qwen35-chat",
+      "name": "Qwen3.5 4B",
+      "role": "Modèle de réponse prévu par le profil speed, à qualifier",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "setup_profile_coded_weights_unqualified",
+      "status": "setup_profile_coded_weights_unqualified",
+      "repo_evidence": [
+        "bojart_memory/model_setup.py",
+        "docs/memory/POSTE_RTX4060TI.md"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-02",
+        "repo": "Profil speed codé ; poids, digest et performances sur cible non qualifiés.",
+        "upstream": "Qwen/Qwen3.5-4B et Ollama qwen3.5:4b vérifiés ; digest non téléchargé",
+        "installed_on_target": null
+      },
+      "officialURL": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "source_urls": [
+        "https://huggingface.co/Qwen/Qwen3.5-4B",
+        "https://ollama.com/library/qwen3.5:4b"
+      ],
+      "source_ids": [
+        "qwenchat",
+        "qwenchat-ollama"
+      ],
+      "prereqs": [
+        "Ollama compatible",
+        "Poids et quantification à épingler",
+        "Budget contexte court initial"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "4B paramètres ; tag disponible",
+        "unknown": "Mémoire maximale, délai froid/chaud et gain réel sur corpus"
+      },
+      "license": "Apache-2.0 poids selon model card",
+      "installpolicy": "Comparer un seul candidat initial ; aucune promesse de meilleur modèle français ; pas téléchargé. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Réponse textuelle uniquement ; capacités vision/outils du modèle non exposées par le chat actuel",
+      "qualificationtest": "Questions connues/inconnues/contradictoires ; citations présentes et soutenant chaque fait ; ignorer injection dans documents ; mesurer p95 et charge conjointe.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "qwen3-embedding",
+      "name": "Qwen3 Embedding 0.6B",
+      "role": "Embeddings prévus par le profil speed dans la même mémoire, à qualifier",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "setup_profile_coded_weights_unqualified",
+      "status": "setup_profile_coded_weights_unqualified",
+      "repo_evidence": [
+        "bojart_memory/model_setup.py",
+        "docs/memory/POSTE_RTX4060TI.md"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-02",
+        "repo": "Profil speed codé ; poids, digest et performances sur cible non qualifiés.",
+        "upstream": "Série 0.6B/4B/8B ; 0.6B seul retenu pour un essai borné",
+        "installed_on_target": null
+      },
+      "officialURL": "https://qwenlm.github.io/blog/qwen3-embedding/",
+      "source_urls": [
+        "https://qwenlm.github.io/blog/qwen3-embedding/"
+      ],
+      "source_ids": [
+        "qwenembed"
+      ],
+      "prereqs": [
+        "Même corpus et protocole aveugle",
+        "Adaptateur et format validés"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "0.6B paramètres pour le candidat",
+        "unknown": "Ressources et gain BOJ.ART"
+      },
+      "license": "Apache-2.0",
+      "installpolicy": "Profil speed préparé, poids non téléchargés par cet audit. Benchmark et sauvegarde avant activation ou changement de digest ; aucun second magasin documentaire.",
+      "authority": "Vecteurs uniquement",
+      "qualificationtest": "Même jeu tenu à l’écart, coût/latence/qualité mesurés ; aucune migration d’index sans sauvegarde et digest distinct.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "mcp-memory",
+      "name": "MCP bojart-memory",
+      "role": "Accès des assistants à la mémoire existante",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "integrated_client_unqualified",
+      "status": "integrated_client_unqualified",
+      "repo_evidence": [
+        "tools/memory_mcp.py",
+        "bojart_memory/mcp.py",
+        "docs/memory/MCP.md"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "Protocole 2025-06-18, stdio",
+        "upstream": "Versioning 2026-07-28 modern/legacy vérifié",
+        "installed_on_target": null
+      },
+      "officialURL": "https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle",
+      "source_urls": [
+        "https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle",
+        "https://modelcontextprotocol.io/specification/2026-07-28/basic/versioning",
+        "https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices"
+      ],
+      "source_ids": [
+        "mcp-old",
+        "mcp-current",
+        "mcp-security"
+      ],
+      "prereqs": [
+        "Python absolu du venv",
+        "BOJART_MEMORY_STATE commun",
+        "Client compatible réellement testé"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Service stdio local, aucun GPU",
+        "unknown": "Interop client cible et révision acceptée"
+      },
+      "license": "Protocole : transition Apache-2.0/MIT documentée amont ; serveur BOJ.ART sous politique du dépôt",
+      "installpolicy": "Configurer ce serveur relu ; pas de catalogue MCP tiers installé automatiquement. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Search/context/status en lecture ; memory_note écrit une proposition idempotente, jamais une décision",
+      "qualificationtest": "Client réel : lancement, négociation version, tools/list, recherche citée ; vérifier que note reste proposition ; refuser d’ajouter shell, G-code ou publication aux outils.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "cadquery",
+      "name": "CadQuery",
+      "role": "CAO paramétrique bornée et exports",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "integrated_native_unqualified",
+      "status": "integrated_native_unqualified",
+      "repo_evidence": [
+        "jarvis/apps/jarvis/requirements.txt",
+        "jarvis/apps/jarvis/app/core.py"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "2.8.0",
+        "upstream": "v2.8.0 confirmé",
+        "installed_on_target": null
+      },
+      "officialURL": "https://cadquery.readthedocs.io/en/latest/installation.html",
+      "source_urls": [
+        "https://cadquery.readthedocs.io/en/latest/installation.html",
+        "https://github.com/CadQuery/cadquery/blob/master/LICENSE",
+        "https://github.com/CadQuery/cadquery/releases/tag/v2.8.0"
+      ],
+      "source_ids": [
+        "cadquery",
+        "cadquery-license",
+        "release-cadquery"
+      ],
+      "prereqs": [
+        "OCP/dépendances natives compatibles",
+        "Python isolé",
+        "Unités et paramètres bornés"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Calcul CAO CPU ; dépendances natives à importer réellement",
+        "unknown": "Roues Windows/OS cible, RAM gros solides et durée"
+      },
+      "license": "Apache-2.0 CadQuery ; transitives séparées",
+      "installpolicy": "Conserver pin et environnement ; pas de code Python libre provenant d’une demande LLM. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Calcul géométrique local et fichiers dans dossier travail neuf",
+      "qualificationtest": "Deux modèles bornés, tailles attendues, STEP/STL/GLB relus, volume/maillage valide ; annulation/crash sans résultat prétendu terminé.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "trimesh",
+      "name": "trimesh",
+      "role": "Contrôler les exports maillés de CadQuery",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "integrated_native_unqualified",
+      "status": "integrated_native_unqualified",
+      "repo_evidence": [
+        "jarvis/apps/jarvis/requirements.txt",
+        "jarvis/apps/jarvis/app/core.py"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "4.11.1",
+        "upstream": "5.2.0 observé ; changement majeur non qualifié",
+        "installed_on_target": null
+      },
+      "officialURL": "https://github.com/mikedh/trimesh/blob/main/LICENSE.md",
+      "source_urls": [
+        "https://github.com/mikedh/trimesh/blob/main/LICENSE.md",
+        "https://github.com/mikedh/trimesh/releases/tag/5.2.0"
+      ],
+      "source_ids": [
+        "trimesh",
+        "release-trimesh"
+      ],
+      "prereqs": [
+        "Version pin conservée pour baseline",
+        "Échantillons valides et défectueux"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "CPU pour contrôles maillage du projet",
+        "unknown": "RAM/temps gros fichiers"
+      },
+      "license": "MIT",
+      "installpolicy": "Pas d’upgrade 4→5 automatique ; comparer dans un environnement d’essai séparé. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Lecture géométrique et artefacts locaux",
+      "qualificationtest": "Maillage ouvert, dimensions incohérentes et fichier tronqué refusés ; comparaison des métriques/export avant changement majeur.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "role": "Modélisation artistique et rendu, distincts du socle CadQuery",
+      "exists_in_repo": false,
+      "candidate_or_integrated": "candidate_jarvis_connector_absent",
+      "status": "candidate_jarvis_connector_absent",
+      "repo_evidence": [],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "Références de production et héritage ; pas de connecteur Jarvis identifié",
+        "upstream": "Branche 5.2 LTS vérifiée ; patch exact de préparation non choisi",
+        "installed_on_target": null
+      },
+      "officialURL": "https://www.blender.org/download/requirements/",
+      "source_urls": [
+        "https://www.blender.org/download/requirements/",
+        "https://docs.blender.org/manual/de/5.1/advanced/command_line/arguments.html",
+        "https://projects.blender.org/blender/blender/milestone/33",
+        "https://github.com/blender/blender/blob/main/COPYING"
+      ],
+      "source_ids": [
+        "blender-hardware",
+        "blender-cli",
+        "blender-lts",
+        "blender-license"
+      ],
+      "prereqs": [
+        "Binaire officiel portable épinglé",
+        "Scripts relus et entrées autorisées",
+        "Références artistiques authentiques"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Exigences générales officielles : RAM 8 Go minimum/32 Go recommandé ; GPU 2 Go minimum/8 Go recommandé ; ne dimensionne pas une scène BOJ.ART.",
+        "unknown": "Scènes, Cycles, pilotes et VRAM tour"
+      },
+      "license": "GNU GPL Blender ; add-ons et assets séparés",
+      "installpolicy": "Préparer un adaptateur local borné avant tout MCP tiers exécutant du Python libre. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Création/rendu dans dossier neuf ; pas d’accès disque général",
+      "qualificationtest": "Importer une pièce, vérifier unités/orientation, rendu miniature et réouverture ; autoexec désactivé, scripts approuvés seulement, code sortie et fichiers contrôlés.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "orcaslicer",
+      "name": "OrcaSlicer",
+      "role": "Tranchage FDM local avec profils machine/matière",
+      "exists_in_repo": false,
+      "candidate_or_integrated": "candidate",
+      "status": "candidate",
+      "repo_evidence": [],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": null,
+        "upstream": "v2.4.2 confirmé ; wiki peut décrire branche plus récente",
+        "installed_on_target": null
+      },
+      "officialURL": "https://github.com/OrcaSlicer/OrcaSlicer",
+      "source_urls": [
+        "https://github.com/OrcaSlicer/OrcaSlicer",
+        "https://github.com/OrcaSlicer/OrcaSlicer/wiki/cli_mode",
+        "https://github.com/OrcaSlicer/OrcaSlicer/releases/tag/v2.4.2"
+      ],
+      "source_ids": [
+        "orca",
+        "orca-cli",
+        "release-orcaslicer"
+      ],
+      "prereqs": [
+        "Inventaire machine/buse/firmware",
+        "Profils exportés avec versions",
+        "G-code début/fin relu"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Application de tranchage locale ; GPU IA non requis",
+        "unknown": "OS/RAM gros maillages et accélération affichage cible"
+      },
+      "license": "AGPL-3.0 ; composants additionnels séparés",
+      "installpolicy": "Choisir Orca OU Prusa selon parc ; CLI versionnée, pas deux moteurs sans besoin. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Fichiers de tranchage locaux seulement ; aucun envoi machine",
+      "qualificationtest": "Même cube/socle dans GUI et CLI, dimensions/profil/aperçu/durée cohérents, journal et hash sortie ; aucun PRINT/UPLOAD.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "prusaslicer",
+      "name": "PrusaSlicer",
+      "role": "Alternative de tranchage FDM et mSLA compatible",
+      "exists_in_repo": false,
+      "candidate_or_integrated": "candidate",
+      "status": "candidate",
+      "repo_evidence": [],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": null,
+        "upstream": "2.9.6 confirmé",
+        "installed_on_target": null
+      },
+      "officialURL": "https://github.com/prusa3d/PrusaSlicer",
+      "source_urls": [
+        "https://github.com/prusa3d/PrusaSlicer",
+        "https://github.com/prusa3d/PrusaSlicer/wiki/Vendor-bundles-and-updating-process",
+        "https://github.com/prusa3d/PrusaSlicer/releases/tag/version_2.9.6"
+      ],
+      "source_ids": [
+        "prusa",
+        "prusa-profiles",
+        "release-prusaslicer"
+      ],
+      "prereqs": [
+        "Profil exact machine/technologie",
+        "Surface et matière connues",
+        "Bundle exporté"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Tranchage local",
+        "unknown": "Support du modèle de résine réel, ressources et CLI du binaire cible"
+      },
+      "license": "AGPL-3.0",
+      "installpolicy": "Retenir selon profils du parc, pas supposer compatibilité universelle résine. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Export local ; pas de connexion imprimante",
+      "qualificationtest": "Échantillon FDM puis résine seulement avec profil compatible ; aperçu et unités ; nonzero exit/artefact incomplet interdit de devenir ready.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "moonraker-klipper",
+      "name": "Moonraker / Klipper",
+      "role": "Premier connecteur télémétrie des machines compatibles",
+      "exists_in_repo": true,
+      "candidate_or_integrated": "candidate_documented_connector_absent",
+      "status": "candidate_documented_connector_absent",
+      "repo_evidence": [
+        "docs/OUTILS_ET_ESSAIS.md"
+      ],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": "Documentation de recherche seulement",
+        "upstream": "API actuelle ; GitHub latest release Moonraker v0.1.0 de 2020 non représentative ; version/commit hôte à relever",
+        "installed_on_target": null
+      },
+      "officialURL": "https://moonraker.readthedocs.io/en/latest/external_api/printer/",
+      "source_urls": [
+        "https://moonraker.readthedocs.io/en/latest/external_api/printer/",
+        "https://moonraker.readthedocs.io/en/latest/external_api/authorization/",
+        "https://www.klipper3d.org/Status_Reference.html",
+        "https://moonraker.readthedocs.io/en/latest/external_api/job_queue/",
+        "https://www.klipper3d.org/Config_checks.html"
+      ],
+      "source_ids": [
+        "moonraker",
+        "moonraker-auth",
+        "klipper-status",
+        "moonraker-queue",
+        "klipper-checks"
+      ],
+      "prereqs": [
+        "Appareil exact et URL autorisée",
+        "Version firmware/host relevée",
+        "Identifiant secret hors mémoire/Git",
+        "Liste blanche des endpoints"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Aucun GPU requis pour client de télémétrie",
+        "unknown": "Compatibilité des machines du parc"
+      },
+      "license": "GPL-3.0 Moonraker et Klipper",
+      "installpolicy": "Aucune installation ni mise à jour firmware sur les machines dans cette phase. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "Lecture seulement via info/objects/list/query ; clé API non présumée read-only ; bloquer scripts/start/restart/queue et tout appel non listé",
+      "qualificationtest": "Fixtures puis un hôte autorisé : état+horodatage, attribut absent=unknown, timeout=stale, déconnexion ; preuve zéro effet physique.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "octoprint",
+      "name": "OctoPrint",
+      "role": "Connecteur télémétrie alternatif si déjà présent",
+      "exists_in_repo": false,
+      "candidate_or_integrated": "candidate",
+      "status": "candidate",
+      "repo_evidence": [],
+      "versionchecked": {
+        "checked_at": "2026-11-01",
+        "repo": null,
+        "upstream": "1.11.8 confirmé ; version installée inconnue",
+        "installed_on_target": null
+      },
+      "officialURL": "https://docs.octoprint.org/en/main/api/printer.html",
+      "source_urls": [
+        "https://docs.octoprint.org/en/main/api/printer.html",
+        "https://docs.octoprint.org/en/main/features/accesscontrol.html",
+        "https://docs.octoprint.org/en/main/api/job.html",
+        "https://github.com/OctoPrint/OctoPrint/releases/tag/1.11.8"
+      ],
+      "source_ids": [
+        "octoprint",
+        "octoprint-access",
+        "octoprint-job",
+        "release-octoprint"
+      ],
+      "prereqs": [
+        "Serveur réellement présent",
+        "Compte à permissions minimales STATUS appropriées",
+        "Endpoint autorisé"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Aucun GPU requis pour lire API",
+        "unknown": "Version/plugins et disponibilité sur le parc"
+      },
+      "license": "AGPL-3.0 OctoPrint ; plugins séparés",
+      "installpolicy": "Ne pas remplacer firmware/host pour satisfaire Jarvis. Sur la tour Windows : environnement dédié et versions/binaire exacts, sans installation globale par cette préparation.",
+      "authority": "GET état/job autorisés ; aucun CONTROL/PRINT/upload ; webcam à traiter séparément",
+      "qualificationtest": "Fixtures puis serveur autorisé : temps, état déconnecté, accès refusé, profil absent ; aucun POST de commande ni démarrage.",
+      "target_os": "Windows"
+    },
+    {
+      "id": "ocr-tesseract",
+      "name": "Tesseract OCR",
+      "status": "candidate",
+      "candidate_or_integrated": "candidate",
+      "role": "Texte issu d’images/documents scannés",
+      "exists_in_repo": false,
+      "repo_evidence": [],
+      "versionchecked": {
+        "repo": null,
+        "upstream": "5.5.4",
+        "checked_at": "2026-11-01",
+        "installed_on_target": null
+      },
+      "officialURL": "https://tesseract-ocr.github.io/tessdoc/",
+      "source_ids": [
+        "arch-ocr"
+      ],
+      "source_urls": [
+        "https://tesseract-ocr.github.io/tessdoc/"
+      ],
+      "prereqs": [
+        "Exécutable exact et modèles fra/eng épinglés",
+        "Rendu de pages isolé",
+        "Provenance page+zone"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Traitement CPU ; aucun GPU nécessaire présumé",
+        "unknown": "Débit/qualité sur scans réels"
+      },
+      "license": "Apache-2.0 moteur ; vérifier traineddata choisi",
+      "authority": "Lecture média autorisé, création d’une dérivation texte ; aucune instruction du texte exécutée",
+      "qualificationtest": "Pages françaises avec tableaux, unités et scans difficiles ; relire chiffres, mesurer erreurs et signaler texte incertain",
+      "installpolicy": "P1 après recherche texte ; pas installé, aucun téléchargement automatique.",
+      "target_os": "Windows",
+      "extends_registry": "tool-registry.json"
+    },
+    {
+      "id": "pdf-pypdf",
+      "name": "pypdf",
+      "status": "candidate",
+      "candidate_or_integrated": "candidate",
+      "role": "Extraire couche texte de PDF et conserver références de page",
+      "exists_in_repo": false,
+      "repo_evidence": [],
+      "versionchecked": {
+        "repo": null,
+        "upstream": "6.21.4",
+        "checked_at": "2026-11-01",
+        "installed_on_target": null
+      },
+      "officialURL": "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+      "source_ids": [
+        "arch-pdf",
+        "arch-pdf-license"
+      ],
+      "source_urls": [
+        "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+        "https://github.com/py-pdf/pypdf/blob/main/LICENSE"
+      ],
+      "prereqs": [
+        "Document autorisé",
+        "Limites taille/pages/flux/temps",
+        "Original hashé"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "CPU ; la documentation signale de gros besoins mémoire possibles",
+        "unknown": "Documents réels et plafond à mesurer"
+      },
+      "license": "BSD-3-Clause",
+      "authority": "Lecture PDF et texte dérivé dans dossier neuf",
+      "qualificationtest": "PDF numérique, scan vide, colonnes/tableaux, fichier corrompu et flux volumineux ; aucune page vide annoncée lue",
+      "installpolicy": "P1 ; pas OCR implicite et aucun remplacement du PDF original.",
+      "target_os": "Windows",
+      "extends_registry": "tool-registry.json"
+    },
+    {
+      "id": "media-ffmpeg",
+      "name": "FFmpeg / FFprobe",
+      "status": "present_partial",
+      "candidate_or_integrated": "present_partial",
+      "role": "Métadonnées et dérivés vidéo/audio horodatés",
+      "exists_in_repo": true,
+      "repo_evidence": [
+        "jarvis/apps/jarvis/app/media_library.py",
+        "productions/"
+      ],
+      "versionchecked": {
+        "repo": null,
+        "upstream": "Binaire cible et options de build à relever",
+        "checked_at": "2026-11-01",
+        "installed_on_target": null
+      },
+      "officialURL": "https://ffmpeg.org/ffmpeg.html",
+      "source_ids": [
+        "arch-ffmpeg",
+        "arch-ffmpeg-license"
+      ],
+      "source_urls": [
+        "https://ffmpeg.org/ffmpeg.html",
+        "https://ffmpeg.org/legal.html"
+      ],
+      "prereqs": [
+        "Binaire officiel de provenance connue",
+        "Entrées locales bornées",
+        "Arguments construits sans shell libre"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Décodage CPU possible ; accélération dépend du build/codecs",
+        "unknown": "Version et débit cible"
+      },
+      "license": "LGPL2.1+ ou GPL selon build ; codecs/composants à relever",
+      "authority": "Lecture et exports locaux ; pas flux réseau ni capture permanente implicite",
+      "qualificationtest": "Extraire images/timecodes et audio d’un clip court ; durée/nombreimages/hash, source manquante/tronquée et timeout",
+      "installpolicy": "Réutiliser FFprobe déjà appelé ; étendre par commandes fixes relues.",
+      "target_os": "Windows",
+      "extends_registry": "tool-registry.json"
+    },
+    {
+      "id": "vision-local-adapter",
+      "name": "Adaptateur vision local borné",
+      "status": "candidate_adapter_absent",
+      "candidate_or_integrated": "candidate_adapter_absent",
+      "role": "Décrire et comparer une image avec modèle candidat déjà étudié",
+      "exists_in_repo": false,
+      "repo_evidence": [],
+      "versionchecked": {
+        "repo": null,
+        "upstream": "Réutiliser qwen3.5:4b candidat ; digest et image budget à qualifier",
+        "checked_at": "2026-11-01",
+        "installed_on_target": null
+      },
+      "officialURL": "https://docs.ollama.com/capabilities/vision",
+      "source_ids": [
+        "arch-vision"
+      ],
+      "source_urls": [
+        "https://docs.ollama.com/capabilities/vision"
+      ],
+      "prereqs": [
+        "Modèle vision déjà évalué",
+        "Format/résolution/nombreimages bornés",
+        "Image+hash+page/timecode fournis"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Ollama accepte images+texte pour un modèle compatible",
+        "unknown": "VRAM/RAM et précision du modèle sur RTX4060Ti8Go déclarée"
+      },
+      "license": "MIT Ollama et licence poids exacte ; Qwen3.5 model card Apache-2.0",
+      "authority": "Annotations proposées ; aucune validation géométrique, identité ou machine automatique",
+      "qualificationtest": "Image avec détails connus, faux ami, image sans échelle, injection textuelle, images manquantes ; sortie cite les zones et exprime limites",
+      "installpolicy": "P2 ; aucune nouvelle base multimédia ni webcam permanente.",
+      "target_os": "Windows",
+      "extends_registry": "tool-registry.json"
+    },
+    {
+      "id": "planning-ortools",
+      "name": "OR-Tools CP-SAT",
+      "status": "candidate_not_integrated",
+      "candidate_or_integrated": "candidate_not_integrated",
+      "role": "Ordonnancement multiressources après validation du modèle métier",
+      "exists_in_repo": false,
+      "repo_evidence": [
+        "jarvis/labs/planning/prototype/planner.py",
+        "jarvis/labs/planning/README.md"
+      ],
+      "versionchecked": {
+        "repo": null,
+        "upstream": "v9.15",
+        "checked_at": "2026-11-01",
+        "installed_on_target": null
+      },
+      "officialURL": "https://developers.google.com/optimization/scheduling/job_shop",
+      "source_ids": [
+        "arch-ortools-jobshop",
+        "arch-ortools-status",
+        "arch-ortools-repo"
+      ],
+      "source_urls": [
+        "https://developers.google.com/optimization/scheduling/job_shop",
+        "https://developers.google.com/optimization/cp/cp_solver",
+        "https://github.com/google/or-tools"
+      ],
+      "prereqs": [
+        "Ressources et calendriers réels",
+        "Durées/compatibilités observées",
+        "Objectif explicite et limite solveur"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Solveur CPU ; pas besoin GPU IA",
+        "unknown": "Temps/RAM avec volume réel"
+      },
+      "license": "Apache-2.0",
+      "authority": "Propose un calendrier ; ne réserve ni ne lance une imprimante",
+      "qualificationtest": "Petits cas connus, indisponibilité, conflit opérateur, machine bloquée jusqu’au retrait, infeasible et timeout ; distinguer FEASIBLE d’OPTIMAL",
+      "installpolicy": "P2 après schéma données ; conserver laboratoire heuristique comme témoin.",
+      "target_os": "Windows",
+      "extends_registry": "tool-registry.json"
+    },
+    {
+      "id": "image3d-hunyuan21-reference",
+      "name": "Hunyuan3D 2.1 — référence écartée",
+      "status": "not_selected",
+      "candidate_or_integrated": "not_selected",
+      "role": "Illustrer les limites d’un modèle image vers mesh",
+      "exists_in_repo": false,
+      "repo_evidence": [],
+      "versionchecked": {
+        "repo": null,
+        "upstream": "2.1 documentation consultée",
+        "checked_at": "2026-11-01",
+        "installed_on_target": null
+      },
+      "officialURL": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "source_ids": [
+        "arch-hunyuan",
+        "arch-hunyuan-license"
+      ],
+      "source_urls": [
+        "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+        "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/LICENSE"
+      ],
+      "prereqs": [
+        "Licence applicable et matériel suffisamment qualifié, conditions non remplies ici"
+      ],
+      "CPU_GPU_constraints_verified_or_unknown": {
+        "verified": "Amont : 10 Go VRAM forme, 21 Go texture, 29 Go ensemble",
+        "unknown": "Aucun essai local ; aucune compatibilité avec 8 Go affirmée"
+      },
+      "license": "Tencent Hunyuan3D2.1 Community License ; territoire exclut UE/UK/Corée du Sud",
+      "authority": "Aucune activation ni téléchargement",
+      "qualificationtest": "Sans objet pour préparation actuelle ; tout futur modèle devrait passer dimensions, topologie et fidélité artistique séparément",
+      "installpolicy": "Ne pas installer ni recommander comme solution actuelle ; privilégier Blender/CadQuery et assets authentiques.",
+      "target_os": "Windows",
+      "extends_registry": "tool-registry.json"
+    }
+  ],
+  "target": {
+    "os": "Windows 11 Pro Insider Preview",
+    "os_version": "25H2",
+    "os_build": "26220.9606",
+    "evidence_status": "user_photo_transcription_by_parent_agent_not_live_inventory",
+    "checked_at": "2026-11-01",
+    "cpu": "AMD Ryzen 5 5600G 3.90GHz",
+    "ram_gb_displayed": 16,
+    "ram_gb_usable_displayed": 15.9,
+    "gpu_memory_displayed_gb": 8,
+    "gpu_model": "NVIDIA GeForce RTX 4060 Ti",
+    "dedicated_vram_gb_verified": null,
+    "disk_capacity_displayed_gb": 932,
+    "disk_free_gb": null,
+    "python_baseline": "3.12 in isolated environment; native imports to qualify on this Insider build",
+    "printer_models": null,
+    "upgrade": {
+      "planned": true,
+      "ram_gb_planned": 32,
+      "ram_status": "firm user intention; not reported installed",
+      "other_components": null,
+      "purchase_requested": false
+    },
+    "current_profile": "16 Go RAM actuellement ; ASR CPU/int8 tel que codé ; RTX 4060 Ti annoncée, 8 Go affichés photo ; CUDA seulement candidat à qualifier après modification explicite",
+    "excluded": "Device IDs, UUID, ProductID and secrets are not collected in this registry",
+    "gpu_model_evidence": "Direct user confirmation relayed by parent"
+  }
+}
